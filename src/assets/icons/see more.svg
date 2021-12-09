@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="154" height="73.494" viewBox="0 0 154 73.494">
+  <defs>
+    <filter id="Rectangle_1" x="0" y="0" width="154" height="73.494" filterUnits="userSpaceOnUse">
+      <feOffset dy="8" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur"/>
+      <feFlood flood-color="#727c8e" flood-opacity="0.361"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="see_more" data-name="see more" transform="translate(22.5 14.5)">
+    <g transform="matrix(1, 0, 0, 1, -22.5, -14.5)" filter="url(#Rectangle_1)">
+      <rect id="Rectangle_1-2" data-name="Rectangle 1" width="109" height="28.494" rx="14.247" transform="translate(22.5 14.5)" fill="#fff"/>
+    </g>
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="21.711" height="22.331" rx="10.855" transform="translate(83.62 3.081)" fill="#ffbe00"/>
+    <text id="Lire_plus" data-name="Lire plus" transform="translate(43.189 18)" fill="#727c8e" font-size="10" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="-21.455" y="0">Lire plus</tspan></text>
+    <path id="Tracé_11" data-name="Tracé 11" d="M24.759,15.163h0a.593.593,0,0,0-.182-.428h0l-3.569-3.569,0,0a.595.595,0,1,0-.8.88l3.116,3.116L20.167,18.32h0a.595.595,0,0,0,.841.841h0l3.569-3.569h0a.593.593,0,0,0,.182-.428Z" transform="translate(73.008 -0.513)" fill="#fff" stroke="#fff" stroke-width="1"/>
+  </g>
+</svg>

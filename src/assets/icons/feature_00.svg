@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="327" height="356" viewBox="0 0 327 356">
+  <defs>
+    <filter id="surface" x="0" y="0" width="327" height="356" filterUnits="userSpaceOnUse">
+      <feOffset dx="8" dy="8" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feFlood flood-color="#090e14" flood-opacity="0.4"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="feature_00" transform="translate(28 28)">
+    <g transform="matrix(1, 0, 0, 1, -28, -28)" filter="url(#surface)">
+      <rect id="surface-2" data-name="surface" width="255" height="284" rx="12" transform="translate(28 28)" fill="#fff"/>
+    </g>
+    <g id="text" transform="translate(23 129)">
+      <text id="body" transform="translate(0 45)" fill="#273b60" font-size="14" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="14">Lorem Ipsum Dolor Sit </tspan><tspan x="0" y="38">Amet, Consectetur </tspan></text>
+      <text id="headline" transform="translate(0)" fill="#273b60" font-size="20" font-family="Montserrat-SemiBold, Montserrat" font-weight="600" letter-spacing="-0.02em"><tspan x="0" y="19">Particulier</tspan></text>
+    </g>
+  </g>
+</svg>
