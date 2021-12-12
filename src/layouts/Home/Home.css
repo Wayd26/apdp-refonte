@@ -22,7 +22,7 @@
   letter-spacing: 0px;
   color: #ffffff;
   opacity: 1;
-  font: normal normal bold 20px/95px Manrope;
+  font: normal normal bold 20px/95px Montserrat;
 }
 
 .prestation-div {
@@ -39,7 +39,7 @@
 
 .prestation-div-text {
   text-align: left;
-  font: normal bold normal 23px/28px Manrope;
+  font: normal bold normal 23px/28px Montserrat;
   letter-spacing: 0px;
   color: #292929;
   opacity: 1;
@@ -52,7 +52,7 @@
   background: #4385f6 0% 0% no-repeat padding-box;
   border-radius: 12px;
   opacity: 1;
-  font: normal normal bold 16px/20px Manrope;
+  font: normal normal bold 16px/20px Montserrat;
   letter-spacing: 0px;
   color: #ffffff;
   width: 150px;
@@ -113,7 +113,7 @@
 .form-section-title {
   text-align: center;
   text-decoration: underline;
-  font: normal normal bold 18px/24px Manrope;
+  font: normal normal bold 18px/24px Montserrat;
   letter-spacing: 0px;
   color: #ffbe00;
   opacity: 1;
@@ -163,7 +163,7 @@
   letter-spacing: 0px;
   color: #292929;
   opacity: 1;
-  font: normal normal bold 38px/44px Manrope;
+  font: normal normal bold 38px/44px Montserrat;
   margin-top: 7%;
   margin-bottom: auto;
 }
@@ -185,7 +185,7 @@
 }
 
 .speech-title {
-  font: normal normal bold 34px/60px Manrope;
+  font: normal normal bold 34px/60px Montserrat;
   letter-spacing: 0px;
   color: #14395b;
   text-shadow: 0px 3px 6px #ffffff29;
@@ -233,7 +233,7 @@
 
 .guide-faq-title {
   text-align: center;
-  font: normal normal bold 48px/57px Manrope;
+  font: normal normal bold 48px/57px Montserrat;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
@@ -301,7 +301,7 @@ opacity: 0.5;
   }
 
   .guide-faq-title {
-    font: normal normal bold 38px/47px Manrope;
+    font: normal normal bold 38px/47px Montserrat;
   }
   .guide-faq-subtitle {
     font: normal normal normal 14px/22px Source Sans Pro;

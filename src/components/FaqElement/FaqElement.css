@@ -27,7 +27,7 @@
 
 .faq-label {
   text-align: left;
-  font: normal normal bold 20px/24px Manrope;
+  font: normal normal bold 20px/24px Montserrat;
   letter-spacing: 0px;
   color: #4385f6;
   opacity: 0.79;
@@ -65,7 +65,7 @@
 
 @media only screen and (max-width: 478px) {
   .faq-label {
-    font: normal normal bold 12px/14px Manrope;
+    font: normal normal bold 12px/14px Montserrat;
   }
   .display-more-icon {
     height: 47px;

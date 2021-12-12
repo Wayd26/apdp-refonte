@@ -43,7 +43,7 @@
 
 .shortcut-text {
   text-align: center;
-  font: normal normal bold 20px/26px Manrope;
+  font: normal normal bold 20px/26px Montserrat;
   letter-spacing: 0px;
   color: #ffffff;
   opacity: 0.79;
@@ -54,7 +54,7 @@
 
 .shortcut-text-second {
   text-align: center;
-  font: normal normal bold 20px/26px Manrope;
+  font: normal normal bold 20px/26px Montserrat;
   letter-spacing: 0px;
   color: #292929;
   opacity: 0.79;
@@ -85,7 +85,7 @@
   }
 
   .shortcut-text, .shortcut-text-second {
-    font: normal normal bold 12px/20px Manrope;
+    font: normal normal bold 12px/20px Montserrat;
     margin-top: 5px;
   }
 }
