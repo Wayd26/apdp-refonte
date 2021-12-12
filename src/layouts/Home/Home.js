@@ -63,8 +63,8 @@ const Home = () => {
             {/* User Type Section */}
             <Row className={'my-5'}>
                 <div className={'user-type-div row d-flex justify-content-between'}>
-                    <div className={'col-md-10 mx-auto'}>
-                        <div className={'row d-flex flex justify-content-around '}>
+                    <div className={'col-md-10 col-sm-12 mx-auto'}>
+                        <div className={'row d-flex flex-wrap justify-content-around '}>
 
                             <UserTypeCard type={'right'} description={'Lorem ici ce sont dolor pour les sit mes droits'}/>
                             <UserTypeCard type={'duty'} description={'Lorem ipsum amet demae sont  amet mes devoirs'}/>
@@ -98,9 +98,9 @@ const Home = () => {
                     <div className={'col-sm-2'}>
                         <img className={'dots'} src={dots} />
                     </div>
-                    <div className={'col-sm-8 mx-auto'}>
+                    <div className={'col-sm-10 mx-auto'}>
                         <p className={'rights-duties-text px-5'}>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Incididunt Ut Labore.</p>
-                        <div className={'row d-flex justify-content-around'}>
+                        <div className={'row d-flex flexwrap justify-content-around'}>
 
                             <RightDutyCard type={'right'} />
                             <RightDutyCard type={'duty'} />
@@ -117,7 +117,7 @@ const Home = () => {
                 <p className={'form-section-title'}>Formulaires</p>
                 <p className={'form-section-subtitle'}>Liens Rapides</p>
                 <div className={'row'}>
-                    <div className={'col-sm-7 mx-auto'}>
+                    <div className={'col-sm-8 mx-auto'}>
                         <div className={'row d-flex justify-content-around'}>
                             {[...Array(12).keys()].map(i => <ShortcutCard ind={i} />)}
                         </div>

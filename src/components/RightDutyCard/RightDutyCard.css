@@ -2,7 +2,7 @@
   box-shadow: 0px 8px 27px #727c8e40;
   border-radius: 10px;
   opacity: 0.78;
-  max-width: 447px;
+  width: 447px;
   height: 337px;
   /* background:  url('../../assets/images/img1.png') 0% 0% no-repeat padding-box; */
   background: url("../../assets/images/img1.png");
@@ -13,7 +13,7 @@
   box-shadow: 0px 8px 27px #727c8e40;
   border-radius: 10px;
   opacity: 0.78;
-  max-width: 447px;
+  width: 447px;
   height: 337px;
   /* background:  url('../../assets/images/img1.png') 0% 0% no-repeat padding-box; */
   background: url("../../assets/images/img4.png");
@@ -46,10 +46,11 @@
 }
 .more-text {
   text-align: center;
-  font: normal normal medium 10px/13px Source Sans Pro;
+  font: normal normal normal 10px/13px Source Sans Pro;
   letter-spacing: 0px;
   color: #727c8e;
   opacity: 1;
+  margin: auto;
 }
 .more-button-arrow {
   width: 22px;
@@ -57,5 +58,24 @@
   color: #ffbe00;
   background: #fff 0% 0% no-repeat padding-box;
   border-radius: 24px;
+  margin: auto;
   opacity: 1;
+}
+
+@media only screen and (max-width: 478px) {
+  .right-card {
+    width: 70%;
+    height: 300px;
+  }
+  .duty-card {
+    height: 300px;
+    width: 70%;
+  }
+  .right-duty-more-button {
+    width: 99px;
+    margin-top: 100px;
+  }
+  .right-duty-card-title {
+    font: normal normal bold 20px/16px Manrope;
+  }
 }

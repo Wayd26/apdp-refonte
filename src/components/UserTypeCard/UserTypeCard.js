@@ -19,7 +19,7 @@ const UserTypeCard = (props) => {
             <div className={'user-type-description'}>{description}</div>
             <Row className={'d-flex justify-content-end'}>
                 <button className={'user-type-more-button d-flex justify-content-around align-self-right'}>
-                    <span className={'more-text'}>Lire plus</span>
+                    <span className={'more-text-usertype'}>Lire plus</span>
                     <RiArrowRightCircleFill className={'more-button-arrow'} />
                 </button>
             </Row>
