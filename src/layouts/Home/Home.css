@@ -1,18 +1,20 @@
 .Home {
   width: 100%;
+  margin-top: 50px;
 }
 
 .user-type-div {
   background: #4385f6 0% 0% no-repeat padding-box;
   border-radius: 0px 122px;
   opacity: 1;
-  width: 75%;
-  height: 128px;
+  width: 85%;
+  height: 108px;
   /* margin-left: 18%; */
   margin-left: auto;
   margin-right: auto;
   /* padding-left: 20%; */
   margin-bottom: 50px;
+  margin-top: 80px;
 }
 
 .am-text {
@@ -27,7 +29,8 @@
   background: #e1e8f8 0% 0% no-repeat padding-box;
   border-radius: 18px;
   opacity: 1;
-  height: 250px;
+  /* height: 250px; */
+  height: 50%;
   width: 75%;
   margin-left: auto;
   margin-right: auto;
@@ -94,6 +97,7 @@
   opacity: 1;
   padding-left: 10px;
   padding-right: 10px;
+  margin-bottom: 80px;
 }
 
 .forms-section {
@@ -241,18 +245,8 @@
   opacity: 1;
 }
 
-.faq-div-selected {
-  text-align: center;
-  font: normal normal medium 34px/42px Montserrat;
-  letter-spacing: 0px;
-  color: #000000;
-  opacity: 1;
-}
-
-.faq-div-not-selected {
-  background: #ffffff 0% 0% no-repeat padding-box;
-  box-shadow: 0px 3px 6px #00000029;
-  border: 1px solid #e8e8e8;
-  border-radius: 10px;
-  opacity: 1;
+.dots {
+  width: 247px;
+height: 114px;
+opacity: 0.5;
 }

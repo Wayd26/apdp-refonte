@@ -9,7 +9,7 @@ const ShortcutCard = (props) => {
             <div className={'shortcut-icon-container mx-auto d-flex justify-content-center'}>
                 <HiLink className={'shortcut-icon'} />
             </div>
-            <p className={(ind % 2 && (ind < 4 || ind > 7)) || ((ind % 2) == 1 && (ind > 3 || ind < 8)) ? 'shortcut-text-second' : 'shortcut-text'}>Délibération </p>
+            <p className={(ind % 2 && (ind < 4 || ind > 7)) || ((ind % 2) == 1 && (ind > 3 || ind < 8)) ? 'shortcut-text-second' : 'shortcut-text'}>Lorem Ipsum Dolor</p>
         </div>
     )
 }

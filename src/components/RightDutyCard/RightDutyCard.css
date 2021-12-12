@@ -1,4 +1,4 @@
-.right-duty-card {
+.duty-card {
   box-shadow: 0px 8px 27px #727c8e40;
   border-radius: 10px;
   opacity: 0.78;
@@ -6,6 +6,18 @@
   height: 337px;
   /* background:  url('../../assets/images/img1.png') 0% 0% no-repeat padding-box; */
   background: url("../../assets/images/img1.png");
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.right-card {
+  box-shadow: 0px 8px 27px #727c8e40;
+  border-radius: 10px;
+  opacity: 0.78;
+  max-width: 447px;
+  height: 337px;
+  /* background:  url('../../assets/images/img1.png') 0% 0% no-repeat padding-box; */
+  background: url("../../assets/images/img4.png");
+  background-size: cover;
   margin-bottom: 20px;
   margin-top: 20px;
 }
