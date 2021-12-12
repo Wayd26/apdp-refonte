@@ -18,6 +18,7 @@
   margin-bottom: 30px;
   margin-top: 20px;
   /* overflow-y: auto; */
+  cursor: pointer;
 }
 .shortcut-card-second {
   background: #ffffff 0% 0% no-repeat padding-box;
@@ -28,6 +29,7 @@
   width: 206px;
   margin-bottom: 30px;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .shortcut-icon-container {

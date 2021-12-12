@@ -79,7 +79,7 @@
   margin-left: 15px;
   margin-top: 30px;
   margin-bottom: 20px;
-  overflow-x: auto;
+  /* overflow-x: auto; */
   height: 20px;
 }
 
@@ -107,15 +107,17 @@
     height: 26px;
   }
   .user-type-label {
-    font: normal normal bold 11px/18px Manrope;
+    font: normal normal bold 11px/16px Manrope;
     margin-left: 5px;
     margin-top: 20px;
     margin-bottom:15px;
+    overflow-y: auto;
   }
   .user-type-description{
     margin-left:5px;
     margin-right: 5px;
-    font: normal normal normal 13px/15px Manrope;
+    font: normal normal normal 11px/15px Manrope;
+    overflow-y: auto;
   }
   .user-type-more-button {
     width: 70%;
