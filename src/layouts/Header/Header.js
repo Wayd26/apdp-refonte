@@ -16,7 +16,7 @@ const Header = () => {
                 <div>
                     <div className="header-block-1">
                     <Row>
-                        <Col xs={2} >
+                        {/* <Col xs={2} >
                             <span style={{
                                 display: "flex",
                                 alignItems: "center",
@@ -28,7 +28,7 @@ const Header = () => {
                                 position: 'absolute'
                             }}
                             >Alerte info <i className="ri-volume-up-fill" style={{color: "#b9a180", marginLeft: 2}}></i></span>
-                        </Col>
+                        </Col> */}
                         <Col>
                             <span className="header-animate-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
                         </Col>
@@ -42,13 +42,15 @@ const Header = () => {
                                     <img src={apdp_logo} className="logo"/>
                                 </div>
                             
-                                <div className="header-block-2-div-2">
-                                    <span style={{color: "#2b6fd3"}}> CODE DU NUMERIQUE | IMPRIMER | FORCE AUX QUESTIONS</span>
+                                <div className="header-block-2-div-2 d-flex flex-row justify-content-between">
+                                    <span style={{color: "#292929"}}> CODE DU NUMERIQUE </span>
+                                    <span style={{color: "#292929"}}> IMPRIMER</span>
+                                    <span style={{color: "#292929"}}> FORCE AUX QUESTIONS</span>
                                 </div>
                             
                             
                                 <div>
-                                    <Button color="primary" onClick={toggle_modal} className="client-espace-button"> <i className="ri-user-2-fill"></i><h8>Espace client</h8></Button>
+                                    <Button color="primary" onClick={toggle_modal} className="client-espace-button"><h8>FR</h8></Button>
                                 </div>
 
                                

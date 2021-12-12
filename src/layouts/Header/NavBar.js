@@ -8,10 +8,9 @@ import {
     NavItem,
     NavLink,
     UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    NavbarText
+    InputGroup,
+    InputGroupText,
+    Input
   } from 'reactstrap';
   import { Link } from "react-router-dom";
 
@@ -62,6 +61,22 @@ export default class NavBar extends Component {
                         
                     </Nav>
                     </Collapse>
+                    <InputGroup className="search-input">
+                        <InputGroupText style={{
+                            backgroundColor: 'white',
+                            borderRightWidth: 0,
+                            borderTopLeftRadius: 20,
+                            borderBottomLeftRadius:20
+                        }}>
+                        <i class="ri-search-line"></i>
+                        </InputGroupText>
+                        <Input  placeholder="Recherche" style={{
+                            backgroundColor: 'white',
+                            borderLeftWidth: 0,
+                            borderTopRightRadius: 20,
+                            borderBottomRightRadius: 20
+                        }} />
+                </InputGroup>
                 </Navbar>
                 
             </React.Fragment>

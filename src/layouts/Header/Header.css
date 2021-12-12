@@ -1,6 +1,9 @@
 .header-block-1 {
-    background-color: #f8f9fb;
-    height: 20px;
+    background-color: #FFBE00;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header-block-2{
@@ -8,7 +11,8 @@
     justify-content: space-between;
     align-items: center;
     padding-right: 3%;
-    padding-top: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .client-espace-button{
@@ -66,6 +70,11 @@
     font-weight: bold;
     font-size: 15px;
     width: fit-content !important;
+    font-family: Lato;
+}
+
+.search-input{
+    width: 20% !important;
 }
 
 /* .header-animate-text {
@@ -77,6 +86,10 @@
 @-webkit-keyframes slidein { from { left:-30%; } to { left:100%; }  }
         @keyframes slidein { from { left:-30%; } to { left:100%; }  } */
 
+.header-block-2-div-2{
+    width: 40%;
+    font-family: Lato;
+}
 
 @media only screen and (max-width: 722px){
 	.header-block-2-div-2{
