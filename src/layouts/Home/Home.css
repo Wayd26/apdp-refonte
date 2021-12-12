@@ -67,6 +67,7 @@
   height: 350px;
   /* width: 85%; */
   margin-top: -50px;
+  margin-bottom: -30px;
 }
 
 .rights-duties-section {
@@ -119,7 +120,7 @@
 }
 .form-section-subtitle {
   text-align: center;
-  font: normal normal bold 48px/64px Lato;
+  font: normal normal bold 48px/64px Source Sans Pro;
   letter-spacing: 0px;
   color: #14395b;
   text-shadow: 0px 3px 6px #ffffff29;
@@ -239,10 +240,12 @@
 }
 .guide-faq-subtitle {
   text-align: center;
-  font: normal normal medium 34px/42px Source Sans Pro;
+  font: normal normal normal 34px/42px Source Sans Pro;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
+  margin-bottom: 40px;
+  padding: 7px;
 }
 
 .dots {
@@ -250,3 +253,59 @@
 height: 114px;
 opacity: 0.5;
 }
+
+
+@media only screen and (max-width: 768px) {
+
+  .our-services-btn {
+    margin-bottom: 20px;
+  }
+
+  .our-services-illustration {
+    display: contents;
+  }
+.services-illustration-img {
+  margin-top: -10px;
+}
+
+
+}
+
+@media only screen and (max-width: 1205px) {
+  .dots {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1191px) {
+.user-type-div{
+  background: none transparent;
+  width: 100%;
+}
+
+}
+
+@media only screen and (max-width: 578px) {
+  .rights-duties-title {
+    font: normal normal bold 30px/24px Source Sans Pro;
+  }
+  .rights-duties-text {
+    font: normal normal normal 20px/25px Source Sans Pro;
+    margin-bottom: 15px;
+  }
+  .rights-duties-section {
+    margin-top: 20px;
+  }
+
+  .form-section-subtitle {
+    font: normal normal bold 38px/54px Source Sans Pro;
+  }
+
+  .guide-faq-title {
+    font: normal normal bold 38px/47px Manrope;
+  }
+  .guide-faq-subtitle {
+    font: normal normal normal 14px/22px Source Sans Pro;
+  }
+
+}
+

@@ -67,3 +67,23 @@
   fill: #4385f6;
   opacity: 1;
 }
+
+@media only screen and (max-width: 478px) {
+  .shortcut-card, .shortcut-card-second {
+    height: 129px;
+    width: 166px;
+  }
+  .shortcut-icon-container{
+    width: 37px;
+    height: 37px;
+  }
+  .shortcut-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .shortcut-text, .shortcut-text-second {
+    font: normal normal bold 12px/20px Manrope;
+    margin-top: 5px;
+  }
+}
