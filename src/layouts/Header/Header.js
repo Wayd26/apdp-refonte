@@ -42,10 +42,10 @@ const Header = () => {
                                     <img src={apdp_logo} className="logo"/>
                                 </div>
                             
-                                <div className="header-block-2-div-2 d-flex flex-row justify-content-between">
-                                    <span style={{color: "#292929"}}> CODE DU NUMERIQUE </span>
-                                    <span style={{color: "#292929"}}> IMPRIMER</span>
-                                    <span style={{color: "#292929"}}> FORCE AUX QUESTIONS</span>
+                                <div className=" d-none d-md-flex header-block-2-div-2 d-flex flex-row justify-content-between">
+                                    <div style={{color: "#292929", fontFamily: "Montserrat"}}> CODE DU NUMERIQUE </div>
+                                    <div style={{color: "#292929", fontFamily: "Montserrat"}}> IMPRIMER</div>
+                                    <div style={{color: "#292929", fontFamily: "Montserrat"}}> FORCE AUX QUESTIONS</div>
                                 </div>
                             
                             

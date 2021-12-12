@@ -43,26 +43,31 @@ const Footer = () => {
             <Col style={{
                 display: "flex",
                 justifyContent: "flex-end",
-                alignItems: "flex-end"
+                alignItems: "flex-end",
+                flexDirection: "row"
             }}>
-                <div>
+                <div className="d-flex flex-column justify-content-center align-items-center" >
 
                <div> Rejoignez-nous</div>
+                <div className="d-flex flex-row">
 
-                <a className="linkedin" href="#" target="_blank">
+                <a className="linkedin social-container" href="#" target="_blank">
                 <span className="hidden-link-text">Facebook</span>
-                <FaFacebook style={{width: `40px`, color: `white`, fontSize:30}} />
+                <FaFacebook style={{width: `40px`, color: `#2289FF`, fontSize:30}} />
                 </a>
-                <a className="twitter" href="#" target="_blank">
+                <a className="twitter social-container" style={{
+                  backgroundColor: "#2289FF"
+                }} href="#" target="_blank">
                 <span className="hidden-link-text">Twitter</span>
                 <FaTwitter style={{width: `40px`, color: `white`,  fontSize:30}} />
                 </a>
-                <a className="youtube" href="#" target="_blank">
+                <a className="youtube social-container" href="#" target="_blank">
                 <span className="hidden-link-text">Youtube</span>
-                <FaYoutube style={{width: `40px`, color: `white`,  fontSize:30}} />
+                <FaYoutube style={{width: `40px`, color: `red`,  fontSize:30}} />
                 </a>
+                </div>
                 <div style={{
-                    fontSize: 10
+                  fontSize: 10
                 }}>
                 Ne ratez pas l'actualité de l'APDP en temps réel sur nos réseaux sociaux.
                 </div>
@@ -82,6 +87,14 @@ const Footer = () => {
               <span className="hidden-link-text">LOGO</span>
               <img src={apdp_logo} alt="LOGO" className="img-fluid" />
             </a>
+          </div>
+
+          <div style={{
+            marginTop: "10%",
+            textAlign: "start",
+          }}>
+            <div className="my-1" >Mentions légales</div>
+            <div>Politique de confidentialité</div>
           </div>
          
         </div>
@@ -113,7 +126,7 @@ const Footer = () => {
         </div>
         <div className="footer-content-column">
           <div className="footer-menu">
-            <h2 className="footer-menu-name"> Liens Utiles</h2>
+            <h2 className="footer-menu-name"> VOS PROTECTIONS</h2>
             <ul id="menu-quick-links" className="footer-menu-list">
               <li className="menu-item menu-item-type-custom menu-item-object-custom">
                 <a target="_blank" rel="noopener noreferrer" href="#">Vos Mentions Légales</a>
@@ -150,24 +163,25 @@ const Footer = () => {
                 justifyContent: 'flex-start',
                 flexDirection: 'column',
                 alignItems: 'flex-start',
-                width: "120%"
+                width: "max-content"
             }}>
 
-            <div className='d-flex justify-content-center align-items-center'><i class="ri-map-pin-line fw-bold mx-1"></i>Rue 6 . 076 El Marzouk Joël  COTONOU</div>
-            <div className='d-flex justify-content-center align-items-center'><i class="ri-mail-line fw-bold mx-1"></i>contact@apdp.bj</div>
-            <div className='d-flex justify-content-center align-items-center'> <i class="ri-phone-fill fw-bold mx-1"></i>(+ 229 ) 21 32 57 88</div>
+            <div className='d-flex justify-content-center align-items-center'><i class="ri-map-pin-2-fill fw-bold mx-1" style={{fontSize: 30, marginRight: 10}}></i>Rue 6 . 076 El Marzouk Joël  COTONOU</div>
+            <div className='d-flex justify-content-center align-items-center'><i class="ri-mail-line fw-bold mx-1" style={{fontSize: 30, marginRight: 10 }}></i>contact@apdp.bj</div>
+            <div className='d-flex justify-content-center align-items-center'> <i class="ri-phone-fill fw-bold mx-1" style={{fontSize: 30, marginRight: 10}}></i>(+ 229 ) 21 32 57 88</div>
             </div>
           </div>
 
         </div>
        
       </div>
-        <div className="footer-copyright-wrapper">
+        
+      </div>
+      <div className="footer-copyright-wrapper">
           <p className="footer-copyright-text">
-            <a className="footer-copyright-link text-white" href="#" target="_self"> ©2021. | AUTORITE DE PROTECTION DES DONNEES A CARATERE PERSONNEL. apdp.bj </a>
+            <a className="footer-copyright-link text-white" href="#" target="_self"> © Copyright 2021, APDP. Tous droits réservés.</a>
           </p>
         </div>
-      </div>
       <div className="flag-look-like">
         <div className="col green-block"></div>
         <div className="col yellow-block"></div>

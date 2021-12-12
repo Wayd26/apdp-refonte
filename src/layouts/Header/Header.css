@@ -29,7 +29,7 @@
 }
 
 .nav-bar-custom{
-    display: flex !important;
+    /* display: flex !important; */
     justify-content: center;
     padding-left: 20px;
     padding-right: 20px;
@@ -42,7 +42,7 @@
 }
 
 .active{
-    border-bottom: 0.2rem solid #FFBE00
+    border-bottom: 0.2rem solid #FFBE00 !important;
 }
 .nav-item-custom:hover{
     border-bottom: 0.2rem solid #FFBE00;
@@ -70,7 +70,10 @@
     font-weight: bold;
     font-size: 15px;
     width: fit-content !important;
-    font-family: Lato;
+    font-family: Montserrat;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .search-input{
