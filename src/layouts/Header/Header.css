@@ -90,8 +90,8 @@
         @keyframes slidein { from { left:-30%; } to { left:100%; }  } */
 
 .header-block-2-div-2{
-    width: 40%;
-    font-family: Lato;
+    width: 60%;
+    font-family: Montserrat;
 }
 
 @media only screen and (max-width: 722px){

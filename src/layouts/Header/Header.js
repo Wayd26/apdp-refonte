@@ -39,13 +39,14 @@ const Header = () => {
                         
                             
                                 <div>
-                                    <img src={apdp_logo} className="logo"/>
+                                    <img src={apdp_logo} className="logo" />
                                 </div>
                             
-                                <div className=" d-none d-md-flex header-block-2-div-2 d-flex flex-row justify-content-between">
-                                    <div style={{color: "#292929", fontFamily: "Montserrat"}}> CODE DU NUMERIQUE </div>
-                                    <div style={{color: "#292929", fontFamily: "Montserrat"}}> IMPRIMER</div>
-                                    <div style={{color: "#292929", fontFamily: "Montserrat"}}> FORCE AUX QUESTIONS</div>
+                                <div className=" d-none d-md-flex header-block-2-div-2 d-flex flex-row justify-content-around">
+                                {/* <div className=" row d-flex  justify-content-around"> */}
+                                    <div className="col" style={{color: "#292929", fontFamily: "Montserrat", fontWeight: "bold"}}> CODE DU NUMERIQUE </div>
+                                    <div className="col" style={{color: "#292929", fontFamily: "Montserrat", fontWeight: "bold"}}> FOIRE AUX QUESTIONS</div>
+                                    <div className="col" style={{color: "#292929", fontFamily: "Montserrat", fontWeight: "bold"}}> CONNAITRE L'APDP</div>
                                 </div>
                             
                             

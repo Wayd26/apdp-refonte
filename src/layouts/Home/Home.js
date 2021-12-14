@@ -80,7 +80,7 @@ const Home = () => {
             <Row className={'mt-5'}>
                 <div className={'prestation-div row'}>
                     <div className={'col-sm-6'}>
-                        <p className={'prestation-div-text'}>Découvrez les différents prestations que nous proposons à nos clients.</p>
+                        <p className={'prestation-div-text'}>Découvrez les différents prestations que nous proposons à nos usagers.</p>
                         <button className={'our-services-btn'}>Nos Services</button>
                     </div>
                     <div className={'col-sm-6'}>
@@ -98,7 +98,7 @@ const Home = () => {
                     <div className={'col-sm-2'}>
                         <img className={'dots'} src={dots} />
                     </div>
-                    <div className={'col-sm-10 mx-auto'}>
+                    <div className={'col-sm-8 mx-auto'}>
                         <p className={'rights-duties-text px-5'}>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Incididunt Ut Labore.</p>
                         <div className={'row d-flex flexwrap justify-content-around'}>
 
@@ -128,7 +128,7 @@ const Home = () => {
 
             {/* FAQ Section */}
             <div className={'faq-section'}>
-                <p className={'guide-faq-title'}>Guide & FAQs</p>
+                <p className={'guide-faq-title'}>Foire Aux Questions</p>
                 <p className={'guide-faq-subtitle'}>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt </p>
                 {
                     [0, 1, 2, 3, 4].map(i => <FaqElement />)

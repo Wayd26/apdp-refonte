@@ -52,6 +52,9 @@
   border: #fff;
   margin-right: 15px;
 }
+.user-type-more-button:hover {
+transform: scale(1.1) ;
+}
 .more-text-usertype {
   text-align: center;
   font: normal normal normal 13px/15px Montserrat;
