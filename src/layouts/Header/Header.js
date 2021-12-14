@@ -30,7 +30,7 @@ const Header = () => {
                             >Alerte info <i className="ri-volume-up-fill" style={{color: "#b9a180", marginLeft: 2}}></i></span>
                         </Col> */}
                         <Col>
-                            <span className="header-animate-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                            <span className="header-animate-text">Espace réservé aux breaks new</span>
                         </Col>
                             </Row>
                     </div>
