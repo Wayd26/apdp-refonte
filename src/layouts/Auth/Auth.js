@@ -80,7 +80,7 @@ const SignIn = () => {
                         <ImMail3 className={"auth-form-input-icon"}/>
                         <input placeholder={"Entrer votre mail"} className={"auth-form-input"}/>
                     </div>
-                    <div className={"auth-form-input-container "}>
+                    <div className={"auth-form-input-container d-flex flex-nowrap "}>
                         <FiKey className={"auth-form-input-icon key"}/>
                         <input placeholder={"Entrer votre mot de passe"} type={passwordIsVisible == false ? "password" : "text"} className={"auth-form-input"}/>
                        { passwordIsVisible == false ?
