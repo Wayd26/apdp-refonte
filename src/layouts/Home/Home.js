@@ -15,7 +15,6 @@ import CardOnCaroussel from '../../components/CardOnCaroussel/CardOnCaroussel';
 
 const Home = () => {
 
-
     return (
         <div className={'Home'}>
             {/* Caroussel Section */}

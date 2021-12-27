@@ -85,7 +85,8 @@ const Footer = () => {
           <div className="footer-logo">
             <a className="footer-logo-link" href="#">
               <span className="hidden-link-text">LOGO</span>
-              <img src={apdp_logo} alt="LOGO" className="img-fluid" />
+              <object data={apdp_logo}  alt="LOGO" className="img-fluid" type="image/svg+xml"></object>
+
             </a>
           </div>
 
