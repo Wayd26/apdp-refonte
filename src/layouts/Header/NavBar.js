@@ -52,7 +52,7 @@ export default class NavBar extends Component {
                                 </NavItem> */}
 
                                 <NavDropdown className={"nav-link-title nav-item-custom"} title={"ACTUALITÉS "} id="navbarScrollingDropdown" active={window.location.pathname === "/"}>
-                                    <NavDropdown.Item href="/activites" >Les Activités</NavDropdown.Item>
+                                    <NavDropdown.Item href="/activites">Les Activités</NavDropdown.Item>
                                     <NavDropdown.Item href="">Communiqués et Newsletters</NavDropdown.Item>
                                     <NavDropdown.Item href="">Sondage sur un produit</NavDropdown.Item>
                                     <NavDropdown.Item href="">Appels d'offres</NavDropdown.Item>

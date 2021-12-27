@@ -17,6 +17,10 @@ color: #FFFFFF;
 margin-top: 2px !important;
 cursor: pointer;
 }
+
+.demarche-nav:active {
+    background-color: #FFBE00 !important;
+}
 .dropdown-item {
     font: normal normal bold 13px/20px Source Sans Pro !important;
 }

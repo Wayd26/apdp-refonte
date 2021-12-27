@@ -73,16 +73,16 @@ const SignIn = () => {
 
                     { connexion === false ? <div className={"auth-form-input-container"}>
                         <FaUser className={"auth-form-input-icon"}/>
-                        <input className={"auth-form-input"}/>
+                        <input placeholder={"Entrer votre pseudo"} className={"auth-form-input"}/>
                     </div> : null }
 
                     <div className={"auth-form-input-container"}>
                         <ImMail3 className={"auth-form-input-icon"}/>
-                        <input className={"auth-form-input"}/>
+                        <input placeholder={"Entrer votre mail"} className={"auth-form-input"}/>
                     </div>
                     <div className={"auth-form-input-container "}>
                         <FiKey className={"auth-form-input-icon key"}/>
-                        <input type={passwordIsVisible == false ? "password" : "text"} className={"auth-form-input"}/>
+                        <input placeholder={"Entrer votre mot de passe"} type={passwordIsVisible == false ? "password" : "text"} className={"auth-form-input"}/>
                        { passwordIsVisible == false ?
                        <IoMdEye className={"auth-form-input-pwd-eye"} onClick={handlePasswordVisibility}/> : 
                         <IoMdEyeOff className={"auth-form-input-pwd-eye"} onClick={handlePasswordVisibility}/>
