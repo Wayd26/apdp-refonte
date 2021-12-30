@@ -33,7 +33,7 @@ cursor: pointer;
     align-items: center;
     padding-right: 3%;
     padding-top: 10px;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
 }
 
 .client-espace-button{
@@ -70,7 +70,7 @@ cursor: pointer;
 }
 .nav-item-custom:hover{
     /* border-bottom: 0.2rem solid #FFBE00; */
-    text-shadow: 12px 2px 22px;
+    /* text-shadow: 12px 2px 22px; */
     transition: all 0.5s ease 0s;
     color: #FFBE00 !important;
     text-decoration-color: #FFBE00 !important;
@@ -153,6 +153,7 @@ cursor: pointer;
 
 .nav-bar-mother {
     width: 100% !important;
+    padding-left: 15%;
 }
 @media only screen and (max-width: 722px){
 	.header-block-2-div-2{

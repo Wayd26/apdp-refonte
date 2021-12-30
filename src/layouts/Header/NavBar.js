@@ -41,16 +41,12 @@ export default class NavBar extends Component {
         }
         return (
             <React.Fragment>
-                <Navbar light expand="sm" style={{ backgroundColor: "#2b71d3" }} className={"d-flex justify-content-around nav-bar-mother"}  >
+                <Navbar light expand="sm" style={{ backgroundColor: "#2b71d3" }} className={"d-flex justify-content-center nav-bar-mother"}  >
                     {/* <NavbarBrand href="/">reactstrap</NavbarBrand> */}
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar className="nav-bar-custom">
                         <Nav className="mr-autor  d-flex flec-wrap" navbar>
                             <h5>
-                                {/* <NavItem className="nav-item-custom">
-                                    <NavLink className="nav-title" href="/" active={window.location.pathname === "/patata"}>ACTUALITÉS <i class="ri-arrow-drop-down-fill fw-bold" style={{ fontSize: 20 }} ></i></NavLink>
-                                </NavItem> */}
-
                                 <NavDropdown className={"nav-link-title nav-item-custom"} title={"ACTUALITÉS "} id="navbarScrollingDropdown" active={window.location.pathname === "/"}>
                                     <NavDropdown.Item href="/activites">Les Activités</NavDropdown.Item>
                                     <NavDropdown.Item href="">Communiqués et Newsletters</NavDropdown.Item>
@@ -63,10 +59,6 @@ export default class NavBar extends Component {
                             </h5>
 
                             <h5>
-                                {/* <NavItem className="nav-item-custom">
-                                    <NavLink className="nav-title" href="/" active={window.location.pathname === "/donne"}>DONNÉES PERSONNELLES <i class="ri-arrow-drop-down-fill fw-bold" style={{ fontSize: 20 }} ></i></NavLink>
-                                </NavItem> */}
-
                                 <NavDropdown className={"nav-link-title nav-item-custom"} title={"DONNÉES PERSONNELLES "} id="navbarScrollingDropdown" active={window.location.pathname === "/donnees-personnelles"}>
                                     <NavDropdown.Item href="" >FAQ</NavDropdown.Item>
                                     <NavDropdown.Item href="">Quiz</NavDropdown.Item>
@@ -77,21 +69,26 @@ export default class NavBar extends Component {
                             </h5>
 
                             <h5>
-                                {/* <NavItem className="nav-item-custom">
-                                    <NavLink className="nav-title" href="#" active={window.location.pathname === "/apdp"}>VOS DEMARCHES <i class="ri-arrow-drop-down-fill fw-bold" style={{ fontSize: 20 }} ></i>  </NavLink>
-                                </NavItem> */}
-
-                                <div className={"nav-link-title nav-item-custom demarche-nav"}  id="navbarScrollingDropdown" onClick={handleDemarchesClick} active={window.location.pathname === "/vos-demarches"}>
+                                {/* <div className={"nav-link-title nav-item-custom demarche-nav"}  id="navbarScrollingDropdown" onClick={handleDemarchesClick} active={window.location.pathname === "/vos-demarches"}>
                                 VOS DEMARCHES
-                                </div>
+                                </div> */}
                             </h5>
 
 
                             <h5>
-                                {/* <NavItem className="nav-item-custom">
-                                    <NavLink className="nav-title" href="#" active={window.location.pathname === "/espace-juridique"}>DOCUMENTATION <i class="ri-arrow-drop-down-fill fw-bold" style={{ fontSize: 20 }} ></i> </NavLink>
-                                </NavItem> */}
-
+                                <NavDropdown className={"nav-link-title nav-item-custom"} title={"VOS DEMARCHES "} id="navbarScrollingDropdown" active={window.location.pathname === "/vos-demarches"}>
+                                <NavDropdown.Item href="/vos-demarches" >Faire ou modifier une demande</NavDropdown.Item>
+                                    <NavDropdown.Item href="/vos-demarches">Vérifier le statut d'une demande</NavDropdown.Item>
+                                    <NavDropdown.Item href="/vos-demarches">Espace DPO</NavDropdown.Item>
+                                    <NavDropdown.Item href="/vos-demarches">Obtenir le certificat de conformité</NavDropdown.Item>
+                                    <NavDropdown.Item href="/vos-demarches">Démarrer une mise en conformité</NavDropdown.Item>
+                                    <NavDropdown.Item href="/vos-demarches">Vérifier la conformité</NavDropdown.Item>
+                                    <NavDropdown.Item href="/vos-demarches">Visualiser la version d'une décision</NavDropdown.Item>
+                                    <NavDropdown.Item href="/vos-demarches">Prendre RDV</NavDropdown.Item>
+                                    <NavDropdown.Item href="/vos-demarches">Espace RT</NavDropdown.Item>
+                                </NavDropdown>
+                            </h5>
+                            <h5>
                                 <NavDropdown className={"nav-link-title nav-item-custom"} title={"DOCUMENTATION "} id="navbarScrollingDropdown" active={window.location.pathname === "/documentation"}>
                                 <NavDropdown.Item href="" >Liste de Pays</NavDropdown.Item>
                                     <NavDropdown.Item href="">Recommandations</NavDropdown.Item>
@@ -103,10 +100,6 @@ export default class NavBar extends Component {
                             </h5>
 
                             <h5>
-                                {/* <NavItem className="nav-item-custom">
-                                    <NavLink className="nav-title" href="#" active={window.location.pathname === "/espace-juridique"}>APDP <i class="ri-arrow-drop-down-fill fw-bold" style={{ fontSize: 20 }} ></i> </NavLink>
-                                </NavItem> */}
-
                                 <NavDropdown className={"nav-link-title nav-item-custom"} title={"APDP "} id="navbarScrollingDropdown" active={window.location.pathname === "/apdp"}>
                                 <NavDropdown.Item href="" >L'autorité</NavDropdown.Item>
                                     <NavDropdown.Item href="">Mission</NavDropdown.Item>

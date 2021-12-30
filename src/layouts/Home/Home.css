@@ -1,6 +1,6 @@
 .Home {
   width: 100%;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 
 .user-type-div {
@@ -117,7 +117,7 @@
   font: normal normal bold 18px/24px Montserrat;
   letter-spacing: 0px;
   /* color: #ffbe00; */
-  color: #4385F6;
+  color: #4385f6;
   opacity: 1;
 }
 .form-section-subtitle {
@@ -255,13 +255,11 @@
 
 .dots {
   width: 177px;
-height: 104px;
-opacity: 0.5;
+  height: 104px;
+  opacity: 0.5;
 }
 
-
 @media only screen and (max-width: 768px) {
-
   .our-services-btn {
     margin-bottom: 20px;
   }
@@ -269,11 +267,9 @@ opacity: 0.5;
   .our-services-illustration {
     display: contents;
   }
-.services-illustration-img {
-  margin-top: -10px;
-}
-
-
+  .services-illustration-img {
+    margin-top: -10px;
+  }
 }
 
 @media only screen and (max-width: 1205px) {
@@ -282,11 +278,10 @@ opacity: 0.5;
   }
 }
 @media only screen and (max-width: 1191px) {
-.user-type-div{
-  background: none transparent;
-  width: 100%;
-}
-
+  .user-type-div {
+    background: none transparent;
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 578px) {
@@ -311,6 +306,23 @@ opacity: 0.5;
   .guide-faq-subtitle {
     font: normal normal normal 14px/22px Source Sans Pro;
   }
-
 }
 
+@media only screen and (max-width: 768px) {
+  .carousel-caption {
+    top: 5px;
+  }
+  .card-on-caroussel {
+    width: 90% !important;
+    height: 100% !important;
+    margin-top: 0px;
+  }
+  .card-on-caroussel-title {
+    font: normal normal bold 16px/22px Montserrat;
+
+    margin-top: 5px;
+  }
+  .card-on-caroussel-description {
+    font: normal normal normal 18px/29px Source Sans Pro;
+  }
+}
