@@ -5,6 +5,7 @@ import { Container } from "react-bootstrap";
 import { createBrowserHistory } from "history";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Auth from "../Auth/Auth"
+import VosDroits from '../VosDroits/VosDroits';
 
 
 const Content = () => {
@@ -17,6 +18,7 @@ const Content = () => {
       <Routes>
           {/* <Route index element={<div> Here</div>} /> */}
           <Route path="/vos-demarches" element={<Auth/>} />
+          <Route path="/vos-droits" element={<VosDroits/>} />
         <   Route path="/" element={<Home />} >
         </Route>
           {/* <Route path="*" element={<div>404</div>} /> */}

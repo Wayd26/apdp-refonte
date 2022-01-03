@@ -62,7 +62,7 @@ export default class NavBar extends Component {
                                 <NavDropdown className={"nav-link-title nav-item-custom"} title={"DONNÉES PERSONNELLES "} id="navbarScrollingDropdown" active={window.location.pathname === "/donnees-personnelles"}>
                                     <NavDropdown.Item href="" >FAQ</NavDropdown.Item>
                                     <NavDropdown.Item href="">Quiz</NavDropdown.Item>
-                                    <NavDropdown.Item href="">Vos droits</NavDropdown.Item>
+                                    <NavDropdown.Item href="/vos-droits">Vos droits</NavDropdown.Item>
                                     <NavDropdown.Item href="">Guide de conformité</NavDropdown.Item>
                                     
                                 </NavDropdown>

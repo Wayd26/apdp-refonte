@@ -17,16 +17,16 @@ const Header = () => {
         setIsOpen(!isOpen)
     }
 
-    useEffect(() => {
-        axios.get(BASE_URL)
-.then(response => {
-console.log(response);
-});
-     }, [])
+//     useEffect(() => {
+//         axios.get(BASE_URL)
+// .then(response => {
+// console.log(response);
+// });
+//      }, [])
 
     return (
         <React.Fragment>
-                <div>
+                <div id={"header"}>
                     <div className="header-block-1">
                     <Row className={"d-flex flex-nowrap"}>
                         {/* <Col xs={2} >
