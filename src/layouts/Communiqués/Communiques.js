@@ -192,7 +192,7 @@ const Communiques = () => {
                     <br/>
                     <br/>
                     <br/>
-                    <Card bg="primary" style={{ 'min-width': '22rem', width: 'auto',}}>
+                    <Card bg="primary">
                         <Card.Body>
                         <Card.Title style={{ color: 'white', margin: '30px', 'font-size': '32px', 'font-family': 'Poppins'}}>Besoin d'aide ?</Card.Title>
                         <Card.Text style={{ color: 'white', 'font-size': '15px', width: 'auto', }}>
@@ -208,8 +208,8 @@ const Communiques = () => {
             <Card className={"releases-card-for-presentation"}>
                 <Card.Body className={"releases-card-text-for-presentation"}>
                 <Card.Text>
-                    <h2 style={{font: "normal normal bold 63px/94px Poppins", 'letter-spacing': '0px', color: '#000000', opacity: '1', 'margin-bottom': '30px'}}>Lorem Ipsum</h2>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                    <h2 className={"releases-card-text-title-for-presentation"}>Lorem Ipsum</h2>
+                    <p className={"releases-card-text-subtitle-for-presentation"}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo</p>
                 </Card.Text>
                 </Card.Body>
                 <Card.Img src={img6} className={"releases-card-for-presentation-img"}/>
