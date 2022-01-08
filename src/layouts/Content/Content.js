@@ -6,8 +6,20 @@ import { createBrowserHistory } from "history";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Auth from "../Auth/Auth"
 import VosDroits from '../VosDroits/VosDroits';
+import DetailsDroit from '../DetailsDroit/DetailsDroit';
 import FaireUneDemande from '../FaireUneDemande/FaireUneDemande';
 import Communiques from '../Communiqués/Communiques';
+import rester_informe from "../../assets/icons/rester_informe.png"
+import vous_opposer from "../../assets/icons/vous_opposer.jpg"
+import verifier_vos_donnees from "../../assets/icons/verifier_vos_donnees.jpg"
+import rectifier_vos_donnees from "../../assets/icons/rectifier_vos_donnees.jpg"
+import deferencer_contenu from "../../assets/icons/deferencer_un_contenu.jpg"
+import effacer_vos_donnees from "../../assets/icons/effacer_vos_donnees.jpg"
+import emporter_vos_donnees from "../../assets/icons/emporter_vos_donnees.jpg"
+import demander_intervention_humaine from "../../assets/icons/demander_une_intervention_humaine.jpg"
+import geler_vos_donnees from "../../assets/icons/geler_utilisation_de_vos_donnees.jpg"
+import fichiers_police from "../../assets/icons/fichiers_de_police.jpg"
+import droit_ficoba from "../../assets/icons/droit_acces_ficoba.png"
 
 
 const Content = () => {
@@ -22,9 +34,18 @@ const Content = () => {
           <Route path="/vos-demarches" element={<Auth/>} />
 
           <Route path="/faire-une-demande" element={<FaireUneDemande />} />
-
           <Route path="/communiques" element={<Communiques/>} />
-
+          <Route path="/vos-droits/rester-informe" element={<DetailsDroit img={rester_informe} title={"Rester Informé"}/> } />
+          <Route path="/vos-droits/vous-opposer" element={<DetailsDroit img={vous_opposer} title={"Vous opposer"}/> } />
+          <Route path="/vos-droits/verifier-vos-donnees" element={<DetailsDroit img={verifier_vos_donnees} title={"Vérifier vos données"}/> } />
+          <Route path="/vos-droits/rectifier-vos-donnees" element={<DetailsDroit img={rectifier_vos_donnees} title={"Rectifier vos données"}/> } />
+          <Route path="/vos-droits/deferencer-contenu" element={<DetailsDroit img={deferencer_contenu} title={"Déréférencer un contenu"}/> } />
+          <Route path="/vos-droits/effacer-vos-donnees" element={<DetailsDroit img={effacer_vos_donnees} title={"Effacer vos données"}/> } />
+          <Route path="/vos-droits/emporter-vos-donnees" element={<DetailsDroit img={emporter_vos_donnees} title={"Emporter vos données"}/> } />
+          <Route path="/vos-droits/demander-intervention-humaine" element={<DetailsDroit img={demander_intervention_humaine} title={"Demander une intervention humaine"}/> } />
+          <Route path="/vos-droits/geler-vos-donnees" element={<DetailsDroit img={geler_vos_donnees} title={"Geler l’utilisation de vos données"}/> } />
+          <Route path="/vos-droits/fichiers-police" element={<DetailsDroit img={fichiers_police} title={"Les fichiers de police, de gendarmerie et de renseignement"}/> } />
+          <Route path="/vos-droits/droit-ficoba" element={<DetailsDroit img={droit_ficoba} title={"Droit d'accès au FICOBA"}/> } />
           <Route path="/vos-droits" element={<VosDroits/>} />
         <   Route path="/" element={<Home />} >
         </Route>
