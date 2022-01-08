@@ -12,8 +12,15 @@ import img5 from '../../assets/images/img5.jpg'
 import img6 from '../../assets/images/img6.jpg'
 import img7 from '../../assets/images/img7.jpg'
 import CardOnCaroussel from '../../components/CardOnCaroussel/CardOnCaroussel';
+import {useNavigate} from "react-router-dom"
 
 const Home = () => {
+
+    const navigate = useNavigate();
+
+    const handleClickCard = (cardClicked) => {
+        navigate(`/${cardClicked}`);
+    }
 
     return (
         <div className={'Home'}>
@@ -65,7 +72,7 @@ const Home = () => {
                     <div className={'col-md-10 col-sm-12 mx-auto'}>
                         <div className={'row d-flex flex-wrap justify-content-around '}>
 
-                            <UserTypeCard type={'right'} description={'Lorem ici ce sont dolor pour les sit mes droits'}/>
+                            <UserTypeCard handleClick={() => handleClickCard("vos-droits")}  type={'right'} description={'Lorem ici ce sont dolor pour les sit mes droits'}/>
                             <UserTypeCard type={'duty'} description={'Lorem ipsum amet demae sont  amet mes devoirs'}/>
                             <UserTypeCard type={'demand'} description={'Lorem ipsum dolor pour les sit amet demandes'}/>
                         </div>
