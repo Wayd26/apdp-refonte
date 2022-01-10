@@ -44,7 +44,7 @@
     width: 100%;
 }
 
-.card {
+.activities-card.card {
     padding: 0px;
     background-color: rgba(0, 0, 0, 0.1);
 }
@@ -103,8 +103,8 @@
     background-image: url('../../assets/images/img8.png');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 500px;
-    height: 300px;
+    width: 700px;
+    height: 500px;
     border-radius: 0px !important;
 }
 
@@ -112,8 +112,8 @@
     background-image: url('../../assets/images/img7.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 500px;
-    height: 300px;
+    width: 700px;
+    height: 500px;
     border-radius: 0px !important;
 }
 
@@ -136,12 +136,13 @@
     right: -10px;
 }
 
-.card-text {
+.activities-card p.card-text {
     display: block;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     padding: 0px 0px 0px 0px;
+    width: 60ch;
 }
 
 .page-subtitle {
@@ -264,7 +265,7 @@
         width: 100%;
     }
     
-    .card {
+    .activities-card.card {
         padding: 0px;
         background-color: rgba(0, 0, 0, 0.1);
     }
@@ -290,7 +291,7 @@
         right: -10px;
     }
     
-    .card-text {
+    .activities-card p.card-text {
         display: block;
         overflow: hidden;
         white-space: nowrap;
@@ -316,7 +317,7 @@
         width: 60ch;
     }
 
-    .card-text h2 {
+    .activities-card p.card-text h2 {
         font-size: 250%;
     }
 
@@ -369,7 +370,7 @@
         margin-left: 9%;
     }
 
-    .card-text {
+    .activities-card p.card-text {
         width: auto;
     }
 
@@ -456,7 +457,7 @@
         width: 100%;
     }
 
-    .card-text {
+    .activities-card p.card-text {
         width: auto;
     }
 

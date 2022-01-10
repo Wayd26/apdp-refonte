@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Auth from "../Auth/Auth"
 import VosDroits from '../VosDroits/VosDroits';
 import DetailsDroit from '../DetailsDroit/DetailsDroit';
+import DetailsCommunique from '../DetailsCommuniqué/DetailsCommunique';
+import DetailsActivite from '../DetailsActivité/DetailsActivite';
 import VosDevoirs from '../VosDevoirs/VosDevoirs';
 import DetailsDevoir from '../DetailsDevoir/DetailsDevoir';
 import FaireUneDemande from '../FaireUneDemande/FaireUneDemande';
@@ -39,7 +41,8 @@ const Content = () => {
       <Routes>
           {/* <Route index element={<div> Here</div>} /> */}
           <Route path="/vos-demarches" element={<Auth/>} />
-
+          <Route path="/communique/details-1" element={<DetailsCommunique />} />
+          <Route path="/activite/details-1" element={<DetailsActivite />} />
           <Route path="/faire-une-demande" element={<FaireUneDemande />} />
           <Route path="/evenements/evenement26" element={<DetailsEvenement />} />
           <Route path="/evenements" element={<Evenements />} />
