@@ -24,6 +24,7 @@ import fichiers_police from "../../assets/icons/fichiers_de_police.jpg"
 import droit_ficoba from "../../assets/icons/droit_acces_ficoba.png"
 import Evenements from '../Evenements/Evenements';
 import DetailsEvenement from '../DetailsEvenement/DetailsEvenement';
+import Activites from '../Activités/Activites';
 
 
 const Content = () => {
@@ -69,6 +70,7 @@ const Content = () => {
           <Route path="/vos-devoirs/droit-ficoba" element={<DetailsDevoir img={droit_ficoba} title={"Droit d'accès au FICOBA"}/> } />
           <Route path="/vos-devoirs" element={<VosDevoirs/>} />
 
+          <Route path="/activites" element={<Activites/>} />
         <   Route path="/" element={<Home />} >
         </Route>
           {/* <Route path="*" element={<div>404</div>} /> */}
