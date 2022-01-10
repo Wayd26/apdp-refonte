@@ -1,21 +1,19 @@
 import React, {useState, useEffect} from 'react';
-import RightCard from '../../components/RightCard/RightCard';
-import "./VosDroits.css";
+import DutyCard from '../../components/DutyCard/DutyCard';
+import "./VosDevoirs.css";
 import {Tabs, Tab} from "react-bootstrap";
-import RightsContent from '../../components/RightsContent/RightsContent';
+import DutiesContent from '../../components/DutiesContent/DutiesContent';
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
 
-const VosDroits = () => {
+const VosDevoirs = () => {
 
     const [key, setKey] = useState('particulier');
 
 
     return (
       <div style={{background: '#F7F7F7'}}>
-<ActualiteCarousel />
-
-        <div className={"your-rights"} id={"your-rights"}>
-
+      <ActualiteCarousel />
+        <div className={"your-duties"} id={"your-duties"}>
             <Tabs
       id="controlled-tab-example"
       activeKey={key}
@@ -23,19 +21,19 @@ const VosDroits = () => {
       className="mb-3"
     >
       <Tab eventKey="particulier" title="Particulier">
-        <RightsContent />
+        <DutiesContent />
       </Tab>
       <Tab eventKey="entreprise_et_organisme" title="Entreprise et Organisme">
-      <RightsContent />
+      <DutiesContent />
 
       </Tab>
       <Tab eventKey="administration_publique" title="Administration Publique" >
-      <RightsContent />
+      <DutiesContent />
       </Tab>
     </Tabs>
         </div>
-      </div>
+        </div>
     )
 }
 
-export default VosDroits;
+export default VosDevoirs;

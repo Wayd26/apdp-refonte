@@ -3,49 +3,16 @@ import "./Communiques.css";
 import img5 from '../../assets/images/img5.jpg'
 import img6 from '../../assets/images/img6.jpg'
 import img7 from '../../assets/images/img7.jpg'
-import FaqElement from '../../components/FaqElement/FaqElement';
+import FaqSection from '../../components/FaqSection/FaqSection';
 import {Carousel, Card, Figure, Button, ButtonGroup, Accordion} from "react-bootstrap";
-import CardOnCaroussel from '../../components/CardOnCaroussel/CardOnCaroussel';
+import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
 
 const Communiques = () => {
 
     return (
         <div className={"releases"} id={"releases"}>
             {/* Carousel */}
-            <Carousel fade>
-                <Carousel.Item>
-                    <img
-                    className="d-block w-100"
-                    src={img5}
-                    alt="First slide"
-                    />
-                    <Carousel.Caption>
-                        <CardOnCaroussel />
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                    className="d-block w-100"
-                    src={img5}
-                    alt="Second slide"
-                    />
-
-                    <Carousel.Caption>
-                        <CardOnCaroussel />
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                    className="d-block w-100"
-                    src={img5}
-                    alt="Third slide"
-                    />
-
-                    <Carousel.Caption>
-                        <CardOnCaroussel />
-                    </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel>
+           <ActualiteCarousel />
 
             {/* Title */}
 
@@ -63,8 +30,8 @@ const Communiques = () => {
                             <p className={"release-card-subtitle"}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no</p>
                             <a href="#" className={"release-card-link"}>Lire plus</a>
                         </Card.Text>
-                        </Card.Body>
-                    </Card>
+                        </Card.Body> 
+                    </Card>  
                     <br />
                     <Card className={"releases-card"}>
                         <div className={'releases-card-image-div'} id={'releases-card-image-div'}>
@@ -222,17 +189,11 @@ const Communiques = () => {
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
                 </Card.Text>
                 </Card.Body>
-                <div className={"releases-card-for-presentation-img"}></div>
+                <div className={"releases-card-for-presentation-img"}></div>  
             </Card>
 
             {/* FAQ section */}
-            <div className={'faq-section'}>
-                <p className={'guide-faq-title'}>Guide & FAQs</p>
-                <p className={'guide-faq-subtitle'}>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt </p>
-                {
-                    [0, 1, 2, 3, 4].map(i => <FaqElement />)
-                }
-            </div>
+            <FaqSection />
         </div>
     )
 }

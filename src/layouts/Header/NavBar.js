@@ -53,7 +53,7 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="/communiques">Communiqués et Newsletters</NavDropdown.Item>
                                     <NavDropdown.Item href="">Sondage sur un produit</NavDropdown.Item>
                                     <NavDropdown.Item href="">Appels d'offres</NavDropdown.Item>
-                                    <NavDropdown.Item href="">Evènements</NavDropdown.Item>
+                                    <NavDropdown.Item href="/evenements">Evènements</NavDropdown.Item>
                                     <NavDropdown.Item href="">Forum de discussion</NavDropdown.Item>
                                     
                                 </NavDropdown>

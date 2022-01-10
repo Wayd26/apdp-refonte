@@ -1,17 +1,21 @@
 import React from 'react'
 import FaireUneDemandeCard from '../../components/FaireUneDemandeCard/FaireUneDemandeCard'
+import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel'
 import "./FaireUneDemande.css"
 import dots from '../../assets/icons/dots.svg'
 
 const FaireUneDemande = () => {
     return (
+        <div>
+            <ActualiteCarousel />
+
         <div id="faire-une-demande" className="faire-une-demande">
-            <div className="top-blue-band row">
+            <div className="top-blue-band row  d-flexjustify-content-between">
                 <div className="col-5 ">
                 <p className="vos-demarches-text">Vos Demarches</p>
 
                 </div>
-                <div className="col">
+                <div className="col-6">
 
                 <div className="row d-flex justify-content-around">
 
@@ -30,17 +34,18 @@ const FaireUneDemande = () => {
                 <img src={dots} className="faire-une-demande-dots" />
                 </div>
             </div>
-            <div className=" row">
+            <div className=" row d-flexjustify-content-between">
                 <div className="col-4">
                 </div>
-                <div className="col bottom-blue-band">
+                <div className="col-6 bottom-blue-band">
                 <div className="row d-flex justify-content-around">
-                <FaireUneDemandeCard title={"Commander un macaron"} description={"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor"}/>
+                <FaireUneDemandeCard  title={"Commander un macaron"} description={"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor"}/>
                 <FaireUneDemandeCard title={"Déposer une plainte"} description={"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor"}/>
                 </div>
                 </div>
                
             </div>
+        </div>
         </div>
     )
 }

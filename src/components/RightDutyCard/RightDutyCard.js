@@ -5,12 +5,12 @@ import { RiArrowRightCircleFill } from 'react-icons/ri'
 
 const RightDutyCard = (props) => {
 
-    const { type } = props;
+    const { type, btnClicked } = props;
 
     return (
         <div className={type == 'duty' ? 'duty-card' : 'right-card'}>
             <div className={'right-duty-card-title'}>{type == 'duty' ? 'Vos devoirs' : 'Vos droits'}</div>
-            <button className={'right-duty-more-button d-flex justify-content-around align-self-right'}>
+            <button onClick={btnClicked} className={'right-duty-more-button d-flex justify-content-around align-self-right'}>
                 <span className={'more-text'}>Découvrir</span>
                 <RiArrowRightCircleFill className={'more-button-arrow'}/>
             </button>

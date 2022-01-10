@@ -9,7 +9,7 @@
   opacity: 1;
   border-radius: 0px 100px 0px 100px;
   height: 80px;
-  margin-right: 10%;
+  margin-right: 5%;
   margin-left: 5%;
 }
 
@@ -30,6 +30,7 @@ color: #FFFFFF;
 opacity: 1;
 margin-top: 15px;
 margin-bottom :auto;
+/* margin-right: 120px; */
 }
 
 .text-between-bands-row {
