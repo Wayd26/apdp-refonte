@@ -78,9 +78,11 @@ const Activites = () => {
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>01</p>
                         <RiEyeFill  style={{ 'width': '10px', 'height': '10px', float: 'left', position: 'relative', top: '-20px', 'margin-left': '10px', color: 'red',}}/>
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>301</p>
-                        <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
-                            LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
-                        </Button>
+                        <a href="/activite/details-1">
+                            <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
+                                LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
+                            </Button>
+                        </a>
                     </Card.Body>
                 </Card>
 
@@ -104,9 +106,11 @@ const Activites = () => {
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>01</p>
                         <RiEyeFill  style={{ 'width': '10px', 'height': '10px', float: 'left', position: 'relative', top: '-20px', 'margin-left': '10px', color: 'red',}}/>
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>301</p>
-                        <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
-                            LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
-                        </Button>
+                        <a href="/activite/details-1">
+                            <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
+                                LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
+                            </Button>
+                        </a>
                     </Card.Body>
                 </Card>
 
@@ -130,9 +134,11 @@ const Activites = () => {
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>01</p>
                         <RiEyeFill  style={{ 'width': '10px', 'height': '10px', float: 'left', position: 'relative', top: '-20px', 'margin-left': '10px', color: 'red',}}/>
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>301</p>
-                        <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
-                            LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
-                        </Button>
+                        <a href="/activite/details-1">
+                            <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
+                                LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
+                            </Button>
+                        </a>
                     </Card.Body>
                 </Card>
 
@@ -156,9 +162,11 @@ const Activites = () => {
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>01</p>
                         <RiEyeFill  style={{ 'width': '10px', 'height': '10px', float: 'left', position: 'relative', top: '-20px', 'margin-left': '10px', color: 'red',}}/>
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>301</p>
-                        <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
-                            LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
-                        </Button>
+                        <a href="/activite/details-1">
+                            <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
+                                LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
+                            </Button>
+                        </a>
                     </Card.Body>
                 </Card>
 
@@ -182,9 +190,11 @@ const Activites = () => {
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>01</p>
                         <RiEyeFill  style={{ 'width': '10px', 'height': '10px', float: 'left', position: 'relative', top: '-20px', 'margin-left': '10px', color: 'red',}}/>
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>301</p>
-                        <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
-                            LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
-                        </Button>
+                        <a href="/activite/details-1">
+                            <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
+                                LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
+                            </Button>
+                        </a>
                     </Card.Body>
                 </Card>
 
@@ -208,9 +218,11 @@ const Activites = () => {
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>01</p>
                         <RiEyeFill  style={{ 'width': '10px', 'height': '10px', float: 'left', position: 'relative', top: '-20px', 'margin-left': '10px', color: 'red',}}/>
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>301</p>
-                        <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
-                            LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
-                        </Button>
+                        <a href="/activite/details-1">
+                            <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
+                                LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
+                            </Button>
+                        </a>
                     </Card.Body>
                 </Card>
 
@@ -234,9 +246,11 @@ const Activites = () => {
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>01</p>
                         <RiEyeFill  style={{ 'width': '10px', 'height': '10px', float: 'left', position: 'relative', top: '-20px', 'margin-left': '10px', color: 'red',}}/>
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>301</p>
-                        <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
-                            LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
-                        </Button>
+                        <a href="/activite/details-1">
+                            <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
+                                LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
+                            </Button>
+                        </a>
                     </Card.Body>
                 </Card>
 
@@ -260,9 +274,11 @@ const Activites = () => {
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>01</p>
                         <RiEyeFill  style={{ 'width': '10px', 'height': '10px', float: 'left', position: 'relative', top: '-20px', 'margin-left': '10px', color: 'red',}}/>
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>301</p>
-                        <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
-                            LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
-                        </Button>
+                        <a href="/activite/details-1">
+                            <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
+                                LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
+                            </Button>
+                        </a>
                     </Card.Body>
                 </Card>
             </div>
@@ -297,9 +313,11 @@ const Activites = () => {
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>01</p>
                         <RiEyeFill  style={{ 'width': '10px', 'height': '10px', float: 'left', position: 'relative', top: '-20px', 'margin-left': '10px', color: 'red',}}/>
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>301</p>
-                        <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
-                            LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
-                        </Button>
+                        <a href="/activite/details-1">
+                            <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
+                                LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
+                            </Button>
+                        </a>
                     </Card.Body>
                 </Card>
 
@@ -323,9 +341,11 @@ const Activites = () => {
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>01</p>
                         <RiEyeFill  style={{ 'width': '10px', 'height': '10px', float: 'left', position: 'relative', top: '-20px', 'margin-left': '10px', color: 'red',}}/>
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>301</p>
-                        <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
-                            LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
-                        </Button>
+                        <a href="/activite/details-1">
+                            <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
+                                LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
+                            </Button>
+                        </a>
                     </Card.Body>
                 </Card>
 
@@ -349,9 +369,11 @@ const Activites = () => {
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>01</p>
                         <RiEyeFill  style={{ 'width': '10px', 'height': '10px', float: 'left', position: 'relative', top: '-20px', 'margin-left': '10px', color: 'red',}}/>
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>301</p>
-                        <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
-                            LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
-                        </Button>
+                        <a href="/activite/details-1">
+                            <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
+                                LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
+                            </Button>
+                        </a>
                     </Card.Body>
                 </Card>
 
@@ -375,9 +397,11 @@ const Activites = () => {
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>01</p>
                         <RiEyeFill  style={{ 'width': '10px', 'height': '10px', float: 'left', position: 'relative', top: '-20px', 'margin-left': '10px', color: 'red',}}/>
                         <p style={{ 'font-size': '10px', float: 'left', position: 'relative', top: '-28px', 'margin-left': '10px',}}>301</p>
-                        <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
-                            LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
-                        </Button>
+                        <a href="/activite/details-1">
+                            <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', float: 'right', }}>
+                                LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
+                            </Button>
+                        </a>
                     </Card.Body>
                 </Card>
             </div>
