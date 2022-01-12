@@ -25,6 +25,8 @@ import droit_ficoba from "../../assets/icons/droit_acces_ficoba.png"
 import Evenements from '../Evenements/Evenements';
 import DetailsEvenement from '../DetailsEvenement/DetailsEvenement';
 import Activites from '../Activités/Activites';
+import AppelsOffres from '../AppelsOffres/AppelsOffres';
+import FAQ from '../FAQ/FAQ';
 
 
 const Content = () => {
@@ -56,7 +58,6 @@ const Content = () => {
           <Route path="/vos-droits/fichiers-police" element={<DetailsDroit img={fichiers_police} title={"Les fichiers de police, de gendarmerie et de renseignement"}/> } />
           <Route path="/vos-droits/droit-ficoba" element={<DetailsDroit img={droit_ficoba} title={"Droit d'accès au FICOBA"}/> } />
           <Route path="/vos-droits" element={<VosDroits/>} />
-
           <Route path="/vos-devoirs/rester-informe" element={<DetailsDevoir img={rester_informe} title={"Rester Informé"}/> } />
           <Route path="/vos-devoirs/vous-opposer" element={<DetailsDevoir img={vous_opposer} title={"Vous opposer"}/> } />
           <Route path="/vos-devoirs/verifier-vos-donnees" element={<DetailsDevoir img={verifier_vos_donnees} title={"Vérifier vos données"}/> } />
@@ -68,7 +69,9 @@ const Content = () => {
           <Route path="/vos-devoirs/geler-vos-donnees" element={<DetailsDevoir img={geler_vos_donnees} title={"Geler l’utilisation de vos données"}/> } />
           <Route path="/vos-devoirs/fichiers-police" element={<DetailsDevoir img={fichiers_police} title={"Les fichiers de police, de gendarmerie et de renseignement"}/> } />
           <Route path="/vos-devoirs/droit-ficoba" element={<DetailsDevoir img={droit_ficoba} title={"Droit d'accès au FICOBA"}/> } />
-          <Route path="/vos-devoirs" element={<VosDevoirs/>} />
+          <Route path="/vos-devoirs" element={<VosDevoirs />} />
+          <Route path="/appels-d-offres" element={<AppelsOffres />} />
+          <Route path="/faq" element={<FAQ />} />
 
           <Route path="/activites" element={<Activites/>} />
         <   Route path="/" element={<Home />} >
