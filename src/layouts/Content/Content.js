@@ -29,6 +29,8 @@ import DetailsEvenement from '../DetailsEvenement/DetailsEvenement';
 import Activites from '../Activités/Activites';
 import AppelsOffres from '../AppelsOffres/AppelsOffres';
 import FAQ from '../FAQ/FAQ';
+import ForumDiscusion from '../ForumDiscussion/ForumDiscusion';
+import Quiz from '../Quiz/Quiz';
 
 
 const Content = () => {
@@ -75,6 +77,8 @@ const Content = () => {
           <Route path="/vos-devoirs" element={<VosDevoirs />} />
           <Route path="/appels-d-offres" element={<AppelsOffres />} />
           <Route path="/faq" element={<FAQ />} />
+          {/* <Route path="/forum-de-discussion" element={<ForumDiscusion />} /> */}
+          {/* <Route path="/quiz" element={<Quiz />} /> */}
 
           <Route path="/activites" element={<Activites/>} />
         <   Route path="/" element={<Home />} >

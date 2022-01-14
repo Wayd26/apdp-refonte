@@ -54,7 +54,7 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="">Sondage sur un produit</NavDropdown.Item>
                                     <NavDropdown.Item href="/appels-d-offres">Appels d'offres</NavDropdown.Item>
                                     <NavDropdown.Item href="/evenements">Evènements</NavDropdown.Item>
-                                    <NavDropdown.Item href="">Forum de discussion</NavDropdown.Item>
+                                    <NavDropdown.Item href="/forum-de-discussion">Forum de discussion</NavDropdown.Item>
                                     
                                 </NavDropdown>
                             </h5>
@@ -62,7 +62,7 @@ export default class NavBar extends Component {
                             <h5>
                                 <NavDropdown className={"nav-link-title nav-item-custom"} title={"DONNÉES PERSONNELLES "} id="navbarScrollingDropdown" active={window.location.pathname === "/donnees-personnelles"}>
                                     <NavDropdown.Item href="/faq" >FAQ</NavDropdown.Item>
-                                    <NavDropdown.Item href="">Quiz</NavDropdown.Item>
+                                    <NavDropdown.Item href="/quiz">Quiz</NavDropdown.Item>
                                     <NavDropdown.Item href="/vos-droits">Vos droits</NavDropdown.Item>
                                     <NavDropdown.Item href="">Guide de conformité</NavDropdown.Item>
                                     
