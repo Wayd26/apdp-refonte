@@ -26,6 +26,7 @@ import fichiers_police from "../../assets/icons/fichiers_de_police.jpg"
 import droit_ficoba from "../../assets/icons/droit_acces_ficoba.png"
 import Evenements from '../Evenements/Evenements';
 import DetailsEvenement from '../DetailsEvenement/DetailsEvenement';
+import FormulaireCourrier from '../FormulaireCourrier/FormulaireCourrier';
 import Activites from '../Activités/Activites';
 import AppelsOffres from '../AppelsOffres/AppelsOffres';
 import FAQ from '../FAQ/FAQ';
@@ -48,6 +49,7 @@ const Content = () => {
           <Route path="/communique/details-1" element={<DetailsCommunique />} />
           <Route path="/activite/details-1" element={<DetailsActivite />} />
           <Route path="/faire-une-demande" element={<FaireUneDemande />} />
+          <Route path="/formulaire-du-courrier" element={<FormulaireCourrier />} />
           <Route path="/evenements/evenement26" element={<DetailsEvenement />} />
           <Route path="/evenements" element={<Evenements />} />
           <Route path="/communiques" element={<Communiques/>} />
