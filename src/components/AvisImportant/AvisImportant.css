@@ -8,7 +8,7 @@ margin-bottom: 35px;
 }
 
 .avis-important-icon {
-    width: 26px;
+    width: 40px;
 height: 26px;
 color: #2699FB;
 opacity: 1;
@@ -33,4 +33,15 @@ margin-right: 20px;
 
 .avis-important-first-bloc {
     text-align: left;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .avis-important-button {
+        font: normal normal bold 13px/15px Montserrat;
+    }
+    .avis-important-text {
+        font: normal normal bold 13px/13px Source sans pro;
+    }
 }

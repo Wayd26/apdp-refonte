@@ -34,3 +34,14 @@ opacity: 1;
     margin-top: 20px;
     margin-bottom: 30px;
 }
+
+@media only screen and (max-width: 768px) {
+    .forum-discussion-title {
+        font: normal normal bold 25px/38px Montserrat;
+    }
+    .forum-discussion-description {
+        font: normal normal normal 12px/18px Source Sans Pro;
+    }
+    .forum-discussion-box {
+        width: 90%;}
+ }

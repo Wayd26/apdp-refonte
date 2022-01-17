@@ -103,7 +103,7 @@ export default class NavBar extends Component {
                             <h5>
                                 <NavDropdown className={"nav-link-title nav-item-custom"} title={"APDP "} id="navbarScrollingDropdown" active={window.location.pathname === "/apdp"}>
                                 <NavDropdown.Item href="" >L'autorité</NavDropdown.Item>
-                                    <NavDropdown.Item href="">Mission</NavDropdown.Item>
+                                    <NavDropdown.Item href="/mission">Mission</NavDropdown.Item>
                                     <NavDropdown.Item href="">Mandature en cours et Historique des membres</NavDropdown.Item>
                                     <NavDropdown.Item href="">Commissariat du Gouvernement</NavDropdown.Item>
                                     <NavDropdown.Item href="">Coopération</NavDropdown.Item>

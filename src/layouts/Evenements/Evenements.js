@@ -43,7 +43,7 @@ const Evenements = () => {
                 <div className="row my-3">
                     <div className="col-4">
                         <img src={img5} className="popular-activities-img"/>
-                    </div>
+                      </div>
                     <div className="col-8">
                         <p className="popular-activities-desc">Eirmod tempor invidunt ut lab ore et dolore magna consetetur sadipscing elitr aliquyam</p>
                     </div>

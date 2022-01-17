@@ -29,16 +29,16 @@ const AppelsOffres = () => {
           </p>
         </div>
         <div className="w90 row d-flex justify-content-between">
-          <div className="col-6">
+          <div className="col-xs-12 col-sm-6 col-md-4">
             <MarketCard />
           </div>
-          <div className="col-6">
+          <div className="col-xs-12 col-sm-6 col-md-4">
             <MarketCard />
           </div>
-          <div className="col-6">
+          <div className="col-xs-12 col-sm-6 col-md-4">
             <MarketCard />
           </div>
-          <div className="col-6">
+          <div className="col-xs-12 col-sm-6 col-md-4">
             <MarketCard />
           </div>
         </div>
@@ -50,13 +50,13 @@ const AppelsOffres = () => {
 
         </div>
         <div className="w90 row d-flex justify-content-between">
-          <div className="col-6">
+          <div className="col-xs-12 col-sm-6 col-md-4">
             <MarketCard />
           </div>
-          <div className="col-6">
+          <div className="col-xs-12 col-sm-6 col-md-4">
             <MarketCard />
           </div>
-          <div className="col-6">
+          <div className="col-xs-12 col-sm-6 col-md-4">
             <MarketCard />
           </div>
          
