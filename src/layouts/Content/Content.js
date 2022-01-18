@@ -35,9 +35,9 @@ import ForumDiscusion from '../ForumDiscussion/ForumDiscusion';
 import Mission from '../Mission/Mission';
 import MissionDetails from '../MissionDetails/MissionDetails';
 import Quiz from '../Quiz/Quiz';
+import RapportsAnnuels from '../RapportsAnnuels/RapportsAnnuels';
 import Membres from '../Membres/Membres';
 import President from '../President/President';
-import RapportsAnnuels from '../RapportsAnnuels/RapportsAnnuels';
 
 
 const Content = () => {
@@ -101,6 +101,7 @@ const Content = () => {
           <Route path="/mission/proteger" element={<MissionDetails title={"Protéger"} />} />           
           <Route path="/mission" element={<Mission />} />
           <Route path="/rapports-annuels" element={<RapportsAnnuels />} />
+          <Route path="/membres" element={<Membres />} />
 
           <Route path="/activites" element={<Activites/>} />
         <   Route path="/" element={<Home />} >

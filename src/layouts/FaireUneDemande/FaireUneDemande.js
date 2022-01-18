@@ -38,8 +38,8 @@ const FaireUneDemande = () => {
                 <div className="col-4">
                 </div>
                 <div className="col-6 bottom-blue-band">
-                <div className="row d-flex justify-content-around">
-                <FaireUneDemandeCard  title={"Commander un macaron"} description={"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor"}/>
+                <div className="row d-flex justify-content-around" >
+                <FaireUneDemandeCard title={"Commander un macaron"} description={"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor"}/>
                 <FaireUneDemandeCard title={"Déposer une plainte"} description={"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor"}/>
                 </div>
                 </div>
