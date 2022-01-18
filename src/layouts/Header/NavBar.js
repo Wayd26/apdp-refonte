@@ -94,7 +94,7 @@ export default class NavBar extends Component {
                                 <NavDropdown.Item href="" >Liste de Pays</NavDropdown.Item>
                                     <NavDropdown.Item href="">Recommandations</NavDropdown.Item>
                                     <NavDropdown.Item href="">Outils de conformité</NavDropdown.Item>
-                                    <NavDropdown.Item href="">Rapports d'activités Annuelles</NavDropdown.Item>
+                                    <NavDropdown.Item href="/rapports-annuels">Rapports d'activités Annuelles</NavDropdown.Item>
                                     <NavDropdown.Item href="">Études</NavDropdown.Item>
                                     <NavDropdown.Item href="">Textes</NavDropdown.Item>
                                 </NavDropdown>
@@ -105,7 +105,7 @@ export default class NavBar extends Component {
                                 <NavDropdown.Item href="" >L'autorité</NavDropdown.Item>
                                     <NavDropdown.Item href="/mission">Mission</NavDropdown.Item>
                                     <NavDropdown.Item href="">Mandature en cours et Historique des membres</NavDropdown.Item>
-                                    <NavDropdown.Item href="">Commissariat du Gouvernement</NavDropdown.Item>
+                                    <NavDropdown.Item href="/commissaire">Commissariat du Gouvernement</NavDropdown.Item>
                                     <NavDropdown.Item href="">Coopération</NavDropdown.Item>
                                     <NavDropdown.Item href="">Contact</NavDropdown.Item>
                                 </NavDropdown>

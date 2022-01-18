@@ -12,7 +12,7 @@ const MissionCard = (props) => {
     const handleMissionCardClicked = (clicked) => {
 
         // console.log("this is clicked ", clicked);
-            navigate(`/mission/${clicked}`)
+            navigate(`/mission${clicked}`)
     }
     return (
         <div className="mission-card">

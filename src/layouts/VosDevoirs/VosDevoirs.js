@@ -12,7 +12,7 @@ const VosDevoirs = () => {
 
     return (
       <div style={{background: '#F7F7F7'}}>
-      <ActualiteCarousel />
+      {/* <ActualiteCarousel /> */}
         <div className={"your-duties"} id={"your-duties"}>
             <Tabs
       id="controlled-tab-example"

@@ -9,7 +9,7 @@ const AppelsOffres = () => {
   var actualYear = new Date();
   return (
     <div style={{ background: "#F7F7F7 0% 0% no-repeat padding-box;" }}>
-      <ActualiteCarousel />
+      {/* <ActualiteCarousel /> */}
       <div id="appels-offres" className="appels-offres">
         <div className="appels-offres-header">
           <p className="appels-offres-header-text">Appels d'offres</p>
@@ -62,7 +62,7 @@ const AppelsOffres = () => {
          
         </div>
       </div>
-      <FaqSection />
+      {/* <FaqSection /> */}
     </div>
   );
 };

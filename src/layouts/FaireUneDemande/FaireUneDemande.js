@@ -7,7 +7,7 @@ import dots from '../../assets/icons/dots.svg'
 const FaireUneDemande = () => {
     return (
         <div>
-            <ActualiteCarousel />
+            {/* <ActualiteCarousel /> */}
 
         <div id="faire-une-demande" className="faire-une-demande">
             <div className="top-blue-band row  d-flexjustify-content-between">

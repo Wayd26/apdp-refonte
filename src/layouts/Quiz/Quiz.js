@@ -7,7 +7,7 @@ import QuizCard from '../../components/QuizCard/QuizCard';
 const Quiz = () => {
     return (
         <div style={{background: "#F7F7F7"}} id="quiz">
-            <ActualiteCarousel />
+            {/* <ActualiteCarousel /> */}
             <div className="quiz-box">
             <p className="quiz-title">LES COURRIERS POUR AGIR</p>
             <p className="quiz-select-category-text">SÉLECTIONNER LA CATÉGORIE DE VOTRE QUESTION</p>
@@ -55,7 +55,7 @@ const Quiz = () => {
 
             <button className="quiz-more-button">Afficher Plus</button>
             </div>
-            <FaqSection />
+            {/* <FaqSection /> */}
         </div>
     )
 }

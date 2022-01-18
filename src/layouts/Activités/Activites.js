@@ -12,46 +12,12 @@ const Activites = () => {
 
     return (
         <div className={"activities"} id={"activities"}>
-            {/* Carousel */}
-            <Carousel fade>
-                <Carousel.Item>
-                    <img
-                    className="d-block w-100"
-                    src={img5}
-                    alt="First slide"
-                    />
-                    <Carousel.Caption>
-                        <CardOnCaroussel />
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                    className="d-block w-100"
-                    src={img5}
-                    alt="Second slide"
-                    />
-
-                    <Carousel.Caption>
-                        <CardOnCaroussel />
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                    className="d-block w-100"
-                    src={img5}
-                    alt="Third slide"
-                    />
-
-                    <Carousel.Caption>
-                        <CardOnCaroussel />
-                    </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel>
+           
 
             {/* Title */}
 
             <p className={'page-title'}>LES ACTIVITÉS</p>
-            <p className={'page-subtitle'}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no</p>
+            <p className={'page-subtitle'}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed dia</p>
 
 
             {/* Activities list 1 */}
@@ -450,14 +416,7 @@ const Activites = () => {
                 <div className={"activities-card-for-presentation-img-2"}></div>
             </Card>
 
-            {/* FAQ section */}
-            <div className={'faq-section'}>
-                <p className={'guide-faq-title'}>Guide & FAQs</p>
-                <p className={'guide-faq-subtitle'}>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt </p>
-                {
-                    [0, 1, 2, 3, 4].map(i => <FaqElement />)
-                }
-            </div>
+          
             
         </div>
     )

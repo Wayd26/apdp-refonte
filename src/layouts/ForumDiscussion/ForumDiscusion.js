@@ -7,7 +7,7 @@ import ForumDiscussionRow from '../../components/ForumDiscussionRow/ForumDiscuss
  const ForumDiscusion = () => {
      return (
          <div style={{background: "#F7F7F7"}}>
-             <ActualiteCarousel />
+             {/* <ActualiteCarousel /> */}
 
             <div className="forum-discussion-box">
                 <p className="forum-discussion-title">FORUM DE DISCUSSION</p>
@@ -18,7 +18,7 @@ import ForumDiscussionRow from '../../components/ForumDiscussionRow/ForumDiscuss
             </div>
 
 
-             <FaqSection />
+             {/* <FaqSection /> */}
          </div>
      )
  }

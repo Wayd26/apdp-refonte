@@ -19,7 +19,7 @@ const Evenements = () => {
 
     return (
         <div id="events" className="events">
-            <ActualiteCarousel />
+            {/* <ActualiteCarousel /> */}
             <p className="events-title">Tous les évenements</p>
             <p className="events-subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed  olores et ea rebum. Stet clita kasd gubergren, no seaolores et ea rebum. Stet clita kasd guolores et ea rebum. Stet clita kasdolores et ea rebum. Stet clita </p>
            <div className="row d-flex">
@@ -79,7 +79,7 @@ const Evenements = () => {
             </div>
            </div>
 
-           <FaqSection />
+           {/* <FaqSection /> */}
         </div>
     )
 }

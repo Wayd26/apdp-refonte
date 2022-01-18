@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Home from '../Home/Home'
 // import { Route, Router, Switch, Routes } from "react-router-dom";
 import { Container } from "react-bootstrap";
@@ -25,7 +25,9 @@ import geler_vos_donnees from "../../assets/icons/geler_utilisation_de_vos_donne
 import fichiers_police from "../../assets/icons/fichiers_de_police.jpg"
 import droit_ficoba from "../../assets/icons/droit_acces_ficoba.png"
 import Evenements from '../Evenements/Evenements';
+import Commissaire from '../Commissaire/Commissaire';
 import DetailsEvenement from '../DetailsEvenement/DetailsEvenement';
+import FormulaireCourrier from '../FormulaireCourrier/FormulaireCourrier';
 import Activites from '../Activités/Activites';
 import AppelsOffres from '../AppelsOffres/AppelsOffres';
 import FAQ from '../FAQ/FAQ';
@@ -33,23 +35,29 @@ import ForumDiscusion from '../ForumDiscussion/ForumDiscusion';
 import Mission from '../Mission/Mission';
 import MissionDetails from '../MissionDetails/MissionDetails';
 import Quiz from '../Quiz/Quiz';
+import RapportsAnnuels from '../RapportsAnnuels/RapportsAnnuels';
 
 
 const Content = () => {
 
     const history = createBrowserHistory();
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     return (
         <div>
 
             
-            <BrowserRouter>
+            <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
       <Routes>
           {/* <Route index element={<div> Here</div>} /> */}
           <Route path="/vos-demarches" element={<Auth/>} />
           <Route path="/communique/details-1" element={<DetailsCommunique />} />
           <Route path="/activite/details-1" element={<DetailsActivite />} />
+          <Route path="/commissaire" element={<Commissaire />} />
           <Route path="/faire-une-demande" element={<FaireUneDemande />} />
+          <Route path="/formulaire-du-courrier" element={<FormulaireCourrier />} />
           <Route path="/evenements/evenement26" element={<DetailsEvenement />} />
           <Route path="/evenements" element={<Evenements />} />
           <Route path="/communiques" element={<Communiques/>} />
@@ -80,7 +88,7 @@ const Content = () => {
           <Route path="/appels-d-offres" element={<AppelsOffres />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/forum-de-discussion" element={<ForumDiscusion />} />
-          <Route path="/quiz" element={<Quiz />} />
+          {/* <Route path="/quiz" element={<Quiz />} /> */}
           <Route path="/mission/informer" element={<MissionDetails title={"Informer"} />} />
           <Route path="/mission/reguler" element={<MissionDetails title={"Réguler"} />} />
           <Route path="/mission/controler" element={<MissionDetails title={"Contrôler"} />} />
@@ -88,6 +96,7 @@ const Content = () => {
           <Route path="/mission/anticiper" element={<MissionDetails title={"Anticiper"} />} />
           <Route path="/mission/proteger" element={<MissionDetails title={"Protéger"} />} />           
           <Route path="/mission" element={<Mission />} />
+          <Route path="/rapports-annuels" element={<RapportsAnnuels />} />
 
           <Route path="/activites" element={<Activites/>} />
         <   Route path="/" element={<Home />} >
