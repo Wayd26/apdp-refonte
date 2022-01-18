@@ -19,7 +19,7 @@ const Evenements = () => {
 
     return (
         <div id="events" className="events">
-            <ActualiteCarousel />
+            {/* <ActualiteCarousel /> */}
             <p className="events-title">Tous les évenements</p>
             <p className="events-subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed  olores et ea rebum. Stet clita kasd gubergren, no seaolores et ea rebum. Stet clita kasd guolores et ea rebum. Stet clita kasdolores et ea rebum. Stet clita </p>
            <div className="row d-flex">
@@ -43,7 +43,7 @@ const Evenements = () => {
                 <div className="row my-3">
                     <div className="col-4">
                         <img src={img5} className="popular-activities-img"/>
-                    </div>
+                      </div>
                     <div className="col-8">
                         <p className="popular-activities-desc">Eirmod tempor invidunt ut lab ore et dolore magna consetetur sadipscing elitr aliquyam</p>
                     </div>
@@ -79,7 +79,7 @@ const Evenements = () => {
             </div>
            </div>
 
-           <FaqSection />
+           {/* <FaqSection /> */}
         </div>
     )
 }

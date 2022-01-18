@@ -3,10 +3,10 @@
   /* height: 381px; */
   background: #ffffffc7 0% 0% no-repeat padding-box;
   border-radius: 27px;
-  opacity: 1;
   margin-bottom: 50px !important;
   padding: 15px 50px;
   margin-top : 40px;
+  opacity: 0.7;
 }
 
 .card-on-caroussel-title {
@@ -16,12 +16,13 @@
   color: #000000;
   text-shadow: 0px 3px 6px #0000001a;
   text-transform: uppercase;
-  margin-top: 50px;
+  margin-top: 30px;
+  opacity: 1;
 }
 
 .card-on-caroussel-description {
   text-align: center;
-  font: normal normal normal 20px/33px Source Sans Pro;
+  font: normal normal normal 15px/23px Source Sans Pro;
   letter-spacing: 0px;
   color: #292929;
   text-shadow: 0px 3px 6px #00000029;

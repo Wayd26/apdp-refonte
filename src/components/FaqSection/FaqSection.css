@@ -18,3 +18,13 @@
     margin-right: auto;
   }
   
+  @media only screen and (max-width: 768px) { 
+    .guide-faq-subtitle {
+      text-align: center;
+      font: normal normal normal 20px/22px Source Sans Pro;
+      width: 90%;
+    }
+    .guide-faq-title {
+      font: normal normal bold 28px/37px Montserrat;
+    }
+  }

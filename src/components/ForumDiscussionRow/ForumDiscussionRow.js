@@ -14,11 +14,16 @@ const ForumDiscussionRow = () => {
                 <div className="forum-discussion-row-details-container">
                     <p className="forum-discussion-row-details-title">Discussion 1</p>
                     <p className="forum-discussion-row-details-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, et dolore magna aliquyam eratos et acco dolores et ea rebum.</p>
-                    <div className="forum-discussion-row-details-info d-flex flex-nowrap">
+                    <div className="forum-discussion-row-details-info d-flex flex-wrap">
+                        <span>
+
                         <BsFillCalendarCheckFill className="forum-discussion-row-details-info-icon" />
                         <span className="mx-2"> 15/01/2020</span>
+                        </span>
+                        <span>
                         <TiMessages className="forum-discussion-row-details-info-icon"/>
                         <span className="mx-2"> 26 réponses</span>
+                        </span>
                     </div>
                 </div>
                 <div className="forum-discussion-row-button-container">

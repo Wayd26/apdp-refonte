@@ -16,6 +16,7 @@ const Footer = () => {
         
          
           <Row className="footer-menu-2">
+            <Col sm={1}></Col>
             <Col sm={4}>
                 <h5 style={{
                     color: "white",
@@ -38,6 +39,7 @@ const Footer = () => {
                     <FaPaperPlane />
                 </span>
                 </div>
+                <button className="footer-subscribe-button">S'abonner</button>
 
             </Col>
             <Col style={{
@@ -48,7 +50,7 @@ const Footer = () => {
             }}>
                 <div className="d-flex flex-column justify-content-center align-items-center" >
 
-               <div> Rejoignez-nous</div>
+               <div style={{font: "normal normal bold 25px/30px Montserrat"}}> Rejoignez-nous</div>
                 <div className="d-flex flex-row">
 
                 <a className="linkedin social-container" href="#" target="_blank">
@@ -58,8 +60,8 @@ const Footer = () => {
                 <a className="twitter social-container" style={{
                   backgroundColor: "#2289FF"
                 }} href="#" target="_blank">
-                <span className="hidden-link-text">Twitter</span>
-                <FaTwitter style={{width: `40px`, color: `white`,  fontSize:30}} />
+                <span className="hidden-link-text" style={{backgroundColor: "#FFFFFF"}}>Twitter</span>
+                <FaTwitter style={{color: "#2289FF", width: "30px", fontSize: "30px", backgroundColor: "#FFFFFF", borderRadius: "20px", padding: "3px"}} />
                 </a>
                 <a className="youtube social-container" href="#" target="_blank">
                 <span className="hidden-link-text">Youtube</span>
@@ -67,7 +69,7 @@ const Footer = () => {
                 </a>
                 </div>
                 <div style={{
-                  fontSize: 10
+                  fontSize: 15
                 }}>
                 Ne ratez pas l'actualité de l'APDP en temps réel sur nos réseaux sociaux.
                 </div>

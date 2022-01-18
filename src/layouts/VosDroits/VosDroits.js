@@ -12,7 +12,7 @@ const VosDroits = () => {
 
     return (
       <div style={{background: '#F7F7F7'}}>
-<ActualiteCarousel />
+{/* <ActualiteCarousel /> */}
 
         <div className={"your-rights"} id={"your-rights"}>
 

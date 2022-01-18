@@ -53,3 +53,16 @@ opacity: 1;
 margin-right: 20px;
 cursor: pointer;
 }
+
+@media only screen and (max-width: 768px) {     
+    .event-card-title {
+        font: normal normal bold 22px/33px Montserrat;
+    }
+    .event-card-subtitle {
+        font: normal normal normal 15px/25px Source Sans Pro;
+    }
+    .event-card-more {
+        text-align: right;
+        font: normal normal normal 20px/24px Source Sans Pro;
+    }
+}

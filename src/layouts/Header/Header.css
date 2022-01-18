@@ -1,13 +1,13 @@
 .header-block-1 {
-    background-color: #FFBE00;
+    background-color: #FFEE00;
     height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 20px !important;
-    font: normal normal medium 20px/40px Montserrat;
+    padding-bottom: 40px !important;
+    font: normal normal normal 20px/40px Montserrat;
 letter-spacing: 0px;
-color: #FFFFFF;
+color: #000000;
 }
 
 .demarche-nav {
@@ -47,6 +47,7 @@ cursor: pointer;
 .logo{
     width: 60%;
     height: 10%;
+    cursor: pointer !important;
 }
 
 .nav-bar-custom{
@@ -136,10 +137,11 @@ cursor: pointer;
 
 .header-animate-text {
     min-width: 100%;
-    -webkit-animation: 22s ease-in 1s infinite reverse both running slidein;
-    animation: 22s ease-in 1s infinite reverse both running slidein;
+    -webkit-animation: 60s ease-in 1s infinite reverse both running slidein;
+    animation: 60s ease-in 1s infinite reverse both running slidein;
     position: absolute;
 }
+
 @-webkit-keyframes slidein { from { left:-100%; } to { left:100%; }  }
         @keyframes slidein { from { left:-100%; } to { left:100%; }  }
 

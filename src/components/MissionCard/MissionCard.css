@@ -1,0 +1,51 @@
+.mission-card {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 4px 4px 15px #090E144A;
+    border-radius: 12px;
+    opacity: 1;
+    margin-bottom: 25px;
+    height: 326px;
+    padding-top: 20px;
+}
+
+.mission-card-title {
+    font: normal normal bold 29px/43px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    margin-bottom: 25px;
+
+}
+
+.mission-card-description {
+    font: normal normal normal 15px/22px Arial;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    height: 160px;
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+    overflow-y: auto;
+}
+
+.mission-card-button {
+    width: 192px;
+    height: 36px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 8px 15px #727C8E5C;
+    border-radius: 24px;
+    opacity: 1;
+    border: none;
+}
+
+.mission-card-button-icon {
+    width: 22px;
+  height: 22px;
+  color: #ffbe00;
+  background: #fff 0% 0% no-repeat padding-box;
+  border-radius: 24px;
+  margin: auto;
+  opacity: 1;
+  margin-left: 10px;
+}

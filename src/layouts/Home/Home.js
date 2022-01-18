@@ -37,17 +37,17 @@ const Home = () => {
               <UserTypeCard
                 handleClick={() => handleClickCard("vos-droits")}
                 type={"right"}
-                description={"Lorem ici ce sont dolor pour les sit mes droits"}
+                description={"Si un responsable de traitement estime qu’une demande..."}
               />
               <UserTypeCard
                 handleClick={() => handleClickCard("vos-devoirs")}
                 type={"duty"}
-                description={"Lorem ipsum amet demae sont  amet mes devoirs"}
+                description={"Vous avez la possibilité de bloquer l’accès de..."}
               />
               <UserTypeCard
                 handleClick={() => handleClickCard("faire-une-demande")}
                 type={"demand"}
-                description={"Lorem ipsum dolor pour les sit amet demandes"}
+                description={"Tout citoyen peut s’adresser à l’APDP pour..."}
               />
             </div>
           </div>
@@ -86,8 +86,7 @@ const Home = () => {
           </div>
           <div className={"col-sm-8 mx-auto"}>
             <p className={"rights-duties-text px-5"}>
-              Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do
-              Eiusmod Tempor Incididunt Incididunt Ut Labore.
+            Vous trouverez ici des informations sur vos droits et devoirs.
             </p>
             <div className={"row d-flex flexwrap justify-content-around"}>
               <RightDutyCard bntClicked={() => handleClickCard("vos-droits")} type={"right"} />
@@ -100,13 +99,13 @@ const Home = () => {
       {/* Forms Section */}
 
       <div className={"forms-section"}>
-        <p className={"form-section-title"}>Formulaires</p>
+        {/* <p className={"form-section-title"}>Formulaires</p> */}
         <p className={"form-section-subtitle"}>Liens Rapides</p>
         <div className={"row"}>
           <div className={"col-sm-8 mx-auto"}>
             <div className={"row d-flex justify-content-around"}>
               {[...Array(12).keys()].map((i) => (
-                <ShortcutCard ind={i} />
+                <ShortcutCard ind={i}  />
               ))}
             </div>
           </div>

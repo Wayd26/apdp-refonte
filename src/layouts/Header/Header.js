@@ -16,6 +16,9 @@ const Header = () => {
     const toggle_modal = () => {
         setIsOpen(!isOpen)
     }
+    const goHome = () => {
+        window.location.replace("/")
+    } 
 
 //     useEffect(() => {
 //         axios.get(BASE_URL)
@@ -51,22 +54,24 @@ const Header = () => {
 
                     <div className="header-block-2">
                         
-                            
-                                <div>
+                            <a href='/'>
+
+                                <div style={{cursor: "pointer"}} onClick={goHome}>
                                     {/* <img src={apdp_logo} className="logo" /> */}
-                                    <object data={apdp_logo} className="logo" type="image/svg+xml"></object>
+                                    <object  data={apdp_logo} className="logo" type="image/svg+xml"></object>
                                 </div>
+                            </a>
                             
                                 <div className=" d-none d-md-flex header-block-2-div-2 d-flex flex-row justify-content-around">
                                 {/* <div className=" row d-flex  justify-content-around"> */}
-                                    <div className="col" style={{color: "#292929", fontFamily: "Montserrat", fontWeight: "bold"}}> CODE DU NUMERIQUE </div>
-                                    <div className="col" style={{color: "#292929", fontFamily: "Montserrat", fontWeight: "bold"}}> FOIRE AUX QUESTIONS</div>
-                                    <div className="col" style={{color: "#292929", fontFamily: "Montserrat", fontWeight: "bold"}}> CONNAITRE L'APDP</div>
+                                    <div className="col" style={{color: "#292929", fontFamily: "Montserrat", fontWeight: "bold", cursor: "pointer"}}> CODE DU NUMERIQUE </div>
+                                    <div className="col" style={{color: "#292929", fontFamily: "Montserrat", fontWeight: "bold", cursor: "pointer"}}> FOIRE AUX QUESTIONS</div>
+                                    <div className="col" style={{color: "#292929", fontFamily: "Montserrat", fontWeight: "bold", cursor: "pointer"}}> CONNAITRE L'APDP</div>
                                 </div>
                             
                             
                                 <div>
-                                    <Button color="primary" onClick={toggle_modal} className="client-espace-button"><h8>FR</h8></Button>
+                                    <Button color="primary" onClick={toggle_modal} className="client-espace-button"><h8>EN</h8></Button>
                                 </div>
 
                                

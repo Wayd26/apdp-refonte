@@ -12,7 +12,7 @@ import imgCard6 from "../../assets/images/img6.jpg"
 const DetailsActivite = () => {
     return (
         <div id="details-activities" className="details-activities">
-        <ActualiteCarousel />
+        {/* <ActualiteCarousel /> */}
         <br/>
         <br/>
         <br/>
@@ -82,7 +82,7 @@ const DetailsActivite = () => {
         </div>
        </div>
 
-       <FaqSection />
+       {/* <FaqSection /> */}
     </div>
     )
 }

@@ -21,7 +21,7 @@ text-transform: uppercase;
 opacity: 1;
 }
 
-.quiz-select-category-text {
+ .quiz-select-category-text {
     text-align: center;
 font: normal normal normal 20px/26px Source Sans Pro;
 letter-spacing: 0px;
@@ -42,6 +42,8 @@ margin-top: 30px;
 
 .quiz-category-div {
     /* height: 30px; */
+    margin-left: 10px;
+    margin-right: 10px;
 background: #FFFFFF 0% 0% no-repeat padding-box;
 border: 1px solid #CED4DA;
 opacity: 1;
@@ -74,4 +76,16 @@ opacity: 1;
 border-radius: 8px;
 color: #FFFFFF;
 border: none;
+}
+
+@media only screen and (max-width: 768px) { 
+    .quiz-box {
+        width: 85%;
+    }
+    .quiz-title {
+        font: normal normal bold 20px/38px Montserrat;
+    }
+     .quiz-select-category-text {
+    font: normal normal normal 15px/20px Source Sans Pro;
+}
 }

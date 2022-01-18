@@ -9,7 +9,7 @@ const AppelsOffres = () => {
   var actualYear = new Date();
   return (
     <div style={{ background: "#F7F7F7 0% 0% no-repeat padding-box;" }}>
-      <ActualiteCarousel />
+      {/* <ActualiteCarousel /> */}
       <div id="appels-offres" className="appels-offres">
         <div className="appels-offres-header">
           <p className="appels-offres-header-text">Appels d'offres</p>
@@ -29,16 +29,16 @@ const AppelsOffres = () => {
           </p>
         </div>
         <div className="w90 row d-flex justify-content-between">
-          <div className="col-6">
+          <div className="col-xs-12 col-sm-6 col-md-4">
             <MarketCard />
           </div>
-          <div className="col-6">
+          <div className="col-xs-12 col-sm-6 col-md-4">
             <MarketCard />
           </div>
-          <div className="col-6">
+          <div className="col-xs-12 col-sm-6 col-md-4">
             <MarketCard />
           </div>
-          <div className="col-6">
+          <div className="col-xs-12 col-sm-6 col-md-4">
             <MarketCard />
           </div>
         </div>
@@ -50,19 +50,19 @@ const AppelsOffres = () => {
 
         </div>
         <div className="w90 row d-flex justify-content-between">
-          <div className="col-6">
+          <div className="col-xs-12 col-sm-6 col-md-4">
             <MarketCard />
           </div>
-          <div className="col-6">
+          <div className="col-xs-12 col-sm-6 col-md-4">
             <MarketCard />
           </div>
-          <div className="col-6">
+          <div className="col-xs-12 col-sm-6 col-md-4">
             <MarketCard />
           </div>
          
         </div>
       </div>
-      <FaqSection />
+      {/* <FaqSection /> */}
     </div>
   );
 };

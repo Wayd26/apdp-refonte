@@ -12,7 +12,7 @@ import imgCard6 from "../../assets/images/img6.jpg"
 const DetailsCommunique = () => {
     return (
         <div id="details-releases" className="details-releases">
-        <ActualiteCarousel />
+        {/* <ActualiteCarousel /> */}
         <p className="details-releases-title">Communiqué 1</p>
         <hr className="details-release-hr"></hr>
        <div className="row d-flex">
@@ -80,7 +80,7 @@ const DetailsCommunique = () => {
         </div>
        </div>
 
-       <FaqSection />
+       {/* <FaqSection /> */}
     </div>
     )
 }

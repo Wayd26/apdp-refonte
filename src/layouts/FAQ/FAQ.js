@@ -9,7 +9,7 @@ import {BiSearchAlt} from "react-icons/bi"
 const FAQ = () => {
     return (
         <div style={{background: "#F7F7F7"}}>
-            <ActualiteCarousel />
+            {/* <ActualiteCarousel /> */}
             <div className="faq-container">
 
                 <img src={faq_image} className="faq-image" />

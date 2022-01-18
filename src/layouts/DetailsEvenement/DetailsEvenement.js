@@ -12,7 +12,7 @@ import imgCard6 from "../../assets/images/img6.jpg"
 const DetailsEvenement = () => {
     return (
         <div id="details-events" className="details-events">
-        <ActualiteCarousel />
+        {/* <ActualiteCarousel /> */}
         <p className="details-events-title">ÉVENEMENT 1</p>
         <hr className="details-event-hr"></hr>
 
@@ -45,7 +45,7 @@ const DetailsEvenement = () => {
             <div className="details-event-second-card-img"></div>
             </Card.Body>
         </Card>
-       <FaqSection />
+       {/* <FaqSection /> */}
     </div>
     )
 }

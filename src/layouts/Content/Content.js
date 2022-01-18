@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Home from '../Home/Home'
 // import { Route, Router, Switch, Routes } from "react-router-dom";
 import { Container } from "react-bootstrap";
@@ -32,20 +32,26 @@ import Activites from '../Activités/Activites';
 import AppelsOffres from '../AppelsOffres/AppelsOffres';
 import FAQ from '../FAQ/FAQ';
 import ForumDiscusion from '../ForumDiscussion/ForumDiscusion';
+import Mission from '../Mission/Mission';
+import MissionDetails from '../MissionDetails/MissionDetails';
 import Quiz from '../Quiz/Quiz';
 import Membres from '../Membres/Membres';
 import President from '../President/President';
+import RapportsAnnuels from '../RapportsAnnuels/RapportsAnnuels';
 
 
 const Content = () => {
 
     const history = createBrowserHistory();
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     return (
         <div>
 
             
-            <BrowserRouter>
+            <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
       <Routes>
           {/* <Route index element={<div> Here</div>} /> */}
           <Route path="/vos-demarches" element={<Auth/>} />
@@ -85,8 +91,16 @@ const Content = () => {
           <Route path="/vos-devoirs" element={<VosDevoirs />} />
           <Route path="/appels-d-offres" element={<AppelsOffres />} />
           <Route path="/faq" element={<FAQ />} />
-          {/* <Route path="/forum-de-discussion" element={<ForumDiscusion />} /> */}
+          <Route path="/forum-de-discussion" element={<ForumDiscusion />} />
           {/* <Route path="/quiz" element={<Quiz />} /> */}
+          <Route path="/mission/informer" element={<MissionDetails title={"Informer"} />} />
+          <Route path="/mission/reguler" element={<MissionDetails title={"Réguler"} />} />
+          <Route path="/mission/controler" element={<MissionDetails title={"Contrôler"} />} />
+          <Route path="/mission/sanctionner" element={<MissionDetails title={"Sanctionner"} />} />
+          <Route path="/mission/anticiper" element={<MissionDetails title={"Anticiper"} />} />
+          <Route path="/mission/proteger" element={<MissionDetails title={"Protéger"} />} />           
+          <Route path="/mission" element={<Mission />} />
+          <Route path="/rapports-annuels" element={<RapportsAnnuels />} />
 
           <Route path="/activites" element={<Activites/>} />
         <   Route path="/" element={<Home />} >

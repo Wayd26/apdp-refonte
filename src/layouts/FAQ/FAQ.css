@@ -89,3 +89,28 @@ background: #EAEAEA 0% 0% no-repeat padding-box;
 border-radius: 22px;
 opacity: 1;
 }
+
+@media only screen and (max-width: 768px) { 
+  .faq-title {
+    font: normal normal bold 15px/28px Montserrat;
+  }
+  .faq-select-category {
+    font: normal normal normal 12px/15px Source Sans Pro;
+  }
+  .faq-input-container {
+    width: 90%;
+  }
+  .faq-input, .faq-input:active, .faq-input:focus, .faq-input:focus-within, .faq-input:hover, .faq-input:visited {
+    width: 75%;
+  }
+  .faq-allfaq-img {
+    width: 53px;
+    height: 53px;
+}
+.faq-allfaq {
+  font: normal normal bold 14px/22px Montserrat;
+}
+.faq-see-allfaq {
+  font: normal normal bold 12px/15px Source Sans Pro;
+}
+}

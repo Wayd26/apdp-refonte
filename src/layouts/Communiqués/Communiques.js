@@ -6,18 +6,19 @@ import img7 from '../../assets/images/img7.jpg'
 import FaqSection from '../../components/FaqSection/FaqSection';
 import {Carousel, Card, Figure, Button, ButtonGroup, Accordion} from "react-bootstrap";
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
+import BesoinAide from '../../components/BesoinAide/BesoinAide';
 
 const Communiques = () => {
 
     return (
         <div className={"releases"} id={"releases"}>
             {/* Carousel */}
-           <ActualiteCarousel />
+           {/* <ActualiteCarousel /> */}
 
             {/* Title */}
 
             <p className={'page-title'}>COMMUNIQUES ET NEWSLETTERS</p>
-            <p className={'page-subtitle'}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no</p>
+            <p className={'page-subtitle'}>Lorem ipsum dolor sit amet, consetetur sadipsiam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores</p>
             <div className={'releases-section'} id={'releases-section'}>
                 {/* Releases card list */}
                 <div className={"releases-first-section"} id={"releases-first-section"}>
@@ -159,15 +160,8 @@ const Communiques = () => {
                     <br/>
                     <br/>
                     <br/>
-                    <Card bg="primary">
-                        <Card.Body>
-                        <Card.Title style={{ color: 'white', margin: '30px', 'font-size': '32px', 'font-family': 'Poppins'}}>Besoin d'aide ?</Card.Title>
-                        <Card.Text style={{ color: 'white', 'font-size': '15px', width: 'auto', }}>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.
-                        </Card.Text>
-                        <Button variant="light" style={{ margin: '20px', 'font-family': 'Poppins' }}>Contactez-nous</Button>
-                        </Card.Body>
-                    </Card>
+
+                    <BesoinAide />
                 </div>
             </div>
 
@@ -193,7 +187,7 @@ const Communiques = () => {
             </Card>
 
             {/* FAQ section */}
-            <FaqSection />
+            {/* <FaqSection /> */}
         </div>
     )
 }
