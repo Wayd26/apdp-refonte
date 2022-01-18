@@ -1,0 +1,582 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+.page-title {
+    text-align: center;
+    font: normal normal bold 38px/57px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    padding: 150px 0px 50px 0px;
+}
+
+.members-separator {
+    color: #FFBE00;
+    opacity: 1;
+    border: 2px solid #FFBE00;
+    width: 10%;
+}
+
+.members-card {
+    box-shadow: 5px 10px #888888;
+    margin: 10px;
+    width: 250px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.members-page-section {
+    margin: 0px;
+    position: relative;
+    top: -50px;
+    right: -150px;
+    float: left;
+}
+
+.members-card-list {
+    padding-left: 100px;
+    padding-right: 70px;
+    display: flex;
+    justify-content: center !important;
+    width: 97%;
+}
+
+.members-card.card {
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 1) !important;
+}
+
+.members-card-img.rounded-circle {
+    background-image: url('../../assets/images/img7.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 0px;
+    margin-bottom: 20px;
+    border-radius: 15px 15px 0px 0px;
+    -webkit-border-radius: 15px 15px 0px 0px;
+    -moz-border-radius: 15px 15px 0px 0px;
+    -ms-border-radius: 15px 15px 0px 0px;
+    -o-border-radius: 15px 15px 0px 0px;
+}
+
+.members-card-for-presentation {
+    display: flex;
+    flex-direction: row;
+    margin: 100px !important;
+    background: #E8EBF4 0% 0% no-repeat padding-box;
+    opacity: 1;
+    text-align: left;
+    border-radius: 0px !important;
+}
+
+.members-card-for-presentation-2 {
+    display: flex;
+    flex-direction: row;
+    margin: 100px !important;
+    background: #E8EBF4 0% 0% no-repeat padding-box;
+    opacity: 1;
+    text-align: left;
+    margin-top: -100px !important;
+    border-radius: 0px !important;
+}
+
+
+.members-card-for-presentation-img {
+    background-image: url('../../assets/images/img8.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 700px;
+    height: 500px;
+    border-radius: 0px !important;
+}
+
+.members-card-for-presentation-img-2 {
+    background-image: url('../../assets/images/img7.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 700px;
+    height: 500px;
+    border-radius: 0px !important;
+}
+
+.members-card-for-presentation-mobile{
+    display: none;
+    border-radius: 0px !important;
+}
+
+.members-card-for-presentation-mobile-2 {
+    margin-top: -10px !important;
+    border-radius: 0px !important;
+    display: none;
+}
+
+.rounded-circle {
+    width: 37px;
+    height: 37px;
+    position: relative;
+    top: -35px;
+    right: -10px;
+}
+
+
+.page-subtitle {
+    text-align: center;
+    /* font: normal normal normal 21px/21px Arial; */
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    margin-bottom: 150px;
+    padding: 7px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+
+    .members-card-for-presentation {
+        display: flex;
+        height: 300px;
+        margin: 10px;
+        background: #E8EBF4 0% 0% no-repeat padding-box !important;
+        opacity: 1 !important;
+    }
+
+    .members-card-for-presentation-2 {
+        display: flex;
+        height: 300px;
+        margin: 10px;
+        background: #E8EBF4 0% 0% no-repeat padding-box !important;
+        opacity: 1 !important;
+    }
+
+    .members-card-for-presentation-mobile {
+        display: none;
+    }
+
+    .members-card-for-presentation-mobile-2 {
+        display: none;
+    }
+
+    .members-card-for-presentation-img {
+        background-image: url('../../assets/images/img8.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 500px;
+        height: 300px;
+    }
+
+    .members-card-for-presentation-img-2 {
+        background-image: url('../../assets/images/img7.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 500px;
+        height: 300px;
+    }
+
+
+    .page-title {
+      font: normal normal bold 28px/40px Montserrat;
+      padding: 50px 0px 20px 0px;
+    }
+
+    .page-subtitle {
+        text-align: justify;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 1;
+        font: normal normal normal 14px/22px Arial;
+    }
+
+    .members-separator {
+        color: #FFBE00;
+        opacity: 1;
+        border: 2px solid #FFBE00;
+        width: 10%;
+    }
+    
+    .members-card {
+        box-shadow: 5px 10px #888888;
+        margin: 10px;
+        width: 250px;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+    }
+    
+    .members-page-section {
+        margin: 0px;
+        position: relative;
+        top: -50px;
+        right: -150px;
+        float: left;
+    }
+    
+    .members-card-list {
+        padding-left: 100px;
+        padding-right: 70px;
+        display: flex;
+        justify-content: left;
+        width: 97%;
+    }
+    
+    .members-card.card {
+        padding: 0px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    
+    .members-card-img-1.rounded-circle {
+        background-image: url('../../assets/images/President_apdp.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        top: 0px;
+        margin-bottom: 20px;
+        border-radius: 15px 15px 0px 0px;
+        -webkit-border-radius: 15px 15px 0px 0px;
+        -moz-border-radius: 15px 15px 0px 0px;
+        -ms-border-radius: 15px 15px 0px 0px;
+        -o-border-radius: 15px 15px 0px 0px;
+    }
+
+    .members-card-img-2.rounded-circle {
+        background-image: url('../../assets/images/rapporteur_apdp.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        top: 0px;
+        margin-bottom: 20px;
+        border-radius: 15px 15px 0px 0px;
+        -webkit-border-radius: 15px 15px 0px 0px;
+        -moz-border-radius: 15px 15px 0px 0px;
+        -ms-border-radius: 15px 15px 0px 0px;
+        -o-border-radius: 15px 15px 0px 0px;
+    }
+
+    .members-card-img-3.rounded-circle {
+        background-image: url('../../assets/images/y_w_a_s_apdp.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        top: 0px;
+        margin-bottom: 20px;
+        border-radius: 15px 15px 0px 0px;
+        -webkit-border-radius: 15px 15px 0px 0px;
+        -moz-border-radius: 15px 15px 0px 0px;
+        -ms-border-radius: 15px 15px 0px 0px;
+        -o-border-radius: 15px 15px 0px 0px;
+    }
+
+    .members-card-img-4.rounded-circle {
+        background-image: url('../../assets/images/eg_apdp.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        top: 0px;
+        margin-bottom: 20px;
+        border-radius: 15px 15px 0px 0px;
+        -webkit-border-radius: 15px 15px 0px 0px;
+        -moz-border-radius: 15px 15px 0px 0px;
+        -ms-border-radius: 15px 15px 0px 0px;
+        -o-border-radius: 15px 15px 0px 0px;
+    }
+
+    .members-card-img-5.rounded-circle {
+        background-image: url('../../assets/images/w_b_m_z_apdp.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        top: 0px;
+        margin-bottom: 20px;
+        border-radius: 15px 15px 0px 0px;
+        -webkit-border-radius: 15px 15px 0px 0px;
+        -moz-border-radius: 15px 15px 0px 0px;
+        -ms-border-radius: 15px 15px 0px 0px;
+        -o-border-radius: 15px 15px 0px 0px;
+    }
+
+    .members-card-img-6.rounded-circle {
+        background-image: url('../../assets/images/c_j_t_apdp_no.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        top: 0px;
+        margin-bottom: 20px;
+        border-radius: 15px 15px 0px 0px;
+        -webkit-border-radius: 15px 15px 0px 0px;
+        -moz-border-radius: 15px 15px 0px 0px;
+        -ms-border-radius: 15px 15px 0px 0px;
+        -o-border-radius: 15px 15px 0px 0px;
+    }
+
+    .members-card-img-7.rounded-circle {
+        background-image: url('../../assets/images/c_d_d_m_apdp.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        top: 0px;
+        margin-bottom: 20px;
+        border-radius: 15px 15px 0px 0px;
+        -webkit-border-radius: 15px 15px 0px 0px;
+        -moz-border-radius: 15px 15px 0px 0px;
+        -ms-border-radius: 15px 15px 0px 0px;
+        -o-border-radius: 15px 15px 0px 0px;
+    }
+
+    .members-card-img-8.rounded-circle {
+        background-image: url('../../assets/images/m_laf_apdp.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        top: 0px;
+        margin-bottom: 20px;
+        border-radius: 15px 15px 0px 0px;
+        -webkit-border-radius: 15px 15px 0px 0px;
+        -moz-border-radius: 15px 15px 0px 0px;
+        -ms-border-radius: 15px 15px 0px 0px;
+        -o-border-radius: 15px 15px 0px 0px;
+    }
+    
+    .rounded-circle {
+        width: 37px;
+        height: 37px;
+        position: relative;
+        top: -35px;
+        right: -10px;
+    }
+
+  }
+
+@media only screen and (min-width: 1440px) and (max-width: 2560px) {
+
+    .page-title {
+        font: normal normal bold 28px/40px Montserrat;
+        padding: 50px 0px 20px 0px;
+    }
+
+    .page-subtitle {
+        text-align: justify;
+        letter-spacing: 0px;
+        color: #000000;
+        font: normal normal normal 14px/22px Arial;
+        opacity: 1;
+    }
+
+    .members-card-list {
+        padding-left: 15%;
+        padding-right: 70px;
+        display: flex;
+        justify-content: left;
+        width: 97%;
+    }
+
+    .members-page-section {
+        margin-left: 5%;
+    }
+
+}
+
+@media only screen and (min-width: 2560px) {
+
+    .page-title {
+        font: normal normal bold 28px/40px Montserrat;
+        padding: 50px 0px 20px 0px;
+    }
+
+    .page-subtitle {
+        text-align: justify;
+        letter-spacing: 0px;
+        color: #000000;
+        font: normal normal normal 14px/22px Arial;
+        opacity: 1;
+    }
+
+    .members-card-list {
+        padding-left: 15%;
+        padding-right: 70px;
+        display: flex;
+        justify-content: left;
+        width: 97%;
+    }
+
+    .members-page-section {
+        margin-left: 9%;
+    }
+
+    .members-card-for-presentation-img {
+        background-image: url('../../assets/images/img8.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 1000px;
+        height: 500px;
+    }
+
+    .members-card-for-presentation-img-2 {
+        background-image: url('../../assets/images/img7.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 1000px;
+        height: 500px;
+    }
+
+}
+
+@media only screen and (max-width: 810px) {
+
+    .members-card-for-presentation {
+        display: none;
+    }
+
+    .members-card-for-presentation-2 {
+        display: none;
+    }
+
+    .members-card-for-presentation-mobile {
+        display: block;
+        margin: 10px;
+        background: #E8EBF4 0% 0% no-repeat padding-box;
+        opacity: 1;
+    }
+
+    .members-card-for-presentation-mobile-2 {
+        display: block;
+        margin: 10px;
+        background: #E8EBF4 0% 0% no-repeat padding-box;
+        opacity: 1;
+    }
+
+    .members-card-for-presentation-img {
+        background-image: url('../../assets/images/img8.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: auto;
+        height: 200px;
+    }
+
+    .members-card-for-presentation-img-2 {
+        background-image: url('../../assets/images/img7.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: auto;
+        height: 200px;
+    }
+
+    .page-title {
+      font: normal normal bold 28px/40px Montserrat;
+      padding: 50px 0px 20px 0px;
+    }
+
+    .page-subtitle {
+        text-align: justify;
+        letter-spacing: 0px;
+        color: #000000;
+        font: normal normal normal 14px/22px Arial;
+        opacity: 1;
+    }
+
+
+    .members-page-section {
+        margin-left: 0%;
+    }
+
+    .members-card-list {
+        padding-left: 20%;
+        display: flex;
+        justify-content: left;
+        width: 97%;
+    }
+
+}
+
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+
+    .page-title {
+      font: normal normal bold 28px/40px Montserrat;
+      padding: 50px 0px 20px 0px;
+    }
+
+    .page-subtitle {
+        text-align: justify;
+        letter-spacing: 0px;
+        color: #000000;
+        font: normal normal normal 14px/22px Arial;
+        opacity: 1;
+    }
+
+    .members-card {
+        min-width: 250px;
+    }
+
+
+    .members-page-section {
+        margin-left: 0%;
+    }
+
+    .members-card-list {
+        padding-left: 20%;
+        display: flex;
+        justify-content: left;
+        width: 97%;
+    }
+
+}
+
+
+@media only screen and (max-width: 370px) {
+
+    .page-title {
+      font: normal normal bold 28px/40px Montserrat;
+      padding: 50px 0px 20px 0px;
+    }
+
+    .page-subtitle {
+        text-align: justify;
+        letter-spacing: 0px;
+        color: #000000;
+        font: normal normal normal 14px/22px Arial;
+        opacity: 1;
+    }
+
+    .members-card {
+        min-width: 250px;
+    }
+
+
+    .members-page-section {
+        margin-left: -35%;
+        font-size: 32px;
+    }
+
+    .members-card-list {
+        padding-left: 12%;
+        display: flex;
+        justify-content: left;
+        width: 97%;
+    }
+
+}
