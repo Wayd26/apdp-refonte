@@ -33,6 +33,8 @@ import AppelsOffres from '../AppelsOffres/AppelsOffres';
 import FAQ from '../FAQ/FAQ';
 import ForumDiscusion from '../ForumDiscussion/ForumDiscusion';
 import Quiz from '../Quiz/Quiz';
+import Membres from '../Membres/Membres';
+import President from '../President/President';
 
 
 const Content = () => {
@@ -50,6 +52,8 @@ const Content = () => {
           <Route path="/communique/details-1" element={<DetailsCommunique />} />
           <Route path="/activite/details-1" element={<DetailsActivite />} />
           <Route path="/commissaire" element={<Commissaire />} />
+          <Route path="/president" element={<President />} />
+          <Route path="/membres" element={<Membres />} />
           <Route path="/faire-une-demande" element={<FaireUneDemande />} />
           <Route path="/formulaire-du-courrier" element={<FormulaireCourrier />} />
           <Route path="/evenements/evenement26" element={<DetailsEvenement />} />
