@@ -18,6 +18,13 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
   const navigate = useNavigate();
 
+  const shortcuts = [
+    {"label":"Mentions legales"},
+    {"label":"Plaintes"},
+    {"label":"Activités"},
+    {"label":"Lois"}
+  ]
+
   const handleClickCard = (cardClicked) => {
     navigate(`/${cardClicked}`);
   };
@@ -104,9 +111,13 @@ const Home = () => {
         <div className={"row"}>
           <div className={"col-sm-8 mx-auto"}>
             <div className={"row d-flex justify-content-around"}>
-              {[...Array(12).keys()].map((i) => (
-                <ShortcutCard ind={i}  />
-              ))}
+              {/* {shortcuts.map((i, item) => ( */}
+              
+                 <ShortcutCard ind={0} label={"Mentions Légales"}  />
+                 <ShortcutCard ind={1} label={"Lois"}  />
+                 <ShortcutCard ind={2} label={"Communiqués"}  />
+             
+              {/* ))} */}
             </div>
           </div>
         </div>
