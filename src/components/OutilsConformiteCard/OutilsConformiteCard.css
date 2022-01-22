@@ -1,0 +1,47 @@
+.outils-conformite-card {
+    /* width: 543px; */
+    width: 100%;
+    height: 266px;
+    background: #EAEAEA 0% 0% no-repeat padding-box;
+    box-shadow: -9px -9px 16px #FFFFFF4B;
+    border-radius: 11px;
+    opacity: 1;
+    padding: 60px;
+    margin-bottom: 20px;
+}
+
+.outils-conformite-card-label {
+    text-align: left;
+    font: normal normal bold 21px/29px Source Sans Pro;
+    letter-spacing: 0px;
+    color: #2E2E2E;
+    opacity: 1;
+    margin-bottom: 40px;
+    height: 100px;
+    overflow-y: auto;
+}
+
+.outils-conformite-card-button {
+    text-align: left;
+    width: 204px;
+    height: 48px;
+    background: #4385F6 0% 0% no-repeat padding-box;
+    border-radius: 12px;
+    opacity: 1;
+    border: none;
+    color: #FFFFFF;
+    font: normal normal bold 21px/29px Montserrat;
+}
+
+@media only screen and (max-width:768px) {
+.outils-conformite-card-label {
+ 
+    font: normal normal bold 16px/20px Source Sans Pro;   
+}
+
+.outils-conformite-card {
+    /* width: 543px; */
+    padding: 30px;
+    margin-bottom: 15px;
+}
+}

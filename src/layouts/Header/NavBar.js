@@ -93,16 +93,19 @@ export default class NavBar extends Component {
                                 <NavDropdown className={"nav-link-title nav-item-custom"} title={"DOCUMENTATION "} id="navbarScrollingDropdown" active={window.location.pathname === "/documentation"}>
                                 <NavDropdown.Item href="" >Liste de Pays</NavDropdown.Item>
                                     <NavDropdown.Item href="">Recommandations</NavDropdown.Item>
-                                    <NavDropdown.Item href="">Outils de conformité</NavDropdown.Item>
+                                    <NavDropdown.Item href="/outils-conformite">Outils de conformité</NavDropdown.Item>
                                     <NavDropdown.Item href="/rapports-annuels">Rapports d'activités Annuelles</NavDropdown.Item>
                                     <NavDropdown.Item href="">Études</NavDropdown.Item>
-                                    <NavDropdown.Item href="">Textes</NavDropdown.Item>
+                                    {/* <NavDropdown.Item href="" title={"Textes"}> */}
+                                        <NavDropdown.Item href="textes">Textes</NavDropdown.Item>
+                                        <NavDropdown.Item href="textes/les-lois">Les Lois</NavDropdown.Item>
+                                    {/* </NavDropdown.Item> */}
                                 </NavDropdown>
                             </h5>
-
+                            
                             <h5>
                                 <NavDropdown className={"nav-link-title nav-item-custom"} title={"APDP "} id="navbarScrollingDropdown" active={window.location.pathname === "/apdp"}>
-                                <NavDropdown.Item href="" >L'autorité</NavDropdown.Item>
+                                <NavDropdown.Item href="/autorite" >L'autorité</NavDropdown.Item>
                                     <NavDropdown.Item href="/mission">Mission</NavDropdown.Item>
                                     <NavDropdown.Item href="/membres">Mandature en cours et Historique des membres</NavDropdown.Item>
                                     <NavDropdown.Item href="/commissaire">Commissariat du Gouvernement</NavDropdown.Item>

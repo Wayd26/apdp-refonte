@@ -38,6 +38,8 @@ import Quiz from '../Quiz/Quiz';
 import RapportsAnnuels from '../RapportsAnnuels/RapportsAnnuels';
 import Membres from '../Membres/Membres';
 import President from '../President/President';
+import LesLois from '../LesLois/LesLois';
+import OutilsConformite from '../OutilsConformite/OutilsConformite';
 
 
 const Content = () => {
@@ -102,6 +104,9 @@ const Content = () => {
           <Route path="/mission" element={<Mission />} />
           <Route path="/rapports-annuels" element={<RapportsAnnuels />} />
           <Route path="/membres" element={<Membres />} />
+          <Route path="/autorite" element={<President />} />
+          <Route path="/textes/les-lois" element={<LesLois />} />
+          <Route path="/outils-conformite" element={<OutilsConformite />} />
 
           <Route path="/activites" element={<Activites/>} />
         <   Route path="/" element={<Home />} >
