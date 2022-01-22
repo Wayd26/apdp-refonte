@@ -8,6 +8,7 @@
     opacity: 1;
     padding: 60px;
     margin-bottom: 20px;
+    padding-top: 30px;
 }
 
 .outils-conformite-card-label {
@@ -17,7 +18,7 @@
     color: #2E2E2E;
     opacity: 1;
     margin-bottom: 40px;
-    height: 100px;
+    height: 120px;
     overflow-y: auto;
 }
 
@@ -43,5 +44,11 @@
     /* width: 543px; */
     padding: 30px;
     margin-bottom: 15px;
+}
+.outils-conformite-card-button {
+    width: 154px;
+    height: 48px;
+    color: #FFFFFF;
+    font: normal normal bold 15px/20px Montserrat;
 }
 }
