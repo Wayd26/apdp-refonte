@@ -98,7 +98,8 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="">Études</NavDropdown.Item>
                                     {/* <NavDropdown.Item href="" title={"Textes"}> */}
                                         <NavDropdown.Item href="textes">Textes</NavDropdown.Item>
-                                        <NavDropdown.Item href="textes/les-lois">Les Lois</NavDropdown.Item>
+                                        <NavDropdown.Item href="/textes/les-lois">Les Lois</NavDropdown.Item>
+                                        <NavDropdown.Item href="/textes/decrets-arretes">Les Decrets et Arretes</NavDropdown.Item>
                                     {/* </NavDropdown.Item> */}
                                 </NavDropdown>
                             </h5>

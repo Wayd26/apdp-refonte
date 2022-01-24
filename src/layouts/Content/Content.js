@@ -40,6 +40,7 @@ import Membres from '../Membres/Membres';
 import President from '../President/President';
 import LesLois from '../LesLois/LesLois';
 import OutilsConformite from '../OutilsConformite/OutilsConformite';
+import DecretsArretes from '../DecretsArretes/DecretsArretes';
 
 
 const Content = () => {
@@ -106,6 +107,7 @@ const Content = () => {
           <Route path="/membres" element={<Membres />} />
           <Route path="/autorite" element={<President />} />
           <Route path="/textes/les-lois" element={<LesLois />} />
+          <Route path="/textes/decrets-arretes" element={<DecretsArretes />} />
           <Route path="/outils-conformite" element={<OutilsConformite />} />
 
           <Route path="/activites" element={<Activites/>} />

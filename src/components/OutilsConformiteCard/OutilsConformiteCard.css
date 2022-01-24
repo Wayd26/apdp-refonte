@@ -24,14 +24,14 @@
 
 .outils-conformite-card-button {
     text-align: left;
-    width: 204px;
+    /* width: 204px; */
     height: 48px;
     background: #4385F6 0% 0% no-repeat padding-box;
     border-radius: 12px;
     opacity: 1;
     border: none;
     color: #FFFFFF;
-    font: normal normal bold 21px/29px Montserrat;
+    font: normal normal bold 18px/25px Montserrat;
 }
 
 @media only screen and (max-width:768px) {
