@@ -44,6 +44,13 @@ cursor: pointer;
     border-radius: 20px;
 }
 
+.nav-bar-item-text {
+    color: black !important;
+    font-size: 10px !important;
+    padding: 5px 15px;
+    text-transform: capitalize !important;
+}
+
 .logo{
     width: 60%;
     height: 10%;
