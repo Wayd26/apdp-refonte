@@ -18,7 +18,7 @@ const OutilsConformite = () => {
     {id: 6,
     label:"RECEPISSE DE CONSENTEMENT POUR LE TRAITEMENT DE DONNEES PERSONNELLES"}
   ]
-  return <div style={{backgroundColor: "#F7F7F7"}}>
+  return <div style={{backgroundColor: "#E2E2E2", paddingTop: "40px", paddingBottom: "40px"}}>
     <p className="outils-conformite-title">LES OUTILS DE LA CONFORMITÉ</p>
     <div className="outils-conformite-cards-container row d-flex justify-content-around">
       {outilsConformiteData.map((item, index) => (

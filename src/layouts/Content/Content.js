@@ -42,6 +42,8 @@ import LesLois from '../LesLois/LesLois';
 import OutilsConformite from '../OutilsConformite/OutilsConformite';
 import Decrets from '../Decrets/Decrets';
 import Arretes from '../Arretes/Arretes';
+import EspaceRT from '../EspaceRT/EspaceRT';
+import TextesCommunautaires from '../TextesCommunautaires/TextesCommunautaires';
 
 
 const Content = () => {
@@ -110,7 +112,9 @@ const Content = () => {
           <Route path="/textes/lois" element={<LesLois />} />
           <Route path="/textes/arretes" element={<Arretes />} />
           <Route path="/textes/decrets" element={<Decrets />} />
+          <Route path="/textes/textes-communautaires" element={<TextesCommunautaires />} />
           <Route path="/outils-conformite" element={<OutilsConformite />} />
+          <Route path="/espace-rt" element={<EspaceRT />} />
 
           <Route path="/activites" element={<Activites/>} />
         <   Route path="/" element={<Home />} >

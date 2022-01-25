@@ -86,7 +86,7 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="/vos-demarches">Vérifier la conformité</NavDropdown.Item>
                                     <NavDropdown.Item href="/vos-demarches">Visualiser la version d'une décision</NavDropdown.Item>
                                     <NavDropdown.Item href="/vos-demarches">Prendre RDV</NavDropdown.Item>
-                                    <NavDropdown.Item href="/vos-demarches">Espace RT</NavDropdown.Item>
+                                    <NavDropdown.Item href="/espace-rt">Espace RT</NavDropdown.Item>
                                 </NavDropdown>
                             </h5>
                             <h5>
@@ -104,9 +104,10 @@ export default class NavBar extends Component {
                                     {/* <NavDropdown style={{color: "black", fontSize: "10px", padding: "5px 15px", textTransform: "capitalize"}} className={"nav-bar-item-text"} title={"Textes "} active={window.location.pathname === "/documentation/textes"}> */}
                                
                                     {/* <NavDropdown.Item href="" title={"Textes"}> */}
-                                        <NavDropdown.Item href="/textes/lois">Les Lois</NavDropdown.Item>
-                                        <NavDropdown.Item href="/textes/arretes">Les Arretes</NavDropdown.Item>
-                                        <NavDropdown.Item href="/textes/decrets">Les Decrets</NavDropdown.Item>
+                                        <NavDropdown.Item href="/textes/lois">Lois</NavDropdown.Item>
+                                        <NavDropdown.Item href="/textes/arretes">Arretes</NavDropdown.Item>
+                                        <NavDropdown.Item href="/textes/decrets">Decrets</NavDropdown.Item>
+                                        <NavDropdown.Item href="/textes/textes-communautaires">Textes Communautaires</NavDropdown.Item>
                                     {/* </NavDropdown.Item> */}
                                 {/* </NavDropdown> */}
                                     {/*  */}
