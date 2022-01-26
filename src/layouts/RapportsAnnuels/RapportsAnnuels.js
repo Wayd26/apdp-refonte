@@ -4,7 +4,7 @@ import "./RapportsAnnuels.css"
 
 const RapportsAnnuels = () => {
     return (
-        <div style={{backgroundColor: "#F7F7F7"}}>
+        <div style={{backgroundColor: "#E2E2E2", paddingTop: "40px", paddingBottom: "40px"}}>
 
             <div className="rapports-annuels-box">
                 <p className="rapports-annuels-title">Rapports Annuels</p>

@@ -5,7 +5,7 @@ const MissionDetails = (props) => {
 
     const {title} = props;
     return (
-        <div style={{backgroundColor: "#F7F7F7"}} className="">
+        <div style={{backgroundColor: "#E2E2E2", paddingTop: "40px", paddingBottom: "40px"}} className="">
 
             <div className="mission-details-box">
                 <p className="mission-details-title">{title} </p>

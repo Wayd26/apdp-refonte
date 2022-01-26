@@ -7,9 +7,19 @@ import FaqElement from '../../components/FaqElement/FaqElement';
 import {Carousel, Card, Button, ButtonGroup, Accordion} from "react-bootstrap";
 import { RiCalendar2Line, RiQuestionAnswerFill, RiEyeFill, RiArrowRightCircleFill } from "react-icons/ri";
 import CardOnCaroussel from '../../components/CardOnCaroussel/CardOnCaroussel';
+import {useDispatch, useSelector, shallowEqual} from "react-redux";
+import * as actions from "../../redux/actions"
+
 
 const Activites = () => {
 
+    const dispatch = useDispatch();
+    const appState = useSelector(state=>state, shallowEqual);
+
+    useEffect(() => {
+        console.log("General App State ", appState)
+        dispatch(actions.getArticles("Breaknews"))
+    }, [appState])
     return (
         <div className={"activities"} id={"activities"}>
            

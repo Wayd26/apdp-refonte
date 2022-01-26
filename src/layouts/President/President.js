@@ -1,7 +1,7 @@
 import React from 'react'
 import "./President.css";
 import img5 from "../../assets/images/img5.jpg";
-import motpr from "../../assets/images/motpr.png";
+import presi_apdp from "../../assets/images/President_apdp.png";
 import FaqSection from '../../components/FaqSection/FaqSection';
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
 import {Carousel, Card, Figure, Button, ButtonGroup, Accordion} from "react-bootstrap";
@@ -14,7 +14,6 @@ import imgCard6 from "../../assets/images/img6.jpg"
 const President = () => {
     return (
         <div className='info-section'>
-            <ActualiteCarousel />
             <p className="president-title">MOT DU PRÉSIDENT DE L’AUTORITÉ DE PROTECTION
                 DES DONNÉES À CARACTÈRE PERSONNEL (APDP)
             </p>
@@ -22,8 +21,8 @@ const President = () => {
             <div className='content'>
                 <Card style={{ 'margin-top': '100px', }}>
                     <Card.Body>
-                        <img src={motpr} className='rounded-circle' style={{ width: '350px', height: '350px', position: 'relative', top: '-180px', 'border': '1px solid gray',}}/>
-                        <h3 style={{position: 'relative', top: '-100px',}}>Etienne Marie FIFATIN</h3>
+                        <img src={presi_apdp} className='rounded-circle' style={{width: '350px', height: '350px', position: 'relative', top: '-180px', 'border': '1px solid gray',}}/>
+                        <h3 style={{position: 'relative', top: '-100px',}}>M. Yvon DETCHENOU </h3>
                         <h3 style={{'text-align': 'center', 'color': 'blue',}}>LES POINTS ESSENTIELS</h3>
                         <br/>
                         <Card.Text style={{'margin': '0px 100px 100px 100px', 'text-align': 'justify',}}>

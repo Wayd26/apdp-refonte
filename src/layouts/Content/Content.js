@@ -38,6 +38,12 @@ import Quiz from '../Quiz/Quiz';
 import RapportsAnnuels from '../RapportsAnnuels/RapportsAnnuels';
 import Membres from '../Membres/Membres';
 import President from '../President/President';
+import LesLois from '../LesLois/LesLois';
+import OutilsConformite from '../OutilsConformite/OutilsConformite';
+import Decrets from '../Decrets/Decrets';
+import Arretes from '../Arretes/Arretes';
+import EspaceRT from '../EspaceRT/EspaceRT';
+import TextesCommunautaires from '../TextesCommunautaires/TextesCommunautaires';
 
 
 const Content = () => {
@@ -102,6 +108,13 @@ const Content = () => {
           <Route path="/mission" element={<Mission />} />
           <Route path="/rapports-annuels" element={<RapportsAnnuels />} />
           <Route path="/membres" element={<Membres />} />
+          <Route path="/autorite" element={<President />} />
+          <Route path="/textes/lois" element={<LesLois />} />
+          <Route path="/textes/arretes" element={<Arretes />} />
+          <Route path="/textes/decrets" element={<Decrets />} />
+          <Route path="/textes/textes-communautaires" element={<TextesCommunautaires />} />
+          <Route path="/outils-conformite" element={<OutilsConformite />} />
+          <Route path="/espace-rt" element={<EspaceRT />} />
 
           <Route path="/activites" element={<Activites/>} />
         <   Route path="/" element={<Home />} >

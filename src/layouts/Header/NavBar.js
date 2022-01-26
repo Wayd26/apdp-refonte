@@ -86,23 +86,41 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="/vos-demarches">Vérifier la conformité</NavDropdown.Item>
                                     <NavDropdown.Item href="/vos-demarches">Visualiser la version d'une décision</NavDropdown.Item>
                                     <NavDropdown.Item href="/vos-demarches">Prendre RDV</NavDropdown.Item>
-                                    <NavDropdown.Item href="/vos-demarches">Espace RT</NavDropdown.Item>
+                                    <NavDropdown.Item href="/espace-rt">Espace RT</NavDropdown.Item>
                                 </NavDropdown>
                             </h5>
                             <h5>
                                 <NavDropdown className={"nav-link-title nav-item-custom"} title={"DOCUMENTATION "} id="navbarScrollingDropdown" active={window.location.pathname === "/documentation"}>
                                 <NavDropdown.Item href="" >Liste de Pays</NavDropdown.Item>
                                     <NavDropdown.Item href="">Recommandations</NavDropdown.Item>
-                                    <NavDropdown.Item href="">Outils de conformité</NavDropdown.Item>
+                                    <NavDropdown.Item href="/outils-conformite">Outils de conformité</NavDropdown.Item>
                                     <NavDropdown.Item href="/rapports-annuels">Rapports d'activités Annuelles</NavDropdown.Item>
                                     <NavDropdown.Item href="">Études</NavDropdown.Item>
-                                    <NavDropdown.Item href="">Textes</NavDropdown.Item>
+                                    
+                                    {/* <NavDropdown.Item href="" title={"Textes"}> */}
+                                        {/* <NavDropdown.Item href="textes"> */}
+                                            {/*  */}
+                                    
+                                    {/* <NavDropdown style={{color: "black", fontSize: "10px", padding: "5px 15px", textTransform: "capitalize"}} className={"nav-bar-item-text"} title={"Textes "} active={window.location.pathname === "/documentation/textes"}> */}
+                               
+                                    {/* <NavDropdown.Item href="" title={"Textes"}> */}
+                                        <NavDropdown.Item href="/textes/lois">Lois</NavDropdown.Item>
+                                        <NavDropdown.Item href="/textes/arretes">Arretes</NavDropdown.Item>
+                                        <NavDropdown.Item href="/textes/decrets">Decrets</NavDropdown.Item>
+                                        <NavDropdown.Item href="/textes/textes-communautaires">Textes Communautaires</NavDropdown.Item>
+                                    {/* </NavDropdown.Item> */}
+                                {/* </NavDropdown> */}
+                                    {/*  */}
+                                    {/* </NavDropdown.Item> */}
+                                        {/* <NavDropdown.Item href="/textes/les-lois">Les Lois</NavDropdown.Item> */}
+                                        {/* <NavDropdown.Item href="/textes/decrets-arretes">Les Decrets et Arretes</NavDropdown.Item> */}
+                                    {/* </NavDropdown.Item> */}
                                 </NavDropdown>
                             </h5>
-
+                            
                             <h5>
                                 <NavDropdown className={"nav-link-title nav-item-custom"} title={"APDP "} id="navbarScrollingDropdown" active={window.location.pathname === "/apdp"}>
-                                <NavDropdown.Item href="" >L'autorité</NavDropdown.Item>
+                                <NavDropdown.Item href="/autorite" >L'autorité</NavDropdown.Item>
                                     <NavDropdown.Item href="/mission">Mission</NavDropdown.Item>
                                     <NavDropdown.Item href="/membres">Mandature en cours et Historique des membres</NavDropdown.Item>
                                     <NavDropdown.Item href="/commissaire">Commissariat du Gouvernement</NavDropdown.Item>
