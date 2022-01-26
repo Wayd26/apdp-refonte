@@ -12,9 +12,9 @@ const AppelsOffres = () => {
       {/* <ActualiteCarousel /> */}
       <div id="appels-offres" className="appels-offres">
         <div className="appels-offres-header">
-          <p className="appels-offres-header-text">Appels d'offres</p>
+          <p className="appels-offres-header-text">Publications</p>
         </div>
-        <p className="appels-offres-publications">Publications</p>
+        <p className="appels-offres-publications">Appels d'offres</p>
         <div className="w90">
           <p className="appels-offres-avis-importants">Avis Importants !</p>
           <AvisImportant />

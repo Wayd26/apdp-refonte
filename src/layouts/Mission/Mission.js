@@ -5,7 +5,7 @@ import MissionCard from "../../components/MissionCard/MissionCard";
 
 const Mission = () => {
   return (
-    <div style={{ backgroundColor: "#F7F7F7" }}>
+    <div style={{ backgroundColor: "#E2E2E2",paddingTop: "40px", paddingBottom: "40px" }}>
       <div className="mission-presentation-box row">
         <div className="mission-presentation-image-container">
             <img src={apdp_siege} className="mission-presentation-image"/>

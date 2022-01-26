@@ -18,7 +18,7 @@ const Activites = () => {
 
     useEffect(() => {
         console.log("General App State ", appState)
-        dispatch(actions.getArticles("Breaknews"))
+        dispatch(actions.getArticles("Activites"))
     }, [appState])
     return (
         <div className={"activities"} id={"activities"}>
@@ -27,7 +27,7 @@ const Activites = () => {
             {/* Title */}
 
             <p className={'page-title'}>LES ACTIVITÉS</p>
-            <p className={'page-subtitle'}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed dia</p>
+            {/* <p className={'page-subtitle'}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed dia</p> */}
 
 
             {/* Activities list 1 */}
@@ -42,7 +42,7 @@ const Activites = () => {
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                         </Card.Text>
-                        <Card.Img variant="top" className={"rounded-circle"} src={avatar} />
+                        {/* <Card.Img variant="top" className={"rounded-circle"} src={avatar} /> */}
                         <br/>
                         <br/>
                         <br/>
@@ -70,7 +70,7 @@ const Activites = () => {
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                         </Card.Text>
-                        <Card.Img variant="top" className={"rounded-circle"} src={avatar} />
+                        {/* <Card.Img variant="top" className={"rounded-circle"} src={avatar} /> */}
                         <br/>
                         <br/>
                         <br/>
@@ -98,7 +98,7 @@ const Activites = () => {
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                         </Card.Text>
-                        <Card.Img variant="top" className={"rounded-circle"} src={avatar} />
+                        {/* <Card.Img variant="top" className={"rounded-circle"} src={avatar} /> */}
                         <br/>
                         <br/>
                         <br/>
@@ -126,7 +126,7 @@ const Activites = () => {
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                         </Card.Text>
-                        <Card.Img variant="top" className={"rounded-circle"} src={avatar} />
+                        {/* <Card.Img variant="top" className={"rounded-circle"} src={avatar} /> */}
                         <br/>
                         <br/>
                         <br/>
@@ -154,7 +154,7 @@ const Activites = () => {
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                         </Card.Text>
-                        <Card.Img variant="top" className={"rounded-circle"} src={avatar} />
+                        {/* <Card.Img variant="top" className={"rounded-circle"} src={avatar} /> */}
                         <br/>
                         <br/>
                         <br/>
@@ -182,7 +182,7 @@ const Activites = () => {
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                         </Card.Text>
-                        <Card.Img variant="top" className={"rounded-circle"} src={avatar} />
+                        {/* <Card.Img variant="top" className={"rounded-circle"} src={avatar} /> */}
                         <br/>
                         <br/>
                         <br/>
@@ -210,7 +210,7 @@ const Activites = () => {
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                         </Card.Text>
-                        <Card.Img variant="top" className={"rounded-circle"} src={avatar} />
+                        {/* <Card.Img variant="top" className={"rounded-circle"} src={avatar} /> */}
                         <br/>
                         <br/>
                         <br/>
@@ -238,7 +238,7 @@ const Activites = () => {
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                         </Card.Text>
-                        <Card.Img variant="top" className={"rounded-circle"} src={avatar} />
+                        {/* <Card.Img variant="top" className={"rounded-circle"} src={avatar} /> */}
                         <br/>
                         <br/>
                         <br/>
@@ -277,7 +277,7 @@ const Activites = () => {
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                         </Card.Text>
-                        <Card.Img variant="top" className={"rounded-circle"} src={avatar} />
+                        {/* <Card.Img variant="top" className={"rounded-circle"} src={avatar} /> */}
                         <br/>
                         <br/>
                         <br/>
@@ -305,7 +305,7 @@ const Activites = () => {
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                         </Card.Text>
-                        <Card.Img variant="top" className={"rounded-circle"} src={avatar} />
+                        {/* <Card.Img variant="top" className={"rounded-circle"} src={avatar} /> */}
                         <br/>
                         <br/>
                         <br/>
@@ -333,7 +333,7 @@ const Activites = () => {
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                         </Card.Text>
-                        <Card.Img variant="top" className={"rounded-circle"} src={avatar} />
+                        {/* <Card.Img variant="top" className={"rounded-circle"} src={avatar} /> */}
                         <br/>
                         <br/>
                         <br/>
@@ -361,7 +361,7 @@ const Activites = () => {
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                         </Card.Text>
-                        <Card.Img variant="top" className={"rounded-circle"} src={avatar} />
+                        {/* <Card.Img variant="top" className={"rounded-circle"} src={avatar} /> */}
                         <br/>
                         <br/>
                         <br/>

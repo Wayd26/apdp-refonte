@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./RapportAnnuelRow.css"
 import {FiPlus} from "react-icons/fi"
 import {MdFileDownload} from "react-icons/md"
+import rapportImg from  "../../assets/images/img6.jpg"
 
 const RapportAnnuelRow = (props) => {
     const {period} = props; 
@@ -15,7 +16,7 @@ const RapportAnnuelRow = (props) => {
 
             <div className="rapports-annuels-row-blue" onClick={handleOpenDetails} >
                 <FiPlus className="rapports-annuels-row-blue-plus-icon"/> Rapport Bilan {period}
-            </div>
+            </div> 
 
            {opened === true ? <div className="rapports-annuels-row-details row ">
                 <div className="rapports-annuels-row-details-text-container col-sm-8">
@@ -24,6 +25,7 @@ const RapportAnnuelRow = (props) => {
                     </p>
                 </div>
                 <div className="rapports-annuels-row-details-button-container col-sm">
+                <img src={rapportImg} className="rapports-annuels-row-details-image" />
                     <button className="rapports-annuels-row-details-button">
                         Télécharger   <MdFileDownload className="rapports-annuels-row-details-button-icon" />
                     </button>

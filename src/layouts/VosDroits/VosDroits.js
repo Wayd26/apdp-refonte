@@ -11,7 +11,7 @@ const VosDroits = () => {
 
 
     return (
-      <div style={{background: '#F7F7F7'}}>
+      <div style={{background: '#E2E2E2', paddingBottom: "40px", paddingTop: "40px"}}>
 {/* <ActualiteCarousel /> */}
 
         <div className={"your-rights"} id={"your-rights"}>
@@ -20,18 +20,26 @@ const VosDroits = () => {
       id="controlled-tab-example"
       activeKey={key}
       onSelect={(k) => setKey(k)}
-      className="mb-3"
+      className="mb-3 "
     >
-      <Tab eventKey="particulier" title="Particulier">
+      {/* <div className="col-sm-4"> */}
+
+      <Tab eventKey="particulier" title=" Je suis un Particulier">
         <RightsContent />
       </Tab>
-      <Tab eventKey="entreprise_et_organisme" title="Entreprise et Organisme">
+      {/* </div> */}
+      {/* <div className="col-sm-4"> */}
+      <Tab eventKey="entreprise_et_organisme" title="Je suis une Entreprise et Organisme">
       <RightsContent />
 
       </Tab>
-      <Tab eventKey="administration_publique" title="Administration Publique" >
+      {/* </div> */}
+      
+      {/* <div className="col-sm-4"> */}
+      <Tab eventKey="administration_publique" title="Je suis une Administration Publique">
       <RightsContent />
       </Tab>
+      {/* </div> */}
     </Tabs>
         </div>
       </div>

@@ -6,8 +6,8 @@ import dots from '../../assets/icons/dots.svg'
 
 const FaireUneDemande = () => {
     return (
-        <div>
-            <ActualiteCarousel />
+        <div style={{backgroundColor: "#E7E7E7", paddingTop: "40px", paddingBottom: "40px"}}>
+            {/* <ActualiteCarousel /> */}
 
         <div id="faire-une-demande" className="faire-une-demande">
             <div className="top-blue-band row  d-flexjustify-content-between">
@@ -38,8 +38,8 @@ const FaireUneDemande = () => {
                 <div className="col-4">
                 </div>
                 <div className="col-6 bottom-blue-band">
-                <div className="row d-flex justify-content-around">
-                <FaireUneDemandeCard  title={"Commander un macaron"} description={"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor"}/>
+                <div className="row d-flex justify-content-around" >
+                <FaireUneDemandeCard title={"Commander un macaron"} description={"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor"}/>
                 <FaireUneDemandeCard title={"Déposer une plainte"} description={"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor"}/>
                 </div>
                 </div>

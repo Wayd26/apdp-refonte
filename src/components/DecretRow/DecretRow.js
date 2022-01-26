@@ -26,7 +26,7 @@ const DecretRow = () => {
                     </p>
                 </div>
                 <div className="decret-row-details-button-container col-sm">
-                    <img src={decretImg} className="decret-arrete-row-details-image" />
+                    <img src={decretImg} className="decret-row-details-image" />
                     <button className="decret-arrete-row-details-button">
                         Télécharger   <MdFileDownload className="decret-row-details-button-icon" />
                     </button>
