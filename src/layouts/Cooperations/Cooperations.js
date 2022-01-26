@@ -6,10 +6,10 @@ import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarou
 const Cooperations = () => {
 
     return (
-      <div style={{background: '#FFF'}}>
-        <ActualiteCarousel/>
+      <div style={{background: '#E2E2E2', paddingTop: "40px", paddingBottom: "40px"}}>
+        {/* <ActualiteCarousel/> */}
         <div className={'cooperations-div'} style={{ 'padding-bottom': '100px' }}>
-          <h2 style={{ 'color': '#4385F6', 'margin': '100px' }}>COOPÉRATION</h2>
+          <h2 style={{'color': '#4385F6'}}>COOPÉRATION</h2>
           <div className={'cooperations-cards row'} style={{ 'margin': '100px' }}>
             <Card className={"cooperations-card col-md-6 col-lg-4 col-xl-4"} style={{ width: '20rem', padding: '30px', 'border-radius': '10px' }}>
               <Card.Body>

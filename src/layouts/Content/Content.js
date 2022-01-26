@@ -64,8 +64,8 @@ const Content = () => {
       <Routes>
           {/* <Route index element={<div> Here</div>} /> */}
           <Route path="/cooperations" element={<Cooperations/>} />
-          <Route path="/deliberations" element={<Deliberations/>} />
-          <Route path="/details/lois" element={<LaLoi/>} />
+          <Route path="/textes/deliberations-publiques" element={<Deliberations/>} />
+          <Route path="/lois/loi-1" element={<LaLoi/>} />
           <Route path="/vos-demarches" element={<Auth/>} />
           <Route path="/communique/details-1" element={<DetailsCommunique />} />
           <Route path="/activite/details-1" element={<DetailsActivite />} />

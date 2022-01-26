@@ -10,18 +10,18 @@ import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarou
 const Deliberations = () => {
 
     return (
-      <div style={{background: '#FFF'}}>
-        <ActualiteCarousel/>
+      <div style={{background: '#E2E2E2', paddingTop: "40px", paddingBottom: "40px"}}>
+        {/* <ActualiteCarousel/> */}
         <div className={'deliberations-div'}>
           <h2>DÉLIBÉRATIONS PUBLIÉES</h2>
           <Tab.Container id="top-tabs-example" defaultActiveKey="first">
             <Row>
               <div className={'row'}>
                 <Nav variant="pills" className="flex-row">
-                  <Nav.Item>
+                  <Nav.Item style={{cursor: "pointer"}}>
                     <Nav.Link eventKey="first"> <GiInjustice/> ANNEE 2022</Nav.Link>
                   </Nav.Item>
-                  <Nav.Item>
+                  <Nav.Item style={{cursor: "pointer"}}>
                     <Nav.Link eventKey="second"> <GiInjustice/> ANNEE 2021</Nav.Link>
                   </Nav.Item>
                 </Nav>
@@ -29,7 +29,7 @@ const Deliberations = () => {
               <Row>
                 <Tab.Content>
                   <Tab.Pane eventKey="first">
-                    <h3 style={{ 'text-transform': 'uppercase', 'text-align': 'left'}}>DéLIBéRATIONS 2022 (nombre: 04)</h3>
+                    <h3 style={{ 'text-transform': 'uppercase', 'text-align': 'left', marginBottom: "30px"}}>DéLIBéRATIONS 2022 (nombre: 04)</h3>
                     <div className={'pane-cards'}>
                     <Card style={{'text-align': 'left',}}>
                       <Card.Body>

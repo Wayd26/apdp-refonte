@@ -9,8 +9,7 @@ const LaLoi = () => {
 
     return (
       <div style={{background: '#FFF'}}>
-        <ActualiteCarousel/>
-        <h2 style={{ 'color': '#4385F6', 'margin-top':'100px' }}>La loi 2009-09 Du 22 MAI 2009</h2>
+        <h2 style={{ 'color': '#4385F6', 'padding-top':'70px' }}>La loi 2009-09 Du 22 MAI 2009</h2>
         <Card className={'law-card'}>
           <Card.Body>
             <Card.Img src={img5} />
