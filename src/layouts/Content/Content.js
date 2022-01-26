@@ -39,10 +39,13 @@ import RapportsAnnuels from '../RapportsAnnuels/RapportsAnnuels';
 import Membres from '../Membres/Membres';
 import President from '../President/President';
 import LesLois from '../LesLois/LesLois';
+import LaLoi from '../LaLoi/LaLoi';
 import OutilsConformite from '../OutilsConformite/OutilsConformite';
 import Decrets from '../Decrets/Decrets';
 import Arretes from '../Arretes/Arretes';
 import EspaceRT from '../EspaceRT/EspaceRT';
+import Deliberations from '../Deliberations/Deliberations';
+import Cooperations from '../Cooperations/Cooperations';
 import TextesCommunautaires from '../TextesCommunautaires/TextesCommunautaires';
 
 
@@ -60,6 +63,9 @@ const Content = () => {
             <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
       <Routes>
           {/* <Route index element={<div> Here</div>} /> */}
+          <Route path="/cooperations" element={<Cooperations/>} />
+          <Route path="/deliberations" element={<Deliberations/>} />
+          <Route path="/details/lois" element={<LaLoi/>} />
           <Route path="/vos-demarches" element={<Auth/>} />
           <Route path="/communique/details-1" element={<DetailsCommunique />} />
           <Route path="/activite/details-1" element={<DetailsActivite />} />
