@@ -35,12 +35,12 @@ const RightsContent = () => {
 
             <p className={"rights-content-title text-center"}> Vos droits </p>
             <p className={"rights-content-subtitle d-flex justify-content-center mb-4 mt-3"}> Si un responsable de traitement estime qu’une demande est manifestement abusive, il peut ne pas y donner suite. En revanche si l’affaire est portée devant un juge il devra apporter la preuve du caractère manifestement abusif de la demande en cause. L’exercice du droit d’accès ne doit pas porter atteinte au droit d’auteur. Pour certains fichiers de police ou intéressant la sûreté de l’Etat, la loi n’autorise pas un particulier à accéder directement aux informations contenues dans le fichier. Il pourra cependant y accéder de manière indirecte par l’intermédiaire de l’APDP. </p>
-            <div className={"row d-flex justify-content-between"}>
+            <div className={"row"}>
 
 
             
       {vos_droits.map((item, index) => (
-        <div className={"col p-3"}> <RightCard link={vos_droits[index].link} title={vos_droits[index].title} btnText={vos_droits[index].btn_text} description={vos_droits[index].description} imgSrc={vos_droits[index].img} /> </div>
+        <div className={"col-sm-4 col-xs-12 p-3"}> <RightCard link={vos_droits[index].link} title={vos_droits[index].title} btnText={vos_droits[index].btn_text} description={vos_droits[index].description} imgSrc={vos_droits[index].img} /> </div>
       ))}
       ;
             </div>

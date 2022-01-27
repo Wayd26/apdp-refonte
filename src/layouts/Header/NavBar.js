@@ -108,6 +108,7 @@ export default class NavBar extends Component {
                                         <NavDropdown.Item href="/textes/arretes">Arretes</NavDropdown.Item>
                                         <NavDropdown.Item href="/textes/decrets">Decrets</NavDropdown.Item>
                                         <NavDropdown.Item href="/textes/textes-communautaires">Textes Communautaires</NavDropdown.Item>
+                                        <NavDropdown.Item href="/textes/deliberations-publiques">Délibérations Publiques</NavDropdown.Item>
                                     {/* </NavDropdown.Item> */}
                                 {/* </NavDropdown> */}
                                     {/*  */}
@@ -124,7 +125,7 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="/mission">Mission</NavDropdown.Item>
                                     <NavDropdown.Item href="/membres">Mandature en cours et Historique des membres</NavDropdown.Item>
                                     <NavDropdown.Item href="/commissaire">Commissariat du Gouvernement</NavDropdown.Item>
-                                    <NavDropdown.Item href="">Coopération</NavDropdown.Item>
+                                    <NavDropdown.Item href="/cooperations">Coopération</NavDropdown.Item>
                                     <NavDropdown.Item href="">Contact</NavDropdown.Item>
                                 </NavDropdown>
                             </h5>

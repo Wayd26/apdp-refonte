@@ -54,13 +54,13 @@ const Header = () => {
 
                     <div className="header-block-2">
                         
-                            <a href='/'>
+                            {/* <a href='/'> */}
 
                                 <div style={{cursor: "pointer"}} onClick={goHome}>
                                     {/* <img src={apdp_logo} className="logo" /> */}
-                                    <object  data={apdp_logo} className="logo" type="image/svg+xml"></object>
+                                    <object style={{cursor: "pointer"}}  data={apdp_logo} className="logo" type="image/svg+xml"></object>
                                 </div>
-                            </a>
+                            {/* </a> */}
                             
                                 <div className=" d-none d-md-flex header-block-2-div-2 d-flex flex-row justify-content-around">
                                 {/* <div className=" row d-flex  justify-content-around"> */}

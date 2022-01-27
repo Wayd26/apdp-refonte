@@ -80,3 +80,10 @@
   color: #4385f6;
   opacity: 1;
 }
+
+.rapports-annuels-row-details-image {
+  width: 200px;
+  height: 178px;
+  border-radius: 5px;
+  margin-bottom: 15px;    
+}

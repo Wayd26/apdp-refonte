@@ -1,8 +1,11 @@
 .mission-presentation-box {
-width: 100%;
+width: 90%;
 background-color: #FFFFFF;
-margin-top: 50px;
+/* margin-top: 50px; */
 margin-bottom: 50px;
+margin-right: auto;
+margin-left: auto;
+border-radius: 8px;
 }
 
 .mission-presentation-image-container {

@@ -1,9 +1,8 @@
-.faire-une-demande {
+/* .faire-une-demande {
   padding: 20px;
   min-height: 800px;
-  padding-top: 200px;
-}
-
+} */
+/* 
 .top-blue-band {
   background: #4385f6 0% 0% no-repeat padding-box;
   opacity: 1;
@@ -11,29 +10,37 @@
   height: 80px;
   margin-right: 5%;
   margin-left: 5%;
-}
+} */
 
-.bottom-blue-band {
+/* .bottom-blue-band {
   background: #4385f6 0% 0% no-repeat padding-box;
   opacity: 1;
   border-radius: 0px 0px 100px 100px;
   height: 80px;
   margin-right: 10%;
   margin-left: 5%;
-}
+} */
 
 #faire-une-demande .vos-demarches-text {
-    text-align: left;
+    text-align: center;
 font: normal normal bold 34px/34px Montserrat;
 letter-spacing: 0px;
-color: #FFFFFF;
+color: #4385f6;
 opacity: 1;
-margin-top: 15px;
-margin-bottom :auto;
-padding-left: 10%;
+margin-bottom :30px;
+}
+.faire-une-demande-container {
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+margin-top: 30px;
+}
+
+.faire-une-demande-cards-container {
 
 }
 
+/* 
 .text-between-bands-row {
   width: 80%;
   margin-right: auto;
@@ -56,17 +63,7 @@ margin-top: 40px;
   margin-bottom: -300px;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto ;
-  padding: 10px;
-}
-.grid-item {
- 
-  padding: 20px;
-  text-align: center;
-}
-
+ */
 
 @media only screen and (max-width: 1205px) {
   .faire-une-demande-dots {

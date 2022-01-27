@@ -6,8 +6,8 @@ import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarou
 const Cooperations = () => {
 
     return (
-      <div style={{background: '#FFF'}}>
-        <ActualiteCarousel/>
+      <div style={{background: '#E2E2E2', paddingTop: "40px", paddingBottom: "40px"}}>
+        {/* <ActualiteCarousel/> */}
         <div className={'cooperations-div'} style={{ 'padding-bottom': '100px' }}>
           <h2 style={{ 'color': '#4385F6', 'margin': '100px' }}>COOPÉRATION</h2>
           <div className={'cooperations-cards row'} style={{ 'margin': '100px', 'justify-content': 'center', }}>

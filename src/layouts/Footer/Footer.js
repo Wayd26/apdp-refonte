@@ -5,6 +5,11 @@ import apdp_logo from "../../assets/images/logoapdp.svg"
 import {FaFacebook, FaTwitter, FaYoutube, FaPaperPlane} from "react-icons/fa"
 
 const Footer = () => {
+
+  const goHome = () => {
+    window.location.replace("/")
+} 
+
   return <div className="pg-footer">
     <div className="footer">
       <svg className="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100"
@@ -65,7 +70,7 @@ const Footer = () => {
                 </a>
                 <a className="youtube social-container" href="#" target="_blank">
                 <span className="hidden-link-text">Youtube</span>
-                <FaYoutube style={{width: `40px`, color: `red`,  fontSize:30}} />
+                <FaYoutube style={{width: `40px`, color: `red`,  fontSize:30}} /> 
                 </a>
                 </div>
                 <div style={{
@@ -87,8 +92,9 @@ const Footer = () => {
           <div className="footer-logo">
             <a className="footer-logo-link" href="#">
               <span className="hidden-link-text">LOGO</span>
+              <div style={{cursor: "pointer"}} onClick={goHome}>
               <object data={apdp_logo}  alt="LOGO" className="img-fluid" type="image/svg+xml"></object>
-
+              </div>
             </a>
           </div>
 

@@ -85,7 +85,7 @@ const Home = () => {
       </Row>
       <br />
       {/* Rights and Duties Section */}
-      <div className={"rights-duties-section"}>
+      {/* <div className={"rights-duties-section"}>
         <p className={"rights-duties-title"}>Vos Droits & Devoirs</p>
         <div className={"row"}>
           <div className={"col-sm-2"}>
@@ -102,7 +102,8 @@ const Home = () => {
           </div>
           <div className={"col-sm-2"}></div>
         </div>
-      </div>
+      </div> */}
+
       {/* Forms Section */}
 
       <div className={"forms-section"}>
@@ -124,7 +125,7 @@ const Home = () => {
       </div>
 
       {/* FAQ Section */}
-      <FaqSection />
+      {/* <FaqSection /> */}
     </div>
   );
 };
