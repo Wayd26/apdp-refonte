@@ -17,10 +17,10 @@ const AppelsOffres = () => {
         <p className="appels-offres-publications">Appels d'offres</p>
         <div className="w90">
           <p className="appels-offres-avis-importants">Avis Importants !</p>
-          <AvisImportant />
-          <AvisImportant />
-          <AvisImportant />
-          <AvisImportant />
+          <AvisImportant expiryTime={"27"}/>
+          <AvisImportant expiryTime={"0"}/>
+          <AvisImportant expiryTime={"62"}/>
+          <AvisImportant expiryTime={"0"}/>
         </div>
 
         <div className="appels-offres-blue-band">
