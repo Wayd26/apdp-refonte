@@ -92,7 +92,7 @@ export default class NavBar extends Component {
                             <h5>
                                 <NavDropdown className={"nav-link-title nav-item-custom"} title={"DOCUMENTATION "} id="navbarScrollingDropdown" active={window.location.pathname === "/documentation"}>
                                 <NavDropdown.Item href="" >Liste de Pays</NavDropdown.Item>
-                                    <NavDropdown.Item href="">Recommandations</NavDropdown.Item>
+                                    <NavDropdown.Item href="/conseils">Recommandations</NavDropdown.Item>
                                     <NavDropdown.Item href="/outils-conformite">Outils de conformité</NavDropdown.Item>
                                     <NavDropdown.Item href="/rapports-annuels">Rapports d'activités Annuelles</NavDropdown.Item>
                                     <NavDropdown.Item href="">Études</NavDropdown.Item>

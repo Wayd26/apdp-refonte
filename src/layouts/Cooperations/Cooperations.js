@@ -10,7 +10,7 @@ const Cooperations = () => {
         <ActualiteCarousel/>
         <div className={'cooperations-div'} style={{ 'padding-bottom': '100px' }}>
           <h2 style={{ 'color': '#4385F6', 'margin': '100px' }}>COOPÉRATION</h2>
-          <div className={'cooperations-cards row'} style={{ 'margin': '100px' }}>
+          <div className={'cooperations-cards row'} style={{ 'margin': '100px', 'justify-content': 'center', }}>
             <Card className={"cooperations-card col-md-6 col-lg-4 col-xl-4"} style={{ width: '20rem', padding: '30px', 'border-radius': '10px' }}>
               <Card.Body>
                 <Card.Title style={{ 'font-size': '25px', 'font-weight': 'bold', 'padding-top': '50px', 'padding-bottom': '50px' }}>Bilatérales</Card.Title>

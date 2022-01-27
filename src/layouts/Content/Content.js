@@ -46,6 +46,7 @@ import Arretes from '../Arretes/Arretes';
 import EspaceRT from '../EspaceRT/EspaceRT';
 import Deliberations from '../Deliberations/Deliberations';
 import Cooperations from '../Cooperations/Cooperations';
+import Conseils from '../Conseils/Conseils';
 import TextesCommunautaires from '../TextesCommunautaires/TextesCommunautaires';
 
 
@@ -63,6 +64,7 @@ const Content = () => {
             <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
       <Routes>
           {/* <Route index element={<div> Here</div>} /> */}
+          <Route path="/conseils" element={<Conseils/>} />
           <Route path="/cooperations" element={<Cooperations/>} />
           <Route path="/deliberations" element={<Deliberations/>} />
           <Route path="/details/lois" element={<LaLoi/>} />
