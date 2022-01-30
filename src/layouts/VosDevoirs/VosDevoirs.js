@@ -11,7 +11,7 @@ const VosDevoirs = () => {
 
 
     return (
-      <div style={{background: '#F7F7F7'}}>
+      <div style={{background: '#E2E2E2', paddingBottom: "40px", paddingTop: "40px"}}>
       {/* <ActualiteCarousel /> */}
         <div className={"your-duties"} id={"your-duties"}>
             <Tabs

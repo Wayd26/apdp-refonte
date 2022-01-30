@@ -17,7 +17,7 @@ margin-right: auto;
 
 #your-rights .nav {
   width: 100% !important;
-  background: #4385f6;
+  background: gray;
 }
 #your-rights .nav-tabs .nav-link:hover {
   border-color: #4385f6
@@ -30,18 +30,33 @@ margin-right: auto;
 }
 #your-rights .nav-tabs li.nav-item button {
   color: #ffffff !important;
+  background-color: gray;
+  display: initial;
+}
+
+#your-rights .nav-tabs li.nav-item button:hover {
+  border: gray !important;
 }
 #your-rights .nav-tabs li.nav-item .active {
   color: #000000 !important;
   /* font: normal normal bold 13px/28px Montserrat; */
   letter-spacing: 0px;
   background: #ffffff;
- border-top: 10px solid  #4385f6;
+ /* border-top: 10px solid  #4385f6; */
+ /* border-top: 10px solid  gray; */
   opacity: 1;
   padding-bottom: 20px;
 }
 
 .nav-tabs li.nav-item button {
   color: #ffffff;
+  width: 100%;
 }
  
+li.nav-item {
+  width: 33.33%;
+}
+
+li.nav-item:active {
+  background-color: gray !important;
+}

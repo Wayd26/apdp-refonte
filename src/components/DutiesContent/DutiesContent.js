@@ -17,7 +17,7 @@ const DutiesContent = () => {
 
 
     const vos_devoirs = [
-        {"title":"Rester informé","link": "/vos-droits/rester-informe", "btn_text":"Exercer votre droit d'information", "description":"Un organisme qui collecte des informations sur vous doit vous proposer une information claire sur l’utilisation des données et sur vos droits !", "img" : rester_informe},
+        {"title":"Rester informé","link": "/vos-devoirs/rester-informe", "btn_text":"Exercer votre droit d'information", "description":"Un organisme qui collecte des informations sur vous doit vous proposer une information claire sur l’utilisation des données et sur vos droits !", "img" : rester_informe},
         {"title":"Vous opposer","link": "/vos-droits/vous-opposer", "btn_text":"Exercer votre droit d'opposition", "description":"Vous pouvez vous opposer à tout moment à ce qu’un organisme utilise certaines de vos données.", "img" : vous_opposer},
         {"title":"Vérifier vos données","link": "/vos-droits/verifier-vos-donnees", "btn_text":"Exercer votre droit d'accès", "description":"Obtenir et vérifier les données qu’un organisme détient sur vous.", "img" : verifier_vos_donnees},
         {"title":"Rectifier vos données","link": "/vos-droits/rectifier-vos-donnees", "btn_text":"Exercer votre droit de rectification", "description":"Rectifier les informations inexactes vous concernant.", "img" : rectifier_vos_donnees},
@@ -40,7 +40,7 @@ const DutiesContent = () => {
 
             
       {vos_devoirs.map((item, index) => (
-        <div className={"col p-3"}> <DutyCard link={vos_devoirs[index].link} title={vos_devoirs[index].title} btnText={vos_devoirs[index].btn_text} description={vos_devoirs[index].description} imgSrc={vos_devoirs[index].img} /> </div>
+        <div className={"col-sm-6 col-xs-12 p-3"}> <DutyCard link={vos_devoirs[index].link} title={vos_devoirs[index].title} btnText={vos_devoirs[index].btn_text} description={vos_devoirs[index].description} imgSrc={vos_devoirs[index].img} /> </div>
       ))}
       ;
             </div>

@@ -80,7 +80,7 @@ export default class NavBar extends Component {
                                 <NavDropdown className={"nav-link-title nav-item-custom"} title={"VOS DEMARCHES "} id="navbarScrollingDropdown" active={window.location.pathname === "/vos-demarches"}>
                                 <NavDropdown.Item href="/faire-une-demande" >Faire ou modifier une demande</NavDropdown.Item>
                                     <NavDropdown.Item href="/vos-demarches">Vérifier le statut d'une demande</NavDropdown.Item>
-                                    <NavDropdown.Item href="/vos-demarches">Espace DPO</NavDropdown.Item>
+                                    <NavDropdown.Item href="/espace-dpo">Espace DPO</NavDropdown.Item>
                                     <NavDropdown.Item href="/vos-demarches">Obtenir le certificat de conformité</NavDropdown.Item>
                                     <NavDropdown.Item href="/vos-demarches">Démarrer une mise en conformité</NavDropdown.Item>
                                     <NavDropdown.Item href="/vos-demarches">Vérifier la conformité</NavDropdown.Item>

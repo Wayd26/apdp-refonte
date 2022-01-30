@@ -21,7 +21,7 @@ const EspaceRT = () => {
   return <div style={{backgroundColor: "#E2E2E2", paddingTop: "40px", paddingBottom: "40px"}}>
       <div className="espace-rt-container">
           <p className="espace-rt-title">ESPACE RT</p>
-          <div className="espace-rt-cards-container row d-flex justify-content-around flex-wrap">
+          <div className="espace-rt-cards-container row d-flex ">
           {espaceRtData.map((item, index) => (
 
               <div key={index} className="col-sm-4 col-xs-12">
