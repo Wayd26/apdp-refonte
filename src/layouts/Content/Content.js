@@ -48,6 +48,7 @@ import Deliberations from '../Deliberations/Deliberations';
 import Cooperations from '../Cooperations/Cooperations';
 import TextesCommunautaires from '../TextesCommunautaires/TextesCommunautaires';
 import EspaceDPO from '../EspaceDPO/EspaceDPO';
+import DynamiqueForm from '../Dynamique/DynamiqueForm';
 
 
 const Content = () => {
@@ -123,6 +124,7 @@ const Content = () => {
           <Route path="/outils-conformite" element={<OutilsConformite />} />
           <Route path="/espace-rt" element={<EspaceRT />} />
           <Route path="/espace-dpo" element={<EspaceDPO />} />
+          <Route path="/form-test" element={<DynamiqueForm />} />
 
           <Route path="/activites" element={<Activites/>} />
         <   Route path="/" element={<Home />} >

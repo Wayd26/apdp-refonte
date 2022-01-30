@@ -40,7 +40,7 @@ const Footer = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center"
-                }} classNameName="input-group-text bckColorDark text-white" id="basic-addon2">
+                }} className="input-group-text bckColorDark text-white" id="basic-addon2">
                     <FaPaperPlane />
                 </span>
                 </div>
@@ -175,9 +175,9 @@ const Footer = () => {
                 width: "max-content"
             }}>
 
-            <div className='d-flex justify-content-center align-items-center'><i class="ri-map-pin-2-fill fw-bold mx-1" style={{fontSize: 30, marginRight: 10}}></i>Rue 6 . 076 El Marzouk Joël  COTONOU</div>
-            <div className='d-flex justify-content-center align-items-center'><i class="ri-mail-line fw-bold mx-1" style={{fontSize: 30, marginRight: 10 }}></i>contact@apdp.bj</div>
-            <div className='d-flex justify-content-center align-items-center'> <i class="ri-phone-fill fw-bold mx-1" style={{fontSize: 30, marginRight: 10}}></i>(+ 229 ) 21 32 57 88</div>
+            <div className='d-flex justify-content-center align-items-center'><i className="ri-map-pin-2-fill fw-bold mx-1" style={{fontSize: 30, marginRight: 10}}></i>Rue 6 . 076 El Marzouk Joël  COTONOU</div>
+            <div className='d-flex justify-content-center align-items-center'><i className="ri-mail-line fw-bold mx-1" style={{fontSize: 30, marginRight: 10 }}></i>contact@apdp.bj</div>
+            <div className='d-flex justify-content-center align-items-center'> <i className="ri-phone-fill fw-bold mx-1" style={{fontSize: 30, marginRight: 10}}></i>(+ 229 ) 21 32 57 88</div>
             </div>
           </div>
 
@@ -201,40 +201,40 @@ const Footer = () => {
 
 
 
-  // <div classNameName="footer w-100 p-2">
+  // <div className="footer w-100 p-2">
   //   <Row>
   //   <Col sm={3}>
-  //   <div classNameName="bold-footer-text">Abonnez-vous à la newsletter</div>
+  //   <div className="bold-footer-text">Abonnez-vous à la newsletter</div>
   //   </Col>
   //   <Col sm={3}>
-  //     <div classNameName="bold-footer-text">Espace Juridique et Actualite</div>
-  //     <div classNameName="">Autres documents</div>
-  //     <div classNameName="bold-footer-text"></div>Évènements
-  //     <div classNameName="bold-footer-text"></div>Presse
-  //     <div classNameName="bold-footer-text"></div>Photothèque
-  //     <div classNameName="bold-footer-text"></div>Procédures
+  //     <div className="bold-footer-text">Espace Juridique et Actualite</div>
+  //     <div className="">Autres documents</div>
+  //     <div className="bold-footer-text"></div>Évènements
+  //     <div className="bold-footer-text"></div>Presse
+  //     <div className="bold-footer-text"></div>Photothèque
+  //     <div className="bold-footer-text"></div>Procédures
   //     </Col>
   //   <Col sm={3} >
-  //   <div classNameName="bold-footer-text">Liens utiles</div>
-  //   <div classNameName="">Vos mentions légales</div>
-  //   <div classNameName="">Procédures</div>
-  //   <div classNameName="">Informez-vous</div>
-  //   <div classNameName="">Arnaque du mois</div>
-  //   <div classNameName="">Lu pour vous</div>
-  //   <div classNameName="">Conseils</div>
-  //   <div classNameName="">Mes devoirs</div>
-  //   <div classNameName="">Mes droits</div>
+  //   <div className="bold-footer-text">Liens utiles</div>
+  //   <div className="">Vos mentions légales</div>
+  //   <div className="">Procédures</div>
+  //   <div className="">Informez-vous</div>
+  //   <div className="">Arnaque du mois</div>
+  //   <div className="">Lu pour vous</div>
+  //   <div className="">Conseils</div>
+  //   <div className="">Mes devoirs</div>
+  //   <div className="">Mes droits</div>
   //   </Col>
   //   <Col sm={3}>
-  //   <div classNameName="">Appelez-nous 5jrs/7</div>
-  //   <div classNameName="">(+229) 21 22 23 24 / 64 65 66 67</div>
+  //   <div className="">Appelez-nous 5jrs/7</div>
+  //   <div className="">(+229) 21 22 23 24 / 64 65 66 67</div>
   //   </Col>
   // </Row>;
-  // <div classNameName="copyright-text">c {new Date().getFullYear()} | Autorité de protection de données à caractère personnel apdp.bj</div>
+  // <div className="copyright-text">c {new Date().getFullYear()} | Autorité de protection de données à caractère personnel apdp.bj</div>
   // <Row>
-  //   <Col sm={4} classNameName="greenFlag"></Col>
-  //   <Col sm={4}classNameName="yellowFlag"></Col>
-  //   <Col sm={4}classNameName="redFlag"></Col>
+  //   <Col sm={4} className="greenFlag"></Col>
+  //   <Col sm={4}className="yellowFlag"></Col>
+  //   <Col sm={4}className="redFlag"></Col>
   // </Row>
   // </div>;
 };

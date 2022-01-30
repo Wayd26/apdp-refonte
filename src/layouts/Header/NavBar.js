@@ -136,7 +136,7 @@ export default class NavBar extends Component {
                             borderTopLeftRadius: 20,
                             borderBottomLeftRadius: 20
                         }}>
-                            <i class="ri-search-line"></i>
+                            <i className="ri-search-line"></i>
                         </InputGroupText>
                         <Input placeholder="Recherche" style={{
                             backgroundColor: 'white',
