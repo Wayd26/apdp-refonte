@@ -39,7 +39,7 @@ margin-right: auto;
 }
 #your-rights .nav-tabs li.nav-item .active {
   color: #000000 !important;
-  /* font: normal normal bold 13px/28px Montserrat; */
+  font: normal normal bold 13px/28px Montserrat;
   letter-spacing: 0px;
   background: #ffffff;
  /* border-top: 10px solid  #4385f6; */
@@ -48,6 +48,10 @@ margin-right: auto;
   padding-bottom: 20px;
 }
 
+#your-rights .nav-tabs li.nav-item {
+  
+  font: normal normal bold 13px/28px Montserrat;
+}
 .nav-tabs li.nav-item button {
   color: #ffffff;
   width: 100%;
