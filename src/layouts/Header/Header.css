@@ -166,6 +166,11 @@ cursor: pointer;
     width: 100% !important;
     padding-left: 15%;
 }
+
+.code_numerique, .code_numerique:hover {
+    color: inherit;
+}
+
 @media only screen and (max-width: 722px){
 	.header-block-2-div-2{
         display: none;

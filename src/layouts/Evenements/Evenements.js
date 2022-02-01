@@ -1,11 +1,12 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import EventCard from '../../components/EventCard/EventCard'
 import "./Evenements.css";
 import img5 from "../../assets/images/img5.jpg";
 import BesoinAide from '../../components/BesoinAide/BesoinAide';
 import FaqSection from '../../components/FaqSection/FaqSection';
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
-import {useNavigate} from "react-router-dom"
+import {useNavigate} from "react-router-dom";
+import ReactPaginate from "react-paginate";
 
 
 
@@ -13,9 +14,33 @@ const Evenements = () => {
 
     const navigate = useNavigate();
 
+    const [items, setItems] = useState([]);
+    const [pageCount, setpageCount] = useState(0);
+    let limit = 10;
+
     const handleEventCardMoreClicked = () => {
         navigate("/evenements/evenement26")
     }
+
+    const handlePageClicked = () => {
+
+    }
+
+    useEffect(() => {
+        const getComments = async () => {
+          const res = await fetch(
+            `http://localhost:3004/comments?_page=1&_limit=${limit}`
+            // `https://jsonplaceholder.typicode.com/comments?_page=1&_limit=${limit}`
+          );
+          const data = await res.json();
+          const total = res.headers.get("x-total-count");
+          setpageCount(Math.ceil(total / limit));
+          // console.log(Math.ceil(total/12));
+          setItems(data);
+        };
+    
+        getComments();
+      }, [limit]);
 
     return (
         <div id="events" className="events">
@@ -27,6 +52,27 @@ const Evenements = () => {
             <div className="events-cards-container">
                 <EventCard moreClicked={()=> handleEventCardMoreClicked()} />
                 <EventCard moreClicked={()=> handleEventCardMoreClicked()} />
+
+            <ReactPaginate 
+                previousLabel={"Précédent"}
+                nextLabel={"Suivant"}
+                breakLabel={"..."}
+                pageCount={25}
+                marginPagesDisplayed={2}
+                pageRangeDisplayed={2}
+                onPageChange={handlePageClicked}
+                containerClassName={"pagination justify-content-center mb-3"}
+                pageClassName={"page-item"}
+                pageLinkClassName={"page-link"}
+                previousClassName={"page-item"}
+                previousLinkClassName={"page-link"}
+                nextClassName={"page-item"}
+                nextLinkClassName={"page-link"}
+                breakClassName={"page-item"}
+                breakLinkClassName={"page-link"}
+                activeClassName={"active"}
+            />
+
             </div>
             <div className="events-others-container">
                 <p className="popular-activities-title">Activités Populaires</p>

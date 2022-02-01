@@ -11,7 +11,7 @@ const VosDevoirs = () => {
 
 
     return (
-      <div style={{background: '#F7F7F7'}}>
+      <div style={{background: '#E2E2E2', paddingBottom: "40px", paddingTop: "40px"}}>
       {/* <ActualiteCarousel /> */}
         <div className={"your-duties"} id={"your-duties"}>
             <Tabs
@@ -20,14 +20,14 @@ const VosDevoirs = () => {
       onSelect={(k) => setKey(k)}
       className="mb-3"
     >
-      <Tab eventKey="particulier" title="Particulier">
+      <Tab eventKey="particulier" title=" Je suis un Particulier">
         <DutiesContent />
       </Tab>
-      <Tab eventKey="entreprise_et_organisme" title="Entreprise et Organisme">
+      <Tab eventKey="entreprise_et_organisme" title=" Je suis une Entreprise et Organisme">
       <DutiesContent />
 
       </Tab>
-      <Tab eventKey="administration_publique" title="Administration Publique" >
+      <Tab eventKey="administration_publique" title="Je suis une Administration Publique" >
       <DutiesContent />
       </Tab>
     </Tabs>

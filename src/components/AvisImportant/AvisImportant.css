@@ -7,10 +7,17 @@ width: 100%;
 margin-bottom: 35px;
 }
 
-.avis-important-icon {
+.avis-important-icon-active {
     width: 40px;
 height: 26px;
-color: #2699FB;
+color: #4385F6;
+opacity: 1;
+margin-right: 20px;
+}
+.avis-important-icon-not-active {
+    width: 40px;
+height: 26px;
+color: #e63b07;
 opacity: 1;
 margin-right: 20px;
 }
@@ -34,6 +41,23 @@ margin-right: 20px;
 .avis-important-first-bloc {
     text-align: left;
 }
+
+.avis-important-expiry-time-active {
+    text-align: center;
+    font: normal normal bold 13px/17px Montserrat;
+    letter-spacing: 0px;
+    color: #4385F6;
+    opacity: 1;
+}
+
+.avis-important-expiry-time-not-active {
+    text-align: center;
+    font: normal normal bold 13px/17px Montserrat;
+    letter-spacing: 0px;
+    color: #e63b07;
+    opacity: 1;
+}
+
 
 
 @media only screen and (max-width: 768px) {

@@ -14,7 +14,6 @@ const Membres = () => {
     return (
         <div className={"members"} id={"members"}>
             {/* Carousel */}
-            <ActualiteCarousel/>
 
             <h3 style={{color: 'blue', 'margin-top': '100px', 'margin-bottom': '100px',}}>LES MEMBRES DE LA 3ÈME MANDATURE</h3>
             

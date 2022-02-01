@@ -18,7 +18,7 @@ const MissionCard = (props) => {
         <div className="mission-card">
             <div className="mission-card-title">{title}</div>
             <div className="mission-card-description">Lorem ipsum dolor sit amet, sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos </div>  
-            <button onClick={() => handleMissionCardClicked(link)} className="mission-card-button">En savor plus
+            <button onClick={() => handleMissionCardClicked(link)} className="mission-card-button">En savoir plus
             <RiArrowRightCircleFill className="mission-card-button-icon"/></button>
             
         </div>

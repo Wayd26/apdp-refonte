@@ -4,7 +4,8 @@ import { Container, Row, Col, Button, Modal, ModalBody } from 'reactstrap';
 import apdp_logo from "../../assets/images/logoapdp.svg"
 import NavBar from './NavBar';
 import './Header.css';
-import {BASE_URL} from "../../constants/Constant"
+import {BASE_URL} from "../../constants/Constant";
+import code_numerique from "../../assets/documents/CODE_DU_NUMERIQUE_DU BENIN_EDITION 2019_ADN.pdf";
 
 
 const Header = () => {
@@ -17,8 +18,12 @@ const Header = () => {
         setIsOpen(!isOpen)
     }
     const goHome = () => {
-        window.location.replace("/")
+        window.location.replace("/");
     } 
+
+    const handleClickApdpInfo = () => {
+        window.location.replace("/mission");
+    }
 
 //     useEffect(() => {
 //         axios.get(BASE_URL)
@@ -64,9 +69,9 @@ const Header = () => {
                             
                                 <div className=" d-none d-md-flex header-block-2-div-2 d-flex flex-row justify-content-around">
                                 {/* <div className=" row d-flex  justify-content-around"> */}
-                                    <div className="col" style={{color: "#292929", fontFamily: "Montserrat", fontWeight: "bold", cursor: "pointer"}}> CODE DU NUMERIQUE </div>
-                                    <div className="col" style={{color: "#292929", fontFamily: "Montserrat", fontWeight: "bold", cursor: "pointer"}}> FOIRE AUX QUESTIONS</div>
-                                    <div className="col" style={{color: "#292929", fontFamily: "Montserrat", fontWeight: "bold", cursor: "pointer"}}> CONNAITRE L'APDP</div>
+                                    <div className="col" style={{color: "#292929", fontFamily: "Montserrat", fontWeight: "bold", cursor: "pointer"}}> <a className="code_numerique" target={"_blank"} href={code_numerique} rel={"noopener noreferer"} > CODE DU NUMERIQUE </a> </div>
+                                    <div className="col" style={{color: "#292929", fontFamily: "Montserrat", fontWeight: "bold", cursor: "pointer"}}> RECOMMANDATIONS</div>
+                                    <div className="col" style={{color: "#292929", fontFamily: "Montserrat", fontWeight: "bold", cursor: "pointer"}} onClick={handleClickApdpInfo}> CONNAITRE L'APDP</div>
                                 </div>
                             
                             

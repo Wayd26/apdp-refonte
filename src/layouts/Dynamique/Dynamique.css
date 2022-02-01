@@ -1,0 +1,5 @@
+.form-style{
+    width: 60% !important;
+    display: flex;
+    flex-direction: column;
+}
