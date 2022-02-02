@@ -91,7 +91,7 @@ export default class NavBar extends Component {
                             </h5>
                             <h5>
                                 <NavDropdown className={"nav-link-title nav-item-custom"} title={"DOCUMENTATION "} id="navbarScrollingDropdown" active={window.location.pathname === "/documentation"}>
-                                <NavDropdown.Item href="" >Liste de Pays</NavDropdown.Item>
+                                <NavDropdown.Item href="/pays-membres" >Liste de Pays</NavDropdown.Item>
                                     <NavDropdown.Item href="/conseils">Recommandations</NavDropdown.Item>
                                     <NavDropdown.Item href="/outils-conformite">Outils de conformité</NavDropdown.Item>
                                     <NavDropdown.Item href="/rapports-annuels">Rapports d'activités Annuelles</NavDropdown.Item>
@@ -126,6 +126,7 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="/membres">Mandature en cours et Historique des membres</NavDropdown.Item>
                                     <NavDropdown.Item href="/commissaire">Commissariat du Gouvernement</NavDropdown.Item>
                                     <NavDropdown.Item href="/cooperations">Coopération</NavDropdown.Item>
+                                    <NavDropdown.Item href="/mentions-legales">Mentions Légales</NavDropdown.Item>
                                     <NavDropdown.Item href="">Contact</NavDropdown.Item>
                                 </NavDropdown>
                             </h5>
