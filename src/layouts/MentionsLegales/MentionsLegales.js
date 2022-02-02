@@ -13,7 +13,6 @@ import imgCard6 from "../../assets/images/img6.jpg"
 const MentionsLegales = () => {
     return (
         <div className='info-section'>
-            <ActualiteCarousel/>
             <div className='content'>
                 <Card style={{ 'margin-top': '100px', }}>
                     <Card.Body style={{ 'display': 'flex', 'flex-direction': 'column', 'align-items': 'center' }}>

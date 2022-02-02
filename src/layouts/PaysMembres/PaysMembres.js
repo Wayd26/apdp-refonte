@@ -14,7 +14,6 @@ const PaysMembres = () => {
     return (
         <div className={"countries"} id={"countries"}>
             {/* Carousel */}
-            <ActualiteCarousel/>
             <div style={{ 'display':'flex', 'align-items':'center', 'flex-direction':'column' }}>
                 <h4 style={{color: 'black', 'margin-top': '100px', 'margin-bottom': '0px',}}>ASSOCIATIONS ET RÉSEAUX DE PROTECTION DES DONNÉES PERSONNELLES</h4>
                 <hr style={{ 'color':'#4385F6', 'height':'5px', 'width':'300px', 'opacity':'1', 'margin-bottom': '50px' }}/>
