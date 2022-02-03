@@ -13,10 +13,9 @@ const Conseils = () => {
     return (
         <div className={"advices"} id={"advices"}>
             {/* Carousel */}
-           <ActualiteCarousel />
 
             {/* Title */}
-            <p className={'page-title'}>CONSEILS</p>
+            <p className={'page-title'}>RECOMMANDATIONS</p>
             <p className={'page-subtitle'}>Lorem ipsum dolor sit amet, consetetur sadipsiam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores</p>
             <div className={'advices-section'} id={'advices-section'}>
                 {/* advices card list */}
