@@ -3,6 +3,7 @@ import ActualiteCarousel from "../../components/ActualiteCarousel/ActualiteCarou
 import AvisImportant from "../../components/AvisImportant/AvisImportant";
 import FaqSection from "../../components/FaqSection/FaqSection";
 import MarketCard from "../../components/MarketCard/MarketCard";
+import MarketDataTable from "../../components/MarketDataTable/MarketDataTable";
 import "./AppelsOffres.css";
 
 const AppelsOffres = () => {
@@ -28,19 +29,8 @@ const AppelsOffres = () => {
             Marchés de {actualYear.getFullYear()}{" "}
           </p>
         </div>
-        <div className="w90 row d-flex justify-content-between">
-          <div className="col-xs-12 col-sm-6 col-md-4">
-            <MarketCard />
-          </div>
-          <div className="col-xs-12 col-sm-6 col-md-4">
-            <MarketCard />
-          </div>
-          <div className="col-xs-12 col-sm-6 col-md-4">
-            <MarketCard />
-          </div>
-          <div className="col-xs-12 col-sm-6 col-md-4">
-            <MarketCard />
-          </div>
+        <div className="w90 row d-flex justify-content-between pb-5">
+          <MarketDataTable />
         </div>
 
         <div className="appels-offres-blue-band">
@@ -50,16 +40,7 @@ const AppelsOffres = () => {
 
         </div>
         <div className="w90 row d-flex justify-content-between">
-          <div className="col-xs-12 col-sm-6 col-md-4">
-            <MarketCard />
-          </div>
-          <div className="col-xs-12 col-sm-6 col-md-4">
-            <MarketCard />
-          </div>
-          <div className="col-xs-12 col-sm-6 col-md-4">
-            <MarketCard />
-          </div>
-         
+        <MarketDataTable />  
         </div>
       </div>
       {/* <FaqSection /> */}
