@@ -102,7 +102,7 @@ const Footer = () => {
             marginTop: "10%",
             textAlign: "start",
           }}>
-            <div className="my-1" >Mentions légales</div>
+            {/* <div className="my-1" >Mentions légales</div> */}
             <div>Politique de confidentialité</div>
           </div>
          
@@ -118,7 +118,7 @@ const Footer = () => {
                 <a href="#">Autres documents</a>
               </li>
               <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                <a href="#">Événements</a>
+                <a href="/evenements">Événements</a>
               </li>
               <li className="menu-item menu-item-type-post_type menu-item-object-page">
                 <a href="#">Presse</a>
@@ -131,14 +131,13 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
         </div>
         <div className="footer-content-column">
           <div className="footer-menu">
             <h2 className="footer-menu-name"> VOS PROTECTIONS</h2>
             <ul id="menu-quick-links" className="footer-menu-list">
               <li className="menu-item menu-item-type-custom menu-item-object-custom">
-                <a target="_blank" rel="noopener noreferrer" href="#">Vos Mentions Légales</a>
+                <a  href="/mentions-legales">Vos Mentions Légales</a>
               </li>
               <li className="menu-item menu-item-type-custom menu-item-object-custom">
                 <a target="_blank" rel="noopener noreferrer" href="#">Procédures</a>
@@ -152,13 +151,13 @@ const Footer = () => {
               <li className="menu-item menu-item-type-post_type_archive menu-item-object-customer">
                 <a href="#">Lu pour vous</a></li>
               <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                <a href="#">Conseils</a>
+                <a href="/recommandations">Recommandations</a>
               </li>
               <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                <a href="#">Mes devoirs</a>
+                <a href="/vos-devoirs">Mes devoirs</a>
               </li>
               <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                <a href="#">Mes droits</a>
+                <a href="/vos-droits">Mes droits</a>
               </li>
 
             </ul>
