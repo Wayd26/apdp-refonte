@@ -52,6 +52,7 @@ import PaysMembres from '../PaysMembres/PaysMembres';
 import TextesCommunautaires from '../TextesCommunautaires/TextesCommunautaires';
 import EspaceDPO from '../EspaceDPO/EspaceDPO';
 import DynamiqueForm from '../Dynamique/DynamiqueForm';
+import Procedures from '../Procedures/Procedures';
 
 
 const Content = () => {
@@ -68,13 +69,14 @@ const Content = () => {
             <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
       <Routes>
           {/* <Route index element={<div> Here</div>} /> */}
-          <Route path="/recommandations" element={<Conseils/>} />
-          <Route path="/cooperations" element={<Cooperations/>} />
-          <Route path="/textes/deliberations-publiques" element={<Deliberations/>} />
-          <Route path="/pays-membres" element={<PaysMembres/>} />
-          <Route path="/mentions-legales" element={<MentionsLegales/>} />
-          <Route path="/lois/loi-1" element={<LaLoi/>} />
-          <Route path="/vos-demarches" element={<Auth/>} />
+          <Route path="/procedures" element={<Procedures />} />
+          <Route path="/recommandations" element={<Conseils />} />
+          <Route path="/cooperations" element={<Cooperations />} />
+          <Route path="/textes/deliberations-publiques" element={<Deliberations />} />
+          <Route path="/pays-membres" element={<PaysMembres />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
+          <Route path="/lois/loi-1" element={<LaLoi />} />
+          <Route path="/vos-demarches" element={<Auth />} />
           <Route path="/communique/details-1" element={<DetailsCommunique />} />
           <Route path="/activite/details-1" element={<DetailsActivite />} />
           <Route path="/commissaire" element={<Commissaire />} />
@@ -84,7 +86,7 @@ const Content = () => {
           <Route path="/formulaire-du-courrier" element={<FormulaireCourrier />} />
           <Route path="/evenements/evenement26" element={<DetailsEvenement />} />
           <Route path="/evenements" element={<Evenements />} />
-          <Route path="/communiques" element={<Communiques/>} />
+          <Route path="/communiques" element={<Communiques />} />
           <Route path="/vos-droits/rester-informe" element={<DetailsDroit img={rester_informe} title={"Rester Informé"}/> } />
           <Route path="/vos-droits/vous-opposer" element={<DetailsDroit img={vous_opposer} title={"Vous opposer"}/> } />
           <Route path="/vos-droits/verifier-vos-donnees" element={<DetailsDroit img={verifier_vos_donnees} title={"Vérifier vos données"}/> } />

@@ -127,7 +127,7 @@ const Footer = () => {
                 <a href="#">Photothèque</a>
               </li>
               <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                <a href="#">Procédures</a>
+                <a href="/procedures">Procédures</a>
               </li>
             </ul>
           </div>

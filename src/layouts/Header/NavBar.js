@@ -87,6 +87,7 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="/vos-demarches">Visualiser la version d'une décision</NavDropdown.Item>
                                     <NavDropdown.Item href="/vos-demarches">Prendre RDV</NavDropdown.Item>
                                     <NavDropdown.Item href="/espace-rt">Espace RT</NavDropdown.Item>
+                                    <NavDropdown.Item href="/procedures">Procédures</NavDropdown.Item>
                                 </NavDropdown>
                             </h5>
                             <h5>
