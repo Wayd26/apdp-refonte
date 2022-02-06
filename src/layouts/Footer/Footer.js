@@ -124,7 +124,7 @@ const Footer = () => {
                 <a href="#">Presse</a>
               </li>
               <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                <a href="#">Photothèque</a>
+                <a href="/phototheque">Photothèque</a>
               </li>
               <li className="menu-item menu-item-type-post_type menu-item-object-page">
                 <a href="/procedures">Procédures</a>
@@ -165,7 +165,7 @@ const Footer = () => {
         </div>
         <div className="footer-content-column">
           <div className="footer-call-to-action">
-            <h2  className="footer-call-to-action-title">ADDRESS</h2>
+            <h2  className="footer-call-to-action-title">ADRESSE</h2>
             <div style={{
                 display: 'flex',
                 justifyContent: 'flex-start',

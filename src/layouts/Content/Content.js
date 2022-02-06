@@ -53,6 +53,8 @@ import TextesCommunautaires from '../TextesCommunautaires/TextesCommunautaires';
 import EspaceDPO from '../EspaceDPO/EspaceDPO';
 import DynamiqueForm from '../Dynamique/DynamiqueForm';
 import Procedures from '../Procedures/Procedures';
+import Photothèque from '../Photothèque/Photothèque';
+import Vidéothèque from '../Vidéothèque/Vidéothèque';
 
 
 const Content = () => {
@@ -69,6 +71,8 @@ const Content = () => {
             <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
       <Routes>
           {/* <Route index element={<div> Here</div>} /> */}
+          <Route path="/phototheque" element={<Photothèque />} />
+          <Route path="/videotheque" element={<Vidéothèque />} />
           <Route path="/procedures" element={<Procedures />} />
           <Route path="/recommandations" element={<Conseils />} />
           <Route path="/cooperations" element={<Cooperations />} />

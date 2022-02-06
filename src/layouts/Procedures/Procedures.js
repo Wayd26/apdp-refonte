@@ -19,6 +19,7 @@ const Procedures = () => {
       ]
       return <div style={{backgroundColor: "#E2E2E2", paddingTop: "40px", paddingBottom: "40px"}}>
         <p className="procedures-title">Les Procédures</p>
+        <p className="procedures-desc">Tout responsable de traitement de données a le devoir de faire une déclaration si les données manipulées sont à caractère personnel, soit d’avoir une autorisation si les données sont sensibles. Les demandes d’avis concernent les activités régaliennes de l’Etat (défense, sureté, sécurité publique, RENA/LEPI)</p>
         <div className="procedures-cards-container row d-flex justify-content-around">
           {proceduresData.map((item, index) => (
           <div className="col-sm-6 col-xs-12 col-md-6">
