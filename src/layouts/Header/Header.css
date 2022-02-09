@@ -22,7 +22,7 @@ cursor: pointer;
     background-color: #FFBE00 !important;
 }
 .dropdown-item {
-    font: normal normal bold 13px/20px Source Sans Pro !important;
+    font: normal normal bold 20px/35px Source Sans Pro !important;
 }
 .dropdown-item.active, .dropdown-item:active, .dropdown-item:focus, .dropdown-item:hover {
     background-color: #FFBE00 !important;

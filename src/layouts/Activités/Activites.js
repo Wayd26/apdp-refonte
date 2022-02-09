@@ -16,12 +16,12 @@ const Activites = () => {
     const dispatch = useDispatch();
     const appState = useSelector(state=>state, shallowEqual);
 
-    useEffect(() => {
-        console.log("General App State ", appState)
-        dispatch(actions.getArticles("Activites"))
-    }, [appState])
+    // useEffect(() => {
+    //     console.log("General App State ", appState)
+    //     dispatch(actions.getArticles("Activites"))
+    // }, [appState])
     return (
-        <div className={"activities"} id={"activities"}>
+        <div className={"activities"} id={"activities"} style={{backgroundColor: "#E2E2E2", paddingTop: "40px", paddingBottom: "40px"}}>
            
 
             {/* Title */}
@@ -32,7 +32,7 @@ const Activites = () => {
 
             {/* Activities list 1 */}
             <hr className={"activities-separator"}/>
-            <h2 className={"activities-page-section"}>LOREM IPSUM</h2>
+            <h4 className={"activities-page-section"}>LOREM IPSUM</h4>
             <div className={"activities-card-list row text-align left"}>
                 <Card className={"activities-card col-md-6 col-lg-4 col-xl-3"}>
                 <div className={"activities-card-img"} id={"activities-card-img"}></div>
@@ -267,7 +267,7 @@ const Activites = () => {
 
             {/* Activities list 2 */}
             <hr className={"activities-separator"}/>
-            <h2 className={"activities-page-section"}>LOREM IPSUM</h2>
+            <h3 className={"activities-page-section"}>LOREM IPSUM</h3>
             <div className={"activities-card-list row text-align left"}>
                 <Card className={"activities-card col-md-6 col-lg-4 col-xl-3"}>
                 <div className={"activities-card-img"} id={"activities-card-img"}></div>
@@ -300,7 +300,7 @@ const Activites = () => {
                 <Card className={"activities-card col-md-6 col-lg-4 col-xl-3"}>
                 <div className={"activities-card-img"} id={"activities-card-img"}></div>
                     <Card.Body>
-                        <Card.Title style={{ float: 'left', 'font-weight': 'bold' }}>Lorem Ipsum</Card.Title>
+                        <Card.Title style={{ float: 'left', 'font-weight': 'bold' }}> </Card.Title>
                         <Card.Text style={{ float: 'left', 'text-align': 'left', 'font-size': '9px', 'width': '100px',}}>
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.

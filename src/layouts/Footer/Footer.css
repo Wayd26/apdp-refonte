@@ -172,9 +172,11 @@ body {
 
 .footer-menu {
     margin-top: 30px;
+    text-align: justify;
 }
 
 .footer-menu-name {
+    text-align: left;
     font: normal normal bold 16px/20px Montserrat;
 letter-spacing: 0px;
 color: #FFFFFF;
