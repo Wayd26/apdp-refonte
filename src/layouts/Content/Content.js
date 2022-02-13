@@ -55,6 +55,8 @@ import DynamiqueForm from '../Dynamique/DynamiqueForm';
 import Procedures from '../Procedures/Procedures';
 import Photothèque from '../Photothèque/Photothèque';
 import Vidéothèque from '../Vidéothèque/Vidéothèque';
+import PlansDePassation from '../PlansDePassation/PlansDePassation';
+import Contact from '../Contact/Contact';
 
 
 const Content = () => {
@@ -71,6 +73,8 @@ const Content = () => {
             <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
       <Routes>
           {/* <Route index element={<div> Here</div>} /> */}
+          <Route path="/contact" element={<Contact/>} />
+          <Route path="/plans-de-passation" element={<PlansDePassation />} />
           <Route path="/phototheque" element={<Photothèque />} />
           <Route path="/videotheque" element={<Vidéothèque />} />
           <Route path="/procedures" element={<Procedures />} />
