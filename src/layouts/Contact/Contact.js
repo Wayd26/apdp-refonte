@@ -11,7 +11,6 @@ const Contact = () => {
 
     return (
       <div style={{background: '#FFF'}}>
-        <ActualiteCarousel/>
         <h2 style={{ 'color': '#000', 'padding-top':'70px' }}>CONTACT</h2>
         <Card className={'contact-card'}>
           <div className={'contact-info'}>

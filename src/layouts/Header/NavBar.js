@@ -57,7 +57,7 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="/forum-de-discussion">Forum de discussion</NavDropdown.Item>
                                     <NavDropdown.Item href="/phototheque">Photothèque</NavDropdown.Item>
                                     <NavDropdown.Item href="/videotheque">Vidéothèque</NavDropdown.Item>
-                                    
+                                    <NavDropdown.Item href="/plans-de-passation">Plans de passation</NavDropdown.Item>                                    
                                 </NavDropdown>
                             </h5>
 
@@ -130,7 +130,7 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="/commissaire">Commissariat du Gouvernement</NavDropdown.Item>
                                     <NavDropdown.Item href="/cooperations">Coopération</NavDropdown.Item>
                                     <NavDropdown.Item href="/mentions-legales">Mentions Légales</NavDropdown.Item>
-                                    <NavDropdown.Item href="">Contact</NavDropdown.Item>
+                                    <NavDropdown.Item href="/contact">Contact</NavDropdown.Item>
                                 </NavDropdown>
                             </h5>
                     <InputGroup className="search-input d-none d-sm-flex row d-flex flex-nowrap">

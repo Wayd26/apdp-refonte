@@ -12,8 +12,7 @@ const PlansDePassation = () => {
 
     return (
         <div className={"inheritance-plan"} id={"inheritance-plan"}>
-            {/* Carousel */}
-            <ActualiteCarousel/>
+            
             <div style={{ 'display':'flex', 'align-items':'center', 'flex-direction':'column' }}>
                 <h4 style={{'color': 'white', 'margin-top': '100px', 'margin-bottom': '0px', 'background-color': '#4385F6', 'width': '98%', 'padding': '20px',}}>PLANS DE PASSATION</h4>
                 {/* inheritance-plan list 1 */}
