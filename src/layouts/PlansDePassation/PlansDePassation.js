@@ -4,7 +4,7 @@ import pdf from '../../assets/images/pdf.png'
 import doc from '../../assets/documents/CODE_DU_NUMERIQUE_DU_BENIN_EDITION 2019_ADN.pdf';
 import {Carousel, Card, Button, ButtonGroup, Accordion} from "react-bootstrap";
 import { RiQuestionAnswerFill, RiEyeFill, RiArrowRightCircleFill } from "react-icons/ri";
-import {FaRegFilePdf} from "react-icons/fa";
+import {FaRegFilePdf, FaRegFileExcel} from "react-icons/fa";
 import CardOnCaroussel from '../../components/CardOnCaroussel/CardOnCaroussel';
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
 
@@ -20,7 +20,7 @@ const PlansDePassation = () => {
                     <Card className={"inheritance-plan-card col-md-6 col-lg-4 col-xl-4"}>
                         <Card.Body>
                         <div className={"inheritance-plan-card-img rounded-circle"} id={"inheritance-plan-card-img rounded-circle"}>
-                            <FaRegFilePdf style={{'font-size': '150px', 'position': 'relative', 'top': '20px', 'color': 'red', }}/>
+                            <FaRegFileExcel style={{'font-size': '150px', 'position': 'relative', 'top': '20px', 'color': 'green', }}/>
                         </div>
                             <Card.Title style={{ 'text-align': 'center', 'font-weight': 'bold' }}>PLAN PREVISIONNEL DE PASSATION DES MARCHÉS PUBLICS</Card.Title>
                             <Card.Text style={{'text-align': 'center', 'font-size': '10px', 'color': '#2E2E2E', 'font-weight': 'normal', 'margin': '20px'}}>
@@ -37,7 +37,7 @@ const PlansDePassation = () => {
                     <Card className={"inheritance-plan-card col-md-6 col-lg-4 col-xl-4"}>
                         <Card.Body>
                         <div className={"inheritance-plan-card-img rounded-circle"} id={"inheritance-plan-card-img rounded-circle"}>
-                            <FaRegFilePdf style={{'font-size': '150px', 'position': 'relative', 'top': '20px', 'color': 'red', }}/>
+                            <FaRegFileExcel style={{'font-size': '150px', 'position': 'relative', 'top': '20px', 'color': 'green', }}/>
                         </div>
                             <Card.Title style={{ 'text-align': 'center', 'font-weight': 'bold' }}>AVIS GÉNÉRAL DE PASSATION DES MARCHÉS PUBLICS</Card.Title>
                             <Card.Text style={{'text-align': 'center', 'font-size': '10px', 'color': '#2E2E2E', 'font-weight': 'normal', 'margin': '20px'}}>
@@ -54,7 +54,7 @@ const PlansDePassation = () => {
                     <Card className={"inheritance-plan-card col-md-6 col-lg-4 col-xl-4"}>
                         <Card.Body>
                         <div className={"inheritance-plan-card-img rounded-circle"} id={"inheritance-plan-card-img rounded-circle"}>
-                            <FaRegFilePdf style={{'font-size': '150px', 'position': 'relative', 'top': '20px', 'color': 'red', }}/>
+                            <FaRegFileExcel style={{'font-size': '150px', 'position': 'relative', 'top': '20px', 'color': 'green', }}/>
                         </div>
                             <Card.Title style={{ 'text-align': 'center', 'font-weight': 'bold' }}>PLAN PREVISIONNEL DE PASSATION DES MARCHÉS PUBLICS</Card.Title>
                             <Card.Text style={{'text-align': 'center', 'font-size': '10px', 'color': '#2E2E2E', 'font-weight': 'normal', 'margin': '20px'}}>
@@ -71,7 +71,7 @@ const PlansDePassation = () => {
                     <Card className={"inheritance-plan-card col-md-6 col-lg-4 col-xl-4"}>
                         <Card.Body>
                         <div className={"inheritance-plan-card-img rounded-circle"} id={"inheritance-plan-card-img rounded-circle"}>
-                            <FaRegFilePdf style={{'font-size': '150px', 'position': 'relative', 'top': '20px', 'color': 'red', }}/>
+                            <FaRegFileExcel style={{'font-size': '150px', 'position': 'relative', 'top': '20px', 'color': 'green', }}/>
                         </div>
                             <Card.Title style={{ 'text-align': 'center', 'font-weight': 'bold' }}>AVIS GÉNÉRAL DE PASSATION DES MARCHÉS PUBLICS</Card.Title>
                             <Card.Text style={{'text-align': 'center', 'font-size': '10px', 'color': '#2E2E2E', 'font-weight': 'normal', 'margin': '20px'}}>

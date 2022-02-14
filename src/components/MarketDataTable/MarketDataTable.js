@@ -1,5 +1,6 @@
 import React from 'react';
 import DataTable from 'react-data-table-component';
+import "./MarketDataTable.css"
 
 const MarketDataTable = () => {
 
@@ -8,11 +9,13 @@ const MarketDataTable = () => {
             name: 'Type de marché',
             selector: row => row.type,
             sortable: true,
+            className: "type-cell"
         },
         {
-            name: 'Libellé',
+            name: "Libellé",
             selector: row => row.label,
             sortable: true,
+          
         },
         {
             name: 'Publié le',
@@ -27,11 +30,18 @@ const MarketDataTable = () => {
         {
             name: 'Statut',
             selector: row => row.status,
+            style: {
+                width: "70px"
+            }
             
         },
         {
             name: 'Action',
             selector: row => row.action,
+            style: {
+                cursor: "pointer",
+                width: "50px"
+            }
             
         }
     ];
@@ -40,7 +50,7 @@ const MarketDataTable = () => {
         {
             id : 1,
             type : "Fourniture et Service",
-            label : "Avis d'appel public relatif à la connexion interne du nouveau bâtiment de l'ASSI",
+            label : "Avis d'appel public N25/71",
             publish : "25 Novembre 2021",
             deposit : "08 Décembre 2021 à 10H",
             status : "EN COURS",
@@ -49,7 +59,7 @@ const MarketDataTable = () => {
         {
             id : 2,
             type : "Fourniture et Service",
-            label : "Avis d'appel public relatif à la connexion interne du nouveau bâtiment de l'ASSI",
+            label : "Avis d'appel public N25/71",
             publish : "25 Novembre 2021",
             deposit : "08 Décembre 2021 à 10H",
             status : "EN COURS",
@@ -58,7 +68,7 @@ const MarketDataTable = () => {
         {
             id : 3,
             type : "Fourniture et Service",
-            label : "Avis d'appel public relatif à la connexion interne du nouveau bâtiment de l'ASSI",
+            label : "Avis d'appel public N25/71",
             publish : "25 Novembre 2021",
             deposit : "08 Décembre 2021 à 10H",
             status : "EN COURS",
@@ -67,7 +77,7 @@ const MarketDataTable = () => {
         {
             id : 4,
             type : "Fourniture et Service",
-            label : "Avis d'appel public relatif à la connexion interne du nouveau bâtiment de l'ASSI",
+            label : "Avis d'appel public N25/71",
             publish : "25 Novembre 2021",
             deposit : "08 Décembre 2021 à 10H",
             status : "EN COURS",
@@ -76,7 +86,7 @@ const MarketDataTable = () => {
         {
             id : 5,
             type : "Fourniture et Service",
-            label : "Avis d'appel public relatif à la connexion interne du nouveau bâtiment de l'ASSI",
+            label : "Avis d'appel public N25/71",
             publish : "25 Novembre 2021",
             deposit : "08 Décembre 2021 à 10H",
             status : "EN COURS",
@@ -85,7 +95,7 @@ const MarketDataTable = () => {
         {
             id : 6,
             type : "Fourniture et Service",
-            label : "Avis d'appel public relatif à la connexion interne du nouveau bâtiment de l'ASSI",
+            label : "Avis d'appel public N25/71",
             publish : "25 Novembre 2021",
             deposit : "08 Décembre 2021 à 10H",
             status : "EN COURS",
@@ -94,7 +104,7 @@ const MarketDataTable = () => {
         {
             id : 7,
             type : "Fourniture et Service",
-            label : "Avis d'appel public relatif à la connexion interne du nouveau bâtiment de l'ASSI",
+            label : "Avis d'appel public N25/71",
             publish : "25 Novembre 2021",
             deposit : "08 Décembre 2021 à 10H",
             status : "EN COURS",
@@ -103,7 +113,7 @@ const MarketDataTable = () => {
         {
             id : 8,
             type : "Fourniture et Service",
-            label : "Avis d'appel public relatif à la connexion interne du nouveau bâtiment de l'ASSI",
+            label : "Avis d'appel public N25/71",
             publish : "25 Novembre 2021",
             deposit : "08 Décembre 2021 à 10H",
             status : "EN COURS",
@@ -112,7 +122,7 @@ const MarketDataTable = () => {
         {
             id : 9,
             type : "Fourniture et Service",
-            label : "Avis d'appel public relatif à la connexion interne du nouveau bâtiment de l'ASSI",
+            label : "Avis d'appel public N25/71",
             publish : "25 Novembre 2021",
             deposit : "08 Décembre 2021 à 10H",
             status : "EN COURS",
@@ -121,7 +131,7 @@ const MarketDataTable = () => {
         {
             id : 10,
             type : "Fourniture et Service",
-            label : "Avis d'appel public relatif à la connexion interne du nouveau bâtiment de l'ASSI",
+            label : "Avis d'appel public N25/71",
             publish : "25 Novembre 2021",
             deposit : "08 Décembre 2021 à 10H",
             status : "EN COURS",
@@ -133,10 +143,15 @@ const MarketDataTable = () => {
 const customStyles = {
     rows: {
         style: {
-            minHeight: '72px',
-            font: 'normal normal normal 13px/18px Source Sans Pro',
+           
+            minHeight: '100px',
+            font: 'normal normal bold 13px/18px Source Sans Pro',
             letterSpacing: '0px',
-            color: '#000000' // override the row height
+            color: '#000000',
+            whiteSpace: "inherit",
+            textAlign: "start",
+            wordBreak:"normal",
+            overflow: "inherit"
         },
     },
     headCells: {
@@ -144,7 +159,8 @@ const customStyles = {
             paddingLeft: '3px', // override the cell padding for head cells
             paddingRight: '3px',
             background: '#B7D0FC 0% 0% no-repeat padding-box',
-            border: '1px solid #DDE1E6',
+            // border: '1px solid #DDE1E6',
+            border: 'none',
             opacity: '1',
             font: 'normal normal bold 14px/18px Montserrat',
             letterSpacing: '0px',
