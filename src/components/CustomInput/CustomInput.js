@@ -6,37 +6,37 @@ export default function CustomInput({field,updateValue}) {
 
 
 
-    if(field.type == 'checkbox'){
+    if(field.input_type.name == 'checkbox'){
         return (
             <>
                 <FormGroup check>
                     <Input type="checkbox" 
-                        onClick={(e) => updateValue(field.name,e.target.checked)}
+                        onClick={(e) => updateValue(field.title,e.target.checked)}
                         />
                     {' '}
                     <Label className="label-style" check>
-                        {field.label}
+                        {field.name}
                     </Label>
                 </FormGroup>
             </>
         )
-    } else if(field.type == 'select') {
-        if(field.options.length > 0){
-            updateValue(field.name,field.options[0].value)
+    } else if(field.input_type.name == 'select' || field.input_type.name == 'multi-select') {
+        if(field.option_group && field.option_group.group_values.length > 0){
+            updateValue(field.title,field.option_group.group_values[0].value)
         } 
         return (
             <>
                     <FormGroup>
-                        <Label for={field.name}>
-                            {field.label}
+                        <Label for={field.title}>
+                            {field.name}
                         </Label>
                         <Input
-                        id={field.name}
-                        name={field.name}
+                        id={field.title}
+                        name={field.title}
                         type="select"
-                        onChange={(e) => updateValue(field.name,e.target.value)}
+                        onChange={(e) => updateValue(field.title,e.target.value)}
                         >
-                        {field.options.map(op => <option value={op.value}>{op.label}</option>)}
+                        {field.option_group.group_values.map(op => <option key={op.id} value={op.slug}>{op.name}</option>)}
                         </Input>
                     </FormGroup>
             </>
@@ -46,14 +46,16 @@ export default function CustomInput({field,updateValue}) {
         return (
             <>
                 <FormGroup>
-                <Label for={field.name}>{field.label}</Label>
+                <Label for={field.title}>{field.name}</Label>
                 <Input 
                     className="form-input"
-                    type={field.type} 
-                    name={field.name} 
-                    id={field.name}
-                    onChange={(e) => updateValue(field.name,e.target.value)}
-                    required={field.obligate}/>
+                    type={field.input_type.name} 
+                    name={field.title} 
+                    id={field.title}
+                    onChange={(e) => updateValue(field.title,e.target.value)}
+                    // required={field.obligate}
+
+                    />
                 </FormGroup>
             </>
         )
