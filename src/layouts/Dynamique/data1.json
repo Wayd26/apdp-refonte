@@ -1,0 +1,185 @@
+{
+    "success": true,
+    "data": {
+      "id": 1,
+      "registration_num": "UMESL6926",
+      "name": "Formulaire 1",
+      "detail": "Perspiciatis laborum magni sint vel. Dolor architecto dolorem a vero sit architecto velit. Asperiores ea porro voluptatem nemo officia ut nihil. Magni delectus voluptatem adipisci similique doloremque ut suscipit qui.",
+      "sector": "Secteur Privé",
+      "created_at": "2022-02-13T17:44:37.000000Z",
+      "updated_at": "2022-02-13T17:44:37.000000Z",
+      "sections": [
+        {
+          "id": 30,
+          "name": "Section 30",
+          "title": "perferendis",
+          "parent_id": null,
+          "header_id": 1,
+          "created_at": "2022-02-13T17:44:37.000000Z",
+          "updated_at": "2022-02-13T17:44:37.000000Z",
+          "questions": [
+            {
+              "id": 6,
+              "name": "Question 6",
+              "answer_required": false,
+              "allow_multiple_option_answers": false,
+              "form_section_id": 30,
+              "option_group_id": 5,
+              "dependent_question_id": null,
+              "dependent_question_option_id": null,
+              "created_at": "2022-02-13T17:44:37.000000Z",
+              "updated_at": "2022-02-13T17:44:37.000000Z",
+              "input_type_id": 1,
+              "input_type": {
+                "id": 1,
+                "name": "button",
+                "created_at": null,
+                "updated_at": null
+              },
+              "option_group": {
+                "id": 5,
+                "name": "Option Group 5",
+                "slug": "option_group_5",
+                "created_at": "2022-02-13T17:44:37.000000Z",
+                "updated_at": "2022-02-13T17:44:37.000000Z",
+                "group_values": [
+                  {
+                    "id": 4,
+                    "name": "Option Group Value 4",
+                    "slug": "option_group_value_4",
+                    "option_group_id": 5,
+                    "created_at": "2022-02-13T17:44:37.000000Z",
+                    "updated_at": "2022-02-13T17:44:37.000000Z"
+                  },
+                  {
+                    "id": 9,
+                    "name": "Option Group Value 9",
+                    "slug": "option_group_value_9",
+                    "option_group_id": 5,
+                    "created_at": "2022-02-13T17:44:37.000000Z",
+                    "updated_at": "2022-02-13T17:44:37.000000Z"
+                  },
+                  {
+                    "id": 12,
+                    "name": "Option Group Value 12",
+                    "slug": "option_group_value_12",
+                    "option_group_id": 5,
+                    "created_at": "2022-02-13T17:44:37.000000Z",
+                    "updated_at": "2022-02-13T17:44:37.000000Z"
+                  }
+                ]
+              },
+              "child_questions": []
+            },
+            {
+              "id": 14,
+              "name": "Question 14",
+              "answer_required": true,
+              "allow_multiple_option_answers": false,
+              "form_section_id": 30,
+              "option_group_id": 4,
+              "dependent_question_id": null,
+              "dependent_question_option_id": null,
+              "created_at": "2022-02-13T17:44:37.000000Z",
+              "updated_at": "2022-02-13T17:44:37.000000Z",
+              "input_type_id": 6,
+              "input_type": {
+                "id": 6,
+                "name": "multi-select",
+                "created_at": null,
+                "updated_at": null
+              },
+              "option_group": {
+                "id": 4,
+                "name": "Option Group 4",
+                "slug": "option_group_4",
+                "created_at": "2022-02-13T17:44:37.000000Z",
+                "updated_at": "2022-02-13T17:44:37.000000Z",
+                "group_values": [
+                  {
+                    "id": 3,
+                    "name": "Option Group Value 3",
+                    "slug": "option_group_value_3",
+                    "option_group_id": 4,
+                    "created_at": "2022-02-13T17:44:37.000000Z",
+                    "updated_at": "2022-02-13T17:44:37.000000Z"
+                  }
+                ]
+              },
+              "child_questions": []
+            },
+            {
+              "id": 36,
+              "name": "Question 36",
+              "answer_required": true,
+              "allow_multiple_option_answers": true,
+              "form_section_id": 30,
+              "option_group_id": 3,
+              "dependent_question_id": null,
+              "dependent_question_option_id": null,
+              "created_at": "2022-02-13T17:44:38.000000Z",
+              "updated_at": "2022-02-13T17:44:38.000000Z",
+              "input_type_id": 1,
+              "input_type": {
+                "id": 1,
+                "name": "button",
+                "created_at": null,
+                "updated_at": null
+              },
+              "option_group": {
+                "id": 3,
+                "name": "Option Group 3",
+                "slug": "option_group_3",
+                "created_at": "2022-02-13T17:44:37.000000Z",
+                "updated_at": "2022-02-13T17:44:37.000000Z",
+                "group_values": [
+                  {
+                    "id": 2,
+                    "name": "Option Group Value 2",
+                    "slug": "option_group_value_2",
+                    "option_group_id": 3,
+                    "created_at": "2022-02-13T17:44:37.000000Z",
+                    "updated_at": "2022-02-13T17:44:37.000000Z"
+                  },
+                  {
+                    "id": 6,
+                    "name": "Option Group Value 6",
+                    "slug": "option_group_value_6",
+                    "option_group_id": 3,
+                    "created_at": "2022-02-13T17:44:37.000000Z",
+                    "updated_at": "2022-02-13T17:44:37.000000Z"
+                  },
+                  {
+                    "id": 7,
+                    "name": "Option Group Value 7",
+                    "slug": "option_group_value_7",
+                    "option_group_id": 3,
+                    "created_at": "2022-02-13T17:44:37.000000Z",
+                    "updated_at": "2022-02-13T17:44:37.000000Z"
+                  },
+                  {
+                    "id": 10,
+                    "name": "Option Group Value 10",
+                    "slug": "option_group_value_10",
+                    "option_group_id": 3,
+                    "created_at": "2022-02-13T17:44:37.000000Z",
+                    "updated_at": "2022-02-13T17:44:37.000000Z"
+                  },
+                  {
+                    "id": 11,
+                    "name": "Option Group Value 11",
+                    "slug": "option_group_value_11",
+                    "option_group_id": 3,
+                    "created_at": "2022-02-13T17:44:37.000000Z",
+                    "updated_at": "2022-02-13T17:44:37.000000Z"
+                  }
+                ]
+              },
+              "child_questions": []
+            }
+          ]
+        }
+      ]
+    },
+    "message": null
+  }
