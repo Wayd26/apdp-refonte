@@ -11,18 +11,19 @@ export default function DynamiqueForm() {
     const [current, setCurrent] = useState(0)
     const [formulaire, setFormulaire] = useState({})
 
-    const loadForm = async (id) => {
+    const loadForm = async () => {
         const resp = await getForm(window.location.pathname.split('/').pop())
         if(resp.response && resp.response.status !== 200){
             console.log(resp.response)
         } else {
             console.log(resp.data)
+            setFormulaire(resp.data)
         }
     }
 
     useEffect(() => {
         console.log(window.location.pathname.split('/').pop())
-
+        loadForm ();
         
     }, [])
 
@@ -50,20 +51,20 @@ export default function DynamiqueForm() {
             
                 <Stepper activeStep={current}>
                
-                    {form2.data.sections.map((section) => (
+                    {formulaire.sections.map((section) => (
                         <Step label={section.name} />    
                     ))}</Stepper>
                     {
-                        form2.data.sections[current].questions.map((field) => (
+                        formulaire.sections[current].questions.map((field) => (
                             <CustomInput key={field.id} field={field} updateValue={updateFormData}/>
                         ))
                        }
-                {current < form2.data.sections.length - 1 && (
+                {current < formulaire.sections.length - 1 && (
                 <Button type="primary" onClick={() => next()}>
                     Next
                 </Button>
                 )}
-                {current === form2.data.sections.length - 1 && (
+                {current === formulaire.sections.length - 1 && (
                 <Button type="primary" onClick={handleSubmit}>
                     Valider
                 </Button>
