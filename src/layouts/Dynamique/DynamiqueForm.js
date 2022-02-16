@@ -9,19 +9,21 @@ import {getForm} from '../../http/http'
 export default function DynamiqueForm() {
     const [formData, setFormData] = useState({})
     const [current, setCurrent] = useState(0)
-    const [formulaire, setFormulaire] = useState({})
+    const [formulaire, setFormulaire] = useState(null)
 
-    const loadForm = async (id) => {
+    const loadForm = async () => {
         const resp = await getForm(window.location.pathname.split('/').pop())
         if(resp.response && resp.response.status !== 200){
             console.log(resp.response)
         } else {
-            console.log(resp.data)
+            console.log(resp.data.data)
+            setFormulaire(resp.data)
         }
     }
 
     useEffect(() => {
         console.log(window.location.pathname.split('/').pop())
+        loadForm()
 
         
     }, [])
@@ -50,20 +52,19 @@ export default function DynamiqueForm() {
             
                 <Stepper activeStep={current}>
                
-                    {form2.data.sections.map((section) => (
+                    {formulaire && formulaire.data.sections.map((section) => (
                         <Step label={section.name} />    
                     ))}</Stepper>
-                    {
-                        form2.data.sections[current].questions.map((field) => (
+                    {formulaire && formulaire.data.sections[current].questions.map((field) => (
                             <CustomInput key={field.id} field={field} updateValue={updateFormData}/>
                         ))
                        }
-                {current < form2.data.sections.length - 1 && (
+                {formulaire && current < formulaire.data.sections.length - 1 && (
                 <Button type="primary" onClick={() => next()}>
                     Next
                 </Button>
                 )}
-                {current === form2.data.sections.length - 1 && (
+                {formulaire && current === formulaire.data.sections.length - 1 && (
                 <Button type="primary" onClick={handleSubmit}>
                     Valider
                 </Button>
