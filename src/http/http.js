@@ -6,7 +6,7 @@ const api = axios.create({
    baseURL: BASE_URL,
    // timeout: 1000,
    headers: {
-       'Access-Control-Allow-Origin': '*',
+       'Access-Control-Allow-Origin': 'http://phplaravel-268854-2244987.cloudwaysapps.com',
        'Content-Type': 'application/json'
 }
  });
