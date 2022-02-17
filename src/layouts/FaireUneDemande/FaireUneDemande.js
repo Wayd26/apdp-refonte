@@ -3,8 +3,12 @@ import FaireUneDemandeCard from "../../components/FaireUneDemandeCard/FaireUneDe
 import ActualiteCarousel from "../../components/ActualiteCarousel/ActualiteCarousel";
 import "./FaireUneDemande.css";
 import dots from "../../assets/icons/dots.svg";
+import {useNavigate} from "react-router-dom";
 
 const FaireUneDemande = () => {
+  
+  const navigate = useNavigate();
+
   return (
     <div
       style={{
@@ -30,6 +34,9 @@ const FaireUneDemande = () => {
             </div>
             <div className="col-sm-4 col-xs-12">
               <FaireUneDemandeCard
+              handleCardClicked = {() => {
+                navigate("/formulaire/1")
+              }}
                 title={"Faire une demande"}
                 description={
                   "Loolor sit amet, lorem ipsum coay ipsum consetetur sadipscing elitr, sed diam nonumy eirmod tempor"
