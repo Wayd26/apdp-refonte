@@ -65,18 +65,18 @@ export default function DynamiqueForm() {
                             <div className="col-6">
                             {current > 0 && (
                 <Button style={{ margin: '0 8px' }} onClick={(e) => prev(e)}>
-                    Previous
+                    Précédent
                 </Button>)}
                             </div>
                             <div className="col-6">
                             {formulaire && current < formulaire.data.sections.length - 1 && (
                 <Button type="primary" onClick={(e) => next(e)}>
-                    Next
+                    Suivant
                 </Button>
                 )}
                             </div>
                        </div>
-                       <div style={{width: "80%"}} className="row mx-auto">
+                       <div style={{width: "70%"}} className="row mx-auto mb-3">
 
                 {formulaire && current === formulaire.data.sections.length - 1 && (
                 <Button type="primary" onClick={handleSubmit}>
