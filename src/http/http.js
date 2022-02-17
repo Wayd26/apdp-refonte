@@ -1,5 +1,6 @@
 import axios from "axios";
-const BASE_URL = "http://phplaravel-268854-2244987.cloudwaysapps.com/api/v1";
+const BASE_URL = "https://laravel.web.sandbox.hard-soft.solutions/api/v1";
+// const BASE_URL = "http://phplaravel-268854-2244987.cloudwaysapps.com/api/v1";
 
 
 const api = axios.create({
