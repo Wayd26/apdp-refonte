@@ -185,6 +185,7 @@ const Footer = () => {
       </div>
         
       </div>
+        <p className="visitor-number-p">Nombre de visites : <span className="visitor-number-span">167</span></p>
       <div className="footer-copyright-wrapper">
           <p className="footer-copyright-text">
             <a className="footer-copyright-link text-white" href="#" target="_self"> © Copyright 2021, APDP. Tous droits réservés.</a>

@@ -114,6 +114,15 @@ body {
     padding: 5%;
 }
 
+.visitor-number-p {
+    background-color: #292828;
+    color: white;
+}
+.visitor-number-span {
+    color : #00bef0;
+    font: normal normal bold 28px/35px Montserrat;
+
+}
 
 .footer {
     /* background-color: var(--footerColor); */
