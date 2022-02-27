@@ -135,7 +135,7 @@ outline: none;
     margin-left: 20px;
 }
 
-.auth-form-btn {
+.auth-form-btn, .auth-form-btn:hover, .auth-form-btn:focus {
     background: #4385F6 ;
 border-radius: 34px;
 border-color: #4385F6;
