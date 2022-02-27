@@ -1,0 +1,17 @@
+
+
+.type-cell {
+    color: blue
+}
+
+.kksghE div:first-child {
+    white-space: normal !important;
+    text-align: start !important;
+    overflow:scroll !important;
+    text-overflow: ellipsis;
+    word-break:normal
+}
+
+.label-cell {
+    color: red;
+}

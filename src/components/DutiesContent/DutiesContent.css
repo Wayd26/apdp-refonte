@@ -1,0 +1,18 @@
+.duties-content {
+    padding: 5%;
+}
+
+.duties-content-title {
+    font: normal normal bold 32px/39px Montserrat;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+}
+
+.duties-content-subtitle {
+    text-align: center;
+font: normal normal normal 17px/28px Source Sans Pro;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+}

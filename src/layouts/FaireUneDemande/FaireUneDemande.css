@@ -1,0 +1,76 @@
+/* .faire-une-demande {
+  padding: 20px;
+  min-height: 800px;
+} */
+/* 
+.top-blue-band {
+  background: #4385f6 0% 0% no-repeat padding-box;
+  opacity: 1;
+  border-radius: 0px 100px 0px 100px;
+  height: 80px;
+  margin-right: 5%;
+  margin-left: 5%;
+} */
+
+/* .bottom-blue-band {
+  background: #4385f6 0% 0% no-repeat padding-box;
+  opacity: 1;
+  border-radius: 0px 0px 100px 100px;
+  height: 80px;
+  margin-right: 10%;
+  margin-left: 5%;
+} */
+
+#faire-une-demande .vos-demarches-text {
+    text-align: center;
+font: normal normal bold 34px/34px Montserrat;
+letter-spacing: 0px;
+color: #4385f6;
+opacity: 1;
+margin-bottom :30px;
+}
+.faire-une-demande-container {
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+margin-top: 30px;
+}
+
+.faire-une-demande-cards-container {
+
+}
+
+/* 
+.text-between-bands-row {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.text-between-bands-col {
+text-align: justify;
+font: normal normal normal 17px/28px Source Sans Pro;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+margin-top: 40px;
+}
+.faire-une-demande-dots {
+  width: 177px;
+  height: 104px;
+  opacity: 0.5;
+  margin-right: -600px;
+  margin-bottom: -300px;
+}
+
+ */
+
+@media only screen and (max-width: 1205px) {
+  .faire-une-demande-dots {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  
+}

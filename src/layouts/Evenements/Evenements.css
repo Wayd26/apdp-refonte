@@ -1,0 +1,103 @@
+#events {
+    background: #e7e7e7;
+}
+#events .events-title {
+    text-align: center;
+font: normal normal bold 38px/48px Montserrat;
+letter-spacing: 0px;
+color: #000000;
+text-shadow: 0px 3px 6px #0000001A;
+text-transform: uppercase;
+opacity: 1;
+padding-top: 50px;
+}
+
+#events .events-subtitle { 
+    text-align: center;
+font: normal normal normal 21px/29px Source Sans Pro;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+width: 70%;
+margin-left: auto;
+margin-right: auto;
+margin-top: 20px;
+margin-bottom: 50px;
+}
+
+#events .events-cards-container {
+    width: 65%;
+}
+#events .events-others-container {
+    width: 35%;
+}
+
+.popular-activities-title, .categories-title {
+    text-align: left;
+font: normal normal bold 15px/20px Montserrat;
+letter-spacing: 0px;
+color: #4385F6;
+text-transform: uppercase;
+opacity: 1;
+}
+
+.popular-activities-hr, .categories-hr {
+    color : #4385F6;
+    opacity: 1;
+}
+
+.popular-activities-img {
+    height: 104px;
+    width: 160px;
+}
+
+.popular-activities-desc {
+    text-align: left;
+    margin-left: 30px;
+font: normal normal normal 14px/20px Source Sans Pro;
+letter-spacing: 0px;
+color: #4D4F5C;
+opacity: 1;
+padding-right: 20px;
+padding-left: 20px;
+}
+
+.categories-items {
+    text-align: left;
+font: normal normal normal 15px/22px Source Sans Pro;
+letter-spacing: 0px;
+color: #4D4F5C;
+opacity: 1;
+margin-top: 10px;
+}
+
+@media only screen and (max-width: 768px) { 
+    #events .events-title {
+        font: normal normal bold 28px/38px Montserrat;
+    }
+    #events .events-subtitle {
+        font: normal normal normal 13px/23px Source Sans Pro;
+        width: 90%;
+        margin-bottom: 30px;
+    }
+    #events .events-others-container {
+        width: 100%;
+    }
+    #events .events-cards-container {
+        width: 100%;
+    }
+    .popular-activities-title, .categories-title {
+        padding-left: 20px;
+    }
+
+    .popular-activities-img {
+        height: 104px;
+        width: 130px;
+    }
+    .popular-activities-desc {
+        padding-left: 5px;
+    }
+    .categories-items {
+        padding-left: 20px;
+    }
+}

@@ -28,3 +28,16 @@ export function getRemoteData() {
             });
     };
 }
+export function getArticles(type) {
+    return function (dispatch) {
+        return axios.get('http://phplaravel-268854-2244987.cloudwaysapps.com/api/v1/articles?type='+type)
+            .then(json => {
+                dispatch({type: "SET", key: 'articles', payload: json.data});
+                //window.location = 'https://google.com';
+            }
+            )
+            .then(result => {
+
+            })
+    };
+}

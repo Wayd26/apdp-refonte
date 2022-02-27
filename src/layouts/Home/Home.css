@@ -1,6 +1,6 @@
 .Home {
   width: 100%;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 
 .user-type-div {
@@ -22,7 +22,7 @@
   letter-spacing: 0px;
   color: #ffffff;
   opacity: 1;
-  font: normal normal bold 20px/95px Manrope;
+  font: normal normal bold 20px/95px Montserrat;
 }
 
 .prestation-div {
@@ -39,7 +39,7 @@
 
 .prestation-div-text {
   text-align: left;
-  font: normal bold normal 23px/28px Manrope;
+  font: normal bold normal 23px/28px Montserrat;
   letter-spacing: 0px;
   color: #292929;
   opacity: 1;
@@ -52,7 +52,7 @@
   background: #4385f6 0% 0% no-repeat padding-box;
   border-radius: 12px;
   opacity: 1;
-  font: normal normal bold 16px/20px Manrope;
+  font: normal normal bold 16px/20px Montserrat;
   letter-spacing: 0px;
   color: #ffffff;
   width: 150px;
@@ -67,6 +67,7 @@
   height: 350px;
   /* width: 85%; */
   margin-top: -50px;
+  margin-bottom: -30px;
 }
 
 .rights-duties-section {
@@ -79,10 +80,11 @@
 
 .rights-duties-title {
   text-align: center;
-  font: normal normal bold 48px/64px Source Sans Pro;
+  font: normal normal bold 38px/64px Source Sans Pro;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
+  margin-bottom: 20px;
 }
 
 /* #illustration{
@@ -112,14 +114,15 @@
 .form-section-title {
   text-align: center;
   text-decoration: underline;
-  font: normal normal bold 18px/24px Manrope;
+  font: normal normal bold 18px/24px Montserrat;
   letter-spacing: 0px;
-  color: #ffbe00;
+  /* color: #ffbe00; */
+  color: #4385f6;
   opacity: 1;
 }
 .form-section-subtitle {
   text-align: center;
-  font: normal normal bold 48px/64px Lato;
+  font: normal normal bold 38px/64px Source Sans Pro;
   letter-spacing: 0px;
   color: #14395b;
   text-shadow: 0px 3px 6px #ffffff29;
@@ -162,7 +165,7 @@
   letter-spacing: 0px;
   color: #292929;
   opacity: 1;
-  font: normal normal bold 38px/44px Manrope;
+  font: normal normal bold 38px/44px Montserrat;
   margin-top: 7%;
   margin-bottom: auto;
 }
@@ -184,7 +187,7 @@
 }
 
 .speech-title {
-  font: normal normal bold 34px/60px Manrope;
+  font: normal normal bold 34px/60px Montserrat;
   letter-spacing: 0px;
   color: #14395b;
   text-shadow: 0px 3px 6px #ffffff29;
@@ -230,23 +233,77 @@
   height: 100%;
 }
 
-.guide-faq-title {
-  text-align: center;
-  font: normal normal bold 48px/57px Manrope;
-  letter-spacing: 0px;
-  color: #000000;
-  opacity: 1;
-}
-.guide-faq-subtitle {
-  text-align: center;
-  font: normal normal medium 34px/42px Source Sans Pro;
-  letter-spacing: 0px;
-  color: #000000;
-  opacity: 1;
-}
 
 .dots {
-  width: 247px;
-height: 114px;
-opacity: 0.5;
+  width: 177px;
+  height: 104px;
+  opacity: 0.5;
+}
+
+@media only screen and (max-width: 768px) {
+  .our-services-btn {
+    margin-bottom: 20px;
+  }
+
+  .our-services-illustration {
+    display: contents;
+  }
+  .services-illustration-img {
+    margin-top: -10px;
+  }
+}
+
+@media only screen and (max-width: 1205px) {
+  .dots {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1191px) {
+  .user-type-div {
+    background: none transparent;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 578px) {
+  .rights-duties-title {
+    font: normal normal bold 30px/24px Source Sans Pro;
+  }
+  .rights-duties-text {
+    font: normal normal normal 20px/25px Source Sans Pro;
+    margin-bottom: 15px;
+  }
+  .rights-duties-section {
+    margin-top: 20px;
+  }
+
+  .form-section-subtitle {
+    font: normal normal bold 38px/54px Source Sans Pro;
+  }
+
+  .guide-faq-title {
+    font: normal normal bold 38px/47px Montserrat;
+  }
+  .guide-faq-subtitle {
+    font: normal normal normal 14px/22px Source Sans Pro;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel-caption {
+    top: 5px;
+  }
+  .card-on-caroussel {
+    width: 90% !important;
+    height: 100% !important;
+    margin-top: 0px;
+  }
+  .card-on-caroussel-title {
+    font: normal normal bold 16px/22px Montserrat;
+
+    margin-top: 5px;
+  }
+  .card-on-caroussel-description {
+    font: normal normal normal 18px/29px Source Sans Pro;
+  }
 }

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="979" height="387" viewBox="0 0 979 387">
+  <defs>
+    <filter id="surface" x="165" y="0" width="355" height="387" filterUnits="userSpaceOnUse">
+      <feOffset dx="8" dy="8" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feFlood flood-color="#090e14" flood-opacity="0.4"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="surface-2" x="474" y="0" width="355" height="387" filterUnits="userSpaceOnUse">
+      <feOffset dx="8" dy="8" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-2"/>
+      <feFlood flood-color="#090e14" flood-opacity="0.4"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Groupe_39783" data-name="Groupe 39783" transform="translate(-724 -1463)">
+    <path id="Rectangle_30" data-name="Rectangle 30" d="M0,0H979a0,0,0,0,1,0,0V6A122,122,0,0,1,857,128H128A128,128,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(724 1584)" fill="#4385f6"/>
+    <g id="feature_03" transform="translate(917.08 1490.605)">
+      <g transform="matrix(1, 0, 0, 1, -193.08, -27.61)" filter="url(#surface)">
+        <path id="surface-3" data-name="surface" d="M12,0H271a12,12,0,0,1,12,12V303a12,12,0,0,1-12,12H12A12,12,0,0,1,0,303V12A12,12,0,0,1,12,0Z" transform="translate(193 28)" fill="#fff"/>
+      </g>
+      <g id="text" transform="translate(26.652 162.139)">
+        <text id="body" transform="translate(0.267 40.255)" fill="#273b60" font-size="14" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="14">Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="38">consetetur sadipscing elitr, sed </tspan></text>
+        <text id="headline" transform="translate(0.267 -30.745)" fill="#273b60" font-size="20" font-family="Montserrat-SemiBold, Montserrat" font-weight="600" letter-spacing="-0.02em"><tspan x="0" y="19">Commander un</tspan><tspan x="0" y="47">macaron</tspan></text>
+      </g>
+      <g id="Groupe_39787" data-name="Groupe 39787" transform="translate(-917.08 -1150.605)">
+        <path id="Icon_awesome-link" data-name="Icon awesome-link" d="M22.965,13.035a10.682,10.682,0,0,1,.025,15.088l-.025.026L18.24,32.875A10.687,10.687,0,0,1,3.126,17.76l2.609-2.609a1.124,1.124,0,0,1,1.919.746A12.956,12.956,0,0,0,8.335,19.6a1.132,1.132,0,0,1-.266,1.168l-.92.92a5.063,5.063,0,1,0,7.114,7.2l4.725-4.724a5.061,5.061,0,0,0,0-7.16,5.267,5.267,0,0,0-.727-.6,1.128,1.128,0,0,1-.488-.886,2.8,2.8,0,0,1,.823-2.1l1.48-1.48a1.13,1.13,0,0,1,1.447-.122,10.721,10.721,0,0,1,1.443,1.209Zm9.909-9.91a10.7,10.7,0,0,0-15.114,0L13.035,7.85l-.025.026a10.69,10.69,0,0,0,1.468,16.3,1.13,1.13,0,0,0,1.447-.122l1.48-1.48a2.8,2.8,0,0,0,.823-2.1,1.128,1.128,0,0,0-.488-.886,5.267,5.267,0,0,1-.727-.6,5.061,5.061,0,0,1,0-7.16L21.738,7.1a5.063,5.063,0,1,1,7.114,7.2l-.92.92a1.132,1.132,0,0,0-.266,1.168,12.956,12.956,0,0,1,.681,3.707,1.124,1.124,0,0,0,1.919.746l2.609-2.609a10.7,10.7,0,0,0,0-15.114Z" transform="translate(973 1200.5)" fill="#4385f6"/>
+        <g id="badge" transform="translate(937.732 1165.259)">
+          <rect id="surface-4" data-name="surface" width="106" height="107" rx="48" transform="translate(0.268 -0.259)" fill="rgba(69,121,245,0.03)"/>
+          <g id="icon" transform="translate(0)">
+            <rect id="frame" width="106" height="107" transform="translate(0.268 -0.259)" fill="none"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="feature_01" transform="translate(1225.811 1490.605)">
+      <g transform="matrix(1, 0, 0, 1, -501.81, -27.61)" filter="url(#surface-2)">
+        <rect id="surface-5" data-name="surface" width="283" height="315" rx="12" transform="translate(502 28)" fill="#fff"/>
+      </g>
+      <g id="text-2" data-name="text" transform="translate(25.543 162.139)">
+        <text id="body-2" data-name="body" transform="translate(-0.353 33.255)" fill="#273b60" font-size="14" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="14">Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="38">consetetur sadipscing elitr, sed </tspan></text>
+        <text id="headline-2" data-name="headline" transform="translate(-0.353 -33.745)" fill="#273b60" font-size="20" font-family="Montserrat-SemiBold, Montserrat" font-weight="600" letter-spacing="-0.02em"><tspan x="0" y="19">Déposer une</tspan><tspan x="0" y="47">plainte</tspan></text>
+      </g>
+      <g id="badge-2" data-name="badge" transform="translate(26.653 26.653)">
+        <g id="icon-2" data-name="icon" transform="translate(0)">
+          <rect id="frame-2" data-name="frame" width="107" height="107" transform="translate(-0.465 -0.259)" fill="none"/>
+        </g>
+      </g>
+      <g id="Groupe_39788" data-name="Groupe 39788" transform="translate(-917.811 -1152.605)">
+        <path id="Icon_awesome-link-2" data-name="Icon awesome-link" d="M22.965,13.035a10.682,10.682,0,0,1,.025,15.088l-.025.026L18.24,32.875A10.687,10.687,0,0,1,3.126,17.76l2.609-2.609a1.124,1.124,0,0,1,1.919.746A12.956,12.956,0,0,0,8.335,19.6a1.132,1.132,0,0,1-.266,1.168l-.92.92a5.063,5.063,0,1,0,7.114,7.2l4.725-4.724a5.061,5.061,0,0,0,0-7.16,5.267,5.267,0,0,0-.727-.6,1.128,1.128,0,0,1-.488-.886,2.8,2.8,0,0,1,.823-2.1l1.48-1.48a1.13,1.13,0,0,1,1.447-.122,10.721,10.721,0,0,1,1.443,1.209Zm9.909-9.91a10.7,10.7,0,0,0-15.114,0L13.035,7.85l-.025.026a10.69,10.69,0,0,0,1.468,16.3,1.13,1.13,0,0,0,1.447-.122l1.48-1.48a2.8,2.8,0,0,0,.823-2.1,1.128,1.128,0,0,0-.488-.886,5.267,5.267,0,0,1-.727-.6,5.061,5.061,0,0,1,0-7.16L21.738,7.1a5.063,5.063,0,1,1,7.114,7.2l-.92.92a1.132,1.132,0,0,0-.266,1.168,12.956,12.956,0,0,1,.681,3.707,1.124,1.124,0,0,0,1.919.746l2.609-2.609a10.7,10.7,0,0,0,0-15.114Z" transform="translate(973 1200.5)" fill="#4385f6"/>
+        <g id="badge-3" data-name="badge" transform="translate(937.732 1165.259)">
+          <rect id="surface-6" data-name="surface" width="106" height="107" rx="48" transform="translate(0.268 -0.259)" fill="rgba(69,121,245,0.03)"/>
+          <g id="icon-3" data-name="icon" transform="translate(0)">
+            <rect id="frame-3" data-name="frame" width="106" height="107" transform="translate(0.268 -0.259)" fill="none"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

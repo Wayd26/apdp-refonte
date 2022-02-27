@@ -3,15 +3,12 @@
   border: 1px solid #186aa5;
   border-radius: 32px;
   opacity: 1;
-  width: 70%;
+  width: 80%;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 30px;
   padding-bottom: 30px;
   margin-bottom: 30px;
-  /* transition-delay: 1000ms;
-  transition-property: border-radius, border;
-  transition-timing-function: ease-out; */
 }
 
 .faq-div-not-selected {
@@ -20,13 +17,12 @@
   border: 1px solid #e8e8e8;
   border-radius: 10px;
   opacity: 1;
-  height: 94px;
-  width: 70%;
-  padding-left: 50px;
+  width: 80%;
+  padding-left: 15px;
   padding-right: 50px;
-  padding-top: 35px;
-  padding-bottom: 25px;
-  margin-bottom: 30px
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
 }
 
 .faq-label {
@@ -35,11 +31,14 @@
   letter-spacing: 0px;
   color: #4385f6;
   opacity: 0.79;
+  margin: auto;
+  height: 70%;
+  /* margin-bottom: 15px !important; */
 }
 
 .faq-description {
   text-align: left;
-  font: normal normal normal 16px/19px Montserrat;
+  font: normal normal normal 16px/19px Source Sans Pro;
   letter-spacing: 0px;
   color: #8d9598;
   opacity: 1;
@@ -49,12 +48,11 @@
 .display-more-icon {
   width: 57px;
   height: 57px;
-  /* color: red; */
   color: #8d9598;
   opacity: 1;
   cursor: pointer;
-  margin-left: 60px;
   padding-bottom: 25px;
+  margin-top: 20px;
 }
 .display-less-icon {
   width: 57px;
@@ -62,5 +60,20 @@
   color: #14395b;
   opacity: 1;
   cursor: pointer;
-  margin-left: 60px;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 478px) {
+  .faq-label {
+    font: normal normal bold 12px/14px Montserrat;
+  }
+  .display-more-icon {
+    height: 47px;
+    width: 47px;
+  }
+
+  .display-less-icon {
+    width: 37px;
+    height: 37px;
+  }
 }

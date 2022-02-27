@@ -1,0 +1,116 @@
+.faq-container {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 7px;
+  opacity: 1;
+  width: 70%;
+  /* height: 300px; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding-bottom: 70px;
+}
+
+.faq-image {
+  width: 30vw;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.faq-title {
+  text-align: center;
+  font: normal normal bold 28px/38px Montserrat;
+  letter-spacing: 0px;
+  color: #000000;
+  text-shadow: 0px 3px 6px #0000001a;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.faq-select-category {
+  text-align: center;
+  font: normal normal normal 20px/25px Source Sans Pro;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  margin-top: 30px;
+}
+
+.faq-allfaq-img {
+    width: 73px;
+height: 73px;
+}
+
+.faq-allfaq {
+    text-align: center;
+    font: normal normal bold 24px/32px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    text-shadow: 0px 3px 6px #0000001A;
+    text-transform: uppercase;
+    opacity: 1;
+    margin-top: 20px;
+}
+
+.faq-see-allfaq {
+    text-align: center;
+font: normal normal bold 14px/19px Source Sans Pro;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+margin-bottom: 30px;
+}
+
+.faq-input-icon {
+    width: 15%;
+height: 18px;
+background: #EAEAEA 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+.faq-input, .faq-input:active, .faq-input:focus, .faq-input:focus-within,.faq-input:hover, .faq-input:visited {
+    width: 80%;
+    font: normal normal normal 16px/19px Montserrat !important;
+letter-spacing: 0px;
+color: #303030 !important;
+opacity: 1;
+height: 100%;
+border: #EAEAEA !important;
+background: #EAEAEA !important;
+}
+
+.faq-input-container {
+    margin-top: 25px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+height: 30px;
+background: #EAEAEA 0% 0% no-repeat padding-box;
+border-radius: 22px;
+opacity: 1;
+}
+
+@media only screen and (max-width: 768px) { 
+  .faq-title {
+    font: normal normal bold 15px/28px Montserrat;
+  }
+  .faq-select-category {
+    font: normal normal normal 12px/15px Source Sans Pro;
+  }
+  .faq-input-container {
+    width: 90%;
+  }
+  .faq-input, .faq-input:active, .faq-input:focus, .faq-input:focus-within, .faq-input:hover, .faq-input:visited {
+    width: 75%;
+  }
+  .faq-allfaq-img {
+    width: 53px;
+    height: 53px;
+}
+.faq-allfaq {
+  font: normal normal bold 14px/22px Montserrat;
+}
+.faq-see-allfaq {
+  font: normal normal bold 12px/15px Source Sans Pro;
+}
+}

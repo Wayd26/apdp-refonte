@@ -1,0 +1,67 @@
+.texte-communautaire-card {
+    /* width: 520px; */
+    width: 100%;
+    height: 377px;
+    background: #EAEAEA 0% 0% no-repeat padding-box;
+    box-shadow: 0px 8px 27px #727C8E40;
+    border-radius: 10px;
+    opacity: 1;
+    margin-bottom: 30px;
+    padding-top: 25px;
+}
+
+.texte-communiautaire-card-title {
+    text-align: center;
+    font: normal normal bold 20px/26px Montserrat;
+    letter-spacing: 0px;
+    color: #2E2E2E;
+    opacity: 1;
+    margin-bottom: 20px;
+    height: 80px;
+    overflow-y: auto;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.texte-communiautaire-card-description {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 112px;
+    text-align: center;
+    font: normal normal normal 19px/23px Source Sans Pro;
+    letter-spacing: 0px;
+    color: #2E2E2E;
+    opacity: 1;
+    height: 182px;
+    overflow-y: auto;
+}
+
+.texte-communiautaire-card-button {
+    width: 197px;
+    height: 39px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 8px 15px #727C8E5C;
+    border-radius: 24px;
+    opacity: 1;
+    font: normal normal bold 13px/16px Montserrat;
+    letter-spacing: 0px;
+    color: #727C8E;
+    border: none;
+}
+
+.texte-communiautaire-card-button:hover {
+    transform: scale(1.1);
+}
+
+.texte-communiautaire-card-button-icon {
+    width: 31px;
+    height: 30px;
+    /* background: #FFBE00 0% 0% no-repeat padding-box; */
+    background: #FFFFFF;
+    border-radius: 24px;
+    opacity: 1;
+    color: #FFBE00;
+    margin-left: 15px;
+}

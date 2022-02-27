@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+.page-title {
+    text-align: center;
+    font: normal normal bold 38px/57px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    padding: 150px 0px 50px 0px;
+}
+
+.inheritance-plan-separator {
+    color: #FFBE00;
+    opacity: 1;
+    border: 2px solid #FFBE00;
+    width: 10%;
+}
+
+.inheritance-plan-card {
+    box-shadow: 5px 10px #888888;
+    margin: 10px;
+    width: 250px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.inheritance-plan-page-section {
+    margin: 0px;
+    position: relative;
+    top: -50px;
+    right: -150px;
+    float: left;
+}
+
+.inheritance-plan-card-list {
+    padding-left: 100px;
+    padding-right: 70px;
+    display: flex;
+    justify-content: center !important;
+    width: 100%;
+}
+
+.inheritance-plan-card.card {
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 1) !important;
+    margin-top: 90px !important;
+}
+
+.rounded-circle {
+    width: 37px;
+    height: 37px;
+    position: relative;
+    top: -35px;
+    right: -10px;
+}
+
+
+.page-subtitle {
+    text-align: center;
+    /* font: normal normal normal 21px/21px Arial; */
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    margin-bottom: 150px;
+    padding: 7px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+
+    .inheritance-plan-card-for-presentation {
+        display: flex;
+        height: 300px;
+        margin: 10px;
+        background: #E8EBF4 0% 0% no-repeat padding-box !important;
+        opacity: 1 !important;
+    }
+
+    .inheritance-plan-card-for-presentation-2 {
+        display: flex;
+        height: 300px;
+        margin: 10px;
+        background: #E8EBF4 0% 0% no-repeat padding-box !important;
+        opacity: 1 !important;
+    }
+
+    .inheritance-plan-card-for-presentation-img {
+        background-image: url('../../assets/images/img8.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 500px;
+        height: 300px;
+    }
+
+    .inheritance-plan-card-for-presentation-img-2 {
+        background-image: url('../../assets/images/img7.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 500px;
+        height: 300px;
+    }
+
+
+    .page-title {
+      font: normal normal bold 28px/40px Montserrat;
+      padding: 50px 0px 20px 0px;
+    }
+
+    .page-subtitle {
+        text-align: justify;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 1;
+        font: normal normal normal 14px/22px Arial;
+    }
+
+    .inheritance-plan-separator {
+        color: #FFBE00;
+        opacity: 1;
+        border: 2px solid #FFBE00;
+        width: 10%;
+    }
+    
+    .inheritance-plan-card {
+        box-shadow: 5px 10px #888888;
+        margin: 10px;
+        width: 250px;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+    }
+    
+    .inheritance-plan-page-section {
+        margin: 0px;
+        position: relative;
+        top: -50px;
+        right: -150px;
+        float: left;
+    }
+    
+    .inheritance-plan-card-list.row {
+        padding-left: 100px;
+        padding-right: 70px;
+        display: flex;
+        justify-content: left;
+        width: 100%;
+    }
+    
+    .inheritance-plan-card.card {
+        align-items: center;
+        width: 40%;
+        padding: 0px;
+        background-color: #EAEAEA !important;
+        margin-bottom: 90px !important;
+    }
+    
+    .inheritance-plan-card-img.rounded-circle {
+        /* background-image: url('../../assets/icons/pdf.png');
+        background-repeat: no-repeat;
+        background-size: cover; */
+        background-color: white;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        top: 0px;
+        margin-bottom: 20px !important;
+        margin: auto;
+        border-radius: 15px 15px 0px 0px;
+        -webkit-border-radius: 15px 15px 0px 0px;
+        -moz-border-radius: 15px 15px 0px 0px;
+        -ms-border-radius: 15px 15px 0px 0px;
+        -o-border-radius: 15px 15px 0px 0px;
+    }
+
+    .rounded-circle {
+        width: 37px;
+        height: 37px;
+        position: relative;
+        top: -35px;
+        right: -10px;
+    }
+
+  }
+
+@media only screen and (min-width: 1440px) and (max-width: 2560px) {
+
+    .page-title {
+        font: normal normal bold 28px/40px Montserrat;
+        padding: 50px 0px 20px 0px;
+    }
+
+    .page-subtitle {
+        text-align: justify;
+        letter-spacing: 0px;
+        color: #000000;
+        font: normal normal normal 14px/22px Arial;
+        opacity: 1;
+    }
+
+    .inheritance-plan-card-list {
+        padding-left: 15%;
+        padding-right: 70px;
+        display: flex;
+        justify-content: left;
+        width: 100%;
+    }
+
+    .inheritance-plan-page-section {
+        margin-left: 5%;
+    }
+
+}
+
+@media only screen and (min-width: 2560px) {
+
+    .page-title {
+        font: normal normal bold 28px/40px Montserrat;
+        padding: 50px 0px 20px 0px;
+    }
+
+    .page-subtitle {
+        text-align: justify;
+        letter-spacing: 0px;
+        color: #000000;
+        font: normal normal normal 14px/22px Arial;
+        opacity: 1;
+    }
+
+    .inheritance-plan-card-list {
+        padding-left: 15%;
+        padding-right: 70px;
+        display: flex;
+        justify-content: left;
+        width: 100%;
+    }
+
+    .inheritance-plan-page-section {
+        margin-left: 9%;
+    }
+
+    .inheritance-plan-card-for-presentation-img {
+        background-image: url('../../assets/images/img8.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 1000px;
+        height: 500px;
+    }
+
+    .inheritance-plan-card-for-presentation-img-2 {
+        background-image: url('../../assets/images/img7.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 1000px;
+        height: 500px;
+    }
+
+}
+
+@media only screen and (max-width: 810px) {
+
+    .inheritance-plan-card-for-presentation {
+        display: none;
+    }
+
+    .inheritance-plan-card-for-presentation-2 {
+        display: none;
+    }
+
+    .inheritance-plan-card-for-presentation-mobile {
+        display: block;
+        margin: 10px;
+        background: #E8EBF4 0% 0% no-repeat padding-box;
+        opacity: 1;
+    }
+
+    .inheritance-plan-card-for-presentation-mobile-2 {
+        display: block;
+        margin: 10px;
+        background: #E8EBF4 0% 0% no-repeat padding-box;
+        opacity: 1;
+    }
+
+    .inheritance-plan-card-for-presentation-img {
+        background-image: url('../../assets/images/img8.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: auto;
+        height: 200px;
+    }
+
+    .inheritance-plan-card-for-presentation-img-2 {
+        background-image: url('../../assets/images/img7.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: auto;
+        height: 200px;
+    }
+
+    .page-title {
+      font: normal normal bold 28px/40px Montserrat;
+      padding: 50px 0px 20px 0px;
+    }
+
+    .page-subtitle {
+        text-align: justify;
+        letter-spacing: 0px;
+        color: #000000;
+        font: normal normal normal 14px/22px Arial;
+        opacity: 1;
+    }
+
+
+    .inheritance-plan-page-section {
+        margin-left: 0%;
+    }
+
+    .inheritance-plan-card-list {
+        padding-left: 20%;
+        display: flex;
+        justify-content: left;
+        width: 100%;
+    }
+
+}
+
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+
+    .page-title {
+      font: normal normal bold 28px/40px Montserrat;
+      padding: 50px 0px 20px 0px;
+    }
+
+    .page-subtitle {
+        text-align: justify;
+        letter-spacing: 0px;
+        color: #000000;
+        font: normal normal normal 14px/22px Arial;
+        opacity: 1;
+    }
+
+    .inheritance-plan-card {
+        min-width: 250px;
+    }
+
+
+    .inheritance-plan-page-section {
+        margin-left: 0%;
+    }
+
+    .inheritance-plan-card-list {
+        padding-left: 20%;
+        display: flex;
+        justify-content: left;
+        width: 100%;
+    }
+
+}
+
+
+@media only screen and (max-width: 370px) {
+
+    .page-title {
+      font: normal normal bold 28px/40px Montserrat;
+      padding: 50px 0px 20px 0px;
+    }
+
+    .page-subtitle {
+        text-align: justify;
+        letter-spacing: 0px;
+        color: #000000;
+        font: normal normal normal 14px/22px Arial;
+        opacity: 1;
+    }
+
+    .inheritance-plan-card {
+        min-width: 250px;
+    }
+
+
+    .inheritance-plan-page-section {
+        margin-left: -35%;
+        font-size: 32px;
+    }
+
+    .inheritance-plan-card-list {
+        padding-left: 12%;
+        display: flex;
+        justify-content: left;
+        width: 100%;
+    }
+
+}
