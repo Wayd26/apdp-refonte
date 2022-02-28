@@ -8,8 +8,26 @@ import {Carousel, Card, Button, ButtonGroup, Accordion} from "react-bootstrap";
 import { RiCalendar2Line, RiQuestionAnswerFill, RiEyeFill, RiArrowRightCircleFill } from "react-icons/ri";
 import CardOnCaroussel from '../../components/CardOnCaroussel/CardOnCaroussel';
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
+import {getATypeOfArticles} from '../../http/http';
+
 
 const PaysMembres = () => {
+
+    const [communiques, setCommuniques] = useState();
+
+    const loadCommuniquesData = async () => {
+        const resp = await getATypeOfArticles("communiques")
+        if(resp.response && resp.response.status !== 200){
+            console.log("error ",resp.response)
+        } else {
+            console.log("data ",resp.data.data)
+            setCommuniques(resp.data)
+        }
+    }
+    
+    useEffect(() => {
+        loadCommuniquesData()        
+    }, [])
 
     return (
         <div className={"countries"} id={"countries"}>

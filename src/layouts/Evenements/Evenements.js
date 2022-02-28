@@ -7,10 +7,27 @@ import FaqSection from '../../components/FaqSection/FaqSection';
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
 import {useNavigate} from "react-router-dom";
 import ReactPaginate from "react-paginate";
+import {getATypeOfArticles} from '../../http/http';
 
 
 
 const Evenements = () => {
+
+    const [communiques, setCommuniques] = useState();
+
+    const loadCommuniquesData = async () => {
+        const resp = await getATypeOfArticles("communiques")
+        if(resp.response && resp.response.status !== 200){
+            console.log("error ",resp.response)
+        } else {
+            console.log("data ",resp.data.data)
+            setCommuniques(resp.data)
+        }
+    }
+    
+    useEffect(() => {
+        loadCommuniquesData()        
+    }, [])
 
     const navigate = useNavigate();
 

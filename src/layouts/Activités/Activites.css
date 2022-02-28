@@ -50,7 +50,7 @@
 }
 
 .activities-card-img {
-    background-image: url('../../assets/images/img7.jpg');
+    /* background-image: url('../../assets/images/img7.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
     width: auto;
@@ -271,7 +271,7 @@
     }
     
     .activities-card-img {
-        background-image: url('../../assets/images/img7.jpg');
+        /* background-image: url('../../assets/images/img7.jpg'); */
         background-repeat: no-repeat;
         background-size: cover;
         width: auto;

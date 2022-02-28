@@ -18,6 +18,13 @@ export function getForm(id){
     return response.then(data => data).catch( error => error)
 }
 
-export function getAllBreackNews() {
-   return;
+export function getAllArticles() {
+
+  const response = api.get(`/articles`);
+    return response.then(data => data).catch( error => error)
+   }
+   
+   export function getATypeOfArticles(type) {
+      const response = api.get(`/articles?slug=` + `${type}`)
+      return response.then(data => data).catch( error => error)
 }

@@ -86,7 +86,7 @@ const Content = () => {
           <Route path="/lois/loi-1" element={<LaLoi />} />
           <Route path="/vos-demarches" element={<Auth />} />
           <Route path="/communique/details-1" element={<DetailsCommunique />} />
-          <Route path="/activite/details-1" element={<DetailsActivite />} />
+          <Route path="/activite/:activity_id" element={<DetailsActivite />} />
           <Route path="/commissaire" element={<Commissaire />} />
           <Route path="/president" element={<President />} />
           <Route path="/membres" element={<Membres />} />

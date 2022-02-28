@@ -7,8 +7,25 @@ import FaqSection from '../../components/FaqSection/FaqSection';
 import {Carousel, Card, Figure, Button, ButtonGroup, Accordion} from "react-bootstrap";
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
 import BesoinAide from '../../components/BesoinAide/BesoinAide';
+import { getATypeOfArticles } from '../../http/http';
 
 const Communiques = () => {
+
+    const [communiques, setCommuniques] = useState();
+
+    const loadCommuniquesData = async () => {
+        const resp = await getATypeOfArticles("communiques")
+        if(resp.response && resp.response.status !== 200){
+            console.log("error ",resp.response)
+        } else {
+            console.log("data ",resp.data.data)
+            setCommuniques(resp.data)
+        }
+    }
+    
+    useEffect(() => {
+        loadCommuniquesData()        
+    }, [])
 
     return (
         <div className={"releases"} id={"releases"}>

@@ -1,8 +1,25 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import EspaceRtCard from '../../components/EspaceRtCard/EspaceRtCard';
 import "./EspaceRT.css";
+import {getATypeOfArticles} from '../../http/http';
+
 
 const EspaceRT = () => {
+    const [communiques, setCommuniques] = useState();
+
+    const loadCommuniquesData = async () => {
+        const resp = await getATypeOfArticles("communiques")
+        if(resp.response && resp.response.status !== 200){
+            console.log("error ",resp.response)
+        } else {
+            console.log("data ",resp.data.data)
+            setCommuniques(resp.data)
+        }
+    }
+    
+    useEffect(() => {
+        loadCommuniquesData()        
+    }, [])
     const espaceRtData = [
         {id: 0,
         label: "GROUPE CIC"},

@@ -1,15 +1,43 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react';
 import "./DetailsActivite.css";
 import img5 from "../../assets/images/img5.jpg";
 import BesoinAide from '../../components/BesoinAide/BesoinAide';
 import FaqSection from '../../components/FaqSection/FaqSection';
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
-import {BiCalendarCheck} from "react-icons/bi"
-import imgCard5 from "../../assets/images/img5.jpg"
-import imgCard6 from "../../assets/images/img6.jpg"
+import {BiCalendarCheck} from "react-icons/bi";
+import imgCard5 from "../../assets/images/img5.jpg";
+import imgCard6 from "../../assets/images/img6.jpg";
+import {useParams} from "react-router-dom";
+import {getATypeOfArticles} from '../../http/http';
+
 
 
 const DetailsActivite = () => {
+
+    let { activity_id } = useParams();
+    const [activityData, setActivityData] = useState();
+
+    useEffect(() => {
+        loadActivitiyData();
+    }, [activity_id])
+
+     const loadActivitiyData = async () => {
+        const resp = await getATypeOfArticles("activites")
+        if(resp.response && resp.response.status !== 200){
+            // console.log("data error ", resp.response)
+        } else {
+            console.log("data data ", resp.data.data)
+            let element = resp.data.data.filter(elt => {
+                if(elt.id == activity_id) {
+                return elt
+            } else {
+                return false
+            } 
+        })
+            setActivityData(element)
+        }
+    }
+
     return (
         <div id="details-activities" className="details-activities">
         {/* <ActualiteCarousel /> */}
@@ -22,10 +50,10 @@ const DetailsActivite = () => {
         <div className="details-activities-cards-container">
            {/* Start Details activity card */}
            <div id="activity-card" className="activity-card">
-            <img src={imgCard5} className="activity-card-img"/>
-            <p className="activity-card-title">Lorem ipsum dolor sit amet</p>
-            <p className="activity-card-date"><BiCalendarCheck /> 15/07/2021 </p>
-            <p className="details-activity-card-subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam eor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea</p>
+            <img src={activityData && activityData[0]?.image} className="activity-card-img"/>
+            <p className="activity-card-title">{activityData && activityData[0]?.title}</p>
+            <p className="activity-card-date"><BiCalendarCheck /> {activityData && activityData[0]?.created_at.slice(8,10)} / {activityData && activityData[0]?.created_at.slice(5,7)} / {activityData && activityData[0]?.created_at.slice(0,4)} </p>
+            <p className="details-activity-card-subtitle">{activityData && activityData[0]?.content}</p>
             
         </div>
            {/* End Details activity card */}

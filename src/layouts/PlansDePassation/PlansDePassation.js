@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import "./PlansDePassation.css";
 import pdf from '../../assets/images/pdf.png'
 import doc from '../../assets/documents/CODE_DU_NUMERIQUE_DU_BENIN_EDITION 2019_ADN.pdf';
@@ -7,8 +7,25 @@ import { RiQuestionAnswerFill, RiEyeFill, RiArrowRightCircleFill } from "react-i
 import {FaRegFilePdf, FaRegFileExcel} from "react-icons/fa";
 import CardOnCaroussel from '../../components/CardOnCaroussel/CardOnCaroussel';
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
+import {getATypeOfArticles} from '../../http/http';
+
 
 const PlansDePassation = () => {
+    const [communiques, setCommuniques] = useState();
+
+    const loadCommuniquesData = async () => {
+        const resp = await getATypeOfArticles("communiques")
+        if(resp.response && resp.response.status !== 200){
+            console.log("error ",resp.response)
+        } else {
+            console.log("data ",resp.data.data)
+            setCommuniques(resp.data)
+        }
+    }
+    
+    useEffect(() => {
+        loadCommuniquesData()        
+    }, [])
 
     return (
         <div className={"inheritance-plan"} id={"inheritance-plan"}>

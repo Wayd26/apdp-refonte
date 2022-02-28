@@ -4,10 +4,26 @@ import "./VosDroits.css";
 import {Tabs, Tab} from "react-bootstrap";
 import RightsContent from '../../components/RightsContent/RightsContent';
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
+import { getATypeOfArticles } from '../../http/http';
 
 const VosDroits = () => {
 
     const [key, setKey] = useState('particulier');
+    const [communiques, setCommuniques] = useState();
+
+    const loadCommuniquesData = async () => {
+        const resp = await getATypeOfArticles("communiques")
+        if(resp.response && resp.response.status !== 200){
+            console.log("error ",resp.response)
+        } else {
+            console.log("data ",resp.data.data)
+            setCommuniques(resp.data)
+        }
+    }
+    
+    useEffect(() => {
+        loadCommuniquesData()        
+    }, [])
 
 
     return (
