@@ -12,6 +12,7 @@ export default function CustomInput({field,updateValue}) {
                 <FormGroup check>
                     <Input type="checkbox" 
                         onClick={(e) => updateValue(field.title,e.target.checked)}
+                        className="form-control"
                         />
                     {' '}
                     <Label className="label-style" check>
@@ -31,6 +32,7 @@ export default function CustomInput({field,updateValue}) {
                             {field.name}
                         </Label>
                         <Input
+                        className="form-control"
                         id={field.title}
                         name={field.title}
                         type="select"
@@ -45,10 +47,10 @@ export default function CustomInput({field,updateValue}) {
     } else {
         return (
             <>
-                <FormGroup>
+                <FormGroup className="d-flex flex-column justify-content-center align-items-center">
                 <Label for={field.title}>{field.name}</Label>
                 <Input 
-                    className="form-input"
+                    className="form-control"
                     type={field.input_type.name} 
                     name={field.title} 
                     id={field.title}

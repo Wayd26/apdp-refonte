@@ -57,20 +57,24 @@ export default function DynamiqueForm() {
                     {formulaire && formulaire.data.sections.map((section) => (
                         <Step label={section.name} />    
                     ))}</Stepper>
+                    <div className="row">
                     {formulaire && formulaire.data.sections[current].questions.map((field) => (
+                        <div className="col-sm-3 ">
                             <CustomInput key={field.id} field={field} updateValue={updateFormData}/>
+                        </div>
                         ))
                        }
+                       </div>
                        <div className="row mb-3">
                             <div className="col-6">
                             {current > 0 && (
-                <Button style={{ margin: '0 8px' }} onClick={(e) => prev(e)}>
+                <Button className="auth-form-btn" style={{ margin: '0 8px' }} onClick={(e) => prev(e)}>
                     Précédent
                 </Button>)}
                             </div>
                             <div className="col-6">
                             {formulaire && current < formulaire.data.sections.length - 1 && (
-                <Button type="primary" onClick={(e) => next(e)}>
+                <Button className="auth-form-btn" type="primary" onClick={(e) => next(e)}>
                     Suivant
                 </Button>
                 )}
@@ -79,7 +83,7 @@ export default function DynamiqueForm() {
                        <div style={{width: "70%"}} className="row mx-auto mb-3">
 
                 {formulaire && current === formulaire.data.sections.length - 1 && (
-                <Button type="primary" onClick={handleSubmit}>
+                <Button className="auth-form-btn" type="primary" onClick={handleSubmit}>
                     Valider
                 </Button>
                 )}
