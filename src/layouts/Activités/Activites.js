@@ -10,7 +10,7 @@ import CardOnCaroussel from '../../components/CardOnCaroussel/CardOnCaroussel';
 import {useDispatch, useSelector, shallowEqual} from "react-redux";
 import {getATypeOfArticles} from '../../http/http';
 import {useNavigate} from "react-router-dom";
-
+ 
 
 
 const Activites = () => {
@@ -39,7 +39,7 @@ const Activites = () => {
     
     useEffect(() => {
         loadActivitiesData() ;
-        console.log("Activities data ", activities)       
+        // console.log("Activities data ", activities)       
     }, [])
     
     return (

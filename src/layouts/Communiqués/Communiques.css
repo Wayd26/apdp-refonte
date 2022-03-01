@@ -95,7 +95,7 @@
 }
 
 .releases-card-image-div {
-    background-image: url('../../assets/images/img8.png');
+    /* background-image: url('../../assets/images/img8.png'); */
     background-repeat: no-repeat;
     background-size: cover;
     width: 300px;
@@ -239,7 +239,7 @@
     }
 
     .releases-card-image-div {
-        background-image: url('../../assets/images/img8.png');
+        /* background-image: url('../../assets/images/img8.png'); */
         background-repeat: no-repeat;
         background-size: cover;
         width: 300px;
@@ -371,7 +371,7 @@
     }
 
     .releases-card-image-div {
-        background-image: url('../../assets/images/img8.png');
+        /* background-image: url('../../assets/images/img8.png'); */
         background-repeat: no-repeat;
         background-size: cover;
         width: 300px;

@@ -26,7 +26,7 @@ const DetailsActivite = () => {
         if(resp.response && resp.response.status !== 200){
             // console.log("data error ", resp.response)
         } else {
-            console.log("data data ", resp.data.data)
+            // console.log("data data ", resp.data.data)
             let element = resp.data.data.filter(elt => {
                 if(elt.id == activity_id) {
                 return elt
@@ -38,7 +38,7 @@ const DetailsActivite = () => {
         }
     }
 
-    return (
+    return (  
         <div id="details-activities" className="details-activities">
         {/* <ActualiteCarousel /> */}
         <br/>
@@ -50,7 +50,7 @@ const DetailsActivite = () => {
         <div className="details-activities-cards-container">
            {/* Start Details activity card */}
            <div id="activity-card" className="activity-card">
-            <img src={activityData && activityData[0]?.image} className="activity-card-img"/>
+            <img src={activityData && activityData[0]?.image[0]} className="activity-card-img"/>
             <p className="activity-card-title">{activityData && activityData[0]?.title}</p>
             <p className="activity-card-date"><BiCalendarCheck /> {activityData && activityData[0]?.created_at.slice(8,10)} / {activityData && activityData[0]?.created_at.slice(5,7)} / {activityData && activityData[0]?.created_at.slice(0,4)} </p>
             <p className="details-activity-card-subtitle">{activityData && activityData[0]?.content}</p>

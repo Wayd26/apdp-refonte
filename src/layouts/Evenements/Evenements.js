@@ -10,34 +10,39 @@ import ReactPaginate from "react-paginate";
 import {getATypeOfArticles} from '../../http/http';
 
 
-
 const Evenements = () => {
 
-    const [communiques, setCommuniques] = useState();
+    const navigate = useNavigate()
 
-    const loadCommuniquesData = async () => {
-        const resp = await getATypeOfArticles("communiques")
+    const [evenements, setEvenements] = useState([]);
+
+    const handleMoreClicked = (id) =>{
+        navigate(`/evenement/${id}`)
+    }
+
+    const loadEvenementsData = async () => {
+        const resp = await getATypeOfArticles("evenements")
         if(resp.response && resp.response.status !== 200){
-            console.log("error ",resp.response)
+            console.log("data error ", resp.response)
         } else {
-            console.log("data ",resp.data.data)
-            setCommuniques(resp.data)
+            // console.log("data data ", resp.data.data)
+            setEvenements(resp.data.data)
         }
     }
+
+    // const dispatch = useDispatch();
+    // const appState = useSelector(state=>state, shallowEqual);
+  
     
     useEffect(() => {
-        loadCommuniquesData()        
+        loadEvenementsData() ;
+        // console.log("Activities data ", activities)       
     }, [])
-
-    const navigate = useNavigate();
 
     const [items, setItems] = useState([]);
     const [pageCount, setpageCount] = useState(0);
     let limit = 10;
 
-    const handleEventCardMoreClicked = () => {
-        navigate("/evenements/evenement26")
-    }
 
     const handlePageClicked = () => {
 
@@ -67,10 +72,19 @@ const Evenements = () => {
            <div className="row d-flex">
 
             <div className="events-cards-container">
-                <EventCard moreClicked={()=> handleEventCardMoreClicked()} />
-                <EventCard moreClicked={()=> handleEventCardMoreClicked()} />
+            {
+            evenements && evenements.map((evenement, index) => 
+            <EventCard  eventId={evenement.id}
+                        eventImage={evenement.image[0]}
+                        eventTitle={evenement.title}
+                        eventSubTitle={evenement.sub_title}
+                        eventContent={evenement.content}
+                        eventDate={evenement.created_at}
+                        moreClicked={()=> handleMoreClicked(evenement.id)} />
+             )
+            }
 
-            <ReactPaginate 
+            {/* <ReactPaginate 
                 previousLabel={"Précédent"}
                 nextLabel={"Suivant"}
                 breakLabel={"..."}
@@ -88,7 +102,7 @@ const Evenements = () => {
                 breakClassName={"page-item"}
                 breakLinkClassName={"page-link"}
                 activeClassName={"active"}
-            />
+            /> */}
 
             </div>
             <div className="events-others-container">

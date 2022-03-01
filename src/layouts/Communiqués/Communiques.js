@@ -8,10 +8,18 @@ import {Carousel, Card, Figure, Button, ButtonGroup, Accordion} from "react-boot
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
 import BesoinAide from '../../components/BesoinAide/BesoinAide';
 import { getATypeOfArticles } from '../../http/http';
+import {useNavigate} from "react-router-dom";
+import {RiCalendar2Line, RiQuestionAnswerFill, RiEyeFill, RiArrowRightCircleFill} from "react-icons/ri";
+
 
 const Communiques = () => {
 
-    const [communiques, setCommuniques] = useState();
+    const [communiques, setCommuniques] = useState([]);
+    const navigate = useNavigate()
+
+    const handleMoreClicked = (id) =>{
+        navigate(`/communique/${id}`)
+    }
 
     const loadCommuniquesData = async () => {
         const resp = await getATypeOfArticles("communiques")
@@ -19,7 +27,7 @@ const Communiques = () => {
             console.log("error ",resp.response)
         } else {
             console.log("data ",resp.data.data)
-            setCommuniques(resp.data)
+            setCommuniques(resp.data.data)
         }
     }
     
@@ -29,70 +37,40 @@ const Communiques = () => {
 
     return (
         <div className={"releases"} id={"releases"}>
-            {/* Carousel */}
-           {/* <ActualiteCarousel /> */}
-
-            {/* Title */}
+   
 
             <p className={'page-title'}>COMMUNIQUES ET NEWSLETTERS</p>
             {/* <p className={'page-subtitle'}>Lorem ipsum dolor sit amet, consetetur sadipsiam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores</p> */}
             <div className={'releases-section'} id={'releases-section'}>
                 {/* Releases card list */}
                 <div className={"releases-first-section"} id={"releases-first-section"}>
-                    <Card className={"releases-card"}>
-                        <div className={'releases-card-image-div'} id={'releases-card-image-div'}>
+                {communiques && communiques.map((communique, index) => 
+                    (<><Card className={"releases-card"}>
+                        <div className={'releases-card-image-div'} id={'releases-card-image-div'} style={{ "backgroundImage" : `${communique.image[0]}`}}>
                         </div>
                         <Card.Body>
                         <Card.Text className={"release-card-text"}>
-                            <p className={"release-card-title"}>Communiqué 1</p>
-                            <p className={"release-card-subtitle"}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no</p>
-                            <a href="/communique/details-1" className={"release-card-link"}>Lire plus</a>
+                            <p className={"release-card-title"}>{communique.title}</p>
+                            <p className={"release-card-subtitle"}>{communique.sub_title}</p>
+                            {/* <a href="/communique/details-1" className={"release-card-link"}>Lire plus</a> */}
+                            <Button onClick={() => handleMoreClicked(communique.id)} variant="light" style={{ width: '100px', fontSize: '8px', backgroundColor: '#FFF', borderRadius: '24px', float: 'right', }}>
+                                LIRE PLUS <RiArrowRightCircleFill  style={{ width: '25px', height: '25px', marginLeft: '0px', position: 'relative', right: '-10px', color: '#FFBE00',}}/>
+                            </Button>
                         </Card.Text>
                         </Card.Body> 
                     </Card>  
                     <br />
-                    <Card className={"releases-card"}>
-                        <div className={'releases-card-image-div'} id={'releases-card-image-div'}>
-                        </div>
-                        <Card.Body>
-                        <Card.Text className={"release-card-text"}>
-                            <p className={"release-card-title"}>Communiqué 2</p>
-                            <p className={"release-card-subtitle"}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no</p>
-                            <a href="/communique/details-1" className={"release-card-link"}>Lire plus</a>
-                        </Card.Text>
-                        </Card.Body>
-                    </Card>
-                    <br />
-                    <Card className={"releases-card"}>
-                        <div className={'releases-card-image-div'} id={'releases-card-image-div'}>
-                        </div>
-                        <Card.Body>
-                        <Card.Text className={"release-card-text"}>
-                            <p className={"release-card-title"}>Communiqué 3</p>
-                            <p className={"release-card-subtitle"}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no</p>
-                            <a href="/communique/details-1" className={"release-card-link"}>Lire plus</a>
-                        </Card.Text>
-                        </Card.Body>
-                    </Card>
-                    <br />
-                    <Card className={"releases-card"}>
-                        <div className={'releases-card-image-div'} id={'releases-card-image-div'}>
-                        </div>
-                        <Card.Body>
-                        <Card.Text className={"release-card-text"}>
-                            <p className={"release-card-title"}>Communiqué 4</p>
-                            <p className={"release-card-subtitle"}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no</p>
-                            <a href="/communique/details-1" className={"release-card-link"}>Lire plus</a>
-                        </Card.Text>
-                        </Card.Body>
-                    </Card>
-                    <ButtonGroup className="me-2" aria-label="First group" style={{ 'margin-bottom': '80px', 'margin-top': '20px',}}>
+                    </>)
+                        )
+                    }
+                   
+                    {/* <ButtonGroup className="me-2" aria-label="First group" style={{ 'margin-bottom': '80px', 'margin-top': '20px',}}>
                         <Button variant="light" style={{ 'color': '#FFBE02', border: '1px solid gray', width: '50px', height: '50px', 'font-size': '20px',}}>&#xAB;</Button>
                         <Button variant="light" style={{ 'color': '#FFBE02', border: '1px solid gray', width: '50px', height: '50px', 'font-size': '20px',}}>1</Button>
                         <Button variant="light" style={{ 'color': '#FFBE02', border: '1px solid gray', width: '50px', height: '50px', 'font-size': '20px',}}>2</Button>
                         <Button variant="light" style={{ 'color': '#FFBE02', border: '1px solid gray', width: '50px', height: '50px', 'font-size': '20px',}}>3</Button>
                         <Button variant="light" style={{ 'color': '#FFBE02', border: '1px solid gray', width: '50px', height: '50px', 'font-size': '20px',}}>&#xBB;</Button>
-                    </ButtonGroup>
+                    </ButtonGroup> */}
                 </div>
 
                 {/* Activities list & Categories list */}

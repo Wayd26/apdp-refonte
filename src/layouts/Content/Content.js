@@ -85,14 +85,14 @@ const Content = () => {
           <Route path="/mentions-legales" element={<MentionsLegales />} />
           <Route path="/lois/loi-1" element={<LaLoi />} />
           <Route path="/vos-demarches" element={<Auth />} />
-          <Route path="/communique/details-1" element={<DetailsCommunique />} />
+          <Route path="/communique/:communique_id" element={<DetailsCommunique />} />
           <Route path="/activite/:activity_id" element={<DetailsActivite />} />
           <Route path="/commissaire" element={<Commissaire />} />
           <Route path="/president" element={<President />} />
           <Route path="/membres" element={<Membres />} />
           <Route path="/faire-une-demande" element={<FaireUneDemande />} />
           <Route path="/formulaire-du-courrier" element={<FormulaireCourrier />} />
-          <Route path="/evenements/evenement26" element={<DetailsEvenement />} />
+          <Route path="/evenement/:evenement_id" element={<DetailsEvenement />} />
           <Route path="/evenements" element={<Evenements />} />
           <Route path="/communiques" element={<Communiques />} />
           <Route path="/vos-droits/rester-informe" element={<DetailsDroit img={rester_informe} title={"Rester Informé"}/> } />
