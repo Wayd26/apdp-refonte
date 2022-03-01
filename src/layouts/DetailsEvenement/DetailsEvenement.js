@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import "./DetailsEvenement.css";
 import img5 from "../../assets/images/img5.jpg";
 import FaqSection from '../../components/FaqSection/FaqSection';
@@ -48,9 +48,10 @@ const DetailsEvenement = () => {
             <Card.Body className="details-event-first-card">
             <Card.Text>
                 <h2>{eventData && eventData[0]?.sub_title}</h2>
-                {eventData && eventData[0]?.content}
+                <div dangerouslySetInnerHTML={{__html: (eventData && eventData[0]?.content)}}></div>
+                
             </Card.Text>
-            <div className="details-event-first-card-img" style={{ "backgroundImage" : `${eventData && eventData[0]?.image[0]}`}}></div>
+            <div className="details-event-first-card-img" style={{ "backgroundImage" : 'url(' + `${eventData.image[0]}` + ')'}}></div>
             </Card.Body>
         </Card>
 

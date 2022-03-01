@@ -36,7 +36,7 @@ const Evenements = () => {
     
     useEffect(() => {
         loadEvenementsData() ;
-        // console.log("Activities data ", activities)       
+        console.log("Activities data ", evenements)       
     }, [])
 
     const [items, setItems] = useState([]);

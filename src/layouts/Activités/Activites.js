@@ -39,7 +39,7 @@ const Activites = () => {
     
     useEffect(() => {
         loadActivitiesData() ;
-        // console.log("Activities data ", activities)       
+        console.log("Activities data ", activities)       
     }, [])
     
     return (
@@ -60,7 +60,7 @@ const Activites = () => {
                 {/* {activities && activities.map((activity, index) => <div>{activity.title} </div>)} */}
                 {activities && activities.map((activity, index) => 
                 <Card key={index} className={"activities-card col-md-6 col-lg-4 col-xl-3"}>
-                <div className={"activities-card-img"} style={{ "backgroundImage" : `${activity.image[0]}`}} id={"activities-card-img"}></div>
+                <div className={"activities-card-img"} style={{ "backgroundImage" : 'url(' + `${activity.image[0]}` + ')'}} id={"activities-card-img"}></div>
                     <Card.Body>
                         <Card.Title style={{ float: 'left', fontWeight: 'bold' }}>{activity.title}</Card.Title>
                         <Card.Text style={{ float: 'left', textAlign: 'left', fontSize: '9px', width: '100px',}}>

@@ -35,6 +35,8 @@ width: 150px;
 
 #details-releases .details-releases-cards-container {
     width: 65%;
+    margin-right: auto;
+    margin-left: auto;
 }
 #details-releases .details-releases-others-container {
     width: 35%;

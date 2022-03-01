@@ -51,7 +51,10 @@ const DetailsCommunique = () => {
             <img src={communiqueData && communiqueData[0]?.image[0]} className="release-card-img"/>
             <p className="release-card-title">{communiqueData && communiqueData[0]?.sub_title}</p>
             <p className="release-card-date"><BiCalendarCheck /> {communiqueData && communiqueData[0]?.created_at.slice(8,10)} / {communiqueData && communiqueData[0]?.created_at.slice(5,7)} / {communiqueData && communiqueData[0]?.created_at.slice(0,4)}  </p>
-            <p className="details-release-card-subtitle">{communiqueData && communiqueData[0]?.content}</p>
+            <p className="details-release-card-subtitle">
+                <div dangerouslySetInnerHTML={{__html: (communiqueData && communiqueData[0]?.content)}}></div>
+                </p>
+            
             
         </div>
            {/* End Details release card */}

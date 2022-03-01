@@ -53,7 +53,11 @@ const DetailsActivite = () => {
             <img src={activityData && activityData[0]?.image[0]} className="activity-card-img"/>
             <p className="activity-card-title">{activityData && activityData[0]?.title}</p>
             <p className="activity-card-date"><BiCalendarCheck /> {activityData && activityData[0]?.created_at.slice(8,10)} / {activityData && activityData[0]?.created_at.slice(5,7)} / {activityData && activityData[0]?.created_at.slice(0,4)} </p>
-            <p className="details-activity-card-subtitle">{activityData && activityData[0]?.content}</p>
+            {/* <p className="details-activity-card-subtitle">{activityData && activityData[0]?.content}</p> */}
+            <p className="details-activity-card-subtitle">
+            <div dangerouslySetInnerHTML={{__html: (activityData && activityData[0]?.content)}}></div>
+                
+                </p>
             
         </div>
            {/* End Details activity card */}
