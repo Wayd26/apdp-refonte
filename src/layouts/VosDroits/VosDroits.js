@@ -5,24 +5,26 @@ import {Tabs, Tab} from "react-bootstrap";
 import RightsContent from '../../components/RightsContent/RightsContent';
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
 import { getATypeOfArticles } from '../../http/http';
+import {useNavigate} from "react-router-dom";
+
 
 const VosDroits = () => {
 
     const [key, setKey] = useState('particulier');
-    const [communiques, setCommuniques] = useState();
+    const [droits, setDroits] = useState();
 
-    const loadCommuniquesData = async () => {
-        const resp = await getATypeOfArticles("communiques")
+    const loadDroitsData = async () => {
+        const resp = await getATypeOfArticles("droits")
         if(resp.response && resp.response.status !== 200){
             console.log("error ",resp.response)
         } else {
             console.log("data ",resp.data.data)
-            setCommuniques(resp.data)
+            setDroits(resp.data)
         }
     }
     
     useEffect(() => {
-        loadCommuniquesData()        
+        loadDroitsData()        
     }, [])
 
 
@@ -47,14 +49,14 @@ const VosDroits = () => {
       {/* <div className="col-sm-4"> */}
       <Tab eventKey="entreprise_et_organisme" title="Je suis une Entreprise et Organisme">
       <RightsContent />
-
+ 
       </Tab>
       {/* </div> */}
       
       {/* <div className="col-sm-4"> */}
       <Tab eventKey="administration_publique" title="Je suis une Administration Publique">
       <RightsContent />
-      </Tab>
+      </Tab>  
       {/* </div> */}
     </Tabs>
         </div>
