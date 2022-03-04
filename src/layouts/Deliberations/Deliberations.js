@@ -33,36 +33,6 @@ const Deliberations = () => {
                     <div className={'pane-cards'}>
                     <Card style={{'text-align': 'left',}}>
                       <Card.Body>
-                        <Card.Title style={{'font-weight': 'bold',}}>Délibération n°2021-010/AT/APDP du 20 Mai 2021</Card.Title>
-                        <Card.Text style={{'margin-top': '30px', 'margin-bottom': '30px'}}>
-                        portant autorisation de traitement, d'interconnexion et de transfert des données personnelles alphanumériques et sensibles des salariés de Banque Atlantique et des membres de leurs familles vers le Maroc dans le cadre de la gestion des Ressources Humaines.
-                        </Card.Text>
-                        <Button variant="outline-primary" style={{ 'float':'right' }}><FaDownload/> Télécharger</Button>
-                      </Card.Body>
-                    </Card>
-
-                    <Card style={{'text-align': 'left',}}>
-                      <Card.Body>
-                        <Card.Title style={{'font-weight': 'bold',}}>Délibération n°2021-010/AT/APDP du 20 Mai 2021</Card.Title>
-                        <Card.Text style={{'margin-top': '30px', 'margin-bottom': '30px'}}>
-                        portant autorisation de traitement, d'interconnexion et de transfert des données personnelles alphanumériques et sensibles des salariés de Banque Atlantique et des membres de leurs familles vers le Maroc dans le cadre de la gestion des Ressources Humaines.
-                        </Card.Text>
-                        <Button variant="outline-primary" style={{ 'float':'right' }}><FaDownload/> Télécharger</Button>
-                      </Card.Body>
-                    </Card>
-
-                    <Card style={{'text-align': 'left',}}>
-                      <Card.Body>
-                        <Card.Title style={{'font-weight': 'bold',}}>Délibération n°2022-010/AT/APDP du 20 Mai 2021</Card.Title>
-                        <Card.Text style={{'margin-top': '30px', 'margin-bottom': '30px'}}>
-                        portant autorisation de traitement, d'interconnexion et de transfert des données personnelles alphanumériques et sensibles des salariés de Banque Atlantique et des membres de leurs familles vers le Maroc dans le cadre de la gestion des Ressources Humaines.
-                        </Card.Text>
-                        <Button variant="outline-primary" style={{ 'float':'right' }}><FaDownload/> Télécharger</Button>
-                      </Card.Body>
-                    </Card>
-
-                    <Card style={{'text-align': 'left',}}>
-                      <Card.Body>
                         <Card.Title style={{'font-weight': 'bold',}}>Délibération n°2022-010/AT/APDP du 20 Mai 2021</Card.Title>
                         <Card.Text style={{'margin-top': '30px', 'margin-bottom': '30px'}}>
                         portant autorisation de traitement, d'interconnexion et de transfert des données personnelles alphanumériques et sensibles des salariés de Banque Atlantique et des membres de leurs familles vers le Maroc dans le cadre de la gestion des Ressources Humaines.
@@ -75,16 +45,6 @@ const Deliberations = () => {
                   <Tab.Pane eventKey="second">
                     <h3 style={{ 'text-transform': 'uppercase', 'text-align': 'left' }}>DéLIBéRATIONS 2021 (nombre: 02)</h3>
                     <div className={'pane-cards'}>
-                      <Card style={{'text-align': 'left',}}>
-                        <Card.Body>
-                          <Card.Title style={{'font-weight': 'bold',}}>Délibération n°2021-010/AT/APDP du 20 Mai 2021</Card.Title>
-                          <Card.Text style={{'margin-top': '30px', 'margin-bottom': '30px'}}>
-                          portant autorisation de traitement, d'interconnexion et de transfert des données personnelles alphanumériques et sensibles des salariés de Banque Atlantique et des membres de leurs familles vers le Maroc dans le cadre de la gestion des Ressources Humaines.
-                          </Card.Text>
-                          <Button variant="outline-primary" style={{ 'float':'right' }}><FaDownload/> Télécharger</Button>
-                        </Card.Body>
-                      </Card>
-                      
                       <Card style={{'text-align': 'left',}}>
                         <Card.Body>
                           <Card.Title style={{'font-weight': 'bold',}}>Délibération n°2021-010/AT/APDP du 20 Mai 2021</Card.Title>

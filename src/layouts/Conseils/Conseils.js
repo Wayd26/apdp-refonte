@@ -6,9 +6,37 @@ import img7 from '../../assets/images/img7.jpg'
 import {Carousel, Card, Figure, Button, ButtonGroup, Accordion} from "react-bootstrap";
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
 import { RiArrowRightCircleFill } from 'react-icons/ri';
+import {useDispatch, useSelector, shallowEqual} from "react-redux";
+import {getATypeOfArticles} from '../../http/http';
+import {useNavigate} from "react-router-dom";
 
 
 const Conseils = () => {
+    const navigate = useNavigate();
+    const [advices, setAdvices] = useState([]);
+
+    const handleMoreClicked = (id) =>{
+        navigate(`/recommandations/${id}`)
+    }
+
+    const loadAdvicesData = async () => {
+        const resp = await getATypeOfArticles("recommandations")
+        if(resp.response && resp.response.status !== 200){
+            console.log("data error ", resp.response)
+        } else {
+            console.log("data data ", resp.data.data)
+            setAdvices(resp.data.data)
+        }
+    }
+
+    const dispatch = useDispatch();
+    const appState = useSelector(state=>state, shallowEqual);
+  
+    
+    useEffect(() => {
+        loadAdvicesData() ;
+        console.log("Advices data ", advices)       
+    }, [])
 
     return (
         <div className={"advices"} id={"advices"}>
@@ -20,19 +48,21 @@ const Conseils = () => {
             <div className={'advices-section'} id={'advices-section'}>
                 {/* advices card list */}
                 <div className={"advices-first-section"} id={"advices-first-section"}>
+                {advices.map((item, index) => (
                     <Card className={"advices-card"}>
-                        <div className={'advices-card-image-div'} id={'advices-card-image-div'}>
+                        <div className={'advices-card-image-div'} id={'advices-card-image-div'} style={{ backgroundImage: `url(${item.image[0]})` }}>
                         </div>
                         <Card.Body>
                         <Card.Text className={"advice-card-text"}>
-                            <p className={"advice-card-title"}>Protégez vos données personnelles dans le Commerce en ligne !!!</p>
-                            <p style={{ 'padding': '10px', 'text-align': 'center', }}>Le commerce électronique ou vente en ligne désigne l’échange de biens et de services entre deux entités sur le réseau internet ou via les réseaux téléphoniques mobiles.</p>
-                            <Button variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', 'margin':'30px', 'background': '#FFFFFF 0% 0% no-repeat padding-box', 'box-shadow': '0px 8px 15px #727C8E5C',}}>
+                            <p className={"advice-card-title"}>{item.title}</p>
+                            <p style={{ 'padding': '10px', 'text-align': 'center', }}>{item.sub_title}</p>
+                            <Button onClick={() => handleMoreClicked(item.id)} variant="light" style={{ width: '100px', 'font-size': '8px', 'background-color': '#FFF', 'border-radius': '24px', 'margin':'30px', 'background': '#FFFFFF 0% 0% no-repeat padding-box', 'box-shadow': '0px 8px 15px #727C8E5C',}}>
                                 LIRE PLUS <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
                             </Button>
                         </Card.Text>
                         </Card.Body>
                     </Card>
+                ))}
                 </div>
 
                 {/* Activities list & Categories list */}
