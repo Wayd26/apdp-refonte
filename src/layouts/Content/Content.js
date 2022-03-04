@@ -8,6 +8,7 @@ import Auth from "../Auth/Auth"
 import VosDroits from '../VosDroits/VosDroits';
 import DetailsDroit from '../DetailsDroit/DetailsDroit';
 import DetailsCommunique from '../DetailsCommuniqué/DetailsCommunique';
+import DetailsConseils from '../DetailsConseils/DetailsConseils';
 import DetailsActivite from '../DetailsActivité/DetailsActivite';
 import VosDevoirs from '../VosDevoirs/VosDevoirs';
 import DetailsDevoir from '../DetailsDevoir/DetailsDevoir';
@@ -79,6 +80,7 @@ const Content = () => {
           <Route path="/videotheque" element={<Vidéothèque />} />
           <Route path="/procedures" element={<Procedures />} />
           <Route path="/recommandations" element={<Conseils />} />
+          <Route path="/recommandations/:conseil_id" element={<DetailsConseils />} />
           <Route path="/cooperations" element={<Cooperations />} />
           <Route path="/textes/deliberations-publiques" element={<Deliberations />} />
           <Route path="/pays-membres" element={<PaysMembres />} />

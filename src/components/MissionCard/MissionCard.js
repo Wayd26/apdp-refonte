@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom"
 
 const MissionCard = (props) => {
 
-    const { title, link } = props;
+    const { title, link, description } = props;
     const navigate = useNavigate();
 
 
@@ -17,7 +17,7 @@ const MissionCard = (props) => {
     return (
         <div className="mission-card">
             <div className="mission-card-title">{title}</div>
-            <div className="mission-card-description">Lorem ipsum dolor sit amet, sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos </div>  
+            <div className="mission-card-description">{description} </div>  
             <button onClick={() => handleMissionCardClicked(link)} className="mission-card-button">En savoir plus
             <RiArrowRightCircleFill className="mission-card-button-icon"/></button>
             
