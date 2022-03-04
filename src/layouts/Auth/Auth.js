@@ -13,11 +13,16 @@ import apdp_logo from "../../assets/images/logoapdp.svg"
  import {BsArrowRightShort} from "react-icons/bs"
  import {FaUser} from "react-icons/fa"
 import { Container, Row, Col, Button, Modal, ModalBody } from 'reactstrap';
+import {register_or_login} from '../../http/http';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const SignIn = () => {
 
     const [connexion, setConnexion] = useState(true);
+    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const [passwordIsVisible, setPasswordIsVisible] = useState(false)
     const [isOpen,setIsOpen] = useState(false)
 
@@ -25,12 +30,36 @@ const SignIn = () => {
             setConnexion(!connexion);     
     }
 
+    console.log(document.cookie)
+
     const handlePasswordVisibility = () => {
         setPasswordIsVisible(!passwordIsVisible);
     }
 
     const toggle_modal = () => {
         setIsOpen(!isOpen)
+    }
+    const submit = async () => {
+        const data = connexion ? {
+            email: email,
+            password: password,
+        } :{
+            name: username,
+            email: email,
+            password: password,
+            password_confirmation: password,
+        }
+        console.log(data)
+        const resp = await register_or_login(connexion ? "login" :"register",data)
+        console.log(resp)
+        toast.error("Wow so easy!")
+        if (resp.data.success){
+            localStorage.setItem("token", resp.data.data.token)
+            localStorage.setItem("username", resp.data.data.name)
+            window.location = '/'
+        } else {
+            toast.error("Wow so easy!")
+        }
     }
     return (
         <div className={"auth"}>
@@ -43,6 +72,7 @@ const SignIn = () => {
                 <button  onClick={toggle_modal} className={"auth-lang-button"}>FR</button>
                     </div>
             </div> */}
+            <ToastContainer />
 
             <div className={"auth-intern-card row d-flex flex-wrap"}>
                 <div className={"auth-illustrartion-card col"}>
@@ -73,16 +103,16 @@ const SignIn = () => {
 
                     { connexion === false ? <div className={"auth-form-input-container"}>
                         <FaUser className={"auth-form-input-icon"}/>
-                        <input placeholder={"Entrer votre pseudo"} className={"auth-form-input"}/>
+                        <input onChange={(e) => setUsername(e.target.value)} placeholder={"Entrer votre pseudo"} className={"auth-form-input"}/>
                     </div> : null }
 
                     <div className={"auth-form-input-container"}>
                         <ImMail3 className={"auth-form-input-icon"}/>
-                        <input placeholder={"Entrer votre mail"} className={"auth-form-input"}/>
+                        <input onChange={(e) => setEmail(e.target.value)} placeholder={"Entrer votre mail"} className={"auth-form-input"}/>
                     </div>
                     <div className={"auth-form-input-container d-flex flex-nowrap "}>
                         <FiKey className={"auth-form-input-icon key"}/>
-                        <input placeholder={"Entrer votre mot de passe"} type={passwordIsVisible == false ? "password" : "text"} className={"auth-form-input"}/>
+                        <input onChange={(e) => setPassword(e.target.value)} placeholder={"Entrer votre mot de passe"} type={passwordIsVisible == false ? "password" : "text"} className={"auth-form-input"}/>
                        { passwordIsVisible == false ?
                        <IoMdEye className={"auth-form-input-pwd-eye"} onClick={handlePasswordVisibility}/> : 
                         <IoMdEyeOff className={"auth-form-input-pwd-eye"} onClick={handlePasswordVisibility}/>
@@ -100,7 +130,7 @@ const SignIn = () => {
                     <div className={"col-7 auth-form-password-forgotten"}>{ connexion == true ? "Mot de passe oublié ?" : ""}</div>
                     {/* <div className={"col-5 auth-form-other-option d-flex flex-nowrap justify-content-end"} onClick={handleAuthOperation}>{ connexion == true ? "S'inscrire" : "Se Connecter"}</div> */}
                     </div>
-                    <button className={"auth-form-btn"}>{ connexion == false ? "S'inscrire" : "Se Connecter"}<BsArrowRightShort className={"auth-form-btn-arrow-icon"}/></button>
+                    <button onClick={submit} className={"auth-form-btn"}>{ connexion == false ? "S'inscrire" : "Se Connecter"}<BsArrowRightShort className={"auth-form-btn-arrow-icon"}/></button>
 
                        <p className={"mb-3"}>
                            <span className={"auth-form-checkbox-first-text"}>{ connexion == true ? "Vous n'avez pas encore un compte ?" : "Vous avez déjà un compte ?"}</span>

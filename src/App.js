@@ -17,6 +17,7 @@ import {
   useParams
 } from "react-router-dom";
 import SignIn from './layouts/Auth/Auth';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
