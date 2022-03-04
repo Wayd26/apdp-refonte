@@ -14,9 +14,9 @@ export default function DynamiqueForm() {
     const loadForm = async () => {
         const resp = await getForm(window.location.pathname.split('/').pop())
         if(resp.response && resp.response.status !== 200){
-            console.log(resp.response)
+            console.log(resp.response.header)
         } else {
-            console.log(resp.data.data)
+            console.log(resp)
             setFormulaire(resp.data)
         }
     }
