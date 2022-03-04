@@ -6,12 +6,32 @@ import NavBar from './NavBar';
 import './Header.css';
 import {BASE_URL} from "../../constants/Constant";
 import code_numerique from "../../assets/documents/CODE_DU_NUMERIQUE_DU BENIN_EDITION 2019_ADN.pdf";
+import {getATypeOfArticles} from '../../http/http';
+
 
 
 const Header = () => {
+
+
     const [isOpen,setIsOpen] = useState(false)
 
     const [breaknews, setBreaknews] = useState([]);
+
+    const loadBreaknewsData = async () => {
+        const resp = await getATypeOfArticles("breaknews")
+        if(resp.response && resp.response.status !== 200){
+            console.log("data error ", resp.response)
+        } else {
+            console.log("data data ", resp.data)
+            setBreaknews(resp.data.data)
+        }
+    }
+  
+    
+    useEffect(() => {
+        loadBreaknewsData() ;
+        console.log("Breaknews data ", breaknews)       
+    }, [])
 
 
     const toggle_modal = () => {
