@@ -48,21 +48,21 @@ const Evenements = () => {
 
     }
 
-    useEffect(() => {
-        const getComments = async () => {
-          const res = await fetch(
-            `http://localhost:3004/comments?_page=1&_limit=${limit}`
-            // `https://jsonplaceholder.typicode.com/comments?_page=1&_limit=${limit}`
-          );
-          const data = await res.json();
-          const total = res.headers.get("x-total-count");
-          setpageCount(Math.ceil(total / limit));
-          // console.log(Math.ceil(total/12));
-          setItems(data);
-        };
+    // useEffect(() => {
+    //     const getComments = async () => {
+    //       const res = await fetch(
+    //         `http://localhost:3004/comments?_page=1&_limit=${limit}`
+    //         // `https://jsonplaceholder.typicode.com/comments?_page=1&_limit=${limit}`
+    //       );
+    //       const data = await res.json();
+    //       const total = res.headers.get("x-total-count");
+    //       setpageCount(Math.ceil(total / limit));
+    //       // console.log(Math.ceil(total/12));
+    //       setItems(data);
+    //     };
     
-        getComments();
-      }, [limit]);
+    //     getComments();
+    //   }, [limit]);
 
     return (
         <div id="events" className="events">
