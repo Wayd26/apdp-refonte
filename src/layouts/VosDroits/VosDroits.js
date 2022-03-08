@@ -43,19 +43,19 @@ const VosDroits = () => {
       {/* <div className="col-sm-4"> */}
 
       <Tab eventKey="particulier" title=" Je suis un Particulier">
-        <RightsContent />
+        <RightsContent categorie={"Particulier"} droits={droits}/>
       </Tab>
       {/* </div> */}
       {/* <div className="col-sm-4"> */}
       <Tab eventKey="entreprise_et_organisme" title="Je suis une Entreprise et Organisme">
-      <RightsContent />
+      <RightsContent categorie={"Structure Privée"}  droits={droits} />
  
       </Tab>
       {/* </div> */}
       
       {/* <div className="col-sm-4"> */}
       <Tab eventKey="administration_publique" title="Je suis une Administration Publique">
-      <RightsContent />
+      <RightsContent categorie={"Administration Publique"} droits={droits} />
       </Tab>  
       {/* </div> */}
     </Tabs>

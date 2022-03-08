@@ -27,14 +27,14 @@ const DetailsActivite = () => {
             // console.log("data error ", resp.response)
         } else {
             // console.log("data data ", resp.data.data)
-            let element = resp.data.data.filter(elt => {
-                if(elt.id == activity_id) {
-                return elt
-            } else {
-                return false
-            } 
-        })
-            setActivityData(element)
+                let element = resp.data.data.filter(elt => {
+                    if(elt.id == activity_id) {
+                    return elt
+                } else {
+                    return false
+                } 
+            })
+                setActivityData(element)
         }
     }
 

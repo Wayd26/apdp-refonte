@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import RightCard from '../RightCard/RightCard'
 import "./RightsContent.css"
 import rester_informe from "../../assets/icons/rester_informe.png"
@@ -13,8 +13,10 @@ import geler_vos_donnees from "../../assets/icons/geler_utilisation_de_vos_donne
 import fichiers_police from "../../assets/icons/fichiers_de_police.jpg"
 import droit_ficoba from "../../assets/icons/droit_acces_ficoba.png"
 
-const RightsContent = () => {
+const RightsContent = (props) => {
 
+
+    const [droitsToDisplay, setDroitsToDisplay] = useState([])
 
     const vos_droits = [
         {"title":"Rester informé","link": "/vos-droits/rester-informe", "btn_text":"Exercer votre droit d'information", "description":"Un organisme qui collecte des informations sur vous doit vous proposer une information claire sur l’utilisation des données et sur vos droits !", "img" : rester_informe},
@@ -29,6 +31,18 @@ const RightsContent = () => {
         {"title":"Les fichiers de police, de gendarmerie et de renseignement","link": "/vos-droits/fichiers-police", "btn_text":"Exercer votre droit d'accès", "description":"", "img" : fichiers_police},
         {"title":"Droit d'accès au FICOBA","link": "/vos-droits/droit-ficoba", "btn_text":"Exercer votre droit d'accès au FICOBA", "description":"Droit d'accès au fichier des comptes bancaires et assimilés (FICOBA).", "img" : droit_ficoba},
     ];
+
+    // const {droits, categorie} = props;
+
+    // let vos_droits = droits.filter(elt => {
+    //     if(elt.category.name == droits) {
+    //         console.log(elt.category.name)
+    //     return elt
+    // } else {
+    //     return false
+    // } 
+// })
+    // setDroitsToDisplay(...droitsToDisplay, elt);
 
     return (
         <div className={"rights-content"}>
