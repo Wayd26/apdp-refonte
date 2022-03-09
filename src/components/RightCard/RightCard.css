@@ -4,7 +4,7 @@
   border-radius: 12px;
   opacity: 1;
   width: 300px;
-height: 330px;
+height: 340px;
 }
 
 .rightcard-img {
@@ -21,7 +21,7 @@ height: 330px;
   color: #000000;
   opacity: 1;
   font-size: 1rem;
-  height:45px;
+  height:60px;
   overflow-y: auto;
   padding-left: 10px;
   padding-right: 10px;

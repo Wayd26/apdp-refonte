@@ -10,20 +10,20 @@ import { getATypeOfArticles } from '../../http/http';
 const VosDevoirs = () => {
 
     const [key, setKey] = useState('particulier');
-    const [communiques, setCommuniques] = useState();
+    const [devoirs, setDevoirs] = useState();
 
-    const loadCommuniquesData = async () => {
-        const resp = await getATypeOfArticles("communiques")
-        if(resp.response && resp.response.status !== 200){
-            console.log("error ",resp.response)
-        } else {
-            console.log("data ",resp.data.data)
-            setCommuniques(resp.data)
-        }
-    }
+    const loadDevoirsData = async () => {
+      const resp = await getATypeOfArticles("devoirs")
+      if(resp.response && resp.response.status !== 200){
+          console.log("error ",resp.response)
+      } else {
+          console.log("data ",resp.data.data)
+          setDevoirs(resp.data.data)
+      }
+  }
     
     useEffect(() => {
-        loadCommuniquesData()        
+        loadDevoirsData();        
     }, [])
 
 
@@ -38,14 +38,14 @@ const VosDevoirs = () => {
       className="mb-3"
     >
       <Tab eventKey="particulier" title=" Je suis un Particulier">
-        <DutiesContent />
+        <DutiesContent categorie={"Particulier"} devoirs={devoirs}/>
       </Tab>
       <Tab eventKey="entreprise_et_organisme" title=" Je suis une Entreprise et Organisme">
-      <DutiesContent />
+      <DutiesContent categorie={"Structure Privée"}  devoirs={devoirs}/>
 
       </Tab>
       <Tab eventKey="administration_publique" title="Je suis une Administration Publique" >
-      <DutiesContent />
+      <DutiesContent categorie={"Administration Publique"} devoirs={devoirs}/>
       </Tab>
     </Tabs>
         </div>

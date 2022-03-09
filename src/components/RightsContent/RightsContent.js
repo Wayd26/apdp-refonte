@@ -32,31 +32,37 @@ const RightsContent = (props) => {
         {"title":"Droit d'accès au FICOBA","link": "/vos-droits/droit-ficoba", "btn_text":"Exercer votre droit d'accès au FICOBA", "description":"Droit d'accès au fichier des comptes bancaires et assimilés (FICOBA).", "img" : droit_ficoba},
     ];
 
-    // const {droits, categorie} = props;
+    const {droits, categorie} = props;
 
-    // let vos_droits = droits.filter(elt => {
-    //     if(elt.category.name == droits) {
-    //         console.log(elt.category.name)
-    //     return elt
-    // } else {
-    //     return false
-    // } 
-// })
-    // setDroitsToDisplay(...droitsToDisplay, elt);
+    let vos_droits_filtered;
+    
+    useEffect(() => {
+        console.log(droits)
+        console.log(categorie)
 
+         vos_droits_filtered = droits && droits.filter(elt => elt.category.name == categorie);
+console.log(vos_droits_filtered)
+        // droits && droits.map(elt => console.log(elt))
+setDroitsToDisplay(vos_droits_filtered)
+console.log(droitsToDisplay)
+    }, [droits, categorie])
+       
+    
+    // useEffect(() => {
+    //     console.log("droits to display ", droitsToDisplay)
+    // }, [droitsToDisplay])
+       
     return (
         <div className={"rights-content"}>
 
             <p className={"rights-content-title text-center"}> Vos droits </p>
             <p className={"rights-content-subtitle d-flex justify-content-center mb-4 mt-3"}> Si un responsable de traitement estime qu’une demande est manifestement abusive, il peut ne pas y donner suite. En revanche si l’affaire est portée devant un juge il devra apporter la preuve du caractère manifestement abusif de la demande en cause. L’exercice du droit d’accès ne doit pas porter atteinte au droit d’auteur. Pour certains fichiers de police ou intéressant la sûreté de l’Etat, la loi n’autorise pas un particulier à accéder directement aux informations contenues dans le fichier. Il pourra cependant y accéder de manière indirecte par l’intermédiaire de l’APDP. </p>
             <div className={"row"}>
-
-
             
-      {vos_droits.map((item, index) => (
-        <div className={"col-sm-4 col-xs-12 p-3"}> <RightCard link={vos_droits[index].link} title={vos_droits[index].title} btnText={vos_droits[index].btn_text} description={vos_droits[index].description} imgSrc={vos_droits[index].img} /> </div>
-      ))}
-      ;
+      {droitsToDisplay != undefined ? droitsToDisplay.map((item, index) => (
+        <div className={"col-sm-4 col-xs-12 p-3"}> <RightCard link={item.id} title={item.title} btnText={"Lire plus"} description={item.sub_title} imgSrc={item.image[0]} /> </div>
+        )) : null}
+        
             </div>
         </div>
     )

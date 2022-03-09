@@ -19,12 +19,12 @@ const VosDroits = () => {
             console.log("error ",resp.response)
         } else {
             console.log("data ",resp.data.data)
-            setDroits(resp.data)
+            setDroits(resp.data.data)
         }
     }
     
     useEffect(() => {
-        loadDroitsData()        
+        loadDroitsData();        
     }, [])
 
 

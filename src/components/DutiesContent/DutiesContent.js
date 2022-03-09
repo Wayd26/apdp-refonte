@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import DutyCard from '../DutyCard/DutyCard'
 import "./DutiesContent.css"
 import rester_informe from "../../assets/icons/rester_informe.png"
@@ -13,9 +13,10 @@ import geler_vos_donnees from "../../assets/icons/geler_utilisation_de_vos_donne
 import fichiers_police from "../../assets/icons/fichiers_de_police.jpg"
 import droit_ficoba from "../../assets/icons/droit_acces_ficoba.png"
 
-const DutiesContent = () => {
+const DutiesContent = (props) => {
 
 
+    const [dutiesToDisplay, setDutiesToDisplay] = useState([])
     const vos_devoirs = [
         {"title":"Rester informé","link": "/vos-devoirs/rester-informe", "btn_text":"Exercer votre droit d'information", "description":"Un organisme qui collecte des informations sur vous doit vous proposer une information claire sur l’utilisation des données et sur vos droits !", "img" : rester_informe},
         {"title":"Vous opposer","link": "/vos-droits/vous-opposer", "btn_text":"Exercer votre droit d'opposition", "description":"Vous pouvez vous opposer à tout moment à ce qu’un organisme utilise certaines de vos données.", "img" : vous_opposer},
@@ -30,6 +31,21 @@ const DutiesContent = () => {
         {"title":"Droit d'accès au FICOBA","link": "/vos-droits/droit-ficoba", "btn_text":"Exercer votre droit d'accès au FICOBA", "description":"Droit d'accès au fichier des comptes bancaires et assimilés (FICOBA).", "img" : droit_ficoba},
     ];
 
+    const {devoirs, categorie} = props;
+
+    let vos_devoirs_filtered;
+
+    useEffect(() => {
+        console.log(devoirs)
+        console.log(categorie)
+
+         vos_devoirs_filtered = devoirs && devoirs.filter(elt => elt.category.name == categorie);
+console.log(vos_devoirs_filtered)
+        // droits && droits.map(elt => console.log(elt))
+setDutiesToDisplay(vos_devoirs_filtered)
+console.log(dutiesToDisplay)
+    }, [devoirs, categorie])
+
     return (
         <div className={"duties-content"}>
 
@@ -39,10 +55,9 @@ const DutiesContent = () => {
 
 
             
-      {vos_devoirs.map((item, index) => (
-        <div className={"col-sm-6 col-xs-12 p-3"}> <DutyCard link={vos_devoirs[index].link} title={vos_devoirs[index].title} btnText={vos_devoirs[index].btn_text} description={vos_devoirs[index].description} imgSrc={vos_devoirs[index].img} /> </div>
-      ))}
-      ;
+      {dutiesToDisplay != undefined ? dutiesToDisplay.map((item, index) => (
+        <div className={"col-sm-6 col-xs-12 p-3"}> <DutyCard link={item.id} title={item.title} btnText={"Lire plus"} description={item.sub_title} imgSrc={item.image[0]} /> </div>
+        )) : null}
             </div>
         </div>
     )

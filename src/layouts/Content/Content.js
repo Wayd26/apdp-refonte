@@ -97,29 +97,9 @@ const Content = () => {
           <Route path="/evenement/:evenement_id" element={<DetailsEvenement />} />
           <Route path="/evenements" element={<Evenements />} />
           <Route path="/communiques" element={<Communiques />} />
-          <Route path="/vos-droits/rester-informe" element={<DetailsDroit img={rester_informe} title={"Rester Informé"}/> } />
-          <Route path="/vos-droits/vous-opposer" element={<DetailsDroit img={vous_opposer} title={"Vous opposer"}/> } />
-          <Route path="/vos-droits/verifier-vos-donnees" element={<DetailsDroit img={verifier_vos_donnees} title={"Vérifier vos données"}/> } />
-          <Route path="/vos-droits/rectifier-vos-donnees" element={<DetailsDroit img={rectifier_vos_donnees} title={"Rectifier vos données"}/> } />
-          <Route path="/vos-droits/deferencer-contenu" element={<DetailsDroit img={deferencer_contenu} title={"Déréférencer un contenu"}/> } />
-          <Route path="/vos-droits/effacer-vos-donnees" element={<DetailsDroit img={effacer_vos_donnees} title={"Effacer vos données"}/> } />
-          <Route path="/vos-droits/emporter-vos-donnees" element={<DetailsDroit img={emporter_vos_donnees} title={"Emporter vos données"}/> } />
-          <Route path="/vos-droits/demander-intervention-humaine" element={<DetailsDroit img={demander_intervention_humaine} title={"Demander une intervention humaine"}/> } />
-          <Route path="/vos-droits/geler-vos-donnees" element={<DetailsDroit img={geler_vos_donnees} title={"Geler l’utilisation de vos données"}/> } />
-          <Route path="/vos-droits/fichiers-police" element={<DetailsDroit img={fichiers_police} title={"Les fichiers de police, de gendarmerie et de renseignement"}/> } />
-          <Route path="/vos-droits/droit-ficoba" element={<DetailsDroit img={droit_ficoba} title={"Droit d'accès au FICOBA"}/> } />
+          <Route path="/vos-droits/:droit_id" element={<DetailsDroit /> } />
           <Route path="/vos-droits" element={<VosDroits/>} />
-          <Route path="/vos-devoirs/devoir-26" element={<DetailsDevoir img={rester_informe} title={"Rester Informé"}/> } />
-          {/* <Route path="/vos-devoirs/vous-opposer" element={<DetailsDevoir img={vous_opposer} title={"Vous opposer"}/> } /> */}
-          {/* <Route path="/vos-devoirs/verifier-vos-donnees" element={<DetailsDevoir img={verifier_vos_donnees} title={"Vérifier vos données"}/> } /> */}
-          {/* <Route path="/vos-devoirs/rectifier-vos-donnees" element={<DetailsDevoir img={rectifier_vos_donnees} title={"Rectifier vos données"}/> } /> */}
-          {/* <Route path="/vos-devoirs/deferencer-contenu" element={<DetailsDevoir img={deferencer_contenu} title={"Déréférencer un contenu"}/> } /> */}
-          {/* <Route path="/vos-devoirs/effacer-vos-donnees" element={<DetailsDevoir img={effacer_vos_donnees} title={"Effacer vos données"}/> } /> */}
-          {/* <Route path="/vos-devoirs/emporter-vos-donnees" element={<DetailsDevoir img={emporter_vos_donnees} title={"Emporter vos données"}/> } /> */}
-          {/* <Route path="/vos-devoirs/demander-intervention-humaine" element={<DetailsDevoir img={demander_intervention_humaine} title={"Demander une intervention humaine"}/> } /> */}
-          {/* <Route path="/vos-devoirs/geler-vos-donnees" element={<DetailsDevoir img={geler_vos_donnees} title={"Geler l’utilisation de vos données"}/> } /> */}
-          {/* <Route path="/vos-devoirs/fichiers-police" element={<DetailsDevoir img={fichiers_police} title={"Les fichiers de police, de gendarmerie et de renseignement"}/> } /> */}
-          {/* <Route path="/vos-devoirs/droit-ficoba" element={<DetailsDevoir img={droit_ficoba} title={"Droit d'accès au FICOBA"}/> } /> */}
+          <Route path="/vos-devoirs/:devoir_id" element={<DetailsDevoir /> } />
           <Route path="/vos-devoirs" element={<VosDevoirs />} />
           <Route path="/appels-d-offres" element={<AppelsOffres />} />
           <Route path="/faq" element={<FAQ />} />

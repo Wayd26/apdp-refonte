@@ -14,15 +14,16 @@ const DutyCard = (props) => {
 
         // console.log("this is clicked ", clicked);
             // navigate(`${clicked}`)
-            navigate("/vos-devoirs/devoir-26")
+            navigate(`${clicked}`)
     }
 
     return (
         <div className={"dutycard"}>
-            <p className={"dutycard-title"}>OBLIGATION DE DÉCLARATION PRÉALABLE DES TRAITEMENTS DE DONNÉES À CARACTÈRE PERSONNEL</p>
-            <p className={"dutycard-description"}>Préalablement à leur mise en œuvre les traitements de données à caractère personnel effectués pour le compte de personnes doivent faire l'objet d'une déclaration auprès de la Commission de l’informatique et des libertés. (Article 19 de la loi 010-2004/AN du 20 Avril 2004 portant protection des données à caractère personnel).</p>
+            <p className={"dutycard-title"}>{title}</p>
+            
+            <p className={"dutycard-description"} dangerouslySetInnerHTML={{__html: (description)}}></p>
             <button onClick={() => handleDutyCardClicked(link)} className={"dutycard-button d-flex justify-content-around align-self-right"}>
-            <span className={'dutycard-button-span'}>Lire la suite</span>
+            <span className={'dutycard-button-span'}>{btnText}</span>
                 <RiArrowRightCircleFill className={'dutycard-button-arrow'} />
             </button>
         </div>
