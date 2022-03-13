@@ -4,17 +4,45 @@ import {Card, Button, Form,} from "react-bootstrap";
 import img5 from '../../assets/images/img5.jpg'
 import img8 from '../../assets/images/img8.png'
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
+import {useParams} from "react-router-dom";
+import {getATypeOfArticles} from '../../http/http';
 
 const LaLoi = () => {
 
+  let { loi_id } = useParams();
+    const [loiData, setLoiData] = useState();
+
+
+    useEffect(() => {
+      loadLoiData();
+  }, [loi_id])
+
+   const loadLoiData = async () => {
+      const resp = await getATypeOfArticles("lois")
+      if(resp.response && resp.response.status !== 200){
+          // console.log("data error ", resp.response)
+      } else {
+          // console.log("data data ", resp.data.data)
+          let element = resp.data.data.filter(elt => {
+              if(elt.id == loi_id) {
+              return elt
+          } else {
+              return false
+          } 
+      })
+          setLoiData(element)
+      }
+  }
+ 
+
     return (
       <div style={{background: '#FFF'}}>
-        <h2 style={{ 'color': '#4385F6', 'padding-top':'70px' }}>La loi 2009-09 Du 22 MAI 2009</h2>
+        <h2 style={{ 'color': '#4385F6', 'padding-top':'70px' }}>{loiData && loiData[0].title}</h2>
         <Card className={'law-card'}>
           <Card.Body>
-            <Card.Img src={img5} />
+            <Card.Img src={loiData && loiData[0]?.image[0]} />
             <Card.Text>
-            Nous vivons aujourd’hui dans un monde dans lequel l’informatique est omniprésente et manipule abondamment les données personnelles sous toutes ses formes. C’est pour protéger et promouvoir, dans la sphère numérique, les libertés individuelles, le droit à l’intimité, la protection de la vie privée que le BENIN s’est dopté de La loi 2009-09 Du 22 MAI 2009
+            I <div dangerouslySetInnerHTML={{__html: (loiData && loiData[0]?.content)}}></div>
             <Button variant="primary">Télécharger(Version française)</Button>
             <Button variant="warning">Télécharger(Version anglaise)</Button>
             </Card.Text>

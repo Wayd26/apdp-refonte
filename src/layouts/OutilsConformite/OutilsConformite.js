@@ -41,11 +41,14 @@ const OutilsConformite = () => {
   return <div style={{backgroundColor: "#E2E2E2", paddingTop: "40px", paddingBottom: "40px"}}>
     <p className="outils-conformite-title">LES OUTILS DE LA CONFORMITÉ</p>
     <div className="outils-conformite-cards-container row d-flex justify-content-around">
-      {outilsConformite.map((item, index) => (
+      {outilsConformite?.length != 0 ? 
+      outilsConformite?.map((item, index) => (
       <div className="col-sm-6 col-xs-12 col-md-6">
       <OutilsConformiteCard label={item.label}/>
       </div>
-      ))}
+      )) 
+      :
+       <h1>AUCUN OUTIL DE LA CONFORMITÉ</h1>}
     </div>
   </div>;
 };

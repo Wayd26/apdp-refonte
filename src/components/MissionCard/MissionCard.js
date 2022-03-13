@@ -12,12 +12,12 @@ const MissionCard = (props) => {
     const handleMissionCardClicked = (clicked) => {
 
         // console.log("this is clicked ", clicked);
-            navigate(`/mission${clicked}`)
+            navigate(`/mission/${clicked}`)
     }
     return (
         <div className="mission-card">
             <div className="mission-card-title">{title}</div>
-            <div className="mission-card-description">{description} </div>  
+            <div className="mission-card-description ">{description} </div>  
             <button onClick={() => handleMissionCardClicked(link)} className="mission-card-button">En savoir plus
             <RiArrowRightCircleFill className="mission-card-button-icon"/></button>
             

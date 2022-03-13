@@ -53,7 +53,7 @@ const Procedures = () => {
         <div className="procedures-cards-container row d-flex justify-content-around">
           {procedures.map((item, index) => (
           <div className="col-sm-6 col-xs-12 col-md-6">
-          <ProcedureCard label={item.label}/>
+          <ProcedureCard label={item.title}/>
           </div>
           ))}
         </div>

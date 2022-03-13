@@ -85,7 +85,7 @@ const Content = () => {
           <Route path="/textes/deliberations-publiques" element={<Deliberations />} />
           <Route path="/pays-membres" element={<PaysMembres />} />
           <Route path="/mentions-legales" element={<MentionsLegales />} />
-          <Route path="/lois/loi-1" element={<LaLoi />} />
+          <Route path="/lois/:loi_id" element={<LaLoi />} />
           <Route path="/vos-demarches" element={<Auth />} />
           <Route path="/communique/:communique_id" element={<DetailsCommunique />} />
           <Route path="/activite/:activity_id" element={<DetailsActivite />} />
@@ -105,12 +105,7 @@ const Content = () => {
           <Route path="/faq" element={<FAQ />} />
           <Route path="/forum-de-discussion" element={<ForumDiscusion />} />
           {/* <Route path="/quiz" element={<Quiz />} /> */}
-          <Route path="/mission/informer" element={<MissionDetails title={"Informer"} />} />
-          <Route path="/mission/reguler" element={<MissionDetails title={"Réguler"} />} />
-          <Route path="/mission/controler" element={<MissionDetails title={"Contrôler"} />} />
-          <Route path="/mission/sanctionner" element={<MissionDetails title={"Sanctionner"} />} />
-          <Route path="/mission/anticiper" element={<MissionDetails title={"Anticiper"} />} />
-          <Route path="/mission/proteger" element={<MissionDetails title={"Protéger"} />} />           
+          <Route path="/mission/:mission_id" element={<MissionDetails />} />          
           <Route path="/mission" element={<Mission />} />
           <Route path="/rapports-annuels" element={<RapportsAnnuels />} />
           <Route path="/membres" element={<Membres />} />

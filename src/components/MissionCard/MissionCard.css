@@ -9,11 +9,14 @@
 }
 
 .mission-card-title {
-    font: normal normal bold 29px/43px Montserrat;
+    font: normal normal bold 20px/23px Montserrat;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+    padding: 7px;
+    height: 70px;
+    overflow: auto;
 
 }
 
@@ -22,7 +25,7 @@
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
-    height: 160px;
+    height: 150px;
     width: 85%;
     margin-right: auto;
     margin-left: auto;

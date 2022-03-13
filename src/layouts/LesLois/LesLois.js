@@ -6,20 +6,20 @@ import {getATypeOfArticles} from '../../http/http';
 
 const LesLois = () => {
 
-    const [communiques, setCommuniques] = useState();
+    const [lois, setLois] = useState();
 
-    const loadCommuniquesData = async () => {
-        const resp = await getATypeOfArticles("communiques")
+    const loadLoisData = async () => {
+        const resp = await getATypeOfArticles("lois")
         if(resp.response && resp.response.status !== 200){
             console.log("error ",resp.response)
         } else {
             console.log("data ",resp.data.data)
-            setCommuniques(resp.data)
+            setLois(resp.data.data)
         }
     }
     
     useEffect(() => {
-        loadCommuniquesData()        
+        loadLoisData()        
     }, [])
     
     return (
@@ -28,8 +28,9 @@ const LesLois = () => {
             <p className="lois-title">LOIS</p>
 
             <div className="lois-container row d-flex justify-content-between">
-                <LoiCard />
-                <LoiCard />
+            {lois ? <>{lois.map((loi, index) =>
+                <LoiCard data={loi} /> )}</> : <h1> Aucune Loi </h1> 
+                }
             </div>
         </div>
     )
