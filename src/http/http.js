@@ -2,44 +2,59 @@ import axios from "axios";
 const BASE_URL = "https://laravel.web.sandbox.hard-soft.solutions/api/v1";
 // const BASE_URL = "http://phplaravel-268854-2244987.cloudwaysapps.com/api/v1";
 
-
 const api = axios.create({
    baseURL: BASE_URL,
    // withCredentials: true,
    // timeout: 1000,
    headers: {
-       'Access-Control-Allow-Origin': '*',
-       'Content-Type': 'multipart/form-data',
-      //  'Access-Control-Expose-Headers': 'set-cookie'
-      //  'X-CSRF-TOKEN': document.head.querySelector('meta[name="csrf-token"]')
-}
- });
+      //  'Access-Control-Allow-Origin': '*',
+      'Content-Type': 'multipart/form-data',
+      'Accept': 'application/json',
+   }
+});
 
- api.interceptors.response.use(function (response) {
-   // Any status code that lie within the range of 2xx cause this function to trigger
-   // Do something with response data
+// api.interceptors.request.use(function (config) {
+//    var token = localStorage.getItem("token");
+//    config.headers.common['X-CSRF-TOKEN'] = token;
+//    console.log(config);
+//    return config;
+// });
+
+api.interceptors.response.use(function (response) {
+// Any status code that lie within the range of 2xx cause this function to trigger
+// Do something with response data
    console.log(response)
-   console.log(document.cookie)
    return response;
- }, function (error) {
-    console.log(error)
+}, function (error) {
+      console.log(error)
    // Any status codes that falls outside the range of 2xx cause this function to trigger
    // Do something with response error
    return Promise.reject(error);
- });
+});
 
 
+function getCookie(name) {
+   const value = `; ${document.cookie}`;
+   const parts = value.split(`; ${name}=`);
+   if (parts.length === 2) return parts.pop().split(';').shift();
+}
 
-
-
-export function register_or_login(route,data){
-   console.log(document.head.querySelector('meta[name="csrf-token"]'))
-   const formData = new FormData();
-   for (const d of Object.keys(data)) {
-      formData.append(d,data[d])
-   }
-   const response = api.post(`/auth/${route}`,JSON.stringify(data))
-   return response.then(data => data).catch( error => error)
+export function register_or_login(route, data){
+    var config = {
+      method: 'post',
+      url: `https://laravel.web.sandbox.hard-soft.solutions/api/v1/auth/${route}`,
+      headers: { 
+        'Accept': 'application/json', 
+        'Content-Type': 'application/json'
+      },
+      data : data
+    };
+    
+    return axios(config)
+    .then(response => response)
+    .catch(error => error);
+   // const response = api.post(`/auth/${route}`,JSON.stringify(data))
+   // return response.then(data => data).catch( error => error)
 }
 
 

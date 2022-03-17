@@ -74,6 +74,7 @@ const Content = () => {
             <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
       <Routes>
           {/* <Route index element={<div> Here</div>} /> */}
+          <Route path="/auth" element={<Auth/>} />
           <Route path="/contact" element={<Contact/>} />
           <Route path="/plans-de-passation" element={<PlansDePassation />} />
           <Route path="/phototheque" element={<Photothèque />} />
