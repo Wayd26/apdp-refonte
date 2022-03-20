@@ -4,13 +4,13 @@ import {RiAlarmWarningFill} from "react-icons/ri"
 
 const AvisImportant = (props) => {
 
-    const {expiryTime} = props;
+    const {title, fileLink} = props;
     return (
         <div className="avis-important px-3 py-1">
             <span className="d-flex flex-nowrap justify-content-between mt-3">
                 {/* <div className="avis-important-first-bloc d-flex flex-nowrap col"> */}
                 <RiAlarmWarningFill className={"avis-important-icon-active"}/>
-                <span className="avis-important-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</span>
+                <span className="avis-important-text">{title}</span>
 
                 {/* </div> */}
                 <span className="avis-important-button col">Télécharger</span>

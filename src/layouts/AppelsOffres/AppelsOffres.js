@@ -1,13 +1,32 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import ActualiteCarousel from "../../components/ActualiteCarousel/ActualiteCarousel";
 import AvisImportant from "../../components/AvisImportant/AvisImportant";
 import FaqSection from "../../components/FaqSection/FaqSection";
 import MarketCard from "../../components/MarketCard/MarketCard";
 import MarketDataTable from "../../components/MarketDataTable/MarketDataTable";
+import { getATypeOfArticles } from "../../http/http";
 import "./AppelsOffres.css";
 
 const AppelsOffres = () => {
   var actualYear = new Date();
+
+  const [appelsOffres, setAppelsOffres] = useState();
+
+  const loadAOData = async () => {
+      const resp = await getATypeOfArticles("publications_dao")
+      if(resp.response && resp.response.status !== 200){
+          console.log("error ",resp.response)
+      } else {
+          console.log("data ",resp.data.data)
+          setAppelsOffres(resp.data.data)
+      }
+  }
+  
+  useEffect(() => {
+      loadAOData()        
+  }, [])
+
+
   return (
     <div style={{ background: "#F7F7F7 0% 0% no-repeat padding-box;" }}>
       {/* <ActualiteCarousel /> */}
@@ -18,10 +37,12 @@ const AppelsOffres = () => {
         <p className="appels-offres-publications">Appels d'offres</p>
         <div className="w90">
           <p className="appels-offres-avis-importants">Avis Importants !</p>
-          <AvisImportant expiryTime={"27"}/>
-          <AvisImportant expiryTime={"0"}/>
-          <AvisImportant expiryTime={"62"}/>
-          <AvisImportant expiryTime={"0"}/>
+          {appelsOffres?.length != 0 ? <>{appelsOffres?.map((ao, index) =>
+                         <AvisImportant title={ao.title} fileLink={ao.media[0]} />
+ 
+                )}</> : <h1> Aucun Appel d'Offre </h1> 
+                }
+          
         </div>
 
         <div className="appels-offres-blue-band">
