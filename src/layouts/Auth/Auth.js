@@ -13,7 +13,7 @@ import apdp_logo from "../../assets/images/logoapdp.svg"
  import {BsArrowRightShort} from "react-icons/bs"
  import {FaUser} from "react-icons/fa"
 import { Container, Row, Col, Button, Modal, ModalBody } from 'reactstrap';
-import {register_or_login} from '../../http/http';
+import {register_or_login, get_user} from '../../http/http';
 import { ToastContainer, toast } from 'react-toastify';
 import { Form } from 'react-bootstrap'
 
@@ -40,6 +40,7 @@ const SignIn = () => {
     const toggle_modal = () => {
         setIsOpen(!isOpen)
     }
+
     const submit = async () => {
         const data = connexion ? {
             email: email,
@@ -53,17 +54,32 @@ const SignIn = () => {
         const resp = await register_or_login(connexion ? "login" :"register",data)
         try {
             if (resp.data.success){
-                toast.success("Authentification réussie !!!");
-                localStorage.setItem("user_token", resp.data.data.token);
-                setTimeout(() => {
-                    window.location = '/';
-                }, 3000);
+                if (connexion) {
+                    toast.success("Authentification réussie !!!");
+                    localStorage.setItem("user_token", resp.data.data.token);
+                } else {
+                    toast.success("Inscription réussie !!!");
+                    localStorage.setItem("user_token", resp.data.data.token);
+                }
+                const user = await get_user(localStorage.getItem("user_token"));
+                console.log(user.data);
+                if (user.data.id){
+                    toast.success(`Bienvenue ${user.data.name}`);
+                    localStorage.setItem("user_id",user.data.id);
+                    localStorage.setItem("user_name",user.data.name);
+                    localStorage.setItem("user_email",user.data.email);
+                    setTimeout(() => {
+                        window.location = '/';
+                    }, 3000);
+                } else {
+                    localStorage.clear()
+                };
             }
         } catch (error) {
             if (connexion) {
                 toast.error("Email ou mot de passe incorrect !");  
             } else {
-                toast.error("Email ou pseudo déjà existant !");  
+                toast.error("Email ou pseudo déjà existant !");
             }
         };
     }

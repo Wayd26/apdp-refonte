@@ -35,7 +35,7 @@ export default function DynamiqueForm() {
     }
 
     const handleSubmit = () => {
-        console.log(formData)
+        console.log(formData);
     }
 
     const next = (e) => {
