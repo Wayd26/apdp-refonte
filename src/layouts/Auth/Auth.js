@@ -41,7 +41,8 @@ const SignIn = () => {
         setIsOpen(!isOpen)
     }
 
-    const submit = async () => {
+    const submit = async (e) => {
+        e.preventDefault();
         const data = connexion ? {
             email: email,
             password: password,
@@ -69,7 +70,11 @@ const SignIn = () => {
                     localStorage.setItem("user_name",user.data.name);
                     localStorage.setItem("user_email",user.data.email);
                     setTimeout(() => {
-                        window.location = '/';
+                        if (localStorage.getItem("redirect_url") != null){
+                            window.location = localStorage.getItem("redirect_url");
+                        } else {
+                            window.location = '/';
+                        }
                     }, 3000);
                 } else {
                     localStorage.clear()
@@ -84,7 +89,7 @@ const SignIn = () => {
         };
     }
     return (
-        <form name='authentication_form' onSubmit={submit} action="#">
+        <form name='authentication_form' onSubmit={submit}>
             <div className={"auth"}>
                 {/* <div className={"auth-header row  d-flex flex-nowrap justify-content-between "}>
                     <div className={"col-3"}>

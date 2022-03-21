@@ -71,51 +71,41 @@ export function logout(user_token){
 }
 
 export function register_or_login(route, data){
-
-   // var data = JSON.stringify({
-   // "email": "test123999@gmail.com",
-   // "name": "test123999",
-   // "password": "123456789",
-   // "password_confirmation": "123456789"
-   // });
-
-   // var config = {
-   // method: 'post',
-   // url: 'https://laravel.web.sandbox.hard-soft.solutions/api/v1/auth/register',
-   // headers: { 
-   //    'Accept': 'application/json', 
-   //    'Content-Type': 'application/json'
-   // },
-   // data : data
-   // };
-
-   // axios(config)
-   // .then(function (response) {
-   //    console.log(JSON.stringify(response.data));
-   // })
-   // .catch(function (error) {
-   //    console.log(error);
-   // });
-   console.log(data);
-    var config = {
+   var config = {
       method: 'post',
       url: `https://laravel.web.sandbox.hard-soft.solutions/api/v1/auth/${route}`,
       headers: { 
-        'Accept': 'application/json', 
-        'Content-Type': 'application/json'
+         'Accept': 'application/json', 
+         'Content-Type': 'application/json'
       },
       data : data
-    };
-      
-    return axios(config)
-    .then(response => response)
-    .catch(error => error);
+   };
+   
+   return axios(config)
+   .then(response => response)
+   .catch(error => error);
 }
 
 
 export function getForm(id){
    const response = api.get(`/formulaires/${id}`)
     return response.then(data => data).catch( error => error)
+}
+
+export function submitFormSection(formId, sectionId, data){
+   var config = {
+      method: 'post',
+      url: `https://laravel.web.sandbox.hard-soft.solutions/api/v1/formulaires/${formId}/sections/${sectionId}/reponses`,
+      headers: { 
+         'Accept': 'application/json', 
+         'Content-Type': 'application/json'
+      },
+      data : data
+   };
+   
+   return axios(config)
+   .then(response => response)
+   .catch(error => error);
 }
 
 export function getAllArticles() {
