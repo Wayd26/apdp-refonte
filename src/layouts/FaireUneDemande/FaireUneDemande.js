@@ -35,7 +35,7 @@ const FaireUneDemande = () => {
             <div className="col-sm-4 col-xs-12">
               <FaireUneDemandeCard
               handleCardClicked = {() => {
-                navigate("/formulaire/1")
+                navigate("/formulaire/3")
               }}
                 title={"Faire une demande"}
                 description={
