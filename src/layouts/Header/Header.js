@@ -6,7 +6,7 @@ import NavBar from './NavBar';
 import './Header.css';
 import {BASE_URL} from "../../constants/Constant";
 import code_numerique from "../../assets/documents/CODE_DU_NUMERIQUE_DU BENIN_EDITION 2019_ADN.pdf";
-import {getATypeOfArticles} from '../../http/http';
+import {getATypeOfArticles, logout} from '../../http/http';
 
 
 
@@ -47,6 +47,12 @@ const Header = () => {
 
     const handleClickRecommandations = () => {
         window.location.replace("/recommandations");
+    }
+
+    const session_logout = () => {
+        // const logout_status = logout();
+        localStorage.clear();
+        window.location = '/';
     }
 
 //     useEffect(() => {
@@ -102,6 +108,12 @@ const Header = () => {
                                 <div>
                                     <Button color="primary" onClick={toggle_modal} className="client-espace-button"><h8>EN</h8></Button>
                                 </div>
+
+                                { localStorage.getItem("user_token") ? <div>
+                                    <Button color="danger" onClick={session_logout} className="client-espace-button"><h8>Déconnexion</h8></Button>
+                                </div>:<div></div>}
+
+                                
 
                                
                               

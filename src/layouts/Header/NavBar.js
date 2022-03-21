@@ -38,7 +38,12 @@ export default class NavBar extends Component {
 
     render() {
         const handleDemarchesClick = () => {
-            window.location.href = "/vos-demarches";
+            if (localStorage.getItem("user_token")){
+                window.location.href = "/vos-demarches";
+            } else {
+                window.location.href = "/vos-demarches";
+                localStorage.setItem("redirect_url","/vos-demarches")
+            }
         }
         return (
             <React.Fragment>
