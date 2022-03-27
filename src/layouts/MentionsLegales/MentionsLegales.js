@@ -33,7 +33,7 @@ const MentionsLegales = () => {
     return (
         <div className='info-section'>
             <div className='content'>
-                <Card style={{ 'margin-top': '100px', }}>
+                <Card >
                     <Card.Body style={{ 'display': 'flex', 'flex-direction': 'column', 'align-items': 'center' }}>
                         <h3 style={{'text-align': 'center', 'color': '#4385F6', 'text-transform': 'uppercase', 'padding':'50px', 'font-size': '40px'}}>MENTIONS LéGALES</h3>
                         {/* <p style={{ 'margin': '0px 100px 0px 100px',  }}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est</p> */}

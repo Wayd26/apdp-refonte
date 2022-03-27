@@ -19,7 +19,7 @@ import {
     Route,
     Link,
     useHistory
-  } from "react-router-dom";
+} from "react-router-dom";
 
 export default class NavBar extends Component {
 
@@ -38,11 +38,11 @@ export default class NavBar extends Component {
 
     render() {
         const handleDemarchesClick = () => {
-            if (localStorage.getItem("user_token")){
+            if (localStorage.getItem("user_token")) {
                 window.location.href = "/vos-demarches";
             } else {
                 window.location.href = "/vos-demarches";
-                localStorage.setItem("redirect_url","/vos-demarches")
+                localStorage.setItem("redirect_url", "/vos-demarches")
             }
         }
         return (
@@ -62,17 +62,38 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="/forum-de-discussion">Forum de discussion</NavDropdown.Item>
                                     <NavDropdown.Item href="/phototheque">Photothèque</NavDropdown.Item>
                                     <NavDropdown.Item href="/videotheque">Vidéothèque</NavDropdown.Item>
-                                    <NavDropdown.Item href="/plans-de-passation">Plans de passation</NavDropdown.Item>                                    
+                                    <NavDropdown.Item href="/plans-de-passation">Plans de passation</NavDropdown.Item>
                                 </NavDropdown>
                             </h5>
 
                             <h5>
-                                <NavDropdown className={"nav-link-title nav-item-custom"} title={"DONNÉES PERSONNELLES "} id="navbarScrollingDropdown" active={window.location.pathname === "/donnees-personnelles"}>
-                                    <NavDropdown.Item href="/faq" >FAQ</NavDropdown.Item>
+                                <NavDropdown className={"nav-link-title nav-item-custom"} title={"REGIME DE PROTECTION DES DONNÉES"} id="navbarScrollingDropdown" active={window.location.pathname === "/donnees-personnelles"}>
+                                    <NavDropdown.Item href="/faq">FAQ</NavDropdown.Item>
                                     <NavDropdown.Item href="/quiz">Quiz</NavDropdown.Item>
-                                    <NavDropdown.Item href="/vos-droits">Vos droits</NavDropdown.Item>
-                                    <NavDropdown.Item href="">Guide de conformité</NavDropdown.Item>
-                                    
+
+                                    <div className='dropdown '>
+                                        <button class="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal bold 20px/35px Source Sans Pro", }}
+
+                                            type="" data-toggle="dropdown">Mise en conformité
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <NavDropdown.Item href="/vos-droits">Obligations Générales</NavDropdown.Item>
+                                            <NavDropdown.Item href="#">Systèmes de vidéosurveillances</NavDropdown.Item>
+                                            <NavDropdown.Item href="#">Sites web / application mobiles</NavDropdown.Item>
+                                            <NavDropdown.Item href="">Mise en conformité
+                                            </NavDropdown.Item>
+                                            <NavDropdown.Item href="#">Notification d’incident de violation
+                                                des données personnelles</NavDropdown.Item>
+
+                                            <NavDropdown.Item href="#">L’analyse d’impact</NavDropdown.Item>
+
+                                            <NavDropdown.Item href="#">Le code de conduite</NavDropdown.Item>
+
+                                            <NavDropdown.Item href="#">Le registre de traitement</NavDropdown.Item>
+
+
+                                        </ul>
+                                    </div>
                                 </NavDropdown>
                             </h5>
 
@@ -85,75 +106,66 @@ export default class NavBar extends Component {
 
                             <h5>
                                 <NavDropdown className={"nav-link-title nav-item-custom"} title={"VOS DEMARCHES "} id="navbarScrollingDropdown" active={window.location.pathname === "/vos-demarches"}>
-                                <NavDropdown.Item href="/faire-une-demande" >Faire ou modifier une demande</NavDropdown.Item>
-                                    <NavDropdown.Item href="/vos-demarches">Vérifier le statut d'une demande</NavDropdown.Item>
-                                    <NavDropdown.Item href="/espace-dpo">Espace DPO</NavDropdown.Item>
-                                    <NavDropdown.Item href="/vos-demarches">Obtenir le certificat de conformité</NavDropdown.Item>
+                                    <NavDropdown.Item href="/faire-une-demande" >Faire ou modifier une demande</NavDropdown.Item>
+                                    <NavDropdown.Item href="/vos-demarches">Soumettre la déclaration de mise
+                                        en conformité avec les injonctions</NavDropdown.Item>
+                                    <NavDropdown.Item href="/vos-demarches">Faire une vérification</NavDropdown.Item>
+                                    <NavDropdown.Item href="/espace-dpo">Notifier et Publier la désignation
+                                        d’un DPO</NavDropdown.Item>
+                                    <NavDropdown.Item href="/vos-demarches">Déclarer un incident</NavDropdown.Item>
+                                    <NavDropdown.Item href="/vos-demarches">Rédiger une affiche d’information
+                                        des personnes concernées</NavDropdown.Item>
                                     <NavDropdown.Item href="/vos-demarches">Démarrer une mise en conformité</NavDropdown.Item>
-                                    <NavDropdown.Item href="/vos-demarches">Vérifier la conformité</NavDropdown.Item>
-                                    <NavDropdown.Item href="/vos-demarches">Visualiser la version d'une décision</NavDropdown.Item>
-                                    <NavDropdown.Item href="/vos-demarches">Prendre RDV</NavDropdown.Item>
-                                    <NavDropdown.Item href="/espace-rt">Espace RT</NavDropdown.Item>
-                                    <NavDropdown.Item href="/procedures">Procédures</NavDropdown.Item>
+                                    <NavDropdown.Item href="/vos-demarches">Créer un registre de traitement</NavDropdown.Item>
+                                    <NavDropdown.Item href="/vos-demarches">Faire le rapport d’activité annuel</NavDropdown.Item>
                                 </NavDropdown>
                             </h5>
                             <h5>
                                 <NavDropdown className={"nav-link-title nav-item-custom"} title={"DOCUMENTATION "} id="navbarScrollingDropdown" active={window.location.pathname === "/documentation"}>
-                                <NavDropdown.Item href="/pays-membres" >Liste de Pays</NavDropdown.Item>
-                                    <NavDropdown.Item href="/recommandations">Recommandations</NavDropdown.Item>
                                     <NavDropdown.Item href="/outils-conformite">Outils de conformité</NavDropdown.Item>
                                     <NavDropdown.Item href="/rapports-annuels">Rapports d'activités Annuelles</NavDropdown.Item>
-                                    <NavDropdown.Item href="">Études</NavDropdown.Item>
-                                    
-                                    {/* <NavDropdown.Item href="" title={"Textes"}> */}
-                                        {/* <NavDropdown.Item href="textes"> */}
-                                            {/*  */}
-                                    
-                                    {/* <NavDropdown style={{color: "black", fontSize: "10px", padding: "5px 15px", textTransform: "capitalize"}} className={"nav-bar-item-text"} title={"Textes "} active={window.location.pathname === "/documentation/textes"}> */}
-                               
-                                    {/* <NavDropdown.Item href="" title={"Textes"}> */}
-                                        <NavDropdown.Item href="/textes/lois">Lois</NavDropdown.Item>
-                                        <NavDropdown.Item href="/textes/arretes">Arretes</NavDropdown.Item>
-                                        <NavDropdown.Item href="/textes/decrets">Decrets</NavDropdown.Item>
-                                        <NavDropdown.Item href="/textes/textes-communautaires">Textes Communautaires</NavDropdown.Item>
+                                    <div className='dropdown '>
+                                        <button class="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal bold 20px/35px Source Sans Pro", }}
+                                            type="" data-toggle="dropdown">Textes Nationaux
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <NavDropdown.Item href="/textes/lois">Lois</NavDropdown.Item>
+                                            <NavDropdown.Item href="/textes/arretes">Arretes</NavDropdown.Item>
+                                            <NavDropdown.Item href="/textes/decrets">Decrets</NavDropdown.Item>
                                         <NavDropdown.Item href="/textes/deliberations-publiques">Délibérations Publiques</NavDropdown.Item>
-                                    {/* </NavDropdown.Item> */}
-                                {/* </NavDropdown> */}
-                                    {/*  */}
-                                    {/* </NavDropdown.Item> */}
-                                        {/* <NavDropdown.Item href="/textes/les-lois">Les Lois</NavDropdown.Item> */}
-                                        {/* <NavDropdown.Item href="/textes/decrets-arretes">Les Decrets et Arretes</NavDropdown.Item> */}
-                                    {/* </NavDropdown.Item> */}
+                                        </ul>
+                                    </div>
+                                    <div className='dropdown '>
+                                        <button class="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal bold 20px/35px Source Sans Pro", }}
+                                            type="" data-toggle="dropdown">Textes Communautaires
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <NavDropdown.Item href="/textes/accords">Accords</NavDropdown.Item>
+                                            <NavDropdown.Item href="/textes/reglements">Règlements</NavDropdown.Item>
+                                            <NavDropdown.Item href="/textes/directives">Directives</NavDropdown.Item>
+                                        </ul>
+                                    </div>
+                                    <NavDropdown.Item href="/textes-internationaux">Textes Internationaux</NavDropdown.Item>
+                                    <NavDropdown.Item href="/pays-membres" >Liste de pays à protection équivalente</NavDropdown.Item>
+                                    {/* <NavDropdown.Item href="/textes/textes-communautaires">Textes Communautaires</NavDropdown.Item> */}
                                 </NavDropdown>
                             </h5>
-                            
-                            <h5>
-                                <NavDropdown className={"nav-link-title nav-item-custom"} title={"APDP "} id="navbarScrollingDropdown" active={window.location.pathname === "/apdp"}>
-                                <NavDropdown.Item href="/autorite" >L'autorité</NavDropdown.Item>
-                                    <NavDropdown.Item href="/mission">Mission</NavDropdown.Item>
-                                    <NavDropdown.Item href="/membres">Mandature en cours et Historique des membres</NavDropdown.Item>
-                                    <NavDropdown.Item href="/commissaire">Commissariat du Gouvernement</NavDropdown.Item>
-                                    <NavDropdown.Item href="/cooperations">Coopération</NavDropdown.Item>
-                                    <NavDropdown.Item href="/mentions-legales">Mentions Légales</NavDropdown.Item>
-                                    <NavDropdown.Item href="/contact">Contact</NavDropdown.Item>
-                                </NavDropdown>
-                            </h5>
-                    <InputGroup className="search-input d-none d-sm-flex row d-flex flex-nowrap">
-                        <InputGroupText style={{
-                            backgroundColor: 'white',
-                            borderRightWidth: 0,
-                            borderTopLeftRadius: 20,
-                            borderBottomLeftRadius: 20
-                        }}>
-                            <i className="ri-search-line"></i>
-                        </InputGroupText>
-                        <Input placeholder="Recherche" style={{
-                            backgroundColor: 'white',
-                            borderLeftWidth: 0,
-                            borderTopRightRadius: 20,
-                            borderBottomRightRadius: 20
-                        }} />
-                    </InputGroup>
+                         <InputGroup className="search-input d-none d-sm-flex row d-flex flex-nowrap">
+                                {/* <InputGroupText style={{
+                                    backgroundColor: 'white',
+                                    borderRightWidth: 0,
+                                    borderTopLeftRadius: 20,
+                                    borderBottomLeftRadius: 20
+                                }}>
+                                    <i className="ri-search-line"></i>
+                                </InputGroupText>
+                                <Input placeholder="Recherche" style={{
+                                    backgroundColor: 'white',
+                                    borderLeftWidth: 0,
+                                    borderTopRightRadius: 20,
+                                    borderBottomRightRadius: 20
+                                }} /> */}
+                            </InputGroup>
                         </Nav>
                     </Collapse>
                 </Navbar>

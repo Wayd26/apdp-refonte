@@ -112,11 +112,12 @@ const Footer = () => {
             <h2 className="footer-menu-name"> ESPACE JURIDIQUE ET ACTUALITÉ</h2>
             <ul id="menu-company" className="footer-menu-list">
               <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                <a href="#">Décrets et Arrêtés</a>
+                <a href="textes/decrets">Décrets</a>
               </li>
-              <li className="menu-item menu-item-type-taxonomy menu-item-object-category">
-                <a href="#">Autres documents</a>
+              <li className="menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="textes/arretes">Arrêtés</a>
               </li>
+              
               <li className="menu-item menu-item-type-post_type menu-item-object-page">
                 <a href="/evenements">Événements</a>
               </li>
@@ -127,7 +128,7 @@ const Footer = () => {
                 <a href="/phototheque">Photothèque</a>
               </li>
               <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                <a href="/procedures">Procédures</a>
+                <a href="/vos-démarches">Vos démarches</a>
               </li>
             </ul>
           </div>
@@ -142,17 +143,17 @@ const Footer = () => {
               <li className="menu-item menu-item-type-custom menu-item-object-custom">
                 <a target="_blank" rel="noopener noreferrer" href="#">Procédures</a>
               </li>
-              <li className="menu-item menu-item-type-post_type menu-item-object-page">
+              {/* <li className="menu-item menu-item-type-post_type menu-item-object-page">
                 <a href="#">Informez-vous</a>
-              </li>
+              </li> */}
               <li className="menu-item menu-item-type-post_type menu-item-object-page">
                 <a href="#">Arnaque du mois</a>
               </li>
-              <li className="menu-item menu-item-type-post_type_archive menu-item-object-customer">
-                <a href="#">Lu pour vous</a></li>
-              <li className="menu-item menu-item-type-post_type menu-item-object-page">
+              {/* <li className="menu-item menu-item-type-post_type_archive menu-item-object-customer">
+                <a href="#">Lu pour vous</a></li> */}
+              {/* <li className="menu-item menu-item-type-post_type menu-item-object-page">
                 <a href="/recommandations">Recommandations</a>
-              </li>
+              </li> */}
               <li className="menu-item menu-item-type-post_type menu-item-object-page">
                 <a href="/vos-devoirs">Mes devoirs</a>
               </li>

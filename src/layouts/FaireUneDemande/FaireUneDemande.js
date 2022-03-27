@@ -3,10 +3,10 @@ import FaireUneDemandeCard from "../../components/FaireUneDemandeCard/FaireUneDe
 import ActualiteCarousel from "../../components/ActualiteCarousel/ActualiteCarousel";
 import "./FaireUneDemande.css";
 import dots from "../../assets/icons/dots.svg";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const FaireUneDemande = () => {
-  
+
   const navigate = useNavigate();
 
   return (
@@ -26,7 +26,7 @@ const FaireUneDemande = () => {
           <div className="faire-une-demande-cards-container row">
             <div className="col-sm-4 col-xs-12">
               <FaireUneDemandeCard
-                title={"Demander une évaluation"}
+                title={"Formalités préalables "}
                 description={
                   "Lorem ipsum dolor sit amet, lorem ipsum consectuar  lorem sadipscing elitr, sed diam nonumy eirmod tempor"
                 }
@@ -34,10 +34,10 @@ const FaireUneDemande = () => {
             </div>
             <div className="col-sm-4 col-xs-12">
               <FaireUneDemandeCard
-              handleCardClicked = {() => {
-                navigate("/formulaire/3")
-              }}
-                title={"Faire une demande"}
+                handleCardClicked={() => {
+                  navigate("/formulaire/3")
+                }}
+                title={"Déposer une plainte"}
                 description={
                   "Loolor sit amet, lorem ipsum coay ipsum consetetur sadipscing elitr, sed diam nonumy eirmod tempor"
                 }
@@ -45,7 +45,7 @@ const FaireUneDemande = () => {
             </div>
             <div className="col-sm-4 col-xs-12">
               <FaireUneDemandeCard
-                title={"Commander un macaron"}
+                title={"Commander pictogramme, étiquette et marquage d’affiche"}
                 description={
                   "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor"
                 }
@@ -53,12 +53,24 @@ const FaireUneDemande = () => {
             </div>
             <div className="col-sm-4 col-xs-12">
               <FaireUneDemandeCard
-                title={"Déposer une plainte"}
+                title={"Demander une évaluation de conformité"}
+              description={
+                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor"
+              }
+              />
+            </div>
+            <div className="col-sm-4 col-xs-12">
+              <FaireUneDemandeCard
+                handleCardClicked={() => {
+                  navigate("/formulaire/3")
+                }}
+                title={"Soumettre un projet de code de conduite"}
                 description={
-                  "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor"
+                  "Loolor sit amet, lorem ipsum coay ipsum consetetur sadipscing elitr, sed diam nonumy eirmod tempor"
                 }
               />
             </div>
+           
           </div>
         </div>
       </div>

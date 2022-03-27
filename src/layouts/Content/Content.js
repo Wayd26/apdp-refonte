@@ -80,7 +80,7 @@ const Content = () => {
           <Route path="/phototheque" element={<Photothèque />} />
           <Route path="/videotheque" element={<Vidéothèque />} />
           <Route path="/procedures" element={<Procedures />} />
-          <Route path="/recommandations" element={<Conseils />} />
+          <Route path="/textes-internationaux" element={<Conseils />} />
           <Route path="/recommandations/:conseil_id" element={<DetailsConseils />} />
           <Route path="/cooperations" element={<Cooperations />} />
           <Route path="/textes/deliberations-publiques" element={<Deliberations />} />
@@ -114,7 +114,9 @@ const Content = () => {
           <Route path="/textes/lois" element={<LesLois />} />
           <Route path="/textes/arretes" element={<Arretes />} />
           <Route path="/textes/decrets" element={<Decrets />} />
-          <Route path="/textes/textes-communautaires" element={<TextesCommunautaires />} />
+          <Route path="/textes/accords" element={<TextesCommunautaires type={"accords"} />} />
+          <Route path="/textes/reglements" element={<TextesCommunautaires type={"reglements"} />} />
+          <Route path="/textes/directives" element={<TextesCommunautaires type={"directives"} />} />
           <Route path="/outils-conformite" element={<OutilsConformite />} />
           <Route path="/espace-rt" element={<EspaceRT />} />
           <Route path="/espace-dpo" element={<EspaceDPO />} />
