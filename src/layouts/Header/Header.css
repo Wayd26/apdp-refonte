@@ -171,7 +171,8 @@ border: none !important;
 
 .nav-bar-mother {
     width: 100% !important;
-    padding-left: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .code_numerique, .code_numerique:hover {

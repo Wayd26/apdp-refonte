@@ -47,7 +47,7 @@ export default class NavBar extends Component {
         }
         return (
             <React.Fragment>
-                <Navbar light expand="sm" style={{ backgroundColor: "#2b71d3" }} className={"d-flex justify-content-center nav-bar-mother"}  >
+                <Navbar light expand="sm" style={{ backgroundColor: "#2b71d3" }} className={"d-flex justify-content-between nav-bar-mother"}  >
                     {/* <NavbarBrand href="/">reactstrap</NavbarBrand> */}
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar className="nav-bar-custom">
@@ -57,12 +57,24 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="/activites">Les Activités</NavDropdown.Item>
                                     <NavDropdown.Item href="/communiques">Communiqués et Newsletters</NavDropdown.Item>
                                     <NavDropdown.Item href="">Sondage sur un produit</NavDropdown.Item>
-                                    <NavDropdown.Item href="/appels-d-offres">Appels d'offres</NavDropdown.Item>
+                                    {/* <NavDropdown.Item href="/appels-d-offres">Appels d'offres</NavDropdown.Item> */}
                                     <NavDropdown.Item href="/evenements">Evènements</NavDropdown.Item>
                                     <NavDropdown.Item href="/forum-de-discussion">Forum de discussion</NavDropdown.Item>
                                     <NavDropdown.Item href="/phototheque">Photothèque</NavDropdown.Item>
                                     <NavDropdown.Item href="/videotheque">Vidéothèque</NavDropdown.Item>
-                                    <NavDropdown.Item href="/plans-de-passation">Plans de passation</NavDropdown.Item>
+                                    {/* <NavDropdown.Item href="/plans-de-passation">Plans de passation</NavDropdown.Item> */}
+
+                                    <div className='dropdown '>
+                                        <button class="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal bold 20px/35px Source Sans Pro", }}
+
+                                            type="" data-toggle="dropdown">Marchés Publiques
+                                        </button>
+                                        <ul class="dropdown-menu" style={{right: 0, left: "auto"}}>
+                                            <NavDropdown.Item href="/plans-de-passation">Plans de passation</NavDropdown.Item>
+                                            <NavDropdown.Item href="/appels-d-offres">Appels d'offres</NavDropdown.Item>
+                                        </ul>
+                                    </div>
+
                                 </NavDropdown>
                             </h5>
 
@@ -76,7 +88,7 @@ export default class NavBar extends Component {
 
                                             type="" data-toggle="dropdown">Mise en conformité
                                         </button>
-                                        <ul class="dropdown-menu">
+                                        <ul class="dropdown-menu" style={{right: 0, left: "auto"}}>
                                             <NavDropdown.Item href="/vos-droits">Obligations Générales</NavDropdown.Item>
                                             <NavDropdown.Item href="#">Systèmes de vidéosurveillances</NavDropdown.Item>
                                             <NavDropdown.Item href="#">Sites web / application mobiles</NavDropdown.Item>
@@ -128,7 +140,7 @@ export default class NavBar extends Component {
                                         <button class="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal bold 20px/35px Source Sans Pro", }}
                                             type="" data-toggle="dropdown">Textes Nationaux
                                         </button>
-                                        <ul class="dropdown-menu">
+                                        <ul class="dropdown-menu" style={{right: 0, left: "auto"}}>
                                             <NavDropdown.Item href="/textes/lois">Lois</NavDropdown.Item>
                                             <NavDropdown.Item href="/textes/arretes">Arretes</NavDropdown.Item>
                                             <NavDropdown.Item href="/textes/decrets">Decrets</NavDropdown.Item>
@@ -139,7 +151,7 @@ export default class NavBar extends Component {
                                         <button class="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal bold 20px/35px Source Sans Pro", }}
                                             type="" data-toggle="dropdown">Textes Communautaires
                                         </button>
-                                        <ul class="dropdown-menu">
+                                        <ul class="dropdown-menu" style={{right: 0, left: "auto"}}>
                                             <NavDropdown.Item href="/textes/accords">Accords</NavDropdown.Item>
                                             <NavDropdown.Item href="/textes/reglements">Règlements</NavDropdown.Item>
                                             <NavDropdown.Item href="/textes/directives">Directives</NavDropdown.Item>
@@ -150,7 +162,7 @@ export default class NavBar extends Component {
                                     {/* <NavDropdown.Item href="/textes/textes-communautaires">Textes Communautaires</NavDropdown.Item> */}
                                 </NavDropdown>
                             </h5>
-                         <InputGroup className="search-input d-none d-sm-flex row d-flex flex-nowrap">
+                         {/* <InputGroup className="search-input d-none d-sm-flex row d-flex flex-nowrap"> */}
                                 {/* <InputGroupText style={{
                                     backgroundColor: 'white',
                                     borderRightWidth: 0,
@@ -165,7 +177,7 @@ export default class NavBar extends Component {
                                     borderTopRightRadius: 20,
                                     borderBottomRightRadius: 20
                                 }} /> */}
-                            </InputGroup>
+                            {/* </InputGroup> */}
                         </Nav>
                     </Collapse>
                 </Navbar>

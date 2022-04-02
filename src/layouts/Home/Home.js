@@ -71,7 +71,7 @@ const Home = () => {
               Découvrez les différents prestations que nous proposons à nos
               usagers.
             </p>
-            <button className={"our-services-btn"}>Nos Services</button>
+            <button className={"our-services-btn"} onClick={() => navigate("/vos-demarches") }>Vos démarches</button>
           </div>
           <div className={"col-sm-6"}>
             <div id={"illustration"} className={"our-services-illustration"}>
