@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
 import "./Auth.css"
 import apdp_logo from "../../assets/images/logoapdp.svg"
- import big_head from "../../assets/icons/big_head.svg"
- import signin from "../../assets/icons/signin.svg"
- import signup from "../../assets/icons/signup.svg"
- import facebook from "../../assets/icons/facebook.svg"
- import gmail from "../../assets/icons/gmail.svg"
- import {ImMail3} from "react-icons/im"
- import {FiKey} from "react-icons/fi"
- import {IoMdEye} from "react-icons/io"
- import {IoMdEyeOff} from "react-icons/io"
- import {BsArrowRightShort} from "react-icons/bs"
- import {FaUser} from "react-icons/fa"
+import big_head from "../../assets/icons/big_head.svg"
+import signin from "../../assets/icons/signin.svg"
+import signup from "../../assets/icons/signup.svg"
+import facebook from "../../assets/icons/facebook.svg"
+import gmail from "../../assets/icons/gmail.svg"
+import {ImMail3} from "react-icons/im"
+import {FiKey} from "react-icons/fi"
+import {IoMdEye} from "react-icons/io"
+import {IoMdEyeOff} from "react-icons/io"
+import {BsArrowRightShort} from "react-icons/bs"
+import {FaUser} from "react-icons/fa"
 import { Container, Row, Col, Button, Modal, ModalBody } from 'reactstrap';
 import {register_or_login, get_user} from '../../http/http';
 import { ToastContainer, toast } from 'react-toastify';
