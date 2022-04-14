@@ -47,11 +47,11 @@ export default class NavBar extends Component {
         }
         return (
             <React.Fragment>
-                <Navbar light expand="sm" style={{ backgroundColor: "#2b71d3" }} className={"d-flex justify-content-between nav-bar-mother"}  >
+                <Navbar light expand="sm" style={{ backgroundColor: "#2b71d3" }} className={"d-flex justify-content-center nav-bar-mother"}  >
                     {/* <NavbarBrand href="/">reactstrap</NavbarBrand> */}
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar className="nav-bar-custom">
-                        <Nav className="mr-autor  d-flex flec-wrap" navbar>
+                        <Nav className="mr-autor  d-flex flex-wrap justify-content-around" navbar>
                             <h5>
                                 <NavDropdown className={"nav-link-title nav-item-custom"} title={"ACTUALITÉS "} id="navbarScrollingDropdown" active={window.location.pathname === "/"}>
                                     <NavDropdown.Item href="/activites">Les Activités</NavDropdown.Item>

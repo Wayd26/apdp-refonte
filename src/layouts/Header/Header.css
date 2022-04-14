@@ -166,7 +166,8 @@ border: none !important;
 
 .navbar-nav {
     width: 100% !important;
-    justify-content:space-between !important;
+    /* justify-content:space-between !important; */
+    
 }
 
 .nav-bar-mother {
