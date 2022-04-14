@@ -3,6 +3,7 @@ import CustomInput from '../../components/CustomInput/CustomInput';
 import form2 from './data1.json';
 import {Form, Button} from 'reactstrap';
 import { Stepper, Step } from 'react-form-stepper';
+import {ImSad} from "react-icons/im";
 import './Dynamique.css'
 import {getForm, submitFormSection} from '../../http/http';
 import { ToastContainer, toast } from 'react-toastify';
@@ -21,10 +22,9 @@ export default function DynamiqueForm() {
         if(resp.response && resp.response.status !== 200){
             console.log(resp.response.header);
         } else {
-            console.log(resp);
             setFormulaire(resp.data);
             if (resp.data.data.sections.length > 1){
-                if (resp.data.data.last_section_submitted == resp.data.data.sections[resp.data.data.sections.length - 1].id) {
+                if (resp.data.data.last_section_submitted == resp.data.data.sections[resp.data.data.sections.length - 1].id || resp.data.data.last_section_submitted == null ) {
                     setCurrent(0)
                 } else {
                     setCurrent(resp.data.data.last_section_submitted)
@@ -45,8 +45,7 @@ export default function DynamiqueForm() {
             localStorage.setItem("redirect_url", window.location.pathname);
             window.location = "/auth";
         }
-        // console.log("WINDOW",window.location.pathname.split('/').pop())
-        loadForm()
+        loadForm();
     }, [])
 
     function answerExists(question) {
@@ -74,7 +73,6 @@ export default function DynamiqueForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const resp = await submitFormSection(window.location.pathname.split('/').pop(), formulaire.data.sections[current].id, formData);
-        console.log("REEEEESSSSSPPP", resp);
         if (final){
             if (resp.data.success){
                 toast.success("Formulaire soumis !!!");
@@ -95,53 +93,83 @@ export default function DynamiqueForm() {
     
     const prev = () => {
         setCurrent(current - 1)
-      };
+    };
 
-    return (
-        <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
-            <Form className="form-style" onSubmit={handleSubmit}>
-                <Stepper activeStep={current}>
-               
-                    {formulaire && formulaire.data.sections.map((section) => (
-                        <Step label={section.name} />    
-                    ))}</Stepper>
+    if (!formulaire) {
+        return null
+    }
+    
+    if (formulaire.data.sections[current]?.questions.length != 0){
+        return (
+            <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
+                <Form className="form-style" onSubmit={handleSubmit}>
+                    {/* <Stepper activeStep={current}>
+                   
+                        {formulaire && formulaire.data.sections.map((section) => (
+                            <Step label={section.name} />    
+                        ))}</Stepper> */}
+                    <h2 style={{ marginBottom: '50px' }}>FORMULAIRE</h2>
+    
                     <div className="row">
-                    {formulaire && formulaire.data.sections[current]?.questions.map((field) => (
-                        <div className="col-sm-3 ">
-                            <CustomInput key={field.id} field={field} updateValue={updateFormData}/>
-                        </div>
-                        ))
-                       }
-                       </div>
-                       <div className="row mb-3">
-                            <div className="col-6">
+                        {formulaire && formulaire.data.sections[current]?.questions.map((field) => (
+                            <div className="col-sm-3">
+                                <CustomInput key={field.id} field={field} updateValue={updateFormData}/>
+                            </div>
+                            ))
+                        }
+                    </div>
+                    <div className="row">
+                        <div className="col-6">
                             {current > 0 && (
-                <Button className="auth-form-btn" style={{ margin: '0 8px' }} onClick={(e) => prev(e)}>
-                    Précédent
-                </Button>)}
-                            </div>
-                            <div className="col-6">
+                            <Button className="auth-form-btn" style={{ float: 'left' }} onClick={(e) => prev(e)}>
+                                Précédent
+                            </Button>)}
+                        </div>
+                        <div className="col-6">
                             {formulaire && current < formulaire.data.sections.length - 1 && (
-                <Button className="auth-form-btn" type="submit" onClick={(e) => setFinal(false)}>
-                    Suivant
-                </Button>
-                )}
-                            </div>
-                       </div>
-                       <div style={{width: "70%"}} className="row mx-auto mb-3">
+                                <Button className="auth-form-btn" style={{ float: 'right'}} type="submit" onClick={(e) => setFinal(false)}>
+                                    Suivant
+                                </Button>
+                            )}
 
-                {formulaire && current === formulaire.data.sections.length - 1 && (
-                <Button className="auth-form-btn" type="submit" onClick={(e) => setFinal(true)}>
-                    Valider
-                </Button>
-                )}
-                       </div>
-               
-               
-                {/* <Button type='button' onClick={handleSubmit} className="submit-button">Submit</Button> */}
-            </Form>
-        </div>
-    )
+                            {formulaire && current === formulaire.data.sections.length - 1 && (
+                                <Button className="auth-form-btn" type="submit" onClick={(e) => setFinal(true)}>
+                                    Valider
+                                </Button>
+                            )}
+                        </div>
+                    </div>
+                    {/* <div style={{width: "70%"}} className="row mx-auto mb-3">
+    
+                        {formulaire && current === formulaire.data.sections.length - 1 && (
+                        <Button className="auth-form-btn" type="submit" onClick={(e) => setFinal(true)}>
+                            Valider
+                        </Button>
+                        )}
+                    </div> */}
+                </Form>
+            </div>
+        )
+    } else {
+        return (
+            <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
+                <Form className="form-style" style={{alignItems: 'center'}}>
+                    
+                    <h2 style={{ fontSize: '130%' }}>FORMULAIRE</h2>
+    
+                    <div style={{ textAlign: 'center' }}>
+                        <div style={{ marginTop: '50%', marginBottom: '50%', }}>
+                            <ImSad style={{ fontSize: '50px', marginBottom: '30px' }}/>
+                            <p>Rien à afficher</p>
+                        </div>
+                        <Button className="auth-form-btn" style={{width: 'auto', height: 'auto', padding: '15px',}} onClick={(e) => window.location.pathname = '/'}>
+                            Retourner à l'accueil
+                        </Button>
+                    </div>
+                </Form>
+            </div>
+        )
+    }
 }
 
 

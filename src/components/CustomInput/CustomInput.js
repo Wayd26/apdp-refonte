@@ -22,13 +22,15 @@ export default function CustomInput({field,updateValue}) {
                         onChange={(e) => {
                             updateValue({
                                 answer_text: e.target.value,
-                                option: {'group': field.option_group.id, 'value': e.target.id},
+                                // choice: {'group': field.option_group_id, 'value': e.target.id},
+                                choice: field.option_group_id,
                                 question: field.id
                             });
                         }}
+                        
                         >
                             <option value="None"></option>
-                            {field.option_group.group_values.map(op => <option key={op.id} value={op.slug}>{op.name}</option>)}
+                            {field.option_choices.map(op => <option key={op.id} value={op.name}>{op.name}</option>)}
                         </Input>
                     </FormGroup>
             </>
@@ -49,7 +51,8 @@ export default function CustomInput({field,updateValue}) {
                         onChange={(e) => {
                             updateValue({
                                 answer_text: e.target.value,
-                                option: {'group': field.option_group.id, 'value': null},
+                                // choice: {'group': field.option_group_id, 'value': null},
+                                choice: field.option_group_id,
                                 question: field.id
                             });
                         }}
@@ -66,24 +69,25 @@ export default function CustomInput({field,updateValue}) {
                         <Label for={field.id}>
                             {field.name}
                         </Label>
-                        {field.option_group.group_values.map(op => 
+                        {field.option_choices.map(op => 
                             <div 
                              style={{ display: "flex"}}>
                                 <Input 
                                  className="form-control" 
                                  style={{ width: "10px", height: "25px", marginRight: 10}}
                                  type="radio" 
-                                 checked={currentRadio === op.slug }
+                                 checked={currentRadio === op.name }
                                  onChange={(e) => {
                                     setRadio(e.target.value)
                                     updateValue({
                                         answer_text: e.target.value,
-                                        option: {'group': field.option_group.id, 'value': op.id},
+                                        // choice: {'group': field.option_group_id, 'value': op.id},
+                                        choice: field.option_group_id,
                                         question: field.id
                                     });
                                  }} 
                                  key={op.id} 
-                                 value={op.slug}>
+                                 value={op.name}>
                                     {op.name}
                                 </Input> 
                                 <Label 
@@ -103,23 +107,24 @@ export default function CustomInput({field,updateValue}) {
                         <Label for={field.id}>
                             {field.name}
                         </Label>
-                        {field.option_group.group_values.map(op => 
+                        {field.option_choices.map(op => 
                             <div style={{ display: "flex"}}> 
                                 <Input 
                                  className="form-control" 
                                  style={{ width: "10px", height: "25px", marginRight: 10}} 
                                  type="checkbox"
-                                 checked={currentCheckBox === op.slug }
+                                 checked={currentCheckBox === op.name }
                                  onChange={(e) => {
                                     setCheckbox(e.target.value);
                                     updateValue({
                                         answer_text: e.target.value,
-                                        option: {'group': field.option_group.id, 'value': op.id},
+                                        // choice: {'group': field.option_group_id, 'value': op.id},
+                                        choice: field.option_group_id,
                                         question: field.id
                                     });
                                  }} 
                                  key={op.id} 
-                                 value={op.slug}>
+                                 value={op.name}>
                                     {op.name}
                                 </Input> 
 
@@ -146,7 +151,8 @@ export default function CustomInput({field,updateValue}) {
                         onChange={(e) => {
                             updateValue({
                                 answer_text: e.target.value,
-                                option: {'group': field.option_group.id, 'value': null},
+                                // choice: {'group': field.option_group_id, 'value': null},
+                                choice: field.option_group_id,
                                 question: field.id
                             });
                         }}
