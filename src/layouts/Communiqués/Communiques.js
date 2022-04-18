@@ -46,7 +46,7 @@ const Communiques = () => {
                 <div className={"releases-first-section"} id={"releases-first-section"}>
                 {communiques && communiques.map((communique, index) => 
                     (<><Card className={"releases-card"}>
-                        <div className={'releases-card-image-div'} id={'releases-card-image-div'} style={{ "backgroundImage" : `${communique.image_url}`}}>
+                        <div className={'releases-card-image-div'} id={'releases-card-image-div'} style={{ "backgroundImage" : `url(${communique?.image_url})`}}>
                         </div>
                         <Card.Body>
                         <Card.Text className={"release-card-text"}>
@@ -74,7 +74,7 @@ const Communiques = () => {
                 </div>
 
                 {/* Activities list & Categories list */}
-                <div className={"releases-second-section"} id={"releases-second-section"}>
+                {/* <div className={"releases-second-section"} id={"releases-second-section"}>
                     <p className={"releases-second-section-title"}>ACTIVITÉS POPULAIRES</p>
                     <br/>
                     <hr className={"releases-second-section-first-separator"}/>
@@ -157,11 +157,11 @@ const Communiques = () => {
                     <br/>
 
                     <BesoinAide />
-                </div>
+                </div> */}
             </div>
 
             {/* Presentation card */}
-            <Card className={"releases-card-for-presentation"}>
+            {/* <Card className={"releases-card-for-presentation"}>
                 <Card.Body className={"releases-card-text-for-presentation"}>
                 <Card.Text>
                     <h2 className={"releases-card-text-title-for-presentation"}>Lorem Ipsum</h2>
@@ -179,7 +179,7 @@ const Communiques = () => {
                 </Card.Text>
                 </Card.Body>
                 <div className={"releases-card-for-presentation-img"}></div>  
-            </Card>
+            </Card> */}
 
             {/* FAQ section */}
             {/* <FaqSection /> */}

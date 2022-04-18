@@ -48,7 +48,7 @@ const DetailsCommunique = () => {
         <div className="details-releases-cards-container">
            {/* Start Details release card */}
            <div id="release-card" className="release-card">
-            <img src={communiqueData && communiqueData[0]?.image[0]} className="release-card-img"/>
+            <img src={communiqueData && communiqueData[0]?.image_url} className="release-card-img"/>
             <p className="release-card-title">{communiqueData && communiqueData[0]?.sub_title}</p>
             <p className="release-card-date"><BiCalendarCheck /> {communiqueData && communiqueData[0]?.created_at.slice(8,10)} / {communiqueData && communiqueData[0]?.created_at.slice(5,7)} / {communiqueData && communiqueData[0]?.created_at.slice(0,4)}  </p>
             <p className="details-release-card-subtitle">

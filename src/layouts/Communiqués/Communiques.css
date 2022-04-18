@@ -82,9 +82,11 @@
 }
 
 .releases-card {
-    margin-left: 129px;
+    margin-left: auto !important;
+    margin-right: auto !important;
     margin-bottom: 100px;
-    width: 80%;
+    width: 60% ;
+    max-width: 600px !important;
     display: flex;
     flex-direction: row;
     border-radius: 10px;
@@ -110,7 +112,7 @@
 .release-card-text {
     letter-spacing: 0px;
     text-align: left;
-    margin-left: 100px;
+    /* margin-left: 100px; */
     opacity: 1;
     color: #000000;
 }
