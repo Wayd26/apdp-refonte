@@ -38,7 +38,7 @@ const AppelsOffres = () => {
         <div className="w90">
           <p className="appels-offres-avis-importants pl-3">Avis Importants !</p>
           {appelsOffres?.length != 0 ? <>{appelsOffres?.map((ao, index) =>
-                         <AvisImportant title={ao.title} fileLink={ao.media[0]} />
+                         <AvisImportant title={ao.title} fileLink={ao.image_url} />
  
                 )}</> : <h1 className="py-3"> Aucun Appel d'Offre </h1> 
                 }

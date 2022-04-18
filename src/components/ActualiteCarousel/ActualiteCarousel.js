@@ -55,9 +55,9 @@ const ActualiteCarousel = () => {
 
 
       <Carousel.Item>
-      <img src={actualite.image[0]} className="d-block carousel-image" alt="..." />
+      <img src={actualite?.image_url} className="d-block carousel-image" alt="..." />
             <div className="carousel-caption d-none d-md-block">
-              <CardOnCaroussel title={actualite.title} subtitle={actualite.sub_title} image={actualite.image[0]} />
+              <CardOnCaroussel title={actualite.title} subtitle={actualite.sub_title} image={actualite.image_url} />
             </div>
         <Carousel.Caption>
           {/* <h3>{}</h3> */}
