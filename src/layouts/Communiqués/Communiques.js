@@ -46,7 +46,7 @@ const Communiques = () => {
                 <div className={"releases-first-section"} id={"releases-first-section"}>
                 {communiques && communiques.map((communique, index) => 
                     (<><Card className={"releases-card"}>
-                        <div className={'releases-card-image-div'} id={'releases-card-image-div'} style={{ "backgroundImage" : `${communique.image[0]}`}}>
+                        <div className={'releases-card-image-div'} id={'releases-card-image-div'} style={{ "backgroundImage" : `${communique.image_url}`}}>
                         </div>
                         <Card.Body>
                         <Card.Text className={"release-card-text"}>

@@ -75,7 +75,7 @@ const Evenements = () => {
             {
             evenements && evenements.map((evenement, index) => 
             <EventCard  eventId={evenement.id}
-                        eventImage={evenement.image[0]}
+                        eventImage={evenement.image_url}
                         eventTitle={evenement.title}
                         eventSubTitle={evenement.sub_title}
                         eventContent={evenement.content}
