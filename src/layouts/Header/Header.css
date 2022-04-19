@@ -60,7 +60,7 @@ border: none !important;
 
 .logo{
     width: 260px;
-    height: 50px;
+    height: 70px;
     margin-bottom: 10px;
     cursor: pointer !important;
 }
@@ -194,3 +194,33 @@ border: none !important;
         display: none;
     }
 }
+
+/* (A) FIXED WRAPPER */
+.hwrap {
+    overflow: hidden; /* HIDE SCROLL BAR */
+    /* background: #eee; */
+    background: #FFBE00;
+  }
+   
+  /* (B) MOVING TICKER WRAPPER */
+  .hmove { display: flex; }
+  
+  /* (C) ITEMS - INTO A LONG HORIZONTAL ROW */
+  .hitem {
+    flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: large;
+  }
+   
+  /* (D) ANIMATION - MOVE ITEMS FROM RIGHT TO LEFT */
+  /* 4 ITEMS -400%, CHANGE THIS IF YOU ADD/REMOVE ITEMS */
+  @keyframes tickerh {
+    0% { transform: translate3d(100%, 0, 0); }
+    100% { transform: translate3d(-400%, 0, 0); }
+  }
+  .hmove { animation: tickerh linear 50s infinite; }
+  .hmove:hover { animation-play-state: paused; }

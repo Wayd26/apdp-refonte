@@ -66,27 +66,23 @@ const Header = () => {
     return (
         <React.Fragment>
                 <div id={"header"}>
-                    <div className="header-block-1">
+                    {/* <div className="header-block-1">
                     <Row className={"d-flex flex-nowrap"}>
-                        {/* <Col xs={2} >
-                            <span style={{
-                                display: "flex",
-                                alignItems: "center",
-                                backgroundColor: "black",
-                                color: "white",
-                                width: 90,
-                                maxHeight: "110%",
-                                zIndex: 100,
-                                position: 'absolute'
-                            }}
-                            >Alerte info <i className="ri-volume-up-fill" style={{color: "#b9a180", marginLeft: 2}}></i></span>
-                        </Col> */}
+                        
                         <Col className="header-animate-text animate-text-span">
                             <span className={"animate-text-span d-flex flex-nowrap"}><span className={"animate-text-separator"}> # </span>Aut perspiciatis voluptatibus  inventore voluptatibus consequuntur enim autem inventore<span className={"animate-text-separator"}> # </span></span> 
 
                         </Col>
                             </Row>
-                    </div>
+                    </div> */}
+                    <div class="hwrap">
+                        <div class="hmove">
+                        {
+                        breaknews && breaknews.map((breaknew) => 
+                        (<div class="hitem">{breaknew.title}</div>)
+                            )}
+  
+</div></div>
 
                     <div className="header-block-2">
                         

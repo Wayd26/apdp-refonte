@@ -58,6 +58,7 @@ import Photothèque from '../Photothèque/Photothèque';
 import Vidéothèque from '../Vidéothèque/Vidéothèque';
 import PlansDePassation from '../PlansDePassation/PlansDePassation';
 import Contact from '../Contact/Contact';
+import Recommandations from '../Recommandations/Recommandations';
 
 
 const Content = () => {
@@ -81,6 +82,7 @@ const Content = () => {
           <Route path="/videotheque" element={<Vidéothèque />} />
           <Route path="/procedures" element={<Procedures />} />
           <Route path="/textes-internationaux" element={<Conseils />} />
+          <Route path="/recommandations" element={<Recommandations />} />
           <Route path="/recommandations/:conseil_id" element={<DetailsConseils />} />
           <Route path="/cooperations" element={<Cooperations />} />
           <Route path="/textes/deliberations-publiques" element={<Deliberations />} />
