@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import axios from "axios";
 import { Container, Row, Col, Button, Modal, ModalBody } from 'reactstrap';
-import apdp_logo from "../../assets/images/logoapdp.svg"
+// import apdp_logo from "../../assets/images/logoapdp.svg"
+import apdp_logo from "../../assets/images/logoapdp.png"
 import NavBar from './NavBar';
 import './Header.css';
 import {BASE_URL} from "../../constants/Constant";
@@ -91,9 +92,9 @@ const Header = () => {
                         
                             {/* <a href='/'> */}
 
-                                <div style={{cursor: "pointer"}} onClick={goHome}>
-                                    {/* <img src={apdp_logo} className="logo" /> */}
-                                    <object style={{cursor: "pointer"}}  data={apdp_logo} className="logo" type="image/svg+xml"></object>
+                                <div  onClick={goHome}>
+                                    <img src={apdp_logo} style={{cursor: "pointer"}} className="logo" />
+                                    {/* <object style={{cursor: "pointer", height: 30, width: 40}}  data={apdp_logo} className="logo" type="image/svg+xml"></object> */}
                                 </div>
                             {/* </a> */}
                             
