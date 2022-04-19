@@ -26,6 +26,9 @@ const FaireUneDemande = () => {
           <div className="faire-une-demande-cards-container row">
             <div className="col-sm-4 col-xs-12">
               <FaireUneDemandeCard
+                handleCardClicked={() => {
+                  navigate("/formulaire/formalite_prealable")
+                }}
                 title={"Formalités préalables "}
                 description={
                   "Lorem ipsum dolor sit amet, lorem ipsum consectuar  lorem sadipscing elitr, sed diam nonumy eirmod tempor"
@@ -35,7 +38,7 @@ const FaireUneDemande = () => {
             <div className="col-sm-4 col-xs-12">
               <FaireUneDemandeCard
                 handleCardClicked={() => {
-                  navigate("/formulaire/3")
+                  navigate("/formulaire/plainte")
                 }}
                 title={"Déposer une plainte"}
                 description={
@@ -45,6 +48,9 @@ const FaireUneDemande = () => {
             </div>
             <div className="col-sm-4 col-xs-12">
               <FaireUneDemandeCard
+                handleCardClicked={() => {
+                  navigate("/formulaire/commande_pictogramme")
+                }}
                 title={"Commander pictogramme, étiquette et marquage d’affiche"}
                 description={
                   "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor"
@@ -53,16 +59,19 @@ const FaireUneDemande = () => {
             </div>
             <div className="col-sm-4 col-xs-12">
               <FaireUneDemandeCard
+                handleCardClicked={() => {
+                  navigate("/formulaire/demande_evaluation_conformite")
+                }}
                 title={"Demander une évaluation de conformité"}
-              description={
-                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor"
-              }
+                description={
+                  "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor"
+                }
               />
             </div>
             <div className="col-sm-4 col-xs-12">
               <FaireUneDemandeCard
                 handleCardClicked={() => {
-                  navigate("/formulaire/3")
+                  navigate("/formulaire/projet_code_de_conduite")
                 }}
                 title={"Soumettre un projet de code de conduite"}
                 description={

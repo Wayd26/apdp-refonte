@@ -87,8 +87,8 @@ export function register_or_login(route, data){
 }
 
 
-export function getForm(id){
-   const response = api.get(`/formulaires/${id}`)
+export function getForm(type){
+   const response = api.get(`/formulaires?type=${type}`)
     return response.then(data => data).catch( error => error)
 }
 
@@ -96,7 +96,7 @@ export function submitFormSection(formId, sectionId, data){
    var config = {
       method: 'post',
       url: `https://laravel.web.sandbox.hard-soft.solutions/api/v1/formulaires/${formId}/sections/${sectionId}/reponses`,
-      headers: { 
+      headers: {
          'Accept': 'application/json', 
          'Content-Type': 'application/json'
       },
