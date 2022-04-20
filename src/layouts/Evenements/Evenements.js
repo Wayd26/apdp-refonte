@@ -105,10 +105,10 @@ const Evenements = () => {
             /> */}
 
             </div>
-            <div className="events-others-container">
+            {/* <div className="events-others-container">
                 <p className="popular-activities-title">Activités Populaires</p>
                 <hr className="popular-activities-hr"></hr>
-                {/* Start Popular Activites */}
+                
                 <div className="row my-3">
                     <div className="col-4">
                         <img src={img5} className="popular-activities-img"/>
@@ -142,8 +142,7 @@ const Evenements = () => {
                     </div>
                 </div>
 
-                {/* End Popular Activities */}
-                {/* Start Categories */}
+                
                 <p className="categories-title">Catégories</p>
                 <hr className="categories-hr"></hr>
                 <p className="categories-items">Lorem ipsum(13)</p>
@@ -151,9 +150,9 @@ const Evenements = () => {
                 <p className="categories-items">Lorem ipsum(8)</p>
                 <p className="categories-items">Lorem ipsum(11)</p>
                 <p className="categories-items">Lorem ipsum(7)</p>
-                {/* End Categories */}
+              
                 <BesoinAide />
-            </div>
+            </div> */}
            </div>
 
            {/* <FaqSection /> */}

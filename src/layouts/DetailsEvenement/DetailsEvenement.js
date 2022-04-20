@@ -29,12 +29,15 @@ const DetailsEvenement = () => {
             // console.log("data data ", resp.data.data)
             let element = resp.data.data.filter(elt => {
                 if(elt.id == evenement_id) {
+                    console.log(elt)
                 return elt
             } else {
                 return false
             } 
         })
             setEventData(element)
+            console.log(eventData)
+            console.log(element)
         }
     }
 
@@ -43,15 +46,17 @@ const DetailsEvenement = () => {
         {/* <ActualiteCarousel /> */}
         <p className="details-events-title">{eventData && eventData[0]?.title}</p>
         <hr className="details-event-hr"></hr>
-
-        <Card className="details-event-card-element">
+{/* {JSON.stringify(eventData)} */}
+        <Card className="details-event-card-element mx-auto">
             <Card.Body className="details-event-first-card">
             <Card.Text>
                 <h2>{eventData && eventData[0]?.sub_title}</h2>
                 <div dangerouslySetInnerHTML={{__html: (eventData && eventData[0]?.content)}}></div>
                 
             </Card.Text>
-            <div className="details-event-first-card-img" style={{ "backgroundImage" : 'url(' + `${eventData.image[0]}` + ')'}}></div>
+{/* {JSON.stringify(eventData)} */}
+
+            <div className="details-event-first-card-img" style={ eventData && { "backgroundImage" : 'url(' + `${eventData[0]?.image_url}` + ')'}}></div>
             </Card.Body>
         </Card>
 

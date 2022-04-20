@@ -79,7 +79,12 @@ const Header = () => {
                         <div class="hmove">
                         {
                         breaknews && breaknews.map((breaknew) => 
-                        (<div class="hitem">{breaknew.title}</div>)
+                        (
+                        // <div class="hitem">{breaknew.title}</div>
+                      
+                        <div class="hitem mx-5" dangerouslySetInnerHTML={{__html: (breaknew?.content)}}></div>
+                        
+                        )
                             )}
   
 </div></div>

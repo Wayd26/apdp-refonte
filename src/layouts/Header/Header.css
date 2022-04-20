@@ -99,6 +99,7 @@ border: none !important;
 
 #header  .nav-link{
     color: white !important;
+    font-size: large;
 }
 #header .navbar-toggler{
     background-color: #2b71d3 !important;
@@ -206,7 +207,7 @@ border: none !important;
   .hmove { display: flex; }
   
   /* (C) ITEMS - INTO A LONG HORIZONTAL ROW */
-  .hitem {
+  .hitem p {
     flex-shrink: 0;
     width: 100%;
     box-sizing: border-box;
