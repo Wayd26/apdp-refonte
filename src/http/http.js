@@ -89,7 +89,7 @@ export function register_or_login(route, data){
 
 export function getForm(type){
    const response = api.get(`/formulaires?type=${type}`)
-    return response.then(data => data).catch( error => error)
+   return response.then(data => data).catch( error => error)
 }
 
 export function submitFormSection(formId, sectionId, data){
@@ -109,12 +109,11 @@ export function submitFormSection(formId, sectionId, data){
 }
 
 export function getAllArticles() {
-
-  const response = api.get(`/articles`);
-    return response.then(data => data).catch( error => error)
-   }
+   const response = api.get(`/articles`);
+   return response.then(data => data).catch( error => error)
+}
    
-   export function getATypeOfArticles(type) {
-      const response = api.get(`/articles?slug=` + `${type}`)
-      return response.then(data => data).catch( error => error)
+export function getATypeOfArticles(type) {
+   const response = api.get(`/articles?slug=` + `${type}`)
+   return response.then(data => data).catch( error => error)
 }
