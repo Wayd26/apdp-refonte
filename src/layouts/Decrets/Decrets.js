@@ -28,7 +28,7 @@ const Decrets = () => {
           <p className="decrets-title">DÉCRETS</p>
           <div className="decrets-rows-container">
             {decrets.map((item, index) => (
-              <DecretRow label={item.title} decription={item.sub_title} decretImg={item.image[0]}/>
+              <DecretRow label={item.title} fileUrl={item.image_url} description={item.sub_title} decretImg={item.image_url}/>
             ))}
          </div>
       </div>

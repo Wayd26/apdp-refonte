@@ -22,7 +22,7 @@ const LaLoi = () => {
       if(resp.response && resp.response.status !== 200){
           // console.log("data error ", resp.response)
       } else {
-          // console.log("data data ", resp.data.data)
+          console.log("data data ", resp.data.data)
           let element = resp.data.data.filter(elt => {
               if(elt.id == loi_id) {
               return elt
@@ -40,9 +40,9 @@ const LaLoi = () => {
         <h2 style={{ 'color': '#4385F6', 'padding-top':'70px' }}>{loiData && loiData[0].title}</h2>
         <Card className={'law-card'}>
           <Card.Body>
-            <Card.Img src={loiData && loiData[0]?.image[0]} />
+            <Card.Img src={loiData && loiData[0]?.image_url} />
             <Card.Text>
-            I <div dangerouslySetInnerHTML={{__html: (loiData && loiData[0]?.content)}}></div>
+             <div dangerouslySetInnerHTML={{__html: (loiData && loiData[0]?.content)}}></div>
             <Button variant="primary">Télécharger(Version française)</Button>
             <Button variant="warning">Télécharger(Version anglaise)</Button>
             </Card.Text>
@@ -54,7 +54,7 @@ const LaLoi = () => {
         <br/>
         <br/>
 
-        <Form className={'law-form'}>
+        {/* <Form className={'law-form'}>
           <Form.Group className="mb-3" controlId="formBasicTitle">
             <Form.Label>Laisser un commentaire</Form.Label>
             <br/>
@@ -78,7 +78,7 @@ const LaLoi = () => {
           <Button variant="primary" type="submit">
             Laisser un commentaire
           </Button>
-        </Form>
+        </Form> */}
       </div>
     )
 }

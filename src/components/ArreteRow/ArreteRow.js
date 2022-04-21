@@ -28,7 +28,7 @@ const ArreteRow = (props) => {
                     </p>
                 </div>
                 <div className="arrete-row-details-button-container col-sm">
-                    <img src={data.image[0]} className="arrete-row-details-image" />
+                    <img src={data.image_url} className="arrete-row-details-image" />
                     <button className="arrete-row-details-button">
                         Télécharger   <MdFileDownload className="arrete-row-details-button-icon" />
                     </button>

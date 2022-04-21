@@ -17,7 +17,7 @@ const LoiCard = (props) => {
     }
     return (
         <div className="loi-card">
-            <img  src={data.image[0]} className="loi-card-image"/>
+            <img  src={data.image_url} className="loi-card-image"/>
             <p className="loi-card-title">{data.title}</p>
             <p className="loi-card-description">{data.sub_title}</p>
             <button onClick={() =>handleButtonClicked(data.id)} className="loi-card-button">EN SAVOIR PLUS</button>

@@ -27,7 +27,7 @@ const DecretRow = (props) => {
                 </div>
                 <div className="decret-row-details-button-container col-sm">
                     <img src={decretImg} className="decret-row-details-image" />
-                    <a href={fileUrl} download>
+                    <a href={fileUrl} target={"_blank"} rel={"noopener noreferer"} download>
                         <button className="decret-arrete-row-details-button">
                             Télécharger   <MdFileDownload className="decret-row-details-button-icon" />
                         </button>

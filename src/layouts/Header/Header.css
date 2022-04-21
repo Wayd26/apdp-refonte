@@ -99,7 +99,7 @@ border: none !important;
 
 #header  .nav-link{
     color: white !important;
-    font-size: large;
+    font-size: 15px;
 }
 #header .navbar-toggler{
     background-color: #2b71d3 !important;

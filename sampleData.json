@@ -1,0 +1,14 @@
+ [
+    {
+        "id": 13,
+        "type": "lois",
+        "title": "titre loi",
+        "sub_title": "sous titre loi",
+        "content": "<p>Contenu&nbsp;sous titre loi</p>",
+        "image_url": "https://laravel.web.sandbox.hard-soft.solutions//storage/12/WhatsApp-Image-2022-03-01-at-16.53.36.jpeg",
+        "created_at": "2022-04-19T22:33:18.000000Z",
+        "updated_at": "2022-04-19T22:33:18.000000Z"
+    }
+]
+
+
