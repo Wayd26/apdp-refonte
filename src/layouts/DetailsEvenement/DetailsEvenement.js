@@ -28,12 +28,8 @@ const DetailsEvenement = () => {
         } else {
             // console.log("data data ", resp.data.data)
             let element = resp.data.data.filter(elt => {
-<<<<<<< HEAD
                 if(elt.id == evenement_id) {
                     console.log(elt)
-=======
-                if(elt.id === evenement_id) {
->>>>>>> 3ea87e230e4305c8e324647706d21761d1c9f2be
                 return elt
             } else {
                 return false
