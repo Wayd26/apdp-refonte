@@ -163,7 +163,7 @@ export default function DynamiqueForm() {
                                     </Button>
                                 )}
     
-                                {formulaire && current === formulaire.data.sections.length - 1 && formulaire.data.sections[current].type === 'standard' && (
+                                {formulaire && current === formulaire.data.sections.length - 1  && (
                                     <Button className="auth-form-btn" type="submit" onClick={(e) => setFinal(true)}>
                                         Valider
                                     </Button>
