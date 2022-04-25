@@ -105,22 +105,22 @@ const Header = () => {
                                     <div className="col" style={{color: "#292929", font: "normal normal bold 20px/35px Montserrat", cursor: "pointer"}} onClick={handleClickRecommandations}> RECOMMANDATIONS</div>
                                     {/* <div className="col" style={{color: "#292929", fontFamily: "Montserrat", fontWeight: "bold", cursor: "pointer"}} onClick={handleClickApdpInfo}> CONNAITRE L'APDP</div> */}
                                     <div className='dropdown '>
-                                        <div class=" dropdown-toggle drop-class" style={{ font: "normal normal bold 20px/35px Montserrat", cursor: "pointer"}}
+                                        <div className=" dropdown-toggle drop-class" style={{ font: "normal normal bold 20px/35px Montserrat", cursor: "pointer"}}
 
                                             type="" data-toggle="dropdown">CONNAITRE L'APDP
                                         </div>
-                                        <ul class="dropdown-menu">
-                                            <li><a tabindex="-1" href="/autorite">L'autorité</a></li>
-                                            <li><a tabindex="-1" href="/mission">Mission</a></li>
-                                            <li><a tabindex="-1" href="/membres">Mandature en cours et Historique des membres</a></li>
+                                        <ul className="dropdown-menu">
+                                            <li><a tabIndex="-1" href="/autorite">L'autorité</a></li>
+                                            <li><a tabIndex="-1" href="/mission">Mission</a></li>
+                                            <li><a tabIndex="-1" href="/membres">Mandature en cours et Historique des membres</a></li>
 
-                                            <li><a tabindex="-1" href="/commissaire">Commissariat du Gouvernement</a></li>
+                                            <li><a tabIndex="-1" href="/commissaire">Commissariat du Gouvernement</a></li>
 
-                                            <li><a tabindex="-1" href="/cooperations">Coopération</a></li>
+                                            <li><a tabIndex="-1" href="/cooperations">Coopération</a></li>
 
-                                            <li><a tabindex="-1" href="/mentions-legales">Mentions Légales</a></li>
+                                            <li><a tabIndex="-1" href="/mentions-legales">Mentions Légales</a></li>
 
-                                            <li><a tabindex="-1" href="/contact">Contact</a></li>
+                                            <li><a tabIndex="-1" href="/contact">Contact</a></li>
 
 
                                         </ul>
@@ -129,11 +129,11 @@ const Header = () => {
                             
                             
                                 <div>
-                                    {/* <Button color="primary" onClick={toggle_modal} className="client-espace-button"><h8>EN</h8></Button> */}
+                                    {/* <Button color="primary" onClick={toggle_modal} className="client-espace-button"><h6>EN</h6></Button> */}
                                 </div>
 
                                 { localStorage.getItem("user_token") ? <div>
-                                    <Button color="danger" onClick={session_logout} className="client-espace-button"><h8>Déconnexion</h8></Button>
+                                    <Button color="danger" onClick={session_logout} className="client-espace-button"><h6>Déconnexion</h6></Button>
                                 </div>:<div></div>}
 
                                 

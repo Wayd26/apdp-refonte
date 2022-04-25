@@ -39,7 +39,7 @@ const DutiesContent = (props) => {
         console.log(devoirs)
         console.log(categorie)
 
-         vos_devoirs_filtered = devoirs && devoirs.filter(elt => elt.category.name == categorie);
+         vos_devoirs_filtered = devoirs && devoirs.filter(elt => elt.category.name === categorie);
 console.log(vos_devoirs_filtered)
         // droits && droits.map(elt => console.log(elt))
 setDutiesToDisplay(vos_devoirs_filtered)
@@ -55,7 +55,7 @@ console.log(dutiesToDisplay)
 
 
             
-      {dutiesToDisplay != undefined ? dutiesToDisplay.map((item, index) => (
+      {dutiesToDisplay !== undefined ? dutiesToDisplay.map((item, index) => (
         <div className={"col-sm-6 col-xs-12 p-3"}> <DutyCard link={item.id} title={item.title} btnText={"Lire plus"} description={item.sub_title} imgSrc={item.image[0]} /> </div>
         )) : null}
             </div>

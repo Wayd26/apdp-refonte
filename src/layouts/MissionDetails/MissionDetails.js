@@ -21,7 +21,7 @@ const MissionDetails = (props) => {
     } else {
         // console.log("data data ", resp.data.data)
         let element = resp.data.data.filter(elt => {
-            if(elt.id == mission_id) {
+            if(elt.id === mission_id) {
             return elt
         } else {
             return false

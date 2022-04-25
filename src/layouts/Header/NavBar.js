@@ -65,11 +65,11 @@ export default class NavBar extends Component {
                                     {/* <NavDropdown.Item href="/plans-de-passation">Plans de passation</NavDropdown.Item> */}
 
                                     <div className='dropdown '>
-                                        <button class="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal bold 20px/35px Source Sans Pro", }}
+                                        <button className="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal bold 20px/35px Source Sans Pro", }}
 
                                             type="" data-toggle="dropdown">Marchés Publiques
                                         </button>
-                                        <ul class="dropdown-menu" style={{right: 0, left: "auto"}}>
+                                        <ul className="dropdown-menu" style={{right: 0, left: "auto"}}>
                                             <NavDropdown.Item href="/plans-de-passation">Plans de passation</NavDropdown.Item>
                                             <NavDropdown.Item href="/appels-d-offres">Appels d'offres</NavDropdown.Item>
                                         </ul>
@@ -84,11 +84,11 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="/quiz">Quiz</NavDropdown.Item>
 
                                     <div className='dropdown '>
-                                        <button class="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal bold 20px/35px Source Sans Pro", }}
+                                        <button className="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal bold 20px/35px Source Sans Pro", }}
 
                                             type="" data-toggle="dropdown">Mise en conformité
                                         </button>
-                                        <ul class="dropdown-menu" style={{right: 0, left: "auto"}}>
+                                        <ul className="dropdown-menu" style={{right: 0, left: "auto"}}>
                                             <NavDropdown.Item href="/vos-droits">Obligations Générales</NavDropdown.Item>
                                             <NavDropdown.Item href="#">Systèmes de vidéosurveillances</NavDropdown.Item>
                                             <NavDropdown.Item href="#">Sites web / application mobiles</NavDropdown.Item>
@@ -137,10 +137,10 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="/outils-conformite">Outils de conformité</NavDropdown.Item>
                                     <NavDropdown.Item href="/rapports-annuels">Rapports d'activités Annuelles</NavDropdown.Item>
                                     <div className='dropdown '>
-                                        <button class="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal bold 20px/35px Source Sans Pro", }}
+                                        <button className="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal bold 20px/35px Source Sans Pro", }}
                                             type="" data-toggle="dropdown">Textes Nationaux
                                         </button>
-                                        <ul class="dropdown-menu" style={{right: 0, left: "auto"}}>
+                                        <ul className="dropdown-menu" style={{right: 0, left: "auto"}}>
                                             <NavDropdown.Item href="/textes/lois">Lois</NavDropdown.Item>
                                             <NavDropdown.Item href="/textes/arretes">Arretes</NavDropdown.Item>
                                             <NavDropdown.Item href="/textes/decrets">Decrets</NavDropdown.Item>
@@ -148,10 +148,10 @@ export default class NavBar extends Component {
                                         </ul>
                                     </div>
                                     <div className='dropdown '>
-                                        <button class="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal bold 20px/35px Source Sans Pro", }}
+                                        <button className="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal bold 20px/35px Source Sans Pro", }}
                                             type="" data-toggle="dropdown">Textes Communautaires
                                         </button>
-                                        <ul class="dropdown-menu" style={{right: 0, left: "auto"}}>
+                                        <ul className="dropdown-menu" style={{right: 0, left: "auto"}}>
                                             <NavDropdown.Item href="/textes/accords">Accords</NavDropdown.Item>
                                             <NavDropdown.Item href="/textes/reglements">Règlements</NavDropdown.Item>
                                             <NavDropdown.Item href="/textes/directives">Directives</NavDropdown.Item>

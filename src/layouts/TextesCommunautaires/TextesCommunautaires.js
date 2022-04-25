@@ -14,13 +14,13 @@ const TextesCommunautaires = (props) => {
 
 
 useEffect(() => {
-  if(type == "accords") {
+  if(type === "accords") {
     setTitle("Accords")
  }
- if(type == "reglements") {
+ if(type === "reglements") {
   setTitle("Règlements")
  }
- if(type == "directives") {
+ if(type === "directives") {
   setTitle("Directives")
  }
   
@@ -29,13 +29,13 @@ useEffect(() => {
 
   const loadTextesCommunautaireData = async () => {
     let resp;
-    if(type == "accords") {
+    if(type === "accords") {
        resp = await getATypeOfArticles("accords")
     }
-    if(type == "reglements") {
+    if(type === "reglements") {
        resp = await getATypeOfArticles("reglements")
     }
-    if(type == "directives") {
+    if(type === "directives") {
        resp = await getATypeOfArticles("directives")
     }
 

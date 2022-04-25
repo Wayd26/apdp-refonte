@@ -49,7 +49,7 @@ const Deliberations = () => {
                   <Tab.Pane eventKey="first">
                     {/* <h3 style={{ 'text-transform': 'uppercase', 'text-align': 'left', marginBottom: "30px"}}>DéLIBéRATIONS 2022 (nombre: 04)</h3> */}
                     <div className={'pane-cards'}>
-                    {deliberations?.length != 0 ? <>{deliberations?.map((deliberation, index) =>
+                    {deliberations?.length !== 0 ? <>{deliberations?.map((deliberation, index) =>
                <Card style={{'text-align': 'left',}}>
                <Card.Body>
                  <Card.Title style={{'font-weight': 'bold',}}>{deliberation.title}</Card.Title>

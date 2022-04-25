@@ -10,7 +10,7 @@ const FaqElement = () => {
         setExpanded(!expanded)
     }
     return (
-        <div className={expanded == false ? 'faq-div-not-selected mx-auto' : 'faq-div-selected mx-auto' }>
+        <div className={expanded === false ? 'faq-div-not-selected mx-auto' : 'faq-div-selected mx-auto' }>
             <div className={'row d-flex flex-nowrap justify-content-between'}>
 
                 <div className={'faq-label col-11 m-auto'}>
@@ -18,12 +18,12 @@ const FaqElement = () => {
                 </div>
                 
                 <div className={'col'}>
-                {expanded == false ? <BiPlus className={'display-more-icon'} onClick={handlePlusOrMinusClick} /> : 
+                {expanded === false ? <BiPlus className={'display-more-icon'} onClick={handlePlusOrMinusClick} /> : 
                 <BiMinus className={'display-less-icon'} onClick={handlePlusOrMinusClick} /> }
                 </div>
 
             </div>
-            {expanded == true && <div className={'row faq-description'}>
+            {expanded === true && <div className={'row faq-description'}>
             Protéger ses données privées est devenu un véritable casse-tête. Alors que la journée mondiale de la protection des données privées fêtait ce 28 janvier son dixième anniversaire, les internautes sont de plus en plus nombreux à se pencher sur la protection de leurs données.
 
 De la simple collecte de données de navigation pour vous proposer des publicités ciblées au traçage de votre lèche-vitrine en ligne générant un e-mail vous rappelant de valider votre panier d’achat, la collecte des données est devenue aussi insidieuse que permanente. L’internaute peu aguerri, qui n’y prête bien souvent que très peu d’intérêt, voit alors ses données personnelles utilisées et monétisées à son insu. Encore pire, avec toutes ces données récoltées sur vos activités en ligne, les géants du web sont en mesure de vous placer dans des catégories très précises pour optimiser au mieux leur ciblage.

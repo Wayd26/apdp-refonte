@@ -70,7 +70,7 @@ const SignIn = () => {
                     localStorage.setItem("user_name",user.data.name);
                     localStorage.setItem("user_email",user.data.email);
                     setTimeout(() => {
-                        if (localStorage.getItem("redirect_url") != null){
+                        if (localStorage.getItem("redirect_url") !== null){
                             window.location = localStorage.getItem("redirect_url");
                         } else {
                             window.location = '/';
@@ -140,8 +140,8 @@ const SignIn = () => {
                         </div>
                         <div className={"auth-form-input-container d-flex flex-nowrap "}>
                             <FiKey className={"auth-form-input-icon key"}/>
-                            <input onChange={(e) => setPassword(e.target.value)} placeholder={"Entrer votre mot de passe"} type={passwordIsVisible == false ? "password" : "text"} className={"auth-form-input"} minLength="8"  required/>
-                        { passwordIsVisible == false ?
+                            <input onChange={(e) => setPassword(e.target.value)} placeholder={"Entrer votre mot de passe"} type={passwordIsVisible === false ? "password" : "text"} className={"auth-form-input"} minLength="8"  required/>
+                        { passwordIsVisible === false ?
                         <IoMdEye className={"auth-form-input-pwd-eye"} onClick={handlePasswordVisibility}/> : 
                             <IoMdEyeOff className={"auth-form-input-pwd-eye"} onClick={handlePasswordVisibility}/>
                         } 
@@ -155,14 +155,14 @@ const SignIn = () => {
 
                         <div className={"auth-form-under-link row d-flex justify-content-between"}>
 
-                        <div className={"col-7 auth-form-password-forgotten"}>{ connexion == true ? "Mot de passe oublié ?" : ""}</div>
-                        {/* <div className={"col-5 auth-form-other-option d-flex flex-nowrap justify-content-end"} onClick={handleAuthOperation}>{ connexion == true ? "S'inscrire" : "Se Connecter"}</div> */}
+                        <div className={"col-7 auth-form-password-forgotten"}>{ connexion === true ? "Mot de passe oublié ?" : ""}</div>
+                        {/* <div className={"col-5 auth-form-other-option d-flex flex-nowrap justify-content-end"} onClick={handleAuthOperation}>{ connexion === true ? "S'inscrire" : "Se Connecter"}</div> */}
                         </div>
-                        <button type='submit' className={"auth-form-btn"}>{ connexion == false ? "S'inscrire" : "Se Connecter"}<BsArrowRightShort className={"auth-form-btn-arrow-icon"}/></button>
+                        <button type='submit' className={"auth-form-btn"}>{ connexion === false ? "S'inscrire" : "Se Connecter"}<BsArrowRightShort className={"auth-form-btn-arrow-icon"}/></button>
 
                         <p className={"mb-3"}>
-                            <span className={"auth-form-checkbox-first-text"}>{ connexion == true ? "Vous n'avez pas encore un compte ?" : "Vous avez déjà un compte ?"}</span>
-                            <span className={"auth-form-other-option "} onClick={handleAuthOperation}>{ connexion == true ? " S'inscrire" : " Se Connecter"}</span>
+                            <span className={"auth-form-checkbox-first-text"}>{ connexion === true ? "Vous n'avez pas encore un compte ?" : "Vous avez déjà un compte ?"}</span>
+                            <span className={"auth-form-other-option "} onClick={handleAuthOperation}>{ connexion === true ? " S'inscrire" : " Se Connecter"}</span>
                         </p>
 
                     </div>
