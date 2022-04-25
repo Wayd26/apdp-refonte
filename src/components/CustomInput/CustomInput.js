@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Input,InputGroup,Label,FormGroup} from 'reactstrap';
+import './CustomInput.css';
 
 export default function CustomInput({field,updateValue}) {
     const [currentRadio, setRadio] = useState(null);
@@ -8,7 +9,7 @@ export default function CustomInput({field,updateValue}) {
     if(field.input_type.element == 'select' || field.input_type.element == 'multi-select') {
         return (
             <>
-                    <FormGroup>
+                    <FormGroup style={{ textAlign: 'left' }}>
                         <Label for={field.id}>
                             {field.name}
                         </Label>
@@ -40,7 +41,7 @@ export default function CustomInput({field,updateValue}) {
         if(field.input_type.element == 'textarea'){
             return (
                 <>
-                    <FormGroup className="d-flex flex-column justify-content-center align-items-center">
+                    <FormGroup className="d-flex flex-column justify-content-center align-items-center" style={{ alignSelf: 'flex-start' }}>
                     <Label for={field.id}>{field.name}</Label>
                     <Input 
                         className="form-control"
@@ -65,7 +66,7 @@ export default function CustomInput({field,updateValue}) {
         } else if(field.input_type.type == 'radio'){
             return (
                 <>
-                    <FormGroup>
+                    <FormGroup style={{ textAlign: 'left' }}>
                         <Label for={field.id}>
                             {field.name}
                         </Label>
@@ -74,7 +75,7 @@ export default function CustomInput({field,updateValue}) {
                              style={{ display: "flex"}}>
                                 <Input 
                                  className="form-control" 
-                                 style={{ width: "10px", height: "25px", marginRight: 10}}
+                                 style={{ width: "15px", height: "15px", marginRight: 10}}
                                  type="radio" 
                                  checked={currentRadio === op.name }
                                  onChange={(e) => {
@@ -103,7 +104,7 @@ export default function CustomInput({field,updateValue}) {
         } else if(field.input_type.type == 'checkbox'){
             return (
                 <>
-                    <FormGroup>
+                    <FormGroup style={{ textAlign: 'left' }}>
                         <Label for={field.id}>
                             {field.name}
                         </Label>
@@ -140,7 +141,7 @@ export default function CustomInput({field,updateValue}) {
         } else {
             return (
                 <>
-                    <FormGroup className="d-flex flex-column justify-content-center align-items-center">
+                    <FormGroup className="d-flex flex-column justify-content-center align-items-center" style={{ alignSelf: 'flex-start' }}>
                     <Label for={field.id}>{field.name}</Label>
                     <Input 
                         className="form-control"

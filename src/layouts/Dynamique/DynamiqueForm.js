@@ -110,11 +110,11 @@ export default function DynamiqueForm() {
                             {formulaire && formulaire.data.sections.map((section) => (
                                 <Step label={section.name} />    
                             ))}</Stepper> */}
-                        <h2 style={{ marginBottom: '50px' }}>FORMULAIRE</h2>
+                        <h2 style={{ marginBottom: '50px', fontSize: 'large' }}>FORMULAIRE</h2>
         
                         <div className="row">
                             {formulaire && formulaire.data.sections[current]?.questions.map((field) => (
-                                <div className="col-sm-3">
+                                <div>
                                     <CustomInput key={field.id} field={field} updateValue={updateFormData}/>
                                 </div>
                                 ))
