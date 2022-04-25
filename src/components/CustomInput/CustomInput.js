@@ -2,15 +2,15 @@ import React, {useState, useEffect} from 'react';
 import {Input,InputGroup,Label,FormGroup} from 'reactstrap';
 import './CustomInput.css';
 
-export default function CustomInput({field,updateValue}) {
+export default function CustomInput({field, updateValue, updateDependentSection}) {
     const [currentRadio, setRadio] = useState(null);
     const [currentCheckBox, setCheckbox] = useState(null);
 
-    if(field.input_type.element == 'select' || field.input_type.element == 'multi-select') {
+    if(field.input_type.element === 'select' || field.input_type.element === 'multi-select') {
         return (
             <>
                     <FormGroup style={{ textAlign: 'left' }}>
-                        <Label for={field.id}>
+                        <Label string={field.id}>
                             {field.name}
                         </Label>
                         <Input
@@ -21,6 +21,7 @@ export default function CustomInput({field,updateValue}) {
                         required = {field.answer_required === 0 ? false: true}
                         type="select"
                         onChange={(e) => {
+                            updateDependentSection(e.target.name);
                             updateValue({
                                 answer_text: e.target.value,
                                 // choice: {'group': field.option_group_id, 'value': e.target.id},
@@ -31,18 +32,18 @@ export default function CustomInput({field,updateValue}) {
                         
                         >
                             <option value="None"></option>
-                            {field.option_choices.map(op => <option key={op.id} value={op.name}>{op.name}</option>)}
+                            {field.option_choices.map(op => <option key={op.id} value={op.name} name={op.pivot.related_section}>{op.name}</option>)}
                         </Input>
                     </FormGroup>
             </>
         )
 
     } else {
-        if(field.input_type.element == 'textarea'){
+        if(field.input_type.element === 'textarea'){
             return (
                 <>
                     <FormGroup className="d-flex flex-column justify-content-center align-items-center" style={{ alignSelf: 'flex-start' }}>
-                    <Label for={field.id}>{field.name}</Label>
+                    <Label string={field.id}>{field.name}</Label>
                     <Input 
                         className="form-control"
                         type={field.input_type.element} 
@@ -63,11 +64,11 @@ export default function CustomInput({field,updateValue}) {
                     </FormGroup>
                 </>
             )
-        } else if(field.input_type.type == 'radio'){
+        } else if(field.input_type.type === 'radio'){
             return (
                 <>
                     <FormGroup style={{ textAlign: 'left' }}>
-                        <Label for={field.id}>
+                        <Label string={field.id}>
                             {field.name}
                         </Label>
                         {field.option_choices.map(op => 
@@ -79,7 +80,8 @@ export default function CustomInput({field,updateValue}) {
                                  type="radio" 
                                  checked={currentRadio === op.name }
                                  onChange={(e) => {
-                                    setRadio(e.target.value)
+                                    updateDependentSection(e.target.name);
+                                    setRadio(e.target.value);
                                     updateValue({
                                         answer_text: e.target.value,
                                         // choice: {'group': field.option_group_id, 'value': op.id},
@@ -88,11 +90,10 @@ export default function CustomInput({field,updateValue}) {
                                     });
                                  }} 
                                  key={op.id} 
-                                 value={op.name}>
-                                    {op.name}
-                                </Input> 
+                                 value={op.name}
+                                 name={op.pivot.related_section}/> 
                                 <Label 
-                                 for={op.name} 
+                                 string={op.name} 
                                  style={{ marginTop: 5 }}>
                                     {op.name}
                                 </Label>
@@ -101,11 +102,11 @@ export default function CustomInput({field,updateValue}) {
                     </FormGroup>
                 </>
             )
-        } else if(field.input_type.type == 'checkbox'){
+        } else if(field.input_type.type === 'checkbox'){
             return (
                 <>
                     <FormGroup style={{ textAlign: 'left' }}>
-                        <Label for={field.id}>
+                        <Label string={field.id}>
                             {field.name}
                         </Label>
                         {field.option_choices.map(op => 
@@ -116,6 +117,7 @@ export default function CustomInput({field,updateValue}) {
                                  type="checkbox"
                                  checked={currentCheckBox === op.name }
                                  onChange={(e) => {
+                                    updateDependentSection(e.target.name);
                                     setCheckbox(e.target.value);
                                     updateValue({
                                         answer_text: e.target.value,
@@ -125,12 +127,13 @@ export default function CustomInput({field,updateValue}) {
                                     });
                                  }} 
                                  key={op.id} 
-                                 value={op.name}>
+                                 value={op.name}
+                                 name={op.pivot.related_section}>
                                     {op.name}
                                 </Input> 
 
                                 <Label 
-                                 for={op.name} 
+                                 string={op.name} 
                                  style={{ marginTop: 5 }}>{op.name}</Label>
                             </div>
                         )};
@@ -142,7 +145,7 @@ export default function CustomInput({field,updateValue}) {
             return (
                 <>
                     <FormGroup className="d-flex flex-column justify-content-center align-items-center" style={{ alignSelf: 'flex-start' }}>
-                    <Label for={field.id}>{field.name}</Label>
+                    <Label string={field.id}>{field.name}</Label>
                     <Input 
                         className="form-control"
                         type={field.input_type.type} 

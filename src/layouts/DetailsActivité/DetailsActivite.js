@@ -28,7 +28,7 @@ const DetailsActivite = () => {
         } else {
             // console.log("data data ", resp.data.data)
                 let element = resp.data.data.filter(elt => {
-                    if(elt.id == activity_id) {
+                    if(elt.id === activity_id) {
                     return elt
                 } else {
                     return false

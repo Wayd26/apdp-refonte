@@ -15,7 +15,7 @@ const AvisImportant = (props) => {
                 {/* </div> */}
                 <span className="avis-important-button col" style={{cursor: "pointer"}}>Télécharger</span>
             </span>
-                {/* <p className={parseInt(expiryTime) == 0 ? "avis-important-expiry-time-not-active" : "avis-important-expiry-time-active"}>{parseInt(expiryTime) == 0 ? "Expiré" : "Expire dans " + expiryTime + " jour(s)"}</p> */}
+                {/* <p className={parseInt(expiryTime) === 0 ? "avis-important-expiry-time-not-active" : "avis-important-expiry-time-active"}>{parseInt(expiryTime) === 0 ? "Expiré" : "Expire dans " + expiryTime + " jour(s)"}</p> */}
         </div>
     )
 }

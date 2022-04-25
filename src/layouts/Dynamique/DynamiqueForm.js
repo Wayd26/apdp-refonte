@@ -16,6 +16,7 @@ export default function DynamiqueForm() {
     const [current, setCurrent] = useState(0)
     const [final, setFinal] = useState(false)
     const [formulaire, setFormulaire] = useState(null)
+    const [currentDependentSection, setCurrentDependentSection] = useState(null)
 
     const loadForm = async () => {
         const resp = await getForm(window.location.pathname.split('/').pop())
@@ -25,7 +26,7 @@ export default function DynamiqueForm() {
             console.log('COOOL', resp);
             setFormulaire(resp.data);
             if (resp.data.data.sections.length > 1){
-                if (resp.data.data.last_section_submitted == resp.data.data.sections[resp.data.data.sections.length - 1].id || resp.data.data.last_section_submitted == null ) {
+                if (resp.data.data.last_section_submitted === resp.data.data.sections[resp.data.data.sections.length - 1].id || resp.data.data.last_section_submitted === null ) {
                     setCurrent(0)
                 } else {
                     setCurrent(resp.data.data.last_section_submitted)
@@ -42,7 +43,7 @@ export default function DynamiqueForm() {
     }
 
     useEffect(() => {
-        if (localStorage.getItem("user_token") == "" || localStorage.getItem("user_token") == null){
+        if (localStorage.getItem("user_token") === "" || localStorage.getItem("user_token") === null){
             localStorage.setItem("redirect_url", window.location.pathname);
             window.location = "/auth";
         }
@@ -54,6 +55,12 @@ export default function DynamiqueForm() {
         return tab.some(function(el) {
             return el?.question === question;
         }); 
+    }
+
+    function updateDependentSection(section_id) {
+        // console.log(section_id);
+        setCurrentDependentSection(section_id);
+        localStorage.setItem('last_standard_section', current);
     }
 
     const updateFormData = (answerObject) => {
@@ -72,6 +79,7 @@ export default function DynamiqueForm() {
     }
 
     const handleSubmit = async (e) => {
+        console.log('Current Dependent Section ', currentDependentSection);
         e.preventDefault();
         const resp = await submitFormSection(window.location.pathname.split('/').pop(), formulaire.data.sections[current].id, formData);
         if (final){
@@ -82,7 +90,28 @@ export default function DynamiqueForm() {
                 }, 2000);
             }
         } else {
-            setCurrent(current + 1);
+            console.log('Ce nest pas la fin');
+            if (formulaire.data.sections[current].type !== 'standard'){
+                console.log('Ce nest pas une section standard');
+                setCurrentDependentSection(null);
+                setCurrent(parseInt(localStorage.getItem('last_standard_section')) + 1);
+                localStorage.setItem('last_standard_section', '');
+            } else {
+                console.log('Ce nest pas une section dépendante');
+                if (currentDependentSection) {
+                    console.log('Une section de redirection existe: ', currentDependentSection);
+                    for (let f = 0; f < formulaire.data.sections.length; f++) {
+                        const element = formulaire.data.sections[f];
+                        if (String(element.id) === currentDependentSection){
+                            setCurrent(formulaire.data.sections.indexOf(element));
+                            console.log('Redirigeons vers la section à l\'index ', formulaire.data.sections.indexOf(element))
+                        }
+                    }
+                } else {
+                    console.log('Rien à faire! Passons à la section suivante...')
+                    setCurrent(current + 1);
+                }
+            }
         }
     }
 
@@ -101,12 +130,12 @@ export default function DynamiqueForm() {
     }
 
     try {
-        if (formulaire.data.sections[current]?.questions.length != 0){
+        if (formulaire.data.sections[current]?.questions.length !== 0){
             return (
                 <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
                     <Form className="form-style" onSubmit={handleSubmit}>
                         {/* <Stepper activeStep={current}>
-                       
+                        
                             {formulaire && formulaire.data.sections.map((section) => (
                                 <Step label={section.name} />    
                             ))}</Stepper> */}
@@ -115,7 +144,7 @@ export default function DynamiqueForm() {
                         <div className="row">
                             {formulaire && formulaire.data.sections[current]?.questions.map((field) => (
                                 <div>
-                                    <CustomInput key={field.id} field={field} updateValue={updateFormData}/>
+                                    <CustomInput key={field.id} field={field} updateValue={updateFormData} updateDependentSection={updateDependentSection}/>
                                 </div>
                                 ))
                             }
@@ -134,7 +163,7 @@ export default function DynamiqueForm() {
                                     </Button>
                                 )}
     
-                                {formulaire && current === formulaire.data.sections.length - 1 && (
+                                {formulaire && current === formulaire.data.sections.length - 1 && formulaire.data.sections[current].type === 'standard' && (
                                     <Button className="auth-form-btn" type="submit" onClick={(e) => setFinal(true)}>
                                         Valider
                                     </Button>

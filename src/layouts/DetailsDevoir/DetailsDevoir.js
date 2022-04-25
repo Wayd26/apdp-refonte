@@ -22,7 +22,7 @@ const DetailsDevoir = (props) => {
         } else {
             // console.log("data data ", resp.data.data)
                 let element = resp.data.data.filter(elt => {
-                    if(elt.id == devoir_id) {
+                    if(elt.id === devoir_id) {
                     return elt
                 } else {
                     return false
