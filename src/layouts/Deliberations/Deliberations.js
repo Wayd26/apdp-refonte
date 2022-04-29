@@ -31,7 +31,7 @@ const Deliberations = () => {
       <div style={{background: '#E2E2E2', paddingTop: "40px", paddingBottom: "40px"}}>
         {/* <ActualiteCarousel/> */}
         <div className={'deliberations-div'}>
-          <h2>DÉLIBÉRATIONS PUBLIÉES</h2>
+          <h2>DÉLIBÉRATIONS PUBLIQUES</h2>
           <Tab.Container id="top-tabs-example" defaultActiveKey="first">
             <Row>
               <div className={'row'}>

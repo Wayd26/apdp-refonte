@@ -23,8 +23,8 @@ const Header = () => {
         if(resp.response && resp.response.status !== 200){
             console.log("data error ", resp.response)
         } else {
-            console.log("data data ", resp.data)
-            setBreaknews(resp.data.data)
+            console.log("data data ", resp?.data)
+            setBreaknews(resp.data?.data)
         }
     }
   

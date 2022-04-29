@@ -89,6 +89,7 @@
     font: normal normal 600 21px/28px Montserrat;
     letter-spacing: 0px;
     color: #4385f6;
+    cursor: pointer;
   }
   
   .arrete-row-details-button-icon {

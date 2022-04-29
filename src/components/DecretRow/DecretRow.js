@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {FiPlus} from "react-icons/fi";
 import {MdFileDownload} from "react-icons/md";
 import "./DecretRow.css";
-// import decretImg from  "../../assets/images/img7.jpg"
+import decretImage from  "../../assets/icons/document.svg"
 
 const DecretRow = (props) => {
     const { label, description, fileUrl, decretImg } = props;
@@ -20,17 +20,17 @@ const DecretRow = (props) => {
             </div>
 
            {opened === true ? <div className="decret-row-details row ">
-                <div className="decret-row-details-text-container col-sm-8">
+                {/* <div className="decret-row-details-text-container col-sm-8">
                     <p className="decret-row-details-text">
                     {description}
                     </p>
-                </div>
-                <div className="decret-row-details-button-container col-sm">
-                    <img src={decretImg} className="decret-row-details-image" />
-                    <a href={fileUrl} target={"_blank"} rel={"noopener noreferer"} download>
-                        <button className="decret-arrete-row-details-button">
-                            Télécharger   <MdFileDownload className="decret-row-details-button-icon" />
-                        </button>
+                </div> */}
+                <div className="d-flex justify-content-between">
+                    <img src={decretImage} className="decret-row-details-image" />
+                    <a href={fileUrl} download>
+                    <button className="arrete-row-details-button">
+                        Télécharger   <MdFileDownload className="arrete-row-details-button-icon" />
+                    </button>
                     </a>
                 
                 </div>

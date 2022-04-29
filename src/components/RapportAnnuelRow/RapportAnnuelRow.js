@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import "./RapportAnnuelRow.css"
-import {FiPlus} from "react-icons/fi"
-import {MdFileDownload} from "react-icons/md"
-import rapportImg from  "../../assets/images/img6.jpg"
+import { FiPlus } from "react-icons/fi"
+import { MdFileDownload } from "react-icons/md"
+import rapportImg from "../../assets/icons/document.svg"
 
 const RapportAnnuelRow = (props) => {
-    const {period, description, fileUrl} = props; 
+    const { period, description, fileUrl, title } = props;
     const [opened, setOpened] = useState(false);
 
     const handleOpenDetails = () => {
@@ -15,20 +15,20 @@ const RapportAnnuelRow = (props) => {
         <div className="rapports-annuels-row">
 
             <div className="rapports-annuels-row-blue" onClick={handleOpenDetails} >
-                <FiPlus className="rapports-annuels-row-blue-plus-icon"/> Rapport Bilan {period}
-            </div> 
+                <FiPlus className="rapports-annuels-row-blue-plus-icon" /> {title} {period}
+            </div>
 
-           {opened === true ? <div className="rapports-annuels-row-details row ">
-                <div className="rapports-annuels-row-details-text-container col-sm-8">
+            {opened === true ? <div className="row d-flex flex-justify-content mt-4">
+                {/* <div className="rapports-annuels-row-details-text-container col-sm-8">
                     <p className="rapports-annuels-row-details-text">
                     {description}
                     </p>
-                </div>
-                <div className="rapports-annuels-row-details-button-container col-sm">
-                <img src={rapportImg} className="rapports-annuels-row-details-image" />
+                </div> */}
+                <div className="d-flex justify-content-between">
+                    <img src={rapportImg} className="rapports-annuels-row-details-image" />
                     <a href={fileUrl} download>
                         <button className="rapports-annuels-row-details-button">
-                            Télécharger   <MdFileDownload className="rapports-annuels-row-details-button-icon"/>
+                            Télécharger   <MdFileDownload className="rapports-annuels-row-details-button-icon" />
                         </button>
                     </a>
                 </div>

@@ -44,7 +44,7 @@ const OutilsConformite = () => {
       {outilsConformite?.length !== 0 ? 
       outilsConformite?.map((item, index) => (
       <div className="col-sm-6 col-xs-12 col-md-6">
-      <OutilsConformiteCard label={item.label}/>
+      <OutilsConformiteCard label={item.title} fileUrl={item.image_url}/>
       </div>
       )) 
       :

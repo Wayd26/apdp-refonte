@@ -10,20 +10,34 @@ import { getATypeOfArticles } from '../../http/http';
 const VosDevoirs = () => {
 
     const [key, setKey] = useState('particulier');
-    const [devoirs, setDevoirs] = useState();
+    const [devoirsPrives, setDevoirsPrives] = useState();
+    const [devoirsParticuliers, setDevoirsParticuliers] = useState();
+    const [devoirsPubliques, setDevoirsPubliques] = useState();
 
-    const loadDevoirsData = async () => {
-      const resp = await getATypeOfArticles("devoirs")
-      if(resp.response && resp.response.status !== 200){
-          console.log("error ",resp.response)
-      } else {
-          console.log("data ",resp.data.data)
-          setDevoirs(resp.data.data)
-      }
-  }
+  
+  const loadDevoirsData = async (type) => {
+    const resp = await getATypeOfArticles(type)
+    if(resp.response && resp.response.status !== 200){
+        console.log("error ",resp.response)
+    } else {
+        console.log("data ",resp.data.data)
+        if(type == "devoir_particulier") {
+          setDevoirsParticuliers(resp.data.data)
+        }
+        if(type == "devoir_structure_privee") {
+          setDevoirsPrives(resp.data.data)
+        }
+        if(type == "devoir_administration_publique") {
+          setDevoirsPubliques(resp.data.data)
+        }
+        
+    }
+}
     
     useEffect(() => {
-        loadDevoirsData();        
+        loadDevoirsData("devoir_particulier");        
+        loadDevoirsData("devoir_structure_privee");        
+        loadDevoirsData("devoir_administration_publique");            
     }, [])
 
 
@@ -38,14 +52,14 @@ const VosDevoirs = () => {
       className="mb-3"
     >
       <Tab eventKey="particulier" title=" Je suis un Particulier">
-        <DutiesContent categorie={"Particulier"} devoirs={devoirs}/>
+        <DutiesContent categorie={"Particulier"} devoirs={devoirsParticuliers}/>
       </Tab>
       <Tab eventKey="entreprise_et_organisme" title=" Je suis une Entreprise et Organisme">
-      <DutiesContent categorie={"Structure Privée"}  devoirs={devoirs}/>
+      <DutiesContent categorie={"Structure Privée"}  devoirs={devoirsPrives}/>
 
       </Tab>
       <Tab eventKey="administration_publique" title="Je suis une Administration Publique" >
-      <DutiesContent categorie={"Administration Publique"} devoirs={devoirs}/>
+      <DutiesContent categorie={"Administration Publique"} devoirs={devoirsPubliques}/>
       </Tab>
     </Tabs>
         </div>

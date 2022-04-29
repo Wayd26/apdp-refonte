@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import "./LoiCard.css";
-import img_opposition from "../../assets/icons/droit-opposition.jpg"
+import img_loi from "../../assets/icons/document.svg"
 import {useNavigate} from "react-router-dom"
 
 const LoiCard = (props) => {
@@ -17,10 +17,14 @@ const LoiCard = (props) => {
     }
     return (
         <div className="loi-card">
-            <img  src={data.image_url} className="loi-card-image"/>
+            <img  src={img_loi} className="loi-card-image"/>
             <p className="loi-card-title">{data.title}</p>
             <p className="loi-card-description">{data.sub_title}</p>
-            <button onClick={() =>handleButtonClicked(data.id)} className="loi-card-button">EN SAVOIR PLUS</button>
+            <a href={data.image_url} download>
+            <button 
+            // onClick={() =>handleButtonClicked(data.id)}
+             className="loi-card-button">Télécharger</button>
+            </a>
         </div>
     )
 }

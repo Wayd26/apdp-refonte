@@ -35,7 +35,7 @@ const RapportsAnnuels = () => {
 
                 <div className="rapports-annuels-row-box">
                     {rapports.map((item, index) => (
-                        <RapportAnnuelRow period={item.period} description={item.description} fileUrl={item.fileUrl}/>
+                        <RapportAnnuelRow period={item.period} title={item.title} description={item.description} fileUrl={item.image_url}/>
                     ))}
                 </div>
             </div>

@@ -11,20 +11,33 @@ import {useNavigate} from "react-router-dom";
 const VosDroits = () => {
 
     const [key, setKey] = useState('particulier');
-    const [droits, setDroits] = useState();
+    const [droitsPrives, setDroitsPrives] = useState();
+    const [droitsParticuliers, setDroitsParticuliers] = useState();
+    const [droitsPubliques, setDroitsPubliques] = useState();
 
-    const loadDroitsData = async () => {
-        const resp = await getATypeOfArticles("droits")
+    const loadDroitsData = async (type) => {
+        const resp = await getATypeOfArticles(type)
         if(resp.response && resp.response.status !== 200){
             console.log("error ",resp.response)
         } else {
             console.log("data ",resp.data.data)
-            setDroits(resp.data.data)
+            if(type == "droit_particulier") {
+              setDroitsParticuliers(resp.data.data)
+            }
+            if(type == "droit_structure_privee") {
+              setDroitsPrives(resp.data.data)
+            }
+            if(type == "droit_administration_publique") {
+              setDroitsPubliques(resp.data.data)
+            }
+            setDroitsParticuliers(resp.data.data)
         }
     }
     
     useEffect(() => {
-        loadDroitsData();        
+        loadDroitsData("droit_particulier");        
+        loadDroitsData("droit_structure_privee");        
+        loadDroitsData("droit_administration_publique");        
     }, [])
 
 
@@ -43,19 +56,19 @@ const VosDroits = () => {
       {/* <div className="col-sm-4"> */}
 
       <Tab eventKey="particulier" title=" Je suis un Particulier">
-        <RightsContent categorie={"Particulier"} droits={droits}/>
+        <RightsContent categorie={"Particulier"} droits={droitsParticuliers}/>
       </Tab>
       {/* </div> */}
       {/* <div className="col-sm-4"> */}
       <Tab eventKey="entreprise_et_organisme" title="Je suis une Entreprise et Organisme">
-      <RightsContent categorie={"Structure Privée"}  droits={droits} />
+      <RightsContent categorie={"Structure Privée"}  droits={droitsPrives} />
  
       </Tab>
       {/* </div> */}
       
       {/* <div className="col-sm-4"> */}
       <Tab eventKey="administration_publique" title="Je suis une Administration Publique">
-      <RightsContent categorie={"Administration Publique"} droits={droits} />
+      <RightsContent categorie={"Administration Publique"} droits={droitsPubliques} />
       </Tab>  
       {/* </div> */}
     </Tabs>
