@@ -58,6 +58,7 @@ import Photothèque from '../Photothèque/Photothèque';
 import Vidéothèque from '../Vidéothèque/Vidéothèque';
 import PlansDePassation from '../PlansDePassation/PlansDePassation';
 import Contact from '../Contact/Contact';
+import StatutDemande from '../StatutDemande/StatutDemande';
 
 
 const Content = () => {
@@ -120,6 +121,7 @@ const Content = () => {
           <Route path="/outils-conformite" element={<OutilsConformite />} />
           <Route path="/espace-rt" element={<EspaceRT />} />
           <Route path="/espace-dpo" element={<EspaceDPO />} />
+          <Route path="/statut-demande" element={<StatutDemande />} />
           <Route path="/formulaire/:id" element={<DynamiqueForm />} />
                     <Route path="/activites" element={<Activites/>} />
                     <   Route path="/" element={<Home />} >

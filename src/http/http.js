@@ -55,6 +55,21 @@ export function get_user(user_token){
    .catch(error => error);
 }
 
+export function getRequestedQuery(ref_number){
+   var config = {
+     method: 'get',
+     url: `https://laravel.web.sandbox.hard-soft.solutions/api/v1/me`,
+     headers: { 
+       'Accept': 'application/json', 
+       'Authorization': `Bearer ${ref_number}`
+     }
+   };
+   
+   return axios(config)
+   .then(response => response)
+   .catch(error => error);
+}
+
 export function logout(user_token){
    var config = {
      method: 'get',
