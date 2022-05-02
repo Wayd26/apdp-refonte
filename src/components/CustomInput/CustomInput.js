@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from 'react';
-import {Input,InputGroup,Label,FormGroup} from 'reactstrap';
-import './CustomInput.css';
+import React, {useState, useEffect} from 'react'
+import {Input,InputGroup,Label,FormGroup} from 'reactstrap'
+import './CustomInput.css'
 
 export default function CustomInput({field, updateValue, updateDependentSection}) {
-    const [currentRadio, setRadio] = useState(null);
-    const [currentCheckBox, setCheckbox] = useState(null);
+    const [currentRadio, setRadio] = useState(null)
+    const [currentCheckBox, setCheckbox] = useState(null)
 
     if(field.input_type.element === 'select' || field.input_type.element === 'multi-select') {
         return (
@@ -21,13 +21,13 @@ export default function CustomInput({field, updateValue, updateDependentSection}
                         required = {field.answer_required === 0 ? false: true}
                         type="select"
                         onChange={(e) => {
-                            updateDependentSection(e.target.name);
+                            updateDependentSection(e.target.name)
                             updateValue({
                                 answer_text: e.target.value,
                                 // choice: {'group': field.option_group_id, 'value': e.target.id},
                                 choice: field.option_group_id,
                                 question: field.id
-                            });
+                            })
                         }}
                         
                         >
@@ -42,7 +42,7 @@ export default function CustomInput({field, updateValue, updateDependentSection}
         if(field.input_type.element === 'textarea'){
             return (
                 <>
-                    <FormGroup className="d-flex flex-column justify-content-center align-items-center" style={{ alignSelf: 'flex-start' }}>
+                    <FormGroup className="d-flex flex-row justify-content-left align-items-left mb-3" style={{ alignSelf: 'flex-start' }}>
                     <Label string={field.id}>{field.name}</Label>
                     <Input 
                         className="form-control"
@@ -56,7 +56,7 @@ export default function CustomInput({field, updateValue, updateDependentSection}
                                 // choice: {'group': field.option_group_id, 'value': null},
                                 choice: field.option_group_id,
                                 question: field.id
-                            });
+                            })
                         }}
                         // required={field.obligate}
     
@@ -67,27 +67,27 @@ export default function CustomInput({field, updateValue, updateDependentSection}
         } else if(field.input_type.type === 'radio'){
             return (
                 <>
-                    <FormGroup style={{ textAlign: 'left' }}>
+                    <FormGroup style={{ textAlign: 'left', margin: "20px 0px", }}>
                         <Label string={field.id}>
                             {field.name}
                         </Label>
                         {field.option_choices.map(op => 
                             <div 
-                             style={{ display: "flex"}}>
+                             style={{ display: "flex",}}>
                                 <Input 
                                  className="form-control" 
                                  style={{ width: "15px", height: "15px", marginRight: 10}}
                                  type="radio" 
                                  checked={currentRadio === op.name }
                                  onChange={(e) => {
-                                    updateDependentSection(e.target.name);
-                                    setRadio(e.target.value);
+                                    updateDependentSection(e.target.name)
+                                    setRadio(e.target.value)
                                     updateValue({
                                         answer_text: e.target.value,
                                         // choice: {'group': field.option_group_id, 'value': op.id},
                                         choice: field.option_group_id,
                                         question: field.id
-                                    });
+                                    })
                                  }} 
                                  key={op.id} 
                                  value={op.name}
@@ -98,7 +98,7 @@ export default function CustomInput({field, updateValue, updateDependentSection}
                                     {op.name}
                                 </Label>
                             </div>
-                        )};
+                        )}
                     </FormGroup>
                 </>
             )
@@ -117,14 +117,14 @@ export default function CustomInput({field, updateValue, updateDependentSection}
                                  type="checkbox"
                                  checked={currentCheckBox === op.name }
                                  onChange={(e) => {
-                                    updateDependentSection(e.target.name);
-                                    setCheckbox(e.target.value);
+                                    updateDependentSection(e.target.name)
+                                    setCheckbox(e.target.value)
                                     updateValue({
                                         answer_text: e.target.value,
                                         // choice: {'group': field.option_group_id, 'value': op.id},
                                         choice: field.option_group_id,
                                         question: field.id
-                                    });
+                                    })
                                  }} 
                                  key={op.id} 
                                  value={op.name}
@@ -136,7 +136,7 @@ export default function CustomInput({field, updateValue, updateDependentSection}
                                  string={op.name} 
                                  style={{ marginTop: 5 }}>{op.name}</Label>
                             </div>
-                        )};
+                        )}
                         
                     </FormGroup>
                 </>
@@ -144,24 +144,24 @@ export default function CustomInput({field, updateValue, updateDependentSection}
         } else {
             return (
                 <>
-                    <FormGroup className="d-flex flex-column justify-content-center align-items-center" style={{ alignSelf: 'flex-start' }}>
-                    <Label string={field.id}>{field.name}</Label>
-                    <Input 
-                        className="form-control"
-                        type={field.input_type.type} 
-                        name={field.id} 
-                        id={field.id}
-                        required = {field.answer_required === 0 ? false: true}
-                        onChange={(e) => {
-                            updateValue({
-                                answer_text: e.target.value,
-                                // choice: {'group': field.option_group_id, 'value': null},
-                                choice: field.option_group_id,
-                                question: field.id
-                            });
-                        }}
-                        // required={field.obligate}
-    
+                    <FormGroup className="d-flex flex-row justify-content-left align-items-left mb-3" style={{ alignSelf: 'flex-start', justifyContent: "space-between", }}>
+                        <Label string={field.id}>{field.name}</Label>
+                        <Input 
+                            className="form-control"
+                            type={field.input_type.type} 
+                            name={field.id} 
+                            id={field.id}
+                            required = {field.answer_required === 0 ? false: true}
+                            onChange={(e) => {
+                                updateValue({
+                                    answer_text: e.target.value,
+                                    // choice: {'group': field.option_group_id, 'value': null},
+                                    choice: field.option_group_id,
+                                    question: field.id
+                                })
+                            }}
+                            // required={field.obligate}
+        
                         />
                     </FormGroup>
                 </>

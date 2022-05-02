@@ -1,3 +1,10 @@
 .form-style .form-label {
     align-self: flex-start !important;
+    margin: auto 0 auto 0;
+    text-align: left !important;
+}
+
+.form-control {
+    margin: 0 10px;
+    width: 80%;
 }
