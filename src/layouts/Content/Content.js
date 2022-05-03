@@ -58,11 +58,8 @@ import Photothèque from '../Photothèque/Photothèque';
 import Vidéothèque from '../Vidéothèque/Vidéothèque';
 import PlansDePassation from '../PlansDePassation/PlansDePassation';
 import Contact from '../Contact/Contact';
-<<<<<<< HEAD
 import Recommandations from '../Recommandations/Recommandations';
-=======
 import StatutDemande from '../StatutDemande/StatutDemande';
->>>>>>> c2fc951513b609c50dc162332528dbcd919ec5e0
 
 
 const Content = () => {
