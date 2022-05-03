@@ -17,6 +17,8 @@ export default function DynamiqueForm() {
     const [final, setFinal] = useState(false)
     const [formulaire, setFormulaire] = useState(null)
     const [currentDependentSection, setCurrentDependentSection] = useState(null)
+    const [filledSections, setFilledSections] = useState(0)
+    const [dependentSections, setDependentSections] = useState([])
 
     const loadForm = async () => {
         const resp = await getForm(window.location.pathname.split('/').pop())
@@ -38,6 +40,15 @@ export default function DynamiqueForm() {
                         }
                     }
                 }
+                var sections_to_exclude = []
+                for (let p = 0; p < resp.data.data.sections.length; p++) {
+                    const elem = resp.data.data.sections[p];
+                    if (elem.type === "dependent"){
+                        sections_to_exclude.push(elem.id);
+                        console.log("DEPENDENT SECTIONS", elem);
+                    }
+                }
+                setDependentSections(sections_to_exclude);
             }
         }
     }
@@ -48,6 +59,7 @@ export default function DynamiqueForm() {
             window.location = "/auth";
         }
         loadForm();
+        console.log("DEEEEEEE", dependentSections);
     }, [])
 
     function answerExists(question) {
@@ -82,6 +94,7 @@ export default function DynamiqueForm() {
         console.log('Current Dependent Section ', currentDependentSection);
         e.preventDefault();
         const resp = await submitFormSection(window.location.pathname.split('/').pop(), formulaire.data.sections[current].id, formData);
+        setFilledSections(filledSections+1);
         if (final){
             if (resp.data.success){
                 toast.success("Formulaire soumis !!!");
@@ -90,14 +103,14 @@ export default function DynamiqueForm() {
                 }, 2000);
             }
         } else {
-            console.log('Ce nest pas la fin');
+            console.log('Ce n\'est pas la fin');
             if (formulaire.data.sections[current].type !== 'standard'){
-                console.log('Ce nest pas une section standard');
+                console.log('Ce n\'est pas une section standard');
                 setCurrentDependentSection(null);
                 setCurrent(parseInt(localStorage.getItem('last_standard_section')) + 1);
                 localStorage.setItem('last_standard_section', '');
             } else {
-                console.log('Ce nest pas une section dépendante');
+                console.log('Ce n\'est pas une section dépendante');
                 if (currentDependentSection) {
                     console.log('Une section de redirection existe: ', currentDependentSection);
                     for (let f = 0; f < formulaire.data.sections.length; f++) {
@@ -131,75 +144,62 @@ export default function DynamiqueForm() {
 
     try {
         if (formulaire.data.sections[current]?.questions.length !== 0){
-            return (
-                <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
-                    <Form className="form-style" onSubmit={handleSubmit}>
-                        {/* <Stepper activeStep={current}>
-                        
-                            {formulaire && formulaire.data.sections.map((section) => (
-                                <Step label={section.name} />    
-                            ))}</Stepper> */}
-                        <h2 style={{ marginBottom: '50px', fontSize: 'large' }}>FORMULAIRE</h2>
-        
-                        <div className="row">
-                            {formulaire && formulaire.data.sections[current]?.questions.map((field) => (
-                                <div>
-                                    <CustomInput key={field.id} field={field} updateValue={updateFormData} updateDependentSection={updateDependentSection}/>
+            if (dependentSections.includes(formulaire.data.sections[current].id) && formulaire.data.sections[current].id != currentDependentSection){
+                setCurrent(current+1);
+            } else {
+                return (
+                    <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
+                        <Form className="form-style" onSubmit={handleSubmit}>
+                            {/* <Stepper activeStep={current}>
+                            
+                                {formulaire && formulaire.data.sections.map((section) => (
+                                    <Step label={section.name} />    
+                                ))}</Stepper> */}
+                            <h2 style={{ marginBottom: '50px', fontSize: 'large' }}>FORMULAIRE</h2>
+            
+                            <div className="row">
+                                {formulaire && formulaire.data.sections[current]?.questions.map((field) => (
+                                    <div>
+                                        <CustomInput key={field.id} field={field} updateValue={updateFormData} updateDependentSection={updateDependentSection}/>
+                                    </div>
+                                    ))
+                                }
+                            </div>
+                            <div className="row">
+                                <div className="col-6">
+                                    {current > 0 && (
+                                    <Button className="auth-form-btn" style={{ float: 'left' }} onClick={(e) => prev(e)}>
+                                        Précédent
+                                    </Button>)}
                                 </div>
-                                ))
-                            }
-                        </div>
-                        <div className="row">
-                            <div className="col-6">
-                                {current > 0 && (
-                                <Button className="auth-form-btn" style={{ float: 'left' }} onClick={(e) => prev(e)}>
-                                    Précédent
-                                </Button>)}
-                            </div>
-                            <div className="col-6">
-                                {formulaire && current < formulaire.data.sections.length - 1 && (
-                                    <Button className="auth-form-btn" style={{ float: 'right'}} type="submit" onClick={(e) => setFinal(false)}>
-                                        Suivant
-                                    </Button>
-                                )}
-    
-                                {formulaire && current === formulaire.data.sections.length - 1  && (
-                                    <Button className="auth-form-btn" type="submit" onClick={(e) => setFinal(true)}>
-                                        Valider
-                                    </Button>
-                                )}
-                            </div>
-                        </div>
-                        {/* <div style={{width: "70%"}} className="row mx-auto mb-3">
+                                <div className="col-6">
+                                    {formulaire && filledSections < formulaire.data.sections.length && (
+                                        <Button className="auth-form-btn" style={{ float: 'right'}} type="submit" onClick={(e) => setFinal(false)}>
+                                            Suivant
+                                        </Button>
+                                    )}
         
-                            {formulaire && current === formulaire.data.sections.length - 1 && (
-                            <Button className="auth-form-btn" type="submit" onClick={(e) => setFinal(true)}>
-                                Valider
-                            </Button>
-                            )}
-                        </div> */}
-                    </Form>
-                </div>
-            )
+                                    {formulaire && filledSections >= formulaire.data.sections.length && (
+                                        <Button className="auth-form-btn" type="submit" onClick={(e) => setFinal(true)}>
+                                            Valider
+                                        </Button>
+                                    )}
+                                </div>
+                            </div>
+                            {/* <div style={{width: "70%"}} className="row mx-auto mb-3">
+            
+                                {formulaire && current === formulaire.data.sections.length - 1 && (
+                                <Button className="auth-form-btn" type="submit" onClick={(e) => setFinal(true)}>
+                                    Valider
+                                </Button>
+                                )}
+                            </div> */}
+                        </Form>
+                    </div>
+                )
+            }
         } else {
-            return (
-                <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
-                    <Form className="form-style" style={{alignItems: 'center'}}>
-                        
-                        <h2 style={{ fontSize: '130%' }}>FORMULAIRE</h2>
-        
-                        <div style={{ textAlign: 'center' }}>
-                            <div style={{ marginTop: '50%', marginBottom: '50%', }}>
-                                <ImSad style={{ fontSize: '50px', marginBottom: '30px' }}/>
-                                <p>Rien à afficher</p>
-                            </div>
-                            <Button className="auth-form-btn" style={{width: 'auto', height: 'auto', padding: '15px',}} onClick={(e) => window.location.pathname = '/'}>
-                                Retourner à l'accueil
-                            </Button>
-                        </div>
-                    </Form>
-                </div>
-            )
+            setCurrent(current+1);
         }
     } catch (error) {
         return (

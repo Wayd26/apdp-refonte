@@ -121,7 +121,7 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="/faire-une-demande" >Faire ou modifier une demande</NavDropdown.Item>
                                     <NavDropdown.Item href="/vos-demarches">Soumettre la déclaration de mise
                                         en conformité avec les injonctions</NavDropdown.Item>
-                                    <NavDropdown.Item href="/vos-demarches">Faire une vérification</NavDropdown.Item>
+                                    <NavDropdown.Item href="/statut-demande">Faire une vérification</NavDropdown.Item>
                                     <NavDropdown.Item href="/espace-dpo">Notifier et Publier la désignation
                                         d’un DPO</NavDropdown.Item>
                                     <NavDropdown.Item href="/vos-demarches">Déclarer un incident</NavDropdown.Item>

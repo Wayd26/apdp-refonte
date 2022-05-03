@@ -58,7 +58,11 @@ import Photothèque from '../Photothèque/Photothèque';
 import Vidéothèque from '../Vidéothèque/Vidéothèque';
 import PlansDePassation from '../PlansDePassation/PlansDePassation';
 import Contact from '../Contact/Contact';
+<<<<<<< HEAD
 import Recommandations from '../Recommandations/Recommandations';
+=======
+import StatutDemande from '../StatutDemande/StatutDemande';
+>>>>>>> c2fc951513b609c50dc162332528dbcd919ec5e0
 
 
 const Content = () => {
@@ -122,6 +126,7 @@ const Content = () => {
           <Route path="/outils-conformite" element={<OutilsConformite />} />
           <Route path="/espace-rt" element={<EspaceRT />} />
           <Route path="/espace-dpo" element={<EspaceDPO />} />
+          <Route path="/statut-demande" element={<StatutDemande />} />
           <Route path="/formulaire/:id" element={<DynamiqueForm />} />
                     <Route path="/activites" element={<Activites/>} />
                     <   Route path="/" element={<Home />} >
