@@ -20,7 +20,8 @@ const DutyCard = (props) => {
     return (
         <div className={"dutycard"}>
             <p className={"dutycard-title"}>{title}</p>
-            
+            <img src={imgSrc}  className={"dutycard-img"}/>
+
             <p className={"dutycard-description"} dangerouslySetInnerHTML={{__html: (description)}}></p>
             <button onClick={() => handleDutyCardClicked(link)} className={"dutycard-button d-flex justify-content-around align-self-right"}>
             <span className={'dutycard-button-span'}>{btnText}</span>

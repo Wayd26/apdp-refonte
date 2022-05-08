@@ -1,9 +1,8 @@
-.dutycard {
+/* .dutycard {
     background: #ffffff 0% 0% no-repeat padding-box;
     box-shadow: 4px 4px 15px #090e144a;
     border-radius: 12px;
     opacity: 1;
-    /* width: 300px; */
     width: 100%;
   height: 400px;
   padding-top: 20px;
@@ -38,7 +37,7 @@
     opacity: 1;
     padding-right:30px;
     padding-left: 30px;
-    height: 170px;
+    height: 100px;
     overflow-y: auto;
     margin-top:10px;
     margin-bottom: 7px;
@@ -64,6 +63,105 @@
   .dutycard-button-span {
     text-align: center;
     font: normal normal normal 15px/13px Source Sans Pro;
+    letter-spacing: 0px;
+    color: #727c8e;
+    opacity: 1;
+    margin: auto;
+  }
+  .dutycard-button-arrow {
+    width: 22px;
+    height: 22px;
+    color: #ffbe00;
+    background: #fff 0% 0% no-repeat padding-box;
+    border-radius: 24px;
+    margin: auto;
+    opacity: 1;
+  }
+  
+  
+  @media only screen and (max-width: 478px) {
+    .dutycard {
+      width: 300px;
+      height: 300px;
+    }
+    
+    .right-duty-more-button {
+      width: 109px;
+      margin-top: 100px;
+    }
+    .right-duty-card-title {
+      font: normal normal bold 20px/16px Montserrat;
+    }
+    .dutycard-img {
+      width: 88px;
+      height: 92px;
+    }
+  } */
+
+  .dutycard {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 4px 4px 15px #090e144a;
+    border-radius: 12px;
+    opacity: 1;
+    width: 300px;
+  height: 340px;
+  }
+  
+  .dutycard-img {
+    width: 148px;
+    height: 92px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .dutycard-title {
+    text-align: center;
+    font: normal normal bold 17px/20px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    font-size: 1rem;
+    height:60px;
+    overflow-y: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+  
+  .dutycard-description {
+    text-align: justify;
+    font: normal normal normal 15px/18px Source Sans Pro;
+    letter-spacing: 0px;
+    color: #273B60;
+    opacity: 1;
+    padding-right:30px;
+    padding-left: 30px;
+    height: 90px;
+    overflow-y: auto;
+    margin-top:10px;
+    margin-bottom: 7px;
+  }
+  
+  .dutycard-button {
+    width: 198px;
+  height: 28px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: #FFFFFF;
+  box-shadow: 0px 8px 15px #727C8E5C;
+  border-radius: 24px;
+  opacity: 1;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  
+  
+  .dutycard-button:hover{
+    transform: scale(1.1) ;
+  }
+  .dutycard-button-span {
+    text-align: center;
+    font: normal normal normal 10px/13px Source Sans Pro;
     letter-spacing: 0px;
     color: #727c8e;
     opacity: 1;

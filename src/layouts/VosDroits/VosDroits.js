@@ -4,7 +4,7 @@ import "./VosDroits.css";
 import {Tabs, Tab} from "react-bootstrap";
 import RightsContent from '../../components/RightsContent/RightsContent';
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
-import { getATypeOfArticles } from '../../http/http';
+import { getATypeOfArticles, getRightsOrDuties } from '../../http/http';
 import {useNavigate} from "react-router-dom";
 
 
@@ -15,19 +15,19 @@ const VosDroits = () => {
     const [droitsParticuliers, setDroitsParticuliers] = useState();
     const [droitsPubliques, setDroitsPubliques] = useState();
 
-    const loadDroitsData = async (type) => {
-        const resp = await getATypeOfArticles(type)
+    const loadDroitsData = async (type, category, section) => {
+        const resp = await getRightsOrDuties(type, category, section)
         if(resp.response && resp.response.status !== 200){
             console.log("error ",resp.response)
         } else {
             console.log("data ",resp.data.data)
-            if(type == "droit_particulier") {
+            if(category == "droit_particulier") {
               setDroitsParticuliers(resp.data.data)
             }
-            if(type == "droit_structure_privee") {
+            if(category == "droit_structure_privee") {
               setDroitsPrives(resp.data.data)
             }
-            if(type == "droit_administration_publique") {
+            if(category == "droit_administration_publique") {
               setDroitsPubliques(resp.data.data)
             }
             setDroitsParticuliers(resp.data.data)
@@ -35,9 +35,9 @@ const VosDroits = () => {
     }
     
     useEffect(() => {
-        loadDroitsData("droit_particulier");        
-        loadDroitsData("droit_structure_privee");        
-        loadDroitsData("droit_administration_publique");        
+        loadDroitsData("droits", "droit_particulier", "");        
+        loadDroitsData("droits", "droit_structure_privee", "");        
+        loadDroitsData("droits", "droit_administration_publique", "");        
     }, [])
 
 

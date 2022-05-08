@@ -129,6 +129,12 @@ export function getAllArticles() {
 }
    
 export function getATypeOfArticles(type) {
-   const response = api.get(`/articles?slug=` + `${type}`)
+   const response = api.get(`/articles?slug=` + `${type}&categorie=` + `&section=` + ``)
+   return response.then(data => data).catch( error => error)
+}
+
+   
+export function getRightsOrDuties(type, categorie, section) {
+   const response = api.get(`/articles?slug=` + `${type}&categorie=` + `${categorie}&section=` + `${section}`)
    return response.then(data => data).catch( error => error)
 }

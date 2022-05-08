@@ -40,17 +40,17 @@ const RightsContent = (props) => {
         console.log(droits)
         console.log(categorie)
 
-         vos_droits_filtered = droits && droits.filter(elt => elt.category.name === categorie);
-console.log(vos_droits_filtered)
+//          vos_droits_filtered = droits && droits.filter(elt => elt.category.name === categorie);
+// console.log(vos_droits_filtered)
         // droits && droits.map(elt => console.log(elt))
 setDroitsToDisplay(droits)
 console.log(droits)
     }, [droits, categorie])
        
     
-    // useEffect(() => {
-    //     console.log("droits to display ", droitsToDisplay)
-    // }, [droitsToDisplay])
+    useEffect(() => {
+        console.log("droits to display ", droitsToDisplay)
+    }, [droitsToDisplay])
        
     return (
         <div className={"rights-content"}>
@@ -60,7 +60,7 @@ console.log(droits)
             <div className={"row"}>
             
       {droitsToDisplay !== [] ? droitsToDisplay?.map((item, index) => (
-        <div className={"col-sm-4 col-xs-12 p-3"}> <RightCard link={item.id} title={item.title} btnText={"Lire plus"} description={item.sub_title} imgSrc={item?.imaage_url} /> </div>
+        <div className={"col-sm-4 col-xs-12 p-3"}> <RightCard link={item.id} title={item.title} btnText={"Lire plus"} description={item.sub_title} imgSrc={item?.image_url} /> </div>
         )) : null}
         
             </div>

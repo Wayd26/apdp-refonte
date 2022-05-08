@@ -4,7 +4,7 @@ import "./VosDevoirs.css";
 import {Tabs, Tab} from "react-bootstrap";
 import DutiesContent from '../../components/DutiesContent/DutiesContent';
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
-import { getATypeOfArticles } from '../../http/http';
+import { getATypeOfArticles, getRightsOrDuties } from '../../http/http';
 
 
 const VosDevoirs = () => {
@@ -15,19 +15,19 @@ const VosDevoirs = () => {
     const [devoirsPubliques, setDevoirsPubliques] = useState();
 
   
-  const loadDevoirsData = async (type) => {
-    const resp = await getATypeOfArticles(type)
+  const loadDevoirsData = async (type, category, section) => {
+    const resp = await getRightsOrDuties(type, category, section)
     if(resp.response && resp.response.status !== 200){
         console.log("error ",resp.response)
     } else {
-        console.log("data ",resp.data.data)
-        if(type == "devoir_particulier") {
+        console.log("data ",resp.data)
+        if(category == "devoir_particulier") {
           setDevoirsParticuliers(resp.data.data)
         }
-        if(type == "devoir_structure_privee") {
+        if(category == "devoir_structure_privee") {
           setDevoirsPrives(resp.data.data)
         }
-        if(type == "devoir_administration_publique") {
+        if(category == "devoir_administration_publique") {
           setDevoirsPubliques(resp.data.data)
         }
         
@@ -35,9 +35,9 @@ const VosDevoirs = () => {
 }
     
     useEffect(() => {
-        loadDevoirsData("devoir_particulier");        
-        loadDevoirsData("devoir_structure_privee");        
-        loadDevoirsData("devoir_administration_publique");            
+        loadDevoirsData("devoirs", "devoir_particulier", "");        
+        loadDevoirsData("devoirs", "devoir_structure_privee", "");        
+        loadDevoirsData("devoirs", "devoir_administration_publique", "");            
     }, [])
 
 
