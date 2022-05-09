@@ -113,7 +113,8 @@ export function submitFormSection(formId, sectionId, data){
       url: `https://laravel.web.sandbox.hard-soft.solutions/api/v1/formulaires/${formId}/sections/${sectionId}/reponses`,
       headers: {
          'Accept': 'application/json', 
-         'Content-Type': 'application/json'
+         'Content-Type': 'application/json',
+         'Authorization': `Bearer ${localStorage.getItem('user_token')}`
       },
       data : data
    };
