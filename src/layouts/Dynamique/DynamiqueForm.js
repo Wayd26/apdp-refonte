@@ -22,7 +22,7 @@ export default function DynamiqueForm() {
 
     const loadForm = async () => {
         const resp = await getForm(window.location.pathname.split('/').pop())
-        if(resp.response && resp.response.status !== 200){
+        if (resp.response && resp.response.status !== 200){
             console.log(resp.response.header);
         } else {
             console.log('COOOL', resp);
@@ -93,7 +93,7 @@ export default function DynamiqueForm() {
     const handleSubmit = async (e) => {
         console.log('Current Dependent Section ', currentDependentSection);
         e.preventDefault();
-        const resp = await submitFormSection(window.location.pathname.split('/').pop(), formulaire.data.sections[current].id, formData);
+        const resp = await submitFormSection(formulaire.data.id, formulaire.data.sections[current].id, formData);
         setFilledSections(filledSections+1);
         if (final){
             if (resp.data.success){
@@ -129,7 +129,7 @@ export default function DynamiqueForm() {
     }
 
     const next = (e) => {
-        const resp = submitFormSection(window.location.pathname.split('/').pop(), formulaire.data.sections[current].id, formData);
+        const resp = submitFormSection(formulaire.data.id, formulaire.data.sections[current].id, formData);
         setCurrent(current + 1)
         e.preventDefault();
     };

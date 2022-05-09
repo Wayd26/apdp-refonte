@@ -25,14 +25,14 @@ export default function CustomInput({field, updateValue, updateDependentSection}
                             updateValue({
                                 answer_text: e.target.value,
                                 // choice: {'group': field.option_group_id, 'value': e.target.id},
-                                choice: field.option_group_id,
+                                choice: e.target.key,
                                 question: field.id
                             })
                         }}
                         
                         >
                             <option value="None"></option>
-                            {field.option_choices.map(op => <option key={op.id} value={op.name} name={op.pivot.related_section}>{op.name}</option>)}
+                            {field.option_choices.map(op => <option key={op.pivot.option_choice_id} value={op.name} name={op.pivot.related_section}>{op.name}</option>)}
                         </Input>
                     </FormGroup>
             </>
@@ -54,7 +54,7 @@ export default function CustomInput({field, updateValue, updateDependentSection}
                             updateValue({
                                 answer_text: e.target.value,
                                 // choice: {'group': field.option_group_id, 'value': null},
-                                choice: field.option_group_id,
+                                choice: field.option_choices[0].id,
                                 question: field.id
                             })
                         }}
@@ -85,11 +85,11 @@ export default function CustomInput({field, updateValue, updateDependentSection}
                                     updateValue({
                                         answer_text: e.target.value,
                                         // choice: {'group': field.option_group_id, 'value': op.id},
-                                        choice: field.option_group_id,
+                                        choice: e.target.id,
                                         question: field.id
                                     })
                                  }} 
-                                 key={op.id} 
+                                 id={op.pivot.option_choice_id} 
                                  value={op.name}
                                  name={op.pivot.related_section}/> 
                                 <Label 
@@ -122,11 +122,11 @@ export default function CustomInput({field, updateValue, updateDependentSection}
                                     updateValue({
                                         answer_text: e.target.value,
                                         // choice: {'group': field.option_group_id, 'value': op.id},
-                                        choice: field.option_group_id,
+                                        choice: e.target.id,
                                         question: field.id
                                     })
                                  }} 
-                                 key={op.id} 
+                                 id={op.pivot.option_choice_id} 
                                  value={op.name}
                                  name={op.pivot.related_section}>
                                     {op.name}
@@ -156,7 +156,7 @@ export default function CustomInput({field, updateValue, updateDependentSection}
                                 updateValue({
                                     answer_text: e.target.value,
                                     // choice: {'group': field.option_group_id, 'value': null},
-                                    choice: field.option_group_id,
+                                    choice: field.option_choices[0].id,
                                     question: field.id
                                 })
                             }}
