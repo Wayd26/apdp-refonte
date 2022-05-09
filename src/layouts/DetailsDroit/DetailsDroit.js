@@ -20,9 +20,7 @@ const DetailsDroit = (props) => {
         } else {
             console.log("data data ", resp.data.data)
                 let element ;
-                resp.data?.data?.map(elt => {
-                    console.log(elt.id)
-                    console.log(droit_id)
+                resp.data?.data?.map(elt => {   
                     if(elt.id == droit_id) {
                         console.log("elt")
                         setDroitData(elt)
