@@ -23,9 +23,9 @@ export default function DynamiqueForm() {
     const loadForm = async () => {
         const resp = await getForm(window.location.pathname.split('/').pop())
         if (resp.response && resp.response.status !== 200){
-            console.log(resp.response.header);
+            // console.log(resp.response.header);
         } else {
-            console.log('COOOL', resp);
+            // console.log('COOOL', resp);
             setFormulaire(resp.data);
             if (resp.data.data.sections.length > 1){
                 if (resp.data.data.last_section_submitted === resp.data.data.sections[resp.data.data.sections.length - 1].id || resp.data.data.last_section_submitted === null ) {
@@ -36,7 +36,7 @@ export default function DynamiqueForm() {
                         const element = resp.data.data.sections[i];
                         if (element.id === resp.data.data.last_section_submitted){
                             setCurrent(resp.data.data.sections.indexOf(element)  + 1);
-                            console.log("CURRENT", current);
+                            // console.log("CURRENT", current);
                         }
                     }
                 }
@@ -45,7 +45,7 @@ export default function DynamiqueForm() {
                     const elem = resp.data.data.sections[p];
                     if (elem.type === "dependent"){
                         sections_to_exclude.push(elem.id);
-                        console.log("DEPENDENT SECTIONS", elem);
+                        // console.log("DEPENDENT SECTIONS", elem);
                     }
                 }
                 setDependentSections(sections_to_exclude);
@@ -59,7 +59,7 @@ export default function DynamiqueForm() {
             window.location = "/auth";
         }
         loadForm();
-        console.log("DEEEEEEE", dependentSections);
+        // console.log("DEEEEEEE", dependentSections);
     }, [])
 
     function answerExists(question) {
@@ -70,7 +70,7 @@ export default function DynamiqueForm() {
     }
 
     function updateDependentSection(section_id) {
-        // console.log(section_id);
+        // // console.log(section_id);
         setCurrentDependentSection(section_id);
         localStorage.setItem('last_standard_section', current);
     }
@@ -91,7 +91,7 @@ export default function DynamiqueForm() {
     }
 
     const handleSubmit = async (e) => {
-        console.log('Current Dependent Section ', currentDependentSection);
+        // console.log('Current Dependent Section ', currentDependentSection);
         e.preventDefault();
         const resp = await submitFormSection(formulaire.data.id, formulaire.data.sections[current].id, formData);
         setFilledSections(filledSections+1);
@@ -103,25 +103,25 @@ export default function DynamiqueForm() {
                 }, 2000);
             }
         } else {
-            console.log('Ce n\'est pas la fin');
+            // console.log('Ce n\'est pas la fin');
             if (formulaire.data.sections[current].type !== 'standard'){
-                console.log('Ce n\'est pas une section standard');
+                // console.log('Ce n\'est pas une section standard');
                 setCurrentDependentSection(null);
                 setCurrent(parseInt(localStorage.getItem('last_standard_section')) + 1);
                 localStorage.setItem('last_standard_section', '');
             } else {
-                console.log('Ce n\'est pas une section dépendante');
+                // console.log('Ce n\'est pas une section dépendante');
                 if (currentDependentSection) {
-                    console.log('Une section de redirection existe: ', currentDependentSection);
+                    // console.log('Une section de redirection existe: ', currentDependentSection);
                     for (let f = 0; f < formulaire.data.sections.length; f++) {
                         const element = formulaire.data.sections[f];
                         if (String(element.id) === currentDependentSection){
                             setCurrent(formulaire.data.sections.indexOf(element));
-                            console.log('Redirigeons vers la section à l\'index ', formulaire.data.sections.indexOf(element))
+                            // console.log('Redirigeons vers la section à l\'index ', formulaire.data.sections.indexOf(element))
                         }
                     }
                 } else {
-                    console.log('Rien à faire! Passons à la section suivante...')
+                    // console.log('Rien à faire! Passons à la section suivante...')
                     setCurrent(current + 1);
                 }
             }

@@ -58,10 +58,10 @@ export function get_user(user_token){
 export function getRequestedQuery(ref_number){
    var config = {
      method: 'get',
-     url: `https://laravel.web.sandbox.hard-soft.solutions/api/v1/me`,
+     url: `https://laravel.web.sandbox.hard-soft.solutions/api/v1/formulaires-soumis/${ref_number}`,
      headers: { 
        'Accept': 'application/json', 
-       'Authorization': `Bearer ${ref_number}`
+       'Authorization': `Bearer ${localStorage.getItem("user_token")}`
      }
    };
    
