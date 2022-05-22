@@ -33,3 +33,7 @@
   -ms-border-radius: 5px !important;
   -o-border-radius: 5px !important;
 }
+
+.deliberation-search-input {
+  width: 250px !important;
+}

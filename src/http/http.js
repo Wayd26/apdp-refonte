@@ -139,3 +139,8 @@ export function getRightsOrDuties(type, categorie, section) {
    const response = api.get(`/articles?slug=` + `${type}&categorie=` + `${categorie}&section=` + `${section}`)
    return response.then(data => data).catch( error => error)
 }
+
+export function getVisitsNumber(namespace) {
+   const response = axios.get(`https://api.countapi.xyz/hit/${namespace}/key`)
+   return response.then(data => data).catch( error => error)
+}

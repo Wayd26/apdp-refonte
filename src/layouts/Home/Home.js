@@ -14,6 +14,10 @@ import img7 from "../../assets/images/img7.jpg";
 import CardOnCaroussel from "../../components/CardOnCaroussel/CardOnCaroussel";
 import ActualiteCarousel from "../../components/ActualiteCarousel/ActualiteCarousel";
 import { useNavigate } from "react-router-dom";
+import ReactGA from 'react-ga';
+import countapi from 'countapi-js';
+import { getVisitsNumber } from "../../http/http";
+import { DOMAIN_URL } from "../../constants/Constant";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -28,6 +32,25 @@ const Home = () => {
   const handleClickCard = (cardClicked) => {
     navigate(`/${cardClicked}`);
   };
+  // countapi.visits('global').then((result) => {
+  //   console.log("Visits ", result.value);
+  // });
+
+  const [visitsNumber, setVisitsNumber] = React.useState()
+  const loadVisitsNumber = async () => {
+    const resp = await getVisitsNumber(DOMAIN_URL)
+    if (resp.response && resp.response.status !== 200) {
+      console.log("error ", resp.response)
+    } else {
+      console.log("data ", resp)
+      setVisitsNumber(resp.data.value)
+      localStorage.setItem("v", visitsNumber);
+    }
+  }
+  React.useEffect(() => {
+    loadVisitsNumber()
+  }, [localStorage.getItem("v")])
+  
 
   return (
     <div className={"Home"}>

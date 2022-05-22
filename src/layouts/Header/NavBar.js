@@ -144,7 +144,7 @@ export default class NavBar extends Component {
                                             <NavDropdown.Item href="/textes/lois">Lois</NavDropdown.Item>
                                             <NavDropdown.Item href="/textes/arretes">Arretes</NavDropdown.Item>
                                             <NavDropdown.Item href="/textes/decrets">Decrets</NavDropdown.Item>
-                                        <NavDropdown.Item href="/textes/deliberations-publiques">Délibérations Publiques</NavDropdown.Item>
+                                        <NavDropdown.Item href="/textes/deliberations-publiques">Décisions Publiques</NavDropdown.Item>
                                         </ul>
                                     </div>
                                     <div className='dropdown '>

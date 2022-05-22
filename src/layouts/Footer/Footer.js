@@ -6,9 +6,20 @@ import { FaFacebook, FaTwitter, FaYoutube, FaPaperPlane } from "react-icons/fa"
 
 const Footer = () => {
 
+  const [visitsNumber, setVisitsNumber] = React.useState(0)
+
   const goHome = () => {
     window.location.replace("/")
   }
+  React.useEffect(() => {
+    localStorage.getItem("v")
+    setVisitsNumber(localStorage.getItem("v"))
+  }, [localStorage.getItem("v")])
+  
+
+//   function callbackName(response) {
+//     document.getElementById('visits').innerText = response.value;
+// }
 
   return <div className="pg-footer">
     <div className="footer">
@@ -223,7 +234,7 @@ const Footer = () => {
         </div>
 
       </div>
-      <p className="visitor-number-p">Nombre de visites : <span className="visitor-number-span">167</span></p>
+      <p className="visitor-number-p">Nombre de visites : <span id="visits" className="visitor-number-span">{localStorage.getItem("v") != "undefined" ? localStorage.getItem("v") : "00"}</span></p>
       <div className="footer-copyright-wrapper">
         <p className="footer-copyright-text">
           <a className="footer-copyright-link text-white" href="#" target="_self"> © Copyright 2021, APDP. Tous droits réservés.</a>
