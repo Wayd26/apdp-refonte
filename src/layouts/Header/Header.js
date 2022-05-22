@@ -128,8 +128,8 @@ const Header = () => {
                                 </div>
                             
                             
-                                <div>
-                                    {/* <Button color="primary" onClick={toggle_modal} className="client-espace-button"><h6>EN</h6></Button> */}
+                                <div style={{cursor: 'pointer'}}>
+                                    <Button color="primary" onClick={toggle_modal} className="client-espace-button"><h6>EN</h6></Button>
                                 </div>
 
                                 { localStorage.getItem("user_token") ? <div>
