@@ -20,6 +20,7 @@ import {
     Link,
     useHistory
 } from "react-router-dom";
+import {AiOutlineFileSearch} from 'react-icons/ai';
 
 export default class NavBar extends Component {
 
@@ -36,6 +37,8 @@ export default class NavBar extends Component {
         console.log(window.location)
     }
 
+    
+
     render() {
         const handleDemarchesClick = () => {
             if (localStorage.getItem("user_token")) {
@@ -44,6 +47,10 @@ export default class NavBar extends Component {
                 window.location.href = "/vos-demarches";
                 localStorage.setItem("redirect_url", "/vos-demarches")
             }
+        }
+
+        const searchDecisionsShortcut = () => {
+            window.location.href = "/textes/deliberations-publiques"
         }
         return (
             <React.Fragment>
@@ -162,8 +169,9 @@ export default class NavBar extends Component {
                                     {/* <NavDropdown.Item href="/textes/textes-communautaires">Textes Communautaires</NavDropdown.Item> */}
                                 </NavDropdown>
                             </h5>
-                         {/* <InputGroup className="search-input d-none d-sm-flex row d-flex flex-nowrap"> */}
-                                {/* <InputGroupText style={{
+                            
+                         {/* <InputGroup className="search-input d-none d-sm-flex row d-flex flex-nowrap">
+                                <InputGroupText style={{
                                     backgroundColor: 'white',
                                     borderRightWidth: 0,
                                     borderTopLeftRadius: 20,
@@ -176,8 +184,9 @@ export default class NavBar extends Component {
                                     borderLeftWidth: 0,
                                     borderTopRightRadius: 20,
                                     borderBottomRightRadius: 20
-                                }} /> */}
-                            {/* </InputGroup> */}
+                                }} />
+                            </InputGroup> */}
+                            <h5><AiOutlineFileSearch title='Rechercher une décision' onClick={searchDecisionsShortcut} style={{height: 45, width:40, color: 'white', cursor: 'pointer'}}/> </h5>
                         </Nav>
                     </Collapse>
                 </Navbar>

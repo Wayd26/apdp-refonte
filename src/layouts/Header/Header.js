@@ -122,7 +122,6 @@ const Header = () => {
 
                                             <li><a tabIndex="-1" href="/contact">Contact</a></li>
 
-
                                         </ul>
                                     </div>
                                 </div>
