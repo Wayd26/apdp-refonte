@@ -29,13 +29,14 @@ export default function DynamiqueForm() {
             // console.log('COOOL', resp);
             setFormulaire(resp.data);
             if (resp.data.data.sections.length > 1){
-                if (resp.data.data.last_section_submitted === resp.data.data.sections[resp.data.data.sections.length - 1].id || resp.data.data.last_section_submitted === null ) {
+                if (parseInt(localStorage.getItem('last_section_submitted')) === resp.data.data.sections[resp.data.data.sections.length - 1].id || parseInt(localStorage.getItem('last_section_submitted')) === '' ) {
                     setCurrent(0)
+                    localStorage.setItem('last_section_submitted', '');
                 } else {
-                    setCurrent(resp.data.data.last_section_submitted)
+                    setCurrent(parseInt(localStorage.getItem('last_section_submitted')));
                     for (let i = 0; i < resp.data.data.sections.length; i++) {
                         const element = resp.data.data.sections[i];
-                        if (element.id === resp.data.data.last_section_submitted){
+                        if (element.id === parseInt(localStorage.getItem('last_section_submitted'))){
                             setCurrent(resp.data.data.sections.indexOf(element)  + 1);
                             // console.log("CURRENT", current);
                         }
@@ -110,7 +111,7 @@ export default function DynamiqueForm() {
             }
             setCurrent(current+1)
         } else {
-            // console.log('Ce n\'est pas la fin');
+            localStorage.setItem('last_section_submitted', responseSubmit.data.data['last_submitted_section']);
             if (formulaire.data.sections[current].type !== 'standard'){
                 // console.log('Ce n\'est pas une section standard');
                 setCurrentDependentSection(null);
