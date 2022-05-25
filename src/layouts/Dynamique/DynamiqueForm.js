@@ -99,6 +99,7 @@ export default function DynamiqueForm() {
         console.log("RESSSSSSSS", responseSubmit);
         setRefNumber(responseSubmit.data.data[0].submit_id);
         setFilledSections(filledSections+1);
+        localStorage.setItem('last_section_submitted', responseSubmit.data.data['last_submitted_section']);
         if (final){
             try {
                 if (responseSubmit.data.success){
@@ -111,7 +112,6 @@ export default function DynamiqueForm() {
             }
             setCurrent(current+1)
         } else {
-            localStorage.setItem('last_section_submitted', responseSubmit.data.data['last_submitted_section']);
             if (formulaire.data.sections[current].type !== 'standard'){
                 // console.log('Ce n\'est pas une section standard');
                 setCurrentDependentSection(null);
