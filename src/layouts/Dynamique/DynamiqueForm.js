@@ -182,7 +182,7 @@ export default function DynamiqueForm() {
                                     </Button>)}
                                 </div>
                                 <div className="col-6">
-                                    { formulaire && formulaire.data.sections[current].id == formulaire.data.sections.length ? <Button className="auth-form-btn" type="submit" onClick={(e) => setFinal(true)}>
+                                    { formulaire && formulaire.data.sections[current].id == formulaire.data.sections[formulaire.data.sections.length - 1].id ? <Button className="auth-form-btn" type="submit" onClick={(e) => setFinal(true)}>
                                         Valider
                                     </Button>:<Button className="auth-form-btn" style={{ float: 'right'}} type="submit" onClick={(e) => setFinal(false)}>
                                         Suivant
