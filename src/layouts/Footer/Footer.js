@@ -22,16 +22,7 @@ const Footer = () => {
   const goHome = () => {
     window.location.replace("/")
   }
-  // React.useEffect(() => {
-  //   localStorage.getItem("v")
-  //   setVisitsNumber(localStorage.getItem("v"))
-  // }, [localStorage.getItem("v")])
-  
-
-//   function callbackName(response) {
-//     document.getElementById('visits').innerText = response.value;
-// }
-
+ 
   return <div className="pg-footer">
     <div className="footer">
       {/* <svg className="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100"
