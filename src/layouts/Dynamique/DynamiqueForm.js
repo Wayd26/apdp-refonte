@@ -29,7 +29,7 @@ export default function DynamiqueForm() {
             // console.log('COOOL', resp);
             setFormulaire(resp.data);
             if (resp.data.data.sections.length > 1){
-                if (parseInt(localStorage.getItem('last_section_submitted')) === resp.data.data.sections[resp.data.data.sections.length - 1].id || parseInt(localStorage.getItem('last_section_submitted')) === '' || localStorage.getItem('last_section_submitted') === null ) {
+                if (parseInt(localStorage.getItem('last_section_submitted')) === resp.data.data.sections[resp.data.data.sections.length - 1].id || parseInt(localStorage.getItem('last_section_submitted')) === NaN || localStorage.getItem('last_section_submitted') === null ) {
                     setCurrent(0)
                     localStorage.setItem('last_section_submitted', '0');
                 } else {
