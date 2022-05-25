@@ -49,7 +49,7 @@ const Home = () => {
   }
   React.useEffect(() => {
    loadVisitsNumber()
-  }, [visitsNumber])  
+  }, [])  
 
   return (
     <div className={"Home"}>
