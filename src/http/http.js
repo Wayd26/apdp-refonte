@@ -144,3 +144,8 @@ export function getVisitsNumber(namespace) {
    const response = axios.get(`https://api.countapi.xyz/hit/${namespace}/key`)
    return response.then(data => data).catch( error => error)
 }
+
+export function getFaq() {
+   const response = api.get(`/faqs`)
+   return response.then(data => data).catch( error => error)
+}

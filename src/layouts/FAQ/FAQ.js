@@ -5,26 +5,37 @@ import "./FAQ.css";
 import all_faq_folders from '../../assets/icons/allfaqs-folders.svg'
 import faq_image from '../../assets/icons/faq-image.svg'
 import {BiSearchAlt} from "react-icons/bi"
-import {getATypeOfArticles} from '../../http/http';
+import {getATypeOfArticles, getFaq} from '../../http/http';
+import FaqElement from '../../components/FaqElement/FaqElement';
 
 
 const FAQ = () => {
 
-    const [communiques, setCommuniques] = useState();
+    const [faq, setFaq] = useState([]);
+    const [searchText, setSearchText] = useState("");
 
-    const loadCommuniquesData = async () => {
-        const resp = await getATypeOfArticles("communiques")
+    const handleSearch = (e) => {
+        console.log(e.target.value)
+        setSearchText(e.target.value)
+      }
+
+    const loadFaqData = async () => {
+        const resp = await getFaq()
         if(resp.response && resp.response.status !== 200){
             console.log("error ",resp.response)
         } else {
             console.log("data ",resp.data.data)
-            setCommuniques(resp.data)
+            setFaq(resp.data.data)
         }
     }
     
     useEffect(() => {
-        loadCommuniquesData()        
+        loadFaqData()        
     }, [])
+    
+    useEffect(() => {
+     console.log(faq)
+    }, [faq])
     
     return (
         <div style={{background: "#F7F7F7"}}>
@@ -33,20 +44,26 @@ const FAQ = () => {
 
                 <img src={faq_image} className="faq-image" />
 
-                <p className="faq-title">FOIRE AUX QUESTIONS - TOUTES LES FAQS</p>
-                <p className="faq-select-category">SÉLECTIONNER LA CATÉGORIE DE VOTRE QUESTION</p>
-                <div className="faq-input-container  flex-nowrap">
-                    <BiSearchAlt className="faq-input-icon"/>
-                    <input className="faq-input" placeholder="Rechercher dans la FAQ"/>
-                </div>
+                {/* <p className="faq-title">FOIRE AUX QUESTIONS - TOUTES LES FAQS</p> */}
                 <p className="faq-allfaq">
                     <img src={all_faq_folders} className="faq-allfaq-img"/>
-                    TOUTES LES FAQS
+                    FOIRE AUX QUESTIONS - TOUTES LES FAQS
                 </p>
-                <p className="faq-see-allfaq">Voir toutes les questions fréquemment posées</p>
-            
+                {/* <p className="faq-select-category">SÉLECTIONNER LA CATÉGORIE DE VOTRE QUESTION</p> */}
+                <div className="faq-input-container  flex-nowrap">
+                    <BiSearchAlt className="faq-input-icon"/>
+                    <input className="faq-input" value={searchText} onChange={(e) => handleSearch(e)} placeholder="Rechercher dans la FAQ"/>
+
+                   
+                </div>
+                
+                {/* <p className="faq-see-allfaq">Voir toutes les questions fréquemment posées</p> */}
             </div>
-            <FaqSection />
+           
+            {faq?.length != 0 && <FaqSection data={faq
+                      .filter((q) => {
+                        return q.question?.toLowerCase()?.indexOf(searchText?.toLowerCase()) > -1
+                      })}/>}
             
         </div>
     )

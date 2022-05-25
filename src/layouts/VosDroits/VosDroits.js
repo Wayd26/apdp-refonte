@@ -30,7 +30,6 @@ const VosDroits = () => {
             if(category == "droit_administration_publique") {
               setDroitsPubliques(resp.data.data)
             }
-            setDroitsParticuliers(resp.data.data)
         }
     }
     

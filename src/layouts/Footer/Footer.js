@@ -3,18 +3,37 @@ import { Row, Col } from "reactstrap"
 import "./Footer.css"
 import apdp_logo from "../../assets/images/logoapdp.svg"
 import { FaFacebook, FaTwitter, FaYoutube, FaPaperPlane } from "react-icons/fa"
+import { getVisitsNumber } from "../../http/http";
+import { DOMAIN_URL } from "../../constants/Constant";
 
 const Footer = () => {
 
   const [visitsNumber, setVisitsNumber] = React.useState(0)
 
+  const loadVisitsNumber = async () => {
+    const resp = await getVisitsNumber(DOMAIN_URL)
+    if (resp.response && resp.response.status !== 200) {
+      console.log("error ", resp.response)
+    } else {
+      console.log("data ", resp)
+      setVisitsNumber(resp.data.value)
+      // localStorage.setItem("v", visitsNumber);
+    }
+  }
+
+    React.useEffect(() => {
+      if(localStorage.getItem("home") != undefined) {
+        loadVisitsNumber()
+      }
+  }, [])
+
   const goHome = () => {
     window.location.replace("/")
   }
-  React.useEffect(() => {
-    localStorage.getItem("v")
-    setVisitsNumber(localStorage.getItem("v"))
-  }, [localStorage.getItem("v")])
+  // React.useEffect(() => {
+  //   localStorage.getItem("v")
+  //   setVisitsNumber(localStorage.getItem("v"))
+  // }, [localStorage.getItem("v")])
   
 
 //   function callbackName(response) {
@@ -83,7 +102,7 @@ const Footer = () => {
       {/* </div> */}
       <div className="footer-copyright">
         <div className="footer-content">
-          <div className="footer-content-column" style={{width: "25%"}}>
+          <div className="col-sm-3 col-xs-12">
             <div className="footer-logo">
               <a className="footer-logo-link" href="#">
                 <span className="hidden-link-text">LOGO</span>
@@ -102,7 +121,7 @@ const Footer = () => {
             </div>
 
           </div>
-          <div className="footer-content-column" style={{width: "25%"}}>
+          <div className="col-sm-3 col-xs-12">
             <div className="footer-menu">
               <h2 className="footer-menu-name"> INFORMATIONS </h2>
               <ul id="menu-company" className="footer-menu-list">
@@ -131,7 +150,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="footer-content-column" style={{width: "30%", marginLeft: "-10px"}}>
+          <div className="col-sm-3 col-xs-12" >
             <div className="footer-menu">
               {/* <h2 className="footer-menu-name"> VOS PROTECTIONS</h2>
               <ul id="menu-quick-links" className="footer-menu-list">
@@ -188,7 +207,7 @@ const Footer = () => {
 
             </div>
           </div>
-          <div className="footer-content-column" style={{width: "20%"}}>
+          <div className="col-sm-3 col-xs-12">
             <div className="footer-call-to-action">
               <h2 className="footer-call-to-action-title">CONTACT</h2>
               <div style={{
@@ -234,7 +253,7 @@ const Footer = () => {
         </div>
 
       </div>
-      <p className="visitor-number-p">Nombre de visites : <span id="visits" className="visitor-number-span">{localStorage.getItem("v") != "undefined" ? localStorage.getItem("v") : "00"}</span></p>
+      <p className="visitor-number-p">Nombre de visites : <span id="visits" className="visitor-number-span">{visitsNumber}</span></p>
       <div className="footer-copyright-wrapper">
         <p className="footer-copyright-text">
           <a className="footer-copyright-link text-white" href="#" target="_self"> © Copyright 2021, APDP. Tous droits réservés.</a>

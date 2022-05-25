@@ -37,20 +37,22 @@ const Home = () => {
   // });
 
   const [visitsNumber, setVisitsNumber] = React.useState()
-  const loadVisitsNumber = async () => {
-    const resp = await getVisitsNumber(DOMAIN_URL)
-    if (resp.response && resp.response.status !== 200) {
-      console.log("error ", resp.response)
-    } else {
-      console.log("data ", resp)
-      setVisitsNumber(resp.data.value)
-      localStorage.setItem("v", visitsNumber);
-    }
-  }
+  // const loadVisitsNumber = async () => {
+  //   const resp = await getVisitsNumber(DOMAIN_URL)
+  //   if (resp.response && resp.response.status !== 200) {
+  //     console.log("error ", resp.response)
+  //   } else {
+  //     console.log("data ", resp)
+  //     setVisitsNumber(resp.data.value)
+  //     localStorage.setItem("v", visitsNumber);
+  //   }
+  // }
   React.useEffect(() => {
-    loadVisitsNumber()
-  }, [localStorage.getItem("v")])
-  
+    localStorage.setItem("home", true)
+    return () => {
+      localStorage.removeItem("home")
+    }
+  }, [])  
 
   return (
     <div className={"Home"}>
@@ -137,9 +139,9 @@ const Home = () => {
             <div className={"row d-flex justify-content-around"}>
               {/* {shortcuts.map((i, item) => ( */}
               
-                 <ShortcutCard ind={0} label={"Mentions Légales"}  />
-                 <ShortcutCard ind={1} label={"Lois"}  />
-                 <ShortcutCard ind={2} label={"Communiqués"}  />
+                 <ShortcutCard ind={0} label={"Evènements"} link={"evenements"}/>
+                 <ShortcutCard ind={1} label={"Lois"} link={"textes/lois"}/>
+                 <ShortcutCard ind={2} label={"Communiqués"} link={"communiques"}/>
              
               {/* ))} */}
             </div>
