@@ -10,20 +10,12 @@ const Footer = () => {
 
   const [visitsNumber, setVisitsNumber] = React.useState(0)
 
-  const loadVisitsNumber = async () => {
-    const resp = await getVisitsNumber(DOMAIN_URL)
-    if (resp.response && resp.response.status !== 200) {
-      console.log("error ", resp.response)
-    } else {
-      console.log("data ", resp)
-      setVisitsNumber(resp.data.value)
-      // localStorage.setItem("v", visitsNumber);
-    }
-  }
+  
 
     React.useEffect(() => {
-      if(localStorage.getItem("home") != undefined) {
-        loadVisitsNumber()
+      if(localStorage.getItem("visits") != undefined) {
+        var visits_number = localStorage.getItem("visits")
+        setVisitsNumber(visits_number)
       }
   }, [])
 

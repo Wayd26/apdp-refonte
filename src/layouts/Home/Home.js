@@ -37,21 +37,18 @@ const Home = () => {
   // });
 
   const [visitsNumber, setVisitsNumber] = React.useState()
-  // const loadVisitsNumber = async () => {
-  //   const resp = await getVisitsNumber(DOMAIN_URL)
-  //   if (resp.response && resp.response.status !== 200) {
-  //     console.log("error ", resp.response)
-  //   } else {
-  //     console.log("data ", resp)
-  //     setVisitsNumber(resp.data.value)
-  //     localStorage.setItem("v", visitsNumber);
-  //   }
-  // }
-  React.useEffect(() => {
-    localStorage.setItem("home", true)
-    return () => {
-      localStorage.removeItem("home")
+  const loadVisitsNumber = async () => {
+    const resp = await getVisitsNumber(DOMAIN_URL)
+    if (resp.response && resp.response.status !== 200) {
+      console.log("error ", resp.response)
+    } else {
+      console.log("data ", resp)
+      setVisitsNumber(resp.data.value)
+      localStorage.setItem("visits", resp.data?.value);
     }
+  }
+  React.useEffect(() => {
+   loadVisitsNumber()
   }, [])  
 
   return (
