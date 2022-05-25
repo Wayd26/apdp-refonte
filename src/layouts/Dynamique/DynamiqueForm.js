@@ -31,7 +31,7 @@ export default function DynamiqueForm() {
             if (resp.data.data.sections.length > 1){
                 if (parseInt(localStorage.getItem('last_section_submitted')) === resp.data.data.sections[resp.data.data.sections.length - 1].id || parseInt(localStorage.getItem('last_section_submitted')) === '' || localStorage.getItem('last_section_submitted') === null ) {
                     setCurrent(0)
-                    localStorage.setItem('last_section_submitted', '');
+                    localStorage.setItem('last_section_submitted', '0');
                 } else {
                     setCurrent(parseInt(localStorage.getItem('last_section_submitted')));
                     for (let i = 0; i < resp.data.data.sections.length; i++) {
