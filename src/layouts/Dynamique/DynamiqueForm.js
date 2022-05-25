@@ -3,7 +3,7 @@ import CustomInput from '../../components/CustomInput/CustomInput';
 import form2 from './data1.json';
 import {Form, Button} from 'reactstrap';
 import { Stepper, Step } from 'react-form-stepper';
-import {ImSad} from "react-icons/im";
+import {ImSad, ImHappy} from "react-icons/im";
 import './Dynamique.css'
 import {getForm, submitFormSection} from '../../http/http';
 import { ToastContainer, toast } from 'react-toastify';
@@ -19,6 +19,7 @@ export default function DynamiqueForm() {
     const [currentDependentSection, setCurrentDependentSection] = useState(null)
     const [filledSections, setFilledSections] = useState(0)
     const [dependentSections, setDependentSections] = useState([])
+    const [refNumber, setRefNumber] = useState(0)
 
     const loadForm = async () => {
         const resp = await getForm(window.location.pathname.split('/').pop())
@@ -93,15 +94,21 @@ export default function DynamiqueForm() {
     const handleSubmit = async (e) => {
         // console.log('Current Dependent Section ', currentDependentSection);
         e.preventDefault();
-        const resp = await submitFormSection(formulaire.data.id, formulaire.data.sections[current].id, formData);
+        const responseSubmit = await submitFormSection(formulaire.data.id, formulaire.data.sections[current].id, formData);
+        console.log("RESSSSSSSS", responseSubmit);
+        setRefNumber(responseSubmit.data.data[0].submit_id);
         setFilledSections(filledSections+1);
         if (final){
-            if (resp.data.success){
-                toast.success("Formulaire soumis !!!");
-                setTimeout(() => {
-                    window.location = '/';
-                }, 2000);
+            try {
+                if (responseSubmit.data.success){
+                    toast.success("Formulaire soumis !!!");
+                } else {
+                    toast.error("Il y a un problème !!!");
+                }
+            } catch (error) {
+                toast.error("Il y a un problème !!!");
             }
+            setCurrent(current+1)
         } else {
             // console.log('Ce n\'est pas la fin');
             if (formulaire.data.sections[current].type !== 'standard'){
@@ -149,6 +156,7 @@ export default function DynamiqueForm() {
             } else {
                 return (
                     <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
+                        <ToastContainer />
                         <Form className="form-style" onSubmit={handleSubmit}>
                             {/* <Stepper activeStep={current}>
                             
@@ -173,17 +181,11 @@ export default function DynamiqueForm() {
                                     </Button>)}
                                 </div>
                                 <div className="col-6">
-                                    {formulaire && filledSections < formulaire.data.sections.length && (
-                                        <Button className="auth-form-btn" style={{ float: 'right'}} type="submit" onClick={(e) => setFinal(false)}>
-                                            Suivant
-                                        </Button>
-                                    )}
-        
-                                    {formulaire && filledSections >= formulaire.data.sections.length && (
-                                        <Button className="auth-form-btn" type="submit" onClick={(e) => setFinal(true)}>
-                                            Valider
-                                        </Button>
-                                    )}
+                                    { formulaire && formulaire.data.sections[current].id == formulaire.data.sections.length ? <Button className="auth-form-btn" type="submit" onClick={(e) => setFinal(true)}>
+                                        Valider
+                                    </Button>:<Button className="auth-form-btn" style={{ float: 'right'}} type="submit" onClick={(e) => setFinal(false)}>
+                                        Suivant
+                                    </Button>}
                                 </div>
                             </div>
                             {/* <div style={{width: "70%"}} className="row mx-auto mb-3">
@@ -202,24 +204,47 @@ export default function DynamiqueForm() {
             setCurrent(current+1);
         }
     } catch (error) {
-        return (
-            <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
-                <Form className="form-style" style={{alignItems: 'center'}}>
-                    
-                    <h2 style={{ fontSize: '130%' }}>FORMULAIRE</h2>
-    
-                    <div style={{ textAlign: 'center' }}>
-                        <div style={{ marginTop: '50%', marginBottom: '50%', }}>
-                            <ImSad style={{ fontSize: '50px', marginBottom: '30px' }}/>
-                            <p>Rien à afficher</p>
+        if (!final){
+            return (
+                <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
+                    <ToastContainer />
+                    <Form className="form-style" style={{alignItems: 'center'}}>
+                        
+                        <h2 style={{ fontSize: '130%' }}>FORMULAIRE</h2>
+        
+                        <div style={{ textAlign: 'center' }}>
+                            <div style={{ marginTop: '50%', marginBottom: '50%', }}>
+                                <ImSad style={{ fontSize: '50px', marginBottom: '30px' }}/>
+                                <p>Rien à afficher</p>
+                            </div>
+                            <Button className="auth-form-btn" style={{width: 'auto', height: 'auto', padding: '15px',}} onClick={(e) => window.location.pathname = '/'}>
+                                Retourner à l'accueil
+                            </Button>
                         </div>
-                        <Button className="auth-form-btn" style={{width: 'auto', height: 'auto', padding: '15px',}} onClick={(e) => window.location.pathname = '/'}>
-                            Retourner à l'accueil
-                        </Button>
-                    </div>
-                </Form>
-            </div>
-        )
+                    </Form>
+                </div>
+            )
+        } else {
+            return (
+                <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
+                    <ToastContainer />
+                    <Form className="form-style" style={{alignItems: 'center'}}>
+                        
+                        <h2 style={{ fontSize: '130%' }}>FORMULAIRE</h2>
+        
+                        <div style={{ textAlign: 'center' }}>
+                            <div style={{ marginTop: '25%', marginBottom: '25%', }}>
+                                <ImHappy style={{ fontSize: '50px', marginBottom: '30px' }}/>
+                                <p>Votre demande a été soumise et enregistrée sous le numéro de référence {refNumber}</p>
+                            </div>
+                            <Button className="auth-form-btn" style={{width: 'auto', height: 'auto', padding: '15px',}} onClick={(e) => window.location.pathname = `/query/${window.location.pathname.split('/').pop()}/${refNumber}`}>
+                                Voir l'aperçu de la demande
+                            </Button>
+                        </div>
+                    </Form>
+                </div>
+            )
+        }
     }
 }
 

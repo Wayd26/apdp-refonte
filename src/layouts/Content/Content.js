@@ -59,6 +59,7 @@ import Vidéothèque from '../Vidéothèque/Vidéothèque';
 import PlansDePassation from '../PlansDePassation/PlansDePassation';
 import Contact from '../Contact/Contact';
 import StatutDemande from '../StatutDemande/StatutDemande';
+import DetailsDemande from '../DetailsDemande/DetailsDemande';
 
 
 const Content = () => {
@@ -76,6 +77,7 @@ const Content = () => {
       <Routes>
           {/* <Route index element={<div> Here</div>} /> */}
           <Route path="/auth" element={<Auth/>} />
+          <Route path="/query/:form_type/:query_id" element={<DetailsDemande/>} />
           <Route path="/contact" element={<Contact/>} />
           <Route path="/plans-de-passation" element={<PlansDePassation />} />
           <Route path="/phototheque" element={<Photothèque />} />

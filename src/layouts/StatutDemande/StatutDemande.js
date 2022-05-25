@@ -32,8 +32,7 @@ const StatutDemande = () => {
     }, [])
     
     return (
-        <div className={"query"} id={"query"} style={{ paddingTop: "40px", paddingBottom: "40px", width: "80%", margin: "auto"}}>           
-            <ActualiteCarousel/>
+        <div className={"query"} id={"query"} style={{ paddingTop: "40px", paddingBottom: "40px", width: "80%", margin: "auto"}}>
             {/* Title */}
             <h4 className={'page-title-query'} style={{background: "#4385f6 0% 0% no-repeat padding-box", paddingTop: "40px", paddingBottom: "40px", borderRadius: "5px",}}>VÉRIFIER LE STATUT D'UNE DEMANDE</h4>
 
