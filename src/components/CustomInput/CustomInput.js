@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react'
-import {Input,InputGroup,Label,FormGroup} from 'reactstrap'
+import React, {useState, useEffect} from 'react';
+import {Input,InputGroup,Label,FormGroup} from 'reactstrap';
 import './CustomInput.css'
 
 export default function CustomInput({field, updateValue, updateDependentSection}) {
@@ -76,7 +76,7 @@ export default function CustomInput({field, updateValue, updateDependentSection}
                              style={{ display: "flex",}}>
                                 <Input 
                                  className="form-control" 
-                                 style={{ width: "15px", height: "15px", marginRight: 10}}
+                                 style={{ minWidth: "15px", width: "15px", height: "15px", marginRight: 10}}
                                  type="radio" 
                                  checked={currentRadio === op.name }
                                  onChange={(e) => {
