@@ -7,6 +7,7 @@ export default function DetailsDemande() {
     const [formulaire, setFormulaire] = useState(null);
     const [query, setQuery] = useState({});
     const [answersForm, setAnswersForm] = useState([]);
+    
 
     const loadForm = async () => {
         const formType = window.location.pathname.split('/')[window.location.pathname.split('/').length - 2];
@@ -54,6 +55,17 @@ export default function DetailsDemande() {
         loadForm();
     }, [])
 
+    function printForm() {
+        var formContent = document.getElementsByClassName('form-content')[0].outerHTML;
+        var printWindow = window.open('', '', 'height=400,width=800');
+        printWindow.document.write('<html><head><title>APDP Formulaire</title>');
+        printWindow.document.write('</head><body >');
+        printWindow.document.write(formContent);
+        printWindow.document.write('</body></html>');
+        printWindow.document.close();
+        printWindow.print();
+    }
+
     if (!formulaire) {
         return null
     }
@@ -61,21 +73,28 @@ export default function DetailsDemande() {
     return (
         <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
             <Form className="form-style">
-                <h2 style={{ marginBottom: '50px', fontSize: 'large' }}>{formulaire.data.name}</h2>
-                <div className="row" style={{ textAlign: 'left' }}>
-                    {answersForm.map((answer) => (
-                        <div>
-                            <Label 
-                                string={answer.question} 
-                                style={{ marginTop: 5 }}>
-                                {answer.question}
-                            </Label>
-                            <p>{answer.answer}</p>
-                        </div>
-                        ))
-                    }
+                <div className='form-content'>
+                    <h2 style={{ marginBottom: '50px', fontSize: 'large' }}>{formulaire.data.name}</h2>
+                    <div className="row" style={{ textAlign: 'left' }}>
+                        {answersForm.map((answer) => (
+                            <div>
+                                <Label 
+                                    string={answer.question} 
+                                    style={{ marginTop: 5, fontWeight: 'bold' }}>
+                                    {answer.question}
+                                </Label>
+                                <p>{answer.answer}</p>
+                            </div>
+                            ))
+                        }
+                    </div>
+                </div>
+                <div className='row' style={{ justifyContent: "space-between" }}>
                     <Button className="auth-form-btn" style={{width: 'auto', height: 'auto', padding: '15px',}} onClick={(e) => window.location.pathname = `/statut-demande`}>
                         Vérifier le statut
+                    </Button>
+                    <Button className="auth-form-btn" style={{width: 'auto', height: 'auto', padding: '15px',}} onClick={(e) =>printForm()}>
+                        Imprimer la demande
                     </Button>
                 </div>
             </Form>
