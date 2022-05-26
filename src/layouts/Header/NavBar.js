@@ -63,10 +63,11 @@ export default class NavBar extends Component {
                                 <NavDropdown className={"nav-link-title nav-item-custom"} title={"ACTUALITÉS "} id="navbarScrollingDropdown" active={window.location.pathname === "/"}>
                                     <NavDropdown.Item href="/activites">Les Activités</NavDropdown.Item>
                                     <NavDropdown.Item href="/communiques">Communiqués et Newsletters</NavDropdown.Item>
-                                    <NavDropdown.Item href="">Sondage sur un produit</NavDropdown.Item>
+                                    <NavDropdown.Item href="">Sondages</NavDropdown.Item>
                                     {/* <NavDropdown.Item href="/appels-d-offres">Appels d'offres</NavDropdown.Item> */}
                                     <NavDropdown.Item href="/evenements">Evènements</NavDropdown.Item>
                                     <NavDropdown.Item href="/forum-de-discussion">Forum de discussion</NavDropdown.Item>
+                                    <NavDropdown.Item href="/arnaque-du-mois">Arnaque du mois</NavDropdown.Item>
                                     <NavDropdown.Item href="/phototheque">Photothèque</NavDropdown.Item>
                                     <NavDropdown.Item href="/videotheque">Vidéothèque</NavDropdown.Item>
                                     {/* <NavDropdown.Item href="/plans-de-passation">Plans de passation</NavDropdown.Item> */}
@@ -77,8 +78,8 @@ export default class NavBar extends Component {
                                             type="" data-toggle="dropdown">Marchés Publiques
                                         </button>
                                         <ul className="dropdown-menu" style={{right: 0, left: "auto"}}>
-                                            <NavDropdown.Item href="/plans-de-passation">Plans de passation</NavDropdown.Item>
-                                            <NavDropdown.Item href="/appels-d-offres">Appels d'offres</NavDropdown.Item>
+                                            <NavDropdown.Item href="/plans-de-passation">Plan de passation</NavDropdown.Item>
+                                            <NavDropdown.Item href="/appels-d-offres">Publication de marché</NavDropdown.Item>
                                         </ul>
                                     </div>
 
@@ -149,9 +150,9 @@ export default class NavBar extends Component {
                                         </button>
                                         <ul className="dropdown-menu" style={{right: 0, left: "auto"}}>
                                             <NavDropdown.Item href="/textes/lois">Lois</NavDropdown.Item>
-                                            <NavDropdown.Item href="/textes/arretes">Arretes</NavDropdown.Item>
+                                            <NavDropdown.Item href="/textes/arretes">Arrêtés </NavDropdown.Item>
                                             <NavDropdown.Item href="/textes/decrets">Decrets</NavDropdown.Item>
-                                        <NavDropdown.Item href="/textes/deliberations-publiques">Décisions Publiques</NavDropdown.Item>
+                                        <NavDropdown.Item href="/textes/deliberations-publiques">Décisions</NavDropdown.Item>
                                         </ul>
                                     </div>
                                     <div className='dropdown '>
