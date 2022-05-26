@@ -22,7 +22,7 @@ width: 100%;
 
 .appels-offres-avis-importants { 
     text-align: left;
-font: normal normal bold 18px/24px Montserrat;
+font: normal normal bold 18px/24px Roboto;
 letter-spacing: 0px;
 color: #FF0000;
 opacity: 1;
@@ -31,7 +31,7 @@ margin-bottom: 20px;
 }
 .appels-offres-publications {
     text-align: center;
-font: normal normal bold 28px/34px Source Sans Pro;
+font: normal normal bold 28px/34px Roboto;
 letter-spacing: 0px;
 color: #000000;
 opacity: 1;
@@ -47,7 +47,7 @@ margin-bottom: 30px;
 
 .appels-offres-header-text {
     text-align: center;
-font: normal normal bold 49px/59px Montserrat;
+font: normal normal bold 49px/59px Roboto;
 letter-spacing: 0px;
 color: #FFFFFF;
 opacity: 1;
@@ -63,7 +63,7 @@ padding-top: 15px;
 
 .appels-offres-blue-band-text {
     text-align: left;
-font: normal normal 900 17px/24px Montserrat;
+font: normal normal 900 17px/24px Roboto;
 letter-spacing: 0px;
 color: #2E2E2E;
 opacity: 1;

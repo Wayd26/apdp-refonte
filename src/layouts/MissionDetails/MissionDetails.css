@@ -11,7 +11,7 @@
 
 .mission-details-title {
     text-align: center;
-    font: normal normal bold 45px/68px Montserrat;
+    font: normal normal bold 45px/68px Roboto;
     letter-spacing: 0px;
     color: #4385F6;
     text-shadow: 0px 3px 6px #0000001A;
@@ -26,7 +26,7 @@
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    font: normal normal normal 24px/40px Source Sans Pro;
+    font: normal normal normal 24px/40px Roboto;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;

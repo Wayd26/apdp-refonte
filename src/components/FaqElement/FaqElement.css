@@ -27,7 +27,7 @@
 
 .faq-label {
   text-align: left;
-  font: normal normal bold 20px/24px Montserrat;
+  font: normal normal bold 20px/24px Roboto;
   letter-spacing: 0px;
   color: #4385f6;
   opacity: 0.79;
@@ -38,7 +38,7 @@
 
 .faq-description {
   text-align: left;
-  font: normal normal normal 16px/19px Source Sans Pro;
+  font: normal normal normal 16px/19px Roboto;
   letter-spacing: 0px;
   color: #8d9598;
   opacity: 1;
@@ -65,7 +65,7 @@
 
 @media only screen and (max-width: 478px) {
   .faq-label {
-    font: normal normal bold 12px/14px Montserrat;
+    font: normal normal bold 12px/14px Roboto;
   }
   .display-more-icon {
     height: 47px;

@@ -3,7 +3,7 @@
     width: 100%;
     margin: 0;
     height: 40%;
-    font-family: Montserrat;
+    font-family: Roboto;
     /* background: url(../../../assets/icons/footer_bg.jpg) */
 }
 
@@ -19,7 +19,7 @@
     border-radius: 6px;
     opacity: 1;
     height: 41px;
-    font: normal normal normal 22px/29px Source Sans Pro;
+    font: normal normal normal 22px/29px Roboto;
     letter-spacing: 0px;
     color: #000000;
     border-color: #FFFFFF;
@@ -75,8 +75,6 @@
   Version: 1.0
 */
 
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Roboto:300,400,500,700");
-
 :root {
     --primbgClr: #2b71d4 !important;
     --primbgdarkClr: #2258a6 !important;
@@ -91,7 +89,7 @@
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Roboto";
     font-weight: 400;
     font-style: normal;
     background-color: var(--bkgColor);
@@ -120,7 +118,7 @@ body {
 }
 .visitor-number-span {
     color : #00bef0;
-    font: normal normal bold 28px/35px Montserrat;
+    font: normal normal bold 28px/35px Roboto;
 
 }
 
@@ -187,7 +185,7 @@ body {
 
 .footer-menu-name {
     text-align: left;
-    font: normal normal bold 16px/20px Montserrat;
+    font: normal normal bold 16px/20px Roboto;
 letter-spacing: 0px;
 color: #FFFFFF;
 opacity: 1;
@@ -394,7 +392,7 @@ opacity: 1;
 }
 
 li > a {
-    font: normal normal normal 14px/20px Montserrat;
+    font: normal normal normal 14px/20px Roboto;
 letter-spacing: 0px;
 color: #FFFFFF;
 opacity: 1;
@@ -576,7 +574,7 @@ h2,
 h3,
 h4,
 h5{
-    font-family: "Montserrat", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 700;
     color: #1d2025;
     margin: 0px;

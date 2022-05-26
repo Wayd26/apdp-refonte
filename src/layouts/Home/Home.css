@@ -22,7 +22,7 @@
   letter-spacing: 0px;
   color: #ffffff;
   opacity: 1;
-  font: normal normal bold 20px/95px Montserrat;
+  font: normal normal bold 20px/95px Roboto;
 }
 
 .prestation-div {
@@ -39,7 +39,7 @@
 
 .prestation-div-text {
   text-align: left;
-  font: normal bold normal 23px/28px Montserrat;
+  font: normal bold normal 23px/28px Roboto;
   letter-spacing: 0px;
   color: #292929;
   opacity: 1;
@@ -52,7 +52,7 @@
   background: #4385f6 0% 0% no-repeat padding-box;
   border-radius: 12px;
   opacity: 1;
-  font: normal normal bold 16px/20px Montserrat;
+  font: normal normal bold 16px/20px Roboto;
   letter-spacing: 0px;
   color: #ffffff;
   width: 150px;
@@ -80,7 +80,7 @@
 
 .rights-duties-title {
   text-align: center;
-  font: normal normal bold 38px/64px Source Sans Pro;
+  font: normal normal bold 38px/64px Roboto;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
@@ -93,7 +93,7 @@
 } */
 .rights-duties-text {
   text-align: center;
-  font: normal normal normal 24px/27px Source Sans Pro;
+  font: normal normal normal 24px/27px Roboto;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
@@ -114,7 +114,7 @@
 .form-section-title {
   text-align: center;
   text-decoration: underline;
-  font: normal normal bold 18px/24px Montserrat;
+  font: normal normal bold 18px/24px Roboto;
   letter-spacing: 0px;
   /* color: #ffbe00; */
   color: #4385f6;
@@ -122,7 +122,7 @@
 }
 .form-section-subtitle {
   text-align: center;
-  font: normal normal bold 38px/64px Source Sans Pro;
+  font: normal normal bold 38px/64px Roboto;
   letter-spacing: 0px;
   color: #14395b;
   text-shadow: 0px 3px 6px #ffffff29;
@@ -165,7 +165,7 @@
   letter-spacing: 0px;
   color: #292929;
   opacity: 1;
-  font: normal normal bold 38px/44px Montserrat;
+  font: normal normal bold 38px/44px Roboto;
   margin-top: 7%;
   margin-bottom: auto;
 }
@@ -187,7 +187,7 @@
 }
 
 .speech-title {
-  font: normal normal bold 34px/60px Montserrat;
+  font: normal normal bold 34px/60px Roboto;
   letter-spacing: 0px;
   color: #14395b;
   text-shadow: 0px 3px 6px #ffffff29;
@@ -196,7 +196,7 @@
 
 .speech-description {
   text-align: justify;
-  font: normal normal normal 20px/33px Source Sans Pro;
+  font: normal normal normal 20px/33px Roboto;
   letter-spacing: 0px;
   color: #292929;
   text-shadow: 0px 3px 6px #00000029;
@@ -267,10 +267,10 @@
 
 @media only screen and (max-width: 578px) {
   .rights-duties-title {
-    font: normal normal bold 30px/24px Source Sans Pro;
+    font: normal normal bold 30px/24px Roboto;
   }
   .rights-duties-text {
-    font: normal normal normal 20px/25px Source Sans Pro;
+    font: normal normal normal 20px/25px Roboto;
     margin-bottom: 15px;
   }
   .rights-duties-section {
@@ -278,14 +278,14 @@
   }
 
   .form-section-subtitle {
-    font: normal normal bold 38px/54px Source Sans Pro;
+    font: normal normal bold 38px/54px Roboto;
   }
 
   .guide-faq-title {
-    font: normal normal bold 38px/47px Montserrat;
+    font: normal normal bold 38px/47px Roboto;
   }
   .guide-faq-subtitle {
-    font: normal normal normal 14px/22px Source Sans Pro;
+    font: normal normal normal 14px/22px Roboto;
   }
 }
 
@@ -299,11 +299,11 @@
     margin-top: 0px;
   }
   .card-on-caroussel-title {
-    font: normal normal bold 16px/22px Montserrat;
+    font: normal normal bold 16px/22px Roboto;
 
     margin-top: 5px;
   }
   .card-on-caroussel-description {
-    font: normal normal normal 18px/29px Source Sans Pro;
+    font: normal normal normal 18px/29px Roboto;
   }
 }

@@ -68,7 +68,7 @@ const Footer = () => {
           }}>
             <div className="d-flex flex-column justify-content-center align-items-center" >
 
-              <div style={{ font: "normal normal bold 25px/30px Montserrat" }}> Rejoignez-nous</div>
+              <div style={{ font: "normal normal bold 25px/30px Roboto" }}> Rejoignez-nous</div>
              
               <div style={{
                 fontSize: 15

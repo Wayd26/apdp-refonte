@@ -13,7 +13,7 @@ margin-top: 50px;
 
 .quiz-title {
     text-align: center;
-font: normal normal bold 33px/48px Montserrat;
+font: normal normal bold 33px/48px Roboto;
 letter-spacing: 0px;
 color: #000000;
 text-shadow: 0px 3px 6px #0000001A;
@@ -23,7 +23,7 @@ opacity: 1;
 
  .quiz-select-category-text {
     text-align: center;
-font: normal normal normal 20px/26px Source Sans Pro;
+font: normal normal normal 20px/26px Roboto;
 letter-spacing: 0px;
 color: #000000;
 opacity: 1;
@@ -48,7 +48,7 @@ background: #FFFFFF 0% 0% no-repeat padding-box;
 border: 1px solid #CED4DA;
 opacity: 1;
 padding: 5px 15px;
-font: normal normal normal 20px/23px Source Sans Pro;
+font: normal normal normal 20px/23px Roboto;
 letter-spacing: 0px;
 color: #868E96;
 opacity: 1;
@@ -83,9 +83,9 @@ border: none;
         width: 85%;
     }
     .quiz-title {
-        font: normal normal bold 20px/38px Montserrat;
+        font: normal normal bold 20px/38px Roboto;
     }
      .quiz-select-category-text {
-    font: normal normal normal 15px/20px Source Sans Pro;
+    font: normal normal normal 15px/20px Roboto;
 }
 }

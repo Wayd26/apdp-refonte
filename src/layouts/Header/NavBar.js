@@ -73,7 +73,7 @@ export default class NavBar extends Component {
                                     {/* <NavDropdown.Item href="/plans-de-passation">Plans de passation</NavDropdown.Item> */}
 
                                     <div className='dropdown '>
-                                        <button className="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal bold 20px/35px Source Sans Pro", }}
+                                        <button className="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal bold 20px/35px Roboto", }}
 
                                             type="" data-toggle="dropdown">Marchés Publiques
                                         </button>
@@ -92,7 +92,7 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="/quiz">Quiz</NavDropdown.Item>
 
                                     <div className='dropdown '>
-                                        <button className="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal bold 20px/35px Source Sans Pro", }}
+                                        <button className="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal bold 20px/35px Roboto", }}
 
                                             type="" data-toggle="dropdown">Mise en conformité
                                         </button>
@@ -145,7 +145,7 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="/outils-conformite">Outils de conformité</NavDropdown.Item>
                                     <NavDropdown.Item href="/rapports-annuels">Rapports d'activités Annuelles</NavDropdown.Item>
                                     <div className='dropdown '>
-                                        <button className="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal bold 20px/35px Source Sans Pro", }}
+                                        <button className="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal bold 20px/35px Roboto", }}
                                             type="" data-toggle="dropdown">Textes Nationaux
                                         </button>
                                         <ul className="dropdown-menu" style={{right: 0, left: "auto"}}>
@@ -156,7 +156,7 @@ export default class NavBar extends Component {
                                         </ul>
                                     </div>
                                     <div className='dropdown '>
-                                        <button className="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal bold 20px/35px Source Sans Pro", }}
+                                        <button className="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal bold 20px/35px Roboto", }}
                                             type="" data-toggle="dropdown">Textes Communautaires
                                         </button>
                                         <ul className="dropdown-menu" style={{right: 0, left: "auto"}}>

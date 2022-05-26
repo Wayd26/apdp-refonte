@@ -12,7 +12,7 @@ padding-right: 20px;
 }
 
 .market-card-title {
-    font: normal normal bold 20px/26px Montserrat;
+    font: normal normal bold 20px/26px Roboto;
     letter-spacing: 0px;
     color: #2E2E2E;
     opacity: 1;
@@ -20,7 +20,7 @@ padding-right: 20px;
 }
 
 .market-card-date {
-    font: normal normal bold 16px/23px Montserrat;
+    font: normal normal bold 16px/23px Roboto;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
@@ -29,7 +29,7 @@ padding-right: 20px;
 
 .market-card-description{
     text-align: justify;
-    font: normal normal normal 15px/20px Source Sans Pro;
+    font: normal normal normal 15px/20px Roboto;
     letter-spacing: 0px;
     color: #2E2E2E;
     opacity: 1;
@@ -48,7 +48,7 @@ padding-right: 20px;
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
-font: normal normal bold 14px/18px Montserrat;
+font: normal normal bold 14px/18px Roboto;
 letter-spacing: 0px;
 color: #727C8E;
 }
@@ -64,14 +64,14 @@ color: #727C8E;
 
 @media only screen and (max-width: 768px) { 
     .market-card-date {
-        font: normal normal bold 14px/18px Montserrat;
+        font: normal normal bold 14px/18px Roboto;
         margin-bottom: 15px; 
     }
     .market-card {
         width: 100%;
     }
     .market-card-title {
-        font: normal normal bold 18px/21px Montserrat;
+        font: normal normal bold 18px/21px Roboto;
         margin-bottom: 10px;
     }
     .market-card-button {
@@ -79,6 +79,6 @@ color: #727C8E;
         height: 39px;
         padding-left: 10px;
         padding-right: 10px;
-        font: normal normal bold 14px/18px Montserrat;
+        font: normal normal bold 14px/18px Roboto;
     }
 }

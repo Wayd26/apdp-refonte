@@ -13,7 +13,7 @@
 
 .procedure-card-label {
     text-align: left;
-    font: normal normal bold 21px/29px Source Sans Pro;
+    font: normal normal bold 21px/29px Roboto;
     letter-spacing: 0px;
     color: #2E2E2E;
     opacity: 1;
@@ -33,7 +33,7 @@
     opacity: 1;
     border: none;
     color: #FFFFFF;
-    font: normal normal bold 14px/25px Montserrat;
+    font: normal normal bold 14px/25px Roboto;
 }
 .procedure-card-button-pdf {
     text-align: left;
@@ -45,13 +45,13 @@
     opacity: 1;
     border: none;
     color: #FFFFFF;
-    font: normal normal bold 14px/25px Montserrat;
+    font: normal normal bold 14px/25px Roboto;
 }
 
 @media only screen and (max-width:768px) {
 .procedure-card-label {
  
-    font: normal normal bold 16px/20px Source Sans Pro;   
+    font: normal normal bold 16px/20px Roboto;   
 }
 
 .procedure-card {
@@ -63,6 +63,6 @@
     width: 154px;
     height: 48px;
     color: #FFFFFF;
-    font: normal normal bold 13px/20px Montserrat;
+    font: normal normal bold 13px/20px Roboto;
 }
 }
