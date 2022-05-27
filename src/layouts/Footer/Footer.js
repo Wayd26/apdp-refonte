@@ -100,7 +100,8 @@ const Footer = () => {
               textAlign: "start",
             }}>
               {/* <div className="my-1" >Mentions légales</div> */}
-              <div>Politique de confidentialité</div>
+              <div className="mb-2">Politique de confidentialité</div>
+              <div>Mentions Légales</div>
             </div>
 
           </div>
@@ -108,7 +109,7 @@ const Footer = () => {
             <div className="footer-menu">
               <h2 className="footer-menu-name"> INFORMATIONS </h2>
               <ul id="menu-company" className="footer-menu-list">
-                <li className="menu-item menu-item-type-post_type menu-item-object-page">
+                {/* <li className="menu-item menu-item-type-post_type menu-item-object-page">
                   <a href="textes/decrets">Décrets</a>
                 </li>
                 <li className="menu-item menu-item-type-post_type menu-item-object-page">
@@ -117,7 +118,7 @@ const Footer = () => {
 
                 <li className="menu-item menu-item-type-post_type menu-item-object-page">
                   <a href="/evenements">Événements</a>
-                </li>
+                </li> */}
                 {/* <li className="menu-item menu-item-type-post_type menu-item-object-page">
                   <a href="#">Presse</a>
                 </li> */}
@@ -223,11 +224,6 @@ const Footer = () => {
                   {/* </a> */}
                 </div>
                 </div>
-
-
-
-
-
               </div>
             </div>
 

@@ -110,7 +110,7 @@ const Header = () => {
                                             type="" data-toggle="dropdown">CONNAITRE L'APDP
                                         </div>
                                         <ul className="dropdown-menu">
-                                            <li><a tabIndex="-1" href="/autorite">L'autorité</a></li>
+                                            <li><a tabIndex="-1" href="/autorite">L' autorité</a></li>
                                             <li><a tabIndex="-1" href="/mission">Mission</a></li>
                                             <li><a tabIndex="-1" href="/membres">Mandature en cours et Historique des membres</a></li>
 
@@ -127,9 +127,9 @@ const Header = () => {
                                 </div>
                             
                             
-                                <div style={{cursor: 'pointer'}}>
+                                {/* <div style={{cursor: 'pointer'}}>
                                     <Button color="primary" onClick={toggle_modal} className="client-espace-button"><h6>EN</h6></Button>
-                                </div>
+                                </div> */}
 
                                 { localStorage.getItem("user_token") ? <div>
                                     <Button color="danger" onClick={session_logout} className="client-espace-button"><h6>Déconnexion</h6></Button>

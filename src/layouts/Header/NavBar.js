@@ -75,7 +75,7 @@ export default class NavBar extends Component {
                                     <div className='dropdown '>
                                         <button className="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal bold 20px/35px Roboto", }}
 
-                                            type="" data-toggle="dropdown">Marchés Publiques
+                                            type="" data-toggle="dropdown">Marchés Publics
                                         </button>
                                         <ul className="dropdown-menu" style={{right: 0, left: "auto"}}>
                                             <NavDropdown.Item href="/plans-de-passation">Plan de passation</NavDropdown.Item>

@@ -60,7 +60,7 @@ const PlansDePassation = () => {
                             <Card.Text style={{'text-align': 'center', 'font-size': '10px', 'color': '#2E2E2E', 'font-weight': 'normal', 'margin': '20px'}}>
                             Marché de fournitures, travaux, services courants et prestations intellectuelles
                             </Card.Text>
-                            <a href={doc} download="PDF.pdf">
+                            <a href={doc} download target={'_blank'}>
                                 <Button variant="light" style={{ width: '50%', 'font-size': '15px', 'background-color': '#FFF', 'border-radius': '24px', 'color':'#727C8E', 'margin-bottom': '20px', }}>
                                     Télécharger <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
                                 </Button>
