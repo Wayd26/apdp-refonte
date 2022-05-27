@@ -101,11 +101,11 @@ const Header = () => {
                             
                                 <div className=" d-none d-md-flex header-block-2-div-2 d-flex flex-row justify-content-around">
                                 {/* <div className=" row d-flex  justify-content-around"> */}
-                                    <div className="col" style={{color: "#292929", font: "normal normal bold 20px/35px Roboto", cursor: "pointer"}}> <a className="code_numerique" target={"_blank"} href={code_numerique} rel={"noopener noreferer"} > CODE DU NUMERIQUE </a> </div>
-                                    <div className="col" style={{color: "#292929", font: "normal normal bold 20px/35px Roboto", cursor: "pointer"}} onClick={handleClickRecommandations}> RECOMMANDATIONS</div>
+                                    <div className="col" style={{color: "#292929", font: "normal normal normal 20px/35px Roboto", cursor: "pointer"}}> <a className="code_numerique" target={"_blank"} href={code_numerique} rel={"noopener noreferer"} > CODE DU NUMERIQUE </a> </div>
+                                    <div className="col" style={{color: "#292929", font: "normal normal normal 20px/35px Roboto", cursor: "pointer"}} onClick={handleClickRecommandations}> RECOMMANDATIONS</div>
                                     {/* <div className="col" style={{color: "#292929", fontFamily: "Roboto", fontWeight: "bold", cursor: "pointer"}} onClick={handleClickApdpInfo}> CONNAITRE L'APDP</div> */}
                                     <div className='dropdown '>
-                                        <div className=" dropdown-toggle drop-class" style={{ font: "normal normal bold 20px/35px Roboto", cursor: "pointer"}}
+                                        <div className=" dropdown-toggle drop-class" style={{ font: "normal normal normal 20px/35px Roboto", cursor: "pointer"}}
 
                                             type="" data-toggle="dropdown">CONNAITRE L'APDP
                                         </div>
