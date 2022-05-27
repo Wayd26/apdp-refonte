@@ -53,14 +53,14 @@ const Activites = () => {
 
             {/* Activities list 1 */}
             <hr className={"activities-separator"}/>
-            <h4 className={"activities-page-section"}>LOREM IPSUM</h4>
+            {/* <h4 className={"activities-page-section"}>LOREM IPSUM</h4> */}
             <div className={"activities-card-list row text-align left"}>
 
                 {/* {activities && Object.keys(activities).map((activity, index) => <div> {index.title}</div>  )} */}
                 {/* {activities && activities.map((activity, index) => <div>{activity.title} </div>)} */}
-                {activities && activities.map((activity, index) => 
+                {activities && activities?.map((activity, index) => 
                 <Card key={index} className={"activities-card col-md-6 col-lg-4 col-xl-3"}>
-                <div className={"activities-card-img"} style={{ "backgroundImage" : 'url(' + `${activity.image[0]}` + ')'}} id={"activities-card-img"}></div>
+                <div className={"activities-card-img"} style={{ "backgroundImage" : 'url(' + `${activity?.image_url}` + ')'}} id={"activities-card-img"}></div>
                     <Card.Body>
                         <Card.Title style={{ float: 'left', fontWeight: 'bold' }}>{activity.title}</Card.Title>
                         <Card.Text style={{ float: 'left', textAlign: 'left', fontSize: '9px', width: '100px',}}>

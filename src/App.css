@@ -8,3 +8,8 @@
   background-color: #F7F7F7;
   height: 100vh;
 }
+
+
+.no-bold {
+  font-weight: normal !important;
+}

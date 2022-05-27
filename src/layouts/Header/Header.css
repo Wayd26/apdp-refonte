@@ -29,7 +29,7 @@ border: none !important;
     background-color: #FFBE00 !important;
 }
 .dropdown-item {
-    font: normal normal bold 20px/35px Roboto !important;
+    font: normal normal normal 15px/30px Roboto !important;
 }
 .dropdown-item.active, .dropdown-item:active, .dropdown-item:focus, .dropdown-item:hover {
     background-color: #FFBE00 !important;

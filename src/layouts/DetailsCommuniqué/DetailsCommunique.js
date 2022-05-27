@@ -27,7 +27,7 @@ const DetailsCommunique = () => {
         } else {
             // console.log("data data ", resp.data.data)
             let element = resp.data.data.filter(elt => {
-                if(elt.id === communique_id) {
+                if(elt.id == communique_id) {
                 return elt
             } else {
                 return false

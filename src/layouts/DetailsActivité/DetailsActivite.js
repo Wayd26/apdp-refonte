@@ -26,9 +26,9 @@ const DetailsActivite = () => {
         if(resp.response && resp.response.status !== 200){
             // console.log("data error ", resp.response)
         } else {
-            // console.log("data data ", resp.data.data)
+            console.log("data data ", resp.data.data)
                 let element = resp.data.data.filter(elt => {
-                    if(elt.id === activity_id) {
+                    if(elt.id == activity_id) {
                     return elt
                 } else {
                     return false
@@ -39,18 +39,17 @@ const DetailsActivite = () => {
     }
 
     return (  
-        <div id="details-activities" className="details-activities">
+        <div id="details-activities" className="details-activities mx-auto">
         {/* <ActualiteCarousel /> */}
         <br/>
         <br/>
         <br/>
         <br/>
        <div className="row d-flex">
-
         <div className="details-activities-cards-container">
            {/* Start Details activity card */}
            <div id="activity-card" className="activity-card">
-            <img src={activityData && activityData[0]?.image[0]} className="activity-card-img"/>
+            <img src={activityData && activityData[0]?.image_url} className="activity-card-img"/>
             <p className="activity-card-title">{activityData && activityData[0]?.title}</p>
             <p className="activity-card-date"><BiCalendarCheck /> {activityData && activityData[0]?.created_at.slice(8,10)} / {activityData && activityData[0]?.created_at.slice(5,7)} / {activityData && activityData[0]?.created_at.slice(0,4)} </p>
             {/* <p className="details-activity-card-subtitle">{activityData && activityData[0]?.content}</p> */}
@@ -63,10 +62,11 @@ const DetailsActivite = () => {
            {/* End Details activity card */}
             
         </div>
-        <div className="details-activities-others-container">
+
+        {/* <div className="details-activities-others-container">
             <p className="popular-activities-title">Activités Populaires</p>
             <hr className="popular-activities-hr"></hr>
-            {/* Start Popular Activites */}
+
             <div className="row my-3">
                 <div className="col-4">
                     <img src={img5} className="popular-activities-img"/>
@@ -100,8 +100,7 @@ const DetailsActivite = () => {
                 </div>
             </div>
 
-            {/* End Popular Activities */}
-            {/* Start Categories */}
+          *
             <p className="categories-title">Catégories</p>
             <hr className="categories-hr"></hr>
             <p className="categories-items">Lorem ipsum(13)</p>
@@ -109,12 +108,10 @@ const DetailsActivite = () => {
             <p className="categories-items">Lorem ipsum(8)</p>
             <p className="categories-items">Lorem ipsum(11)</p>
             <p className="categories-items">Lorem ipsum(7)</p>
-            {/* End Categories */}
            
-        </div>
+        </div> */}
        </div>
 
-       {/* <FaqSection /> */}
     </div>
     )
 }
