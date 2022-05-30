@@ -15,7 +15,7 @@ const Mission = () => {
   }
 
   const loadMissionsData = async () => {
-      const resp = await getATypeOfArticles("mission")
+      const resp = await getATypeOfArticles("missions")
       if(resp.response && resp.response.status !== 200){
           console.log("data error ", resp.response)
       } else {

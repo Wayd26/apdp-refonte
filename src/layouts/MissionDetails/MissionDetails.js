@@ -21,7 +21,7 @@ const MissionDetails = (props) => {
     } else {
         // console.log("data data ", resp.data.data)
         let element = resp.data.data.filter(elt => {
-            if(elt.id === mission_id) {
+            if(elt.id == mission_id) {
             return elt
         } else {
             return false
@@ -35,7 +35,7 @@ const MissionDetails = (props) => {
         <div style={{backgroundColor: "#E2E2E2", paddingTop: "40px", paddingBottom: "40px"}} className="">
 
             <div className="mission-details-box p-3">
-                <p className="mission-details-title">{missionData && missionData[0].title} </p>
+                <p className="mission-details-title">{missionData && missionData[0]?.title} </p>
                 <p className="mission-details-text">
                 <div dangerouslySetInnerHTML={{__html: (missionData && missionData[0]?.content)}}></div>
                 </p>
