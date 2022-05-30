@@ -149,3 +149,25 @@ export function getFaq() {
    const response = api.get(`/faqs`)
    return response.then(data => data).catch( error => error)
 }
+
+// Forums
+export function getAllForums() {
+   const response = api.get(`/forums`);
+   return response.then(data => data).catch( error => error)
+}
+   
+export function getAForum(id) {
+   const response = api.get(`/forums/${id}`)
+   return response.then(data => data).catch( error => error)
+}
+
+// Blog
+export function getAllBlogs() {
+   const response = api.get(`/blog-posts`);
+   return response.then(data => data).catch( error => error)
+}
+   
+export function getABlog(id) {
+   const response = api.get(`/blog-posts/${id}`)
+   return response.then(data => data).catch( error => error)
+}

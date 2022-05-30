@@ -120,6 +120,7 @@ export default class NavBar extends Component {
                                     }>
                                     <NavDropdown.Item href="/faq">FAQ</NavDropdown.Item>
                                     <NavDropdown.Item href="/quiz">Quiz</NavDropdown.Item>
+                                    <NavDropdown.Item href="/blog">Blog</NavDropdown.Item>
 
                                     <div className='dropdown '>
                                         <button className="btn btn-default dropdown-toggle drop-class" style={{ "font": "normal normal normal 15px/30px Roboto", }}
