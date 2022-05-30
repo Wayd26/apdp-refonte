@@ -17,7 +17,7 @@ const UserTypeCard = (props) => {
                 {type === 'demand' ? <HiLink className={'user-type-icon'} /> : <HiUserGroup className={'user-type-icon'} />}
 
             </div>
-            <div className={'user-type-label'}>{type === 'right' ? 'Mes droits' : type === 'duty' ? 'Mes devoirs' : 'Faire une demande'}</div>
+            <div className={'user-type-label'}>{type === 'right' ? 'Mes droits' : type === 'duty' ? 'Mes obligations' : 'Faire une demande'}</div>
             <div className={'user-type-description'}>{description}</div>
             <Row className={'d-flex justify-content-end'}>
                 <button onClick={handleClick} className={'user-type-more-button d-flex justify-content-around align-self-right'}>

@@ -17,6 +17,8 @@ const Header = () => {
     const [isOpen,setIsOpen] = useState(false)
 
     const [breaknews, setBreaknews] = useState([]);
+    const [showDropdownApdp, setShowDropdownApdp] = useState(false);
+
 
     const loadBreaknewsData = async () => {
         const resp = await getATypeOfArticles("breaknews")
@@ -96,7 +98,7 @@ const Header = () => {
                                 <div  onClick={goHome}>
                                     <img src={apdp_logo} style={{cursor: "pointer"}} className="logo" />
                                     {/* <object style={{cursor: "pointer", height: 30, width: 40}}  data={apdp_logo} className="logo" type="image/svg+xml"></object> */}
-                                </div>
+                                </div>  
                             {/* </a> */}
                             
                                 <div className=" d-none d-md-flex header-block-2-div-2 d-flex flex-row justify-content-around">
@@ -104,12 +106,15 @@ const Header = () => {
                                     <div className="col" style={{color: "#292929", font: "normal normal normal 20px/35px Roboto", cursor: "pointer"}}> <a className="code_numerique" target={"_blank"} href={code_numerique} rel={"noopener noreferer"} > CODE DU NUMERIQUE </a> </div>
                                     <div className="col" style={{color: "#292929", font: "normal normal normal 20px/35px Roboto", cursor: "pointer"}} onClick={handleClickRecommandations}> RECOMMANDATIONS</div>
                                     {/* <div className="col" style={{color: "#292929", fontFamily: "Roboto", fontWeight: "bold", cursor: "pointer"}} onClick={handleClickApdpInfo}> CONNAITRE L'APDP</div> */}
-                                    <div className='dropdown '>
-                                        <div className=" dropdown-toggle drop-class" style={{ font: "normal normal normal 20px/35px Roboto", cursor: "pointer"}}
+                                    <div    className='dropdown'
+                                            onMouseLeave={() => setShowDropdownApdp(false)}
+                                            onMouseOver={() => setShowDropdownApdp(true)}
+                                    >
+                                        <div className="dropdown-toggle drop-class" style={{ font: "normal normal normal 20px/35px Roboto", cursor: "pointer"}}
 
                                             type="" data-toggle="dropdown">CONNAITRE L'APDP
                                         </div>
-                                        <ul className="dropdown-menu">
+                                        <ul className={showDropdownApdp == true ? "dropdown-menu show" :  "dropdown-menu"}>
                                             <li><a tabIndex="-1" href="/autorite">L' autorité</a></li>
                                             <li><a tabIndex="-1" href="/mission">Mission</a></li>
                                             <li><a tabIndex="-1" href="/membres">Mandature en cours et Historique des membres</a></li>

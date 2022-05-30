@@ -1,5 +1,6 @@
 .footer {
-    background-color:#4385F6;
+    /* background-color:#4385F6; */
+    background-color: transparent;
     width: 100%;
     margin: 0;
     height: 40%;
@@ -18,8 +19,8 @@
     background: #FFFFFF;
     border-radius: 6px;
     opacity: 1;
-    height: 41px;
-    font: normal normal normal 22px/29px Roboto;
+    height: 35px;
+    font: normal normal normal 18px/25px Roboto;
     letter-spacing: 0px;
     color: #000000;
     border-color: #FFFFFF;
@@ -115,16 +116,20 @@ body {
 .visitor-number-p {
     background-color: #292828;
     color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 15px; */
 }
 .visitor-number-span {
     color : #00bef0;
-    font: normal normal bold 28px/35px Roboto;
+    font: normal normal bold 20px/35px Roboto;
 
 }
 
 .footer {
-    /* background-color: var(--footerColor); */
-    color: #fff;
+    background-color: var(--footerColor);
+    /* color: #fff; */
     /* height: 200px; */
 }
 
@@ -149,8 +154,8 @@ body {
 .footer-content {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1230px;
-    padding: 40px 15px 350px;
+    /* max-width: 1230px; */
+    padding: 40px 15px 50px;
     position: relative;
 }
 
@@ -178,13 +183,13 @@ body {
 }
 
 .footer-menu {
-    margin-top: 30px;
-    text-align: justify;
-    margin-left: 10px;
+    /* margin-top: 30px; */
+    /* text-align: justify; */
+    /* margin-left: 10px; */
 }
 
 .footer-menu-name {
-    text-align: left;
+    /* text-align: left; */
     font: normal normal bold 16px/20px Roboto;
 letter-spacing: 0px;
 color: #FFFFFF;
@@ -238,7 +243,7 @@ opacity: 1;
 }
 
 .footer-call-to-action {
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
 
 .footer-call-to-action-title {
@@ -370,6 +375,7 @@ opacity: 1;
     margin-right: auto;
     /* max-width: 1200px; */
     background-color: var(--footerColor);
+    /* background-color: unset; */
     height: 30px;
     display: flex;
     justify-content: center;
@@ -426,8 +432,8 @@ opacity: 1;
     .footer-content {
         margin-left: auto;
         margin-right: auto;
-        max-width: 1230px;
-        padding: 40px 15px 1050px;
+        /* max-width: 1230px; */
+        padding: 40px 15px 50px;
         position: relative;
     }
 }
@@ -452,8 +458,8 @@ opacity: 1;
     .footer-content {
         margin-left: auto;
         margin-right: auto;
-        max-width: 1230px;
-        padding: 40px 15px 350px;
+        /* max-width: 1230px; */
+        padding: 40px 15px 50px;
         position: relative;
     }
 
@@ -497,7 +503,7 @@ header {
 }
 
 .footer-logo {
-    width: 250px;
+    /* width: 250px; */
     background-color: white;
     padding: 5px;
     border-radius: 10px;
@@ -701,3 +707,5 @@ a {
     margin: 0px 9px;
 }
 
+
+.img-fluid {}

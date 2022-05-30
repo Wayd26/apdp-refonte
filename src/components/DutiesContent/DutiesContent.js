@@ -49,7 +49,7 @@ console.log(dutiesToDisplay)
     return (
         <div className={"duties-content"}>
 
-            <p className={"duties-content-title text-center"}> Vos devoirs </p>
+            <p className={"duties-content-title text-center"}> Vos obligations </p>
             <p className={"duties-content-subtitle d-flex justify-content-center mb-4 mt-3"}>Vous avez la possibilité de bloquer l’accès de cette personne à vos publications, de la signaler auprès de la communauté ou d’alerter le réseau social sur un comportement qui contrevient à sa charte d’utilisation. Il est très important de limiter au maximum l’audience de vos comptes sociaux. Des options de confidentialités existent pour « ne plus me trouver »,  « ne pas afficher/partager ma liste d’amis ». Il est également possible de  « bannir » les amis indésirables. Sur facebook, une option vous permet d’être avertis si un autre utilisateur mentionne votre nom sur une photo (tag).</p>
             <div className={"row d-flex justify-content-between"}>
 

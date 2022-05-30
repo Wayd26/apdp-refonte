@@ -132,13 +132,16 @@ const Home = () => {
         {/* <p className={"form-section-title"}>Formulaires</p> */}
         <p className={"form-section-subtitle"}>Liens Rapides</p>
         <div className={"row"}>
-          <div className={"col-sm-8 mx-auto"}>
+          <div className={"col-sm-6 mx-auto"}>
             <div className={"row d-flex justify-content-around"}>
               {/* {shortcuts.map((i, item) => ( */}
               
-                 <ShortcutCard ind={0} label={"Evènements"} link={"evenements"}/>
                  <ShortcutCard ind={1} label={"Lois"} link={"textes/lois"}/>
                  <ShortcutCard ind={2} label={"Communiqués"} link={"communiques"}/>
+                 <ShortcutCard ind={2} label={"Plans de passation"} link={"plans-de-passation"}/>
+                 <ShortcutCard ind={2} label={"Publication de marchés"} link={"appels-d-offres"}/>
+                 <ShortcutCard ind={2} label={"Espace RT"} link={""}/>
+                 <ShortcutCard ind={2} label={"Espace DPO"} link={"espace-dpo"}/>
              
               {/* ))} */}
             </div>

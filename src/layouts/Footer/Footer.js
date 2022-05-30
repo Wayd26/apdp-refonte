@@ -10,19 +10,19 @@ const Footer = () => {
 
   const [visitsNumber, setVisitsNumber] = React.useState(0)
 
-  
 
-    React.useEffect(() => {
-      if(localStorage.getItem("visits") != undefined) {
-        var visits_number = localStorage.getItem("visits")
-        setVisitsNumber(visits_number)
-      }
+
+  React.useEffect(() => {
+    if (localStorage.getItem("visits") != undefined) {
+      var visits_number = localStorage.getItem("visits")
+      setVisitsNumber(visits_number)
+    }
   }, [])
 
   const goHome = () => {
     window.location.replace("/")
   }
- 
+
   return <div className="pg-footer">
     <div className="footer">
       {/* <svg className="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100"
@@ -33,7 +33,7 @@ const Footer = () => {
       {/* <div className="footer-content-2"> */}
 
 
-        {/* <Row className="footer-menu-2">
+      {/* <Row className="footer-menu-2">
           <Col sm={1}></Col>
           <Col sm={4}>
             <h5 style={{
@@ -100,8 +100,7 @@ const Footer = () => {
               textAlign: "start",
             }}>
               {/* <div className="my-1" >Mentions légales</div> */}
-              <div className="mb-2">Politique de confidentialité</div>
-              <div>Mentions Légales</div>
+
             </div>
 
           </div>
@@ -109,22 +108,12 @@ const Footer = () => {
             <div className="footer-menu">
               <h2 className="footer-menu-name"> INFORMATIONS </h2>
               <ul id="menu-company" className="footer-menu-list">
-                {/* <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="textes/decrets">Décrets</a>
+                <li className="menu-item menu-item-type-post_type menu-item-object-page">
+                  <a href="#">Politique de confidentialité</a>
                 </li>
                 <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="textes/arretes">Arrêtés</a>
+                  <a href="#">Mentions Légales</a>
                 </li>
-
-                <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="/evenements">Événements</a>
-                </li> */}
-                {/* <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="#">Presse</a>
-                </li> */}
-                {/* <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="/phototheque">Photothèque</a>
-                </li> */}
                 <li className="menu-item menu-item-type-post_type menu-item-object-page">
                   <a href="/vos-démarches">Vos démarches</a>
                 </li>
@@ -158,34 +147,38 @@ const Footer = () => {
 
 
 
-<div >
-            <h5 style={{
-              color: "white",
-              textAlign: "start",
-              marginBottom: 5
-            }}>Recevez l'actualité en vous abonnant à notre Support</h5>
-            <Row>
-              <Col><input type="text" className="form-control" placeholder="Votre nom" aria-label="Recipient's username" aria-describedby="basic-addon2" /></Col>
-              <Col><input type="text" className="form-control" placeholder="Votre prénom" aria-label="Recipient's username" aria-describedby="basic-addon2" /></Col>
-            </Row>
-            <div className="input-group mb-3 mt-4">
-              <input type="text" className="form-control" placeholder="Votre e-mail" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-              <span style={{
-                backgroundColor: "#FFBE00",
-                width: 50,
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center"
-              }} className="input-group-text bckColorDark text-white" id="basic-addon2">
-                <FaPaperPlane />
-              </span>
-            </div>
-            <button className="footer-subscribe-button">S'abonner</button>
+              <div >
+                <h5 style={{
+                  color: "white",
+                  textAlign: "start",
+                  marginBottom: 10
+                }}>Recevez l'actualité en vous abonnant à notre Support</h5>
+                {/* <div className="flex"> */}
+                  {/* <Col> */}
+                  <input style={{borderRadius: 5}} type="text" className="form-control mb-2" placeholder="Votre nom" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                  {/* </Col> */}
+                  {/* <Col> */}
+                  <input style={{borderRadius: 5}} type="text" className="form-control mb-2" placeholder="Votre prénom" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                  {/* </Col> */}
+                {/* </div> */}
+                <div className="input-group mb-3">
+                  <input style={{borderRadius: 5}} type="text" className="form-control" placeholder="Votre e-mail" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                  {/* <span style={{
+                    backgroundColor: "#FFBE00",
+                    width: 50,
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center"
+                  }} className="input-group-text bckColorDark text-white" id="basic-addon2">
+                    <FaPaperPlane />
+                  </span> */}
+                </div>
+                <button className="footer-subscribe-button">S'abonner</button>
 
-          </div>
+              </div>
 
 
-{/*  */}
+              {/*  */}
 
 
 
@@ -196,10 +189,10 @@ const Footer = () => {
               <h2 className="footer-call-to-action-title">CONTACT</h2>
               <div style={{
                 display: 'flex',
-                justifyContent: 'flex-start',
+                // justifyContent: 'flex-start',
                 flexDirection: 'column',
-                alignItems: 'flex-start',
-                width: "max-content"
+                // alignItems: 'flex-start',
+                // width: "max-content"
               }}>
 
                 <div className='d-flex justify-content-center align-items-center'><i className="ri-map-pin-2-fill fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i>Rue 6 . 076 El Marzouk Joël  COTONOU</div>
@@ -208,21 +201,21 @@ const Footer = () => {
 
 
                 <div className='d-flex justify-content-center align-items-center'>
-                <div className="d-flex flex-row justify-content-between">
+                  <div className="d-flex flex-row justify-content-between">
 
-                  {/* <a className="linkedin social-container" href="#" target="_blank"> */}
+                    {/* <a className="linkedin social-container" href="#" target="_blank"> */}
                     {/* <span className="hidden-link-text">Facebook</span> */}
-                     <FaFacebook style={{ width: `40px`, color: `#2289FF`, fontSize: 30, margin: 5 }} />
-                  {/* </a> */}
-                  {/* <a className="twitter social-container" style={{backgroundColor: "#2289FF"}} href="#" target="_blank"> */}
+                    <FaFacebook style={{ width: `40px`, color: `#2289FF`, fontSize: 30, margin: 5 }} />
+                    {/* </a> */}
+                    {/* <a className="twitter social-container" style={{backgroundColor: "#2289FF"}} href="#" target="_blank"> */}
                     {/* <span className="hidden-link-text" style={{ backgroundColor: "#FFFFFF" }}>Twitter</span> */}
                     <FaTwitter style={{ color: "#2289FF", width: "30px", fontSize: "30px", backgroundColor: "#FFFFFF", borderRadius: "20px", padding: "3px", margin: 5 }} />
-                  {/* </a> */}
-                  {/* <a className="youtube social-container" href="#" target="_blank"> */}
+                    {/* </a> */}
+                    {/* <a className="youtube social-container" href="#" target="_blank"> */}
                     {/* <span className="hidden-link-text">Youtube</span> */}
                     <FaYoutube style={{ width: `40px`, color: `red`, fontSize: 30, margin: 5 }} />
-                  {/* </a> */}
-                </div>
+                    {/* </a> */}
+                  </div>
                 </div>
               </div>
             </div>
@@ -233,11 +226,15 @@ const Footer = () => {
 
       </div>
       <p className="visitor-number-p">Nombre de visites : <span id="visits" className="visitor-number-span">{visitsNumber}</span></p>
-      <div className="footer-copyright-wrapper">
+      {/* <div className="footer-copyright-wrapper"> */}
+      <div className="mx-auto mt-4 text-center">
         <p className="footer-copyright-text">
-          <a className="footer-copyright-link text-white" href="#" target="_self"> © Copyright 2021, APDP. Tous droits réservés.</a>
+          <a className="footer-copyright-link text-white" href="#" target="_self"> 
+          © Copyright {new Date().getFullYear()}, APDP. Tous droits réservés.
+          </a>
         </p>
-      </div>
+        </div>
+      {/* </div> */}
       <div className="flag-look-like">
         <div className="col green-block"></div>
         <div className="col yellow-block"></div>

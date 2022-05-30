@@ -36,7 +36,7 @@ const DetailsDevoir = (props) => {
 
     return (
         <div id="details-droit" className="details-devoir" style={{background: '#E2E2E2', paddingBottom: "40px", paddingTop: "40px"}}>
-            <p className="details-devoir-title mt-4">Vos Devoirs</p>
+            <p className="details-devoir-title mt-4">Vos obligations</p>
             <div className="details-devoir-image-container mx-auto mt-4">
                 <img src={devoirData?.image_url} className="details-devoir-image"/>
             </div>
