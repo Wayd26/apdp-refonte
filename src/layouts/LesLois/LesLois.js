@@ -27,7 +27,7 @@ const LesLois = () => {
         <div style={{backgroundColor: "#E2E2E2", paddingTop: "40px", paddingBottom: "40px"}}>
             <p className="lois-title">LOIS</p>
 
-            <div className="lois-container row d-flex justify-content-between">
+            <div className="lois-container row d-flex justify-content-around">
             {lois ? <>{lois.map((loi, index) =>
                 <LoiCard data={loi} /> )}</> : <h1> Aucune Loi </h1> 
                 }

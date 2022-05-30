@@ -11,9 +11,7 @@ const LoiCard = (props) => {
     const navigate = useNavigate();
 
     const handleButtonClicked = (id) =>{
-        
         navigate(`/lois/${id}`)
-
     }
     return (
         <div className="loi-card">
