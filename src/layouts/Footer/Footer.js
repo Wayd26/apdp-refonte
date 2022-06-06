@@ -19,6 +19,18 @@ const Footer = () => {
     }
   }, [])
 
+  const redirectSocialMedia = (type) => {
+    if (type == 'fb') {
+      window.location.href = "https://web.facebook.com/apdpofficiel"
+    }
+    if (type == 'tw') {
+      window.location.href = "https://twitter.com/APDP_BENIN"
+    }
+    if (type == 'yt') {
+      window.location.replace('/videotheque')
+    }
+  }
+
   const goHome = () => {
     window.location.replace("/")
   }
@@ -124,7 +136,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="col-sm-4 col-xs-12" >
-            <div className="footer-menu" style={{paddingRight: 30}}>
+            <div className="footer-menu" style={{ paddingRight: 30 }}>
 
               <div >
                 <h5 style={{
@@ -134,7 +146,7 @@ const Footer = () => {
                 }}>Recevez l'actualité en vous abonnant à notre Support</h5>
                 {/* <div className="flex"> */}
                 {/* <Col> */}
-                <input style={{ borderRadius: 5, maxWidth: 400}} type="text" className="form-control mb-2" placeholder="Votre nom" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                <input style={{ borderRadius: 5, maxWidth: 400 }} type="text" className="form-control mb-2" placeholder="Votre nom" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                 {/* </Col> */}
                 {/* <Col> */}
                 <input style={{ borderRadius: 5, maxWidth: 400 }} type="text" className="form-control mb-2" placeholder="Votre prénom" aria-label="Recipient's username" aria-describedby="basic-addon2" />
@@ -152,7 +164,7 @@ const Footer = () => {
                     <FaPaperPlane />
                   </span> */}
                 </div>
-                <button className="footer-subscribe-button" style={{maxWidth: 400}}>S'abonner</button>
+                <button className="footer-subscribe-button" style={{ maxWidth: 400 }}>S'abonner</button>
 
               </div>
 
@@ -174,9 +186,9 @@ const Footer = () => {
                 // width: "max-content"
               }}>
 
-                <div  className='d-flex justify-content-left align-items-center'><i className="ri-map-pin-2-fill fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i><span style={{font: 'normal normal normal 14px/20px Roboto'}}>Rue 6 . 076 El Marzouk Joël  COTONOU</span></div>
-                <div className='d-flex justify-content-left align-items-center'><i className="ri-mail-line fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i><span style={{font: 'normal normal normal 14px/20px Roboto'}}>contact@apdp.bj</span></div>
-                <div className='d-flex justify-content-left align-items-center'> <i className="ri-phone-fill fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i><span style={{font: 'normal normal normal 14px/20px Roboto'}}>(+ 229 ) 21 32 57 88</span></div>
+                <div className='d-flex justify-content-left align-items-center'><i className="ri-map-pin-2-fill fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i><span style={{ font: 'normal normal normal 14px/20px Roboto' }}>Rue 6 . 076 El Marzouk Joël  COTONOU</span></div>
+                <div className='d-flex justify-content-left align-items-center'><i className="ri-mail-line fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i><span style={{ font: 'normal normal normal 14px/20px Roboto' }}>contact@apdp.bj</span></div>
+                <div className='d-flex justify-content-left align-items-center'> <i className="ri-phone-fill fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i><span style={{ font: 'normal normal normal 14px/20px Roboto' }}>(+ 229 ) 21 32 57 88</span></div>
 
 
                 <div className='d-flex justify-content-center align-items-center'>
@@ -184,15 +196,15 @@ const Footer = () => {
 
                     {/* <a className="linkedin social-container" href="#" target="_blank"> */}
                     {/* <span className="hidden-link-text">Facebook</span> */}
-                    <FaFacebook style={{ width: `40px`, color: `#2289FF`, fontSize: 30, margin: 5 }} />
+                    <FaFacebook style={{ width: `40px`, color: `#2289FF`, fontSize: 30, margin: 5, cursor: 'pointer' }} onClick={() => redirectSocialMedia('fb')} />
                     {/* </a> */}
                     {/* <a className="twitter social-container" style={{backgroundColor: "#2289FF"}} href="#" target="_blank"> */}
                     {/* <span className="hidden-link-text" style={{ backgroundColor: "#FFFFFF" }}>Twitter</span> */}
-                    <FaTwitter style={{ color: "#2289FF", width: "30px", fontSize: "30px", backgroundColor: "#FFFFFF", borderRadius: "20px", padding: "3px", margin: 5 }} />
+                    <FaTwitter style={{ color: "#2289FF", width: "30px", fontSize: "30px", backgroundColor: "#FFFFFF", borderRadius: "20px", padding: "3px", margin: 5, cursor: 'pointer' }} onClick={() => redirectSocialMedia('tw')} />
                     {/* </a> */}
                     {/* <a className="youtube social-container" href="#" target="_blank"> */}
                     {/* <span className="hidden-link-text">Youtube</span> */}
-                    <FaYoutube style={{ width: `40px`, color: `red`, fontSize: 30, margin: 5 }} />
+                    <FaYoutube style={{ width: `40px`, color: `red`, fontSize: 30, margin: 5, cursor: 'pointer' }} onClick={() => redirectSocialMedia('yt')} />
                     {/* </a> */}
                   </div>
                 </div>
@@ -218,10 +230,10 @@ const Footer = () => {
       {/* </div> */}
 
       <p className="footer-copyright-text">
-          <a className="footer-copyright-link text-white" href="#" target="_self">
-            © Copyright {new Date().getFullYear()}, APDP. Tous droits réservés.
-          </a>
-        </p>
+        <a className="footer-copyright-link text-white" href="#" target="_self">
+          © Copyright {new Date().getFullYear()}, APDP. Tous droits réservés.
+        </a>
+      </p>
       <div className="flag-look-like">
         <div className="col green-block"></div>
         <div className="col yellow-block"></div>

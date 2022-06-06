@@ -90,7 +90,10 @@ const Header = () => {
                         (
                         // <div class="hitem">{breaknew.title}</div>
                       
-                        <div onClick={() => handleViewBreaknews(item.id)} style={{cursor: 'pointer'}} class="hitem mx-5" dangerouslySetInnerHTML={{__html: (item?.title)}}></div>
+                        <p onClick={() => handleViewBreaknews(item.id)} 
+                             style={{cursor: 'pointer'}} 
+                             class="hitem mx-5" 
+                             dangerouslySetInnerHTML={{__html: (item?.title)}}></p>
                         
                         )
                             )}

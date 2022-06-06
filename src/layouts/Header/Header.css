@@ -229,13 +229,6 @@ border: none !important;
   .hmove:hover { animation-play-state: paused; }
 
 
-  .open>.dropdown-toggle.btn-default {
-    /* color: #333; */
-    /* background-color: #e6e6e6; */
-    /* background-image: none; */
-    /* border-color: #adadad; */
-}
-
 .c-btn-dropdown {
     border: none !important;
     background-color: unset !important;
