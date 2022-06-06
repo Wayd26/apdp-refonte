@@ -61,6 +61,7 @@ import Contact from '../Contact/Contact';
 import Recommandations from '../Recommandations/Recommandations';
 import StatutDemande from '../StatutDemande/StatutDemande';
 import DetailsDemande from '../DetailsDemande/DetailsDemande';
+import BreakNewsDetails from '../BreakNewsDetails/BreakNewsDetails';
 
 
 const Content = () => {
@@ -123,6 +124,8 @@ const Content = () => {
           <Route path="/textes/reglements" element={<TextesCommunautaires type={"reglements"} />} />
           <Route path="/textes/directives" element={<TextesCommunautaires type={"directives"} />} />
           <Route path="/outils-conformite" element={<OutilsConformite />} />
+          <Route path="/breaknews/:breaknews_id" element={<BreakNewsDetails />} />
+
           <Route path="/espace-rt" element={<EspaceRT />} />
           <Route path="/espace-dpo" element={<EspaceDPO />} />
           <Route path="/statut-demande" element={<StatutDemande />} />

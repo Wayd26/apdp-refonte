@@ -8,6 +8,7 @@ import './Header.css';
 import {BASE_URL} from "../../constants/Constant";
 import code_numerique from "../../assets/documents/CODE_DU_NUMERIQUE_DU BENIN_EDITION 2019_ADN.pdf";
 import {getATypeOfArticles, logout} from '../../http/http';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -19,6 +20,11 @@ const Header = () => {
     const [breaknews, setBreaknews] = useState([]);
     const [showDropdownApdp, setShowDropdownApdp] = useState(false);
 
+
+
+    const handleViewBreaknews = (id) => {
+        window.location.replace(`/breaknews/${id}`)
+    }
 
     const loadBreaknewsData = async () => {
         const resp = await getATypeOfArticles("breaknews")
@@ -80,11 +86,11 @@ const Header = () => {
                     <div class="hwrap">
                         <div class="hmove">
                         {
-                        breaknews && breaknews?.map((breaknew) => 
+                        breaknews && breaknews?.map((item) => 
                         (
                         // <div class="hitem">{breaknew.title}</div>
                       
-                        <div class="hitem mx-5" dangerouslySetInnerHTML={{__html: (breaknew?.content)}}></div>
+                        <div onClick={() => handleViewBreaknews(item.id)} style={{cursor: 'pointer'}} class="hitem mx-5" dangerouslySetInnerHTML={{__html: (item?.title)}}></div>
                         
                         )
                             )}

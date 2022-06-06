@@ -104,7 +104,7 @@ const Footer = () => {
             </div>
 
           </div>
-          <div className="col-sm-3 col-xs-12">
+          <div className="col-sm-2 col-xs-12">
             <div className="footer-menu">
               <h2 className="footer-menu-name"> INFORMATIONS </h2>
               <ul id="menu-company" className="footer-menu-list">
@@ -123,29 +123,8 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="col-sm-3 col-xs-12" >
-            <div className="footer-menu">
-              {/* <h2 className="footer-menu-name"> VOS PROTECTIONS</h2>
-              <ul id="menu-quick-links" className="footer-menu-list">
-           
-                <li className="menu-item menu-item-type-custom menu-item-object-custom">
-                  <a target="_blank" rel="noopener noreferrer" href="#">Procédures</a>
-                </li>
-            
-                <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="#">Arnaque du mois</a>
-                </li>
-            
-                <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="/vos-devoirs">Mes devoirs</a>
-                </li>
-                <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="/vos-droits">Mes droits</a>
-                </li>
-
-              </ul> */}
-
-
+          <div className="col-sm-4 col-xs-12" >
+            <div className="footer-menu" style={{paddingRight: 30}}>
 
               <div >
                 <h5 style={{
@@ -155,14 +134,14 @@ const Footer = () => {
                 }}>Recevez l'actualité en vous abonnant à notre Support</h5>
                 {/* <div className="flex"> */}
                 {/* <Col> */}
-                <input style={{ borderRadius: 5 }} type="text" className="form-control mb-2" placeholder="Votre nom" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                <input style={{ borderRadius: 5, maxWidth: 400}} type="text" className="form-control mb-2" placeholder="Votre nom" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                 {/* </Col> */}
                 {/* <Col> */}
-                <input style={{ borderRadius: 5 }} type="text" className="form-control mb-2" placeholder="Votre prénom" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                <input style={{ borderRadius: 5, maxWidth: 400 }} type="text" className="form-control mb-2" placeholder="Votre prénom" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                 {/* </Col> */}
                 {/* </div> */}
                 <div className="input-group mb-3">
-                  <input style={{ borderRadius: 5 }} type="text" className="form-control" placeholder="Votre e-mail" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                  <input style={{ borderRadius: 5, maxWidth: 400 }} type="text" className="form-control" placeholder="Votre e-mail" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                   {/* <span style={{
                     backgroundColor: "#FFBE00",
                     width: 50,
@@ -173,7 +152,7 @@ const Footer = () => {
                     <FaPaperPlane />
                   </span> */}
                 </div>
-                <button className="footer-subscribe-button">S'abonner</button>
+                <button className="footer-subscribe-button" style={{maxWidth: 400}}>S'abonner</button>
 
               </div>
 
@@ -195,9 +174,9 @@ const Footer = () => {
                 // width: "max-content"
               }}>
 
-                <div className='d-flex justify-content-left align-items-center'><i className="ri-map-pin-2-fill fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i>Rue 6 . 076 El Marzouk Joël  COTONOU</div>
-                <div className='d-flex justify-content-left align-items-center'><i className="ri-mail-line fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i>contact@apdp.bj</div>
-                <div className='d-flex justify-content-left align-items-center'> <i className="ri-phone-fill fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i>(+ 229 ) 21 32 57 88</div>
+                <div  className='d-flex justify-content-left align-items-center'><i className="ri-map-pin-2-fill fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i><span style={{font: 'normal normal normal 14px/20px Roboto'}}>Rue 6 . 076 El Marzouk Joël  COTONOU</span></div>
+                <div className='d-flex justify-content-left align-items-center'><i className="ri-mail-line fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i><span style={{font: 'normal normal normal 14px/20px Roboto'}}>contact@apdp.bj</span></div>
+                <div className='d-flex justify-content-left align-items-center'> <i className="ri-phone-fill fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i><span style={{font: 'normal normal normal 14px/20px Roboto'}}>(+ 229 ) 21 32 57 88</span></div>
 
 
                 <div className='d-flex justify-content-center align-items-center'>

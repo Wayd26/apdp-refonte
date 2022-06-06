@@ -30,7 +30,8 @@ input#formBasicInfos {
 }
 
 .law-card .card-img {
-  width: 500px;
+  /* width: 500px; */
+  width: 40%;
 }
 
 .law-card .card-text {
