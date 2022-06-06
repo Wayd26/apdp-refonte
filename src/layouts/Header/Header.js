@@ -26,7 +26,7 @@ const Header = () => {
             console.log("data error ", resp.response)
         } else {
             console.log("data data ", resp?.data)
-            setBreaknews(resp.data?.data)
+            setBreaknews(resp.data?.data.reverse())
         }
     }
   
@@ -80,7 +80,7 @@ const Header = () => {
                     <div class="hwrap">
                         <div class="hmove">
                         {
-                        breaknews && breaknews.map((breaknew) => 
+                        breaknews && breaknews?.map((breaknew) => 
                         (
                         // <div class="hitem">{breaknew.title}</div>
                       

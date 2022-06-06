@@ -132,16 +132,16 @@ const Home = () => {
         {/* <p className={"form-section-title"}>Formulaires</p> */}
         <p className={"form-section-subtitle"}>Liens Rapides</p>
         <div className={"row"}>
-          <div className={"col-sm-6 mx-auto"}>
-            <div className={"row d-flex justify-content-around"}>
+          <div className={"col-sm-8 col-xs-12 mx-auto"}>
+            <div className={"row"}>
               {/* {shortcuts.map((i, item) => ( */}
               
-                 <ShortcutCard ind={1} label={"Lois"} link={"textes/lois"}/>
-                 <ShortcutCard ind={2} label={"Communiqués"} link={"communiques"}/>
-                 <ShortcutCard ind={2} label={"Plans de passation"} link={"plans-de-passation"}/>
-                 <ShortcutCard ind={2} label={"Publication de marchés"} link={"appels-d-offres"}/>
-                 <ShortcutCard ind={2} label={"Espace RT"} link={""}/>
-                 <ShortcutCard ind={2} label={"Espace DPO"} link={"espace-dpo"}/>
+                <div className={"col-sm-4"}> <ShortcutCard ind={1} label={"Lois"} link={"textes/lois"}/></div>
+                <div className={"col-sm-4"}> <ShortcutCard ind={2} label={"Communiqués"} link={"communiques"}/></div>
+                 {/* <ShortcutCard ind={2} label={"Plans de passation"} link={"plans-de-passation"}/> */}
+                <div className={"col-sm-4"}> <ShortcutCard ind={2} label={"Marchés publics"} link={"appels-d-offres"}/></div>
+                <div className={"col-sm-4"}> <ShortcutCard ind={2} label={"Espace RT"} link={""}/></div>
+                <div className={"col-sm-4"}> <ShortcutCard ind={2} label={"Espace DPO"} link={"espace-dpo"}/></div>
              
               {/* ))} */}
             </div>

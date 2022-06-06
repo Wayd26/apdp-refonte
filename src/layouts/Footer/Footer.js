@@ -154,15 +154,15 @@ const Footer = () => {
                   marginBottom: 10
                 }}>Recevez l'actualité en vous abonnant à notre Support</h5>
                 {/* <div className="flex"> */}
-                  {/* <Col> */}
-                  <input style={{borderRadius: 5}} type="text" className="form-control mb-2" placeholder="Votre nom" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                  {/* </Col> */}
-                  {/* <Col> */}
-                  <input style={{borderRadius: 5}} type="text" className="form-control mb-2" placeholder="Votre prénom" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                  {/* </Col> */}
+                {/* <Col> */}
+                <input style={{ borderRadius: 5 }} type="text" className="form-control mb-2" placeholder="Votre nom" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                {/* </Col> */}
+                {/* <Col> */}
+                <input style={{ borderRadius: 5 }} type="text" className="form-control mb-2" placeholder="Votre prénom" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                {/* </Col> */}
                 {/* </div> */}
                 <div className="input-group mb-3">
-                  <input style={{borderRadius: 5}} type="text" className="form-control" placeholder="Votre e-mail" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                  <input style={{ borderRadius: 5 }} type="text" className="form-control" placeholder="Votre e-mail" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                   {/* <span style={{
                     backgroundColor: "#FFBE00",
                     width: 50,
@@ -195,9 +195,9 @@ const Footer = () => {
                 // width: "max-content"
               }}>
 
-                <div className='d-flex justify-content-center align-items-center'><i className="ri-map-pin-2-fill fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i>Rue 6 . 076 El Marzouk Joël  COTONOU</div>
-                <div className='d-flex justify-content-center align-items-center'><i className="ri-mail-line fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i>contact@apdp.bj</div>
-                <div className='d-flex justify-content-center align-items-center'> <i className="ri-phone-fill fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i>(+ 229 ) 21 32 57 88</div>
+                <div className='d-flex justify-content-left align-items-center'><i className="ri-map-pin-2-fill fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i>Rue 6 . 076 El Marzouk Joël  COTONOU</div>
+                <div className='d-flex justify-content-left align-items-center'><i className="ri-mail-line fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i>contact@apdp.bj</div>
+                <div className='d-flex justify-content-left align-items-center'> <i className="ri-phone-fill fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i>(+ 229 ) 21 32 57 88</div>
 
 
                 <div className='d-flex justify-content-center align-items-center'>
@@ -225,16 +225,24 @@ const Footer = () => {
         </div>
 
       </div>
-      <p className="visitor-number-p">Nombre de visites : <span id="visits" className="visitor-number-span">{visitsNumber}</span></p>
+      {/* <div className="visitor-number-p">Nombre de visites : <span id="visits" className="visitor-number-span">{visitsNumber}</span></div> */}
       {/* <div className="footer-copyright-wrapper"> */}
-      <div className="mx-auto mt-4 text-center">
-        <p className="footer-copyright-text">
-          <a className="footer-copyright-link text-white" href="#" target="_self"> 
-          © Copyright {new Date().getFullYear()}, APDP. Tous droits réservés.
+      <div className="mx-auto mt-4 mb-5 text-center">
+        <p className="visitor-number-p">Nombre de visites : <span id="visits" className="visitor-number-span">{visitsNumber}</span></p>
+
+        {/* <p className="footer-copyright-text">
+          <a className="footer-copyright-link text-white" href="#" target="_self">
+            © Copyright {new Date().getFullYear()}, APDP. Tous droits réservés.
+          </a>
+        </p> */}
+      </div>
+      {/* </div> */}
+
+      <p className="footer-copyright-text">
+          <a className="footer-copyright-link text-white" href="#" target="_self">
+            © Copyright {new Date().getFullYear()}, APDP. Tous droits réservés.
           </a>
         </p>
-        </div>
-      {/* </div> */}
       <div className="flag-look-like">
         <div className="col green-block"></div>
         <div className="col yellow-block"></div>
