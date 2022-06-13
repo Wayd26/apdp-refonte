@@ -155,8 +155,7 @@ const Header = () => {
                         <NavBar/>
                     </div>
                     <AiOutlineFileSearch title='Rechercher une décision' onClick={searchDecisionsShortcut} style={{ height: 45, width: 40, color: 'white', cursor: 'pointer', position: 'relative', float: 'right', right: '80px', margin: '-50px', top: '-1px' }} />
-                    
-                </div>     
+                </div>
             </React.Fragment>
     )
 }

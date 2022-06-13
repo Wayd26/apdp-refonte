@@ -70,6 +70,10 @@
   margin-bottom: -30px;
 }
 
+.row {
+  width: 100%;
+}
+
 .rights-duties-section {
   background: #ffffff 0% 0% no-repeat padding-box;
   opacity: 1;
