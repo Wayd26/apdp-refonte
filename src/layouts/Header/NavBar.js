@@ -20,7 +20,6 @@ import {
     Link,
     useHistory
 } from "react-router-dom";
-import { AiOutlineFileSearch } from 'react-icons/ai';
 
 export default class NavBar extends Component {
 
@@ -55,9 +54,6 @@ export default class NavBar extends Component {
             }
         }
 
-        const searchDecisionsShortcut = () => {
-            window.location.href = "/textes/deliberations-publiques"
-        }
         return (
             <React.Fragment>
                 <Navbar light expand="sm" style={{ backgroundColor: "#2b71d3", marginBottom: 0 }} className={"d-flex justify-content-center nav-bar-mother"}  >
@@ -148,11 +144,11 @@ export default class NavBar extends Component {
                                 </NavDropdown>
                             </h5>
 
-                            <h5>
-                                {/* <div className={"nav-link-title nav-item-custom demarche-nav"}  id="navbarScrollingDropdown" onClick={handleDemarchesClick} active={window.location.pathname === "/vos-demarches"}>
+                            {/* <h5>
+                                <div className={"nav-link-title nav-item-custom demarche-nav"}  id="navbarScrollingDropdown" onClick={handleDemarchesClick} active={window.location.pathname === "/vos-demarches"}>
                                 VOS DEMARCHES
-                                </div> */}
-                            </h5>
+                                </div>
+                            </h5> */}
 
 
                             <h5>
@@ -245,7 +241,6 @@ export default class NavBar extends Component {
                                     borderBottomRightRadius: 20
                                 }} />
                             </InputGroup> */}
-                            <h5><AiOutlineFileSearch title='Rechercher une décision' onClick={searchDecisionsShortcut} style={{ height: 45, width: 40, color: 'white', cursor: 'pointer' }} /> </h5>
                         </Nav>
                     </Collapse>
                 </Navbar>

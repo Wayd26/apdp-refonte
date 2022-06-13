@@ -9,6 +9,7 @@ import {BASE_URL} from "../../constants/Constant";
 import code_numerique from "../../assets/documents/CODE_DU_NUMERIQUE_DU BENIN_EDITION 2019_ADN.pdf";
 import {getATypeOfArticles, logout} from '../../http/http';
 import { useNavigate } from 'react-router-dom';
+import { AiOutlineFileSearch } from 'react-icons/ai';
 
 
 
@@ -64,6 +65,10 @@ const Header = () => {
         window.location = '/';
     }
 
+    const searchDecisionsShortcut = () => {
+        window.location.href = "/textes/deliberations-publiques"
+    }
+
 //     useEffect(() => {
 //         axios.get(BASE_URL)
 // .then(response => {
@@ -102,24 +107,25 @@ const Header = () => {
 
                     <div className="header-block-2">
                         
-                            {/* <a href='/'> */}
+                        {/* <a href='/'> */}
 
-                                <div  onClick={goHome}>
-                                    <img src={apdp_logo} style={{cursor: "pointer"}} className="logo" />
-                                    {/* <object style={{cursor: "pointer", height: 30, width: 40}}  data={apdp_logo} className="logo" type="image/svg+xml"></object> */}
-                                </div>  
-                            {/* </a> */}
+                            <div className='header-logo' onClick={goHome} style={{ backgroundImage: `url('${apdp_logo}'`,}}>
+                                {/* <img src={apdp_logo} style={{cursor: "pointer"}} className="logo" /> */}
+                                {/* <object style={{cursor: "pointer", height: 30, width: 40}}  data={apdp_logo} className="logo" type="image/svg+xml"></object> */}
+                            </div>  
+                        {/* </a> */}
                             
-                                <div className=" d-none d-md-flex header-block-2-div-2 d-flex flex-row justify-content-around">
+                            <div className=" d-none d-md-flex header-block-2-div-2 d-flex flex-row justify-content-around">
                                 {/* <div className=" row d-flex  justify-content-around"> */}
-                                    <div className="col" style={{color: "#292929", font: "normal normal normal 20px/35px Roboto", cursor: "pointer"}}> <a className="code_numerique" target={"_blank"} href={code_numerique} rel={"noopener noreferer"} > CODE DU NUMERIQUE </a> </div>
-                                    <div className="col" style={{color: "#292929", font: "normal normal normal 20px/35px Roboto", cursor: "pointer"}} onClick={handleClickRecommandations}> RECOMMANDATIONS</div>
-                                    {/* <div className="col" style={{color: "#292929", fontFamily: "Roboto", fontWeight: "bold", cursor: "pointer"}} onClick={handleClickApdpInfo}> CONNAITRE L'APDP</div> */}
+                                <div className="col" style={{color: "#292929", font: "normal normal normal 15px/35px Roboto", cursor: "pointer", width: 'fit-content', flex: 'none', padding: '20px'}}> 
+                                    <a className="code_numerique" target={"_blank"} href={code_numerique} rel={"noopener noreferer"} > CODE DU NUMERIQUE </a> 
+                                </div>
+                                <div className="col" style={{color: "#292929", font: "normal normal normal 15px/35px Roboto", cursor: "pointer", width: 'fit-content', flex: 'none', padding: '20px'}} onClick={handleClickRecommandations}> RECOMMANDATIONS</div>
                                     <div    className='dropdown'
                                             onMouseLeave={() => setShowDropdownApdp(false)}
                                             onMouseOver={() => setShowDropdownApdp(true)}
                                     >
-                                        <div className="dropdown-toggle drop-class" style={{ font: "normal normal normal 20px/35px Roboto", cursor: "pointer"}}
+                                        <div className="dropdown-toggle drop-class" style={{ font: "normal normal normal 15px/35px Roboto", cursor: "pointer", width: 'fit-content', flex: 'none', padding: '20px'}}
 
                                             type="" data-toggle="dropdown">CONNAITRE L'APDP
                                         </div>
@@ -139,25 +145,16 @@ const Header = () => {
                                         </ul>
                                     </div>
                                 </div>
-                            
-                            
-                                {/* <div style={{cursor: 'pointer'}}>
-                                    <Button color="primary" onClick={toggle_modal} className="client-espace-button"><h6>EN</h6></Button>
-                                </div> */}
 
                                 { localStorage.getItem("user_token") ? <div>
-                                    <Button color="danger" onClick={session_logout} className="client-espace-button"><h6>Déconnexion</h6></Button>
+                                    <Button color="danger" style={{ margin: '20px' }} onClick={session_logout} className="client-espace-button"><h6>Déconnexion</h6></Button>
                                 </div>:<div></div>}
-
-                                
-
-                               
-                              
                     </div>
 
                     <div className="header-block-3">
                         <NavBar/>
                     </div>
+                    <AiOutlineFileSearch title='Rechercher une décision' onClick={searchDecisionsShortcut} style={{ height: 45, width: 40, color: 'white', cursor: 'pointer', position: 'relative', float: 'right', right: '80px', margin: '-50px', top: '-1px' }} />
                     
                 </div>     
             </React.Fragment>
