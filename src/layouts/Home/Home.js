@@ -59,7 +59,7 @@ const Home = () => {
       
 
       {/* User Type Section */}
-      <Row className={"my-5"}>
+      <Row className={"my-5 mx-4"}>
         <div className={"user-type-div row d-flex justify-content-between"}>
           <div className={"col-md-10 col-sm-12 mx-auto"}>
             <div className={"row d-flex flex-wrap justify-content-around "}>

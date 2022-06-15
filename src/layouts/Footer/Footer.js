@@ -142,18 +142,21 @@ const Footer = () => {
                 <h5 style={{
                   color: "white",
                   textAlign: "start",
+                  maxWidth: 300,
+                  marginLeft: "auto",
+                  marginRight: "auto",
                   marginBottom: 10
                 }}>Recevez l'actualité en vous abonnant à notre Support</h5>
                 {/* <div className="flex"> */}
                 {/* <Col> */}
-                <input style={{ borderRadius: 5, maxWidth: 400 }} type="text" className="form-control mb-2" placeholder="Votre nom" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                <input style={{ borderRadius: 5, maxWidth: 300, marginLeft: 'auto', marginRight: 'auto' }} type="text" className="form-control mb-2" placeholder="Votre nom" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                 {/* </Col> */}
                 {/* <Col> */}
-                <input style={{ borderRadius: 5, maxWidth: 400 }} type="text" className="form-control mb-2" placeholder="Votre prénom" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                <input style={{ borderRadius: 5, maxWidth: 300, marginLeft: 'auto', marginRight: 'auto' }} type="text" className="form-control mb-2" placeholder="Votre prénom" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                 {/* </Col> */}
                 {/* </div> */}
                 <div className="input-group mb-3">
-                  <input style={{ borderRadius: 5, maxWidth: 400 }} type="text" className="form-control" placeholder="Votre e-mail" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                  <input style={{ borderRadius: 5, maxWidth: 300, marginLeft: 'auto', marginRight: 'auto' }} type="text" className="form-control" placeholder="Votre e-mail" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                   {/* <span style={{
                     backgroundColor: "#FFBE00",
                     width: 50,
@@ -164,7 +167,7 @@ const Footer = () => {
                     <FaPaperPlane />
                   </span> */}
                 </div>
-                <button className="footer-subscribe-button" style={{ maxWidth: 400 }}>S'abonner</button>
+                <button className="footer-subscribe-button" style={{ maxWidth: 300, marginLeft: 'auto', marginRight: 'auto' }}>S'abonner</button>
 
               </div>
 

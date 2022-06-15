@@ -11,3 +11,53 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "GoldmanBold";
+  src: local("GoldmanBold"),
+   url("./fonts/Gotham-Font/GothamBold.ttf") format("truetype");
+  /* font-weight: bold; */
+  }
+
+  @font-face {
+    font-family: "GothamBoldItalic";
+    src: local("GothamBoldItalic"),
+     url("./fonts/Gotham-Font/GothamBoldItalic.ttf") format("truetype");
+    /* font-weight: bold; */
+    }
+    @font-face {
+      font-family: "GothamBook";
+      src: local("GothamBook"),
+       url("./fonts/Gotham-Font/GothamBook.ttf") format("truetype");
+      /* font-weight: bold; */
+      }
+      @font-face {
+        font-family: "GothamBookItalic";
+        src: local("GothamBookItalic"),
+         url("./fonts/Gotham-Font/GothamBookItalic.ttf") format("truetype");
+        /* font-weight: bold; */
+        }
+        @font-face {
+          font-family: "GothamLight";
+          src: local("GothamLight"),
+           url("./fonts/Gotham-Font/GothamLight.ttf") format("truetype");
+          /* font-weight: bold; */
+          }
+          @font-face {
+            font-family: "GothamLightItalic";
+            src: local("GothamLightItalic"),
+             url("./fonts/Gotham-Font/GothamLightItalic.ttf") format("truetype");
+            /* font-weight: bold; */
+            }
+            @font-face {
+              font-family: "GothamMedium";
+              src: local("GothamMedium"),
+               url("./fonts/Gotham-Font/GothamMedium.ttf") format("truetype");
+              /* font-weight: bold; */
+              }
+              @font-face {
+                font-family: "GothamMediumItalic";
+                src: local("GothamMediumItalic"),
+                 url("./fonts/Gotham-Font/GothamMediumItalic.ttf") format("truetype");
+                /* font-weight: bold; */
+                }

@@ -39,7 +39,6 @@ const VosDroits = () => {
         loadDroitsData("droits", "droit_administration_publique", "");        
     }, [])
 
-
     return (
       <div style={{background: '#E2E2E2', paddingBottom: "40px", paddingTop: "40px"}}>
 {/* <ActualiteCarousel /> */}

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import Home from '../Home/Home'
 // import { Route, Router, Switch, Routes } from "react-router-dom";
 import { Container } from "react-bootstrap";
@@ -62,6 +62,7 @@ import Recommandations from '../Recommandations/Recommandations';
 import StatutDemande from '../StatutDemande/StatutDemande';
 import DetailsDemande from '../DetailsDemande/DetailsDemande';
 import BreakNewsDetails from '../BreakNewsDetails/BreakNewsDetails';
+import Actualités from '../Actualités/Actualités';
 
 
 const Content = () => {
@@ -74,70 +75,70 @@ const Content = () => {
     return (
         <div>
 
-            
-            <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
-      <Routes>
-          {/* <Route index element={<div> Here</div>} /> */}
-          <Route path="/auth" element={<Auth/>} />
-          <Route path="/query/:form_type/:query_id" element={<DetailsDemande/>} />
-          <Route path="/contact" element={<Contact/>} />
-          <Route path="/plans-de-passation" element={<PlansDePassation />} />
-          <Route path="/phototheque" element={<Photothèque />} />
-          <Route path="/videotheque" element={<Vidéothèque />} />
-          <Route path="/procedures" element={<Procedures />} />
-          <Route path="/textes-internationaux" element={<Conseils />} />
-          <Route path="/recommandations" element={<Recommandations />} />
-          <Route path="/recommandations/:conseil_id" element={<DetailsConseils />} />
-          <Route path="/cooperations" element={<Cooperations />} />
-          <Route path="/textes/deliberations-publiques" element={<Deliberations />} />
-          <Route path="/pays-membres" element={<PaysMembres />} />
-          <Route path="/mentions-legales" element={<MentionsLegales />} />
-          <Route path="/lois/:loi_id" element={<LaLoi />} />
-          <Route path="/vos-demarches" element={<Auth />} />
-          <Route path="/communique/:communique_id" element={<DetailsCommunique />} />
-          <Route path="/activite/:activity_id" element={<DetailsActivite />} />
-          <Route path="/commissaire" element={<Commissaire />} />
-          <Route path="/president" element={<President />} />
-          <Route path="/membres" element={<Membres />} />
-          <Route path="/faire-une-demande" element={<FaireUneDemande />} />
-          <Route path="/formulaire-du-courrier" element={<FormulaireCourrier />} />
-          <Route path="/evenement/:evenement_id" element={<DetailsEvenement />} />
-          <Route path="/evenements" element={<Evenements />} />
-          <Route path="/communiques" element={<Communiques />} />
-          <Route path="/vos-droits/:droit_id" element={<DetailsDroit /> } />
-          <Route path="/vos-droits" element={<VosDroits/>} />
-          <Route path="/vos-devoirs/:devoir_id" element={<DetailsDevoir /> } />
-          <Route path="/vos-devoirs" element={<VosDevoirs />} />
-          <Route path="/appels-d-offres" element={<AppelsOffres />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/forum-de-discussion" element={<ForumDiscusion />} />
-          {/* <Route path="/quiz" element={<Quiz />} /> */}
-          <Route path="/mission/:mission_id" element={<MissionDetails />} />          
-          <Route path="/mission" element={<Mission />} />
-          <Route path="/rapports-annuels" element={<RapportsAnnuels />} />
-          <Route path="/membres" element={<Membres />} />
-          <Route path="/autorite" element={<President />} />
-          <Route path="/textes/lois" element={<LesLois />} />
-          <Route path="/textes/arretes" element={<Arretes />} />
-          <Route path="/textes/decrets" element={<Decrets />} />
-          <Route path="/textes/accords" element={<TextesCommunautaires type={"accords"} />} />
-          <Route path="/textes/reglements" element={<TextesCommunautaires type={"reglements"} />} />
-          <Route path="/textes/directives" element={<TextesCommunautaires type={"directives"} />} />
-          <Route path="/outils-conformite" element={<OutilsConformite />} />
-          <Route path="/breaknews/:breaknews_id" element={<BreakNewsDetails />} />
 
-          <Route path="/espace-rt" element={<EspaceRT />} />
-          <Route path="/espace-dpo" element={<EspaceDPO />} />
-          <Route path="/statut-demande" element={<StatutDemande />} />
-          <Route path="/formulaire/:id" element={<DynamiqueForm />} />
-                    <Route path="/activites" element={<Activites/>} />
-                    <   Route path="/" element={<Home />} >
+            <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
+                <Routes>
+                    {/* <Route index element={<div> Here</div>} /> */}
+                    <Route path="/auth" element={<Auth />} />
+                    <Route path="/query/:form_type/:query_id" element={<DetailsDemande />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/plans-de-passation" element={<PlansDePassation />} />
+                    <Route path="/phototheque" element={<Photothèque />} />
+                    <Route path="/videotheque" element={<Vidéothèque />} />
+                    <Route path="/procedures" element={<Procedures />} />
+                    <Route path="/textes-internationaux" element={<Conseils />} />
+                    <Route path="/recommandations" element={<Recommandations />} />
+                    <Route path="/recommandations/:conseil_id" element={<DetailsConseils />} />
+                    <Route path="/cooperations" element={<Cooperations />} />
+                    <Route path="/textes/deliberations-publiques" element={<Deliberations />} />
+                    <Route path="/pays-membres" element={<PaysMembres />} />
+                    <Route path="/mentions-legales" element={<MentionsLegales />} />
+                    <Route path="/lois/:loi_id" element={<LaLoi />} />
+                    <Route path="/vos-demarches" element={<Auth />} />
+                    <Route path="/communique/:communique_id" element={<DetailsCommunique />} />
+                    <Route path="/activite/:activity_id" element={<DetailsActivite />} />
+                    <Route path="/commissaire" element={<Commissaire />} />
+                    <Route path="/president" element={<President />} />
+                    <Route path="/membres" element={<Membres />} />
+                    <Route path="/faire-une-demande" element={<FaireUneDemande />} />
+                    <Route path="/formulaire-du-courrier" element={<FormulaireCourrier />} />
+                    <Route path="/evenement/:evenement_id" element={<DetailsEvenement />} />
+                    <Route path="/evenements" element={<Evenements />} />
+                    <Route path="/communiques" element={<Communiques />} />
+                    <Route path="/vos-droits/:droit_id" element={<DetailsDroit />} />
+                    <Route path="/vos-droits" element={<VosDroits />} />
+                    <Route path="/vos-devoirs/:devoir_id" element={<DetailsDevoir />} />
+                    <Route path="/vos-devoirs" element={<VosDevoirs />} />
+                    <Route path="/appels-d-offres" element={<AppelsOffres />} />
+                    <Route path="/faq" element={<FAQ />} />
+                    <Route path="/forum-de-discussion" element={<ForumDiscusion />} />
+                    {/* <Route path="/quiz" element={<Quiz />} /> */}
+                    <Route path="/mission/:mission_id" element={<MissionDetails />} />
+                    <Route path="/mission" element={<Mission />} />
+                    <Route path="/rapports-annuels" element={<RapportsAnnuels />} />
+                    <Route path="/membres" element={<Membres />} />
+                    <Route path="/autorite" element={<President />} />
+                    <Route path="/textes/lois" element={<LesLois />} />
+                    <Route path="/textes/arretes" element={<Arretes />} />
+                    <Route path="/textes/decrets" element={<Decrets />} />
+                    <Route path="/textes/accords" element={<TextesCommunautaires type={"accords"} />} />
+                    <Route path="/textes/reglements" element={<TextesCommunautaires type={"reglements"} />} />
+                    <Route path="/textes/directives" element={<TextesCommunautaires type={"directives"} />} />
+                    <Route path="/outils-conformite" element={<OutilsConformite />} />
+                    <Route path="/breaknews/:breaknews_id" element={<BreakNewsDetails />} />
+                    <Route path="/actualites/:actualite_id" element={<Actualités />} />
+                    <Route path="/espace-rt" element={<EspaceRT />} />
+                    <Route path="/espace-dpo" element={<EspaceDPO />} />
+                    <Route path="/statut-demande" element={<StatutDemande />} />
+                    <Route path="/formulaire/:id" element={<DynamiqueForm />} />
+                    <Route path="/activites" element={<Activites />} />
+                    < Route path="/" element={<Home />} >
                     </Route>
                     {/* <Route path="*" element={<div>404</div>} /> */}
-                    <Route path="*" element={<Home/>} />
+                    <Route path="*" element={<Home />} />
                 </Routes>
             </BrowserRouter>
-        {/* </Container> */}
+            {/* </Container> */}
         </div>
     )
 }

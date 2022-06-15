@@ -7,6 +7,15 @@ import store from './redux/store'
 import './locales/i18n';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import "./fonts/Gotham-Font/GothamBold.ttf";
+import "./fonts/Gotham-Font/GothamBoldItalic.ttf";
+import "./fonts/Gotham-Font/GothamBook.ttf";
+import "./fonts/Gotham-Font/GothamBookItalic.ttf";
+import "./fonts/Gotham-Font/GothamLight.ttf";
+import "./fonts/Gotham-Font/GothamLightItalic.ttf";
+// import "./fonts/Gotham-Font/GothamThin.ttf"
+import "./fonts/Gotham-Font/GothamMedium.ttf";
+import "./fonts/Gotham-Font/GothamMediumItalic.ttf";
 
 ReactDOM.render(
     <React.StrictMode>
