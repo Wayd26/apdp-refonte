@@ -10,7 +10,8 @@ const EventCard = (props) => {
     const {eventId, eventImage, eventTitle, eventSubTitle, eventContent, eventDate, moreClicked} = props;
     return (
         <div id="event-card" className="event-card">
-            <img src={eventImage && eventImage} className="event-card-img"/>
+            {/* <img src={eventImage && eventImage} className="event-card-img"/> */}
+            <div style={{ backgroundImage: `url('${eventImage}'`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', height: '300px' }} className="event-card-img"></div>
             <p className="event-card-title">{eventTitle}</p>
             <p className="event-card-date"><BiCalendarCheck />  {eventDate.slice(8,10)} / {eventDate.slice(5,7)} / {eventDate.slice(0,4)} </p>
             <p className="event-card-subtitle">{eventSubTitle}</p>

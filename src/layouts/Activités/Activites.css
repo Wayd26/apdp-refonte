@@ -40,7 +40,7 @@
     padding-left: 100px;
     padding-right: 70px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
 }
 
@@ -261,7 +261,7 @@
         padding-left: 100px;
         padding-right: 70px;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         width: 100%;
     }
     
@@ -362,7 +362,7 @@
         padding-left: 15%;
         padding-right: 70px;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         width: 100%;
     }
 
@@ -453,7 +453,7 @@
     .activities-card-list {
         padding-left: 20%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         width: 100%;
     }
 

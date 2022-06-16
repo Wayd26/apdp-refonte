@@ -9,7 +9,9 @@ const ForumDiscussionRow = () => {
         <div className="forum-discussion-row-container">
             <div className="row">
                 <div className="forum-discussion-row-image-container">
-                    <img src={img5} className="forum-discussion-row-image" />
+                    {/* <img src={img5} className="forum-discussion-row-image" /> */}
+                    <div style={{ backgroundImage: `url('${img5}'`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}} className="forum-discussion-row-image">
+                    </div>
                 </div>
                 <div className="forum-discussion-row-details-container">
                     <p className="forum-discussion-row-details-title">Discussion 1</p>

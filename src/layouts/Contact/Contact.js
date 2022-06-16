@@ -14,7 +14,7 @@ const Contact = () => {
         <h2 style={{ 'color': '#000', 'padding-top':'70px' }}>CONTACT</h2>
         <Card className={'contact-card'}>
           <div className={'contact-info'}>
-            <h4 style={{ 'color': '#000', 'padding-top':'70px', 'text-align':'left', 'padding-left':'20px', }}>ADDRESS</h4>
+            <h4 style={{ 'color': '#000', 'padding-top':'70px', 'text-align':'left', 'padding-left':'20px', }}>ADRESSE</h4>
             <p style={{ 'color': '#000', 'padding-top':'30px', 'text-align':'left', 'padding-left':'20px', }}><MdLocationPin style={{ 'font-size': '30px', 'margin-right':'20px' }}/> Rue 6 . 076 Immeuble El Marzouk Joël  COTONOU</p>
             <p style={{ 'color': '#000', 'padding-top':'30px', 'text-align':'left', 'padding-left':'20px', }}><BiEnvelope style={{ 'font-size': '30px', 'margin-right':'20px' }}/> contact@apdp.bj</p>
             <p style={{ 'color': '#000', 'padding-top':'30px', 'text-align':'left', 'padding-left':'20px', }}><FaPhoneAlt style={{ 'font-size': '30px', 'margin-right':'20px' }}/> (+ 229 ) 21 32 57 88</p>

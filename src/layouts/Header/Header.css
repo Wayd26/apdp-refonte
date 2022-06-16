@@ -183,6 +183,16 @@ border: none !important;
     color: inherit;
 }
 
+#dropdown-button-drop-end {
+    font-size: 15px;
+    width: 100%;
+    text-align: left;
+}
+
+#dropdown-button-drop-end:focus {
+    outline: none;
+}
+
 .header-logo {
     background-size: contain;
     width: 250px;
