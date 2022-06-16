@@ -188,6 +188,7 @@ body {
     /* margin-left: 10px; */
     /* text-align: left; */
     margin-bottom: 15px;
+    display: inline-block;
 }
 
 .footer-menu-name {
@@ -368,7 +369,7 @@ opacity: 1;
     background-color: #383838;
     color: #fff;
     /* padding: 15px 30px; */
-    text-align: center;
+    text-align: left;
     /* padding-right: 7%; */
 }
 

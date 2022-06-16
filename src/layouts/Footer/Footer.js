@@ -183,7 +183,7 @@ const Footer = () => {
               <h2 className="footer-call-to-action-title">CONTACT</h2>
               <div style={{
                 display: 'flex',
-                // justifyContent: 'flex-start',
+                justifyContent: 'flex-start',
                 flexDirection: 'column',
                 // alignItems: 'flex-start',
                 // width: "max-content"
@@ -194,7 +194,7 @@ const Footer = () => {
                 <div className='d-flex justify-content-left align-items-center'> <i className="ri-phone-fill fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i><span style={{ font: 'normal normal normal 14px/20px Roboto' }}>(+ 229 ) 21 32 57 88</span></div>
 
 
-                <div className='d-flex justify-content-center align-items-center'>
+                <div className='d-flex  align-items-start'>
                   <div className="d-flex flex-row justify-content-between">
 
                     {/* <a className="linkedin social-container" href="#" target="_blank"> */}
