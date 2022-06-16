@@ -181,6 +181,7 @@ border: none !important;
 
 .code_numerique, .code_numerique:hover {
     color: inherit;
+    text-decoration: none !important;
 }
 
 .header-logo {
