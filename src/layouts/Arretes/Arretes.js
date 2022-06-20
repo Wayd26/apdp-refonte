@@ -45,12 +45,12 @@ const Arretes = () => {
                 {arretes ? <>{arretes.map((arrete, index) =>
                     <ArreteRow data={arrete} />)}</> : <h1> Aucun Arrêté </h1>
                 }
+            </div>
                 {arretes && arretes?.length !== 0 &&   <Pagination
                 changePage={changePage}
                 pageCount={totalPage}
                 perPage={perPage}
             />}
-            </div>
         </div>
     </div>;
 };

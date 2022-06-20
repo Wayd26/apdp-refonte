@@ -60,13 +60,13 @@ const AppelsOffres = () => {
  
                 )}</> : <h1 className="py-3"> Aucun Appel d'Offre </h1> 
                 }
+        </div>
            <Pagination
                 changePage={changePage}
                 pageCount={totalPage}
                 // pageNumber={pageNumber}
                 perPage={perPage}
             />
-        </div>
 
         {/* <div className="appels-offres-blue-band">
           <p className="appels-offres-blue-band-text">
