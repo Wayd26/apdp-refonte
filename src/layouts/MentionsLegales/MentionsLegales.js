@@ -9,26 +9,41 @@ import {BiCalendarCheck} from "react-icons/bi"
 import imgCard5 from "../../assets/images/img5.jpg"
 import imgCard6 from "../../assets/images/img6.jpg"
 import {getATypeOfArticles} from '../../http/http';
+import Pagination from '../../components/Pagination/Pagination';
 
 
 
 const MentionsLegales = () => {
 
     const [mentions, setMentions] = useState();
+    const [perPage, setPerPage] = useState(15);
+    const [pageNumber, setPageNumber] = useState(1);
+    const [totalPage, setTotalPage] = useState(1);
+
+    const changePage = ({ selected }) => {
+        let currentPage = selected + 1;
+        setPageNumber(currentPage)
+        console.log("ok ", selected + 1)
+    }
+    useEffect(() => {
+        loadMentionsData() 
+        console.log("Mentions data ", mentions)
+    }, [pageNumber])
 
     const loadMentionsData = async () => {
-        const resp = await getATypeOfArticles("mentions")
+        const resp = await getATypeOfArticles("mentions", pageNumber)
         if(resp.response && resp.response.status !== 200){
             console.log("error ",resp.response)
         } else {
             console.log("data ",resp.data.data)
+            const perPageValue = resp?.data?.meta?.per_page
+            setPerPage(perPageValue)
+            const total = resp?.data?.meta?.total;
+            setTotalPage(Math.ceil(total / perPageValue))
+
             setMentions(resp.data.data)
         }
     }
-    
-    useEffect(() => {
-        loadMentionsData()        
-    }, [])
 
     return (
         <div className='info-section'>
@@ -54,6 +69,11 @@ const MentionsLegales = () => {
                            
                         
                         </Card.Text>
+                        {mentions && mentions?.length !== 0 &&   <Pagination
+                changePage={changePage}
+                pageCount={totalPage}
+                perPage={perPage}
+            />}
                     </Card.Body>
                 </Card>
             </div>

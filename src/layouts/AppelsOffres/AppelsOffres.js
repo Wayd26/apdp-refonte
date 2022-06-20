@@ -4,6 +4,7 @@ import AvisImportant from "../../components/AvisImportant/AvisImportant";
 import FaqSection from "../../components/FaqSection/FaqSection";
 import MarketCard from "../../components/MarketCard/MarketCard";
 import MarketDataTable from "../../components/MarketDataTable/MarketDataTable";
+import Pagination from "../../components/Pagination/Pagination";
 import { getATypeOfArticles } from "../../http/http";
 import "./AppelsOffres.css";
 
@@ -12,19 +13,36 @@ const AppelsOffres = () => {
 
   const [appelsOffres, setAppelsOffres] = useState();
 
+  const [perPage, setPerPage] = useState(15);
+    const [pageNumber, setPageNumber] = useState(1);
+    const [totalPage, setTotalPage] = useState(1);
+
+    const changePage = ({ selected }) => {
+        let currentPage = selected + 1;
+        setPageNumber(currentPage)
+        console.log("ok ", selected + 1)
+    }
+
+
+    useEffect(() => {
+      loadAOData();
+    }, [pageNumber])
+
   const loadAOData = async () => {
-      const resp = await getATypeOfArticles("publications_dao")
+      const resp = await getATypeOfArticles("publications_dao", pageNumber)
       if(resp.response && resp.response.status !== 200){
           console.log("error ",resp.response)
       } else {
           console.log("data ",resp.data.data)
+          const perPageValue = resp?.data?.meta?.per_page
+            setPerPage(perPageValue)
+            const total = resp?.data?.meta?.total;
+            setTotalPage(Math.ceil(total / perPageValue))
           setAppelsOffres(resp.data.data)
       }
   }
   
-  useEffect(() => {
-      loadAOData()        
-  }, [])
+ 
 
 
   return (
@@ -42,7 +60,12 @@ const AppelsOffres = () => {
  
                 )}</> : <h1 className="py-3"> Aucun Appel d'Offre </h1> 
                 }
-          
+           <Pagination
+                changePage={changePage}
+                pageCount={totalPage}
+                // pageNumber={pageNumber}
+                perPage={perPage}
+            />
         </div>
 
         {/* <div className="appels-offres-blue-band">

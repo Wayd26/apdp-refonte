@@ -4,26 +4,40 @@ import "./OutilsConformite.css"
 import {useDispatch, useSelector, shallowEqual} from "react-redux";
 import {getATypeOfArticles} from '../../http/http';
 import {useNavigate} from "react-router-dom";
+import Pagination from '../../components/Pagination/Pagination';
 
 const OutilsConformite = () => {
   const navigate = useNavigate();
   const [outilsConformite, setOutilsConformite] = useState([]);
+  const [perPage, setPerPage] = useState(15);
+  const [pageNumber, setPageNumber] = useState(1);
+  const [totalPage, setTotalPage] = useState(1);
+
+  const changePage = ({ selected }) => {
+      let currentPage = selected + 1;
+      setPageNumber(currentPage)
+      console.log("ok ", selected + 1)
+  }
+  useEffect(() => {
+    loadOutilsConformiteData() ;
+    console.log("Outils de conformite data ", outilsConformite) 
+  }, [pageNumber])
 
   const loadOutilsConformiteData = async () => {
-      const resp = await getATypeOfArticles("outils_de_conformite")
+      const resp = await getATypeOfArticles("outils_de_conformite", pageNumber)
       if(resp.response && resp.response.status !== 200){
           console.log("data error ", resp.response)
       } else {
           console.log("data data ", resp.data.data)
+          const perPageValue = resp?.data?.meta?.per_page
+            setPerPage(perPageValue)
+            const total = resp?.data?.meta?.total;
+            setTotalPage(Math.ceil(total / perPageValue))
+
           setOutilsConformite(resp.data.data)
       }
   }
   
-  useEffect(() => {
-      loadOutilsConformiteData() ;
-      console.log("Outils de conformite data ", outilsConformite)       
-  }, [])
-
   // const outilsConformiteData = [
   //   {id: 1,
   //   label:"MODÈLE DE REGISTRE DES ACTIVITÉS DE VIDÉOSURVEILLANCE"},
@@ -50,6 +64,11 @@ const OutilsConformite = () => {
       :
        <h1>AUCUN OUTIL DE LA CONFORMITÉ</h1>}
     </div>
+    {outilsConformite && outilsConformite?.length !== 0 &&   <Pagination
+                changePage={changePage}
+                pageCount={totalPage}
+                perPage={perPage}
+            />}
   </div>;
 };
 

@@ -129,14 +129,14 @@ export function getAllArticles() {
    return response.then(data => data).catch( error => error)
 }
    
-export function getATypeOfArticles(type) {
-   const response = api.get(`/articles?slug=` + `${type}&categorie=` + `&section=` + ``)
+export function getATypeOfArticles(type, pageNumber) {
+   const response = api.get(`/articles?slug=` + `${type}&page=` + `${pageNumber}&categorie=` + `&section=` + ``)
    return response.then(data => data).catch( error => error)
 }
 
    
-export function getRightsOrDuties(type, categorie, section) {
-   const response = api.get(`/articles?slug=` + `${type}&categorie=` + `${categorie}&section=` + `${section}`)
+export function getRightsOrDuties(type, categorie, section, pageNumber) {
+   const response = api.get(`/articles?slug=` + `${type}&categorie=` + `${categorie}&page=` + `${pageNumber}&section=` + `${section}`)
    return response.then(data => data).catch( error => error)
 }
 

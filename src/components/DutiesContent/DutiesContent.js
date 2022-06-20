@@ -12,6 +12,7 @@ import demander_intervention_humaine from "../../assets/icons/demander_une_inter
 import geler_vos_donnees from "../../assets/icons/geler_utilisation_de_vos_donnees.jpg"
 import fichiers_police from "../../assets/icons/fichiers_de_police.jpg"
 import droit_ficoba from "../../assets/icons/droit_acces_ficoba.png"
+import Pagination from '../Pagination/Pagination'
 
 const DutiesContent = (props) => {
 
@@ -31,7 +32,7 @@ const DutiesContent = (props) => {
         {"title":"Droit d'accès au FICOBA","link": "/vos-droits/droit-ficoba", "btn_text":"Exercer votre droit d'accès au FICOBA", "description":"Droit d'accès au fichier des comptes bancaires et assimilés (FICOBA).", "img" : droit_ficoba},
     ];
 
-    const {devoirs, categorie} = props;
+    const {devoirs, categorie, changePage, pageCount, perPage} = props;
 
     let vos_devoirs_filtered;
 
@@ -51,14 +52,19 @@ console.log(dutiesToDisplay)
 
             <p className={"duties-content-title text-center"}> Vos obligations </p>
             <p className={"duties-content-subtitle d-flex justify-content-center mb-4 mt-3"}>Vous avez la possibilité de bloquer l’accès de cette personne à vos publications, de la signaler auprès de la communauté ou d’alerter le réseau social sur un comportement qui contrevient à sa charte d’utilisation. Il est très important de limiter au maximum l’audience de vos comptes sociaux. Des options de confidentialités existent pour « ne plus me trouver »,  « ne pas afficher/partager ma liste d’amis ». Il est également possible de  « bannir » les amis indésirables. Sur facebook, une option vous permet d’être avertis si un autre utilisateur mentionne votre nom sur une photo (tag).</p>
-            <div className={"row d-flex justify-content-between"}>
+            <div className={"row d-flex d-flex flex-wrap mb-5"}>
 
 
             
       {dutiesToDisplay !== [] ? dutiesToDisplay?.map((item, index) => (
-        <div className={"col-sm-6 col-xs-12 p-3"}> <DutyCard link={item.id} title={item.title} btnText={"Lire plus"} description={item.sub_title} imgSrc={item.image_url} /> </div>
+        <div key={index+"w"} className={"col mb-3"}> <DutyCard link={item.id} title={item.title} btnText={"Lire plus"} description={item.sub_title} imgSrc={item.image_url} /> </div>
         )) : null}
             </div>
+            {dutiesToDisplay && dutiesToDisplay?.length !== 0 && <Pagination
+                changePage={changePage}
+                pageCount={pageCount}
+                perPage={perPage}
+            />}
         </div>
     )
 }

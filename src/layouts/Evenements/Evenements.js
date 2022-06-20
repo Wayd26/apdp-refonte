@@ -8,6 +8,7 @@ import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarou
 import {useNavigate} from "react-router-dom";
 import ReactPaginate from "react-paginate";
 import {getATypeOfArticles} from '../../http/http';
+import Pagination from '../../components/Pagination/Pagination';
 
 
 const Evenements = () => {
@@ -15,17 +16,35 @@ const Evenements = () => {
     const navigate = useNavigate()
 
     const [evenements, setEvenements] = useState([]);
+    const [perPage, setPerPage] = useState(15);
+    const [pageNumber, setPageNumber] = useState(1);
+    const [totalPage, setTotalPage] = useState(1);
+
+    const changePage = ({ selected }) => {
+        let currentPage = selected + 1;
+        setPageNumber(currentPage)
+        console.log("ok ", selected + 1)
+    }
+    useEffect(() => {
+        loadEvenementsData() ;
+        console.log("Evenements data ", evenements) 
+    }, [pageNumber])
 
     const handleMoreClicked = (id) =>{
         navigate(`/evenement/${id}`)
     }
 
     const loadEvenementsData = async () => {
-        const resp = await getATypeOfArticles("evenements")
+        const resp = await getATypeOfArticles("evenements", pageNumber)
         if(resp.response && resp.response.status !== 200){
             console.log("data error ", resp.response)
         } else {
             // console.log("data data ", resp.data.data)
+            const perPageValue = resp?.data?.meta?.per_page
+            setPerPage(perPageValue)
+            const total = resp?.data?.meta?.total;
+            setTotalPage(Math.ceil(total / perPageValue))
+
             setEvenements(resp.data.data)
         }
     }
@@ -33,37 +52,6 @@ const Evenements = () => {
     // const dispatch = useDispatch();
     // const appState = useSelector(state=>state, shallowEqual);
   
-    
-    useEffect(() => {
-        loadEvenementsData() ;
-        console.log("Activities data ", evenements)       
-    }, [])
-
-    const [items, setItems] = useState([]);
-    const [pageCount, setpageCount] = useState(0);
-    let limit = 10;
-
-
-    const handlePageClicked = () => {
-
-    }
-
-    // useEffect(() => {
-    //     const getComments = async () => {
-    //       const res = await fetch(
-    //         `http://localhost:3004/comments?_page=1&_limit=${limit}`
-    //         // `https://jsonplaceholder.typicode.com/comments?_page=1&_limit=${limit}`
-    //       );
-    //       const data = await res.json();
-    //       const total = res.headers.get("x-total-count");
-    //       setpageCount(Math.ceil(total / limit));
-    //       // console.log(Math.ceil(total/12));
-    //       setItems(data);
-    //     };
-    
-    //     getComments();
-    //   }, [limit]);
-
     return (
         <div id="events" className="events">
             {/* <ActualiteCarousel /> */}
@@ -71,10 +59,11 @@ const Evenements = () => {
             {/* <p className="events-subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed  olores et ea rebum. Stet clita kasd gubergren, no seaolores et ea rebum. Stet clita kasd guolores et ea rebum. Stet clita kasdolores et ea rebum. Stet clita </p> */}
            <div className="row d-flex">
 
-            <div className="events-cards-container">
+            <div className="events-cards-container mx-auto mt-5">
             {
             evenements && evenements.map((evenement, index) => 
-            <EventCard  eventId={evenement.id}
+            <EventCard  key={index+"w"}
+                        eventId={evenement.id}
                         eventImage={evenement.image_url}
                         eventTitle={evenement.title}
                         eventSubTitle={evenement.sub_title}
@@ -84,78 +73,18 @@ const Evenements = () => {
              )
             }
 
-            {/* <ReactPaginate 
-                previousLabel={"Précédent"}
-                nextLabel={"Suivant"}
-                breakLabel={"..."}
-                pageCount={25}
-                marginPagesDisplayed={2}
-                pageRangeDisplayed={2}
-                onPageChange={handlePageClicked}
-                containerClassName={"pagination justify-content-center mb-3"}
-                pageClassName={"page-item"}
-                pageLinkClassName={"page-link"}
-                previousClassName={"page-item"}
-                previousLinkClassName={"page-link"}
-                nextClassName={"page-item"}
-                nextLinkClassName={"page-link"}
-                breakClassName={"page-item"}
-                breakLinkClassName={"page-link"}
-                activeClassName={"active"}
-            /> */}
+{evenements && evenements?.length !== 0 &&   <Pagination
+                changePage={changePage}
+                pageCount={totalPage}
+                perPage={perPage}
+            />}
+
+           
 
             </div>
-            {/* <div className="events-others-container">
-                <p className="popular-activities-title">Activités Populaires</p>
-                <hr className="popular-activities-hr"></hr>
-                
-                <div className="row my-3">
-                    <div className="col-4">
-                        <img src={img5} className="popular-activities-img"/>
-                    </div>
-                    <div className="col-8">
-                        <p className="popular-activities-desc">Eirmod tempor invidunt ut lab ore et dolore magna consetetur sadipscing elitr aliquyam</p>
-                    </div>
-                </div>
-                <div className="row my-3">
-                    <div className="col-4">
-                        <img src={img5} className="popular-activities-img"/>
-                      </div>
-                    <div className="col-8">
-                        <p className="popular-activities-desc">Eirmod tempor invidunt ut lab ore et dolore magna consetetur sadipscing elitr aliquyam</p>
-                    </div>
-                </div>
-                <div className="row my-3">
-                    <div className="col-4">
-                        <img src={img5} className="popular-activities-img"/>
-                    </div>
-                    <div className="col-8">
-                        <p className="popular-activities-desc">Eirmod tempor invidunt ut lab ore et dolore magna consetetur sadipscing elitr aliquyam</p>
-                    </div>
-                </div>
-                <div className="row my-3">
-                    <div className="col-4">
-                        <img src={img5} className="popular-activities-img"/>
-                    </div>
-                    <div className="col-8">
-                        <p className="popular-activities-desc">Eirmod tempor invidunt ut lab ore et dolore magna consetetur sadipscing elitr aliquyam</p>
-                    </div>
-                </div>
-
-                
-                <p className="categories-title">Catégories</p>
-                <hr className="categories-hr"></hr>
-                <p className="categories-items">Lorem ipsum(13)</p>
-                <p className="categories-items">Lorem ipsum(5)</p>
-                <p className="categories-items">Lorem ipsum(8)</p>
-                <p className="categories-items">Lorem ipsum(11)</p>
-                <p className="categories-items">Lorem ipsum(7)</p>
-              
-                <BesoinAide />
-            </div> */}
+           
            </div>
 
-           {/* <FaqSection /> */}
         </div>
     )
 }

@@ -88,16 +88,16 @@ const Header = () => {
                         </Col>
                             </Row>
                     </div> */}
-                    <div class="hwrap">
-                        <div class="hmove">
+                    <div className="hwrap">
+                        <div className="hmove">
                         {
-                        breaknews && breaknews?.map((item) => 
+                        breaknews && breaknews?.map((item, index) => 
                         (
-                        // <div class="hitem">{breaknew.title}</div>
+                        // <div className="hitem">{breaknew.title}</div>
                       
-                        <p onClick={() => handleViewBreaknews(item.id)} 
+                        <p key={index+"w"} onClick={() => handleViewBreaknews(item.id)} 
                              style={{cursor: 'pointer'}} 
-                             class="hitem mx-5" 
+                             className="hitem mx-5" 
                              dangerouslySetInnerHTML={{__html: (item?.title)}}></p>
                         
                         )

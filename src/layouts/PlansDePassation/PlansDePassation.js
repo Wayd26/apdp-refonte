@@ -8,100 +8,73 @@ import {FaRegFilePdf, FaRegFileExcel} from "react-icons/fa";
 import CardOnCaroussel from '../../components/CardOnCaroussel/CardOnCaroussel';
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
 import {getATypeOfArticles} from '../../http/http';
+import Pagination from '../../components/Pagination/Pagination';
 
 
 const PlansDePassation = () => {
-    const [communiques, setCommuniques] = useState();
+    const [plansDePassation, setPlansDePassation] = useState();
+    const [perPage, setPerPage] = useState(15);
+    const [pageNumber, setPageNumber] = useState(1);
+    const [totalPage, setTotalPage] = useState(1);
 
-    const loadCommuniquesData = async () => {
-        const resp = await getATypeOfArticles("communiques")
+    const changePage = ({ selected }) => {
+        let currentPage = selected + 1;
+        setPageNumber(currentPage)
+        console.log("ok ", selected + 1)
+    }
+    useEffect(() => {
+        loadPlansDePassationData();
+        console.log("Plans de passation data ", plansDePassation)
+    }, [pageNumber])
+
+
+    const loadPlansDePassationData = async () => {
+        const resp = await getATypeOfArticles("plans-de-passation", pageNumber)
         if(resp.response && resp.response.status !== 200){
             console.log("error ",resp.response)
         } else {
             console.log("data ",resp.data.data)
-            setCommuniques(resp.data)
+            const perPageValue = resp?.data?.meta?.per_page
+            setPerPage(perPageValue)
+            const total = resp?.data?.meta?.total;
+            setTotalPage(Math.ceil(total / perPageValue))
+
+            setPlansDePassation(resp.data)
         }
     }
-    
-    useEffect(() => {
-        loadCommuniquesData()        
-    }, [])
+ 
 
     return (
         <div className={"inheritance-plan"} id={"inheritance-plan"}>
             
-            <div style={{ 'display':'flex', 'align-items':'center', 'flex-direction':'column' }}>
-                <h4 style={{'color': 'white', 'margin-top': '100px', 'margin-bottom': '0px', 'background-color': '#4385F6', 'width': '98%', 'padding': '20px',}}>PLANS DE PASSATION</h4>
+            <div style={{ display:'flex', alignItems:'center', flexDirection:'column' }}>
+                <h4 style={{color: 'white', marginTop: '100px', marginBottom: '0px', backgroundColor: '#4385F6', width: '98%', padding: '20px',}}>PLANS DE PASSATION</h4>
                 {/* inheritance-plan list 1 */}
                 <div className={"inheritance-plan-card-list row text-align left"}>
                     <Card className={"inheritance-plan-card col-md-6 col-lg-4 col-xl-4"}>
                         <Card.Body>
                         <div className={"inheritance-plan-card-img rounded-circle"} id={"inheritance-plan-card-img rounded-circle"}>
-                            <FaRegFileExcel style={{'font-size': '150px', 'position': 'relative', 'top': '20px', 'color': 'green', }}/>
+                            <FaRegFileExcel style={{fontSize: '150px', position: 'relative', top: '20px', color: 'green', }}/>
                         </div>
-                            <Card.Title style={{ 'text-align': 'center', 'font-weight': 'bold' }}>PLAN PREVISIONNEL DE PASSATION DES MARCHÉS PUBLICS</Card.Title>
-                            <Card.Text style={{'text-align': 'center', 'font-size': '10px', 'color': '#2E2E2E', 'font-weight': 'normal', 'margin': '20px'}}>
+                            <Card.Title style={{ textAlign: 'center', fontWeight: 'bold' }}>PLAN PREVISIONNEL DE PASSATION DES MARCHÉS PUBLICS</Card.Title>
+                            <Card.Text style={{textAlign: 'center', fontSize: '10px', color: '#2E2E2E', fontWeight: 'normal', margin: '20px'}}>
                             Marché de fournitures, travaux, services courants et prestations intellectuelles
                             </Card.Text>
                             <a href={doc} download="PDF.pdf">
-                                <Button variant="light" style={{ width: '50%', 'font-size': '15px', 'background-color': '#FFF', 'border-radius': '24px', 'color':'#727C8E', 'margin-bottom': '20px', }}>
-                                    Télécharger <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
+                                <Button variant="light" style={{ width: '50%', fontSize: '15px', backgroundColor: '#FFF', borderRadius: '24px', color:'#727C8E', marginBottom: '20px', }}>
+                                    Télécharger <RiArrowRightCircleFill  style={{ width: '25px', height: '25px', marginLeft: '0px', position: 'relative', right: '-10px', color: '#FFBE00',}}/>
                                 </Button>
                             </a>
                         </Card.Body>
                     </Card>
 
-                    <Card className={"inheritance-plan-card col-md-6 col-lg-4 col-xl-4"}>
-                        <Card.Body>
-                        <div className={"inheritance-plan-card-img rounded-circle"} id={"inheritance-plan-card-img rounded-circle"}>
-                            <FaRegFileExcel style={{'font-size': '150px', 'position': 'relative', 'top': '20px', 'color': 'green', }}/>
-                        </div>
-                            <Card.Title style={{ 'text-align': 'center', 'font-weight': 'bold' }}>AVIS GÉNÉRAL DE PASSATION DES MARCHÉS PUBLICS</Card.Title>
-                            <Card.Text style={{'text-align': 'center', 'font-size': '10px', 'color': '#2E2E2E', 'font-weight': 'normal', 'margin': '20px'}}>
-                            Marché de fournitures, travaux, services courants et prestations intellectuelles
-                            </Card.Text>
-                            <a href={doc} download target={'_blank'}>
-                                <Button variant="light" style={{ width: '50%', 'font-size': '15px', 'background-color': '#FFF', 'border-radius': '24px', 'color':'#727C8E', 'margin-bottom': '20px', }}>
-                                    Télécharger <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
-                                </Button>
-                            </a>
-                        </Card.Body>
-                    </Card>
-
-                    <Card className={"inheritance-plan-card col-md-6 col-lg-4 col-xl-4"}>
-                        <Card.Body>
-                        <div className={"inheritance-plan-card-img rounded-circle"} id={"inheritance-plan-card-img rounded-circle"}>
-                            <FaRegFileExcel style={{'font-size': '150px', 'position': 'relative', 'top': '20px', 'color': 'green', }}/>
-                        </div>
-                            <Card.Title style={{ 'text-align': 'center', 'font-weight': 'bold' }}>PLAN PREVISIONNEL DE PASSATION DES MARCHÉS PUBLICS</Card.Title>
-                            <Card.Text style={{'text-align': 'center', 'font-size': '10px', 'color': '#2E2E2E', 'font-weight': 'normal', 'margin': '20px'}}>
-                            Marché de fournitures, travaux, services courants et prestations intellectuelles
-                            </Card.Text>
-                            <a href={doc} download="PDF.pdf">
-                                <Button variant="light" style={{ width: '50%', 'font-size': '15px', 'background-color': '#FFF', 'border-radius': '24px', 'color':'#727C8E', 'margin-bottom': '20px', }}>
-                                    Télécharger <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
-                                </Button>
-                            </a>
-                        </Card.Body>
-                    </Card>
-
-                    <Card className={"inheritance-plan-card col-md-6 col-lg-4 col-xl-4"}>
-                        <Card.Body>
-                        <div className={"inheritance-plan-card-img rounded-circle"} id={"inheritance-plan-card-img rounded-circle"}>
-                            <FaRegFileExcel style={{'font-size': '150px', 'position': 'relative', 'top': '20px', 'color': 'green', }}/>
-                        </div>
-                            <Card.Title style={{ 'text-align': 'center', 'font-weight': 'bold' }}>AVIS GÉNÉRAL DE PASSATION DES MARCHÉS PUBLICS</Card.Title>
-                            <Card.Text style={{'text-align': 'center', 'font-size': '10px', 'color': '#2E2E2E', 'font-weight': 'normal', 'margin': '20px'}}>
-                            Marché de fournitures, travaux, services courants et prestations intellectuelles
-                            </Card.Text>
-                            <a href={doc} download="PDF.pdf">
-                                <Button variant="light" style={{ width: '50%', 'font-size': '15px', 'background-color': '#FFF', 'border-radius': '24px', 'color':'#727C8E', 'margin-bottom': '20px', }}>
-                                    Télécharger <RiArrowRightCircleFill  style={{ 'width': '25px', 'height': '25px', 'margin-left': '0px', position: 'relative', 'right': '-10px', color: '#FFBE00',}}/>
-                                </Button>
-                            </a>
-                        </Card.Body>
-                    </Card>
+                   
                 </div>
+                {plansDePassation && plansDePassation?.length !== 0 &&   <Pagination
+                changePage={changePage}
+                pageCount={totalPage}
+                perPage={perPage}
+            />} 
             </div>
         </div>
     )

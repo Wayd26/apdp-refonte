@@ -54,7 +54,7 @@ const ActualiteCarousel = () => {
 
 
 
-          <Carousel.Item>
+          <Carousel.Item key={index+"w"}>
             <img src={actualite?.image_url} className="d-block carousel-image" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <CardOnCaroussel id={actualite.id} title={actualite.title} subtitle={actualite.sub_title} image={actualite.image_url} />

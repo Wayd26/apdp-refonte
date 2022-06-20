@@ -7,26 +7,42 @@ import { GiInjustice } from 'react-icons/gi';
 import { FaDownload } from 'react-icons/fa';
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
 import { getATypeOfArticles } from '../../http/http';
+import Pagination from '../../components/Pagination/Pagination';
 
 
 const Deliberations = () => {
 
   const [deliberations, setDeliberations] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const [perPage, setPerPage] = useState(15);
+  const [pageNumber, setPageNumber] = useState(1);
+  const [totalPage, setTotalPage] = useState(1);
+
+  const changePage = ({ selected }) => {
+    let currentPage = selected + 1;
+    setPageNumber(currentPage)
+    console.log("ok ", selected + 1)
+  }
+  useEffect(() => {
+    loadDeliberationsData()
+    console.log("decisions data ", deliberations)
+  }, [pageNumber])
 
   const loadDeliberationsData = async () => {
-    const resp = await getATypeOfArticles("decisions")
+    const resp = await getATypeOfArticles("decisions", pageNumber)
     if (resp.response && resp.response.status !== 200) {
       console.log("error ", resp.response)
     } else {
       console.log("data ", resp.data.data)
+      const perPageValue = resp?.data?.meta?.per_page
+      setPerPage(perPageValue)
+      const total = resp?.data?.meta?.total;
+      setTotalPage(Math.ceil(total / perPageValue))
+
       setDeliberations(resp.data.data)
     }
   }
 
-  useEffect(() => {
-    loadDeliberationsData()
-  }, [])
 
   const searchFunction = (rows, search) => {
     const columns = rows[0] && Object.keys(rows[0])
@@ -60,7 +76,7 @@ const Deliberations = () => {
             </div>
             <Row>
               <Form.Control value={searchText} onChange={(e) => handleSearch(e)} type="text" placeholder="Rechercher..." className='deliberation-search-input' />
-              
+
               <Tab.Content>
                 <Tab.Pane eventKey="first">
                   {/* <h3 style={{ 'text-transform': 'uppercase', 'text-align': 'left', marginBottom: "30px"}}>DéLIBéRATIONS 2022 (nombre: 04)</h3> */}
@@ -70,7 +86,7 @@ const Deliberations = () => {
                         return q.title?.toLowerCase()?.indexOf(searchText?.toLowerCase()) > -1
                       })
                       .map((deliberation, index) =>
-                        <Card style={{ 'text-align': 'left', }}>
+                        <Card key={index+"w"} style={{ 'text-align': 'left', }}>
                           <Card.Body>
                             <Card.Title style={{ 'font-weight': 'bold', }}>{deliberation.title}</Card.Title>
                             <Card.Text style={{ 'margin-top': '30px', 'margin-bottom': '30px' }}>
@@ -84,9 +100,15 @@ const Deliberations = () => {
                       ) : <h1> Aucune Délibération </h1>
                     }
 
-                </div>
-              </Tab.Pane>
-              {/* <Tab.Pane eventKey="second">
+{deliberations && deliberations?.length !== 0 &&   <Pagination
+                changePage={changePage}
+                pageCount={totalPage}
+                perPage={perPage}
+            />}
+
+                  </div>
+                </Tab.Pane>
+                {/* <Tab.Pane eventKey="second">
                     <h3 style={{ 'text-transform': 'uppercase', 'text-align': 'left' }}>DéLIBéRATIONS 2021 (nombre: 02)</h3>
                     <div className={'pane-cards'}>
                       <Card style={{'text-align': 'left',}}>
@@ -100,11 +122,11 @@ const Deliberations = () => {
                       </Card>
                     </div>
                   </Tab.Pane> */}
-            </Tab.Content>
+              </Tab.Content>
+            </Row>
           </Row>
-        </Row>
-      </Tab.Container>
-    </div>
+        </Tab.Container>
+      </div>
     </div >
   )
 }

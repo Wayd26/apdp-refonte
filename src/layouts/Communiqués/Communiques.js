@@ -10,30 +10,45 @@ import BesoinAide from '../../components/BesoinAide/BesoinAide';
 import { getATypeOfArticles } from '../../http/http';
 import {useNavigate} from "react-router-dom";
 import {RiCalendar2Line, RiQuestionAnswerFill, RiEyeFill, RiArrowRightCircleFill} from "react-icons/ri";
+import Pagination from '../../components/Pagination/Pagination';
 
 
 const Communiques = () => {
 
     const [communiques, setCommuniques] = useState([]);
     const navigate = useNavigate()
+    const [perPage, setPerPage] = useState(15);
+    const [pageNumber, setPageNumber] = useState(1);
+    const [totalPage, setTotalPage] = useState(1);
+
+    const changePage = ({ selected }) => {
+        let currentPage = selected + 1;
+        setPageNumber(currentPage)
+        console.log("ok ", selected + 1)
+    }
+    useEffect(() => {
+        loadCommuniquesData()
+        console.log("Arretes data ", communiques)
+    }, [pageNumber])
 
     const handleMoreClicked = (id) =>{
         navigate(`/communique/${id}`)
     }
 
     const loadCommuniquesData = async () => {
-        const resp = await getATypeOfArticles("communiques")
+        const resp = await getATypeOfArticles("communiques", pageNumber)
         if(resp.response && resp.response.status !== 200){
             console.log("error ",resp.response)
         } else {
             console.log("data ",resp.data.data)
+            const perPageValue = resp?.data?.meta?.per_page
+            setPerPage(perPageValue)
+            const total = resp?.data?.meta?.total;
+            setTotalPage(Math.ceil(total / perPageValue))
+
             setCommuniques(resp.data.data)
         }
     }
-    
-    useEffect(() => {
-        loadCommuniquesData()        
-    }, [])
 
     return (
         <div className={"releases"} id={"releases"}>
@@ -45,7 +60,7 @@ const Communiques = () => {
                 {/* Releases card list */}
                 <div className={"releases-first-section"} id={"releases-first-section"}>
                 {communiques && communiques.map((communique, index) => 
-                    (<><Card className={"releases-card"}>
+                    (<><Card key={index} className={"releases-card"}>
                         <div className={'releases-card-image-div'} id={'releases-card-image-div'} style={{ "backgroundImage" : `url(${communique?.image_url})`}}>
                         </div>
                         <Card.Body>
@@ -63,6 +78,11 @@ const Communiques = () => {
                     </>)
                         )
                     }
+                    {communiques && communiques?.length !== 0 &&   <Pagination
+                changePage={changePage}
+                pageCount={totalPage}
+                perPage={perPage}
+            />}
                    
                     {/* <ButtonGroup className="me-2" aria-label="First group" style={{ 'margin-bottom': '80px', 'margin-top': '20px',}}>
                         <Button variant="light" style={{ 'color': '#FFBE02', border: '1px solid gray', width: '50px', height: '50px', 'font-size': '20px',}}>&#xAB;</Button>
