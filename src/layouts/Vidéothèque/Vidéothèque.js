@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import "./Vidéothèque.css";
 import VideothequeCard from "../../components/VidéothèqueCard/VidéothèqueCard";
 import {getATypeOfArticles} from '../../http/http';
-
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const Vidéothèque = () => {
 

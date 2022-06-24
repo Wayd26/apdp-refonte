@@ -7,6 +7,7 @@ import {ImSad, ImHappy} from "react-icons/im";
 import './Dynamique.css'
 import {getForm, submitFormSection} from '../../http/http';
 import { ToastContainer, toast } from 'react-toastify';
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 export default function DynamiqueForm() {
     const [formData, setFormData] = useState({
@@ -157,6 +158,12 @@ export default function DynamiqueForm() {
             } else {
                 return (
                     <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
+                        <Breadcrumb>
+                            <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+                            <Breadcrumb.Item href="#">Vos démarches</Breadcrumb.Item>
+                            <Breadcrumb.Item href="#">Faire ou modifier une demande</Breadcrumb.Item>
+                            <Breadcrumb.Item active>Formulaire</Breadcrumb.Item>
+                        </Breadcrumb>
                         <ToastContainer />
                         <Form className="form-style" onSubmit={handleSubmit}>
                             {/* <Stepper activeStep={current}>
@@ -208,6 +215,12 @@ export default function DynamiqueForm() {
         if (!final){
             return (
                 <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
+                    <Breadcrumb>
+                        <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+                        <Breadcrumb.Item href="#">Vos démarches</Breadcrumb.Item>
+                        <Breadcrumb.Item href="#">Faire ou modifier une demande</Breadcrumb.Item>
+                        <Breadcrumb.Item active>Formulaire</Breadcrumb.Item>
+                    </Breadcrumb>
                     <ToastContainer />
                     <Form className="form-style" style={{alignItems: 'center'}}>
                         
@@ -228,6 +241,12 @@ export default function DynamiqueForm() {
         } else {
             return (
                 <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
+                    <Breadcrumb>
+                        <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+                        <Breadcrumb.Item href="#">Vos démarches</Breadcrumb.Item>
+                        <Breadcrumb.Item href="#">Faire ou modifier une demande</Breadcrumb.Item>
+                        <Breadcrumb.Item active>Formulaire</Breadcrumb.Item>
+                    </Breadcrumb>
                     <ToastContainer />
                     <Form className="form-style" style={{alignItems: 'center'}}>
                         

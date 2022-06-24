@@ -12,6 +12,18 @@ margin-top: 40px;
 margin-bottom: 40px;
 }
 
+.breadcrumb {
+    font-size: 20px;
+    background-color: rgb(43, 113, 211);
+    border-radius: 0;
+    padding: 10px;
+}
+
+.breadcrumb-item.active {
+    color: #FFBE00;
+    font-weight: bold;
+}
+
 .forum-discussion-title {
     text-align: center;
 font: normal normal bold 35px/48px Roboto;

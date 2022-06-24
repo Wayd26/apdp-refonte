@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import "./Photothèque.css";
 import PhotothequeCard from "../../components/PhotothèqueCard/PhotothèqueCard"
 import {getATypeOfArticles} from '../../http/http';
-
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const Photothèque = () => {
 

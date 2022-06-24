@@ -8,7 +8,7 @@ import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarou
 import {useNavigate} from "react-router-dom";
 import ReactPaginate from "react-paginate";
 import {getATypeOfArticles} from '../../http/http';
-
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const Evenements = () => {
 
@@ -66,6 +66,11 @@ const Evenements = () => {
 
     return (
         <div id="events" className="events">
+            <Breadcrumb>
+                <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+                <Breadcrumb.Item href="#">Actualités</Breadcrumb.Item>
+                <Breadcrumb.Item active>Evénements</Breadcrumb.Item>
+            </Breadcrumb>
             {/* <ActualiteCarousel /> */}
             <p className="events-title">Tous les évenements</p>
             {/* <p className="events-subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed  olores et ea rebum. Stet clita kasd gubergren, no seaolores et ea rebum. Stet clita kasd guolores et ea rebum. Stet clita kasdolores et ea rebum. Stet clita </p> */}

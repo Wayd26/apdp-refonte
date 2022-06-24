@@ -7,7 +7,7 @@ import faq_image from '../../assets/icons/faq-image.svg'
 import {BiSearchAlt} from "react-icons/bi"
 import {getATypeOfArticles, getFaq} from '../../http/http';
 import FaqElement from '../../components/FaqElement/FaqElement';
-
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const FAQ = () => {
 
@@ -39,6 +39,11 @@ const FAQ = () => {
     
     return (
         <div style={{background: "#F7F7F7"}}>
+            <Breadcrumb>
+                <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+                <Breadcrumb.Item href="#">Régime de protection de deonnées</Breadcrumb.Item>
+                <Breadcrumb.Item active>FAQ</Breadcrumb.Item>
+            </Breadcrumb>
             {/* <ActualiteCarousel /> */}
             <div className="faq-container">
 

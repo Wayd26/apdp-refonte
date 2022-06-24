@@ -13,6 +13,18 @@ text-transform: uppercase;
 padding-top: 50px;
 }
 
+.breadcrumb {
+    font-size: 20px;
+    background-color: rgb(43, 113, 211);
+    border-radius: 0;
+    padding: 10px;
+}
+
+.breadcrumb-item.active {
+    color: #FFBE00;
+    font-weight: bold;
+}
+
 #details-releases .details-releases-subtitle { 
     text-align: justify;
 font: normal normal normal 21px/29px Roboto;

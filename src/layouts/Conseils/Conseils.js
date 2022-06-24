@@ -10,7 +10,7 @@ import {useDispatch, useSelector, shallowEqual} from "react-redux";
 import {getATypeOfArticles} from '../../http/http';
 import {useNavigate} from "react-router-dom";
 import TexteCommunautaireCard from '../../components/TexteCommunautaireCard/TexteCommunautaireCard';
-
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const Conseils = () => {
     const navigate = useNavigate();
@@ -36,6 +36,11 @@ const Conseils = () => {
       console.log("TextesCommunautaire data ", textes_internationaux)       
     }, [])
     return <div style={{backgroundColor: "#E2E2E2", paddingTop: "40px", paddingBottom: "40px"}}>
+        <Breadcrumb>
+            <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+            <Breadcrumb.Item href="#">Documentation</Breadcrumb.Item>
+            <Breadcrumb.Item active>Textes Internationaux</Breadcrumb.Item>
+        </Breadcrumb>
         <div className="textes-communautaires-container">
           <p className="textes-communautaires-title">Textes Internationaux</p>
           <div className="textes-communautaires-cards-container row">

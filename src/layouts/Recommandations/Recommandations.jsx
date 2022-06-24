@@ -11,7 +11,7 @@ import {getATypeOfArticles} from '../../http/http';
 import {useNavigate} from "react-router-dom";
 import TexteCommunautaireCard from '../../components/TexteCommunautaireCard/TexteCommunautaireCard';
 import RecommandationCard from '../../components/RecommandationCard/RecommandationCard';
-
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const Recommandations = () => {
     const navigate = useNavigate();

@@ -3,7 +3,7 @@ import "./DetailsDevoir.css"
 import rester_informe from "../../assets/icons/rester_informe.png"
 import {useParams} from "react-router-dom";
 import {getATypeOfArticles} from '../../http/http';
-
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const DetailsDevoir = (props) => {
 

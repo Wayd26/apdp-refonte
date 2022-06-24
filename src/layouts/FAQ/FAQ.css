@@ -11,6 +11,13 @@
   padding-bottom: 70px;
 }
 
+.breadcrumb {
+  font-size: 20px;
+  background-color: rgb(43, 113, 211);
+  border-radius: 0;
+  padding: 10px;
+}
+
 .faq-image {
   width: 30vw;
   margin-top: 50px;

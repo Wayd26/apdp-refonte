@@ -17,6 +17,18 @@
     width: 10%;
 }
 
+.breadcrumb {
+    font-size: 20px;
+    background-color: rgb(43, 113, 211);
+    border-radius: 0;
+    padding: 10px;
+}
+
+.breadcrumb-item.active {
+    color: #FFBE00;
+    font-weight: bold;
+}
+
 .activities-card {
     /* box-shadow: 5px 10px #888888; */
     margin: 10px;
@@ -357,6 +369,7 @@
         font: normal normal normal 14px/22px Roboto;
         opacity: 1;
     }
+    
 
     .activities-card-list {
         padding-left: 15%;

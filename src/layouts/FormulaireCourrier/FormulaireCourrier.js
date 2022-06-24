@@ -8,11 +8,16 @@ import Form from 'react-bootstrap/Form'
 import {BiCalendarCheck} from "react-icons/bi"
 import imgCard5 from "../../assets/images/img5.jpg"
 import imgCard6 from "../../assets/images/img6.jpg"
-
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const FormulaireCourrier = () => {
     return (
         <div className='mail-form'>
+            <Breadcrumb>
+                <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+                <Breadcrumb.Item href="#">Régime de protection de deonnées</Breadcrumb.Item>
+                <Breadcrumb.Item active>FAQ</Breadcrumb.Item>
+            </Breadcrumb>
             <ActualiteCarousel />
             <Form>
                 <h2>REMPLISSEZ LES CHAMPS DU FORMULAIRE POUR PERSONNALISER VOTRE COURRIER</h2>

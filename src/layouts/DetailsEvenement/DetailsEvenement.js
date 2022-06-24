@@ -9,7 +9,7 @@ import imgCard5 from "../../assets/images/img5.jpg";
 import imgCard6 from "../../assets/images/img6.jpg";
 import {useParams} from "react-router-dom";
 import {getATypeOfArticles} from '../../http/http';
-
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 
 const DetailsEvenement = () => {
@@ -43,6 +43,12 @@ const DetailsEvenement = () => {
 
     return (
         <div id="details-events" className="details-events">
+            <Breadcrumb>
+                <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+                <Breadcrumb.Item href="#">Actualités</Breadcrumb.Item>
+                <Breadcrumb.Item href="#">Evénements</Breadcrumb.Item>
+                <Breadcrumb.Item active>Détails de l'événement</Breadcrumb.Item>
+            </Breadcrumb>
         {/* <ActualiteCarousel /> */}
         <p className="details-events-title">{eventData && eventData[0]?.title}</p>
         <hr className="details-event-hr"></hr>

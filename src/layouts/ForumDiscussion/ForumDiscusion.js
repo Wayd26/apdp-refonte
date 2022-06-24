@@ -4,7 +4,8 @@ import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarou
 import FaqSection from '../../components/FaqSection/FaqSection'
 import ForumDiscussionRow from '../../components/ForumDiscussionRow/ForumDiscussionRow'
 import { getAllBlogs, getAllForums, getATypeOfArticles } from '../../http/http'
- import "./ForumDiscusion.css"
+import "./ForumDiscusion.css";
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
  
  const ForumDiscusion = () => {
 

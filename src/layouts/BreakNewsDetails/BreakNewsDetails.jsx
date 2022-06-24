@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Card, Button } from 'react-bootstrap';
 import { getATypeOfArticles } from '../../http/http';
 import './BreakNewsDetails.css'
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const BreakNewsDetails = (props) => {
 
@@ -35,7 +36,11 @@ const BreakNewsDetails = (props) => {
   return (
     <div>
         {/* {JSON.stringify(breaknewsData)} */}
-
+        <Breadcrumb>
+            <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+            <Breadcrumb.Item href="#">Actualités</Breadcrumb.Item>
+            <Breadcrumb.Item active>Breaknews</Breadcrumb.Item>
+        </Breadcrumb>    
         <div style={{background: '#FFF'}}>
         <h2 style={{ 'color': '#4385F6', 'padding-top':'70px' }}>{breaknewsData && breaknewsData[0].title}</h2>
         <Card className={'law-card'}>

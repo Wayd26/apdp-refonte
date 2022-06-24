@@ -3,6 +3,7 @@ import "./Cooperations.css";
 import {Card} from "react-bootstrap";
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
 import {getATypeOfArticles} from '../../http/http';
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 
 
@@ -27,6 +28,11 @@ const Cooperations = () => {
 
     return (
       <div style={{background: '#E2E2E2', paddingTop: "40px", paddingBottom: "40px"}}>
+        <Breadcrumb>
+            <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+            <Breadcrumb.Item href="#">Connaitre l'APDP</Breadcrumb.Item>
+            <Breadcrumb.Item active>Coopérations</Breadcrumb.Item>
+        </Breadcrumb>
         {/* <ActualiteCarousel/> */}
         <div className={'cooperations-div'} style={{ 'padding-bottom': '100px' }}>
           <h2 style={{ 'color': '#4385F6', 'margin': '100px' }}>COOPÉRATIONS</h2>

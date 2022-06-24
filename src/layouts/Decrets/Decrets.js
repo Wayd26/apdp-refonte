@@ -4,6 +4,7 @@ import "./Decrets.css"
 import {useDispatch, useSelector, shallowEqual} from "react-redux";
 import {getATypeOfArticles} from '../../http/http';
 import {useNavigate} from "react-router-dom";
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const Decrets = () => {
   const navigate = useNavigate();
@@ -24,6 +25,12 @@ const Decrets = () => {
     console.log("Decrets data ", decrets)       
   }, [])
   return <div style={{backgroundColor: "#E2E2E2", paddingTop: "40px", paddingBottom: "40px"}}>
+      <Breadcrumb>
+          <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+          <Breadcrumb.Item href="#">Documentation</Breadcrumb.Item>
+          <Breadcrumb.Item href="#">Textes Nationaux</Breadcrumb.Item>
+          <Breadcrumb.Item active>Décrets</Breadcrumb.Item>
+      </Breadcrumb>
       <div className="decrets-container">
           <p className="decrets-title">DÉCRETS</p>
           <div className="decrets-rows-container">

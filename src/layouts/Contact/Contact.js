@@ -6,11 +6,17 @@ import {FaFacebook, FaYoutube, FaPhoneAlt} from 'react-icons/fa';
 import {AiFillTwitterCircle} from 'react-icons/ai';
 import {MdLocationPin} from 'react-icons/md';
 import {BiEnvelope} from 'react-icons/bi';
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const Contact = () => {
 
     return (
       <div style={{background: '#FFF'}}>
+        <Breadcrumb>
+            <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+            <Breadcrumb.Item href="#">Connaitre l'APDP</Breadcrumb.Item>
+            <Breadcrumb.Item active>Contact</Breadcrumb.Item>
+        </Breadcrumb>
         <h2 style={{ 'color': '#000', 'padding-top':'70px' }}>CONTACT</h2>
         <Card className={'contact-card'}>
           <div className={'contact-info'}>

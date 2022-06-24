@@ -34,7 +34,8 @@ export default class NavBar extends Component {
             showDropdownDemarches: false,
             showDropdownDocumentation: false,
             showDropdownDemarches: false,
-            showDropdownConformite : false
+            showDropdownConformite : false,
+            showDropdownTextesNationaux: false
         }
     }
 
@@ -58,7 +59,7 @@ export default class NavBar extends Component {
 
         return (
             <React.Fragment>
-                <Navbar light expand="sm" style={{ backgroundColor: "#2b71d3", marginBottom: 0 }} className={"d-flex justify-content-center nav-bar-mother"}  >
+                <Navbar light expand="sm" style={{ backgroundColor: "#2b71d3", marginBottom: 0, borderRadius: 0, }} className={"d-flex justify-content-center nav-bar-mother"}  >
                     {/* <NavbarBrand href="/">reactstrap</NavbarBrand> */}
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar className="nav-bar-custom">

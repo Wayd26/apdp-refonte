@@ -8,6 +8,7 @@ import {Carousel, Card, Button, ButtonGroup, Accordion} from "react-bootstrap";
 import { RiCalendar2Line, RiQuestionAnswerFill, RiEyeFill, RiArrowRightCircleFill } from "react-icons/ri";
 import CardOnCaroussel from '../../components/CardOnCaroussel/CardOnCaroussel';
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const Membres = () => {
 

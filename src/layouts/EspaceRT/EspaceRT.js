@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import EspaceRtCard from '../../components/EspaceRtCard/EspaceRtCard';
 import "./EspaceRT.css";
 import {getATypeOfArticles} from '../../http/http';
-
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const EspaceRT = () => {
     const [communiques, setCommuniques] = useState();

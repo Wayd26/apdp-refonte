@@ -10,6 +10,7 @@ import CardOnCaroussel from '../../components/CardOnCaroussel/CardOnCaroussel';
 import {useDispatch, useSelector, shallowEqual} from "react-redux";
 import {getATypeOfArticles} from '../../http/http';
 import {useNavigate} from "react-router-dom";
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
  
 
 
@@ -43,7 +44,12 @@ const Activites = () => {
     }, [])
     
     return (
-        <div className={"activities"} id={"activities"} style={{backgroundColor: "#E2E2E2", paddingTop: "40px", paddingBottom: "40px"}}>           
+        <div className={"activities"} id={"activities"} style={{backgroundColor: "#E2E2E2", paddingTop: "40px", paddingBottom: "40px"}}>
+            <Breadcrumb>
+                <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+                <Breadcrumb.Item href="#">Actualités</Breadcrumb.Item>
+                <Breadcrumb.Item active>Activités</Breadcrumb.Item>
+            </Breadcrumb>           
 
             {/* Title */}
 
