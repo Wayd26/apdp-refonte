@@ -10,9 +10,11 @@ import {
     UncontrolledDropdown,
     InputGroup,
     InputGroupText,
-    Input
+    Input,
+    ButtonGroup
 } from 'reactstrap';
 import { NavDropdown } from "react-bootstrap";
+import { DropdownButton, Dropdown } from 'react-bootstrap';
 import {
     BrowserRouter as Router,
     Switch,
@@ -32,7 +34,8 @@ export default class NavBar extends Component {
             showDropdownDemarches: false,
             showDropdownDocumentation: false,
             showDropdownDemarches: false,
-            showDropdownConformite : false
+            showDropdownConformite : false,
+            showDropdownTextesNationaux: false
         }
     }
 
@@ -56,7 +59,7 @@ export default class NavBar extends Component {
 
         return (
             <React.Fragment>
-                <Navbar light expand="sm" style={{ backgroundColor: "#2b71d3", marginBottom: 0 }} className={"d-flex justify-content-center nav-bar-mother"}  >
+                <Navbar light expand="sm" style={{ backgroundColor: "#2b71d3", marginBottom: 0, borderRadius: 0, }} className={"d-flex justify-content-center nav-bar-mother"}  >
                     {/* <NavbarBrand href="/">reactstrap</NavbarBrand> */}
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar className="nav-bar-custom">
@@ -89,17 +92,18 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="/phototheque">Photothèque</NavDropdown.Item>
                                     <NavDropdown.Item href="/videotheque">Vidéothèque</NavDropdown.Item>
                                     {/* <NavDropdown.Item href="/plans-de-passation">Plans de passation</NavDropdown.Item> */}
-
-                                    <div className='dropdown '>
-                                        <button className="c-btn-dropdown dropdown-toggle drop-class" style={{ "font": "normal normal normal 15px/30px Roboto", }}
-
-                                            type="" data-toggle="dropdown">Marchés Publics
-                                        </button>
-                                        <ul className="dropdown-menu" style={{ right: 0, left: "auto" }}>
-                                            <NavDropdown.Item href="/plans-de-passation">Plan de passation</NavDropdown.Item>
-                                            <NavDropdown.Item href="/appels-d-offres">Publication de marché</NavDropdown.Item>
-                                        </ul>
-                                    </div>
+                                    <DropdownButton
+                                        as={ButtonGroup}
+                                        key={'end'}
+                                        id={`dropdown-button-drop-end`}
+                                        drop={'end'}
+                                        variant="none"
+                                        size="lg"
+                                        title={`Marchés publics`}
+                                    >
+                                        <Dropdown.Item href="/plans-de-passation" eventKey="1">Plan de passation</Dropdown.Item>
+                                        <Dropdown.Item href="/appels-d-offres" eventKey="2">Publication de marché</Dropdown.Item>
+                                    </DropdownButton>
 
                                 </NavDropdown>
                             </h5>
@@ -117,30 +121,24 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="/faq">FAQ</NavDropdown.Item>
                                     <NavDropdown.Item href="/quiz">Quiz</NavDropdown.Item>
                                     <NavDropdown.Item href="/blog">Blog</NavDropdown.Item>
-
-                                    <div className='dropdown '>
-                                        <button className="c-btn-dropdown dropdown-toggle drop-class" style={{ "font": "normal normal normal 15px/30px Roboto", }}
-
-                                            type="" data-toggle="dropdown">Mise en conformité
-                                        </button>
-                                        <ul className="dropdown-menu" style={{ right: "auto", left: 0 }}>
-                                            <NavDropdown.Item href="/vos-droits">Obligations Générales</NavDropdown.Item>
-                                            <NavDropdown.Item href="#">Systèmes de vidéosurveillances</NavDropdown.Item>
-                                            <NavDropdown.Item href="#">Sites web / application mobiles</NavDropdown.Item>
-                                            <NavDropdown.Item href="">Mise en conformité
-                                            </NavDropdown.Item>
-                                            <NavDropdown.Item href="#">Notification d’incident de violation
-                                                des données personnelles</NavDropdown.Item>
-
-                                            <NavDropdown.Item href="#">L’analyse d’impact</NavDropdown.Item>
-
-                                            <NavDropdown.Item href="#">Le code de conduite</NavDropdown.Item>
-
-                                            <NavDropdown.Item href="#">Le registre de traitement</NavDropdown.Item>
-
-
-                                        </ul>
-                                    </div>
+                                    <DropdownButton
+                                        as={ButtonGroup}
+                                        key={'end'}
+                                        id={`dropdown-button-drop-end`}
+                                        drop={'end'}
+                                        variant="none"
+                                        size="lg"
+                                        title={`Mise en conformité`}
+                                    >
+                                        <Dropdown.Item href="/vos-droits" eventKey="1">Obligations Générales</Dropdown.Item>
+                                        <Dropdown.Item href="#" eventKey="2">Systèmes de vidéosurveillances</Dropdown.Item>
+                                        <Dropdown.Item href="#" eventKey="3">Sites web / application mobiles</Dropdown.Item>
+                                        <Dropdown.Item href="#" eventKey="4">Mise en conformité</Dropdown.Item>
+                                        <Dropdown.Item href="#" eventKey="5">Notification d’incident de violation des données personnelles</Dropdown.Item>
+                                        <Dropdown.Item href="#" eventKey="6">L’analyse d’impact</Dropdown.Item>
+                                        <Dropdown.Item href="#" eventKey="7">Le code de conduite</Dropdown.Item>
+                                        <Dropdown.Item href="#" eventKey="8">Le registre de traitement</Dropdown.Item>
+                                    </DropdownButton>
                                 </NavDropdown>
                             </h5>
 
@@ -163,15 +161,15 @@ export default class NavBar extends Component {
                                         || window.location.pathname === "/espace-dpo"
                                     }>
                                     <NavDropdown.Item href="/faire-une-demande" >Faire ou modifier une demande</NavDropdown.Item>
-                                    <NavDropdown.Item href="/vos-demarches">Soumettre la déclaration de mise
+                                    <NavDropdown.Item href="/faire-une-demande">Soumettre la déclaration de mise
                                         en conformité avec les injonctions</NavDropdown.Item>
                                     <NavDropdown.Item href="/statut-demande">Faire une vérification</NavDropdown.Item>
                                     <NavDropdown.Item href="/espace-dpo">Notifier et Publier la désignation
                                         d’un DPO</NavDropdown.Item>
-                                    <NavDropdown.Item href="/vos-demarches">Déclarer un incident</NavDropdown.Item>
+                                    <NavDropdown.Item href="/faire-une-demande">Déclarer un incident</NavDropdown.Item>
                                     <NavDropdown.Item href="/vos-demarches">Rédiger une affiche d’information
                                         des personnes concernées</NavDropdown.Item>
-                                    <NavDropdown.Item href="/vos-demarches">Démarrer une mise en conformité</NavDropdown.Item>
+                                    <NavDropdown.Item href="/faire-une-demande">Démarrer une mise en conformité</NavDropdown.Item>
                                     <NavDropdown.Item href="/vos-demarches">Créer un registre de traitement</NavDropdown.Item>
                                     <NavDropdown.Item href="/vos-demarches">Faire le rapport d’activité annuel</NavDropdown.Item>
                                 </NavDropdown>
@@ -198,27 +196,33 @@ export default class NavBar extends Component {
                                         }>
                                     <NavDropdown.Item href="/outils-conformite">Outils de conformité</NavDropdown.Item>
                                     <NavDropdown.Item href="/rapports-annuels">Rapports d'activités Annuelles</NavDropdown.Item>
-                                    <div className='dropdown '>
-                                        <button className="c-btn-dropdown dropdown-toggle drop-class" style={{ "font": "normal normal normal 15px/30px Roboto", }}
-                                            type="" data-toggle="dropdown">Textes Nationaux
-                                        </button>
-                                        <ul className="dropdown-menu" style={{ right: 0, left: "auto" }}>
-                                            <NavDropdown.Item href="/textes/lois">Lois</NavDropdown.Item>
-                                            <NavDropdown.Item href="/textes/arretes">Arrêtés </NavDropdown.Item>
-                                            <NavDropdown.Item href="/textes/decrets">Decrets</NavDropdown.Item>
-                                            <NavDropdown.Item href="/textes/deliberations-publiques">Décisions</NavDropdown.Item>
-                                        </ul>
-                                    </div>
-                                    <div className='dropdown '>
-                                        <button className="c-btn-dropdown dropdown-toggle drop-class" style={{ "font": "normal normal normal 15px/30px Roboto", }}
-                                            type="" data-toggle="dropdown">Textes Communautaires
-                                        </button>
-                                        <ul className="dropdown-menu" style={{ right: 0, left: "auto" }}>
-                                            <NavDropdown.Item href="/textes/accords">Accords</NavDropdown.Item>
-                                            <NavDropdown.Item href="/textes/reglements">Règlements</NavDropdown.Item>
-                                            <NavDropdown.Item href="/textes/directives">Directives</NavDropdown.Item>
-                                        </ul>
-                                    </div>
+                                    <DropdownButton
+                                        as={ButtonGroup}
+                                        key={'end'}
+                                        id={`dropdown-button-drop-end`}
+                                        drop={'end'}
+                                        variant="none"
+                                        size="lg"
+                                        title={`Textes Nationaux`}
+                                    >
+                                        <Dropdown.Item href="/textes/lois" eventKey="1">Lois</Dropdown.Item>
+                                        <Dropdown.Item href="/textes/arretes" eventKey="2">Arrêtés</Dropdown.Item>
+                                        <Dropdown.Item href="/textes/decrets" eventKey="3">Decrets</Dropdown.Item>
+                                        <Dropdown.Item href="/textes/deliberations-publiques" eventKey="4">Décisions</Dropdown.Item>
+                                    </DropdownButton>
+                                    <DropdownButton
+                                        as={ButtonGroup}
+                                        key={'end'}
+                                        id={`dropdown-button-drop-end`}
+                                        drop={'end'}
+                                        variant="none"
+                                        size="lg"
+                                        title={`Textes Communautaires`}
+                                    >
+                                        <Dropdown.Item href="/textes/accords" eventKey="1">Accords</Dropdown.Item>
+                                        <Dropdown.Item href="/textes/reglements" eventKey="2">Règlements</Dropdown.Item>
+                                        <Dropdown.Item href="/textes/directives" eventKey="3">Directives</Dropdown.Item>
+                                    </DropdownButton>
                                     <NavDropdown.Item href="/textes-internationaux">Textes Internationaux</NavDropdown.Item>
                                     <NavDropdown.Item href="/pays-membres" >Liste de pays à protection équivalente</NavDropdown.Item>
                                     {/* <NavDropdown.Item href="/textes/textes-communautaires">Textes Communautaires</NavDropdown.Item> */}

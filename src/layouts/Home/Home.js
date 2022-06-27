@@ -18,6 +18,7 @@ import ReactGA from 'react-ga';
 import countapi from 'countapi-js';
 import { getVisitsNumber } from "../../http/http";
 import { DOMAIN_URL } from "../../constants/Constant";
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -55,8 +56,6 @@ const Home = () => {
     <div className={"Home"}>
 
         <ActualiteCarousel/>
-  
-      
 
       {/* User Type Section */}
       <Row className={"my-5 mx-4"}>
@@ -90,7 +89,7 @@ const Home = () => {
         <div className={"prestation-div row"}>
           <div className={"col-sm-6"}>
             <p className={"prestation-div-text"}>
-              Découvrez les différents prestations que nous proposons à nos
+              Découvrez les différentes prestations que nous proposons à nos
               usagers.
             </p>
             <button className={"our-services-btn"} onClick={() => navigate("/vos-demarches") }>Vos démarches</button>

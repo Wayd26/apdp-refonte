@@ -1,6 +1,7 @@
 import React from 'react';
 import EspaceDpoCard from '../../components/EspaceDpoCard/EspaceDpoCard';
-import "./EspaceDPO.css"
+import "./EspaceDPO.css";
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const EspaceDPO = () => {
     const espaceRtData = [
@@ -17,6 +18,7 @@ const EspaceDPO = () => {
     ]
 
   return <div style={{backgroundColor: "#E2E2E2", paddingTop: "40px", paddingBottom: "40px"}}>
+        
       <div className="espace-dpo-container">
           <p className="espace-dpo-title">ESPACE DPO</p>
           <div className="espace-dpo-cards-container row d-flex ">

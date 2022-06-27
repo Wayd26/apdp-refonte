@@ -11,6 +11,18 @@
     padding-bottom: 40px;
 }
 
+.breadcrumb {
+    font-size: 20px;
+    background-color: rgb(43, 113, 211);
+    border-radius: 0;
+    padding: 10px;
+}
+
+.breadcrumb-item.active {
+    color: #FFBE00;
+    font-weight: bold;
+}
+
 .arretes-title {
     font: normal normal bold 45px/47px Roboto;
     letter-spacing: 0px;

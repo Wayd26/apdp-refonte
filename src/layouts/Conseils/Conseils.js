@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 import TexteCommunautaireCard from '../../components/TexteCommunautaireCard/TexteCommunautaireCard';
 import Pagination from '../../components/Pagination/Pagination';
 
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const Conseils = () => {
   const navigate = useNavigate();
@@ -49,7 +50,12 @@ const Conseils = () => {
     }
   }
 
-  return <div style={{ backgroundColor: "#E2E2E2", paddingTop: "40px", paddingBottom: "40px" }}>
+  return (<div style={{ backgroundColor: "#E2E2E2", paddingTop: "40px", paddingBottom: "40px" }}>
+    <Breadcrumb>
+      <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+      <Breadcrumb.Item href="#">Documentation</Breadcrumb.Item>
+      <Breadcrumb.Item active>Textes Internationaux</Breadcrumb.Item>
+    </Breadcrumb>
     <div className="textes-communautaires-container">
       <p className="textes-communautaires-title">Textes Internationaux</p>
       <div className="textes-communautaires-cards-container row">
@@ -58,14 +64,9 @@ const Conseils = () => {
             <TexteCommunautaireCard key={index + "w"} title={item.title} description={item.sub_title} />
           )) : <h1 className="px-3">Aucun Texte</h1>}
         </div>
-        {textes_internationaux && textes_internationaux?.length !== 0 && <Pagination
-          changePage={changePage}
-          pageCount={totalPage}
-          perPage={perPage}
-        />}
       </div>
     </div>
-  </div>;
-};
+  </div>)};
 
-export default Conseils;
+
+  export default Conseils;

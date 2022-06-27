@@ -4,6 +4,7 @@ import "./LesLois.css"
 import {getATypeOfArticles} from '../../http/http';
 import Pagination from '../../components/Pagination/Pagination';
 
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const LesLois = () => {
 
@@ -41,6 +42,12 @@ const LesLois = () => {
     return (
         
         <div style={{backgroundColor: "#E2E2E2", paddingTop: "40px", paddingBottom: "40px"}}>
+            <Breadcrumb>
+                <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+                <Breadcrumb.Item href="#">Documentation</Breadcrumb.Item>
+                <Breadcrumb.Item href="#">Textes Nationaux</Breadcrumb.Item>
+                <Breadcrumb.Item active>Lois</Breadcrumb.Item>
+            </Breadcrumb>
             <p className="lois-title">LOIS</p>
 
             <div className="lois-container row d-flex justify-content-around">

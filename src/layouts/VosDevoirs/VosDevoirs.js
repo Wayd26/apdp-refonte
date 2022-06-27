@@ -5,7 +5,7 @@ import { Tabs, Tab } from "react-bootstrap";
 import DutiesContent from '../../components/DutiesContent/DutiesContent';
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
 import { getATypeOfArticles, getRightsOrDuties } from '../../http/http';
-
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const VosDevoirs = () => {
 

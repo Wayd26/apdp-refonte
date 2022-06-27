@@ -10,7 +10,7 @@ import imgCard5 from "../../assets/images/img5.jpg"
 import imgCard6 from "../../assets/images/img6.jpg"
 import { getATypeOfArticles } from '../../http/http';
 import Pagination from '../../components/Pagination/Pagination';
-
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 
 const MentionsLegales = () => {

@@ -6,6 +6,7 @@ import img8 from '../../assets/images/img8.png'
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
 import {useParams} from "react-router-dom";
 import {getATypeOfArticles} from '../../http/http';
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const LaLoi = () => {
 

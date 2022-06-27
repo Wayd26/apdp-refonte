@@ -10,6 +10,18 @@
     padding: 150px 0px 50px 0px;
 }
 
+.breadcrumb {
+    font-size: 20px;
+    background-color: rgb(43, 113, 211);
+    border-radius: 0;
+    padding: 10px;
+}
+
+.breadcrumb-item.active {
+    color: #FFBE00;
+    font-weight: bold;
+}
+
 .countries-separator {
     color: #FFBE00;
     opacity: 1;

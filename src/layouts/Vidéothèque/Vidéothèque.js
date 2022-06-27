@@ -4,6 +4,7 @@ import VideothequeCard from "../../components/VidéothèqueCard/VidéothèqueCar
 import {getATypeOfArticles} from '../../http/http';
 import Pagination from '../../components/Pagination/Pagination';
 
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const Vidéothèque = () => {
 

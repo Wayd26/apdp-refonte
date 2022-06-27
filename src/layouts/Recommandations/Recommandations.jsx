@@ -13,6 +13,7 @@ import TexteCommunautaireCard from '../../components/TexteCommunautaireCard/Text
 import RecommandationCard from '../../components/RecommandationCard/RecommandationCard';
 import Pagination from '../../components/Pagination/Pagination';
 
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const Recommandations = () => {
   const navigate = useNavigate();

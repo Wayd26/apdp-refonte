@@ -9,7 +9,7 @@ import imgCard5 from "../../assets/images/img5.jpg"
 import imgCard6 from "../../assets/images/img6.jpg"
 import {useParams} from "react-router-dom";
 import {getATypeOfArticles} from '../../http/http';
-
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const DetailsConseils = () => {
 
@@ -40,6 +40,11 @@ const DetailsConseils = () => {
 
     return (
         <div id="details-releases" className="details-releases mx-auto">
+            <Breadcrumb>
+                <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+                <Breadcrumb.Item href="#">Conseils</Breadcrumb.Item>
+                <Breadcrumb.Item active>Détails</Breadcrumb.Item>
+            </Breadcrumb>
         {/* <ActualiteCarousel /> */}
         <p className="details-releases-title">{conseilData && conseilData[0]?.title}</p>
         <hr className="details-release-hr"></hr>

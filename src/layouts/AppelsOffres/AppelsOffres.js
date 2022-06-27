@@ -7,6 +7,7 @@ import MarketDataTable from "../../components/MarketDataTable/MarketDataTable";
 import Pagination from "../../components/Pagination/Pagination";
 import { getATypeOfArticles } from "../../http/http";
 import "./AppelsOffres.css";
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const AppelsOffres = () => {
   var actualYear = new Date();
@@ -47,6 +48,10 @@ const AppelsOffres = () => {
 
   return (
     <div style={{ background: "#F7F7F7 0% 0% no-repeat padding-box;" }}>
+      <Breadcrumb>
+          <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+          <Breadcrumb.Item active>Appels d'offres</Breadcrumb.Item>
+      </Breadcrumb>    
       {/* <ActualiteCarousel /> */}
       <div id="appels-offres" className="appels-offres">
         <div className="appels-offres-header">

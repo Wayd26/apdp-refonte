@@ -9,6 +9,18 @@
     opacity: 1;
 }
 
+.breadcrumb {
+    font-size: 20px;
+    background-color: rgb(43, 113, 211);
+    border-radius: 0;
+    padding: 10px;
+}
+
+.breadcrumb-item.active {
+    color: #FFBE00;
+    font-weight: bold;
+}
+
 .details-devoir-small-desc {
     width: 70%;
     text-align: justify;

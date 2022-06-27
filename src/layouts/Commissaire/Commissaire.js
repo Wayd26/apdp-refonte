@@ -10,7 +10,7 @@ import imgCard5 from "../../assets/images/img5.jpg"
 import imgCard6 from "../../assets/images/img6.jpg"
 import fat from "../../assets/images/f_a_t.png"
 import {getATypeOfArticles} from '../../http/http';
-
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 
 
@@ -33,13 +33,19 @@ const Commissaire = () => {
     }, [])
     return (
         <div className='info-section'>
+            <Breadcrumb>
+                <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+                <Breadcrumb.Item href="#">Connaitre l'APDP</Breadcrumb.Item>
+                <Breadcrumb.Item active>Commissariat du Gouvernement</Breadcrumb.Item>
+            </Breadcrumb>
             {/* <ActualiteCarousel /> */}
             <p className="commissaire-title">{commissaire?.title}</p>
             <hr className="commissaire-hr"></hr>
             <div className='content'>
                 <Card style={{ 'margin-top': '100px', }}>
                     <Card.Body>
-                        <img src={commissaire?.image[0] ? commissaire?.image[0] : fat} className='rounded-circle' style={{ width: '300px', height: '300px', position: 'relative', top: '-180px',}}/>
+                        <div className='rounded-circle' style={{ backgroundImage: `url('${commissaire?.image_url ? commissaire?.image_url : fat}'`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', height: '300px', width: '300px', margin: 'auto', position: 'relative', top: '-120px',}}></div>
+                        {/* <img src={commissaire?.image_url ? commissaire?.image_url : fat}  style={{ width: '300px', height: '300px', position: 'relative', top: '-180px',}}/> */}
                         <h3 style={{position: 'relative', top: '-100px',}}>{commissaire?.sub_title}</h3>
                         <Card.Text style={{'margin': '0px 100px 100px 100px', 'text-align': 'left',}}>
                         <div dangerouslySetInnerHTML={{__html: (commissaire && commissaire?.content)}}></div>

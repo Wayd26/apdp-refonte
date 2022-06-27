@@ -63,6 +63,7 @@ import StatutDemande from '../StatutDemande/StatutDemande';
 import DetailsDemande from '../DetailsDemande/DetailsDemande';
 import BreakNewsDetails from '../BreakNewsDetails/BreakNewsDetails';
 import Actualités from '../Actualités/Actualités';
+import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 
 
 const Content = () => {
@@ -74,14 +75,12 @@ const Content = () => {
 
     return (
         <div>
-
-
             <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
                 <Routes>
                     {/* <Route index element={<div> Here</div>} /> */}
-                    <Route path="/auth" element={<Auth />} />
-                    <Route path="/query/:form_type/:query_id" element={<DetailsDemande />} />
-                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/auth" element={<Auth/>} />
+                    <Route path="/query/:form_type/:query_id" element={<DetailsDemande/>} />
+                    <Route path="/contact" element={<Contact/>} />
                     <Route path="/plans-de-passation" element={<PlansDePassation />} />
                     <Route path="/phototheque" element={<Photothèque />} />
                     <Route path="/videotheque" element={<Vidéothèque />} />

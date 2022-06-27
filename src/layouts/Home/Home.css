@@ -3,6 +3,13 @@
   /* margin-top: 50px; */
 }
 
+.breadcrumb {
+  font-size: 20px;
+  background-color: rgb(43, 113, 211);
+  border-radius: 0;
+  padding: 10px;
+}
+
 .user-type-div {
   background: #4385f6 0% 0% no-repeat padding-box;
   border-radius: 0px 122px;

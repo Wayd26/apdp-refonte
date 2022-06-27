@@ -24,8 +24,11 @@ const RapportAnnuelRow = (props) => {
                     {description}
                     </p>
                 </div> */}
-                <div className="d-flex justify-content-between">
-                    <img src={rapportImg} className="rapports-annuels-row-details-image" />
+                <div className="d-flex justify-content-between" style={{ alignItems: 'center' }}>
+                    {/* <img src={rapportImg} className="rapports-annuels-row-details-image" /> */}
+                    <div style={{ backgroundImage: `url('${rapportImg}'`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', height: '100px' }} className="rapports-annuels-row-details-image">
+
+                    </div>
                     <a href={fileUrl} download>
                         <button className="rapports-annuels-row-details-button">
                             Télécharger   <MdFileDownload className="rapports-annuels-row-details-button-icon" />

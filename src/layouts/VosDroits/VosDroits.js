@@ -6,7 +6,7 @@ import RightsContent from '../../components/RightsContent/RightsContent';
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
 import { getATypeOfArticles, getRightsOrDuties } from '../../http/http';
 import {useNavigate} from "react-router-dom";
-
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const VosDroits = () => {
 

@@ -11,6 +11,7 @@ import { getATypeOfArticles } from '../../http/http';
 import { useNavigate } from "react-router-dom";
 import { RiCalendar2Line, RiQuestionAnswerFill, RiEyeFill, RiArrowRightCircleFill } from "react-icons/ri";
 import Pagination from '../../components/Pagination/Pagination';
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 
 const Communiques = () => {
@@ -52,8 +53,11 @@ const Communiques = () => {
 
     return (
         <div className={"releases"} id={"releases"}>
-
-
+            <Breadcrumb>
+                <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+                <Breadcrumb.Item href="#">Actualités</Breadcrumb.Item>
+                <Breadcrumb.Item active>Communiqués et Newsletters</Breadcrumb.Item>
+            </Breadcrumb>
             <p className={'page-title'}>COMMUNIQUES ET NEWSLETTERS</p>
             {/* <p className={'page-subtitle'}>Lorem ipsum dolor sit amet, consetetur sadipsiam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores</p> */}
             <div className={'releases-section'} id={'releases-section'}>

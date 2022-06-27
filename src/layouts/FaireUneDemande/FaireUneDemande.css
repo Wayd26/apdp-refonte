@@ -12,6 +12,13 @@
   margin-left: 5%;
 } */
 
+.breadcrumb {
+  font-size: 20px;
+  background-color: rgb(43, 113, 211);
+  border-radius: 0;
+  padding: 10px;
+}
+
 /* .bottom-blue-band {
   background: #4385f6 0% 0% no-repeat padding-box;
   opacity: 1;

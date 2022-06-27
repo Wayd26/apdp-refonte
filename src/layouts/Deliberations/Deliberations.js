@@ -8,6 +8,7 @@ import { FaDownload } from 'react-icons/fa';
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
 import { getATypeOfArticles } from '../../http/http';
 import Pagination from '../../components/Pagination/Pagination';
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 
 const Deliberations = () => {
@@ -59,6 +60,12 @@ const Deliberations = () => {
   return (
     <div style={{ background: '#E2E2E2', paddingTop: "40px", paddingBottom: "40px" }}>
       {/* <ActualiteCarousel/> */}
+      <Breadcrumb>
+          <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+          <Breadcrumb.Item href="#">Documentation</Breadcrumb.Item>
+          <Breadcrumb.Item href="#">Textes Nationaux</Breadcrumb.Item>
+          <Breadcrumb.Item active>Décisions publiques</Breadcrumb.Item>
+      </Breadcrumb>
       <div className={'deliberations-div'}>
         <h2>DÉCISIONS PUBLIQUES</h2>
 

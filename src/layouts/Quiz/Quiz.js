@@ -3,6 +3,7 @@ import "./Quiz.css"
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel'
 import FaqSection from '../../components/FaqSection/FaqSection';
 import QuizCard from '../../components/QuizCard/QuizCard';
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const Quiz = () => {
     return (

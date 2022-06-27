@@ -15,7 +15,7 @@ const LoiCard = (props) => {
     }
     return (
         <div className="loi-card">
-            <img  src={img_loi} className="loi-card-image"/>
+            <img src={img_loi} className="loi-card-image"/>
             <p className="loi-card-title">{data.title}</p>
             <p className="loi-card-description">{data.sub_title}</p>
             <a href={data.image_url} download>

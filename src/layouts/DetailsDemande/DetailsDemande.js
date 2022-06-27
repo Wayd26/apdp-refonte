@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Label, Form, Button} from 'reactstrap';
 import './DetailsDemande.css'
 import {getForm, getRequestedQuery} from '../../http/http';
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 export default function DetailsDemande() {
     const [formulaire, setFormulaire] = useState(null);
@@ -72,6 +73,11 @@ export default function DetailsDemande() {
 
     return (
         <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
+            <Breadcrumb>
+                <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+                <Breadcrumb.Item href="#">Vos démarches</Breadcrumb.Item>
+                <Breadcrumb.Item active>Détails de la demande</Breadcrumb.Item>
+            </Breadcrumb>
             <Form className="form-style">
                 <div className='form-content'>
                     <h2 style={{ marginBottom: '50px', fontSize: 'large' }}>{formulaire.data.name}</h2>

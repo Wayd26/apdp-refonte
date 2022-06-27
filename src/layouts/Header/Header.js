@@ -147,7 +147,7 @@ const Header = () => {
                                 </div>
 
                                 { localStorage.getItem("user_token") ? <div>
-                                    <Button color="danger" style={{ margin: '20px' }} onClick={session_logout} className="client-espace-button"><h6>Déconnexion</h6></Button>
+                                    <Button color="danger" style={{ margin: '20px' }} onClick={session_logout} className="client-espace-button"><h6 style={{ margin: '0px' }}>Déconnexion</h6></Button>
                                 </div>:<div></div>}
                     </div>
 
