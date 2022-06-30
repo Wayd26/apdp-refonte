@@ -16,7 +16,7 @@ import ActualiteCarousel from "../../components/ActualiteCarousel/ActualiteCarou
 import { useNavigate } from "react-router-dom";
 import ReactGA from 'react-ga';
 import countapi from 'countapi-js';
-import { getVisitsNumber } from "../../http/http";
+import { getArticlesResearched, getVisitsNumber } from "../../http/http";
 import { DOMAIN_URL } from "../../constants/Constant";
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
@@ -37,7 +37,9 @@ const Home = () => {
   //   console.log("Visits ", result.value);
   // });
 
-  const [visitsNumber, setVisitsNumber] = React.useState()
+  const [visitsNumber, setVisitsNumber] = React.useState();
+  const [search, setSearch] = React.useState("loi");
+  const [articlesResearched, setArticlesResearched] = React.useState();
   const loadVisitsNumber = async () => {
     const resp = await getVisitsNumber(DOMAIN_URL)
     if (resp.response && resp.response.status !== 200) {
@@ -48,6 +50,20 @@ const Home = () => {
       localStorage.setItem("visits", resp.data?.value);
     }
   }
+
+    const handleResearch = async () => {
+      const response = await getArticlesResearched(search)
+      if(response.response && response.response.status !== 200) {
+        console.log("Error Searched", response.response)
+      } else {
+        console.log("Data Searched", response)
+        setArticlesResearched(response.data)
+      }
+    }
+
+    React.useEffect(() => {
+      handleResearch()
+    }, [search])
   React.useEffect(() => {
    loadVisitsNumber()
   }, [])  

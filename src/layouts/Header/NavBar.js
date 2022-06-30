@@ -89,7 +89,7 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="/evenements">Evènements</NavDropdown.Item>
                                     <NavDropdown.Item href="/forum-de-discussion">Forum de discussion</NavDropdown.Item>
                                     <NavDropdown.Item href="/arnaque-du-mois">Arnaque du mois</NavDropdown.Item>
-                                    <NavDropdown.Item href="/phototheque">Photothèque</NavDropdown.Item>
+                                    <NavDropdown.Item href="https://www.flickr.com/photos/195909108@N06">Photothèque</NavDropdown.Item>
                                     <NavDropdown.Item href="/videotheque">Vidéothèque</NavDropdown.Item>
                                     {/* <NavDropdown.Item href="/plans-de-passation">Plans de passation</NavDropdown.Item> */}
                                     <DropdownButton

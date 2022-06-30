@@ -97,7 +97,7 @@ const Header = () => {
                       
                         <p key={index+"w"} onClick={() => handleViewBreaknews(item.id)} 
                              style={{cursor: 'pointer'}} 
-                             className="hitem mx-5" 
+                             className="hitem my-auto mx-5" 
                              dangerouslySetInnerHTML={{__html: (item?.title)}}></p>
                         
                         )

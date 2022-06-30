@@ -247,20 +247,25 @@ border: none !important;
     overflow: hidden; /* HIDE SCROLL BAR */
     /* background: #eee; */
     background: #FFBE00;
+    height: 30px !important;
   }
    
   /* (B) MOVING TICKER WRAPPER */
-  .hmove { display: flex; }
+  .hmove { 
+    display: flex;
+max-height: 30px !important; }
   
   /* (C) ITEMS - INTO A LONG HORIZONTAL ROW */
   .hitem p {
     flex-shrink: 0;
     width: 100%;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 7px;
     text-align: center;
     font-weight: bolder;
-    font-size: large;
+    /* font-size: 0.8rem; */
+    height: 28px !important;
+    min-width: max-content;
   }
    
   /* (D) ANIMATION - MOVE ITEMS FROM RIGHT TO LEFT */
