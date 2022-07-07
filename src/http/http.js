@@ -145,8 +145,8 @@ export function getVisitsNumber(namespace) {
    return response.then(data => data).catch( error => error)
 }
 
-export function getFaq() {
-   const response = api.get(`/faqs`)
+export function getFaq(thematic) {
+   const response = api.get(`/faqs?thematic=${thematic}`)
    return response.then(data => data).catch( error => error)
 }
 
