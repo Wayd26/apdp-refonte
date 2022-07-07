@@ -20,11 +20,11 @@ const FAQ = () => {
     }
 
     const loadFaqData = async () => {
-        const resp = await getFaq("faq")
+        const resp = await getFaq("")
         if (resp.response && resp.response.status !== 200) {
             console.log("error ", resp.response)
         } else {
-            console.log("data faq", resp.data.data)
+            console.log("data faq", resp.data)
             setFaq(resp.data.data)
         }
     }

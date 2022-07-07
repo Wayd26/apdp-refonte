@@ -172,7 +172,7 @@ export function getABlog(id) {
    return response.then(data => data).catch( error => error)
 }
 
-export function getArticlesResearched(searchedText) {
-   const response = api.get(`/query/articles?query=${searchedText}`)
+export function getArticlesResearched(searchedText, pageNumber) {
+   const response = api.get(`/query/articles?query=${searchedText}&page=` + `${pageNumber}`)
    return response.then(data => data).catch( error => error)
 }

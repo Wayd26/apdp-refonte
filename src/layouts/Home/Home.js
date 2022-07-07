@@ -38,7 +38,7 @@ const Home = () => {
   // });
 
   const [visitsNumber, setVisitsNumber] = React.useState();
-  const [search, setSearch] = React.useState("loi");
+  const [search, setSearch] = React.useState("");
   const [articlesResearched, setArticlesResearched] = React.useState();
   const loadVisitsNumber = async () => {
     const resp = await getVisitsNumber(DOMAIN_URL)

@@ -39,7 +39,7 @@ const DetailsActivite = () => {
     }
 
     return (  
-        <div id="details-activities" className="details-activities mx-auto">
+        <div id="details-activities" className="details-activities m-auto">
             <Breadcrumb>
                 <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
                 <Breadcrumb.Item href="#">Actualités</Breadcrumb.Item>

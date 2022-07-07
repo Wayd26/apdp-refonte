@@ -66,7 +66,7 @@ const Header = () => {
     }
 
     const searchDecisionsShortcut = () => {
-        window.location.href = "/textes/deliberations-publiques"
+        window.location.href = "/recherche-globale"
     }
 
 //     useEffect(() => {

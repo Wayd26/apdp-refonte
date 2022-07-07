@@ -64,6 +64,8 @@ import DetailsDemande from '../DetailsDemande/DetailsDemande';
 import BreakNewsDetails from '../BreakNewsDetails/BreakNewsDetails';
 import Actualités from '../Actualités/Actualités';
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
+import GlobalResearch from '../GlobalResearch/GlobalResearch';
+import GlobalSearchItem from '../GlobalSearchItem/GlobalSearchItem';
 
 
 const Content = () => {
@@ -131,6 +133,9 @@ const Content = () => {
                     <Route path="/statut-demande" element={<StatutDemande />} />
                     <Route path="/formulaire/:id" element={<DynamiqueForm />} />
                     <Route path="/activites" element={<Activites />} />
+                    <Route path="/recherche-globale" element={<GlobalResearch />} />
+                    <Route path="/recherche-globale/:recherche_id/:page/:search_text" element={<GlobalSearchItem />} />
+
                     < Route path="/" element={<Home />} >
                     </Route>
                     {/* <Route path="*" element={<div>404</div>} /> */}
