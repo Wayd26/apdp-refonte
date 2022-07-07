@@ -5,5 +5,16 @@
 #actualite-carousel .carousel-image {
     height: 100vh;
     width: 100vw;
+}
 
+.carousel-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 50vh;
+    border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    -ms-border-radius: 0px !important;
+    -o-border-radius: 0px !important;
 }
