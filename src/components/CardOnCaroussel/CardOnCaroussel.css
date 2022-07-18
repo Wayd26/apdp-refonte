@@ -1,6 +1,7 @@
 .card-on-caroussel {
-  width: 75%;
-  /* height: 381px; */
+  width: 60%;
+  max-width: 500px;
+  height: 181px;
   background: #ffffffc7 0% 0% no-repeat padding-box;
   border-radius: 27px;
   margin-bottom: auto;
@@ -36,8 +37,8 @@
 .card-on-caroussel-button,
 .card-on-caroussel-button:hover,
 .card-on-caroussel-button:active {
-  width: 167px;
-  height: 48px;
+  width: 117px;
+  height: 38px;
   background: #4385f6 0% 0% no-repeat padding-box;
   border: #4385f6;
   border-radius: 12px;

@@ -37,30 +37,29 @@ const ActualiteCarousel = () => {
   }, [])
 
   const handleSelect = (selectedIndex, e) => {
-    setIndex(0);
-    // setIndex(selectedIndex);
+    setIndex(selectedIndex);
   };
   return (
 
     <div id={'actualite-carousel'} className={'actualite-carousel'}>
       <Carousel activeIndex={index} onSelect={handleSelect}>
         
-        {/* {actualites && actualites.map((actualite, index) => */}
+        {actualites && actualites.map((actualite, index) =>
 
 
 
           <Carousel.Item key={index+"w"}>
             {/* <img src={} className="d-block carousel-image" alt="..." /> */}
-            <div className='carousel-bg' style={{ backgroundImage: `url(${actualites[0]?.image_url})` }}></div>
+            <div className='carousel-bg' style={{ backgroundImage: `url(${actualite?.image_url})` }}></div>
             <div className="carousel-caption d-md-block">
-              <CardOnCaroussel id={actualites[0]?.id} title={actualites[0]?.title} subtitle={actualites[0]?.sub_title} image={actualites[0]?.image_url} />
+              <CardOnCaroussel id={actualite?.id} title={actualite?.title} subtitle={actualite?.sub_title} image={actualite?.image_url} />
             </div>
             <Carousel.Caption>
               {/* <h3>{}</h3> */}
               {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
             </Carousel.Caption>
           </Carousel.Item>
-         {/* )} */}
+         )}
         
       </Carousel>
 
