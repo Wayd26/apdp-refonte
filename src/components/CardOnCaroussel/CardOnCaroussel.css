@@ -1,12 +1,13 @@
 .card-on-caroussel {
-  width: 60%;
+  width: 75%;
   /* height: 381px; */
   background: #ffffffc7 0% 0% no-repeat padding-box;
   border-radius: 27px;
-  margin-bottom: 50px !important;
+  margin-bottom: auto;
+  margin-top: auto;
   padding: 15px 50px;
-  margin-top : 40px;
-  opacity: 0.7;
+  /* margin-top : 40px; */
+  opacity: 0.5;
 }
 
 .card-on-caroussel-title {
@@ -16,13 +17,13 @@
   color: #000000;
   text-shadow: 0px 3px 6px #0000001a;
   text-transform: uppercase;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   opacity: 1;
 }
 
 .card-on-caroussel-description {
   text-align: center;
-  font: normal normal normal 15px/23px Roboto;
+  font: normal normal normal 19px/23px Roboto;
   letter-spacing: 0px;
   color: #292929;
   text-shadow: 0px 3px 6px #00000029;
@@ -45,8 +46,33 @@
   opacity: 1;
 }
 
-@media only screen and (max-width: 478px) {
-    .card-on-caroussel-description {
-        overflow-y: auto;
+@media only screen and (max-width: 578px) {
+
+    .card-on-caroussel-title {
+      font: normal normal bold 14px/20px Roboto;
+      
+      margin-top: 5px;
     }
+    .card-on-caroussel-description {
+      overflow-y: auto;
+      font: normal normal normal 12px/16px Roboto;
+  height: 70px;
+
+    }
+    .card-on-caroussel {
+      width: 90%;
+      margin-bottom: auto;
+      margin-top: auto;
+      padding: 5px 15px;
+      /* margin-top : 40px; */
+      opacity: 0.5;
+    }
+
+    .card-on-caroussel-button,
+.card-on-caroussel-button:hover,
+.card-on-caroussel-button:active {
+  width: 107px;
+  height: 28px;
+}
+
 }

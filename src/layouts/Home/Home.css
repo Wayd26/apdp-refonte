@@ -300,21 +300,4 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .carousel-caption {
-    /* top: 5px; */
-  }
-  .card-on-caroussel {
-    width: 90% !important;
-    height: 100% !important;
-    margin-top: 0px;
-  }
-  .card-on-caroussel-title {
-    font: normal normal bold 16px/22px Roboto;
 
-    margin-top: 5px;
-  }
-  .card-on-caroussel-description {
-    font: normal normal normal 18px/29px Roboto;
-  }
-}
