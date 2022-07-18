@@ -148,15 +148,24 @@ const Home = () => {
         <p className={"form-section-subtitle"}>Liens Rapides</p>
         <div className={"row"}>
           <div className={"col-sm-8 col-xs-12 mx-auto"}>
-            <div className={"row"}>
+            <div className={"d-flex flex-wrap justify-content-around"}>
               {/* {shortcuts.map((i, item) => ( */}
               
-                <div className={"col-sm-4"}> <ShortcutCard ind={1} label={"Lois"} link={"textes/lois"}/></div>
-                <div className={"col-sm-4"}> <ShortcutCard ind={2} label={"Communiqués"} link={"communiques"}/></div>
-                 {/* <ShortcutCard ind={2} label={"Plans de passation"} link={"plans-de-passation"}/> */}
-                <div className={"col-sm-4"}> <ShortcutCard ind={2} label={"Marchés publics"} link={"appels-d-offres"}/></div>
-                <div className={"col-sm-4"}> <ShortcutCard ind={2} label={"Espace RT"} link={""}/></div>
-                <div className={"col-sm-4"}> <ShortcutCard ind={2} label={"Espace DPO"} link={"espace-dpo"}/></div>
+                {/* <div className={"col-sm text-center"}>  */}
+                <ShortcutCard className="mx-auto" ind={1} label={"Lois"} link={"textes/lois"}/>
+                {/* </div> */}
+                {/* <div className={"col-sm text-center"}>  */}
+                <ShortcutCard ind={2} label={"Communiqués"} link={"communiques"}/>
+                {/* </div> */}
+                {/* <div className={"col-sm text-center"}>  */}
+                <ShortcutCard className="mx-auto" ind={2} label={"Marchés publics"} link={"appels-d-offres"}/>
+                {/* </div> */}
+                {/* <div className={"col-sm text-center"}>  */}
+                <ShortcutCard className="mx-auto" ind={2} label={"Espace RT"} link={""}/>
+                {/* </div> */}
+                {/* <div className={"col-sm text-center"}>  */}
+                <ShortcutCard className="mx-auto" ind={2} label={"Espace DPO"} link={"espace-dpo"}/>
+                {/* </div> */}
              
               {/* ))} */}
             </div>

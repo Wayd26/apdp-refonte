@@ -302,7 +302,7 @@
 
 @media only screen and (max-width: 768px) {
   .carousel-caption {
-    top: 5px;
+    /* top: 5px; */
   }
   .card-on-caroussel {
     width: 90% !important;

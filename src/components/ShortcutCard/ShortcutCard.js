@@ -10,7 +10,7 @@ const ShortcutCard = (props) => {
     const navigate = useNavigate()
     return (
         <div onClick={() => navigate(link)} className={((ind % 2 && (ind < 4 || ind > 7)) || ((ind % 2) === 1 && (ind > 3 || ind < 8))) ? 'shortcut-card-second' : 'shortcut-card'}>
-            <div className={'shortcut-icon-container mx-auto d-flex justify-content-center'}>
+            <div className={'shortcut-icon-container  d-flex justify-content-center'}>
                 <HiLink className={'shortcut-icon'} />
                 
             </div>
