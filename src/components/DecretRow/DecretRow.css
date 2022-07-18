@@ -1,0 +1,106 @@
+.decret-row {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+  
+  .decret-row-blue-not-clicked {
+    background: transparent linear-gradient(180deg, #545a64 0%, #2368e0 100%) 0%
+      0% no-repeat padding-box;
+    border: 1px solid #dfdfdf;
+    border-radius: 8px 8px 0px 0px;
+    opacity: 1;
+    height: 70px;
+    width: 100%;
+    text-align: left;
+    font: normal normal normal 16px/18px Roboto;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+    padding-top: 10px;
+    padding-left: 20px;
+    margin-left: 1px !important;
+  }
+  .decret-row-blue-clicked {
+    background-color: gray;
+    border: 1px solid #dfdfdf;
+    border-radius: 8px 8px 0px 0px;
+    opacity: 1;
+    height: 70px;
+    width: 100%;
+    text-align: left;
+    font: normal normal normal 16px/18px Roboto;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+    padding-top: 10px;
+    padding-left: 20px;
+    margin-left: 1px !important;
+  }
+  
+  .decret-row-blue-not-clicked:hover, .decret-row-blue-clicked:hover {
+      cursor: pointer;
+  }
+  
+  .decret-row-blue-plus-icon {
+    width: 35px;
+    height: 30px;
+    color: #ffffff;
+    opacity: 1;
+    margin-right: 20px;
+  }
+  
+  .decret-row-details {
+    width: 100%;
+    padding: 15px 25px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #969696;
+    opacity: 1;
+    margin-left: 1px !important;
+  }
+  
+  .decret-row-details-text-container {
+    /* width: 70%; */
+  }
+  
+  .decret-row-details-text {
+    text-align: left;
+    font: normal normal normal 16px/24px Roboto;
+    letter-spacing: 0px;
+    color: #000000;
+    /* width: 100%; */
+    opacity: 1;
+  }
+  
+  .decret-row-details-button-container {
+    /* width: 30%; */
+    /* padding-left: 30%; */
+  }
+  
+  .decret-row-details-button {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 2px solid #4385f6;
+    border-radius: 29px;
+    opacity: 1;
+    height: 47px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    font: normal normal 600 21px/28px Roboto;
+    letter-spacing: 0px;
+    color: #4385f6;
+  }
+  
+  .decret-row-details-button-icon {
+    width: 35px;
+    height: 30px;
+    color: #4385f6;
+    opacity: 1;
+  }
+  
+  .decret-row-details-image {
+    width: 200px;
+    height: 178px;
+    border-radius: 5px;
+    margin-bottom: 15px;    
+  }

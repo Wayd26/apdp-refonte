@@ -1,0 +1,60 @@
+.faire-une-demande-card{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 8px 8px 24px #090E1466;
+border-radius: 12px;
+opacity: 1;
+height: 275px;
+/* width: 230px; */
+width: 100%;
+padding-top: 20px;
+/* margin-top: -100px; */
+cursor: pointer;
+margin-bottom: 30px;
+}
+
+.faire-une-demande-card:hover {
+    transform: scale(1.1);
+}
+
+#faire-une-demande-card .title {
+    height: 50px;
+text-align: center;
+letter-spacing: -0.4px;
+color: #273B60;
+font: normal normal bold 15px/18px Roboto;
+padding-right: 20px;
+padding-left: 20px;
+margin-top: 15px;
+}
+
+#faire-une-demande .description {
+    text-align: justify;
+letter-spacing: 0px;
+color: #273B60;
+opacity: 1;
+font: normal normal normal 15px/18px Roboto;
+padding-right: 20px;
+padding-left: 20px;
+}
+
+#faire-une-demande .icon-container {
+    background-color: #f7f7f7;
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+    border-radius: 50px;
+    margin-right: auto;
+    margin-left: auto;
+
+} 
+#faire-une-demande .icon {
+    width: 46px;
+    height: 42px;
+    /* background:# 4385F6 0% 0% no-repeat padding-box; */
+    opacity: 1;
+    fill: #4385f6;
+    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}

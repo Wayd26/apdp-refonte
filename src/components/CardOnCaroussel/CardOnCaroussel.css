@@ -1,0 +1,52 @@
+.card-on-caroussel {
+  width: 60%;
+  /* height: 381px; */
+  background: #ffffffc7 0% 0% no-repeat padding-box;
+  border-radius: 27px;
+  margin-bottom: 50px !important;
+  padding: 15px 50px;
+  margin-top : 40px;
+  opacity: 0.7;
+}
+
+.card-on-caroussel-title {
+  text-align: center;
+  font: normal normal bold 24px/32px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  text-shadow: 0px 3px 6px #0000001a;
+  text-transform: uppercase;
+  margin-top: 30px;
+  opacity: 1;
+}
+
+.card-on-caroussel-description {
+  text-align: center;
+  font: normal normal normal 15px/23px Roboto;
+  letter-spacing: 0px;
+  color: #292929;
+  text-shadow: 0px 3px 6px #00000029;
+  text-transform: capitalize;
+  opacity: 1;
+  height: 120px;
+  display: justify;
+}
+
+.card-on-caroussel-button,
+.card-on-caroussel-button:hover,
+.card-on-caroussel-button:active {
+  width: 167px;
+  height: 48px;
+  background: #4385f6 0% 0% no-repeat padding-box;
+  border: #4385f6;
+  border-radius: 12px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 478px) {
+    .card-on-caroussel-description {
+        overflow-y: auto;
+    }
+}

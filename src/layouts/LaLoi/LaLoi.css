@@ -1,0 +1,52 @@
+.law-card {
+  background: #EAEAEA 0% 0% no-repeat padding-box;
+  box-shadow: -9px -9px 16px #FFFFFF4B;
+  border-radius: 11px;
+  opacity: 1;
+  margin: 50px;
+}
+
+.breadcrumb {
+  font-size: 20px;
+  background-color: rgb(43, 113, 211);
+  border-radius: 0;
+  padding: 10px;
+}
+
+.law-card .card-body {
+  display: flex;
+}
+
+.law-form {
+  margin: 50px;
+  background: #EAEAEA 0% 0% no-repeat padding-box;
+  box-shadow: -9px -9px 16px #FFFFFF4B;
+  border-radius: 11px;
+  opacity: 1;
+  padding: 50px;
+  text-align: left;
+}
+
+.law-form .form-label {
+  font-weight: bold;
+  width: auto !important;
+}
+
+input#formBasicInfos {
+  width: 25%;
+}
+
+.law-card .card-img {
+  /* width: 500px; */
+  width: 40%;
+}
+
+.law-card .card-text {
+  padding: 50px;
+}
+
+.law-card .card-text button {
+  margin-right: 5px;
+  margin-top: 30px;
+  width: 40%;
+}

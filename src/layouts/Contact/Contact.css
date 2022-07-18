@@ -1,0 +1,59 @@
+.contact-card {
+  background: #4385F6 0% 0% no-repeat padding-box;
+  box-shadow: -9px -9px 16px #FFFFFF4B;
+  border-radius: 11px;
+  opacity: 1;
+  margin: 50px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: row;
+}
+
+.breadcrumb {
+  font-size: 20px;
+  background-color: rgb(43, 113, 211);
+  border-radius: 0;
+  padding: 10px;
+}
+
+.contact-info {
+  background-color: #FFF;
+  width: 100%;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.contact-form {
+  margin: 50px;
+  color: white;
+  /* padding: 50px; */
+  text-align: center;
+}
+
+.contact-card .card-body {
+  width: 80%;
+}
+
+.contact-form .form-label {
+  font-weight: bold;
+  width: auto !important;
+}
+
+input#formBasicInfos {
+  width: 25%;
+}
+
+.contact-card .card-img {
+  width: 500px;
+}
+
+.contact-card .card-text {
+  padding: 0px;
+}
+
+.contact-card .card-text button {
+  margin-right: 5px;
+  margin-top: 30px;
+  width: 40%;
+}

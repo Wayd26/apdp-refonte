@@ -1,0 +1,36 @@
+ {/* Demand Section */}
+
+               {/* <div className={'demand-section'}>
+                   <div className={'demand-div row d-flex justify-content-around'}>
+                       <div className={'demand-illustration-card col-sm-4'}>
+                            <img src={big_head} className={'big-head-illustration'}/>
+                       </div>
+                       <div className={'col-sm-5'}>
+                           <p className={'make-demand-text'}>Faire une demande</p>
+                       </div>
+                   </div>
+                   </div>  */}
+
+                   {/* FAQ Section */}
+                   {/* <div className={'faq-section'}>
+                       <div className={'row'}>
+                       <div className={'col-sm-6'}>
+                           <p className={'speech-title'}>DISCOURS D’OUVERTURE DU PRESIDENT DE L’APDP</p>
+                           <p className={'speech-description'}>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ultricies Mi Eget Mauris Pharetra. Amet Risus Nullam Eget Felis Eget Nunc Lobortis. Purus In Massa Tempor Nec. Porta Nibh Venenatis Cras Sed. Viverra Ipsum Nunc Aliquet Bibendum Enim. Risus Pretium Quam Vulputate Dignissim Suspendisse In. Non Quam Lacus Suspendisse Faucibus Interdum Posuere Lorem Ipsum Dolor. Facilisi Cras Fermentum Odio Eu Feugiat Pretium Nibh Ipsum. Risus Sed Vulputate Odio Ut Enim Blandit Volutpat Maecenas. Netus Et Malesuada Fames Ac Turpis Egestas. Sed Arcu Non Odio Euismod Lacinia At Quis Risus Sed. Praesent Elementum Facilisis Leo Vel Fringilla Est Ullamcorper. Ullamcorper Dignissim Cras Tincidunt Lobortis Feugiat Vivamus. Elit Pellentesque Habitant Morbi Tristique Senectus Et Netus. Morbi Tincidunt Augue Interdum Velit.</p>
+                       </div>
+                       <div className={'col-sm-6'}>
+                           <div className={'speech-card'}>
+                               <img className={'faq-dots'} src={dots}/>
+                               <img src={img7} className={'speech-img'}/>
+                           </div>
+                       </div>
+                       </div>
+                   </div> */}
+
+
+
+                   our-serv-btn mb-20
+                   
+.our-services-illustration d-contents
+
+img mt+10

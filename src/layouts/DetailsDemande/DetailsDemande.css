@@ -1,0 +1,32 @@
+.form-style{
+    margin: 50px;
+    padding: 50px;
+    min-width: 60% !important;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    min-height: 500px;
+}
+
+.breadcrumb {
+    font-size: 20px;
+    background-color: rgb(43, 113, 211);
+    border-radius: 0;
+    padding: 10px;
+}
+
+.breadcrumb-item.active {
+    color: #FFBE00;
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+    .form-style{
+        min-width: 60% !important;
+    }
+  }

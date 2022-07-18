@@ -1,0 +1,95 @@
+.appels-offres {
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000029;
+border-radius: 7px;
+opacity: 1;
+width: 75%;
+margin-top: 50px;
+margin-bottom: 50px; 
+margin-right: auto;
+margin-left: auto;
+/* border: 2px solid red; */
+}
+
+.breadcrumb {
+    font-size: 20px;
+    background-color: rgb(43, 113, 211);
+    border-radius: 0;
+    padding: 10px;
+}
+
+.breadcrumb-item.active {
+    color: #FFBE00;
+    font-weight: bold;
+}
+
+.appels-offres-header {
+    background: #4385F6 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000029;
+border-radius: 7px;
+opacity: 1;
+height: 5rem;
+width: 100%;
+}
+
+.appels-offres-avis-importants { 
+    text-align: left;
+font: normal normal bold 18px/24px Roboto;
+letter-spacing: 0px;
+color: #FF0000;
+opacity: 1;
+text-transform: uppercase;
+margin-bottom: 20px;
+}
+.appels-offres-publications {
+    text-align: center;
+font: normal normal bold 28px/34px Roboto;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+margin-top: 40px;
+margin-bottom: 30px;
+}
+
+.w90 {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.appels-offres-header-text {
+    text-align: center;
+font: normal normal bold 49px/59px Roboto;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1;
+}
+
+.appels-offres-blue-band {
+    height: 54px;
+background: #4385F6 0% 0% no-repeat padding-box;
+opacity: 0.38;
+margin-bottom: 30px;
+padding-top: 15px;
+}
+
+.appels-offres-blue-band-text {
+    text-align: left;
+font: normal normal 900 17px/24px Roboto;
+letter-spacing: 0px;
+color: #2E2E2E;
+opacity: 1;
+width: 90%;
+margin-left: auto;
+margin-right: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .appels-offres-header-text {
+        font-size: 1.3rem !important;
+    }
+
+    .appels-offres{
+        width: 95%;
+    }
+}

@@ -1,0 +1,103 @@
+.quiz-box {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000029;
+border-radius: 7px;
+opacity: 1;
+width: 70%;
+padding-top: 40px;
+padding-bottom: 40px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 50px;
+}
+
+.breadcrumb {
+    font-size: 20px;
+    background-color: rgb(43, 113, 211);
+    border-radius: 0;
+    padding: 10px;
+}
+
+.breadcrumb-item.active {
+    color: #FFBE00;
+    font-weight: bold;
+}
+
+.quiz-title {
+    text-align: center;
+font: normal normal bold 33px/48px Roboto;
+letter-spacing: 0px;
+color: #000000;
+text-shadow: 0px 3px 6px #0000001A;
+text-transform: uppercase;
+opacity: 1;
+}
+
+ .quiz-select-category-text {
+    text-align: center;
+font: normal normal normal 20px/26px Roboto;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+margin-top: 30px;
+}
+
+.quiz-category-box {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* text-align: left; */
+    margin-bottom: 30px;
+}
+
+.quiz-category-div {
+    /* height: 30px; */
+    margin-left: 10px;
+    margin-right: 10px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #CED4DA;
+opacity: 1;
+padding: 5px 15px;
+font: normal normal normal 20px/23px Roboto;
+letter-spacing: 0px;
+color: #868E96;
+opacity: 1;
+width: fit-content;
+/* margin: 10px; */
+margin-bottom: 10px;
+cursor:pointer;
+}
+.quiz-category-div:hover {
+    background: #4385F6 0% 0% no-repeat padding-box;
+border: 1px solid #CED4DA;
+opacity: 1;
+color: #FFFFFF;
+}
+
+.quiz-category-card-box {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.quiz-more-button {
+    height: 48px;
+background: #4385F6 0% 0% no-repeat padding-box;
+opacity: 1;
+border-radius: 8px;
+color: #FFFFFF;
+border: none;
+}
+
+@media only screen and (max-width: 768px) { 
+    .quiz-box {
+        width: 85%;
+    }
+    .quiz-title {
+        font: normal normal bold 20px/38px Roboto;
+    }
+     .quiz-select-category-text {
+    font: normal normal normal 15px/20px Roboto;
+}
+}

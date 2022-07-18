@@ -1,0 +1,19 @@
+.cooperations-cards .card {
+  background: #EAEAEA 0% 0% no-repeat padding-box;
+  box-shadow: 0px 8px 27px #727C8E40;
+  margin-right: 30px;
+}
+
+
+.cooperations-cards .card-text {
+  font-size: 12px;
+  text-align: justify;
+  letter-spacing: -1px;
+}
+
+.breadcrumb {
+  font-size: 20px;
+  background-color: rgb(43, 113, 211);
+  border-radius: 0;
+  padding: 10px;
+}

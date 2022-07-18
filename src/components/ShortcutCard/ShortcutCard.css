@@ -1,0 +1,103 @@
+.test {
+  background: red 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 30px #186aa51a;
+  border-radius: 12px;
+  opacity: 1;
+  height: 159px;
+  width: 206px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.shortcut-card {
+  /* background: #ffbe00 0% 0% no-repeat padding-box; */
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 30px #186aa51a;
+  border-radius: 12px;
+  opacity: 1;
+  height: 159px;
+  width: 206px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  /* overflow-y: auto; */
+  cursor: pointer;
+}
+
+.shortcut-card:hover, .shortcut-card-second:hover {
+  background: #ffbe00 0% 0% no-repeat padding-box;
+  
+}
+.shortcut-card-second {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 30px #186aa51a;
+  border-radius: 12px;
+  opacity: 1;
+  height: 159px;
+  width: 206px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.shortcut-icon-container {
+  width: 57px;
+  height: 57px;
+  background: #f4f7fa 0% 0% no-repeat padding-box;
+  opacity: 1;
+  border-radius: 50%;
+  margin: 25px auto;
+}
+
+.shortcut-text {
+  text-align: center;
+  font: normal normal bold 15px/26px Roboto;
+  letter-spacing: 0px;
+  /* color: #ffffff; */
+  color: #292929;
+  opacity: 0.79;
+  margin-top: 20px;
+  height: 50px;
+}
+
+.shortcut-text:hover, .shortcut-card:hover {
+  color: #ffffff;
+}
+
+.shortcut-text-second {
+  text-align: center;
+  font: normal normal bold 15px/26px Roboto;
+  letter-spacing: 0px;
+  color: #292929;
+  opacity: 0.79;
+  margin-top: 20px;
+  height: 50px;
+}
+.shortcut-icon {
+  margin: auto;
+  width: 36px;
+  height: 36px;
+  fill: #4385f6;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 478px) {
+  .shortcut-card, .shortcut-card-second {
+    height: 129px;
+    width: 166px;
+  }
+  .shortcut-icon-container{
+    width: 37px;
+    height: 37px;
+  }
+  .shortcut-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .shortcut-text, .shortcut-text-second {
+    font: normal normal bold 12px/20px Roboto;
+    margin-top: 5px;
+    overflow-y: auto;
+  }
+}

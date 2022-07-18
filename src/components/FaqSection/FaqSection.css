@@ -1,0 +1,30 @@
+.guide-faq-title {
+    text-align: center;
+    font: normal normal bold 38px/57px Roboto;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
+  .guide-faq-subtitle {
+    text-align: center;
+    font: normal normal normal 30px/42px Roboto;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    margin-bottom: 40px;
+    padding: 7px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media only screen and (max-width: 768px) { 
+    .guide-faq-subtitle {
+      text-align: center;
+      font: normal normal normal 20px/22px Roboto;
+      width: 90%;
+    }
+    .guide-faq-title {
+      font: normal normal bold 28px/37px Roboto;
+    }
+  }

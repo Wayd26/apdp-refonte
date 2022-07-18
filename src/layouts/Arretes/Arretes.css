@@ -1,0 +1,39 @@
+.arretes-container {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 7px;
+    opacity: 1;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 40px;
+    margin-bottom: 40px; */
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.breadcrumb {
+    font-size: 20px;
+    background-color: rgb(43, 113, 211);
+    border-radius: 0;
+    padding: 10px;
+}
+
+.breadcrumb-item.active {
+    color: #FFBE00;
+    font-weight: bold;
+}
+
+.arretes-title {
+    font: normal normal bold 45px/47px Roboto;
+    letter-spacing: 0px;
+    color: #4385F6;
+    text-transform: uppercase;
+    opacity: 1;
+    margin-bottom: 40px;
+}
+
+.arretes-rows-container {
+width: 90%;
+margin-left: auto;
+margin-right: auto;
+}

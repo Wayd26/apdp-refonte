@@ -1,0 +1,46 @@
+.deliberations-div h2 {
+  color: #4385F6;
+  text-transform: uppercase;
+  opacity: 1;
+  /* margin: 100px; */
+}
+
+.deliberations-div {
+  margin-right: 100px;
+  margin-left: 100px;
+  padding-bottom: 100px;
+}
+
+.breadcrumb {
+  font-size: 20px;
+  background-color: rgb(43, 113, 211);
+  border-radius: 0;
+  padding: 10px;
+}
+
+.deliberations-div .row > * {
+  justify-content: center !important;
+  margin: 10px;
+}
+
+.pane-cards .card {
+  margin-bottom: 10px;
+}
+
+.pane-cards button {
+  border-radius: 50px;
+}
+
+.deliberations-div .nav-item {
+  background: #313131 0% 0% no-repeat padding-box;
+  margin: 10px;
+  border-radius: 5px !important;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  -ms-border-radius: 5px !important;
+  -o-border-radius: 5px !important;
+}
+
+.deliberation-search-input {
+  width: 250px !important;
+}

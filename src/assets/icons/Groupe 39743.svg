@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96">
+  <g id="Groupe_39743" data-name="Groupe 39743" transform="translate(-23.758 -24)">
+    <g id="badge" transform="translate(24 24)">
+      <rect id="surface" width="96" height="96" rx="48" transform="translate(-0.242)" fill="rgba(69,121,245,0.03)"/>
+      <g id="icon">
+        <rect id="frame" width="96" height="96" transform="translate(-0.242)" fill="none"/>
+      </g>
+    </g>
+    <path id="Icon_map-insurance-agency" data-name="Icon map-insurance-agency" d="M24.011,2.082.913,21.241H6.374V44.107h34.3V21.241h5.972Zm5.175,35.356H18.373L20.64,27.233a4.98,4.98,0,0,1-2.268-4.145,5.277,5.277,0,0,1,5.406-5.182,5.35,5.35,0,0,1,5.407,5.27,4.8,4.8,0,0,1-2.267,4.042Z" transform="translate(47.258 48.905)" fill="#4385F6"/>
+  </g>
+</svg>

@@ -1,0 +1,35 @@
+.rapports-annuels-box {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 7px;
+    opacity: 1;
+    width: 80%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    
+    margin: 50px auto;
+}
+
+.breadcrumb {
+    font-size: 20px;
+    background-color: rgb(43, 113, 211);
+    border-radius: 0;
+    padding: 10px;
+}
+
+.breadcrumb-item.active {
+    color: #FFBE00;
+    font-weight: bold;
+}
+
+.rapports-annuels-title {
+    font: normal normal bold 45px/47px Roboto;
+    letter-spacing: 0px;
+    color: #4385F6;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.rapports-annuels-row-box {
+width: 80%;
+margin: 30px auto;
+}

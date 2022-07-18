@@ -1,0 +1,43 @@
+.procedures-title {
+    text-align: center;
+    font: normal normal bold 30px/40px Roboto;
+    letter-spacing: 0px;
+    color: #4385F6;
+    opacity: 1;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+.breadcrumb {
+    font-size: 20px;
+    background-color: rgb(43, 113, 211);
+    border-radius: 0;
+    padding: 10px;
+}
+
+.breadcrumb-item.active {
+    color: #FFBE00;
+    font-weight: bold;
+}
+.procedures-desc {
+    text-align: justify;
+    font: normal normal bold 25px/30px Roboto;
+    letter-spacing: 0px;
+    /* color: #4385F6; */
+    opacity: 1;
+    margin-top: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.procedures-cards-container {
+width: 80%;
+margin-right: auto;
+margin-left: auto;
+margin-top: 30px;
+}
+
+@media only screen and (max-width:768px) {
+
+}
