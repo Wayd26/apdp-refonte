@@ -1,7 +1,7 @@
 .card-on-caroussel {
   width: 60%;
   max-width: 500px;
-  height: 181px;
+  height: 250px;
   background: #ffffffc7 0% 0% no-repeat padding-box;
   border-radius: 27px;
   margin-bottom: auto;
@@ -61,6 +61,7 @@
 
     }
     .card-on-caroussel {
+      height: 180px;
       width: 90%;
       margin-bottom: auto;
       margin-top: auto;
