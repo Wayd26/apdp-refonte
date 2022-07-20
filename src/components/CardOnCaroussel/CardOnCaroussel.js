@@ -9,7 +9,7 @@ const CardOnCaroussel = (props) => {
         <div className={'card-on-caroussel mx-auto'}>
 
             <p className={'card-on-caroussel-title'}>{title}</p>
-            <p className={'card-on-caroussel-description'}>{subtitle}</p>
+            {/* <p className={'card-on-caroussel-description'}>{subtitle}</p> */}
             <button className={'card-on-caroussel-button'}
                     onClick={() => navigate(`/actualites/${id}`)}>Lire plus</button>
         </div>
