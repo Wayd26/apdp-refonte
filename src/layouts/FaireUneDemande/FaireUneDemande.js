@@ -1,14 +1,23 @@
-import React from "react";
+import React, {useState, useEffect} from 'react';
 import FaireUneDemandeCard from "../../components/FaireUneDemandeCard/FaireUneDemandeCard";
-import ActualiteCarousel from "../../components/ActualiteCarousel/ActualiteCarousel";
 import "./FaireUneDemande.css";
-import dots from "../../assets/icons/dots.svg";
 import { useNavigate } from "react-router-dom";
+import {getAllFormTypes} from '../../http/http';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const FaireUneDemande = () => {
 
   const navigate = useNavigate();
+  const [demarches, setDemarches] = useState([]);
+
+  const loadFormTypes = async () => {
+    const resp = await getAllFormTypes();
+    setDemarches(resp.data?.data);
+  }
+
+  useEffect(() => {
+    loadFormTypes();
+  }, [])
 
   return (
     <div
@@ -28,20 +37,21 @@ const FaireUneDemande = () => {
       <div id="faire-une-demande" className="faire-une-demande">
         <div className="faire-une-demande-container">
           <p className="vos-demarches-text">Vos Demarches</p>
-
           <div className="faire-une-demande-cards-container row">
-            <div className="col-sm-4 col-xs-12">
-              <FaireUneDemandeCard
-                handleCardClicked={() => {
-                  navigate("/formulaire/formalite_prealable")
-                }}
-                title={"Formalités préalables "}
-                description={
-                  "Lorem ipsum dolor sit amet, lorem ipsum consectuar  lorem sadipscing elitr, sed diam nonumy eirmod tempor"
-                }
-              />
-            </div>
-            <div className="col-sm-4 col-xs-12">
+          {demarches && demarches.map((demarche) =>
+              <div className="col-sm-4 col-xs-12">
+                  <FaireUneDemandeCard
+                    handleCardClicked={() => {
+                      navigate(`/formulaire/${demarche.slug}`)
+                    }}
+                    title={demarche.name}
+                    description={
+                      "Lorem ipsum dolor sit amet, lorem ipsum consectuar  lorem sadipscing elitr, sed diam nonumy eirmod tempor"
+                    }
+                  />
+              </div>
+            )}
+            {/* <div className="col-sm-4 col-xs-12">
               <FaireUneDemandeCard
                 handleCardClicked={() => {
                   navigate("/formulaire/plainte")
@@ -84,8 +94,7 @@ const FaireUneDemande = () => {
                   "Loolor sit amet, lorem ipsum coay ipsum consetetur sadipscing elitr, sed diam nonumy eirmod tempor"
                 }
               />
-            </div>
-           
+            </div> */}
           </div>
         </div>
       </div>

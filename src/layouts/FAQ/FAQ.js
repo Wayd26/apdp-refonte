@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react';
 import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel'
 import FaqSection from '../../components/FaqSection/FaqSection'
 import "./FAQ.css";

@@ -1,11 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import CustomInput from '../../components/CustomInput/CustomInput';
-import form2 from './data1.json';
 import {Form, Button} from 'reactstrap';
-import { Stepper, Step } from 'react-form-stepper';
 import {ImSad, ImHappy} from "react-icons/im";
-import './Dynamique.css'
-import {getForm, submitFormSection} from '../../http/http';
+import './Dynamique.css';
+import {getForm, submitFormSection, getAllFormTypes} from '../../http/http';
 import { ToastContainer, toast } from 'react-toastify';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
@@ -158,11 +156,11 @@ export default function DynamiqueForm() {
             } else {
                 return (
                     <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
-                        <Breadcrumb>
+                        <Breadcrumb style={{ width: '100%' }}>
                             <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
                             <Breadcrumb.Item href="#">Vos démarches</Breadcrumb.Item>
                             <Breadcrumb.Item href="#">Faire ou modifier une demande</Breadcrumb.Item>
-                            <Breadcrumb.Item active>Formulaire</Breadcrumb.Item>
+                            <Breadcrumb.Item active>{formulaire.data.name}</Breadcrumb.Item>
                         </Breadcrumb>
                         <ToastContainer />
                         <Form className="form-style" onSubmit={handleSubmit}>
@@ -171,7 +169,7 @@ export default function DynamiqueForm() {
                                 {formulaire && formulaire.data.sections.map((section) => (
                                     <Step label={section.name} />    
                                 ))}</Stepper> */}
-                            <h2 style={{ marginBottom: '50px', fontSize: 'large' }}>FORMULAIRE</h2>
+                            <h2 style={{ marginBottom: '50px', fontSize: 'large' }}>{formulaire.data.sections[current]?.name}</h2>
             
                             <div className="row">
                                 {formulaire && formulaire.data.sections[current]?.questions.map((field) => (
@@ -215,11 +213,11 @@ export default function DynamiqueForm() {
         if (!final){
             return (
                 <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
-                    <Breadcrumb>
+                    <Breadcrumb style={{ width: '100%' }}>
                         <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
                         <Breadcrumb.Item href="#">Vos démarches</Breadcrumb.Item>
                         <Breadcrumb.Item href="#">Faire ou modifier une demande</Breadcrumb.Item>
-                        <Breadcrumb.Item active>Formulaire</Breadcrumb.Item>
+                        <Breadcrumb.Item active>{formulaire.data.name}</Breadcrumb.Item>
                     </Breadcrumb>
                     <ToastContainer />
                     <Form className="form-style" style={{alignItems: 'center'}}>
@@ -241,16 +239,16 @@ export default function DynamiqueForm() {
         } else {
             return (
                 <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
-                    <Breadcrumb>
+                    <Breadcrumb style={{ width: '100%' }}>
                         <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
                         <Breadcrumb.Item href="#">Vos démarches</Breadcrumb.Item>
                         <Breadcrumb.Item href="#">Faire ou modifier une demande</Breadcrumb.Item>
-                        <Breadcrumb.Item active>Formulaire</Breadcrumb.Item>
+                        <Breadcrumb.Item active>{formulaire.data.name}</Breadcrumb.Item>
                     </Breadcrumb>
                     <ToastContainer />
                     <Form className="form-style" style={{alignItems: 'center'}}>
                         
-                        <h2 style={{ fontSize: '130%' }}>FORMULAIRE</h2>
+                        <h2 style={{ fontSize: '130%' }}>{formulaire.data.name}</h2>
         
                         <div style={{ textAlign: 'center' }}>
                             <div style={{ marginTop: '25%', marginBottom: '25%', }}>

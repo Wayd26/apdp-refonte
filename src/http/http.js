@@ -107,6 +107,11 @@ export function getForm(type){
    return response.then(data => data).catch( error => error)
 }
 
+export function getAllFormTypes(){
+   const response = api.get(`/formulaire-types`)
+   return response.then(data => data).catch( error => error)
+}
+
 export function submitFormSection(formId, sectionId, data){
    var config = {
       method: 'post',
