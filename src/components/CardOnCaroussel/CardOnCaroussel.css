@@ -4,8 +4,8 @@
   height: 100px;
   background: #ffffffc7 0% 0% no-repeat padding-box;
   border-radius: 27px;
-  margin-bottom: auto;
-  margin-top: auto;
+  margin-bottom: 10% !important;
+  margin-top: auto !important;
   padding: 15px 50px;
   /* margin-top : 40px; */
   opacity: 0.5;
@@ -21,6 +21,9 @@
   /* margin-top: 30px; */
   margin-bottom: 17px;
   opacity: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-on-caroussel-description {
@@ -67,8 +70,8 @@
     .card-on-caroussel {
       height: 80px;
       width: 90%;
-      margin-bottom: auto;
       margin-top: auto;
+      margin-bottom: 40% !important;
       padding: 5px 15px;
       /* margin-top : 40px; */
       opacity: 0.5;

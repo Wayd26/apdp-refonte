@@ -6,7 +6,7 @@ const CardOnCaroussel = (props) => {
     const {id, title, subtitle} = props;
     const navigate = useNavigate();
     return (
-        <div className={'card-on-caroussel mx-auto'}>
+        <div className={'card-on-caroussel m-auto'}>
 
             <p className={'card-on-caroussel-title'}>{title}</p>
             {/* <p className={'card-on-caroussel-description'}>{subtitle}</p> */}
