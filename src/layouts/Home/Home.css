@@ -3,6 +3,14 @@
   /* margin-top: 50px; */
 }
 
+form.form-style .form-label{
+  margin-right: 10%;
+}
+
+form.form-style input{
+  max-width: 70% !important;
+}
+
 .breadcrumb {
   font-size: 20px;
   background-color: rgb(43, 113, 211);
