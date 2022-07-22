@@ -3,6 +3,8 @@ import "./RapportAnnuelRow.css"
 import { FiPlus } from "react-icons/fi"
 import { MdFileDownload } from "react-icons/md"
 import rapportImg from "../../assets/icons/document.svg"
+import pdfFile from "../../assets/images/pdf_file.jpeg"
+
 
 const RapportAnnuelRow = (props) => {
     const { period, description, fileUrl, title } = props;
@@ -25,8 +27,8 @@ const RapportAnnuelRow = (props) => {
                     </p>
                 </div> */}
                 <div className="d-flex justify-content-between" style={{ alignItems: 'center' }}>
-                    {/* <img src={rapportImg} className="rapports-annuels-row-details-image" /> */}
-                    <div style={{ backgroundImage: `url('${rapportImg}'`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', height: '100px' }} className="rapports-annuels-row-details-image">
+                    {/* <img src={pdfFile} className="rapports-annuels-row-details-image" /> */}
+                    <div style={{ backgroundImage: `url('${pdfFile}'`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', height: '100px' }} className="rapports-annuels-row-details-image">
 
                     </div>
                     <a href={fileUrl} download>

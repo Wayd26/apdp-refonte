@@ -4,6 +4,8 @@ import {MdFileDownload} from "react-icons/md";
 import "./ArreteRow.css";
 import image from  "../../assets/icons/document.svg"
 import { useHref } from 'react-router-dom';
+import pdfFile from "../../assets/images/pdf_file.jpeg"
+
 
 const ArreteRow = (props) => {
 
@@ -34,7 +36,7 @@ const ArreteRow = (props) => {
                     </p>
                 </div> */}
                 <div className="d-flex justify-content-between">
-                    <img src={image} className="arrete-row-details-image" />
+                    <img src={pdfFile} className="arrete-row-details-image" />
                     <a href={data.image_url} download>
                     <button className="arrete-row-details-button">
                         Télécharger   <MdFileDownload className="arrete-row-details-button-icon" />

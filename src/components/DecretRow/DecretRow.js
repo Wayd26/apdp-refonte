@@ -3,6 +3,7 @@ import {FiPlus} from "react-icons/fi";
 import {MdFileDownload} from "react-icons/md";
 import "./DecretRow.css";
 import decretImage from  "../../assets/icons/document.svg"
+import pdfFile from "../../assets/images/pdf_file.jpeg"
 
 const DecretRow = (props) => {
     const { label, description, fileUrl, decretImg } = props;
@@ -26,7 +27,7 @@ const DecretRow = (props) => {
                     </p>
                 </div> */}
                 <div className="d-flex justify-content-between">
-                    <img src={decretImage} className="decret-row-details-image" />
+                    <img src={pdfFile} className="decret-row-details-image" />
                     <a href={fileUrl} download>
                     <button className="arrete-row-details-button">
                         Télécharger   <MdFileDownload className="arrete-row-details-button-icon" />

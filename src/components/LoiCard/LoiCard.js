@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import "./LoiCard.css";
 import img_loi from "../../assets/icons/document.svg"
 import {useNavigate} from "react-router-dom"
+import pdfFile from "../../assets/images/pdf_file.jpeg"
+
 
 const LoiCard = (props) => {
 
@@ -15,7 +17,7 @@ const LoiCard = (props) => {
     }
     return (
         <div className="loi-card">
-            <img src={img_loi} className="loi-card-image"/>
+            <img src={pdfFile} className="loi-card-image"/>
             <p className="loi-card-title">{data.title}</p>
             <p className="loi-card-description">{data.sub_title}</p>
             <a href={data.image_url} download>
