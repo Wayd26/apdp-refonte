@@ -42,5 +42,5 @@
 }
 
 .deliberation-search-input {
-  width: 250px !important;
+  max-width: 550px !important;
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./GlobalResearch.css";
-import { Card, Button, Tab, Row, Nav, Form } from "react-bootstrap";
+import { Card, Button, Tab, Row, Nav, Form, InputGroup } from "react-bootstrap";
 import img5 from '../../assets/images/img5.jpg'
 import img8 from '../../assets/images/img8.png'
 import { GiInjustice } from 'react-icons/gi';
@@ -10,6 +10,7 @@ import { getAllArticles, getArticlesResearched, getATypeOfArticles } from '../..
 import Pagination from '../../components/Pagination/Pagination';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import { useNavigate } from 'react-router-dom';
+import { BiSearchAlt } from 'react-icons/bi';
 
 
 const GlobalResearch = () => {
@@ -79,7 +80,7 @@ const GlobalResearch = () => {
           <Breadcrumb.Item active>Décisions publiques</Breadcrumb.Item>
       </Breadcrumb> */}
       <div className={'deliberations-div'}>
-        <h2>Recherche Globale</h2>
+        <h3>Rechercher une information</h3>
 
         <Tab.Container id="top-tabs-example" defaultActiveKey="first">
           <Row>
@@ -94,8 +95,15 @@ const GlobalResearch = () => {
                 </Nav> */}
             </div>
             <Row>
-              <Form.Control value={searchText == "empty" ? "" : searchText} onChange={(e) => handleSearch(e)} type="text" placeholder="Rechercher..." className='deliberation-search-input' />
 
+              <InputGroup>
+              <Form.Control value={searchText == "empty" ? "" : searchText} onChange={(e) => handleSearch(e)} type="text" placeholder="Saisissez des mots ici..." className='deliberation-search-input' />
+        <InputGroup.Text>
+        
+                    <BiSearchAlt title='Rechercher globalement sur le site'  style={{ height: 25, width: 40, color: 'black' }} />
+        </InputGroup.Text>
+
+      </InputGroup>
               <Tab.Content>
                 <Tab.Pane eventKey="first">
                   {/* <h3 style={{ 'text-transform': 'uppercase', 'text-align': 'left', marginBottom: "30px"}}>DéLIBéRATIONS 2022 (nombre: 04)</h3> */}

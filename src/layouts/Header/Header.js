@@ -9,7 +9,7 @@ import {BASE_URL} from "../../constants/Constant";
 import code_numerique from "../../assets/documents/CODE_DU_NUMERIQUE_DU BENIN_EDITION 2019_ADN.pdf";
 import {getATypeOfArticles, logout} from '../../http/http';
 import { useNavigate } from 'react-router-dom';
-import { AiOutlineFileSearch } from 'react-icons/ai';
+import { BiSearchAlt } from 'react-icons/bi';
 
 
 
@@ -154,7 +154,7 @@ const Header = () => {
                     <div className="header-block-3">
                         <NavBar/>
                     </div>
-                    <AiOutlineFileSearch title='Rechercher une décision' onClick={searchDecisionsShortcut} style={{ height: 45, width: 40, color: 'white', cursor: 'pointer', position: 'relative', float: 'right', right: '80px', margin: '-50px', top: '-1px' }} />
+                    <BiSearchAlt title='Rechercher globalement sur le site' onClick={searchDecisionsShortcut} style={{ height: 45, width: 40, color: 'white', cursor: 'pointer', position: 'relative', float: 'right', right: '80px', margin: '-50px', top: '-1px' }} />
                 </div>
             </React.Fragment>
     )

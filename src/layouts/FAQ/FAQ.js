@@ -62,8 +62,8 @@ const FAQ = () => {
 
                 <div className="faq-input-container  flex-nowrap">
                     <select name='thematic' id="faq-thematic" className='w-100' style={{height: "100%", border: "none"}}>
-                        <option value="1">First</option>
-                        <option value="2">Second</option>
+                        {/* <option value="1"></option>  */}
+                        {/* <option value="2">Second</option> */}
                     </select>
                 </div>
 
