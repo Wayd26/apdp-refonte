@@ -28,7 +28,7 @@ const GlobalResearch = () => {
     console.log("ok ", selected + 1)
   }
   useEffect(() => {
-    if(searchText != "empty") {
+    if (searchText != "empty") {
       loadResultsData(1, searchText)
       console.log("Recherche data searchText changed", articlesResearched)
     } else {
@@ -37,7 +37,7 @@ const GlobalResearch = () => {
   }, [searchText])
 
   useEffect(() => {
-    if(searchText == "empty") {
+    if (searchText == "empty") {
 
       loadResultsData(pageNumber, "")
     } else {
@@ -49,7 +49,7 @@ const GlobalResearch = () => {
 
   const loadResultsData = async (page, text) => {
     const response = await getArticlesResearched(text, page)
-    if(response.response && response.response.status !== 200) {
+    if (response.response && response.response.status !== 200) {
       console.log("Error Searched", response.response)
     } else {
       console.log("Data Searched", response)
@@ -63,7 +63,7 @@ const GlobalResearch = () => {
 
   const handleSearch = (e) => {
     console.log(e.target.value)
-    if(e.target.value == "") {
+    if (e.target.value == "") {
       setSearchText("empty")
     } else {
       setSearchText(e.target.value)
@@ -96,14 +96,14 @@ const GlobalResearch = () => {
             </div>
             <Row>
 
-              <InputGroup>
-              <Form.Control value={searchText == "empty" ? "" : searchText} onChange={(e) => handleSearch(e)} type="text" placeholder="Saisissez des mots ici..." className='deliberation-search-input' />
-        <InputGroup.Text>
-        
-                    <BiSearchAlt title='Rechercher globalement sur le site'  style={{ height: 25, width: 40, color: 'black' }} />
-        </InputGroup.Text>
+              <InputGroup className='d-flex flex-nowrap'>
+                <Form.Control value={searchText == "empty" ? "" : searchText} onChange={(e) => handleSearch(e)} type="text" placeholder="Saisissez des mots ici..." className='deliberation-search-input' />
+                <InputGroup.Text>
 
-      </InputGroup>
+                  <BiSearchAlt title='Rechercher globalement sur le site' style={{ height: 25, width: 40, color: 'black' }} />
+                </InputGroup.Text>
+
+              </InputGroup>
               <Tab.Content>
                 <Tab.Pane eventKey="first">
                   {/* <h3 style={{ 'text-transform': 'uppercase', 'text-align': 'left', marginBottom: "30px"}}>DéLIBéRATIONS 2022 (nombre: 04)</h3> */}
@@ -117,7 +117,7 @@ const GlobalResearch = () => {
                               <div dangerouslySetInnerHTML={{ __html: (result?.content) }}></div>
                             </Card.Text>
                             {/* <a href={result.image_url} download> */}
-                              <Button variant="outline-primary" onClick={() => navigate(`/recherche-globale/${result.id}/${pageNumber}/${searchText}`)} style={{ 'float': 'right' }}> Lire plus</Button>
+                            <Button variant="outline-primary" onClick={() => navigate(`/recherche-globale/${result.id}/${pageNumber}/${searchText}`)} style={{ 'float': 'right' }}> Lire plus</Button>
                             {/* </a> */}
                           </Card.Body>
                         </Card>
@@ -126,11 +126,11 @@ const GlobalResearch = () => {
 
 
                   </div>
-                    {articlesResearched && articlesResearched?.length !== 0 && <Pagination
-                      changePage={changePage}
-                      pageCount={totalPage}
-                      perPage={perPage}
-                    />}
+                  {articlesResearched && articlesResearched?.length !== 0 && <Pagination
+                    changePage={changePage}
+                    pageCount={totalPage}
+                    perPage={perPage}
+                  />}
                 </Tab.Pane>
 
               </Tab.Content>

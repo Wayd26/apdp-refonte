@@ -6,9 +6,9 @@
 }
 
 .deliberations-div {
-  margin-right: 100px;
-  margin-left: 100px;
-  padding-bottom: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 10px;
 }
 
 .breadcrumb {
