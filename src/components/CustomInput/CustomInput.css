@@ -5,6 +5,17 @@
     font-size: 14px !important;
 }
 
+@media only screen and (max-width: 760px) {
+
+    .d-flex.flex-row.justify-content-left.align-items-left.mb-3{
+        flex-direction: column !important;
+    }
+    
+    form.form-style input {
+        max-width: 100% !important;
+    }
+}
+
 /* .form-control {
     margin: 0 10px;
     width: 80%;
