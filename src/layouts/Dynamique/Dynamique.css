@@ -29,4 +29,18 @@
     .form-style{
         min-width: 60% !important;
     }
-  }
+}
+
+@media only screen and (max-width: 575px) {
+    #button-previous button{
+        float: none !important;
+    }
+
+    #button-next button{
+        float: none !important;
+    }
+
+    #button-submit button{
+        float: none !important;
+    }
+}

@@ -45,9 +45,7 @@ const FaireUneDemande = () => {
                       navigate(`/formulaire/${demarche.slug}`)
                     }}
                     title={demarche.name}
-                    description={
-                      "Lorem ipsum dolor sit amet, lorem ipsum consectuar  lorem sadipscing elitr, sed diam nonumy eirmod tempor"
-                    }
+                    description={""}
                   />
               </div>
             )}

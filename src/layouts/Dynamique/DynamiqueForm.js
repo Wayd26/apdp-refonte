@@ -179,20 +179,19 @@ export default function DynamiqueForm() {
                                     ))
                                 }
                             </div>
-                            <div className="row">
-                                <div className="col-6">
-                                    {current > 0 && (
+                            <div>
+                                {current > 0 && (<div id='button-previous'>
+                                    
                                     <Button className="auth-form-btn" style={{ float: 'left' }} onClick={(e) => prev(e)}>
                                         Précédent
-                                    </Button>)}
-                                </div>
-                                <div className="col-6">
-                                    { formulaire && formulaire.data.sections[current].id == formulaire.data.sections[formulaire.data.sections.length - 1].id ? <Button className="auth-form-btn" type="submit" onClick={(e) => setFinal(true)}>
-                                        Valider
-                                    </Button>:<Button className="auth-form-btn" style={{ float: 'right'}} type="submit" onClick={(e) => setFinal(false)}>
-                                        Suivant
-                                    </Button>}
-                                </div>
+                                    </Button>
+                                </div>)}
+                                
+                                { formulaire && formulaire.data.sections[current].id == formulaire.data.sections[formulaire.data.sections.length - 1].id ?<div id='button-submit'> <Button className="auth-form-btn" type="submit" style={{ float: 'right' }} onClick={(e) => setFinal(true)}>
+                                    Valider
+                                </Button></div>:<div id='button-next'><Button className="auth-form-btn" style={{ float: 'right'}} type="submit" onClick={(e) => setFinal(false)}>
+                                    Suivant
+                                </Button></div>}
                             </div>
                             {/* <div style={{width: "70%"}} className="row mx-auto mb-3">
             

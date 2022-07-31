@@ -109,13 +109,9 @@ const SignIn = () => {
                     </div>
                     <div className={"auth-form-card col"}>
                         <p className={"auth-title"}>{connexion === true ? "Connexion" : "Inscription"}</p>
-                        <div className={"text-center row d-flex justify-content-around mb-3"}>
-                            {/* <span className={"auth-social-btn"}> */}
+                        {/* <div className={"text-center row d-flex justify-content-around mb-3"}>
                             <img src={facebook} className={"auth-social-btn"}/>
-                            {/* </span> */}
-                            {/* <span className={"auth-social-btn"}> */}
                             <img src={gmail} className={"auth-social-btn"}/>
-                            {/* </span> */}
                         </div>
                         <div className={"row d-flex flex-nowrap"}>
                             <div className={"col"}>
@@ -127,7 +123,7 @@ const SignIn = () => {
                             <div className={"col"}>
                             <hr></hr>
                             </div>
-                        </div>
+                        </div> */}
 
                         { connexion === false ? <div className={"auth-form-input-container"}>
                             <FaUser className={"auth-form-input-icon"}/>
