@@ -33,3 +33,22 @@
     width: 90%;
     margin: 0 auto;
 }
+
+.espace-dpo-card:hover {
+    /* width: 333px; */
+   cursor: pointer;
+   background-color: #4385F6;
+}
+
+.espace-dpo-card:active {
+    background-color: #4385F6;
+}
+
+.espace-dpo-card-label:hover {
+    color: #FFFFFF;
+}
+
+.espace-dpo-content {
+    width: 80%;
+    margin: auto;
+}
