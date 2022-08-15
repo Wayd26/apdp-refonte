@@ -161,7 +161,7 @@ const Home = () => {
                 <ShortcutCard className="mx-auto" ind={2} label={"Marchés publics"} link={"appels-d-offres"}/>
                 {/* </div> */}
                 {/* <div className={"col-sm text-center"}>  */}
-                <ShortcutCard className="mx-auto" ind={2} label={"Espace RT"} link={""}/>
+                <ShortcutCard className="mx-auto" ind={2} label={"Espace RT"} link={"espace-rt"}/>
                 {/* </div> */}
                 {/* <div className={"col-sm text-center"}>  */}
                 <ShortcutCard className="mx-auto" ind={2} label={"Espace DPO"} link={"espace-dpo"}/>

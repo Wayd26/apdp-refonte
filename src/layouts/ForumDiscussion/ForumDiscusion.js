@@ -38,10 +38,9 @@ import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
             <div className="forum-discussion-box">
                 <p className="forum-discussion-title">FORUM DE DISCUSSION</p>
-                <p className="forum-discussion-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, </p>
-            <ForumDiscussionRow />
-            <ForumDiscussionRow />
-            <ForumDiscussionRow />
+                {/* <p className="forum-discussion-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, </p> */}
+            {discussions.length != 0 ? discussions?.map((discussion, index) => <ForumDiscussionRow key={"fd"+index} data={discussion} />) : <h2>Aucune Discussion</h2> }
+            
             </div>
 
 

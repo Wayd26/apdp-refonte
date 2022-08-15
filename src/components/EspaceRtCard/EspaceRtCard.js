@@ -1,13 +1,20 @@
 import React from 'react';
 import "./EspaceRtCard.css";
-import {HiArrowCircleRight} from "react-icons/hi"
+import {FiDownload} from "react-icons/fi";
+import pdfFile from "../../assets/images/pdf_file.jpeg";
+import excelFile from "../../assets/icons/excel.png";
+
+
 
 const EspaceRtCard = (props) => {
 
-    const {label} = props;
+    const {label, file} = props;
   return <div className="espace-rt-card">
+            <img src={excelFile} className="espace-rt-card-image"/>
             <p className="espace-rt-card-label">{label}</p>
-            <button className="espace-rt-card-button">Accéder <HiArrowCircleRight className="espace-rt-card-button-icon" /></button>
+            <a href={file} download>
+              <button className="espace-rt-card-button">Télécharger <FiDownload className="espace-rt-card-button-icon" /></button>
+              </a>
         </div>;
 };
 

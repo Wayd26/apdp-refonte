@@ -9,6 +9,7 @@ import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarou
 import { getATypeOfArticles } from '../../http/http';
 import Pagination from '../../components/Pagination/Pagination';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import pdfFile from "../../assets/images/pdf_file.jpeg"
 
 
 const Deliberations = () => {
@@ -61,10 +62,10 @@ const Deliberations = () => {
     <div style={{ background: '#E2E2E2', paddingTop: "40px", paddingBottom: "40px" }}>
       {/* <ActualiteCarousel/> */}
       <Breadcrumb>
-          <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
-          <Breadcrumb.Item href="#">Documentation</Breadcrumb.Item>
-          <Breadcrumb.Item href="#">Textes Nationaux</Breadcrumb.Item>
-          <Breadcrumb.Item active>Décisions publiques</Breadcrumb.Item>
+        <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+        <Breadcrumb.Item href="#">Documentation</Breadcrumb.Item>
+        <Breadcrumb.Item href="#">Textes Nationaux</Breadcrumb.Item>
+        <Breadcrumb.Item active>Décisions publiques</Breadcrumb.Item>
       </Breadcrumb>
       <div className={'deliberations-div'}>
         <h2>DÉCISIONS PUBLIQUES</h2>
@@ -93,10 +94,11 @@ const Deliberations = () => {
                         return q.title?.toLowerCase()?.indexOf(searchText?.toLowerCase()) > -1
                       })
                       .map((deliberation, index) =>
-                        <Card key={index + "w"} style={{ 'text-align': 'left', }}>
-                          <Card.Body>
+                        <Card key={index + "w"} className="deliberation-card mx-auto" style={{ 'text-align': 'left' }}>
+                          <Card.Body style={{ with: '350px' }}>
+                            <img src={pdfFile} className="deliberation-card-image" />
                             <Card.Title style={{ 'font-weight': 'bold', }}>{deliberation.title}</Card.Title>
-                            <Card.Text style={{ 'margin-top': '30px', 'margin-bottom': '30px' }}>
+                            <Card.Text style={{ 'margin-top': '3px', 'margin-bottom': '3px' }}>
                               <div dangerouslySetInnerHTML={{ __html: (deliberation?.content) }}></div>
                             </Card.Text>
                             <a href={deliberation.image_url} download>
@@ -109,11 +111,11 @@ const Deliberations = () => {
 
 
                   </div>
-                    {deliberations && deliberations?.length !== 0 && <Pagination
-                      changePage={changePage}
-                      pageCount={totalPage}
-                      perPage={perPage}
-                    />}
+                  {deliberations && deliberations?.length !== 0 && <Pagination
+                    changePage={changePage}
+                    pageCount={totalPage}
+                    perPage={perPage}
+                  />}
                 </Tab.Pane>
 
               </Tab.Content>

@@ -3,36 +3,33 @@ import EspaceRtCard from '../../components/EspaceRtCard/EspaceRtCard';
 import "./EspaceRT.css";
 import {getATypeOfArticles} from '../../http/http';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import videosurveillance from '../../assets/documents/Modele-de-Registre-des-activites-de-Videosurveillance.xls';
+import traitement from '../../assets/documents/Registre-des-activites-de-traitement.xls';
 
 const EspaceRT = () => {
-    const [communiques, setCommuniques] = useState();
+    const [espaceRt, setEspaceRt] = useState();
 
-    const loadCommuniquesData = async () => {
-        const resp = await getATypeOfArticles("communiques")
-        if(resp.response && resp.response.status !== 200){
-            console.log("error ",resp.response)
-        } else {
-            console.log("data ",resp.data.data)
-            setCommuniques(resp.data)
-        }
-    }
+    // const loadCommuniquesData = async () => {
+    //     const resp = await getATypeOfArticles("communiques")
+    //     if(resp.response && resp.response.status !== 200){
+    //         console.log("error ",resp.response)
+    //     } else {
+    //         console.log("data ",resp.data.data)
+    //         setCommuniques(resp.data)
+    //     }
+    // }
     
     useEffect(() => {
-        loadCommuniquesData()        
+        // loadCommuniquesData()        
     }, [])
     const espaceRtData = [
-        {id: 0,
-        label: "GROUPE CIC"},
         {id: 1,
-        label: "PARTICULIERS"},
+        label: "Modèle de registre des activités de Videosurveillance",
+        file: videosurveillance
+    },
         {id: 2,
-        label: "PROFESSIONNELS"},
-        {id: 3,
-        label: "ENTREPRISES"},
-        {id: 4,
-        label: "CORPORATE"},
-        {id: 5,
-        label: "ASSOCIATIONS"}
+        label: "Registre des activites de traitement",
+        file: traitement}
     ]
 
   return <div style={{backgroundColor: "#E2E2E2", paddingTop: "40px", paddingBottom: "40px"}}>
@@ -42,7 +39,7 @@ const EspaceRT = () => {
           {espaceRtData.map((item, index) => (
 
               <div key={index} className="col-sm-4 col-xs-12">
-              <EspaceRtCard label={item.label} />
+              <EspaceRtCard label={item.label} file={item.file} />
               </div>
           ))}
           </div>
