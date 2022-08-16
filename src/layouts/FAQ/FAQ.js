@@ -8,11 +8,14 @@ import { BiSearchAlt } from "react-icons/bi"
 import { getATypeOfArticles, getFaq } from '../../http/http';
 import FaqElement from '../../components/FaqElement/FaqElement';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import { ImTelegram } from 'react-icons/im';
 
 const FAQ = () => {
 
     const [faq, setFaq] = useState([]);
     const [searchText, setSearchText] = useState("");
+    const [thematics, setThematics] = useState([]);
+    const [thematicSelected, setThematicSelected] = useState("")
 
     const handleSearch = (e) => {
         console.log(e.target.value)
@@ -20,22 +23,38 @@ const FAQ = () => {
     }
 
     const loadFaqData = async () => {
-        const resp = await getFaq("")
+        let thematicsArray = [];
+        let uniqueThematics = [];
+        const resp = await getFaq(thematicSelected)
         if (resp.response && resp.response.status !== 200) {
             console.log("error ", resp.response)
         } else {
+
             console.log("data faq", resp.data)
             setFaq(resp.data.data)
+            if(resp.data?.data?.length !== []) {
+               
+                resp.data?.data?.map((item, index) => 
+                    thematicsArray.push(item.thematic.toUpperCase())
+                    // thematicsArray.push({"id": index, "label": item.thematic})
+                    // console.log(index, "===> ", item)
+                )
+            }
+            console.log("thematicsArray ", thematicsArray)
         }
+        if(thematics.length == 0){let temp = [...new Set(thematicsArray)];
+        temp.map((item, index) => 
+        uniqueThematics.push({"id": index, "label": item}))
+        setThematics(uniqueThematics)}
     }
 
     useEffect(() => {
         loadFaqData()
-    }, [])
+    }, [thematicSelected])
 
     useEffect(() => {
-        console.log(faq)
-    }, [faq])
+        console.log("thematics ", thematics)
+    }, [thematics])
 
     return (
         <div style={{ background: "#F7F7F7" }}>
@@ -61,9 +80,10 @@ const FAQ = () => {
                 </div>
 
                 <div className="faq-input-container  flex-nowrap">
-                    <select name='thematic' id="faq-thematic" className='w-100' style={{height: "100%", border: "none"}}>
-                        {/* <option value="1"></option>  */}
-                        {/* <option value="2">Second</option> */}
+                    <select onChange={(e) => setThematicSelected(e.target.value)} name='thematic' id="faq-thematic" className='w-100 thematic-select' style={{height: "100%", border: "none"}}>
+                        <option value="" disabled="disabled" selected="true">Choisir Thématique</option>
+                        <option value="">Tous</option> 
+                       {thematics.map(item => <option key={item.id} value={item.label}>{item.label}</option>)}
                     </select>
                 </div>
 
