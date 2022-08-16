@@ -20,11 +20,11 @@ const Vidéothèque = () => {
   }
   useEffect(() => {
     loadVideothequeData();
-      console.log("Arretes data ", videotheque)
+      console.log("videotheque data ", videotheque)
   }, [pageNumber])
 
     const loadVideothequeData = async () => {
-        const resp = await getATypeOfArticles("videotheque", pageNumber)
+        const resp = await getATypeOfArticles("videotheques", pageNumber)
         if(resp.response && resp.response.status !== 200){
             console.log("error ",resp.response)
         } else {

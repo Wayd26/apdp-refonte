@@ -65,7 +65,7 @@ const Activites = () => {
 
 
     return (
-        <div className={"activities"} id={"activities"} style={{ backgroundColor: "#E2E2E2", paddingTop: "40px", paddingBottom: "40px" }}>
+        <div className={"activities"} id={"activities"} style={{ backgroundColor: "#E2E2E2"}}>
             <div className={"activities"} id={"activities"} style={{ backgroundColor: "#E2E2E2", paddingTop: "40px", paddingBottom: "40px" }}>
                 <Breadcrumb>
                     <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
