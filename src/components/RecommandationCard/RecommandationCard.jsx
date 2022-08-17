@@ -1,5 +1,7 @@
 import React from 'react';
-import "./RecommandationCard.css"
+import "./RecommandationCard.css";
+import {FiDownload} from "react-icons/fi";
+
 
 const RecommandationCard = (props) => {
     const {data} = props;
@@ -13,9 +15,9 @@ const RecommandationCard = (props) => {
                 dangerouslySetInnerHTML={{__html: (data && data.sub_title)}}></p>
             {/* <div dangerouslySetInnerHTML={{__html: (activityData && activityData[0]?.content)}}></div> */}
 
-            {/* <a href={data.image_url} download>
-            <button className="recommandation-card-button">Télécharger</button>
-            </a> */}
+            <a href={data && data[0]?.document_url[0]} download>
+              <button className="espace-rt-card-button">Télécharger <FiDownload className="espace-rt-card-button-icon" /></button>
+              </a>
         </div>
   )
 }

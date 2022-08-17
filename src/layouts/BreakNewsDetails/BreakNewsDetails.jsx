@@ -4,6 +4,8 @@ import { Card, Button } from 'react-bootstrap';
 import { getATypeOfArticles } from '../../http/http';
 import './BreakNewsDetails.css'
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import {FiDownload} from "react-icons/fi";
+
 
 const BreakNewsDetails = (props) => {
 
@@ -42,17 +44,19 @@ const BreakNewsDetails = (props) => {
             <Breadcrumb.Item active>Breaknews</Breadcrumb.Item>
         </Breadcrumb>    
         <div style={{background: '#FFF'}}>
-        <h2 style={{ 'color': '#4385F6', 'padding-top':'70px' }}>{breaknewsData && breaknewsData[0].title}</h2>
-        <Card className={'law-card'}>
-         <Card.Body>
+        <h2 style={{ 'color': '#4385F6', 'padding-top':'30px', marginBottom: '30px' }}>{breaknewsData && breaknewsData[0].title}</h2>
+        <Card className={'breaknews-card mx-auto'}>
+         <Card.Body className='breaknew-card-body'>
           
-            <Card.Img src={breaknewsData && breaknewsData[0]?.image_url} />
-            <Card.Text>
+            <Card.Img className='breaknew-card-img' src={breaknewsData && breaknewsData[0]?.image_url} />
+            <Card.Text className='breaknew-card-text'>
              <div dangerouslySetInnerHTML={{__html: (breaknewsData && breaknewsData[0]?.content)}}></div>
-            {/* <Button variant="primary">Télécharger(Version française)</Button>
-            <Button variant="warning">Télécharger(Version anglaise)</Button> */}
+            {/* <Button variant="primary">Télécharger(Version française)</Button>*/}
             </Card.Text>
            
+            <a href={breaknewsData && breaknewsData[0]?.document_url[0]} download>
+              <button className="espace-rt-card-button">Télécharger <FiDownload className="espace-rt-card-button-icon" /></button>
+              </a> 
           </Card.Body> 
         </Card> 
 

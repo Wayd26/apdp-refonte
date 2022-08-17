@@ -10,6 +10,8 @@ import imgCard6 from "../../assets/images/img6.jpg";
 import {useParams} from "react-router-dom";
 import {getATypeOfArticles} from '../../http/http';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import pdfFile from "../../assets/images/pdf_file.jpeg";
+import {FiDownload} from "react-icons/fi";
 
 
 const DetailsActivite = () => {
@@ -63,59 +65,15 @@ const DetailsActivite = () => {
             <div dangerouslySetInnerHTML={{__html: (activityData && activityData[0]?.content)}}></div>
                 
                 </p>
+                <a href={activityData && activityData[0]?.document_url[0]} download>
+              <button className="espace-rt-card-button">Télécharger <FiDownload className="espace-rt-card-button-icon" /></button>
+              </a>
             
         </div>
-           {/* End Details activity card */}
             
         </div>
 
-        {/* <div className="details-activities-others-container">
-            <p className="popular-activities-title">Activités Populaires</p>
-            <hr className="popular-activities-hr"></hr>
-
-            <div className="row my-3">
-                <div className="col-4">
-                    <img src={img5} className="popular-activities-img"/>
-                </div>
-                <div className="col-8">
-                    <p className="popular-activities-desc">Eirmod tempor invidunt ut lab ore et dolore magna consetetur sadipscing elitr aliquyam</p>
-                </div>
-            </div>
-            <div className="row my-3">
-                <div className="col-4">
-                    <img src={img5} className="popular-activities-img"/>
-                </div>
-                <div className="col-8">
-                    <p className="popular-activities-desc">Eirmod tempor invidunt ut lab ore et dolore magna consetetur sadipscing elitr aliquyam</p>
-                </div>
-            </div>
-            <div className="row my-3">
-                <div className="col-4">
-                    <img src={img5} className="popular-activities-img"/>
-                </div>
-                <div className="col-8">
-                    <p className="popular-activities-desc">Eirmod tempor invidunt ut lab ore et dolore magna consetetur sadipscing elitr aliquyam</p>
-                </div>
-            </div>
-            <div className="row my-3">
-                <div className="col-4">
-                    <img src={img5} className="popular-activities-img"/>
-                </div>
-                <div className="col-8">
-                    <p className="popular-activities-desc">Eirmod tempor invidunt ut lab ore et dolore magna consetetur sadipscing elitr aliquyam</p>
-                </div>
-            </div>
-
-          *
-            <p className="categories-title">Catégories</p>
-            <hr className="categories-hr"></hr>
-            <p className="categories-items">Lorem ipsum(13)</p>
-            <p className="categories-items">Lorem ipsum(5)</p>
-            <p className="categories-items">Lorem ipsum(8)</p>
-            <p className="categories-items">Lorem ipsum(11)</p>
-            <p className="categories-items">Lorem ipsum(7)</p>
-           
-        </div> */}
+       
        </div>
 
     </div>

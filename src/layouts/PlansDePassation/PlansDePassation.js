@@ -34,7 +34,7 @@ const PlansDePassation = () => {
         if(resp.response && resp.response.status !== 200){
             console.log("error ",resp.response)
         } else {
-            console.log("data ",resp.data.data)
+            console.log("data plans de passations",resp.data.data)
             const perPageValue = resp?.data?.meta?.per_page
             setPerPage(perPageValue)
             const total = resp?.data?.meta?.total;
@@ -49,14 +49,14 @@ const PlansDePassation = () => {
         <div className={"inheritance-plan"} id={"inheritance-plan"}>
             
             <div style={{ display:'flex', alignItems:'center', flexDirection:'column' }}>
-                <h4 style={{color: 'white', marginTop: '100px', marginBottom: '0px', backgroundColor: '#4385F6', width: '98%', padding: '20px',}}>PLANS DE PASSATION</h4>
+                <h4 style={{color: 'white', marginTop: '20px', marginBottom: '0px', backgroundColor: '#4385F6', width: '98%', padding: '20px',}}>PLANS DE PASSATION</h4>
                 {/* inheritance-plan list 1 */}
                 <div className={"inheritance-plan-card-list row text-align left"}>
                     <Card className={"inheritance-plan-card col-md-6 col-lg-4 col-xl-4"}>
                         <Card.Body>
-                        <div className={"inheritance-plan-card-img rounded-circle"} id={"inheritance-plan-card-img rounded-circle"}>
+                        {/* <div className={"inheritance-plan-card-img rounded-circle"} id={"inheritance-plan-card-img rounded-circle"}>
                             <FaRegFileExcel style={{fontSize: '150px', position: 'relative', top: '20px', color: 'green', }}/>
-                        </div>
+                        </div> */}
                             <Card.Title style={{ textAlign: 'center', fontWeight: 'bold' }}>PLAN PREVISIONNEL DE PASSATION DES MARCHÉS PUBLICS</Card.Title>
                             <Card.Text style={{textAlign: 'center', fontSize: '10px', color: '#2E2E2E', fontWeight: 'normal', margin: '20px'}}>
                             Marché de fournitures, travaux, services courants et prestations intellectuelles
@@ -71,11 +71,11 @@ const PlansDePassation = () => {
 
                    
                 </div>
-                {plansDePassation && plansDePassation?.length !== 0 &&   <Pagination
+                {/* {plansDePassation && plansDePassation?.length !== 0 &&   <Pagination
                 changePage={changePage}
                 pageCount={totalPage}
                 perPage={perPage}
-            />} 
+            />}  */}
             </div>
         </div>
     )

@@ -39,7 +39,7 @@ const Evenements = () => {
         if (resp.response && resp.response.status !== 200) {
             console.log("data error ", resp.response)
         } else {
-            // console.log("data data ", resp.data.data)
+            console.log("data data ", resp.data.data)
             const perPageValue = resp?.data?.meta?.per_page
             setPerPage(perPageValue)
             const total = resp?.data?.meta?.total;
@@ -74,6 +74,7 @@ const Evenements = () => {
                                 eventSubTitle={evenement.sub_title}
                                 eventContent={evenement.content}
                                 eventDate={evenement.created_at}
+                                eventDoc={evenement.document_url[0]}
                                 moreClicked={() => handleMoreClicked(evenement.id)} />
                         )
                     }

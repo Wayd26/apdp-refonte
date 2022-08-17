@@ -83,6 +83,7 @@ const Communiques = () => {
                     )
                     }
                 </div>
+                <br />
                 {communiques && communiques?.length !== 0 && <Pagination
                     changePage={changePage}
                     pageCount={totalPage}

@@ -9,3 +9,31 @@
     color: #FFBE00;
     font-weight: bold;
 }
+
+.breaknews-card {
+    width: 300px;
+    height: 350px;
+    margin-bottom: 50px;
+
+}
+
+.breaknews-card .card-image {
+    width: 40%;
+    margin: auto;
+    height: 100px !important;
+}
+
+.breaknew-card-body {
+    height: 130px !important;
+}
+
+.breaknew-card-img {
+    height: 150px;
+    width: 75%;
+}
+
+.breaknew-card-text {
+    height: 130px;
+    width: 85%;
+    overflow-y: auto;
+}
