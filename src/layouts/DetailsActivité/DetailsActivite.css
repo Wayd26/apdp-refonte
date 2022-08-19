@@ -114,6 +114,7 @@
 
 .activity-card-img {
    width: 100%;
+   max-width: 250px;
    height: 250px;
    margin-bottom: 20px;
 

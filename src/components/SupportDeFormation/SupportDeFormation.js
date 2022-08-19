@@ -1,27 +1,54 @@
-import React from 'react'
+import React from 'react';
+import './SupportDeFormation.css'
 
 const SupportDeFormation = () => {
-    const livreRow = () => {
-        (<p className='row' style={{ border: '2px solid red' }}>
-            <div className='col-sm-4 col-xs-12'>Loi cadre de protection des données</div>
-            <div className='col-sm-4 col-xs-12'>John DOE</div>
-            <div className='col-sm-4 col-xs-12'><span>Accéder</span></div>
-        </p>)
-    } 
-    const videoRow = () => {
-
-    }
-
+    
     return (
         <div>
-            <h4 className='text-left'>Livres</h4>
-            {[0, 1, 2].map((item) =>
+            <h5 className='text-center mb-3'>Livres</h5>
             
-                livreRow
-            
-            )}
+            <table className='custom-table'>
+                <thead className="">
+                    <tr className='table-row'>
+                        <th>Nom du livre</th>
+                        <th>auteur      </th>
+                        <th>Action      </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr className='table-row'>
+                        <td>Communication sur la confidentialité.</td>
+                        <td>John DOE</td>
+                        <td><button className='table-button'>Accéder</button></td>
+                    </tr>
+                    <tr className='table-row'>
+                        <td>Communication sur le droit à l'image.</td>
+                        <td>Jane DOE</td>
+                        <td><button className='table-button'>Accéder</button></td>
+                    </tr>
+                </tbody>
+            </table>
             <br />
-            <h4 className='text-left'>Vidéos</h4>
+            <h5 className='text-center mb-3'>Vidéos</h5>
+            <table className='custom-table'>
+                <thead className="">
+                    <tr>
+                        <th>Nom de la formation</th>
+                        
+                        <th>Action      </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Communication sur la confidentialité.</td>
+                        <td><button className='table-button'>Lire</button></td>
+                    </tr>
+                    <tr>
+                        <td>Communication sur le droit à l'image.</td>
+                        <td><button className='table-button'>Lire</button></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     )
 }

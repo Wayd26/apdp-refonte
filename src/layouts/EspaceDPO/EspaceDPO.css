@@ -32,15 +32,16 @@
 .espace-dpo-cards-container {
     width: 90%;
     margin: 0 auto;
+    margin-bottom: 25px;
 }
 
-.espace-dpo-card:hover {
-    /* width: 333px; */
-   cursor: pointer;
+.espace-dpo-section-button:hover {
+    
    background-color: #4385F6;
+   color: #fff;
 }
 
-.espace-dpo-card:active {
+.espace-dpo-section-button:active {
     background-color: #4385F6;
 }
 
@@ -51,4 +52,16 @@
 .espace-dpo-content {
     width: 80%;
     margin: auto;
+}
+
+.espace-dpo-section-button {
+    cursor: pointer;
+height: 40px;
+border-radius: 8px;
+outline: 0;
+border: 1px solid #fff;
+}
+
+.activeSection {
+    background-color: #FFC03A;      
 }

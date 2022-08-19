@@ -80,7 +80,7 @@
     width: 70%;
     margin-left: auto;
     margin-right: auto;
-  }
+}
 
 
 .releases-img {
@@ -97,7 +97,7 @@
     margin-left: auto !important;
     margin-right: auto !important;
     margin-bottom: 100px;
-    width: 60% ;
+    width: 60%;
     max-width: 600px !important;
     display: flex;
     flex-direction: row;
@@ -112,7 +112,7 @@
     /* background-image: url('../../assets/images/img8.png'); */
     background-repeat: no-repeat;
     background-size: cover;
-    width: 300px;
+    width: 100%;
     height: 300px;
     border-radius: 10px 0px 0px 10px;
     -webkit-border-radius: 10px 0px 0px 10px;
@@ -130,22 +130,23 @@
 }
 
 .release-card-title {
-    font-size: 42px;
+    font-size: 22px;
     font-family: Roboto;
     font-weight: 600;
-    margin-bottom: 33px;
+    margin-bottom: 15px;
     margin-top: 30px;
     color: #000000;
     text-align: left;
 }
 
 .release-card-subtitle {
-    display: block;
-    width: 80ch;
-    overflow: hidden;
-    white-space: nowrap;
+    display: flex;
+    /* width: 15ch; */
+    overflow-y: auto;
+    height: 150px;
+    flex-wrap: wrap;
     text-overflow: ellipsis;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
 }
 
 .release-card-link {
@@ -185,7 +186,7 @@
 }
 
 .releases-card-text-title-for-presentation {
-    font: "normal normal bold 63px/94px Roboto"; 
+    font: "normal normal bold 63px/94px Roboto";
     letter-spacing: '0px';
     color: '#000000';
     opacity: '1';
@@ -193,16 +194,17 @@
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
-   
+
 
     .page-title {
-      font: normal normal bold 23px/25px Roboto;
-      padding: 15px 0px 10px 0px;
+        font: normal normal bold 23px/25px Roboto;
+        padding: 15px 0px 10px 0px;
     }
+
     .page-subtitle {
-      font: normal normal normal 14px/22px Roboto;
+        font: normal normal normal 14px/22px Roboto;
     }
-    
+
 
     .releases-img {
         width: 100px;
@@ -218,7 +220,7 @@
         letter-spacing: 0px;
         color: #000000;
         opacity: 1;
-      }
+    }
 
     .releases-card {
         margin-left: 12px;
@@ -243,10 +245,10 @@
     }
 
     .release-card-title {
-        font-size: 15px;
+        font-size: 13px;
         font-family: Roboto;
         font-weight: 600;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         margin-top: 20px;
         color: #000000;
         text-align: left;
@@ -256,17 +258,18 @@
         /* background-image: url('../../assets/images/img8.png'); */
         background-repeat: no-repeat;
         background-size: cover;
-        width: 300px;
+        width: 100%;
         height: 200px;
     }
 
     .release-card-subtitle {
-        display: block;
-        width: 15ch;
-        overflow: hidden;
-        white-space: nowrap;
+        display: flex;
+        /* width: 15ch; */
+        overflow-y: auto;
+        height: 150px;
+        flex-wrap: wrap;
         text-overflow: ellipsis;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
 
     .release-card-link {
@@ -322,19 +325,20 @@
         height: 300px;
     }
 
-  }
+}
 
 @media only screen and (max-width: 810px) {
 
     .page-title {
-      font: normal normal bold 28px/40px Roboto;
-      padding: 15px 0px 10px 0px;
-    }
-    .page-subtitle {
-      font: normal normal normal 14px/22px Roboto;
+        font: normal normal bold 28px/40px Roboto;
+        padding: 15px 0px 10px 0px;
     }
 
-    
+    .page-subtitle {
+        font: normal normal normal 14px/22px Roboto;
+    }
+
+
 
     .releases-img {
         width: 100px;
@@ -350,7 +354,7 @@
         letter-spacing: 0px;
         color: #000000;
         opacity: 1;
-      }
+    }
 
     .releases-card {
         margin-left: 12px;
@@ -375,10 +379,10 @@
     }
 
     .release-card-title {
-        font-size: 15px;
+        font-size: 13px;
         font-family: Roboto;
         font-weight: 600;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         margin-top: 20px;
         color: #000000;
         text-align: left;
@@ -388,17 +392,18 @@
         /* background-image: url('../../assets/images/img8.png'); */
         background-repeat: no-repeat;
         background-size: cover;
-        width: 300px;
+        width: 100%;
         height: 200px;
     }
 
     .release-card-subtitle {
-        display: block;
-        width: 15ch;
-        overflow: hidden;
-        white-space: nowrap;
+        display: flex;
+        /* width: 15ch; */
+        overflow-y: auto;
+        height: 150px;
+        flex-wrap: wrap;
         text-overflow: ellipsis;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
 
     .release-card-link {
@@ -440,4 +445,4 @@
         height: 200px;
     }
 
-  }
+}

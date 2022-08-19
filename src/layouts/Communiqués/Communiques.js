@@ -71,10 +71,11 @@ const Communiques = () => {
                             <Card.Text className={"release-card-text"}>
                                 <p className={"release-card-title"}>{communique.title}</p>
                                 <p className={"release-card-subtitle"}>{communique.sub_title}</p>
-                                {/* <a href="/communique/details-1" className={"release-card-link"}>Lire plus</a> */}
+                                <p>
                                 <Button onClick={() => handleMoreClicked(communique.id)} variant="light" style={{ width: '100px', fontSize: '8px', backgroundColor: '#FFF', borderRadius: '24px', float: 'right', }}>
                                     LIRE PLUS <RiArrowRightCircleFill style={{ width: '25px', height: '25px', marginLeft: '0px', position: 'relative', right: '-10px', color: '#FFBE00', }} />
                                 </Button>
+                                </p>
                             </Card.Text>
                         </Card.Body>
                     </Card>
@@ -84,13 +85,13 @@ const Communiques = () => {
                     }
                 </div>
                 <br />
+
+            </div>
                 {communiques && communiques?.length !== 0 && <Pagination
                     changePage={changePage}
                     pageCount={totalPage}
                     perPage={perPage}
                 />}
-
-            </div>
 
 
         </div>
