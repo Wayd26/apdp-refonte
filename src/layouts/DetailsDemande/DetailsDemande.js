@@ -12,19 +12,19 @@ export default function DetailsDemande() {
 
     const loadForm = async () => {
         const formType = window.location.pathname.split('/')[window.location.pathname.split('/').length - 2];
-        const respForm = await getForm(formType)
+        const respForm = await getForm(formType);
         if (respForm.response && respForm.response.status !== 200){
-            // console.log(resp.response.header);
+            // console.log(queryResponse.response.header);
         } else {
             setFormulaire(respForm.data);
             const refNumber = window.location.pathname.split('/').pop();
-            const resp = await getRequestedQuery(refNumber);
-            console.log("<pppp", resp)
-            if(!resp.data.data.id){
+            const queryResponse = await getRequestedQuery(refNumber);
+            console.log("<pppp", respForm)
+            if(!queryResponse.data.data.id){
                 alert('Rien à afficher!!!');
                 window.history.back();
             } else {
-                setQuery(resp.data.data);
+                setQuery(queryResponse.data.data);
                 var answersFormArray = [];
                 var questionsArray = [];
                 for (let iterator = 0; iterator < respForm.data.data.sections.length; iterator++) {
@@ -36,8 +36,8 @@ export default function DetailsDemande() {
                         }
                     }
                 }
-                for (let index = 0; index < resp.data.data.answers.length; index++) {
-                    const answer = resp.data.data.answers[index];
+                for (let index = 0; index < queryResponse.data.data.answers.length; index++) {
+                    const answer = queryResponse.data.data.answers[index];
                     for (let newIdex = 0; newIdex < questionsArray.length; newIdex++) {
                         const question = questionsArray[newIdex];
                         if (answer.question_id == question.id) {
@@ -85,7 +85,7 @@ export default function DetailsDemande() {
                         {answersForm.map((answer) => (
                             <div>
                                 <Label 
-                                    string={answer.question} 
+                                    string={answer.question}
                                     style={{ marginTop: 5, fontWeight: 'bold' }}>
                                     {answer.question}
                                 </Label>

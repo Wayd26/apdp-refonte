@@ -108,7 +108,7 @@ export function getForm(type){
 }
 
 export function getAllFormTypes(){
-   const response = api.get(`/formulaire-types`)
+   const response = api.get(`/formulaire-types?resource=formulaire`)
    return response.then(data => data).catch( error => error)
 }
 
