@@ -30,6 +30,7 @@ const Home = () => {
     {"label":"Lois"}
   ]
 
+
   const handleClickCard = (cardClicked) => {
     navigate(`/${cardClicked}`);
   };
