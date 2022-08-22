@@ -34,7 +34,7 @@ export default class NavBar extends Component {
             showDropdownDemarches: false,
             showDropdownDocumentation: false,
             showDropdownDemarches: false,
-            showDropdownConformite : false,
+            showDropdownConformite: false,
             showDropdownTextesNationaux: false
         }
     }
@@ -66,21 +66,21 @@ export default class NavBar extends Component {
                         <Nav className="mr-autor  d-flex flex-wrap justify-content-around" navbar>
                             <h5>
                                 <NavDropdown
-                                    onMouseLeave={() => this.setState({...this.state, showDropdownActualites: false})}
-                                    onMouseOver={() => this.setState({...this.state, showDropdownActualites: true})}
+                                    onMouseLeave={() => this.setState({ ...this.state, showDropdownActualites: false })}
+                                    onMouseOver={() => this.setState({ ...this.state, showDropdownActualites: true })}
                                     show={this.state.showDropdownActualites}
                                     className={"nav-link-title nav-item-custom"} title={"ACTUALITÉS "} id="navbarScrollingDropdown"
                                     active={window.location.pathname === "/activites"
-                                    || window.location.pathname === "/communiques"
-                                    || window.location.pathname === "/communique/:id"
-                                    || window.location.pathname === "/evenements"
-                                    || window.location.pathname === "/evenement/:id"
-                                    || window.location.pathname === "/forum-de-discussion"
-                                    || window.location.pathname === "/arnaque-du-mois"
-                                    || window.location.pathname === "/phototheque"
-                                    || window.location.pathname === "/videotheque"
-                                    || window.location.pathname === "/plans-de-passation"
-                                    || window.location.pathname === "/appels-d-offres"
+                                        || window.location.pathname === "/communiques"
+                                        || window.location.pathname === "/communique/:id"
+                                        || window.location.pathname === "/evenements"
+                                        || window.location.pathname === "/evenement/:id"
+                                        || window.location.pathname === "/forum-de-discussion"
+                                        || window.location.pathname === "/arnaque-du-mois"
+                                        || window.location.pathname === "/phototheque"
+                                        || window.location.pathname === "/videotheque"
+                                        || window.location.pathname === "/plans-de-passation"
+                                        || window.location.pathname === "/appels-d-offres"
                                     }>
                                     <NavDropdown.Item href="/activites" >Les Activités</NavDropdown.Item>
                                     <NavDropdown.Item href="/communiques" >Communiqués et Newsletters</NavDropdown.Item>
@@ -92,6 +92,7 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="https://www.flickr.com/photos/195909108@N06">Photothèque</NavDropdown.Item>
                                     <NavDropdown.Item href="/videotheque">Vidéothèque</NavDropdown.Item>
                                     {/* <NavDropdown.Item href="/plans-de-passation">Plans de passation</NavDropdown.Item> */}
+                                    <div>
                                     <DropdownButton
                                         as={ButtonGroup}
                                         key={'end'}
@@ -100,11 +101,13 @@ export default class NavBar extends Component {
                                         variant="none"
                                         size="lg"
                                         title={`Marchés publics`}
+                                        show={this.showDropdownMarchesPublics}
+                                        
                                     >
                                         <Dropdown.Item href="/plans-de-passation" eventKey="1">Plan de passation</Dropdown.Item>
                                         <Dropdown.Item href="/appels-d-offres" eventKey="2">Publication de marché</Dropdown.Item>
                                     </DropdownButton>
-
+                                    </div>
                                 </NavDropdown>
                             </h5>
 
@@ -113,10 +116,10 @@ export default class NavBar extends Component {
                                     onMouseLeave={() => this.setState({ ...this.state, showDropdownRegime: false })}
                                     onMouseOver={() => this.setState({ ...this.state, showDropdownRegime: true })}
                                     show={this.state.showDropdownRegime}
-                                    className={"nav-link-title nav-item-custom"} title={"REGIME DE PROTECTION DES DONNÉES"} id="navbarScrollingDropdown" 
+                                    className={"nav-link-title nav-item-custom"} title={"REGIME DE PROTECTION DES DONNÉES"} id="navbarScrollingDropdown"
                                     active={window.location.pathname === "/faq"
-                                    || window.location.pathname === "/quiz"
-                                    || window.location.pathname === "/vos-droits"
+                                        || window.location.pathname === "/quiz"
+                                        || window.location.pathname === "/vos-droits"
                                     }>
                                     <NavDropdown.Item href="/faq">FAQ</NavDropdown.Item>
                                     <NavDropdown.Item href="/quiz">Quiz</NavDropdown.Item>
@@ -154,7 +157,7 @@ export default class NavBar extends Component {
                                     onMouseLeave={() => this.setState({ ...this.state, showDropdownDemarches: false })}
                                     onMouseOver={() => this.setState({ ...this.state, showDropdownDemarches: true })}
                                     show={this.state.showDropdownDemarches}
-                                    className={"nav-link-title nav-item-custom"} title={"VOS DEMARCHES "} id="navbarScrollingDropdown" 
+                                    className={"nav-link-title nav-item-custom"} title={"VOS DEMARCHES "} id="navbarScrollingDropdown"
                                     active={
                                         window.location.pathname === "/vos-demarches"
                                         || window.location.pathname === "/statut-demande"
@@ -179,7 +182,7 @@ export default class NavBar extends Component {
                                     onMouseLeave={() => this.setState({ ...this.state, showDropdownDocumentation: false })}
                                     onMouseOver={() => this.setState({ ...this.state, showDropdownDocumentation: true })}
                                     show={this.state.showDropdownDocumentation}
-                                    className={"nav-link-title nav-item-custom"} title={"DOCUMENTATION "} id="navbarScrollingDropdown" 
+                                    className={"nav-link-title nav-item-custom"} title={"DOCUMENTATION "} id="navbarScrollingDropdown"
                                     active={
                                         window.location.pathname === "/documentation"
                                         || window.location.pathname === "/outils-conformite"
@@ -193,7 +196,7 @@ export default class NavBar extends Component {
                                         || window.location.pathname === "/textes/directives"
                                         || window.location.pathname === "/textes-internationaux"
                                         || window.location.pathname === "/pays-membres"
-                                        }>
+                                    }>
                                     <NavDropdown.Item href="/outils-conformite">Outils de conformité</NavDropdown.Item>
                                     <NavDropdown.Item href="/rapports-annuels">Rapports d'activités Annuelles</NavDropdown.Item>
                                     <DropdownButton
