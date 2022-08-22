@@ -72,7 +72,6 @@ export default class NavBar extends Component {
                                         || window.location.pathname === "/communique/:id"
                                         || window.location.pathname === "/evenements"
                                         || window.location.pathname === "/evenement/:id"
-                                        || window.location.pathname === "/forum-de-discussion"
                                         || window.location.pathname === "/arnaque-du-mois"
                                         || window.location.pathname === "/phototheque"
                                         || window.location.pathname === "/videotheque"
@@ -84,7 +83,7 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="" >Sondages</NavDropdown.Item>
                                     {/* <NavDropdown.Item href="/appels-d-offres">Appels d'offres</NavDropdown.Item> */}
                                     <NavDropdown.Item href="/evenements">Evènements</NavDropdown.Item>
-                                    <NavDropdown.Item href="/forum-de-discussion">Forum de discussion</NavDropdown.Item>
+                                    {/* <NavDropdown.Item href="/forum-de-discussion">Forum de discussion</NavDropdown.Item> */}
                                     <NavDropdown.Item href="/arnaque-du-mois">Arnaque du mois</NavDropdown.Item>
                                     <NavDropdown.Item href="https://www.flickr.com/photos/195909108@N06">Photothèque</NavDropdown.Item>
                                     <NavDropdown.Item href="/videotheque">Vidéothèque</NavDropdown.Item>
@@ -118,10 +117,11 @@ export default class NavBar extends Component {
                                     active={window.location.pathname === "/faq"
                                         || window.location.pathname === "/quiz"
                                         || window.location.pathname === "/vos-droits"
+                                        || window.location.pathname === "/forum-de-discussion"
                                     }>
                                     <NavDropdown.Item href="/faq">FAQ</NavDropdown.Item>
                                     <NavDropdown.Item href="/quiz">Quiz</NavDropdown.Item>
-                                    <NavDropdown.Item href="/blog">Blog</NavDropdown.Item>
+                                    <NavDropdown.Item href="/forum-de-discussion">Forum de discussion ou Blog</NavDropdown.Item>
                                     <DropdownButton
                                         as={ButtonGroup}
                                         key={'end'}
