@@ -33,21 +33,14 @@ export default class NavBar extends Component {
             showDropdownRegime: false,
             showDropdownDemarches: false,
             showDropdownDocumentation: false,
-<<<<<<< HEAD
             showDropdownDemarches: false,
             showDropdownConformite: false,
             showDropdownTextesNationaux: false
-=======
->>>>>>> 97b47b474c27545236966f64f301692b7f7279f3
         }
     }
 
     toggle = () => this.setState({ isOpen: !this.state.isOpen })
 
-    componentDidMount() {
-        console.log(window.location);
-        console.log("TEEEESSSTT", this.state);
-    }
 
 
 
@@ -104,15 +97,10 @@ export default class NavBar extends Component {
                                         drop={'end'}
                                         variant="none"
                                         size="lg"
-                                        title={`Marchés publics`}
-<<<<<<< HEAD
-                                        show={this.showDropdownMarchesPublics}
-                                        
-=======
+                                        title={`Marchés publics`}                                      
                                         onMouseLeave={() => {localStorage.setItem('showDropdownPublicMarkets',false)}}
                                         onMouseOver={() => {localStorage.setItem('showDropdownPublicMarkets',true)}}
                                         show={localStorage.getItem('showDropdownPublicMarkets') === 'true'}
->>>>>>> 97b47b474c27545236966f64f301692b7f7279f3
                                     >
                                         <Dropdown.Item href="/plans-de-passation" eventKey="1">Plan de passation</Dropdown.Item>
                                         <Dropdown.Item href="/appels-d-offres" eventKey="2">Publication de marché</Dropdown.Item>
