@@ -33,16 +33,20 @@ export default class NavBar extends Component {
             showDropdownRegime: false,
             showDropdownDemarches: false,
             showDropdownDocumentation: false,
+<<<<<<< HEAD
             showDropdownDemarches: false,
             showDropdownConformite: false,
             showDropdownTextesNationaux: false
+=======
+>>>>>>> 97b47b474c27545236966f64f301692b7f7279f3
         }
     }
 
     toggle = () => this.setState({ isOpen: !this.state.isOpen })
 
     componentDidMount() {
-        console.log(window.location)
+        console.log(window.location);
+        console.log("TEEEESSSTT", this.state);
     }
 
 
@@ -101,8 +105,14 @@ export default class NavBar extends Component {
                                         variant="none"
                                         size="lg"
                                         title={`Marchés publics`}
+<<<<<<< HEAD
                                         show={this.showDropdownMarchesPublics}
                                         
+=======
+                                        onMouseLeave={() => {localStorage.setItem('showDropdownPublicMarkets',false)}}
+                                        onMouseOver={() => {localStorage.setItem('showDropdownPublicMarkets',true)}}
+                                        show={localStorage.getItem('showDropdownPublicMarkets') === 'true'}
+>>>>>>> 97b47b474c27545236966f64f301692b7f7279f3
                                     >
                                         <Dropdown.Item href="/plans-de-passation" eventKey="1">Plan de passation</Dropdown.Item>
                                         <Dropdown.Item href="/appels-d-offres" eventKey="2">Publication de marché</Dropdown.Item>
@@ -132,6 +142,9 @@ export default class NavBar extends Component {
                                         variant="none"
                                         size="lg"
                                         title={`Mise en conformité`}
+                                        onMouseLeave={() => {localStorage.setItem('showDropdownConforme',false)}}
+                                        onMouseOver={() => {localStorage.setItem('showDropdownConforme',true)}}
+                                        show={localStorage.getItem('showDropdownConforme') === 'true'}
                                     >
                                         <Dropdown.Item href="/vos-droits" eventKey="1">Obligations Générales</Dropdown.Item>
                                         <Dropdown.Item href="#" eventKey="2">Systèmes de vidéosurveillances</Dropdown.Item>
@@ -206,6 +219,9 @@ export default class NavBar extends Component {
                                         drop={'end'}
                                         variant="none"
                                         size="lg"
+                                        onMouseLeave={() => {localStorage.setItem('showDropdownTextesNationaux',false)}}
+                                        onMouseOver={() => {localStorage.setItem('showDropdownTextesNationaux',true)}}
+                                        show={localStorage.getItem('showDropdownTextesNationaux') === 'true'}
                                         title={`Textes Nationaux`}
                                     >
                                         <Dropdown.Item href="/textes/lois" eventKey="1">Lois</Dropdown.Item>
@@ -221,6 +237,9 @@ export default class NavBar extends Component {
                                         variant="none"
                                         size="lg"
                                         title={`Textes Communautaires`}
+                                        onMouseLeave={() => {localStorage.setItem('showDropdownTextesCommunautaires',false)}}
+                                        onMouseOver={() => {localStorage.setItem('showDropdownTextesCommunautaires',true)}}
+                                        show={localStorage.getItem('showDropdownTextesCommunautaires') === 'true'}
                                     >
                                         <Dropdown.Item href="/textes/accords" eventKey="1">Accords</Dropdown.Item>
                                         <Dropdown.Item href="/textes/reglements" eventKey="2">Règlements</Dropdown.Item>
