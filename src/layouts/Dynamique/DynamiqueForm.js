@@ -14,7 +14,7 @@ export default function DynamiqueForm() {
     });
     const [current, setCurrent] = useState(0);
     const [final, setFinal] = useState(false);
-    const [preview, setPreview] = useState(false);
+    const [responseCounter, setResponseCounter] = useState(0);
     const [formulaire, setFormulaire] = useState(null);
     const [currentDependentSection, setCurrentDependentSection] = useState(null);
     const [filledSections, setFilledSections] = useState(0);
@@ -122,6 +122,7 @@ export default function DynamiqueForm() {
         const responseSubmit = await submitFormSection(formulaire.data.id, formulaire.data.sections[current].id, formData);
         console.log("RESSSSSSSS", responseSubmit);
         setRefNumber(responseSubmit.data.data[0].submit_id);
+        setResponseCounter(formData.answers.length);
         const queryResponse = await getRequestedQuery(refNumber);
         setQuery(queryResponse.data.data);
         var answersFormArray = [];
@@ -136,20 +137,21 @@ export default function DynamiqueForm() {
             }
         }
         try {
-            for (let index = 0; index < queryResponse.data.data.answers.length; index++) {
-                const answer = queryResponse.data.data.answers[index];
+            let temp_answers_form = [];
+            let queryResponseReversed = queryResponse.data.data.answers.reverse();
+            for (let index = 0; index < queryResponseReversed.length; index++) {
+                const answer = queryResponseReversed[index];
                 for (let newIdex = 0; newIdex < questionsArray.length; newIdex++) {
                     const question = questionsArray[newIdex];
-                    // console.log(answer, question, answer.question_id == question.id);
                     if (answer.question_id == question.id) {
-                        answersFormArray.push({'question': question.name, 'answer': answer.answer_text})
+                        if (!temp_answers_form.includes(question.name)){
+                            answersFormArray.push({'question': question.name, 'answer': answer.answer_text});
+                            temp_answers_form.push(question.name);
+                        }
                     }
                 }
             }
-            // console.log(questionsArray.length);
-            console.log(answersFormArray);
-            console.log("queryResponse", queryResponse);
-            setAnswersForm(answersFormArray);
+            setAnswersForm(answersFormArray.reverse());
         } catch (error) {
             console.log("Not ready yet!!!")   
         }
