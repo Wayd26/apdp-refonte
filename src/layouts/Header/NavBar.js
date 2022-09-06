@@ -56,7 +56,7 @@ export default class NavBar extends Component {
 
         return (
             <React.Fragment>
-                <Navbar light expand="sm" style={{ backgroundColor: "#2b71d3", marginBottom: 0, borderRadius: 0, }} className={"d-flex justify-content-center nav-bar-mother"}  >
+                <Navbar light expand="sm" style={{ backgroundColor: "rgb(18 50 95)", marginBottom: 0, borderRadius: 0, }} className={"d-flex justify-content-center nav-bar-mother"}  >
                     {/* <NavbarBrand href="/">reactstrap</NavbarBrand> */}
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar className="nav-bar-custom">
@@ -235,26 +235,10 @@ export default class NavBar extends Component {
                                     </DropdownButton>
                                     <NavDropdown.Item href="/textes-internationaux">Textes Internationaux</NavDropdown.Item>
                                     <NavDropdown.Item href="/pays-membres" >Liste de pays à protection équivalente</NavDropdown.Item>
-                                    {/* <NavDropdown.Item href="/textes/textes-communautaires">Textes Communautaires</NavDropdown.Item> */}
                                 </NavDropdown>
                             </h5>
 
-                            {/* <InputGroup className="search-input d-none d-sm-flex row d-flex flex-nowrap">
-                                <InputGroupText style={{
-                                    backgroundColor: 'white',
-                                    borderRightWidth: 0,
-                                    borderTopLeftRadius: 20,
-                                    borderBottomLeftRadius: 20
-                                }}>
-                                    <i className="ri-search-line"></i>
-                                </InputGroupText>
-                                <Input placeholder="Recherche" style={{
-                                    backgroundColor: 'white',
-                                    borderLeftWidth: 0,
-                                    borderTopRightRadius: 20,
-                                    borderBottomRightRadius: 20
-                                }} />
-                            </InputGroup> */}
+                          
                         </Nav>
                     </Collapse>
                 </Navbar>

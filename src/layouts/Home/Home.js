@@ -19,6 +19,7 @@ import countapi from 'countapi-js';
 import { getArticlesResearched, getVisitsNumber } from "../../http/http";
 import { DOMAIN_URL } from "../../constants/Constant";
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import HeroSection from "../../components/HeroSection/HeroSection";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -72,7 +73,8 @@ const Home = () => {
   return (
     <div className={"Home"}>
 
-        <ActualiteCarousel/>
+        {/* <ActualiteCarousel/> */}
+        <HeroSection />
 
       {/* User Type Section */}
       <Row className={"my-5 mx-4"}>

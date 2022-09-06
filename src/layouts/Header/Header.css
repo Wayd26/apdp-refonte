@@ -37,7 +37,7 @@ border: none !important;
 }
 .header-block-2{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     /* padding-right: 3%; */
     padding-top: 10px;
@@ -154,8 +154,8 @@ border: none !important;
 
 .header-animate-text {
     min-width: 100%;
-    -webkit-animation: 60s ease-in 1s infinite reverse both running slidein;
-    animation: 60s ease-in 1s infinite reverse both running slidein;
+    -webkit-animation: 120s ease-in 10s infinite reverse both running slidein;
+    animation: 120s ease-in 10s infinite reverse both running slidein;
     position: absolute;
 }
 
@@ -246,7 +246,7 @@ border: none !important;
 .hwrap {
     overflow: hidden; /* HIDE SCROLL BAR */
     /* background: #eee; */
-    background: #FFBE00;
+    background: #337ab7;
     height: 30px !important;
   }
    

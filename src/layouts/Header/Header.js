@@ -10,6 +10,7 @@ import code_numerique from "../../assets/documents/CODE_DU_NUMERIQUE_DU BENIN_ED
 import {getATypeOfArticles, logout} from '../../http/http';
 import { useNavigate } from 'react-router-dom';
 import { BiSearchAlt } from 'react-icons/bi';
+import ActualiteCarousel from '../../components/ActualiteCarousel/ActualiteCarousel';
 
 
 
@@ -77,6 +78,7 @@ const Header = () => {
 //      }, [])
 
     return (
+        <>
         <React.Fragment>
                 <div id={"header"}>
                     {/* <div className="header-block-1">
@@ -157,6 +159,7 @@ const Header = () => {
                     <BiSearchAlt title='Rechercher globalement sur le site' onClick={searchDecisionsShortcut} style={{ height: 45, width: 40, color: 'white', cursor: 'pointer', position: 'relative', float: 'right', right: '80px', margin: '-50px', top: '-1px' }} />
                 </div>
             </React.Fragment>
+            </>
     )
 }
 

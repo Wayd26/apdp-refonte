@@ -1,0 +1,44 @@
+.big__section {
+    background-image: url('../../assets/images/hero_bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    box-shadow: rgb(202, 188, 188) 0px 3px 6px, rgb(156, 146, 146) 0px 3px 6px;
+
+}
+
+.submenu__section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 60px;
+    width: 80%;
+    background-color: #fff;
+    box-shadow: 3px 3px 14px 0px #ccc;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 8px;
+    margin-top: -20px;
+}
+
+.submenu__item {
+    font-size:1.2em;
+    font-style: oblique;
+    font-weight: 700;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* font: normal normal bold 15px/17px Roboto; */
+    letter-spacing: 0px;
+    color: #000;
+    text-transform: uppercase;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.submenu__item__active {
+    text-decoration-color: #FFBE00 !important;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+}

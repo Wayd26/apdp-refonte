@@ -5,11 +5,34 @@
 
 .App {
   text-align: center;
-  background-color: #F7F7F7;
-  height: 100vh;
+  /* background-color: #F7F7F7; */
+  /* height: 100vh; */
 }
 
 
 .no-bold {
   font-weight: normal !important;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar:hover {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background: #000342;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #efefef;
+
+  border-radius: 50px;
+}
+.green-period {
+  font-size: 50px;
+  color: #3FB847;
 }

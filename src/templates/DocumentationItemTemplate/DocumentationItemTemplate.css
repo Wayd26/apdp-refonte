@@ -1,0 +1,222 @@
+.documentation__item-template__header {
+    padding: 5px;
+    border-left: 5px solid #007BFF;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font: normal normal bold 29px/46px Roboto;
+    letter-spacing: 0px;
+    color: #0B0D39;
+    opacity: 1;
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+
+.documentation__item-template__content img {
+    width: 700px;
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: rgb(59, 55, 55) 0px 3px 6px, rgb(156, 146, 146) 0px 3px 6px;
+}
+
+.documentation__item-template__content .text-content {
+    width: 700px;
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: rgb(59, 55, 55) 0px 3px 6px, rgb(156, 146, 146) 0px 3px 6px;
+    background-color: #FFFFFF;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    padding: 40px;
+}
+
+.documentation__item__title {
+    text-align: left;
+    font: normal normal bold 28px/48px Roboto;
+    letter-spacing: 0.11px;
+    color: #0B0D39;
+    opacity: 1;
+}
+
+.documentation__item__subtitle-content {
+    width: 100%;
+    background: #F3F5F7 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    opacity: 1;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.documentation__item__subtitle {
+    padding-left: 15px;
+    border-left: 2px solid #007BFF;
+    text-align: left;
+    font: normal normal normal 20px/29px Roboto;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 0.7;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    max-height: 60px;
+    overflow-y: auto;
+}
+
+.documentation__item__description {
+    text-align: left;
+    font: normal normal 600 16px/30px Roboto;
+    letter-spacing: 0px;
+    color: #7B7B7B;
+    opacity: 1;
+    height: 255px;
+    overflow-y: auto;
+}
+
+.documentation__item__read-button,
+.documentation__item__download-button,
+.documentation__item__back-button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    box-shadow: rgb(202, 188, 188) 0px 3px 6px, rgb(156, 146, 146) 0px 3px 6px;
+    opacity: 1;
+    border: none;
+    width: 100px;
+    height: 35px;
+    border-radius: 8px;
+    font: normal normal bolder 14px/18px Roboto;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.documentation__item__read-button {
+    background: #FFBE00 0% 0% no-repeat padding-box;
+}
+
+.documentation__item__download-button {
+    background: #20345e 0% 0% no-repeat padding-box;
+}
+
+.documentation__item__back-button {
+    background: #424240 0% 0% no-repeat padding-box;
+}
+
+.documentation__item__read-button:hover,
+.documentation__item__download-button:hover,
+.documentation__item__back-button:hover {
+    transform: translate(3px, 3px);
+    transition-duration: 1500ms;
+}
+
+.documentation__item-template__content .buttons-content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+@media only screen and (max-width: 600px) {
+    documentation__item-template__header {
+        padding: 5px;
+        border-left: 5px solid #007BFF;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font: normal normal bold 19px/26px Roboto;
+        letter-spacing: 0px;
+        color: #0B0D39;
+        opacity: 1;
+        margin-bottom: 30px;
+        margin-top: 40px;
+    }
+
+    .documentation__item-template__content img {
+        width: 85%;
+        height: 300px;
+        border-radius: 8px;
+        box-shadow: rgb(59, 55, 55) 0px 3px 6px, rgb(156, 146, 146) 0px 3px 6px;
+    }
+
+    .documentation__item-template__content .text-content {
+        width: 85%;
+        height: 450px;
+        border-radius: 8px;
+        box-shadow: rgb(59, 55, 55) 0px 3px 6px, rgb(156, 146, 146) 0px 3px 6px;
+        background-color: #FFFFFF;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+
+    .documentation__item__title {
+        text-align: left;
+        font: normal normal bold 24px/30px Roboto;
+        letter-spacing: 0.11px;
+        color: #0B0D39;
+        opacity: 1;
+    }
+
+    .documentation__item__subtitle-content {
+        width: 100%;
+        background: #F3F5F7 0% 0% no-repeat padding-box;
+        border-radius: 5px;
+        opacity: 1;
+        padding-left: 20px;
+        margin-bottom: 20px;
+        margin-top: 25px;
+    }
+
+    .documentation__item__subtitle {
+        padding-left: 15px;
+        border-left: 2px solid #007BFF;
+        text-align: left;
+        font: normal normal normal 20px/25px Roboto;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 0.7;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        max-height: 60px;
+    }
+
+    .documentation__item__description {
+        text-align: left;
+        font: normal normal 600 16px/30px Roboto;
+        letter-spacing: 0px;
+        color: #7B7B7B;
+        opacity: 1;
+        height: 175px;
+        overflow-y: auto;
+    }
+
+    .documentation__item-template__content .buttons-content {
+        display: flex;
+        /* justify-content: space-evenly; */
+        flex-wrap: wrap;
+    }
+
+    .documentation__item__read-button,
+    .documentation__item__download-button,
+    .documentation__item__back-button {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+        box-shadow: rgb(202, 188, 188) 0px 3px 6px, rgb(156, 146, 146) 0px 3px 6px;
+        opacity: 1;
+        border: none;
+        width: 100px;
+        height: 35px;
+        border-radius: 8px;
+        font: normal normal bolder 14px/18px Roboto;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+    }
+    .documentation__item__back-button {
+        width: 260px;
+    }
+}
