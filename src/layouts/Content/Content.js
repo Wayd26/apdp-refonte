@@ -70,6 +70,9 @@ import ActualityListTemplate from '../../templates/ActualityListTemplate/Actuali
 import ActualityItemTemplate from '../../templates/ActualityItemTemplate/ActualityItemTemplate';
 import DocumentationListTemplate from '../../templates/DocumentationListTemplate/DocumentationListTemplate';
 import DocumentationItemTemplate from '../../templates/DocumentationItemTemplate/DocumentationItemTemplate';
+import MemberListTemplate from '../../templates/MemberListTemplate/MemberListTemplate';
+import MemberItemTemplate from '../../templates/MemberItemTemplate/MemberItemTemplate';
+import VideothequeTemplate from '../../templates/VideothequeTemplate/VideothequeTemplate';
 
 
 const Content = () => {
@@ -98,7 +101,7 @@ const Content = () => {
 
                     <Route path="/phototheque" element={<Photothèque />} />
 
-                    <Route path="/videotheque" element={<Vidéothèque />} />
+                    <Route path="/videotheque" element={<VideothequeTemplate />} />
 
                     <Route path="/communique/:communique_id" element={<DetailsCommunique />} />
                     <Route path="/activite/:activity_id" element={<DetailsActivite />} />
@@ -110,6 +113,9 @@ const Content = () => {
                     <Route path="/template-documentation" element={<DocumentationListTemplate />} />
                     <Route path="/template-actuality-item" element={<ActualityItemTemplate />} />
                     <Route path="/template-documentation-item" element={<DocumentationItemTemplate />} />
+                    <Route path="/template-member" element={<MemberListTemplate />} />
+                    <Route path="/template-member-item" element={<MemberItemTemplate />} />
+
                     <Route path="/plans-de-passation" element={<PlansDePassation />} />
                     <Route path="/breaknews/:breaknews_id" element={<BreakNewsDetails />} />
 

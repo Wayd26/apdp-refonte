@@ -1,0 +1,42 @@
+.member__list-template-card {
+    /* width: 80%; */
+    width: 800px;
+    /* max-width: 1000px; */
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgb(32, 31, 31) 0px 3px 6px, rgb(51, 48, 48) 0px 3px 6px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* border-radius: 8px; */
+    
+}
+
+.member__list-template__header {
+    /* height: 40px; */
+    width: 100%;
+    background: #283344 0% 0% no-repeat padding-box;
+    opacity: 1;
+    text-align: center;
+    font: normal normal bold 20px/30px Roboto;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 8px;
+
+}
+.member__list-template-conseiller-container {
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 450px) {
+    .member__list-template-card {
+        width: 90%;
+        
+        
+    }
+}
