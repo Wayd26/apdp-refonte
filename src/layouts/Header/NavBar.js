@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
     Collapse,
     Navbar,
@@ -15,36 +15,48 @@ import {
 } from 'reactstrap';
 import { NavDropdown } from "react-bootstrap";
 import { DropdownButton, Dropdown } from 'react-bootstrap';
-import {
+import { useNavigate,
     BrowserRouter as Router,
     Switch,
     Route,
     Link,
     useHistory
 } from "react-router-dom";
+import { getMenus } from '../../http/http';
 
-export default class NavBar extends Component {
+const NavBar = (props) =>  {
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            isOpen: false,
-            showDropdownActualites: false,
-            showDropdownRegime: false,
-            showDropdownDemarches: false,
-            showDropdownDocumentation: false,
-            showDropdownDemarches: false,
-            showDropdownConformite: false,
-            showDropdownTextesNationaux: false
-        }
+    const { secondMenus } = props
+
+const [state, setState] = useState(
+    {
+        isOpen: false,
+        showDropdownActualites: false,
+        showDropdownRegime: false,
+        showDropdownDemarches: false,
+        showDropdownDocumentation: false,
+        showDropdownDemarches: false,
+        showDropdownConformite: false,
+        showDropdownTextesNationaux: false
     }
+)
 
-    toggle = () => this.setState({ isOpen: !this.state.isOpen })
+const [secondMenusParent, setSecondMenusParent] = useState([])
+  
+ 
+  const toggle = () => setState({...state, isOpen: state.isOpen })
+
+useEffect(() => {
+  let realParentsMenu = []
+  realParentsMenu = secondMenus.filter(item => item.parent_id == null && item.parent == null)
+  console.log("realParentsMenu ", secondMenus)
+  console.log("realParentsMenu ", realParentsMenu)
+  setSecondMenusParent(realParentsMenu)
+}, [secondMenus])
 
 
 
-
-    render() {
+    
         const handleDemarchesClick = () => {
             if (localStorage.getItem("user_token")) {
                 window.location.href = "/vos-demarches";
@@ -54,19 +66,26 @@ export default class NavBar extends Component {
             }
         }
 
+
+      
+        
+
         return (
             <React.Fragment>
                 <Navbar light expand="sm" style={{ backgroundColor: "rgb(18 50 95)", marginBottom: 0, borderRadius: 0, }} className={"d-flex justify-content-center nav-bar-mother"}  >
                     {/* <NavbarBrand href="/">reactstrap</NavbarBrand> */}
-                    <NavbarToggler onClick={this.toggle} />
-                    <Collapse isOpen={this.state.isOpen} navbar className="nav-bar-custom">
+                    <NavbarToggler onClick={toggle} />
+                    <Collapse isOpen={state.isOpen} navbar className="nav-bar-custom">
                         <Nav className="mr-autor  d-flex flex-wrap justify-content-around" navbar>
-                            <h5>
+
+                            {/* Start the magic */}
+
+                            {secondMenusParent?.map(secondMenu => <h5>
                                 <NavDropdown
-                                    onMouseLeave={() => this.setState({ ...this.state, showDropdownActualites: false })}
-                                    onMouseOver={() => this.setState({ ...this.state, showDropdownActualites: true })}
-                                    show={this.state.showDropdownActualites}
-                                    className={"nav-link-title nav-item-custom"} title={"ACTUALITÉS "} id="navbarScrollingDropdown"
+                                    onMouseLeave={() => setState({ ...state, showDropdownActualites: false })}
+                                    onMouseOver={() => setState({ ...state, showDropdownActualites: true })}
+                                    show={state.showDropdownActualites}
+                                    className={"nav-link-title nav-item-custom"} title={secondMenu.name} id="navbarScrollingDropdown"
                                     active={window.location.pathname === "/activites"
                                         || window.location.pathname === "/communiques"
                                         || window.location.pathname === "/communique/:id"
@@ -81,13 +100,10 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="/activites" >Les Activités</NavDropdown.Item>
                                     <NavDropdown.Item href="/communiques" >Communiqués et Newsletters</NavDropdown.Item>
                                     <NavDropdown.Item href="" >Sondages</NavDropdown.Item>
-                                    {/* <NavDropdown.Item href="/appels-d-offres">Appels d'offres</NavDropdown.Item> */}
                                     <NavDropdown.Item href="/evenements">Evènements</NavDropdown.Item>
-                                    {/* <NavDropdown.Item href="/forum-de-discussion">Forum de discussion</NavDropdown.Item> */}
                                     <NavDropdown.Item href="/arnaque-du-mois">Arnaque du mois</NavDropdown.Item>
                                     <NavDropdown.Item href="https://www.flickr.com/photos/195909108@N06">Photothèque</NavDropdown.Item>
                                     <NavDropdown.Item href="/videotheque">Vidéothèque</NavDropdown.Item>
-                                    {/* <NavDropdown.Item href="/plans-de-passation">Plans de passation</NavDropdown.Item> */}
                                     <div>
                                     <DropdownButton
                                         as={ButtonGroup}
@@ -106,13 +122,64 @@ export default class NavBar extends Component {
                                     </DropdownButton>
                                     </div>
                                 </NavDropdown>
-                            </h5>
+                            </h5>)}
 
-                            <h5>
+                            {/* End the magic */}
+
+
+
+                            {/* Actualités */}
+                            {/* <h5>
                                 <NavDropdown
-                                    onMouseLeave={() => this.setState({ ...this.state, showDropdownRegime: false })}
-                                    onMouseOver={() => this.setState({ ...this.state, showDropdownRegime: true })}
-                                    show={this.state.showDropdownRegime}
+                                    onMouseLeave={() => setState({ ...state, showDropdownActualites: false })}
+                                    onMouseOver={() => setState({ ...state, showDropdownActualites: true })}
+                                    show={state.showDropdownActualites}
+                                    className={"nav-link-title nav-item-custom"} title={"ACTUALITÉS "} id="navbarScrollingDropdown"
+                                    active={window.location.pathname === "/activites"
+                                        || window.location.pathname === "/communiques"
+                                        || window.location.pathname === "/communique/:id"
+                                        || window.location.pathname === "/evenements"
+                                        || window.location.pathname === "/evenement/:id"
+                                        || window.location.pathname === "/arnaque-du-mois"
+                                        || window.location.pathname === "/phototheque"
+                                        || window.location.pathname === "/videotheque"
+                                        || window.location.pathname === "/plans-de-passation"
+                                        || window.location.pathname === "/appels-d-offres"
+                                    }>
+                                    <NavDropdown.Item href="/activites" >Les Activités</NavDropdown.Item>
+                                    <NavDropdown.Item href="/communiques" >Communiqués et Newsletters</NavDropdown.Item>
+                                    <NavDropdown.Item href="" >Sondages</NavDropdown.Item>
+                                    <NavDropdown.Item href="/evenements">Evènements</NavDropdown.Item>
+                                    <NavDropdown.Item href="/arnaque-du-mois">Arnaque du mois</NavDropdown.Item>
+                                    <NavDropdown.Item href="https://www.flickr.com/photos/195909108@N06">Photothèque</NavDropdown.Item>
+                                    <NavDropdown.Item href="/videotheque">Vidéothèque</NavDropdown.Item>
+                                    <div>
+                                    <DropdownButton
+                                        as={ButtonGroup}
+                                        key={'end'}
+                                        id={`dropdown-button-drop-end`}
+                                        drop={'end'}
+                                        variant="none"
+                                        size="lg"
+                                        title={`Marchés publics`}                                      
+                                        onMouseLeave={() => {localStorage.setItem('showDropdownPublicMarkets',false)}}
+                                        onMouseOver={() => {localStorage.setItem('showDropdownPublicMarkets',true)}}
+                                        show={localStorage.getItem('showDropdownPublicMarkets') === 'true'}
+                                    >
+                                        <Dropdown.Item href="/plans-de-passation" eventKey="1">Plan de passation</Dropdown.Item>
+                                        <Dropdown.Item href="/appels-d-offres" eventKey="2">Publication de marché</Dropdown.Item>
+                                    </DropdownButton>
+                                    </div>
+                                </NavDropdown>
+                            </h5> */}
+
+                            {/* Regime de Protection des données */}
+
+                            {/* <h5>
+                                <NavDropdown
+                                    onMouseLeave={() => setState({ ...state, showDropdownRegime: false })}
+                                    onMouseOver={() => setState({ ...state, showDropdownRegime: true })}
+                                    show={state.showDropdownRegime}
                                     className={"nav-link-title nav-item-custom"} title={"REGIME DE PROTECTION DES DONNÉES"} id="navbarScrollingDropdown"
                                     active={window.location.pathname === "/faq"
                                         || window.location.pathname === "/quiz"
@@ -144,20 +211,15 @@ export default class NavBar extends Component {
                                         <Dropdown.Item href="#" eventKey="8">Le registre de traitement</Dropdown.Item>
                                     </DropdownButton>
                                 </NavDropdown>
-                            </h5>
-
-                            {/* <h5>
-                                <div className={"nav-link-title nav-item-custom demarche-nav"}  id="navbarScrollingDropdown" onClick={handleDemarchesClick} active={window.location.pathname === "/vos-demarches"}>
-                                VOS DEMARCHES
-                                </div>
                             </h5> */}
+
 
 
                             <h5>
                                 <NavDropdown
-                                    onMouseLeave={() => this.setState({ ...this.state, showDropdownDemarches: false })}
-                                    onMouseOver={() => this.setState({ ...this.state, showDropdownDemarches: true })}
-                                    show={this.state.showDropdownDemarches}
+                                    onMouseLeave={() => setState({ ...state, showDropdownDemarches: false })}
+                                    onMouseOver={() => setState({ ...state, showDropdownDemarches: true })}
+                                    show={state.showDropdownDemarches}
                                     className={"nav-link-title nav-item-custom"} title={"VOS DEMARCHES "} id="navbarScrollingDropdown"
                                     active={
                                         window.location.pathname === "/vos-demarches"
@@ -178,11 +240,13 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="/faire-une-demande">Faire le rapport d’activité annuel</NavDropdown.Item>
                                 </NavDropdown>
                             </h5>
-                            <h5>
+
+                            {/* DOCUMENTATION */}
+                            {/* <h5>
                                 <NavDropdown
-                                    onMouseLeave={() => this.setState({ ...this.state, showDropdownDocumentation: false })}
-                                    onMouseOver={() => this.setState({ ...this.state, showDropdownDocumentation: true })}
-                                    show={this.state.showDropdownDocumentation}
+                                    onMouseLeave={() => setState({ ...state, showDropdownDocumentation: false })}
+                                    onMouseOver={() => setState({ ...state, showDropdownDocumentation: true })}
+                                    show={state.showDropdownDocumentation}
                                     className={"nav-link-title nav-item-custom"} title={"DOCUMENTATION "} id="navbarScrollingDropdown"
                                     active={
                                         window.location.pathname === "/documentation"
@@ -236,7 +300,7 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="/textes-internationaux">Textes Internationaux</NavDropdown.Item>
                                     <NavDropdown.Item href="/pays-membres" >Liste de pays à protection équivalente</NavDropdown.Item>
                                 </NavDropdown>
-                            </h5>
+                            </h5> */}
 
                           
                         </Nav>
@@ -245,5 +309,7 @@ export default class NavBar extends Component {
 
             </React.Fragment>
         )
-    }
+    
 }
+
+export default NavBar
