@@ -73,6 +73,8 @@ import DocumentationItemTemplate from '../../templates/DocumentationItemTemplate
 import MemberListTemplate from '../../templates/MemberListTemplate/MemberListTemplate';
 import MemberItemTemplate from '../../templates/MemberItemTemplate/MemberItemTemplate';
 import VideothequeTemplate from '../../templates/VideothequeTemplate/VideothequeTemplate';
+import Core from '../../appShell/Core';
+import CoreItem from '../../appShell/CoreItem';
 
 
 const Content = () => {
@@ -84,12 +86,17 @@ const Content = () => {
 
     return (
         <div>
-            <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
+            {/* <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}> */}
                 <Routes>
                     {/* <Route index element={<div> Here</div>} /> */}
                     <Route path="/auth" element={<Auth />} />
                     <Route path="/query/:form_type/:query_id" element={<DetailsDemande />} />
 
+                    
+                    <Route path="/main" element={<Core />} />
+                    <Route path="/main-item/:id" element={<CoreItem />} />
+
+                    
                     {/* <Route path="/activites" element={<Activites />} />
                     <Route path="/communiques" element={<Communiques />} />
                     <Route path="/actualites/:actualite_id" element={<Actualités />} />
@@ -181,7 +188,7 @@ const Content = () => {
                     {/* <Route path="*" element={<div>404</div>} /> */}
                     <Route path="*" element={<Home />} />
                 </Routes>
-            </BrowserRouter>
+            {/* </BrowserRouter> */}
             {/* </Container> */}
         </div>
     )

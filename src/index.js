@@ -16,12 +16,13 @@ import "./fonts/Gotham-Font/GothamLightItalic.ttf";
 // import "./fonts/Gotham-Font/GothamThin.ttf"
 import "./fonts/Gotham-Font/GothamMedium.ttf";
 import "./fonts/Gotham-Font/GothamMediumItalic.ttf";
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
     <React.StrictMode>
-        <Provider store={store}>
+        <BrowserRouter>
             <App />
-        </Provider>
+            </BrowserRouter>,
     </React.StrictMode>,
     document.getElementById('root')
 );

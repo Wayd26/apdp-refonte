@@ -24,7 +24,7 @@ const TemplateActualityListListCard = () => {
                     </div>
                 </div>
             <div className="actuality-list__card__footer">
-                <button onClick={() => navigate('/template-actuality-item')}>Lire la suite</button>
+                <button onClick={() => navigate('/main-item/2')}>Lire la suite</button>
             </div>
             </div>
 
