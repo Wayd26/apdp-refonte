@@ -37,22 +37,13 @@ const [state, setState] = useState(
         showDropdownDocumentation: false,
         showDropdownDemarches: false,
         showDropdownConformite: false,
-        showDropdownTextesNationaux: false
+        showDropdownTextesNationaux: false,
+        showSub: ""
     }
 )
-
-const [secondMenusParent, setSecondMenusParent] = useState([])
   
  
   const toggle = () => setState({...state, isOpen: state.isOpen })
-
-useEffect(() => {
-  let realParentsMenu = []
-  realParentsMenu = secondMenus.filter(item => item.parent_id == null && item.parent == null)
-  console.log("realParentsMenu ", secondMenus)
-  console.log("realParentsMenu ", realParentsMenu)
-  setSecondMenusParent(realParentsMenu)
-}, [secondMenus])
 
 
 
@@ -80,7 +71,7 @@ useEffect(() => {
 
                             {/* Start the magic */}
 
-                            {secondMenusParent?.map(secondMenu => <h5>
+                            {secondMenus?.map(secondMenu => <h5>
                                 <NavDropdown
                                     onMouseLeave={() => setState({ ...state, showDropdownActualites: false })}
                                     onMouseOver={() => setState({ ...state, showDropdownActualites: true })}
@@ -97,13 +88,9 @@ useEffect(() => {
                                         || window.location.pathname === "/plans-de-passation"
                                         || window.location.pathname === "/appels-d-offres"
                                     }>
-                                    <NavDropdown.Item href="/activites" >Les Activités</NavDropdown.Item>
-                                    <NavDropdown.Item href="/communiques" >Communiqués et Newsletters</NavDropdown.Item>
-                                    <NavDropdown.Item href="" >Sondages</NavDropdown.Item>
-                                    <NavDropdown.Item href="/evenements">Evènements</NavDropdown.Item>
-                                    <NavDropdown.Item href="/arnaque-du-mois">Arnaque du mois</NavDropdown.Item>
-                                    <NavDropdown.Item href="https://www.flickr.com/photos/195909108@N06">Photothèque</NavDropdown.Item>
-                                    <NavDropdown.Item href="/videotheque">Vidéothèque</NavDropdown.Item>
+                                        {secondMenu.children.map(subMenu => 
+                                        <>
+                                    {subMenu.children?.length === 0 ? <NavDropdown.Item href="/activites" >{subMenu.name}</NavDropdown.Item> :
                                     <div>
                                     <DropdownButton
                                         as={ButtonGroup}
@@ -112,15 +99,17 @@ useEffect(() => {
                                         drop={'end'}
                                         variant="none"
                                         size="lg"
-                                        title={`Marchés publics`}                                      
+                                        title={subMenu.name}                                      
                                         onMouseLeave={() => {localStorage.setItem('showDropdownPublicMarkets',false)}}
                                         onMouseOver={() => {localStorage.setItem('showDropdownPublicMarkets',true)}}
                                         show={localStorage.getItem('showDropdownPublicMarkets') === 'true'}
                                     >
-                                        <Dropdown.Item href="/plans-de-passation" eventKey="1">Plan de passation</Dropdown.Item>
-                                        <Dropdown.Item href="/appels-d-offres" eventKey="2">Publication de marché</Dropdown.Item>
+                                        {subMenu.children.map(subSubMenu => <Dropdown.Item href="/plans-de-passation" eventKey="1">{subSubMenu.name}</Dropdown.Item>)}
                                     </DropdownButton>
                                     </div>
+                                    }
+                                        </>
+                                            )}                                   
                                 </NavDropdown>
                             </h5>)}
 
