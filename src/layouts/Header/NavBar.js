@@ -165,7 +165,7 @@ export default class NavBar extends Component {
                                         || window.location.pathname === "/espace-dpo"
                                     }>
                                     <NavDropdown.Item href="/faire-une-demande" >Faire ou modifier une demande</NavDropdown.Item>
-                                    <NavDropdown.Item href="/formulaire/declaration_de_mise_en_conformite_avec_injonctions">Soumettre la déclaration de mise
+                                    <NavDropdown.Item href="/formulaire/declaration_de_mise_en_conformite_avec_les_injonctions">Soumettre la déclaration de mise
                                         en conformité avec les injonctions</NavDropdown.Item>
                                     <NavDropdown.Item href="/statut-demande">Faire une vérification</NavDropdown.Item>
                                     <NavDropdown.Item href="/formulaire/notifier_et_publier_la_designation_du_dpo">Notifier et Publier la désignation

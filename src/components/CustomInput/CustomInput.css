@@ -16,6 +16,14 @@
     }
 }
 
+#input_div input[type=file]::-webkit-file-upload-button{
+    height: 50px !important;
+}
+
+#input_div input[type=text]{
+    line-height: 28px;
+}
+
 /* .form-control {
     margin: 0 10px;
     width: 80%;
