@@ -46,11 +46,11 @@ margin-right: auto;
 }
 
 #your-duties .nav-tabs li.nav-item {
-  font: normal normal bold 13px/28px Roboto;
+  font: normal normal bold 13px/28px Montserrat;
 }
 #your-duties .nav-tabs li.nav-item .active {
   color: #000000 !important;
-  font: normal normal bold 13px/28px Roboto;
+  font: normal normal bold 13px/28px Montserrat;
   letter-spacing: 0px;
   background: #ffffff;
  /* border-top: 10px solid  #4385f6; */

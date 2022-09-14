@@ -111,23 +111,23 @@ const Header = (props) => {
                             {/* <object style={{cursor: "pointer", height: 30, width: 40}}  data={apdp_logo} className="logo" type="image/svg+xml"></object> */}
                         </div>
                         <div className=" d-none d-md-flex header-block-2-div-2 d-flex flex-row justify-content-around">
-                        <div className="col" style={{ color: "#292929", font: "normal normal normal 15px/35px Roboto", cursor: "pointer", width: 'fit-content', flex: 'none', padding: '20px' }}>
+                        <div className="col" style={{ color: "#292929", font: "normal normal normal 20px/35px Montserrat", cursor: "pointer", width: 'fit-content', flex: 'none', padding: '20px' }}>
                                 <a className="code_numerique" target={"_blank"} href={code_numerique} rel={"noopener noreferer"} > CODE DU NUMERIQUE </a>
                             </div>
                             {firstMenus?.map(menu =>
-                                <div className="col" style={{ color: "#292929", font: "normal normal normal 15px/35px Roboto", cursor: "pointer", width: 'fit-content', flex: 'none', padding: '20px' }}>
+                                <div className="col" style={{ color: "#292929", font: "normal normal normal 15px/35px Montserrat", cursor: "pointer", width: 'fit-content', flex: 'none', padding: '20px' }}>
                                     <a className="code_numerique" target={"_blank"} href={code_numerique} rel={"noopener noreferer"} > {menu.name.toUpperCase()}</a>
                                 </div>
                             )}
 
 
                              
-                           {/* <div className="col" style={{ color: "#292929", font: "normal normal normal 15px/35px Roboto", cursor: "pointer", width: 'fit-content', flex: 'none', padding: '20px' }} onClick={handleClickRecommandations}> RECOMMANDATIONS</div>
+                           {/* <div className="col" style={{ color: "#292929", font: "normal normal normal 15px/35px Montserrat", cursor: "pointer", width: 'fit-content', flex: 'none', padding: '20px' }} onClick={handleClickRecommandations}> RECOMMANDATIONS</div>
                             <div className='dropdown'
                                 onMouseLeave={() => setShowDropdownApdp(false)}
                                 onMouseOver={() => setShowDropdownApdp(true)}
                             >
-                                <div className="dropdown-toggle drop-class" style={{ font: "normal normal normal 15px/35px Roboto", cursor: "pointer", width: 'fit-content', flex: 'none', padding: '20px' }}
+                                <div className="dropdown-toggle drop-class" style={{ font: "normal normal normal 15px/35px Montserrat", cursor: "pointer", width: 'fit-content', flex: 'none', padding: '20px' }}
 
                                     type="" data-toggle="dropdown">CONNAITRE L'APDP
                                 </div>

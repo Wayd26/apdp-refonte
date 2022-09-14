@@ -26,7 +26,7 @@ margin-bottom: 40px;
 
 .forum-discussion-title {
     text-align: center;
-font: normal normal bold 35px/48px Roboto;
+font: normal normal bold 35px/48px Montserrat;
 letter-spacing: 0px;
 color: #000000;
 text-shadow: 0px 3px 6px #0000001A;
@@ -36,7 +36,7 @@ opacity: 1;
 
 .forum-discussion-description {
     text-align: center;
-    font: normal normal normal 20px/26px Roboto;
+    font: normal normal normal 20px/26px Montserrat;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
@@ -49,10 +49,10 @@ opacity: 1;
 
 @media only screen and (max-width: 768px) {
     .forum-discussion-title {
-        font: normal normal bold 25px/38px Roboto;
+        font: normal normal bold 25px/38px Montserrat;
     }
     .forum-discussion-description {
-        font: normal normal normal 12px/18px Roboto;
+        font: normal normal normal 12px/18px Montserrat;
     }
     .forum-discussion-box {
         width: 90%;}

@@ -80,7 +80,7 @@ const Footer = () => {
           }}>
             <div className="d-flex flex-column justify-content-center align-items-center" >
 
-              <div style={{ font: "normal normal bold 25px/30px Roboto" }}> Rejoignez-nous</div>
+              <div style={{ font: "normal normal bold 25px/30px Montserrat" }}> Rejoignez-nous</div>
              
               <div style={{
                 fontSize: 15
@@ -189,9 +189,9 @@ const Footer = () => {
                 // width: "max-content"
               }}>
 
-                <div className='d-flex justify-content-left align-items-center'><i className="ri-map-pin-2-fill fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i><span style={{ font: 'normal normal normal 14px/20px Roboto' }}>Rue 6 . 076 El Marzouk Joël  COTONOU</span></div>
-                <div className='d-flex justify-content-left align-items-center'><i className="ri-mail-line fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i><span style={{ font: 'normal normal normal 14px/20px Roboto' }}>contact@apdp.bj</span></div>
-                <div className='d-flex justify-content-left align-items-center'> <i className="ri-phone-fill fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i><span style={{ font: 'normal normal normal 14px/20px Roboto' }}>(+ 229 ) 21 32 57 88</span></div>
+                <div className='d-flex justify-content-left align-items-center'><i className="ri-map-pin-2-fill fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i><span style={{ font: 'normal normal normal 14px/20px Montserrat' }}>Rue 6 . 076 El Marzouk Joël  COTONOU</span></div>
+                <div className='d-flex justify-content-left align-items-center'><i className="ri-mail-line fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i><span style={{ font: 'normal normal normal 14px/20px Montserrat' }}>contact@apdp.bj</span></div>
+                <div className='d-flex justify-content-left align-items-center'> <i className="ri-phone-fill fw-bold mx-1" style={{ fontSize: 30, marginRight: 10 }}></i><span style={{ font: 'normal normal normal 14px/20px Montserrat' }}>(+ 229 ) 21 32 57 88</span></div>
 
 
                 <div className='d-flex  align-items-start'>

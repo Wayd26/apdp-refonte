@@ -5,7 +5,7 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    font: normal normal bold 29px/46px Roboto;
+    font: normal normal bold 29px/46px Montserrat;
     letter-spacing: 0px;
     color: #0B0D39;
     opacity: 1;
@@ -35,7 +35,7 @@
 
 .actuality__item__title {
     text-align: left;
-    font: normal normal bold 28px/48px Roboto;
+    font: normal normal bold 28px/48px Montserrat;
     letter-spacing: 0.11px;
     color: #0B0D39;
     opacity: 1;
@@ -55,7 +55,7 @@
     padding-left: 15px;
     border-left: 2px solid #007BFF;
     text-align: left;
-    font: normal normal normal 20px/29px Roboto;
+    font: normal normal normal 20px/29px Montserrat;
     letter-spacing: 0px;
     color: #000000;
     opacity: 0.7;
@@ -67,7 +67,7 @@
 
 .actuality__item__description {
     text-align: left;
-    font: normal normal 600 16px/30px Roboto;
+    font: normal normal 600 16px/30px Montserrat;
     letter-spacing: 0px;
     color: #7B7B7B;
     opacity: 1;
@@ -86,7 +86,7 @@
     width: 100px;
     height: 35px;
     border-radius: 8px;
-    font: normal normal bolder 14px/18px Roboto;
+    font: normal normal bolder 14px/18px Montserrat;
     letter-spacing: 0px;
     color: #FFFFFF;
 }
@@ -105,7 +105,7 @@
         margin-left: auto;
         margin-right: auto;
         text-align: center;
-        font: normal normal bold 19px/26px Roboto;
+        font: normal normal bold 19px/26px Montserrat;
         letter-spacing: 0px;
         color: #0B0D39;
         opacity: 1;
@@ -135,7 +135,7 @@
     
     .actuality__item__title {
         text-align: left;
-        font: normal normal bold 24px/30px Roboto;
+        font: normal normal bold 24px/30px Montserrat;
         letter-spacing: 0.11px;
         color: #0B0D39;
         opacity: 1;
@@ -155,7 +155,7 @@
         padding-left: 15px;
         border-left: 2px solid #007BFF;
         text-align: left;
-        font: normal normal normal 20px/25px Roboto;
+        font: normal normal normal 20px/25px Montserrat;
         letter-spacing: 0px;
         color: #000000;
         opacity: 0.7;
@@ -166,7 +166,7 @@
     
     .actuality__item__description {
         text-align: left;
-        font: normal normal 600 16px/30px Roboto;
+        font: normal normal 600 16px/30px Montserrat;
         letter-spacing: 0px;
         color: #7B7B7B;
         opacity: 1;
@@ -185,7 +185,7 @@
         width: 100px;
         height: 35px;
         border-radius: 8px;
-        font: normal normal bolder 14px/18px Roboto;
+        font: normal normal bolder 14px/18px Montserrat;
         letter-spacing: 0px;
         color: #FFFFFF;
     }

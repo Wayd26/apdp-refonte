@@ -34,9 +34,9 @@ function App() {
     if(request?.data) {
       console.log("menus ", request.data)
       setMenus(request.data.data)
-      first = request.data?.data.filter(item => item.level == 1)
+      first = request.data?.data.filter(item => item.level == 1 && item.name !== "Code du Numérique")
       console.log("firstMenus ", first)
-      second = request.data?.data.filter(item => item.level == 2)
+      second = request.data?.data.filter(item => item.level == 2 && item.name !== "Vos Démarches")
       console.log("firstMenus ", second)
       setFirstMenus(first)
       setSecondMenus(second)

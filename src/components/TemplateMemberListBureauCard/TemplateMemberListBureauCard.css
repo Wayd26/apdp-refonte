@@ -35,7 +35,7 @@
 .member-bureau-list__card__text-content .description {
     padding: 20px;
     text-align: left;
-    font: normal normal bold 18px/25px Roboto;
+    font: normal normal bold 18px/25px Montserrat;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
@@ -65,7 +65,7 @@
     width: 70px;
     height: 30px;
     border-radius: 8px;
-    font: normal normal bold 14px/18px Roboto;
+    font: normal normal bold 14px/18px Montserrat;
     letter-spacing: 0px;
     color: #FFFFFF;
 }
@@ -78,7 +78,7 @@
     width: 110px;
     height: 30px;
     border-radius: 8px;
-    font: normal normal bold 14px/18px Roboto;
+    font: normal normal bold 14px/18px Montserrat;
     letter-spacing: 0px;
     color: #FFFFFF;
 }
@@ -91,7 +91,7 @@
 
 .member-bureau-list__card__text-content .footer-content__time {
     text-align: left;
-    font: normal normal normal 15px/15px Roboto;
+    font: normal normal normal 15px/15px Montserrat;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
@@ -138,7 +138,7 @@
         margin-top: -30px;
         padding: 15px;
         text-align: left;
-        font: normal normal bold 20px/20px Roboto;
+        font: normal normal bold 20px/20px Montserrat;
         letter-spacing: 0px;
         color: #000000;
         opacity: 1;
@@ -173,7 +173,7 @@
         width: 70px;
         height: 30px;
         border-radius: 8px;
-        font: normal normal bold 14px/18px Roboto;
+        font: normal normal bold 14px/18px Montserrat;
         letter-spacing: 0px;
         color: #FFFFFF;
         margin-right: auto;
@@ -189,7 +189,7 @@
         width: 110px;
         height: 30px;
         border-radius: 8px;
-        font: normal normal bold 14px/18px Roboto;
+        font: normal normal bold 14px/18px Montserrat;
         letter-spacing: 0px;
         color: #FFFFFF;
         margin-right: auto;
@@ -205,7 +205,7 @@
     
     .member-bureau-list__card__text-content .footer-content__time {
         text-align: center;
-        font: normal normal normal 15px/15px Roboto;
+        font: normal normal normal 15px/15px Montserrat;
         letter-spacing: 0px;
         color: #000000;
         opacity: 1;

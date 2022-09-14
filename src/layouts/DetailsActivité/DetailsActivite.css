@@ -4,7 +4,7 @@
 
 #details-activities .details-activities-title {
     text-align: center;
-    font: normal normal bold 38px/48px Roboto;
+    font: normal normal bold 38px/48px Montserrat;
     letter-spacing: 0px;
     color: #000000;
     text-shadow: 0px 3px 6px #0000001A;
@@ -28,7 +28,7 @@
 
 #details-activities .details-activities-subtitle { 
     text-align: left;
-    font: normal normal normal 21px/29px Roboto;
+    font: normal normal normal 21px/29px Montserrat;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
@@ -64,7 +64,7 @@
 
 .popular-activities-title, .categories-title {
     text-align: left;
-    font: normal normal bold 15px/20px Roboto;
+    font: normal normal bold 15px/20px Montserrat;
     letter-spacing: 0px;
     color: #4385F6;
     text-transform: uppercase;
@@ -84,7 +84,7 @@
 .popular-activities-desc {
     text-align: left;
     margin-left: 30px;
-    font: normal normal normal 14px/20px Roboto;
+    font: normal normal normal 14px/20px Montserrat;
     letter-spacing: 0px;
     color: #4D4F5C;
     opacity: 1;
@@ -93,7 +93,7 @@
 
 .categories-items {
     text-align: left;
-    font: normal normal normal 15px/22px Roboto;
+    font: normal normal normal 15px/22px Montserrat;
     letter-spacing: 0px;
     color: #4D4F5C;
     opacity: 1;
@@ -121,7 +121,7 @@
 }
 .activity-card-title {
     text-align: center;
-    font: normal normal bold 22px/23px Roboto;
+    font: normal normal bold 22px/23px Montserrat;
     letter-spacing: 0px;
     color: #4D4F5C;
     opacity: 1;
@@ -129,7 +129,7 @@
 
 .details-activity-card-subtitle {
     text-align: justify;
-    font: normal normal normal 20px/26px Roboto;
+    font: normal normal normal 20px/26px Montserrat;
     letter-spacing: 0px;
     color: #7C7C91;
     opacity: 1;
@@ -141,7 +141,7 @@
 
 .activity-card-date {
     text-align: center;
-    font: normal normal normal 16px/21px Roboto;
+    font: normal normal normal 16px/21px Montserrat;
     letter-spacing: 0px;
     color: #919192;
     opacity: 1;

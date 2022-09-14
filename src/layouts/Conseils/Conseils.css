@@ -1,6 +1,6 @@
 .page-title {
     text-align: center;
-    font: normal normal bold 38px/57px Roboto;
+    font: normal normal bold 38px/57px Montserrat;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
@@ -33,7 +33,7 @@
     color: #4D4F5C;
     text-align: left;
     margin-left: 10px;
-    font-family: Roboto;
+    font-family: Montserrat;
 }
 
 .figure {
@@ -65,13 +65,13 @@
 .advices-second-section-title {
     color: #4385F6;
     font-size: 15px;
-    font-family: Roboto, bold;
+    font-family: Montserrat, bold;
     float: left;
 }
 
 .page-subtitle {
     text-align: center;
-    font: normal normal normal 21px/21px Roboto;
+    font: normal normal normal 21px/21px Montserrat;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
@@ -128,7 +128,7 @@
 
 .advice-card-title {
     font-size: 42px;
-    font-family: Roboto;
+    font-family: Montserrat;
     font-weight: 600;
     margin-bottom: 33px;
     margin-top: 30px;
@@ -174,7 +174,7 @@
 }
 
 .advices-card-text-title-for-presentation {
-    font: "normal normal bold 63px/94px Roboto"; 
+    font: "normal normal bold 63px/94px Montserrat"; 
     letter-spacing: '0px';
     color: '#000000';
     opacity: '1';
@@ -185,11 +185,11 @@
    
 
     .page-title {
-      font: normal normal bold 28px/40px Roboto;
+      font: normal normal bold 28px/40px Montserrat;
       padding: 15px 0px 10px 0px;
     }
     .page-subtitle {
-      font: normal normal normal 14px/22px Roboto;
+      font: normal normal normal 14px/22px Montserrat;
     }
     
 
@@ -233,7 +233,7 @@
 
     .advice-card-title {
         font-size: 20px;
-        font-family: Roboto;
+        font-family: Montserrat;
         font-weight: 600;
         margin-bottom: 20px;
         margin-top: 20px;
@@ -288,7 +288,7 @@
     }
 
     .advices-card-text-title-for-presentation {
-        font: bold 33px / 4px Roboto;
+        font: bold 33px / 4px Montserrat;
         letter-spacing: 0px;
         color: rgb(0, 0, 0);
         opacity: 1;
@@ -311,11 +311,11 @@
 @media only screen and (max-width: 810px) {
 
     .page-title {
-      font: normal normal bold 28px/40px Roboto;
+      font: normal normal bold 28px/40px Montserrat;
       padding: 15px 0px 10px 0px;
     }
     .page-subtitle {
-      font: normal normal normal 14px/22px Roboto;
+      font: normal normal normal 14px/22px Montserrat;
     }
 
     
@@ -360,7 +360,7 @@
 
     .advice-card-title {
         font-size: 20px;
-        font-family: Roboto;
+        font-family: Montserrat;
         font-weight: 600;
         margin-bottom: 20px;
         margin-top: 20px;

@@ -37,7 +37,7 @@ form.form-style input{
   letter-spacing: 0px;
   color: #ffffff;
   opacity: 1;
-  font: normal normal bold 20px/95px Roboto;
+  font: normal normal bold 20px/95px Montserrat;
 }
 
 .prestation-div {
@@ -59,7 +59,7 @@ form.form-style input{
 
 .prestation-div-text {
   text-align: left;
-  font: normal bold normal 23px/28px Roboto;
+  font: normal bold normal 23px/28px Montserrat;
   letter-spacing: 0px;
   color: #292929;
   opacity: 1;
@@ -72,7 +72,7 @@ form.form-style input{
   background: #4385f6 0% 0% no-repeat padding-box;
   border-radius: 12px;
   opacity: 1;
-  font: normal normal bold 16px/20px Roboto;
+  font: normal normal bold 16px/20px Montserrat;
   letter-spacing: 0px;
   color: #ffffff;
   width: 150px;
@@ -104,7 +104,7 @@ form.form-style input{
 
 .rights-duties-title {
   text-align: center;
-  font: normal normal bold 38px/64px Roboto;
+  font: normal normal bold 38px/64px Montserrat;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
@@ -117,7 +117,7 @@ form.form-style input{
 } */
 .rights-duties-text {
   text-align: center;
-  font: normal normal normal 24px/27px Roboto;
+  font: normal normal normal 24px/27px Montserrat;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
@@ -138,7 +138,7 @@ form.form-style input{
 .form-section-title {
   text-align: center;
   text-decoration: underline;
-  font: normal normal bold 18px/24px Roboto;
+  font: normal normal bold 18px/24px Montserrat;
   letter-spacing: 0px;
   /* color: #ffbe00; */
   color: #4385f6;
@@ -146,7 +146,7 @@ form.form-style input{
 }
 .form-section-subtitle {
   text-align: center;
-  font: normal normal bold 38px/64px Roboto;
+  font: normal normal bold 38px/64px Montserrat;
   letter-spacing: 0px;
   color: #14395b;
   text-shadow: 0px 3px 6px #ffffff29;
@@ -189,7 +189,7 @@ form.form-style input{
   letter-spacing: 0px;
   color: #292929;
   opacity: 1;
-  font: normal normal bold 38px/44px Roboto;
+  font: normal normal bold 38px/44px Montserrat;
   margin-top: 7%;
   margin-bottom: auto;
 }
@@ -211,7 +211,7 @@ form.form-style input{
 }
 
 .speech-title {
-  font: normal normal bold 34px/60px Roboto;
+  font: normal normal bold 34px/60px Montserrat;
   letter-spacing: 0px;
   color: #14395b;
   text-shadow: 0px 3px 6px #ffffff29;
@@ -220,7 +220,7 @@ form.form-style input{
 
 .speech-description {
   text-align: justify;
-  font: normal normal normal 20px/33px Roboto;
+  font: normal normal normal 20px/33px Montserrat;
   letter-spacing: 0px;
   color: #292929;
   text-shadow: 0px 3px 6px #00000029;
@@ -291,10 +291,10 @@ form.form-style input{
 
 @media only screen and (max-width: 578px) {
   .rights-duties-title {
-    font: normal normal bold 30px/24px Roboto;
+    font: normal normal bold 30px/24px Montserrat;
   }
   .rights-duties-text {
-    font: normal normal normal 20px/25px Roboto;
+    font: normal normal normal 20px/25px Montserrat;
     margin-bottom: 15px;
   }
   .rights-duties-section {
@@ -302,14 +302,14 @@ form.form-style input{
   }
 
   .form-section-subtitle {
-    font: normal normal bold 38px/54px Roboto;
+    font: normal normal bold 38px/54px Montserrat;
   }
 
   .guide-faq-title {
-    font: normal normal bold 38px/47px Roboto;
+    font: normal normal bold 38px/47px Montserrat;
   }
   .guide-faq-subtitle {
-    font: normal normal normal 14px/22px Roboto;
+    font: normal normal normal 14px/22px Montserrat;
   }
 }
 

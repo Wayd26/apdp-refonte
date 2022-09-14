@@ -13,8 +13,8 @@
       <rect id="surface-2" data-name="surface" width="255" height="284" rx="12" transform="translate(28 28)" fill="#fff"/>
     </g>
     <g id="text" transform="translate(23 129)">
-      <text id="body" transform="translate(0 45)" fill="#273b60" font-size="14" font-family="Roboto" font-weight="500"><tspan x="0" y="14">Lorem Ipsum Dolor Sit </tspan><tspan x="0" y="38">Amet, Consectetur </tspan></text>
-      <text id="headline" transform="translate(0)" fill="#273b60" font-size="20" font-family="Roboto" font-weight="600" letter-spacing="-0.02em"><tspan x="0" y="19">Particulier</tspan></text>
+      <text id="body" transform="translate(0 45)" fill="#273b60" font-size="14" font-family="Montserrat" font-weight="500"><tspan x="0" y="14">Lorem Ipsum Dolor Sit </tspan><tspan x="0" y="38">Amet, Consectetur </tspan></text>
+      <text id="headline" transform="translate(0)" fill="#273b60" font-size="20" font-family="Montserrat" font-weight="600" letter-spacing="-0.02em"><tspan x="0" y="19">Particulier</tspan></text>
     </g>
   </g>
 </svg>
