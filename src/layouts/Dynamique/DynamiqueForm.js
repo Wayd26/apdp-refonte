@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import CustomInput from '../../components/CustomInput/CustomInput';
-import {Label, Form, Button} from 'reactstrap';
+import {Label, Form, Button, Input} from 'reactstrap';
 import {ImSad, ImHappy} from "react-icons/im";
 import './Dynamique.css';
 import {getForm, submitFormSection, getRequestedQuery} from '../../http/http';
 import { ToastContainer, toast } from 'react-toastify';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import { Stepper, Step } from 'react-form-stepper';
 
 export default function DynamiqueForm() {
     const [formData, setFormData] = useState({
@@ -14,7 +15,7 @@ export default function DynamiqueForm() {
     });
     const [current, setCurrent] = useState(0);
     const [final, setFinal] = useState(false);
-    const [preview, setPreview] = useState(false);
+    const [responseCounter, setResponseCounter] = useState(0);
     const [formulaire, setFormulaire] = useState(null);
     const [currentDependentSection, setCurrentDependentSection] = useState(null);
     const [filledSections, setFilledSections] = useState(0);
@@ -121,7 +122,9 @@ export default function DynamiqueForm() {
         console.log("FOOORRRMMMM DATAAAA", formData);
         const responseSubmit = await submitFormSection(formulaire.data.id, formulaire.data.sections[current].id, formData);
         console.log("RESSSSSSSS", responseSubmit);
+        console.log("FINAL", final);
         setRefNumber(responseSubmit.data.data[0].submit_id);
+        setResponseCounter(formData.answers.length);
         const queryResponse = await getRequestedQuery(refNumber);
         setQuery(queryResponse.data.data);
         var answersFormArray = [];
@@ -136,26 +139,28 @@ export default function DynamiqueForm() {
             }
         }
         try {
-            for (let index = 0; index < queryResponse.data.data.answers.length; index++) {
-                const answer = queryResponse.data.data.answers[index];
+            let temp_answers_form = [];
+            let queryResponseReversed = queryResponse.data.data.answers.reverse();
+            for (let index = 0; index < queryResponseReversed.length; index++) {
+                const answer = queryResponseReversed[index];
                 for (let newIdex = 0; newIdex < questionsArray.length; newIdex++) {
                     const question = questionsArray[newIdex];
-                    // console.log(answer, question, answer.question_id == question.id);
                     if (answer.question_id == question.id) {
-                        answersFormArray.push({'question': question.name, 'answer': answer.answer_text})
+                        if (!temp_answers_form.includes(question.name)){
+                            answersFormArray.push({'question': question.name, 'answer': answer.answer_text});
+                            temp_answers_form.push(question.name);
+                        }
                     }
                 }
             }
-            // console.log(questionsArray.length);
-            console.log(answersFormArray);
-            console.log("queryResponse", queryResponse);
-            setAnswersForm(answersFormArray);
+            setAnswersForm(answersFormArray.reverse());
         } catch (error) {
             console.log("Not ready yet!!!")   
         }
         setFilledSections(filledSections+1);
         localStorage.setItem('last_section_submitted', responseSubmit.data.data['last_submitted_section']);
         if (final){
+            console.log("Last submit!!!", final, responseSubmit);
             try {
                 if (responseSubmit.data.success){
                     toast.success("Formulaire soumis !!!");
@@ -168,51 +173,58 @@ export default function DynamiqueForm() {
             setCurrent(current+1)
         } else {
             if (formulaire.data.sections[current].type !== 'standard'){
-                // console.log('Ce n\'est pas une section standard');
                 setCurrentDependentSection(null);
                 setCurrent(parseInt(localStorage.getItem('last_standard_section')) + 1);
                 localStorage.setItem('last_standard_section', '');
             } else {
-                // console.log('Ce n\'est pas une section dépendante');
                 if (currentDependentSection) {
-                    // console.log('Une section de redirection existe: ', currentDependentSection);
                     for (let f = 0; f < formulaire.data.sections.length; f++) {
                         const element = formulaire.data.sections[f];
                         if (String(element.id) === currentDependentSection){
                             setCurrent(formulaire.data.sections.indexOf(element));
-                            // console.log('Redirigeons vers la section à l\'index ', formulaire.data.sections.indexOf(element))
                         }
                     }
                 } else {
-                    // console.log('Rien à faire! Passons à la section suivante...')
                     setCurrent(current + 1);
                 }
             }
         }
     }
 
+    if (formulaire && formulaire.data.sections.length > 1){
+        var stepper = <div className='stepper-div'>
+            <Stepper activeStep={current} connectorStyleConfig={{ disabledColor: 'white', activeColor: 'blue', size: 3 }} styleConfig={{ inactiveBgColor: 'white', inactiveTextColor: 'white', activeTextColor: '#2b71d3', activeBgColor: '#2b71d3', size: 30, labelFontSize: '1.5rem', circleFontSize: '1.5rem' }} hideConnectors={false}>
+                {formulaire && formulaire.data.sections.map((section) => (
+                    <Step style={{margin: '0px 50px'}}/>
+                ))}
+            </Stepper>
+        </div>
+    } else {
+        var stepper = ""
+    }
+
     if (formulaire && formulaire.data.sections.length > 1 && filledSections >= formulaire.data.sections.length - dependentSections.length && localStorage.getItem('preview') == "true"){
-        var endFormButton = <div id='button-submit'> <Button className="auth-form-btn" type="submit"  onClick={(e) => {
+        var endFormButton = <div id='button-submit'> <Button style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} className="auth-form-btn" type="submit"  onClick={(e) => {
             setFinal(true);
             localStorage.setItem('preview',false);
         }}>
             Soumettre
         </Button></div>
     } else if(formulaire && formulaire.data.sections.length > 1 && filledSections >= formulaire.data.sections.length - dependentSections.length && localStorage.getItem('preview') == "false"){
-        var endFormButton = <div id='button-next'><Button className="auth-form-btn" type="submit" onClick={(e) => {
+        var endFormButton = <div id='button-next'><Button style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} className="auth-form-btn" type="submit" onClick={(e) => {
             localStorage.setItem('preview',true);
         }}>
         Prévisualiser
     </Button></div>
     } else if(formulaire && formulaire.data.sections.length == 1){
-        var endFormButton = <div id='button-submit'> <Button className="auth-form-btn" type="submit"  onClick={(e) => {
+        var endFormButton = <div id='button-submit'> <Button  style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} type="submit"  onClick={(e) => {
             setFinal(true);
             localStorage.setItem('preview',false);
         }}>
             Soumettre
         </Button></div>
     } else {
-        var endFormButton = <div id='button-next'><Button className="auth-form-btn" type="submit" onClick={(e) => {
+        var endFormButton = <div id='button-next'><Button  style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} className="auth-form-btn" type="submit" onClick={(e) => {
             setFinal(false);
         }}>
             Suivant
@@ -240,40 +252,33 @@ export default function DynamiqueForm() {
             } else {
                 return (
                     <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
-                        <Breadcrumb style={{ width: '100%' }}>
+                        {/* <Breadcrumb style={{ width: '100%' }}>
                             <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
                             <Breadcrumb.Item href="#">Vos démarches</Breadcrumb.Item>
                             <Breadcrumb.Item href="#">Faire ou modifier une demande</Breadcrumb.Item>
                             <Breadcrumb.Item active>{formulaire.data.name}</Breadcrumb.Item>
-                        </Breadcrumb>
+                        </Breadcrumb> */}
                         <ToastContainer />
-                        <Form className="form-style" onSubmit={handleSubmit}>
-                            {/* <Stepper activeStep={current}>
-                            
-                                {formulaire && formulaire.data.sections.map((section) => (
-                                    <Step label={section.name} />    
-                                ))}</Stepper> */}
-                            <h2 style={{ marginBottom: '50px', fontSize: 'large' }}>{formulaire.data.sections[current]?.name}</h2>
-            
-                            <div className="row">
-                                {formulaire && formulaire.data.sections[current].questions.map((field) => (
-                                    <div>
-                                        <CustomInput key={field.id} field={field} updateValue={updateFormData} updateDependentSection={updateDependentSection}/>
-                                    </div>
+                        {stepper}
+                        <div className={"query"} id={"query"} style={{ paddingTop: "40px", paddingBottom: "40px", width: "80%", margin: "auto"}}>
+                            {/* Title */}
+                            <h4 className={'page-title-query'} style={{background: "#4385f6 0% 0% no-repeat padding-box", paddingTop: "40px", paddingBottom: "40px", borderRadius: "5px", fontWeight: 300, fontSize: 'x-large'}}>{formulaire.data.name.toUpperCase()}</h4>
+
+
+                            <form onSubmit={handleSubmit} style={{background: "#ffffff", paddingTop: "40px", paddingBottom: "40px", paddingRight: "10%", paddingLeft: "10%", borderRadius: "5px", textAlign: "left",}}>
+                                <div className="row">
+                                    {formulaire && formulaire.data.sections[current].questions.map((field) => (
+                                        <div class="col-sm-6">
+                                            <CustomInput key={field.id} field={field} updateValue={updateFormData} updateDependentSection={updateDependentSection}/>
+                                        </div>
                                     ))
-                                }
-                            </div>
-                            <div>
-                                {/* {current > 0 && (<div id='button-previous'>
-                                    
-                                    <Button className="auth-form-btn" style={{ float: 'left' }} onClick={(e) => prev(e)}>
-                                        Précédent
-                                    </Button>
-                                </div>)} */}
-                                
-                                { endFormButton}
-                            </div>
-                        </Form>
+                                    }
+                                </div>
+                                <div>
+                                    {endFormButton}
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 )
             }
@@ -316,22 +321,25 @@ export default function DynamiqueForm() {
                         <Breadcrumb.Item href="#">Détails de la demande</Breadcrumb.Item>
                     </Breadcrumb>
                     <ToastContainer />
-                    <Form className="form-style">
-                        <div className='form-content'>
-                            <h2 style={{ marginBottom: '50px', fontSize: 'large' }}>{formulaire.data.name}</h2>
-                            <div className="row" style={{ textAlign: 'left' }}>
-                                {answersForm.map((answer) => (
-                                    <div>
-                                        <Label 
-                                            string={answer.question}
-                                            style={{ marginTop: 5, fontWeight: 'bold' }}>
-                                            {answer.question}
-                                        </Label>
-                                        <p>{answer.answer}</p>
-                                    </div>
-                                    ))
-                                }
-                            </div>
+                    <Form className="form-style" onSubmit={handleSubmit}>
+                        <h2 style={{ marginBottom: '50px', fontSize: 'large' }}>{formulaire.data.name}</h2>
+                        <div className="row" style={{ textAlign: 'left' }}>
+                            {answersForm.map((answer) => (
+                                <div>
+                                    <Label 
+                                        string={answer.question}
+                                        style={{ marginTop: 5, fontWeight: 'bold' }}>
+                                        {answer.question}
+                                    </Label>
+                                    <p>{answer.answer}</p>
+                                </div>
+                                ))
+                            }
+                            {/* <Input 
+                                className="form-control"
+                                type="text"
+                                name="Hidden"
+                            /> */}
                         </div>
                         <div>
                             {endFormButton}

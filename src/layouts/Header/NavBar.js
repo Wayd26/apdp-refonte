@@ -201,11 +201,11 @@ const NavBar = (props) => {
                             </NavDropdown>
                         </h5>
 
-                    </Nav>
-                </Collapse>
-            </Navbar>
+                    </Nav >
+                </Collapse >
+            </Navbar >
 
-        </React.Fragment>
+        </React.Fragment >
     )
 
 }
