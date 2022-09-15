@@ -5,7 +5,7 @@ import image from '.././../assets/images/img7.jpg'
 const MemberItemTemplate = () => {
     return (
         <div className='member__item-template'>
-            <img src={image} alt="" />
+            <img src={image} alt="member-img" />
 
             <div class="name">Prénom Nom</div>
             <div class="job">Conseiller</div>

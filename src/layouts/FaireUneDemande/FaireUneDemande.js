@@ -49,50 +49,7 @@ const FaireUneDemande = () => {
                   />
               </div>
             )}
-            {/* <div className="col-sm-4 col-xs-12">
-              <FaireUneDemandeCard
-                handleCardClicked={() => {
-                  navigate("/formulaire/plainte")
-                }}
-                title={"Déposer une plainte"}
-                description={
-                  "Loolor sit amet, lorem ipsum coay ipsum consetetur sadipscing elitr, sed diam nonumy eirmod tempor"
-                }
-              />
-            </div>
-            <div className="col-sm-4 col-xs-12">
-              <FaireUneDemandeCard
-                handleCardClicked={() => {
-                  navigate("/formulaire/commande_pictogramme")
-                }}
-                title={"Commander pictogramme, étiquette et marquage d’affiche"}
-                description={
-                  "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor"
-                }
-              />
-            </div>
-            <div className="col-sm-4 col-xs-12">
-              <FaireUneDemandeCard
-                handleCardClicked={() => {
-                  navigate("/formulaire/demande_evaluation_conformite")
-                }}
-                title={"Demander une évaluation de conformité"}
-                description={
-                  "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor"
-                }
-              />
-            </div>
-            <div className="col-sm-4 col-xs-12">
-              <FaireUneDemandeCard
-                handleCardClicked={() => {
-                  navigate("/formulaire/projet_code_de_conduite")
-                }}
-                title={"Soumettre un projet de code de conduite"}
-                description={
-                  "Loolor sit amet, lorem ipsum coay ipsum consetetur sadipscing elitr, sed diam nonumy eirmod tempor"
-                }
-              />
-            </div> */}
+          
           </div>
         </div>
       </div>

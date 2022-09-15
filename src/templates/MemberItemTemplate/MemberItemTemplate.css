@@ -1,4 +1,6 @@
-.member__item-template {}
+.member__item-template {
+
+}
 
 .member__item-template img {
     width: 220px;
@@ -33,11 +35,14 @@
 .member__item-template .text-content {
     background: #ffffff 0% 0% no-repeat padding-box;
     opacity: 1;
-    width: 90%;
+    width: 80%;
     box-shadow: rgb(219, 208, 208) 0px 3px 6px, rgb(51, 48, 48) 0px 3px 6px;
     padding: 30px;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 30px;
     text-align: left;
+    max-width: 800px;
+    font: normal normal normal 22px/30px Montserrat;
+
 }
