@@ -1,17 +1,19 @@
 import React from 'react'
 import './TemplateActualityListCard.css'
 import image from '.././../assets/images/img7.jpg'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 const TemplateActualityListListCard = (props) => {
  
 
     const {id, title, content, created_at, document_url, image_url, sub_title} = props
     const navigate = useNavigate()
+  const {menu} = useParams()
+
     return (
         <div className='actuality-list__card d-flex flex-wrap'>
             <div className="actuality-list__card__image">
-                <img src={image} alt="" />
+                <img src={image_url ? image_url : image} alt="" />
             </div>
             <div className="actuality-list__card__content">
                 <div class="content__text">
@@ -22,7 +24,7 @@ const TemplateActualityListListCard = (props) => {
                     </div>
                 </div>
             <div className="actuality-list__card__footer">
-                <button onClick={() => navigate(`/main-item/${id}`)}>Lire la suite</button>
+                <button onClick={() => navigate(`/actualites/${menu}/${id}`)}>Lire la suite</button>
             </div>
             </div>
 

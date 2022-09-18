@@ -24,6 +24,17 @@ const Header = (props) => {
     const [breaknews, setBreaknews] = useState([]);
     const [showDropdownApdp, setShowDropdownApdp] = useState(false);
 
+    const navigate = useNavigate()
+
+    const [state, setState] = useState(
+        {
+            showSub: "",
+            showSubSub: ""
+        }
+    )
+
+    const [activeMenu, setActiveMenu] = useState("")
+
 
 
     const handleViewBreaknews = (id) => {
@@ -80,9 +91,9 @@ const Header = (props) => {
     //      }, [])
 
     useEffect(() => {
-      console.log("firstMenus ", firstMenus)
+        console.log("firstMenus ", firstMenus)
     }, [])
-    
+
 
     return (
         <>
@@ -111,41 +122,49 @@ const Header = (props) => {
                             {/* <object style={{cursor: "pointer", height: 30, width: 40}}  data={apdp_logo} className="logo" type="image/svg+xml"></object> */}
                         </div>
                         <div className=" d-none d-md-flex header-block-2-div-2 d-flex flex-row justify-content-around">
-                        <div className="col" style={{ color: "#292929", font: "normal normal normal 20px/35px Montserrat", cursor: "pointer", width: 'fit-content', flex: 'none', padding: '20px' }}>
+                            <div className="col" style={{ color: "#292929", font: "normal normal normal 20px/35px Montserrat", cursor: "pointer", width: 'fit-content', flex: 'none', padding: '20px' }}>
                                 <a className="code_numerique" target={"_blank"} href={code_numerique} rel={"noopener noreferer"} > CODE DU NUMERIQUE </a>
                             </div>
-                            {firstMenus?.map(menu =>
-                                <div className="col" style={{ color: "#292929", font: "normal normal normal 15px/35px Montserrat", cursor: "pointer", width: 'fit-content', flex: 'none', padding: '20px' }}>
-                                    <a className="code_numerique" target={"_blank"} href={code_numerique} rel={"noopener noreferer"} > {menu.name.toUpperCase()}</a>
-                                </div>
+                            {firstMenus?.map((sub, index) =>
+                                // 
+                                <>{sub.children?.length == 0 ? 
+                                <div 
+                                 key={index}
+                                 className="col" 
+                                 style={{color: "#292929", font: "normal normal normal 20px/35px Montserrat", cursor: "pointer", width: 'fit-content', flex: 'none', padding: '20px'}} 
+                                // onClick={() => console.log()}
+                                > {sub.name.toUpperCase()}</div> :
+                                <div className='dropdown'
+                                    onMouseLeave={() => setState({ ...state, showSub: "" })}
+                                    onMouseOver={() => setState({ ...state, showSub: sub.name })}
+                                >
+                                    <div className="dropdown-toggle drop-class" style={{ font: "normal normal normal 20px/35px Montserrat", cursor: "pointer", width: 'fit-content', flex: 'none', padding: '20px' }}
+
+                                        type="" data-toggle="dropdown">{sub.name.toUpperCase()}
+                                    </div>
+                                    <ul className={state.showSub == sub.name ? "dropdown-menu show" : "dropdown-menu"}>
+                                        {sub.children.map((subItem, index) =>
+                                            <li key={index}><a tabIndex="-1" href="/autorite" onClick={() => {
+                                                setActiveMenu(subItem.parent_id)
+                                                localStorage.setItem('active-menu', JSON.stringify(activeMenu))
+                                                navigate(`/${subItem?.model}/${subItem?.slug}`)
+                                            }}>{subItem.name}</a></li>)}
+
+                                    </ul>
+                                </div>}
+                                </>
+
+
+
+                                // 
+                                // <div className="col" style={{ color: "#292929", font: "normal normal normal 15px/35px Montserrat", cursor: "pointer", width: 'fit-content', flex: 'none', padding: '20px' }}>
+                                //     {menu.name.toUpperCase()}
+                                // </div>
                             )}
 
 
-                             
-                           {/* <div className="col" style={{ color: "#292929", font: "normal normal normal 15px/35px Montserrat", cursor: "pointer", width: 'fit-content', flex: 'none', padding: '20px' }} onClick={handleClickRecommandations}> RECOMMANDATIONS</div>
-                            <div className='dropdown'
-                                onMouseLeave={() => setShowDropdownApdp(false)}
-                                onMouseOver={() => setShowDropdownApdp(true)}
-                            >
-                                <div className="dropdown-toggle drop-class" style={{ font: "normal normal normal 15px/35px Montserrat", cursor: "pointer", width: 'fit-content', flex: 'none', padding: '20px' }}
 
-                                    type="" data-toggle="dropdown">CONNAITRE L'APDP
-                                </div>
-                                <ul className={showDropdownApdp == true ? "dropdown-menu show" : "dropdown-menu"}>
-                                    <li><a tabIndex="-1" href="/autorite">L' autorité</a></li>
-                                    <li><a tabIndex="-1" href="/mission">Mission</a></li>
-                                    <li><a tabIndex="-1" href="/membres">Mandature en cours et Historique des membres</a></li>
 
-                                    <li><a tabIndex="-1" href="/commissaire">Commissariat du Gouvernement</a></li>
-
-                                    <li><a tabIndex="-1" href="/cooperations">Coopération</a></li>
-
-                                    <li><a tabIndex="-1" href="/mentions-legales">Mentions Légales</a></li>
-
-                                    <li><a tabIndex="-1" href="/contact">Contact</a></li>
-
-                                </ul>
-                            </div> */}
                         </div>
 
                         {localStorage.getItem("user_token") ? <div>

@@ -90,7 +90,7 @@ const NavBar = (props) => {
                                         {subMenu.children?.length === 0 ? <NavDropdown.Item key={index+"p"} onClick={() => {
                                             setActiveMenu(subMenu.parent_id)
                                             localStorage.setItem('active-menu', JSON.stringify(subMenu))
-                                            navigate("/main")
+                                            navigate(`/${subMenu?.model}/${subMenu?.slug}`)
                                         }
                                         }
                                         // href="/main" 
@@ -114,7 +114,7 @@ const NavBar = (props) => {
                                                         onClick={() => {
                                                             setActiveMenu(subMenu.parent_id)
                                                             localStorage.setItem('active-menu', JSON.stringify(subSubMenu))
-                                                            navigate("/main")
+                                                            navigate(`/${subSubMenu?.model}/${subSubMenu?.slug}`)
                                                         }} eventKey="1">{subSubMenu.name}</Dropdown.Item>)}
                                                 </DropdownButton>
                                             </div>
@@ -126,52 +126,6 @@ const NavBar = (props) => {
 
                         {/* End the magic */}
 
-
-
-                        {/* Actualités */}
-                        {/* <h5>
-                                <NavDropdown
-                                    onMouseLeave={() => setState({ ...state, showDropdownActualites: false })}
-                                    onMouseOver={() => setState({ ...state, showDropdownActualites: true })}
-                                    show={state.showDropdownActualites}
-                                    className={"nav-link-title nav-item-custom"} title={"ACTUALITÉS "} id="navbarScrollingDropdown"
-                                    active={window.location.pathname === "/activites"
-                                        || window.location.pathname === "/communiques"
-                                        || window.location.pathname === "/communique/:id"
-                                        || window.location.pathname === "/evenements"
-                                        || window.location.pathname === "/evenement/:id"
-                                        || window.location.pathname === "/arnaque-du-mois"
-                                        || window.location.pathname === "/phototheque"
-                                        || window.location.pathname === "/videotheque"
-                                        || window.location.pathname === "/plans-de-passation"
-                                        || window.location.pathname === "/appels-d-offres"
-                                    }>
-                                    <NavDropdown.Item href="/activites" >Les Activités</NavDropdown.Item>
-                                    <NavDropdown.Item href="/communiques" >Communiqués et Newsletters</NavDropdown.Item>
-                                    <NavDropdown.Item href="" >Sondages</NavDropdown.Item>
-                                    <NavDropdown.Item href="/evenements">Evènements</NavDropdown.Item>
-                                    <NavDropdown.Item href="/arnaque-du-mois">Arnaque du mois</NavDropdown.Item>
-                                    <NavDropdown.Item href="https://www.flickr.com/photos/195909108@N06">Photothèque</NavDropdown.Item>
-                                    <NavDropdown.Item href="/videotheque">Vidéothèque</NavDropdown.Item>
-                                    <div>
-                                    <DropdownButton
-                                        as={ButtonGroup}
-                                        key={'end'}
-                                        id={`dropdown-button-drop-end`}
-                                        drop={'end'}
-                                        variant="none"
-                                        size="lg"
-                                        title={`Marchés publics`}                                      
-                                        onMouseLeave={() => {localStorage.setItem('showDropdownPublicMarkets',false)}}
-                                        onMouseOver={() => {localStorage.setItem('showDropdownPublicMarkets',true)}}
-                                        show={localStorage.getItem('showDropdownPublicMarkets') === 'true'}
-                                    >
-                                        <Dropdown.Item href="/plans-de-passation" eventKey="1">Plan de passation</Dropdown.Item>
-                                        <Dropdown.Item href="/appels-d-offres" eventKey="2">Publication de marché</Dropdown.Item>
-                                    </DropdownButton>
-                                    </div>
-                                </NavDropdown>
-                            </h5> */}
 
 
 

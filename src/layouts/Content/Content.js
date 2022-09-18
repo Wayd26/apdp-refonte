@@ -93,8 +93,17 @@ const Content = () => {
                     <Route path="/query/:form_type/:query_id" element={<DetailsDemande />} />
 
                     
-                    <Route path="/main" element={<Core />} />
-                    <Route path="/main-item/:id" element={<CoreItem />} />
+                    <Route path="/actualites/:menu" element={<Core model={"actualites"}/>} />
+                    <Route path="/actualites/:menu/:id" element={<CoreItem />} />
+
+                    <Route path="/communiques/:menu" element={<Core model={"communiques"}/>} />
+                    <Route path="/communiques/:menu/:id" element={<CoreItem />} />
+
+                    <Route path="/documentations/:menu" element={<Core model={"documentations"}/>} />
+                    <Route path="/documentations/:menu/:id" element={<CoreItem />} />
+
+                    <Route path="/videotheque/:menu" element={<Core model={"videotheque"}/>} />
+                    <Route path="/videotheque/:menu/:id" element={<CoreItem />} />
 
                     
                     {/* <Route path="/activites" element={<Activites />} />

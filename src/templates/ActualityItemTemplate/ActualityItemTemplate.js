@@ -7,7 +7,7 @@ import { getATypeOfArticles } from '../../http/http'
 
 const ActualityItemTemplate = () => {
     const navigate = useNavigate()
-    let { id } = useParams();
+    let { id, menu } = useParams();
 
     const [data, setData] = useState();
   const [activeMenu, setActiveMenu] = useState(null)
@@ -21,10 +21,10 @@ const ActualityItemTemplate = () => {
 
     useEffect(() => {
         loadData();
-    }, [id, activeMenu])
+    }, [id, menu])
 
      const loadData = async () => {
-        const resp = await getATypeOfArticles(activeMenu?.slug)
+        const resp = await getATypeOfArticles(menu)
         if(resp.response && resp.response.status !== 200){
             // console.log("data error ", resp.response)
         } else {
@@ -55,7 +55,7 @@ const ActualityItemTemplate = () => {
                     </div>
                     <div class="actuality__item__description" dangerouslySetInnerHTML={{__html: (data && data[0]?.content)}}>
                     </div>
-                    <button onClick={() => navigate('/template-actuality')} className="actuality__item__button">Retour</button>
+                    <button onClick={() => navigate(`/actualites/${menu}`)} className="actuality__item__button">Retour</button>
                 </div>
             </div>
         </div>
