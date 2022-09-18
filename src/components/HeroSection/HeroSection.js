@@ -5,7 +5,7 @@ const HeroSection = () => {
     const [active, setActive] = useState("")
   return (
     <div>
-        <div class="big__section"></div>
+        <div className="big__section"></div>
         {/* <div class="submenu__section">
             <div onClick={e => setActive(e.target.innerHTML)} className={active == 'Activités' ? 'submenu__item submenu__item__active' :'submenu__item'}>Activités</div>
             <div onClick={e => setActive(e.target.innerHTML)} className={active == 'Communiqués et Newsletters'? 'submenu__item submenu__item__active' :'submenu__item'}>Communiqués et Newsletters</div>

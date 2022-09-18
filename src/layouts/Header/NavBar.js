@@ -85,11 +85,11 @@ const NavBar = (props) => {
                                 active={
                                     secondMenu.id == activeMenu
                                 }>
-                                {secondMenu.children.map(subMenu =>
+                                {secondMenu.children.map((subMenu, index) =>
                                     <>
-                                        {subMenu.children?.length === 0 ? <NavDropdown.Item onClick={() => {
+                                        {subMenu.children?.length === 0 ? <NavDropdown.Item key={index+"p"} onClick={() => {
                                             setActiveMenu(subMenu.parent_id)
-                                            localStorage.setItem('subMenu', JSON.stringify(subMenu))
+                                            localStorage.setItem('active-menu', JSON.stringify(subMenu))
                                             navigate("/main")
                                         }
                                         }
@@ -108,11 +108,12 @@ const NavBar = (props) => {
                                                     onMouseOver={() => { localStorage.setItem('showSubSub', subMenu.name) }}
                                                     show={localStorage.getItem('showSubSub') == subMenu.name}
                                                 >
-                                                    {subMenu.children.map(subSubMenu => <Dropdown.Item
+                                                    {subMenu.children.map((subSubMenu, index) => <Dropdown.Item
+                                                    key={index}
                                                         // href="/main"     
                                                         onClick={() => {
                                                             setActiveMenu(subMenu.parent_id)
-                                                            localStorage.setItem('subSubMenu', JSON.stringify(subSubMenu))
+                                                            localStorage.setItem('active-menu', JSON.stringify(subSubMenu))
                                                             navigate("/main")
                                                         }} eventKey="1">{subSubMenu.name}</Dropdown.Item>)}
                                                 </DropdownButton>
