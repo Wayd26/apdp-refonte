@@ -144,9 +144,9 @@ const Header = (props) => {
                                     </div>
                                     <ul className={state.showSub == sub.name ? "dropdown-menu show" : "dropdown-menu"}>
                                         {sub.children.map((subItem, index) =>
-                                            <li key={index}><a tabIndex="-1" href="/autorite" onClick={() => {
+                                            <li key={index}><a tabIndex="-1" onClick={() => {
                                                 setActiveMenu(subItem.parent_id)
-                                                localStorage.setItem('active-menu', JSON.stringify(activeMenu))
+                                                localStorage.setItem('active-menu', JSON.stringify(sub))
                                                 navigate(`/${subItem?.model}/${subItem?.slug}`)
                                             }}>{subItem.name}</a></li>)}
 

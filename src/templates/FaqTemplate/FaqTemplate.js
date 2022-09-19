@@ -9,6 +9,7 @@ import { getATypeOfArticles, getFaq } from '../../http/http';
 import FaqElement from '../../components/FaqElement/FaqElement';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import { ImTelegram } from 'react-icons/im';
+import HeroSection from '../../components/HeroSection/HeroSection'
 
 const FaqTemplate = () => {
     const [faq, setFaq] = useState([]);
@@ -57,12 +58,14 @@ const FaqTemplate = () => {
 
     return (
         <div style={{ background: "#F7F7F7", marginBottom: 40 }}>
-            <Breadcrumb>
+            {/* <Breadcrumb>
                 <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
                 <Breadcrumb.Item href="#">Régime de protection de deonnées</Breadcrumb.Item>
                 <Breadcrumb.Item active>FAQ</Breadcrumb.Item>
-            </Breadcrumb>
+            </Breadcrumb> */}
             {/* <ActualiteCarousel /> */}
+        <HeroSection />
+
             <div className="faq-container">
 
                 <img src={faq_image} className="faq-image" />

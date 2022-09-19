@@ -26,6 +26,7 @@ const changePage = ({ selected }) => {
 useEffect(() => {
   loadArticlesData();
     console.log("Articles data load", articles)
+    console.log("menu load", menu)
 }, [pageNumber, menu])
 
 const loadArticlesData = async () => {

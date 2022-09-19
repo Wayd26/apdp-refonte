@@ -17,6 +17,7 @@
     -moz-border-radius: 0px !important;
     -ms-border-radius: 0px !important;
     -o-border-radius: 0px !important;
+    box-shadow: rgb(202, 188, 188) 0px 3px 6px, rgb(156, 146, 146) 0px 3px 6px;
 }
 
 .carousel-indicators {

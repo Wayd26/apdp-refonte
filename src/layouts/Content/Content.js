@@ -105,6 +105,15 @@ const Content = () => {
                     <Route path="/videotheque/:menu" element={<Core model={"videotheque"}/>} />
                     <Route path="/videotheque/:menu/:id" element={<CoreItem />} />
 
+                    <Route path="/membres/:menu" element={<Core model={"membres"}/>} />
+                    <Route path="/biographique/:menu" element={<Core model={"biographique"} />} />
+                    <Route path="/mise_en_conformite/:menu" element={<Core model={"mise_en_conformite"} />} />
+                    
+                    
+
+                    <Route path="/faqs/:menu" element={<Core model={"faqs"}/>} />
+                    {/* <Route path="/faqs/:menu/:id" element={<CoreItem />} /> */}
+
                     
                     {/* <Route path="/activites" element={<Activites />} />
                     <Route path="/communiques" element={<Communiques />} />

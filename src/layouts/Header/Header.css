@@ -277,7 +277,6 @@ max-height: 30px !important; }
   .hmove { animation: tickerh linear 50s infinite; }
   .hmove:hover { animation-play-state: paused; }
 
-
 .c-btn-dropdown {
     border: none !important;
     background-color: unset !important;
@@ -286,4 +285,10 @@ max-height: 30px !important; }
 
 .c-btn-dropdown:hover, .c-btn-dropdown:active, .c-btn-dropdown:focus {
     background-color: #FFC03A !important;
+}
+
+.hitem {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
 }

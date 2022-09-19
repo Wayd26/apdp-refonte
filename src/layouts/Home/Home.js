@@ -73,8 +73,8 @@ const Home = () => {
   return (
     <div className={"Home"}>
 
-        {/* <ActualiteCarousel/> */}
-        <HeroSection />
+        <ActualiteCarousel/>
+        {/* <HeroSection /> */}
 
       {/* User Type Section */}
       <Row className={"my-5 mx-4"}>
@@ -104,7 +104,7 @@ const Home = () => {
         <img className={"dots mr-5"} src={dots} />
       </Row>
       <br />
-      <Row className={"mt-5"}>
+      {/* <Row className={"mt-5"}>
         <div className={"prestation-div row"}>
           <div className={"col-sm-6"}>
             <p className={"prestation-div-text"}>
@@ -122,7 +122,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </Row>
+      </Row> */}
       <br />
       {/* Rights and Duties Section */}
       {/* <div className={"rights-duties-section"}>
