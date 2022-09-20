@@ -297,3 +297,7 @@ max-height: 30px !important; }
     width: 100%;
     margin-top: -20px !important;
 }
+
+.header-block-2 {
+    background: #fff;
+}
