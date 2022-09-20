@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios";
 import { Container, Row, Col, Button, Modal, ModalBody } from 'reactstrap';
-// import apdp_logo from "../../assets/images/logoapdp.svg"
-import apdp_logo from "../../assets/images/logoapdp.png"
+import apdp_logo from "../../assets/images/logoapdp.svg"
+// import apdp_logo from "../../assets/images/logoapdp.png"
 import NavBar from './NavBar';
 import './Header.css';
 import { BASE_URL } from "../../constants/Constant";
@@ -142,7 +142,7 @@ const Header = (props) => {
 
                                         type="" data-toggle="dropdown">{sub.name.toUpperCase()}
                                     </div>
-                                    <ul className={state.showSub == sub.name ? "dropdown-menu show" : "dropdown-menu"}>
+                                    <ul className={state.showSub == sub.name ? "dropdown-menu show pop-up" : "dropdown-menu"}>
                                         {sub.children.map((subItem, index) =>
                                             <li key={index}><a tabIndex="-1" onClick={() => {
                                                 setActiveMenu(subItem.parent_id)

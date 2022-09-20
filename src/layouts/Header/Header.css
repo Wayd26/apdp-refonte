@@ -292,3 +292,8 @@ max-height: 30px !important; }
     font-size: 1.8rem;
     font-weight: bold;
 }
+
+.pop-up {
+    width: 100%;
+    margin-top: -20px !important;
+}
