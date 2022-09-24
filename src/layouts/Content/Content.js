@@ -108,6 +108,7 @@ const Content = () => {
                     <Route path="/membres/:menu" element={<Core model={"membres"}/>} />
                     <Route path="/biographique/:menu" element={<Core model={"biographique"} />} />
                     <Route path="/mise_en_conformite/:menu" element={<Core model={"mise_en_conformite"} />} />
+                    <Route path="/redirection_url/:menu" element={<Core model={"redirection_url"} />} />
                     
                     
 

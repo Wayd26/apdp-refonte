@@ -56,6 +56,11 @@ const FaqTemplate = () => {
         console.log("thematics ", thematics)
     }, [thematics])
 
+
+useEffect(() => {
+    if(localStorage.getItem('secondMenu-active') !== undefined) console.log("temp 2 ",  (localStorage.getItem('secondMenu-active')))
+  }, [localStorage.getItem('secondMenu-active')])
+
     return (
         <div style={{ background: "#F7F7F7", marginBottom: 40 }}>
             {/* <Breadcrumb>
@@ -65,6 +70,12 @@ const FaqTemplate = () => {
             </Breadcrumb> */}
             {/* <ActualiteCarousel /> */}
         <HeroSection />
+        <Breadcrumb>
+            <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+            {localStorage.getItem('secondMenu-active') != undefined && <Breadcrumb.Item href="#">{(localStorage.getItem('secondMenu-active'))}</Breadcrumb.Item>}
+            {/* <Breadcrumb.Item href="#">{JSON.parse(localStorage.getItem('secondMenu-active'))?.name}</Breadcrumb.Item> */}
+            <Breadcrumb.Item active>{JSON.parse(localStorage.getItem('active-menu'))?.name}</Breadcrumb.Item>
+        </Breadcrumb>
 
             <div className="faq-container">
 

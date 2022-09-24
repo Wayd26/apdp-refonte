@@ -50,6 +50,13 @@ const NavBar = (props) => {
 
     const toggle = () => setState({ ...state, isOpen: state.isOpen })
 
+useEffect(() => {
+
+  let temp =  secondMenus?.filter(item => item.id == activeMenu)
+  console.log("temp ", temp[0]?.name)
+  console.log("temp activeMenu", activeMenu)
+  localStorage.setItem("secondMenu-active", (temp[0]?.name))
+}, [activeMenu])
 
 
 

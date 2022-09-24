@@ -6,10 +6,10 @@ const HeroSection = () => {
   return (
     <div>
         <div className="big__section"></div>
-        <div class="submenu__section">
+        {/* <div class="submenu__section">
             <div onClick={e => setActive(e.target.innerHTML)} className={active == 'Activités' ? 'submenu__item submenu__item__active' :'submenu__item'}>{JSON.parse(localStorage.getItem('active-menu'))?.name}</div>
             
-        </div>
+        </div> */}
     </div>
   )
 }

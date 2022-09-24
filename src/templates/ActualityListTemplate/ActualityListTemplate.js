@@ -5,6 +5,8 @@ import Pagination from '../../components/Pagination/Pagination'
 import TemplateActualityListListCard from '../../components/TemplateActualityListCard/TemplateActualityListCard'
 import { getATypeOfArticles } from '../../http/http'
 import './ActualityListTemplate.css'
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
+
 
 const ActualityListTemplate = (props) => {
   const {menu} = useParams()
@@ -43,11 +45,24 @@ const loadArticlesData = async () => {
 
         setArticles(resp.data.data)
     }
+
+
 }
+
+useEffect(() => {
+  if(localStorage.getItem('secondMenu-active') !== undefined) console.log("temp 2 ",  (localStorage.getItem('secondMenu-active')))
+}, [localStorage.getItem('secondMenu-active')])
+
 
   return (
     <div className='pb-5' >
         <HeroSection />
+        <Breadcrumb>
+            <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+            {localStorage.getItem('secondMenu-active') != undefined && <Breadcrumb.Item href="#">{(localStorage.getItem('secondMenu-active'))}</Breadcrumb.Item>}
+            {/* <Breadcrumb.Item href="#">{JSON.parse(localStorage.getItem('secondMenu-active'))?.name}</Breadcrumb.Item> */}
+            <Breadcrumb.Item active>{JSON.parse(localStorage.getItem('active-menu'))?.name}</Breadcrumb.Item>
+        </Breadcrumb>
 
       {articles.length != 0 ? articles.map((item, index) => <div key={index}><TemplateActualityListListCard 
       id={item.id} title={item.title} content={item.content} created_at={item.created_at} document_url={item.document_url} image_url={item.image_url} sub_title={item.sub_title} />

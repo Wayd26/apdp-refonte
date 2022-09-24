@@ -7,6 +7,8 @@ import TemplateMemberListBureauCard from '../../components/TemplateMemberListBur
 import TemplateMemberListConseillerCard from '../../components/TemplateMemberListConseillerCard/TemplateMemberListConseillerCard'
 import { getATypeOfArticles } from '../../http/http'
 import './MemberListTemplate.css'
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
+
 
 const MemberListTemplate = () => {
 
@@ -61,15 +63,20 @@ useEffect(() => {
   return (
     <div>
      <HeroSection />
+     <Breadcrumb>
+            <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+            <Breadcrumb.Item href="#">Actualités</Breadcrumb.Item>
+            <Breadcrumb.Item active>Breaknews</Breadcrumb.Item>
+        </Breadcrumb> 
         <div class="member__list-template-card">
             <div class="member__list-template__header mb-5">Le Bureau</div>
             <div class="member__list-template-bureau-container">
-                {bureau.length != 0 ? bureau.map((item, index) => <div key={index}><TemplateMemberListBureauCard picture={item.image_url} name={item.sub_title} role={item.title.toLowerCase().includes('président') ? "Président" : "Rapporteur"} /></div>) : <h2>Aucune Donnéé</h2>}
+                {bureau.length != 0 ? bureau.map((item, index) => <div key={index}><TemplateMemberListBureauCard picture={item.image_url} name={item.sub_title} role={item.title.toLowerCase().includes('président') ? "Président" : "Rapporteur"} /></div>) : <h2>Aucune Donnée</h2>}
                 
             </div>
             <div class="member__list-template__header">Les Conseillers</div>
             <div class="member__list-template-conseiller-container d-flex flex-wrap justify-content-between">
-                {conseillers.length != 0 ? bureau.map((item, index) => <div key={index}><TemplateMemberListBureauCard picture={item.image_url} name={item.sub_title} role={"Conseiller"} /></div>) : <h2 className='m-auto p-5'>Aucune Donnéé</h2>}
+                {conseillers.length != 0 ? bureau.map((item, index) => <div key={index}><TemplateMemberListBureauCard picture={item.image_url} name={item.sub_title} role={"Conseiller"} /></div>) : <h2 className='m-auto p-5'>Aucune Donnée</h2>}
                
             </div>
 

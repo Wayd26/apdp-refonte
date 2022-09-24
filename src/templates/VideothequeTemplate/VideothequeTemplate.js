@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { Breadcrumb } from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
 import HeroSection from '../../components/HeroSection/HeroSection'
 import Pagination from '../../components/Pagination/Pagination'
@@ -47,18 +48,24 @@ const loadArticlesData = async () => {
   return (
     <div>
       <HeroSection />
+      <Breadcrumb>
+            <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
+            {localStorage.getItem('secondMenu-active') != undefined && <Breadcrumb.Item href="#">{(localStorage.getItem('secondMenu-active'))}</Breadcrumb.Item>}
+            {/* <Breadcrumb.Item href="#">{JSON.parse(localStorage.getItem('secondMenu-active'))?.name}</Breadcrumb.Item> */}
+            <Breadcrumb.Item active>{JSON.parse(localStorage.getItem('active-menu'))?.name}</Breadcrumb.Item>
+        </Breadcrumb>
         <div class="videotheque-container">
 
       {articles.length != 0 ? articles.map((item, index) => <div key={index}><TemplateVideothequeCard 
       id={item.id} title={item.title} content={item.content} created_at={item.created_at} document_url={item.document_url} image_url={item.image_url} sub_title={item.sub_title} />
       </div>) : <h1 className='m-auto p-5'>Aucune Donnée</h1>}
 
+        </div>
       {articles && articles?.length !== 0 && <Pagination
                     changePage={changePage}
                     pageCount={totalPage}
                     perPage={perPage}
                 />}
-        </div>
     </div>
   )
 }
