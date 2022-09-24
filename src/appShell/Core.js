@@ -24,8 +24,8 @@ const Core = ({model}) => {
     } else {
         console.log("data data load", resp.data.data[0].title)
 
-        navigate(resp.data.data[0].title)
-        // window.location.href = resp.data.data[0].title;
+        // navigate(resp.data.data[0].title)
+        window.location.href = resp.data.data[0].title;
 
         setRedirection(resp.data?.data[0]?.title)
     }
