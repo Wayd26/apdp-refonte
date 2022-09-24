@@ -4,16 +4,16 @@ import './CustomInput.css'
 
 export default function CustomInput({field, updateValue, updateDependentSection}) {
     const [currentRadio, setRadio] = useState(null)
-    const [currentCheckBox, setCheckbox] = useState(null)
+    const [currentCheckBoxes, setCheckboxes] = useState([])
 
     if(field.input_type.element === 'select' || field.input_type.element === 'multi-select') {
         return (
             <>
                 <FormGroup id='input_div'>
-                    <label style={{ fontWeight: "normal", top: "15px", right: "-10px", position: "relative", backgroundColor: "white", padding: "0px 2px 0px 2px", fontSize: "12px", color: '#0d6efd'}} string={field.id} for={field.id}>{field.name}</label><br/>
+                    <label style={{ fontWeight: "normal", top: "15px", right: "-10px", position: "relative", backgroundColor: "white", padding: "0px 2px 0px 2px", fontSize: "12px", color: '#0d6efd', fontFamily: 'cursive',}} string={field.id} for={field.id}>{field.name}</label><br/>
                     <Input 
                     className='form-control' 
-                    style={{ border: "1.5px solid #0d6efd", borderRadius: "5px", padding: "10px 15px", width:"100%", height:"50px", minWidth: "200px" }}
+                    style={{ border: "1.5px solid #0d6efd", borderRadius: "5px", padding: "10px 15px", width:"100%", height:"50px", minWidth: "200px", fontFamily: 'cursive', }}
                     defaultValue={"None"}
                     name={field.id} 
                     required = {field.answer_required === 0 ? false: true}
@@ -43,10 +43,10 @@ export default function CustomInput({field, updateValue, updateDependentSection}
             return (
                 <>
                     <FormGroup id='input_div'>
-                        <label style={{ fontWeight: "normal", top: "15px", right: "-10px", position: "relative", backgroundColor: "white", padding: "0px 2px 0px 2px", fontSize: "12px", color: '#0d6efd'}} string={field.id} for={field.id}>{field.name}</label><br/>
+                        <label style={{ fontWeight: "normal", top: "15px", right: "-10px", position: "relative", backgroundColor: "white", padding: "0px 2px 0px 2px", fontSize: "12px", color: '#0d6efd', fontFamily: 'cursive',}} string={field.id} for={field.id}>{field.name}</label><br/>
                         <textarea 
                         className='form-control' 
-                        style={{ border: "1.5px solid #0d6efd", borderRadius: "5px", padding: "10px 15px", minWidth: "200px" }} 
+                        style={{ border: "1.5px solid #0d6efd", borderRadius: "5px", padding: "10px 15px", minWidth: "200px", fontFamily: 'cursive', }} 
                         name={field.id} 
                         required = {field.answer_required === 0 ? false: true}
                         id={field.id}
@@ -70,14 +70,14 @@ export default function CustomInput({field, updateValue, updateDependentSection}
             return (
                 <>
                     <FormGroup style={{ textAlign: 'left', margin: "20px 0px", }}>
-                        <Label string={field.id} style={{ fontWeight: "normal", backgroundColor: "white", fontSize: "12px", color: '#0d6efd' }}>
+                        <Label string={field.id} style={{ fontWeight: "normal", backgroundColor: "white", fontSize: "12px", color: '#0d6efd', fontFamily: 'cursive', }}>
                             {field.name}
                         </Label>
                         {field.option_choices.map(op => 
                             <div style={{ color: "black", display: "flex" }}>
                                 <Input 
                                  className="form-control"
-                                 style={{ minWidth: "15px", width: "15px", height: "15px", marginRight: 10}}
+                                 style={{ minWidth: "15px", width: "15px", height: "15px", marginRight: 10, fontFamily: 'cursive',}}
                                  type="radio" 
                                  checked={currentRadio === op.name }
                                  onChange={(e) => {
@@ -96,7 +96,7 @@ export default function CustomInput({field, updateValue, updateDependentSection}
                                 <Label 
                                  string={op.name} 
                                  for={op.name} 
-                                 style={{ fontWeight: "normal", fontSize: "12px", top: "-2px", right: "-5px", position: "relative", marginTop: 5}}>
+                                 style={{ fontWeight: "normal", fontSize: "12px", top: "-2px", right: "-5px", position: "relative", marginTop: 5, fontFamily: 'cursive',}}>
                                     {op.name}
                                 </Label>
                             </div>
@@ -108,19 +108,20 @@ export default function CustomInput({field, updateValue, updateDependentSection}
             return (
                 <>
                     <FormGroup style={{ textAlign: 'left' }}>
-                        <Label string={field.id}>
+                        <Label string={field.id} style={{ fontWeight: "normal", backgroundColor: "white", fontSize: "12px", color: '#0d6efd', fontFamily: 'cursive', }}>
                             {field.name}
                         </Label>
                         {field.option_choices.map(op => 
                             <div style={{ display: "flex"}}> 
                                 <Input 
                                  className="form-control" 
-                                 style={{ width: "10px", height: "25px", marginRight: 10}} 
+                                 style={{ minWidth: '16px', height: '16px', marginRight: '10px', position: 'relative', fontFamily: 'cursive',}} 
                                  type="checkbox"
-                                 checked={currentCheckBox === op.name }
+                                 checked={currentCheckBoxes.includes(op.name)}
                                  onChange={(e) => {
                                     updateDependentSection(e.target.name)
-                                    setCheckbox(e.target.value)
+                                    // setCheckbox(e.target.value)
+                                    setCheckboxes([ ...currentCheckBoxes, e.target.value ])
                                     updateValue({
                                         answer_text: e.target.value,
                                         // choice: {'group': field.option_group_id, 'value': op.id},
@@ -130,13 +131,15 @@ export default function CustomInput({field, updateValue, updateDependentSection}
                                  }} 
                                  id={op.pivot.option_choice_id} 
                                  value={op.name}
-                                 name={op.pivot.related_section}>
-                                    {op.name}
-                                </Input> 
+                                 name={op.pivot.related_section}
+                                />
 
                                 <Label 
                                  string={op.name} 
-                                 style={{ marginTop: 5 }}>{op.name}</Label>
+                                 for={op.name} 
+                                 style={{ fontWeight: "normal", fontSize: "12px", top: "-2px", right: "-5px", position: "relative", marginTop: 5, fontFamily: 'cursive',}}>
+                                    {op.name}
+                                </Label>
                             </div>
                         )}
                         
@@ -147,13 +150,14 @@ export default function CustomInput({field, updateValue, updateDependentSection}
             return (
                 <>
                     <FormGroup id='input_div'>
-                        <label style={{ fontWeight: "normal", top: "15px", right: "-10px", position: "relative", backgroundColor: "white", padding: "0px 2px 0px 2px", fontSize: "12px", color: '#0d6efd'}} string={field.id} for={field.id}>{field.name}</label><br/>
+                        <label style={{ fontWeight: "normal", top: "15px", right: "-10px", position: "relative", backgroundColor: "white", padding: "0px 2px 0px 2px", fontSize: "12px", color: '#0d6efd', fontFamily: 'cursive',}} string={field.id} for={field.id}>{field.name}</label><br/>
                         <input 
                         className='form-control' 
-                        style={{ border: "1.5px solid #0d6efd", borderRadius: "5px", width: "100%", height: "50px", padding: "0px 15px", minWidth: "200px", }} 
+                        style={{ border: "1.5px solid #0d6efd", borderRadius: "5px", width: "100%", height: "50px", padding: "0px 15px", fontFamily: 'cursive', minWidth: "200px", }} 
                         type={field.input_type.type} 
                         name={field.id} 
                         id={field.id}
+                        multiple={true}
                         required = {field.answer_required === 0 ? false: true}
                         onChange={(e) => {
                             updateValue({
