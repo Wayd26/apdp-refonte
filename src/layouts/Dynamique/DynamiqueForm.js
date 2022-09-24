@@ -18,7 +18,7 @@ export default function DynamiqueForm() {
     const [responseCounter, setResponseCounter] = useState(0);
     const [formulaire, setFormulaire] = useState(null);
     const [currentDependentSection, setCurrentDependentSection] = useState(null);
-    const [filledSections, setFilledSections] = useState(0);
+    // const [filledSections, setFilledSections] = useState(0);
     const [dependentSections, setDependentSections] = useState([]);
     const [refNumber, setRefNumber] = useState(0);
     const [query, setQuery] = useState({});
@@ -32,6 +32,9 @@ export default function DynamiqueForm() {
         } else {
             // console.log('COOOL', resp);
             setFormulaire(resp.data);
+            if (localStorage.getItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`) == null || isNaN( localStorage.getItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`)) ||  localStorage.getItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`) == ""){
+                localStorage.setItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`,0)
+            }
             if (resp.data.data.sections.length > 1){
                 if (parseInt(localStorage.getItem('last_section_submitted')) === resp.data.data.sections[resp.data.data.sections.length - 1].id || isNaN(parseInt(localStorage.getItem('last_section_submitted'))) || localStorage.getItem('last_section_submitted') === null ) {
                     setCurrent(0)
@@ -67,7 +70,7 @@ export default function DynamiqueForm() {
         loadForm();
         // console.log("DEEEEEEE", dependentSections);
         if (localStorage.getItem('preview') == null || isNaN( localStorage.getItem('preview')) ||  localStorage.getItem('preview') == ""){
-            localStorage.setItem('preview',false);
+            localStorage.setItem('preview', false);
         }
         console.log("answersForm", answersForm);
         console.log("query", query);
@@ -106,7 +109,7 @@ export default function DynamiqueForm() {
     }
 
     function printForm() {
-        var formContent = document.getElementsByClassName('form-content')[0].outerHTML;
+        var formContent = document.getElementsByClassName('form-style')[0].outerHTML;
         var printWindow = window.open('', '', 'height=400,width=800');
         printWindow.document.write('<html><head><title>APDP Formulaire</title>');
         printWindow.document.write('</head><body >');
@@ -120,9 +123,14 @@ export default function DynamiqueForm() {
         // console.log('Current Dependent Section ', currentDependentSection);
         e.preventDefault();
         console.log("FOOORRRMMMM DATAAAA", formData);
+        // setFilledSections(filledSections+1);
+        // localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`,parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`))+1)
+        localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`,parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`))+1)
         const responseSubmit = await submitFormSection(formulaire.data.id, formulaire.data.sections[current].id, formData);
         console.log("RESSSSSSSS", responseSubmit);
         console.log("FINAL", final);
+        console.log("FILLED SECTIONS", parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`)));
+        console.log("All Sections minus Dependent SECTIONS", formulaire.data.sections.length - dependentSections.length);
         setRefNumber(responseSubmit.data.data[0].submit_id);
         setResponseCounter(formData.answers.length);
         const queryResponse = await getRequestedQuery(refNumber);
@@ -157,10 +165,10 @@ export default function DynamiqueForm() {
         } catch (error) {
             console.log("Not ready yet!!!")   
         }
-        setFilledSections(filledSections+1);
         localStorage.setItem('last_section_submitted', responseSubmit.data.data['last_submitted_section']);
         if (final){
             console.log("Last submit!!!", final, responseSubmit);
+            localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`,0)
             try {
                 if (responseSubmit.data.success){
                     toast.success("Formulaire soumis !!!");
@@ -193,7 +201,7 @@ export default function DynamiqueForm() {
 
     if (formulaire && formulaire.data.sections.length > 1){
         var stepper = <div className='stepper-div'>
-            <Stepper activeStep={current} connectorStyleConfig={{ disabledColor: 'white', activeColor: 'blue', size: 3 }} styleConfig={{ inactiveBgColor: 'white', inactiveTextColor: 'white', activeTextColor: '#2b71d3', activeBgColor: '#2b71d3', size: 30, labelFontSize: '1.5rem', circleFontSize: '1.5rem' }} hideConnectors={false}>
+            <Stepper activeStep={current} connectorStyleConfig={{ disabledColor: 'white', activeColor: 'blue', size: 3 }} styleConfig={{ inactiveBgColor: 'white', inactiveTextColor: 'white', activeTextColor: '#ffc107', activeBgColor: '#ffc107', completedBgColor: '#2b71d3', completedTextColor: '#2b71d3', size: 30, labelFontSize: '1.5rem', circleFontSize: '1.5rem' }} hideConnectors={false}>
                 {formulaire && formulaire.data.sections.map((section) => (
                     <Step style={{margin: '0px 50px'}}/>
                 ))}
@@ -203,32 +211,63 @@ export default function DynamiqueForm() {
         var stepper = ""
     }
 
-    if (formulaire && formulaire.data.sections.length > 1 && filledSections >= formulaire.data.sections.length - dependentSections.length && localStorage.getItem('preview') == "true"){
-        var endFormButton = <div id='button-submit'> <Button style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} className="auth-form-btn" type="submit"  onClick={(e) => {
-            setFinal(true);
-            localStorage.setItem('preview',false);
-        }}>
-            Soumettre
+    if (dependentSections.length > 0){
+        if (formulaire && formulaire.data.sections.length > 1 && parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`)) >= formulaire.data.sections.length - dependentSections.length && localStorage.getItem('preview') == "true"){
+            var endFormButton = <div id='button-submit'> <Button style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} className="auth-form-btn" type="submit"  onClick={(e) => {
+                setFinal(true);
+                localStorage.setItem('preview',false);
+            }}>
+                Soumettre
+            </Button></div>
+        } else if(formulaire && formulaire.data.sections.length > 1 && parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`)) >= formulaire.data.sections.length - dependentSections.length && localStorage.getItem('preview') == "false"){
+            var endFormButton = <div id='button-next'><Button style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} className="auth-form-btn" type="submit" onClick={(e) => {
+                localStorage.setItem('preview',true);
+            }}>
+            Prévisualiser
         </Button></div>
-    } else if(formulaire && formulaire.data.sections.length > 1 && filledSections >= formulaire.data.sections.length - dependentSections.length && localStorage.getItem('preview') == "false"){
-        var endFormButton = <div id='button-next'><Button style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} className="auth-form-btn" type="submit" onClick={(e) => {
-            localStorage.setItem('preview',true);
-        }}>
-        Prévisualiser
-    </Button></div>
-    } else if(formulaire && formulaire.data.sections.length == 1){
-        var endFormButton = <div id='button-submit'> <Button  style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} type="submit"  onClick={(e) => {
-            setFinal(true);
-            localStorage.setItem('preview',false);
-        }}>
-            Soumettre
-        </Button></div>
+        } else if(formulaire && formulaire.data.sections.length == 1){
+            var endFormButton = <div id='button-submit'> <Button  style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} type="submit"  onClick={(e) => {
+                setFinal(true);
+                localStorage.setItem('preview',false);
+            }}>
+                Soumettre
+            </Button></div>
+        } else {
+            var endFormButton = <div id='button-next'><Button  style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} className="auth-form-btn" type="submit" onClick={(e) => {
+                setFinal(false);
+            }}>
+                Suivant
+            </Button></div>
+        }
     } else {
-        var endFormButton = <div id='button-next'><Button  style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} className="auth-form-btn" type="submit" onClick={(e) => {
-            setFinal(false);
-        }}>
-            Suivant
+        if (formulaire && formulaire.data.sections.length > 1 && parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`)) >= formulaire.data.sections.length && localStorage.getItem('preview') == "true"){
+            var endFormButton = <div id='button-submit'> <Button style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} className="auth-form-btn" type="submit"  onClick={(e) => {
+                setFinal(true);
+                localStorage.setItem('preview',false);
+            }}>
+                Soumettre
+            </Button></div>
+        } else if(formulaire && formulaire.data.sections.length > 1 && parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`)) >= formulaire.data.sections.length - 1 && localStorage.getItem('preview') == "false"){
+            var endFormButton = <div id='button-next'><Button style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} className="auth-form-btn" type="submit" onClick={(e) => {
+                localStorage.setItem('preview',true);
+            }}>
+            Prévisualiser
         </Button></div>
+        } else if(formulaire && formulaire.data.sections.length == 1){
+            var endFormButton = <div id='button-submit'> <Button  style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} type="button"  onClick={(e) => {
+                setFinal(true);
+                localStorage.setItem('preview',false);
+                handleSubmit();
+            }}>
+                Soumettre
+            </Button></div>
+        } else {
+            var endFormButton = <div id='button-next'><Button  style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} className="auth-form-btn" type="submit" onClick={(e) => {
+                setFinal(false);
+            }}>
+                Suivant
+            </Button></div>
+        }
     }
 
     const next = (e) => {
@@ -289,23 +328,21 @@ export default function DynamiqueForm() {
         if (!final && !localStorage.getItem('preview')){
             return (
                 <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
-                    <Breadcrumb style={{ width: '100%' }}>
+                    {/* <Breadcrumb style={{ width: '100%' }}>
                         <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
                         <Breadcrumb.Item href="#">Vos démarches</Breadcrumb.Item>
                         <Breadcrumb.Item href="#">Faire ou modifier une demande</Breadcrumb.Item>
                         <Breadcrumb.Item active>{formulaire.data.name}</Breadcrumb.Item>
-                    </Breadcrumb>
+                    </Breadcrumb> */}
                     <ToastContainer />
                     <Form className="form-style" style={{alignItems: 'center'}}>
-                        
-                        <h2 style={{ fontSize: '130%' }}>FORMULAIRE{`${localStorage.getItem('preview')}`}</h2>
         
                         <div style={{ textAlign: 'center' }}>
                             <div style={{ marginTop: '50%', marginBottom: '50%', }}>
                                 <ImSad style={{ fontSize: '50px', marginBottom: '30px' }}/>
                                 <p>Rien à afficher</p>
                             </div>
-                            <Button className="auth-form-btn" style={{width: 'auto', height: 'auto', padding: '15px',}} onClick={(e) => window.location.pathname = '/'}>
+                            <Button className="auth-form-btn" style={{ margin: "0px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#ffbe00", borderColor: '#ffbe00', color: "white", fontWeight: "bold", float: 'right' }} onClick={(e) => window.location.pathname = '/'}>
                                 Retourner à l'accueil
                             </Button>
                         </div>
@@ -315,37 +352,43 @@ export default function DynamiqueForm() {
         } else if (localStorage.getItem('preview') == "true") {
             return (
                 <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
-                    <Breadcrumb style={{ width: '100%' }}>
+                    {/* <Breadcrumb style={{ width: '100%' }}>
                         <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
                         <Breadcrumb.Item href="#">Vos démarches</Breadcrumb.Item>
                         <Breadcrumb.Item href="#">Détails de la demande</Breadcrumb.Item>
-                    </Breadcrumb>
+                    </Breadcrumb> */}
                     <ToastContainer />
                     <Form className="form-style" onSubmit={handleSubmit}>
-                        <h2 style={{ marginBottom: '50px', fontSize: 'large' }}>{formulaire.data.name}</h2>
+                        <h2 style={{ marginBottom: '50px', fontSize: 'large', fontFamily: 'cursive', }}>RECAPITULATIF</h2>
+                        <div className="row" style={{ alignItems: 'center', marginBottom: '30px', }}>
+                            <div className='col-sm-6'>
+                                <h2 style={{ fontSize: 'large', float: 'left', fontFamily: 'cursive', }}>N° de dépôt: {refNumber}</h2>
+                            </div>
+                            <div class="col-sm-6">
+                                <Button className="auth-form-btn" style={{ margin: "0px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#ffbe00", borderColor: '#ffbe00', color: "white", fontWeight: "bold", float: 'right' }} onClick={(e) =>printForm()}>
+                                    Imprimer la demande
+                                </Button>
+                            </div>
+                        </div>
                         <div className="row" style={{ textAlign: 'left' }}>
                             {answersForm.map((answer) => (
-                                <div>
-                                    <Label 
-                                        string={answer.question}
-                                        style={{ marginTop: 5, fontWeight: 'bold' }}>
-                                        {answer.question}
-                                    </Label>
-                                    <p>{answer.answer}</p>
+                                <div style={{ marginBottom: '30px' }}>
+                                    <table style={{ maxWidth: 'none', width: '100%', border: '2px solid rgb(9, 61, 98)' }}>
+                                        <tr style={{ backgroundColor: 'rgb(9, 61, 98)', color: 'white', }}>
+                                            <th style={{ padding: '10px', width: '50%', fontFamily: 'cursive', }}>Question</th>
+                                            <th style={{ padding: '10px', width: '50%', fontFamily: 'cursive', }}>Réponse</th>
+                                        </tr>
+                                        <tr>
+                                            <td style={{ padding: '10px', width: '50%', fontFamily: 'cursive', }}>{answer.question}</td>
+                                            <td style={{ padding: '10px', width: '50%', fontFamily: 'cursive', }}>{answer.answer}</td>
+                                        </tr>
+                                    </table>
                                 </div>
                                 ))
                             }
-                            {/* <Input 
-                                className="form-control"
-                                type="text"
-                                name="Hidden"
-                            /> */}
                         </div>
-                        <div>
+                        <div className="row">
                             {endFormButton}
-                            <Button className="auth-form-btn" style={{width: 'auto', height: 'auto', padding: '15px',}} onClick={(e) =>printForm()}>
-                                Imprimer la demande
-                            </Button>
                         </div>
                     </Form>
                 </div>
@@ -353,26 +396,26 @@ export default function DynamiqueForm() {
         } else if (final && localStorage.getItem('preview') == "false") {
             return (
                 <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
-                    <Breadcrumb style={{ width: '100%' }}>
+                    {/* <Breadcrumb style={{ width: '100%' }}>
                         <Breadcrumb.Item href="/">Accueil</Breadcrumb.Item>
                         <Breadcrumb.Item href="#">Vos démarches</Breadcrumb.Item>
                         <Breadcrumb.Item href="#">Faire ou modifier une demande</Breadcrumb.Item>
                         <Breadcrumb.Item active>{formulaire.data.name}</Breadcrumb.Item>
-                    </Breadcrumb>
+                    </Breadcrumb> */}
                     <ToastContainer />
                     <Form className="form-style" style={{alignItems: 'center'}}>
                         
-                        <h2 style={{ fontSize: '130%' }}>{formulaire.data.name}</h2>
+                        <h2 style={{ fontSize: 'xx-large', fontWeight: 'lighter', textTransform: 'uppercase' }}>{formulaire.data.name}</h2>
         
                         <div style={{ textAlign: 'center' }}>
                             <div style={{ marginTop: '25%', marginBottom: '25%', }}>
                                 <ImHappy style={{ fontSize: '50px', marginBottom: '30px' }}/>
-                                <p>Votre demande a été soumise et enregistrée sous le numéro de référence qui vous sera communiqué par mail.</p>
+                                <p style={{ fontFamily: "cursive" }}>Votre demande a été soumise et enregistrée sous le numéro de référence qui vous sera communiqué par mail.</p>
                             </div>
                             {/* <Button className="auth-form-btn" style={{width: 'auto', height: 'auto', padding: '15px',}} onClick={(e) => window.location.pathname = `/query/${window.location.pathname.split('/').pop()}/${refNumber}`}>
                                 Voir l'aperçu de la demande
                             </Button> */}
-                            <Button className="auth-form-btn" style={{width: 'auto', height: 'auto', padding: '15px',}} onClick={(e) => window.location.pathname = `/statut-demande`}>
+                            <Button className="auth-form-btn" style={{ margin: "0px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "rgb(9, 61, 98)", borderColor: 'rgb(9, 61, 98)', color: "white", fontWeight: "bold" }} onClick={(e) => window.location.pathname = `/statut-demande`}>
                                 Vérifier le statut
                             </Button>
                         </div>
