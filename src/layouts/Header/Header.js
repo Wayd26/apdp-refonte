@@ -127,31 +127,35 @@ const Header = (props) => {
                             </div>
                             {firstMenus?.map((sub, index) =>
                                 // 
-                                <>{sub.children?.length == 0 ? 
-                                <div 
-                                 key={index}
-                                 className="col" 
-                                 style={{color: "#292929", font: "normal normal normal 20px/35px Montserrat", cursor: "pointer", width: 'fit-content', flex: 'none', padding: '20px'}} 
-                                // onClick={() => console.log()}
-                                > {sub.name.toUpperCase()}</div> :
-                                <div className='dropdown'
-                                    onMouseLeave={() => setState({ ...state, showSub: "" })}
-                                    onMouseOver={() => setState({ ...state, showSub: sub.name })}
-                                >
-                                    <div className="dropdown-toggle drop-class" style={{ font: "normal normal normal 20px/35px Montserrat", cursor: "pointer", width: 'fit-content', flex: 'none', padding: '20px' }}
+                                <>{sub.children?.length == 0 ?
+                                    <div
+                                        key={index}
+                                        className="col"
+                                        style={{ color: "#292929", font: "normal normal normal 20px/35px Montserrat", cursor: "pointer", width: 'fit-content', flex: 'none', padding: '20px' }}
+                                        onClick={() => {
+                                            localStorage.setItem('active-menu', JSON.stringify(sub))
+                                            navigate(`/${sub?.model}/${sub?.slug}`)
+                                        }
+                                        }
+                                    > {sub.name.toUpperCase()}</div> :
+                                    <div className='dropdown'
+                                        onMouseLeave={() => setState({ ...state, showSub: "" })}
+                                        onMouseOver={() => setState({ ...state, showSub: sub.name })}
+                                    >
+                                        <div className="dropdown-toggle drop-class" style={{ font: "normal normal normal 20px/35px Montserrat", cursor: "pointer", width: 'fit-content', flex: 'none', padding: '20px' }}
 
-                                        type="" data-toggle="dropdown">{sub.name.toUpperCase()}
-                                    </div>
-                                    <ul className={state.showSub == sub.name ? "dropdown-menu show pop-up" : "dropdown-menu"}>
-                                        {sub.children.map((subItem, index) =>
-                                            <li key={index}><a tabIndex="-1" onClick={() => {
-                                                setActiveMenu(subItem.parent_id)
-                                                localStorage.setItem('active-menu', JSON.stringify(sub))
-                                                navigate(`/${subItem?.model}/${subItem?.slug}`)
-                                            }}>{subItem.name}</a></li>)}
+                                            type="" data-toggle="dropdown">{sub.name.toUpperCase()}
+                                        </div>
+                                        <ul className={state.showSub == sub.name ? "dropdown-menu show pop-up" : "dropdown-menu"}>
+                                            {sub.children.map((subItem, index) =>
+                                                <li key={index}><a tabIndex="-1" onClick={() => {
+                                                    setActiveMenu(subItem.parent_id)
+                                                    localStorage.setItem('active-menu', JSON.stringify(sub))
+                                                    navigate(`/${subItem?.model}/${subItem?.slug}`)
+                                                }}>{subItem.name}</a></li>)}
 
-                                    </ul>
-                                </div>}
+                                        </ul>
+                                    </div>}
                                 </>
 
 
