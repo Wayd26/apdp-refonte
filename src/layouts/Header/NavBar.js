@@ -170,10 +170,10 @@ export default class NavBar extends Component {
                                     <NavDropdown.Item href="/statut-demande">Faire une vérification</NavDropdown.Item>
                                     <NavDropdown.Item href="/formulaire/notifier_et_publier_la_designation_du_dpo">Notifier et Publier la désignation
                                         d’un DPO</NavDropdown.Item>
-                                    <NavDropdown.Item href="/formulaire/declarer_un_incident">Déclarer un incident</NavDropdown.Item>
+                                    <NavDropdown.Item href="/formulaire/declaration_d_incident">Déclarer un incident</NavDropdown.Item>
                                     <NavDropdown.Item href="/formulaire/rediger_une_affiche_d_information">Rédiger une affiche d’information
                                         des personnes concernées</NavDropdown.Item>
-                                    <NavDropdown.Item href="/faire-une-demande">Démarrer une mise en conformité</NavDropdown.Item>
+                                    <NavDropdown.Item href="/declaration_de_mise_en_conformite_avec_les_injonctions">Démarrer une mise en conformité</NavDropdown.Item>
                                     <NavDropdown.Item href="/faire-une-demande">Créer un registre de traitement</NavDropdown.Item>
                                     <NavDropdown.Item href="/faire-une-demande">Faire le rapport d’activité annuel</NavDropdown.Item>
                                 </NavDropdown>

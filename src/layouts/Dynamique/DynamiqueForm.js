@@ -32,23 +32,42 @@ export default function DynamiqueForm() {
         } else {
             // console.log('COOOL', resp);
             setFormulaire(resp.data);
-            if (localStorage.getItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`) == null || isNaN( localStorage.getItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`)) ||  localStorage.getItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`) == ""){
-                localStorage.setItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`,0)
-            }
             if (resp.data.data.sections.length > 1){
-                if (parseInt(localStorage.getItem('last_section_submitted')) === resp.data.data.sections[resp.data.data.sections.length - 1].id || isNaN(parseInt(localStorage.getItem('last_section_submitted'))) || localStorage.getItem('last_section_submitted') === null ) {
+                // Setting last section submitted and redirecting to the section after
+                if (parseInt(localStorage.getItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_last_section_submitted`)) === resp.data.data.sections[resp.data.data.sections.length - 1].id || isNaN(parseInt(localStorage.getItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_last_section_submitted`))) || localStorage.getItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_last_section_submitted`) === null ) {
                     setCurrent(0)
-                    localStorage.setItem('last_section_submitted', '0');
+                    localStorage.setItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_last_section_submitted`, '0');
                 } else {
-                    setCurrent(parseInt(localStorage.getItem('last_section_submitted')));
+                    setCurrent(parseInt(localStorage.getItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_last_section_submitted`)));
                     for (let i = 0; i < resp.data.data.sections.length; i++) {
                         const element = resp.data.data.sections[i];
-                        if (element.id === parseInt(localStorage.getItem('last_section_submitted'))){
+                        if (element.id === parseInt(localStorage.getItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_last_section_submitted`))){
                             setCurrent(resp.data.data.sections.indexOf(element)  + 1);
-                            // console.log("CURRENT", current);
+                            localStorage.setItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`,resp.data.data.sections.indexOf(element)  + 1)
+                            console.log("IDDDD", element.id);
+                            console.log("element", element);
+                            console.log("resp.data.data.sections.indexOf(element)", resp.data.data.sections.indexOf(element));
+                            console.log("resp.data.data.sections", resp.data.data.sections);
                         }
                     }
                 }
+
+                // Setting filled sections
+                if (localStorage.getItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`) == null || isNaN( localStorage.getItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`)) ||  localStorage.getItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`) == ""){
+                    localStorage.setItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`,0)
+                }
+
+                // Setting preview variable to false
+                if (localStorage.getItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_preview`) == null || isNaN( localStorage.getItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_preview`)) ||  localStorage.getItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_preview`) == ""){
+                    localStorage.setItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_preview`, false);
+                }
+
+                // Setting final variable to false
+                if (localStorage.getItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_final`) == null || isNaN( localStorage.getItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_final`)) ||  localStorage.getItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_final`) == ""){
+                    localStorage.setItem(`${resp.data.data.name.replaceAll(' ','_').toLowerCase()}_final`,false)
+                }
+
+
                 var sections_to_exclude = []
                 for (let p = 0; p < resp.data.data.sections.length; p++) {
                     const elem = resp.data.data.sections[p];
@@ -69,9 +88,6 @@ export default function DynamiqueForm() {
         }
         loadForm();
         // console.log("DEEEEEEE", dependentSections);
-        if (localStorage.getItem('preview') == null || isNaN( localStorage.getItem('preview')) ||  localStorage.getItem('preview') == ""){
-            localStorage.setItem('preview', false);
-        }
         console.log("answersForm", answersForm);
         console.log("query", query);
     }, [])
@@ -86,7 +102,8 @@ export default function DynamiqueForm() {
     function updateDependentSection(section_id) {
         // // console.log(section_id);
         setCurrentDependentSection(section_id);
-        localStorage.setItem('last_standard_section', current);
+        localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_last_standard_section`,current)
+
     }
 
     if (!formulaire) {
@@ -119,20 +136,12 @@ export default function DynamiqueForm() {
         printWindow.print();
     }
 
-    const handleSubmit = async (e) => {
-        // console.log('Current Dependent Section ', currentDependentSection);
-        e.preventDefault();
-        console.log("FOOORRRMMMM DATAAAA", formData);
-        // setFilledSections(filledSections+1);
-        // localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`,parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`))+1)
-        localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`,parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`))+1)
-        const responseSubmit = await submitFormSection(formulaire.data.id, formulaire.data.sections[current].id, formData);
-        console.log("RESSSSSSSS", responseSubmit);
-        console.log("FINAL", final);
-        console.log("FILLED SECTIONS", parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`)));
-        console.log("All Sections minus Dependent SECTIONS", formulaire.data.sections.length - dependentSections.length);
-        setRefNumber(responseSubmit.data.data[0].submit_id);
-        setResponseCounter(formData.answers.length);
+    const getFormQuery = async (e) => {
+        try {
+            e.preventDefault();
+        } catch (error) {
+            console.log("error", error)
+        }
         const queryResponse = await getRequestedQuery(refNumber);
         setQuery(queryResponse.data.data);
         var answersFormArray = [];
@@ -165,9 +174,51 @@ export default function DynamiqueForm() {
         } catch (error) {
             console.log("Not ready yet!!!")   
         }
-        localStorage.setItem('last_section_submitted', responseSubmit.data.data['last_submitted_section']);
-        if (final){
-            console.log("Last submit!!!", final, responseSubmit);
+    }
+
+    const handleSubmit = async (e) => {
+        // console.log('Current Dependent Section ', currentDependentSection);
+        if (formulaire.data.sections.length > 1){
+            e.preventDefault();
+        }
+        console.log("FOOORRRMMMM DATAAAA", formData);
+        // setFilledSections(filledSections+1);
+        // localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`,parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`))+1)
+        localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`,parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`))+1)
+        let responseSubmit;
+        try {
+            responseSubmit = await submitFormSection(formulaire.data.id, formulaire.data.sections[current].id, formData);
+        } catch (error) {
+            responseSubmit = await submitFormSection(formulaire.data.id, parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_last_section_submitted`)), formData);
+            
+        }
+        // if (formulaire.data.sections.length == 1){
+        //     console.log("Last submit!!!", localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_final`), responseSubmit);
+        //     localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`,0)
+        //     try {
+        //         if (responseSubmit.data.success){
+        //             toast.success("Formulaire soumis !!!");
+        //         } else {
+        //             toast.error("Il y a un problème !!!");
+        //         }
+        //     } catch (error) {
+        //         toast.error("Il y a un problème !!!");
+        //     }
+        //     setCurrent(current+1)
+        // }
+        console.log("RESSSSSSSS", responseSubmit);
+        console.log("FINAL", localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_final`));
+        console.log("FILLED SECTIONS", parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`)));
+        console.log("All Sections minus Dependent SECTIONS", formulaire.data.sections.length - dependentSections.length);
+        setRefNumber(responseSubmit.data.data[0].submit_id);
+        setResponseCounter(formData.answers.length);
+        if (responseSubmit.data.data['last_submitted_section'] != null){
+            localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_last_section_submitted`, responseSubmit.data.data['last_submitted_section']);
+        } else {
+            localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_last_section_submitted`, formulaire.data.sections[current].id);
+        }
+        if (localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_final`) == 'true'){
+            console.log("Last submit!!!", localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_final`), responseSubmit);
             localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`,0)
             try {
                 if (responseSubmit.data.success){
@@ -182,8 +233,8 @@ export default function DynamiqueForm() {
         } else {
             if (formulaire.data.sections[current].type !== 'standard'){
                 setCurrentDependentSection(null);
-                setCurrent(parseInt(localStorage.getItem('last_standard_section')) + 1);
-                localStorage.setItem('last_standard_section', '');
+                setCurrent(parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_last_standard_section`)) + 1);
+                localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_last_standard_section`,'');
             } else {
                 if (currentDependentSection) {
                     for (let f = 0; f < formulaire.data.sections.length; f++) {
@@ -212,58 +263,60 @@ export default function DynamiqueForm() {
     }
 
     if (dependentSections.length > 0){
-        if (formulaire && formulaire.data.sections.length > 1 && parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`)) >= formulaire.data.sections.length - dependentSections.length && localStorage.getItem('preview') == "true"){
+        if (formulaire && formulaire.data.sections.length > 1 && parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`)) >= formulaire.data.sections.length - dependentSections.length && localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_preview`) == "true"){
             var endFormButton = <div id='button-submit'> <Button style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} className="auth-form-btn" type="submit"  onClick={(e) => {
-                setFinal(true);
-                localStorage.setItem('preview',false);
+                localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_final`,true);
+                localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_preview`,false);
             }}>
                 Soumettre
             </Button></div>
-        } else if(formulaire && formulaire.data.sections.length > 1 && parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`)) >= formulaire.data.sections.length - dependentSections.length && localStorage.getItem('preview') == "false"){
+        } else if(formulaire && formulaire.data.sections.length > 1 && parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`)) >= formulaire.data.sections.length - dependentSections.length && localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_preview`) == "false"){
             var endFormButton = <div id='button-next'><Button style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} className="auth-form-btn" type="submit" onClick={(e) => {
-                localStorage.setItem('preview',true);
+                localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_preview`,true);
+                getFormQuery();
             }}>
             Prévisualiser
         </Button></div>
         } else if(formulaire && formulaire.data.sections.length == 1){
             var endFormButton = <div id='button-submit'> <Button  style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} type="submit"  onClick={(e) => {
-                setFinal(true);
-                localStorage.setItem('preview',false);
+                localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_final`,true);
+                localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_preview`,false);
             }}>
                 Soumettre
             </Button></div>
         } else {
             var endFormButton = <div id='button-next'><Button  style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} className="auth-form-btn" type="submit" onClick={(e) => {
-                setFinal(false);
+                localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_final`,false);
             }}>
                 Suivant
             </Button></div>
         }
     } else {
-        if (formulaire && formulaire.data.sections.length > 1 && parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`)) >= formulaire.data.sections.length && localStorage.getItem('preview') == "true"){
+        if (formulaire && formulaire.data.sections.length > 1 && parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`)) >= formulaire.data.sections.length && localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_preview`) == "true"){
             var endFormButton = <div id='button-submit'> <Button style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} className="auth-form-btn" type="submit"  onClick={(e) => {
-                setFinal(true);
-                localStorage.setItem('preview',false);
+                localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_final`,true);
+                localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_preview`,false);
             }}>
                 Soumettre
             </Button></div>
-        } else if(formulaire && formulaire.data.sections.length > 1 && parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`)) >= formulaire.data.sections.length - 1 && localStorage.getItem('preview') == "false"){
+        } else if(formulaire && formulaire.data.sections.length > 1 && parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`)) >= formulaire.data.sections.length - 1 && localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_preview`) == "false"){
             var endFormButton = <div id='button-next'><Button style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} className="auth-form-btn" type="submit" onClick={(e) => {
-                localStorage.setItem('preview',true);
+                localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_preview`,true);
+                getFormQuery();
             }}>
             Prévisualiser
         </Button></div>
         } else if(formulaire && formulaire.data.sections.length == 1){
             var endFormButton = <div id='button-submit'> <Button  style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} type="button"  onClick={(e) => {
-                setFinal(true);
-                localStorage.setItem('preview',false);
+                localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_final`,true);
+                localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_preview`,false);
                 handleSubmit();
             }}>
                 Soumettre
             </Button></div>
         } else {
             var endFormButton = <div id='button-next'><Button  style={{ marginTop: "50px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#093d62", color: "white", fontWeight: "bold", }} className="auth-form-btn" type="submit" onClick={(e) => {
-                setFinal(false);
+                localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_final`,false);
             }}>
                 Suivant
             </Button></div>
@@ -325,7 +378,7 @@ export default function DynamiqueForm() {
             setCurrent(current+1);
         }
     } catch (error) {
-        if (!final && !localStorage.getItem('preview')){
+        if (localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_final`) == 'false' && localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_preview`) == 'false'){
             return (
                 <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
                     {/* <Breadcrumb style={{ width: '100%' }}>
@@ -349,7 +402,7 @@ export default function DynamiqueForm() {
                     </Form>
                 </div>
             )
-        } else if (localStorage.getItem('preview') == "true") {
+        } else if (localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_preview`) == "true") {
             return (
                 <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
                     {/* <Breadcrumb style={{ width: '100%' }}>
@@ -371,21 +424,17 @@ export default function DynamiqueForm() {
                             </div>
                         </div>
                         <div className="row" style={{ textAlign: 'left' }}>
-                            {answersForm.map((answer) => (
-                                <div style={{ marginBottom: '30px' }}>
-                                    <table style={{ maxWidth: 'none', width: '100%', border: '2px solid rgb(9, 61, 98)' }}>
-                                        <tr style={{ backgroundColor: 'rgb(9, 61, 98)', color: 'white', }}>
-                                            <th style={{ padding: '10px', width: '50%', fontFamily: 'cursive', }}>Question</th>
-                                            <th style={{ padding: '10px', width: '50%', fontFamily: 'cursive', }}>Réponse</th>
-                                        </tr>
-                                        <tr>
-                                            <td style={{ padding: '10px', width: '50%', fontFamily: 'cursive', }}>{answer.question}</td>
-                                            <td style={{ padding: '10px', width: '50%', fontFamily: 'cursive', }}>{answer.answer}</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                ))
-                            }
+                            <div style={{ marginBottom: '30px' }}>
+                                <table style={{ maxWidth: 'none', width: '100%', border: '2px solid rgb(9, 61, 98)' }}>
+                                    {answersForm.map((answer) => (
+                                                <tr style={{ border: '2px solid rgb(9, 61, 98)' }}>
+                                                    <td style={{ backgroundColor: 'rgb(9, 61, 98)', color: 'white',padding: '10px', width: '50%', fontFamily: 'cursive', }}>{answer.question}</td>
+                                                    <td style={{ padding: '10px', width: '50%', fontFamily: 'cursive', }}>{answer.answer}</td>
+                                                </tr>
+                                        ))
+                                    }
+                                </table>
+                            </div>
                         </div>
                         <div className="row">
                             {endFormButton}
@@ -393,7 +442,7 @@ export default function DynamiqueForm() {
                     </Form>
                 </div>
             )
-        } else if (final && localStorage.getItem('preview') == "false") {
+        } else if (localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_final`) == 'true' && localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_preview`) == "false") {
             return (
                 <div className="d-flex align-items-center justify-content-center py-2 flex-column" style={{backgroundColor : "#E2E2E2", paddingTop: "40px", paddingBottom : "40px"}}>
                     {/* <Breadcrumb style={{ width: '100%' }}>
@@ -424,7 +473,7 @@ export default function DynamiqueForm() {
             )
         } else {
             setCurrent(0)
-            localStorage.setItem('last_section_submitted','')
+            localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_last_section_submitted`,'')
         }
     }
 }
