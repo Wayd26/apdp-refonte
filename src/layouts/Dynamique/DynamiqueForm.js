@@ -452,7 +452,7 @@ export default function DynamiqueForm() {
                         <div style={{ textAlign: 'center' }}>
                             <div style={{ marginTop: '25%', marginBottom: '25%', }}>
                                 <ImHappy style={{ fontSize: '50px', marginBottom: '30px' }}/>
-                                <p style={{ fontFamily: "cursive" }}>Votre demande a été soumise et enregistrée sous le numéro de référence qui vous sera communiqué par mail.</p>
+                                <p style={{ fontFamily: 'Montserrat', }}>Votre demande a été soumise et enregistrée sous le numéro de référence qui vous sera communiqué par mail.</p>
                             </div>
                             {/* <Button className="auth-form-btn" style={{width: 'auto', height: 'auto', padding: '15px',}} onClick={(e) => window.location.pathname = `/query/${window.location.pathname.split('/').pop()}/${refNumber}`}>
                                 Voir l'aperçu de la demande
