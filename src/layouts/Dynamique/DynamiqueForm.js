@@ -412,10 +412,10 @@ export default function DynamiqueForm() {
                     </Breadcrumb> */}
                     <ToastContainer />
                     <Form className="form-style" onSubmit={handleSubmit}>
-                        <h2 style={{ marginBottom: '50px', fontSize: 'large', fontFamily: 'cursive', }}>RECAPITULATIF</h2>
+                        <h2 style={{ marginBottom: '50px', fontSize: 'large', fontFamily: 'Montserrat', }}>RECAPITULATIF</h2>
                         <div className="row" style={{ alignItems: 'center', marginBottom: '30px', }}>
                             <div className='col-sm-6'>
-                                <h2 style={{ fontSize: 'large', float: 'left', fontFamily: 'cursive', }}>N° de dépôt: {refNumber}</h2>
+                                <h2 style={{ fontSize: 'large', float: 'left', fontFamily: 'Montserrat', }}>N° de dépôt: {refNumber}</h2>
                             </div>
                             <div class="col-sm-6">
                                 <Button className="auth-form-btn" style={{ margin: "0px", padding: "10px", width: "200px", borderRadius: "5px", fontSize: "15px", backgroundColor: "#ffbe00", borderColor: '#ffbe00', color: "white", fontWeight: "bold", float: 'right' }} onClick={(e) =>printForm()}>
@@ -428,8 +428,8 @@ export default function DynamiqueForm() {
                                 <table style={{ maxWidth: 'none', width: '100%', border: '2px solid rgb(9, 61, 98)' }}>
                                     {answersForm.map((answer) => (
                                                 <tr style={{ border: '2px solid rgb(9, 61, 98)' }}>
-                                                    <td style={{ backgroundColor: 'rgb(9, 61, 98)', color: 'white',padding: '10px', width: '50%', fontFamily: 'cursive', }}>{answer.question}</td>
-                                                    <td style={{ padding: '10px', width: '50%', fontFamily: 'cursive', }}>{answer.answer}</td>
+                                                    <td style={{ backgroundColor: 'rgb(9, 61, 98)', color: 'white',padding: '10px', width: '50%', fontFamily: 'Montserrat', }}>{answer.question}</td>
+                                                    <td style={{ padding: '10px', width: '50%', fontFamily: 'Montserrat', }}>{answer.answer}</td>
                                                 </tr>
                                         ))
                                     }
