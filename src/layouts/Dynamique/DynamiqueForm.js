@@ -184,7 +184,6 @@ export default function DynamiqueForm() {
         console.log("FOOORRRMMMM DATAAAA", formData);
         // setFilledSections(filledSections+1);
         // localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`,parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`))+1)
-        localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`,parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`))+1)
         let responseSubmit;
         try {
             responseSubmit = await submitFormSection(formulaire.data.id, formulaire.data.sections[current].id, formData);
@@ -192,61 +191,55 @@ export default function DynamiqueForm() {
             responseSubmit = await submitFormSection(formulaire.data.id, parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_last_section_submitted`)), formData);
             
         }
-        // if (formulaire.data.sections.length == 1){
-        //     console.log("Last submit!!!", localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_final`), responseSubmit);
-        //     localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`,0)
-        //     try {
-        //         if (responseSubmit.data.success){
-        //             toast.success("Formulaire soumis !!!");
-        //         } else {
-        //             toast.error("Il y a un problème !!!");
-        //         }
-        //     } catch (error) {
-        //         toast.error("Il y a un problème !!!");
-        //     }
-        //     setCurrent(current+1)
-        // }
-        console.log("RESSSSSSSS", responseSubmit);
-        console.log("FINAL", localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_final`));
-        console.log("FILLED SECTIONS", parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`)));
-        console.log("All Sections minus Dependent SECTIONS", formulaire.data.sections.length - dependentSections.length);
-        setRefNumber(responseSubmit.data.data[0].submit_id);
-        setResponseCounter(formData.answers.length);
-        if (responseSubmit.data.data['last_submitted_section'] != null){
-            localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_last_section_submitted`, responseSubmit.data.data['last_submitted_section']);
-        } else {
-            localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_last_section_submitted`, formulaire.data.sections[current].id);
-        }
-        if (localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_final`) == 'true'){
-            console.log("Last submit!!!", localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_final`), responseSubmit);
-            localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`,0)
-            try {
-                if (responseSubmit.data.success){
-                    toast.success("Formulaire soumis !!!");
-                } else {
+        try {
+            if (responseSubmit.data.success){
+                localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`,parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`))+1)
+            }
+            console.log("RESSSSSSSS", responseSubmit);
+            console.log("FINAL", localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_final`));
+            console.log("FILLED SECTIONS", parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`)));
+            console.log("All Sections minus Dependent SECTIONS", formulaire.data.sections.length - dependentSections.length);
+            setRefNumber(responseSubmit.data.data[0].submit_id);
+            setResponseCounter(formData.answers.length);
+            if (responseSubmit.data.data['last_submitted_section'] != null){
+                localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_last_section_submitted`, responseSubmit.data.data['last_submitted_section']);
+            } else {
+                localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_last_section_submitted`, formulaire.data.sections[current].id);
+            }
+            if (localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_final`) == 'true'){
+                console.log("Last submit!!!", localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_final`), responseSubmit);
+                localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`,0)
+                try {
+                    if (responseSubmit.data.success){
+                        toast.success("Formulaire soumis !!!");
+                    } else {
+                        toast.error("Il y a un problème !!!");
+                    }
+                } catch (error) {
                     toast.error("Il y a un problème !!!");
                 }
-            } catch (error) {
-                toast.error("Il y a un problème !!!");
-            }
-            setCurrent(current+1)
-        } else {
-            if (formulaire.data.sections[current].type !== 'standard'){
-                setCurrentDependentSection(null);
-                setCurrent(parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_last_standard_section`)) + 1);
-                localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_last_standard_section`,'');
+                setCurrent(current+1)
             } else {
-                if (currentDependentSection) {
-                    for (let f = 0; f < formulaire.data.sections.length; f++) {
-                        const element = formulaire.data.sections[f];
-                        if (String(element.id) === currentDependentSection){
-                            setCurrent(formulaire.data.sections.indexOf(element));
-                        }
-                    }
+                if (formulaire.data.sections[current].type !== 'standard'){
+                    setCurrentDependentSection(null);
+                    setCurrent(parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_last_standard_section`)) + 1);
+                    localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_last_standard_section`,'');
                 } else {
-                    setCurrent(current + 1);
+                    if (currentDependentSection) {
+                        for (let f = 0; f < formulaire.data.sections.length; f++) {
+                            const element = formulaire.data.sections[f];
+                            if (String(element.id) === currentDependentSection){
+                                setCurrent(formulaire.data.sections.indexOf(element));
+                            }
+                        }
+                    } else {
+                        setCurrent(current + 1);
+                    }
                 }
             }
+        } catch (error) {
+            toast.error("Une erreur est survenue !!!");
+            console.log(error);
         }
     }
 
