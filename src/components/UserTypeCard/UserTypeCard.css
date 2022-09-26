@@ -38,7 +38,7 @@
   margin-top: 10px;
   margin-right: 15px;
   margin-left: 15px;
-  font: normal normal normal 15px/20px Roboto;
+  font: normal normal normal 15px/20px Montserrat;
   overflow-y: auto;
 }
 .user-type-more-button {
@@ -57,7 +57,7 @@ transform: scale(1.1) ;
 }
 .more-text-usertype {
   text-align: center;
-  font: normal normal normal 13px/15px Roboto;
+  font: normal normal normal 13px/15px Montserrat;
   letter-spacing: 0px;
   color: #727c8e;
   opacity: 1;
@@ -76,7 +76,7 @@ transform: scale(1.1) ;
 .user-type-label {
   text-align: left;
   letter-spacing: -0.4px;
-  font: normal normal bold 18px/23px Roboto;
+  font: normal normal bold 18px/23px Montserrat;
   color: #273b60;
   opacity: 1;
   margin-left: 15px;
@@ -110,7 +110,7 @@ transform: scale(1.1) ;
     height: 26px;
   }
   .user-type-label {
-    font: normal normal bold 11px/16px Roboto;
+    font: normal normal bold 11px/16px Montserrat;
     margin-left: 5px;
     margin-top: 20px;
     margin-bottom:15px;
@@ -119,14 +119,14 @@ transform: scale(1.1) ;
   .user-type-description{
     margin-left:5px;
     margin-right: 5px;
-    font: normal normal normal 11px/15px Roboto;
+    font: normal normal normal 11px/15px Montserrat;
     overflow-y: auto;
   }
   .user-type-more-button {
     width: 70%;
   }
   .more-text-usertype {
-    font: normal normal normal 11px/13px Roboto;
+    font: normal normal normal 11px/13px Montserrat;
   }
     
 }

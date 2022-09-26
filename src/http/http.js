@@ -181,3 +181,9 @@ export function getArticlesResearched(searchedText, pageNumber) {
    const response = api.get(`/query/articles?query=${searchedText}&page=` + `${pageNumber}`)
    return response.then(data => data).catch( error => error)
 }
+
+// Menus
+export function getMenus() {
+   const response = api.get(`/menus`);
+   return response.then(data => data).catch( error => error)
+}

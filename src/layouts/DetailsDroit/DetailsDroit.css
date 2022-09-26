@@ -3,7 +3,7 @@
 }
 
 .details-droit-title {
-    font: normal normal bold 43px/49px Roboto;
+    font: normal normal bold 43px/49px Montserrat;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
@@ -24,7 +24,7 @@
 .details-droit-small-desc {
     width: 70%;
     text-align: justify;
-    font: normal normal normal 19px/28px Roboto;
+    font: normal normal normal 19px/28px Montserrat;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
@@ -59,14 +59,14 @@ width:85%;
 
 .details-droit-text-title {
     text-align: left;
-    font: normal normal bold 44px/48px Roboto;
+    font: normal normal bold 44px/48px Montserrat;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
 }
 .details-droit-text-subtitle {
     text-align: left;
-    font: normal normal normal 27px/29px Roboto;
+    font: normal normal normal 27px/29px Montserrat;
     letter-spacing: 0px;
     color: #FFBE02;
     opacity: 1;
@@ -74,7 +74,7 @@ width:85%;
 }
 .details-droit-text-content {
     text-align: left;
-    font: normal normal normal 16px/31px Roboto;
+    font: normal normal normal 16px/31px Montserrat;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;

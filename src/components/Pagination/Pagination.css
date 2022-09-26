@@ -47,6 +47,6 @@ a.custom-pagination-btn-disabled {
 
 }
 .custom-pagination-active-btn a {
-    color: white;
+    color: white !important;
     background-color: #007bff;
 }

@@ -13,7 +13,7 @@
 
 .card-on-caroussel-title {
   text-align: center;
-  font: normal normal bold 12px/14px Roboto;
+  font: normal normal bold 12px/14px Montserrat;
   letter-spacing: 0px;
   color: #000000;
   text-shadow: 0px 3px 6px #0000001a;
@@ -28,7 +28,7 @@
 
 .card-on-caroussel-description {
   text-align: center;
-  font: normal normal normal 10px/12px Roboto;
+  font: normal normal normal 10px/12px Montserrat;
   letter-spacing: 0px;
   color: #292929;
   text-shadow: 0px 3px 6px #00000029;
@@ -56,14 +56,14 @@
 @media only screen and (max-width: 578px) {
 
     .card-on-caroussel-title {
-      font: normal normal bold 14px/20px Roboto;
+      font: normal normal bold 14px/20px Montserrat;
       
       margin-top: 5px;
       margin-bottom: 7px;
     }
     .card-on-caroussel-description {
       overflow-y:hidden;
-      font: normal normal normal 12px/16px Roboto;
+      font: normal normal normal 12px/16px Montserrat;
   height: 50px;
 
     }

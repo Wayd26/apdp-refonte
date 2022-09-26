@@ -3,7 +3,7 @@
 box-shadow: 8px 8px 24px #090E1466;
 border-radius: 12px;
 opacity: 1;
-height: 275px;
+height: 150px;
 /* width: 230px; */
 width: 100%;
 padding-top: 20px;
@@ -21,18 +21,18 @@ margin-bottom: 30px;
 text-align: center;
 letter-spacing: -0.4px;
 color: #273B60;
-font: normal normal bold 15px/18px Roboto;
+font: normal normal bold 15px/18px Montserrat;
 padding-right: 20px;
 padding-left: 20px;
 margin-top: 15px;
 }
 
 #faire-une-demande .description {
-    text-align: justify;
+    text-align: left;
 letter-spacing: 0px;
 color: #273B60;
 opacity: 1;
-font: normal normal normal 15px/18px Roboto;
+font: normal normal normal 15px/18px Montserrat;
 padding-right: 20px;
 padding-left: 20px;
 }
@@ -44,12 +44,25 @@ padding-left: 20px;
     opacity: 1;
     border-radius: 50px;
     margin-right: auto;
-    margin-left: auto;
+    margin-left: 25px;
+    /* width: 25%; */
+
+} 
+
+#faire-une-demande .text-container {
+    /* background-color: #f7f7f7;
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+    border-radius: 50px;
+    margin-right: auto;
+    margin-left: 25px; */
+    width: 75%;
 
 } 
 #faire-une-demande .icon {
-    width: 46px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
     /* background:# 4385F6 0% 0% no-repeat padding-box; */
     opacity: 1;
     fill: #4385f6;

@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 40px !important;
-    font: normal normal normal 20px/40px Roboto;
+    font: normal normal normal 20px/40px Montserrat;
 letter-spacing: 0px;
 color: #000000;
 }
@@ -14,7 +14,7 @@ color: #000000;
 }
 
 .demarche-nav {
-font: normal normal bold 13px/40px Roboto !important;
+font: normal normal bold 13px/40px Montserrat !important;
 letter-spacing: 0px;
 color: #FFFFFF;
 margin-top: 2px !important;
@@ -29,7 +29,7 @@ border: none !important;
     background-color: #FFBE00 !important;
 }
 .dropdown-item {
-    font: normal normal normal 15px/30px Roboto !important;
+    font: normal normal normal 15px/30px Montserrat !important;
 }
 .dropdown-item.active, .dropdown-item:active, .dropdown-item:focus, .dropdown-item:hover {
     background-color: #FFBE00 !important;
@@ -37,7 +37,7 @@ border: none !important;
 }
 .header-block-2{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     /* padding-right: 3%; */
     padding-top: 10px;
@@ -123,7 +123,7 @@ border: none !important;
     font-weight: bold;
     font-size: 15px;
     width: fit-content !important;
-    font-family: Roboto;
+    font-family: Montserrat;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -154,8 +154,8 @@ border: none !important;
 
 .header-animate-text {
     min-width: 100%;
-    -webkit-animation: 60s ease-in 1s infinite reverse both running slidein;
-    animation: 60s ease-in 1s infinite reverse both running slidein;
+    -webkit-animation: 120s ease-in 10s infinite reverse both running slidein;
+    animation: 120s ease-in 10s infinite reverse both running slidein;
     position: absolute;
 }
 
@@ -164,7 +164,7 @@ border: none !important;
 
 .header-block-2-div-2{
     width: 60%;
-    font-family: Roboto;
+    font-family: Montserrat;
 }
 
 .navbar-nav {
@@ -204,11 +204,11 @@ border: none !important;
 
 @media only screen and (min-width: 768px) and (max-width: 1024px){
 	.dropdown-toggle.drop-class {
-        font: 12px / 35px Roboto !important;
+        font: 12px / 35px Montserrat !important;
     }
 
     .header-block-2 div.col {
-        font: 12px / 35px Roboto !important;
+        font: 12px / 35px Montserrat !important;
     }
 }
 
@@ -246,7 +246,7 @@ border: none !important;
 .hwrap {
     overflow: hidden; /* HIDE SCROLL BAR */
     /* background: #eee; */
-    background: #FFBE00;
+    background: #337ab7;
     height: 30px !important;
   }
    
@@ -277,7 +277,6 @@ max-height: 30px !important; }
   .hmove { animation: tickerh linear 50s infinite; }
   .hmove:hover { animation-play-state: paused; }
 
-
 .c-btn-dropdown {
     border: none !important;
     background-color: unset !important;
@@ -286,4 +285,19 @@ max-height: 30px !important; }
 
 .c-btn-dropdown:hover, .c-btn-dropdown:active, .c-btn-dropdown:focus {
     background-color: #FFC03A !important;
+}
+
+.hitem {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.pop-up {
+    width: 100%;
+    margin-top: -20px !important;
+}
+
+.header-block-2 {
+    background: #fff;
 }

@@ -145,7 +145,7 @@ const customStyles = {
         style: {
            
             minHeight: '100px',
-            font: 'normal normal bold 13px/18px Roboto',
+            font: 'normal normal bold 13px/18px Montserrat',
             letterSpacing: '0px',
             color: '#000000',
             whiteSpace: "inherit",
@@ -162,7 +162,7 @@ const customStyles = {
             // border: '1px solid #DDE1E6',
             border: 'none',
             opacity: '1',
-            font: 'normal normal bold 14px/18px Roboto',
+            font: 'normal normal bold 14px/18px Montserrat',
             letterSpacing: '0px',
             color: '#000000'
 

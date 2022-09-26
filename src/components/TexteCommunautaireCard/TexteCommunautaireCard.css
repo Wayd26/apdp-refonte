@@ -12,7 +12,7 @@
 
 .texte-communiautaire-card-title {
     text-align: center;
-    font: normal normal bold 20px/26px Roboto;
+    font: normal normal bold 20px/26px Montserrat;
     letter-spacing: 0px;
     color: #2E2E2E;
     opacity: 1;
@@ -30,7 +30,7 @@
     margin-left: auto;
     height: 112px;
     text-align: center;
-    font: normal normal normal 19px/23px Roboto;
+    font: normal normal normal 19px/23px Montserrat;
     letter-spacing: 0px;
     color: #2E2E2E;
     opacity: 1;
@@ -45,7 +45,7 @@
     box-shadow: 0px 8px 15px #727C8E5C;
     border-radius: 24px;
     opacity: 1;
-    font: normal normal bold 13px/16px Roboto;
+    font: normal normal bold 13px/16px Montserrat;
     letter-spacing: 0px;
     color: #727C8E;
     border: none;

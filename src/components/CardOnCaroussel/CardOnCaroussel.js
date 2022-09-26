@@ -11,9 +11,11 @@ const CardOnCaroussel = (props) => {
             <p className={'card-on-caroussel-title'}>{title}</p>
             {/* <p className={'card-on-caroussel-description'}>{subtitle}</p> */}
             <button className={'card-on-caroussel-button'}
-                    onClick={() => navigate(`/actualites/${id}`)}>Lire plus</button>
+                    onClick={() => navigate(`/actualites/actualites/${id}`)}>Lire plus</button>
         </div>
     )
 }
 
 export default CardOnCaroussel
+
+

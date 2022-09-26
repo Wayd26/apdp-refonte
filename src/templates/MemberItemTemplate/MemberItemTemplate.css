@@ -1,0 +1,48 @@
+.member__item-template {
+
+}
+
+.member__item-template img {
+    width: 220px;
+    height: 220px;
+    border: 7px solid #FFFFFF;
+    opacity: 1;
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    box-shadow: rgb(32, 31, 31) 0px 3px 6px, rgb(51, 48, 48) 0px 3px 6px;
+}
+
+.member__item-template .name {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font: normal normal bold 16px/19px Montserrat;
+    letter-spacing: 0px;
+    color: #333333;
+    opacity: 1;
+}
+
+.member__item-template .job {
+    text-align: center;
+    font: normal normal normal 18px/15px Montserrat;
+    letter-spacing: 0px;
+    color: #777777;
+    opacity: 1;
+    margin-bottom: 10px;
+}
+
+.member__item-template .text-content {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    opacity: 1;
+    width: 80%;
+    box-shadow: rgb(219, 208, 208) 0px 3px 6px, rgb(51, 48, 48) 0px 3px 6px;
+    padding: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    text-align: left;
+    max-width: 800px;
+    font: normal normal normal 22px/30px Montserrat;
+
+}

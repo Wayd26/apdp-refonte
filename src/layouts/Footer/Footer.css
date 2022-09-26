@@ -4,7 +4,7 @@
     width: 100%;
     margin: 0;
     height: 40%;
-    font-family: Roboto;
+    font-family: Montserrat;
     /* background: url(../../../assets/icons/footer_bg.jpg) */
 }
 
@@ -20,7 +20,7 @@
     border-radius: 6px;
     opacity: 1;
     height: 35px;
-    font: normal normal normal 18px/25px Roboto;
+    font: normal normal normal 18px/25px Montserrat;
     letter-spacing: 0px;
     color: #000000;
     border-color: #FFFFFF;
@@ -90,7 +90,7 @@
 }
 
 body {
-    font-family: "Roboto";
+    font-family: "Montserrat";
     font-weight: 400;
     font-style: normal;
     background-color: var(--bkgColor);
@@ -104,7 +104,7 @@ body {
 
 /**********************FOOTER STYLE********************/
 .pg-footer {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     /* height: 1000px; */
 }
 
@@ -123,7 +123,7 @@ body {
 }
 .visitor-number-span {
     color : #00bef0;
-    font: normal normal bold 20px/35px Roboto;
+    font: normal normal bold 20px/35px Montserrat;
 
 }
 
@@ -193,7 +193,7 @@ body {
 
 .footer-menu-name {
     /* text-align: left; */
-    font: normal normal bold 16px/20px Roboto;
+    font: normal normal bold 16px/20px Montserrat;
 letter-spacing: 0px;
 color: #FFFFFF;
 opacity: 1;
@@ -402,7 +402,7 @@ opacity: 1;
 }
 
 li > a {
-    font: normal normal normal 14px/20px Roboto;
+    font: normal normal normal 14px/20px Montserrat;
 letter-spacing: 0px;
 color: #FFFFFF;
 opacity: 1;
@@ -585,7 +585,7 @@ h2,
 h3,
 h4,
 h5{
-    font-family: "Roboto", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 700;
     color: #1d2025;
     margin: 0px;

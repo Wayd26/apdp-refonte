@@ -1,0 +1,148 @@
+.actuality-list__card {
+    display: flex;
+    height: 250px;
+    width: 70%;
+    max-width: 750px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-bottom: 30px; */
+    margin-top: 60px;
+    border-radius: 8px;
+    box-shadow: rgb(59, 55, 55) 0px 3px 6px, rgb(156, 146, 146) 0px 3px 6px;
+}
+
+.actuality-list__card__image {
+    width: 40%;
+    /* height: 100%;    */
+}
+
+.actuality-list__card__content {
+    width: 60%;
+    text-align: left;
+    padding: 15px;
+
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+}
+
+.actuality-list__card__content .content__text {
+    height: 190px;
+    overflow-y: auto;
+    padding-top: 10px;
+}
+
+.actuality-list__card__content .title {
+    /* font: normal normal bold 15px/17px Montserrat; */
+    font: normal normal normal 13px/10px Montserrat;
+    letter-spacing: 0px;
+    color: #777777;
+    text-transform: uppercase;
+    opacity: 1;
+    margin-bottom: 16px;
+}
+
+.actuality-list__card__content .subtitle {
+    font: normal normal bold 24px/27px Montserrat;
+    letter-spacing: 0px;
+    color: #333333;
+    opacity: 1;
+}
+
+.actuality-list__card__content .description {
+    font: normal normal normal 12px/20px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+
+
+.actuality-list__card__image img {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 10px;
+    border-radius: 8px 0 0 8px;
+    /* box-shadow: rgb(59, 55, 55) 0px 3px 6px, rgb(156, 146, 146) 0px 3px 6px; */
+}
+
+.actuality-list__card__footer {
+    text-align: right;
+}
+
+.actuality-list__card__footer button {
+    background: #FFBE00 0% 0% no-repeat padding-box;
+    box-shadow: rgb(59, 55, 55) 0px 3px 6px, rgb(156, 146, 146) 0px 3px 6px;
+    opacity: 1;
+    border: none;
+    width: 115px;
+    height: 30px;
+    border-radius: 8px;
+    font: normal normal bold 14px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.actuality-list__card__footer button:hover {
+    transform: translate(3px, 3px);
+    transition-duration: 1500ms;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .actuality-list__card__content .content__text {
+        height: 100px;
+        overflow-y: auto;
+    }
+
+    .actuality-list__card__image {
+        width: 100%;
+        /* height: 100%;    */
+    }
+
+    .actuality-list__card__content {
+        width: 100%;
+        text-align: center;
+        height: 140px;
+    }
+
+    .actuality-list__card__content .title {
+        font: normal normal normal 13px/10px Montserrat;
+        margin-bottom: 10px;
+    }
+
+    .actuality-list__card__content .subtitle {
+        font: normal normal bold 14px/20px Montserrat;
+    }
+
+    .actuality-list__card__content .description {
+        font: normal normal normal 12px/17px Montserrat;
+    }
+
+    .actuality-list__card__image img {
+        width: 100px;
+        height: 100px;
+        border-radius: 8px;
+        margin-top: -40px;
+        box-shadow: rgb(59, 55, 55) 0px 3px 6px, rgb(156, 146, 146) 0px 3px 6px;
+    }
+
+    .actuality-list__card__footer {
+        text-align: center;
+        padding-top: 5px;
+    }
+
+    .actuality-list__card__footer button {
+        background: #FFBE00 0% 0% no-repeat padding-box;
+        box-shadow: rgb(59, 55, 55) 0px 3px 6px, rgb(156, 146, 146) 0px 3px 6px;
+        opacity: 1;
+        border: none;
+        width: 95px;
+        height: 30px;
+        border-radius: 8px;
+        font: normal normal bold 14px/18px Montserrat;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+    }
+}
