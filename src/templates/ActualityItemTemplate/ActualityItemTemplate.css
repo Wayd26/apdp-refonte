@@ -78,7 +78,7 @@
 .actuality__item__button {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 15px;
+    /* margin-top: 15px; */
     background: #FFBE00 0% 0% no-repeat padding-box;
     box-shadow: rgb(202, 188, 188) 0px 3px 6px, rgb(156, 146, 146) 0px 3px 6px;
     opacity: 1;

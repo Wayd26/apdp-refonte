@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import Home from '../Home/Home'
 // import { Route, Router, Switch, Routes } from "react-router-dom";
 import { Container } from "react-bootstrap";
-import { createBrowserHistory } from "history";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Auth from "../Auth/Auth"
 import VosDroits from '../VosDroits/VosDroits';
@@ -79,7 +78,6 @@ import CoreItem from '../../appShell/CoreItem';
 
 const Content = () => {
 
-    const history = createBrowserHistory();
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])

@@ -155,13 +155,13 @@ const Home = () => {
               {/* {shortcuts.map((i, item) => ( */}
               
                 {/* <div className={"col-sm text-center"}>  */}
-                <ShortcutCard className="mx-auto" ind={1} label={"Lois"} link={"textes/lois"}/>
+                <ShortcutCard className="mx-auto" ind={1} label={"Lois"} link={"documentations/lois"}/>
                 {/* </div> */}
                 {/* <div className={"col-sm text-center"}>  */}
-                <ShortcutCard ind={2} label={"Communiqués"} link={"communiques"}/>
+                <ShortcutCard ind={2} label={"Communiqués"} link={"communiques/communiques_et_newsletters"}/>
                 {/* </div> */}
                 {/* <div className={"col-sm text-center"}>  */}
-                <ShortcutCard className="mx-auto" ind={2} label={"Marchés publics"} link={"appels-d-offres"}/>
+                <ShortcutCard className="mx-auto" ind={2} label={"Marchés publics"} link={"documentations/publication_de_marche"}/>
                 {/* </div> */}
                 {/* <div className={"col-sm text-center"}>  */}
                 <ShortcutCard className="mx-auto" ind={2} label={"Espace RT"} link={"espace-rt"}/>

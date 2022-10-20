@@ -53,10 +53,10 @@ const ActualityItemTemplate = () => {
                     <div class="actuality__item__subtitle-content">
                         <div class="actuality__item__subtitle">{data && data[0]?.sub_title}</div>
                     </div>
-                    <div class="actuality__item__description" dangerouslySetInnerHTML={{__html: (data && data[0]?.content)}}>
+                    <div class="actuality__item__description mb-5 " dangerouslySetInnerHTML={{__html: (data && data[0]?.content)}}>
                     </div>
-                    <button onClick={() => navigate(`/actualites/${menu}`)} className="actuality__item__button">Retour</button>
                 </div>
+                    <button onClick={() => navigate(`/actualites/${menu}`)} className="actuality__item__button mb-3">Retour</button>
             </div>
         </div>
     )

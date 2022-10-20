@@ -1,7 +1,7 @@
 .actuality-list__card {
     display: flex;
     height: 250px;
-    width: 70%;
+    width: 500px;
     max-width: 750px;
     background-color: #fff;
     margin-left: auto;
@@ -13,12 +13,14 @@
 }
 
 .actuality-list__card__image {
-    width: 40%;
+    /* width: 40%; */
+    width: 250px;
     /* height: 100%;    */
 }
 
 .actuality-list__card__content {
-    width: 60%;
+    /* width: 60%; */
+    width: 250px;
     text-align: left;
     padding: 15px;
 
@@ -41,10 +43,11 @@
     text-transform: uppercase;
     opacity: 1;
     margin-bottom: 16px;
+    line-height: 1.5;
 }
 
 .actuality-list__card__content .subtitle {
-    font: normal normal bold 24px/27px Montserrat;
+    font: normal normal bold 20px/25px Montserrat;
     letter-spacing: 0px;
     color: #333333;
     opacity: 1;
@@ -60,7 +63,7 @@
 
 
 .actuality-list__card__image img {
-    width: 100%;
+    width: 250px;
     height: 250px;
     margin-bottom: 10px;
     border-radius: 8px 0 0 8px;

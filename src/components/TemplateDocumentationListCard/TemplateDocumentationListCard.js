@@ -18,6 +18,7 @@ const TemplateDocumentationListCard = (props) => {
         <div class="documentation-list__card__text-content">
             <div class="description">{title}</div>
             <hr />
+                <div class="footer-content__time">{created_at.slice(8,10)} / {created_at.slice(5,7)} / {created_at.slice(0,4)}<span className='green-period'>.</span></div>
             <div class="footer-content d-flex">
                 <div class="footer-content__buttons">
                     <button class="read-button" onClick={() => navigate(`/documentations/${menu}/${id}`)}>Lire</button>
@@ -26,7 +27,6 @@ const TemplateDocumentationListCard = (props) => {
                      </a>
                     
                 </div>
-                <div class="footer-content__time">{created_at.slice(8,10)} / {created_at.slice(5,7)} / {created_at.slice(0,4)}<span className='green-period'>.</span></div>
             </div>
         </div>
     </div>
