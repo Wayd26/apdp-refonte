@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import ActualityItemTemplate from '../templates/ActualityItemTemplate/ActualityItemTemplate'
+import DocumentationItemTemplate from '../templates/DocumentationItemTemplate/DocumentationItemTemplate';
 
-const CoreItem = () => {
+const CoreItem = ({type}) => {
 
   return (
     <div>
-        <ActualityItemTemplate/>
+       {type == 'documentation' ? <DocumentationItemTemplate /> :  <ActualityItemTemplate/>}
     </div>
   )
 }

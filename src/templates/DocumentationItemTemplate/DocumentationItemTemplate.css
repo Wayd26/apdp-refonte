@@ -78,8 +78,8 @@
 .documentation__item__read-button,
 .documentation__item__download-button,
 .documentation__item__back-button {
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
     margin-top: 15px;
     box-shadow: rgb(202, 188, 188) 0px 3px 6px, rgb(156, 146, 146) 0px 3px 6px;
     opacity: 1;
@@ -113,7 +113,7 @@
 
 .documentation__item-template__content .buttons-content {
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
 }
 
 
@@ -209,7 +209,7 @@
         box-shadow: rgb(202, 188, 188) 0px 3px 6px, rgb(156, 146, 146) 0px 3px 6px;
         opacity: 1;
         border: none;
-        width: 100px;
+        width: 150px;
         height: 35px;
         border-radius: 8px;
         font: normal normal bolder 14px/18px Montserrat;
@@ -217,6 +217,6 @@
         color: #FFFFFF;
     }
     .documentation__item__back-button {
-        width: 260px;
+        width: 120px;
     }
 }

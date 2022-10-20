@@ -92,13 +92,13 @@ const Content = () => {
 
                     
                     <Route path="/actualites/:menu" element={<Core model={"actualites"}/>} />
-                    <Route path="/actualites/:menu/:id" element={<CoreItem />} />
+                    <Route path="/actualites/:menu/:id" element={<CoreItem type={'actualite'} />} />
 
                     <Route path="/communiques/:menu" element={<Core model={"communiques"}/>} />
-                    <Route path="/communiques/:menu/:id" element={<CoreItem />} />
+                    <Route path="/communiques/:menu/:id" element={<CoreItem type={'actualite'} />} />
 
                     <Route path="/documentations/:menu" element={<Core model={"documentations"}/>} />
-                    <Route path="/documentations/:menu/:id" element={<CoreItem />} />
+                    <Route path="/documentations/:menu/:id" element={<CoreItem type={'documentation'} />} />
 
                     <Route path="/videotheque/:menu" element={<Core model={"videotheque"}/>} />
                     <Route path="/videotheque/:menu/:id" element={<CoreItem />} />

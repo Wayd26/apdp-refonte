@@ -63,7 +63,7 @@ useEffect(() => {
             {/* <Breadcrumb.Item href="#">{JSON.parse(localStorage.getItem('secondMenu-active'))?.name}</Breadcrumb.Item> */}
             <Breadcrumb.Item active>{JSON.parse(localStorage.getItem('active-menu'))?.name}</Breadcrumb.Item>
         </Breadcrumb>
-<div class="d-flex flex-wrap justify-content-evenly">
+<div className="">
       {articles.length != 0 ? articles.map((item, index) => <div className='' key={index}><TemplateActualityListListCard 
       id={item.id} title={item.title} content={item.content} created_at={item.created_at} document_url={item.document_url} image_url={item.image_url} sub_title={item.sub_title} />
       </div>) : <h1 className='m-auto p-5'>Aucune Donnée</h1>}
