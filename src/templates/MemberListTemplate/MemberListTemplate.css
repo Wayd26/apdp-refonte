@@ -1,6 +1,6 @@
 .member__list-template-card {
-    /* width: 80%; */
-    width: 800px;
+    width: 85%;
+    max-width: 1200px;
     /* max-width: 1000px; */
     margin-left: auto;
     margin-right: auto;

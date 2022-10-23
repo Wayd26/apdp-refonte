@@ -36,9 +36,9 @@
 }
 
 .espace-dpo-section-button:hover {
-    
-   background-color: #4385F6;
-   color: #fff;
+
+    background-color: #4385F6;
+    color: #fff;
 }
 
 .espace-dpo-section-button:active {
@@ -50,18 +50,22 @@
 }
 
 .espace-dpo-content {
-    width: 80%;
+    width: 90%;
     margin: auto;
+    overflow-x: auto;
 }
 
 .espace-dpo-section-button {
+    width: 100%;
     cursor: pointer;
-height: 40px;
-border-radius: 8px;
-outline: 0;
-border: 1px solid #fff;
+    height: 40px;
+    border-radius: 8px;
+    outline: 0;
+    border: 1px solid #fff;
+    font: normal normal bold 15px/15px Montserrat;
+
 }
 
 .activeSection {
-    background-color: #FFC03A;      
+    background-color: #FFC03A;
 }

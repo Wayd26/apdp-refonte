@@ -3,8 +3,8 @@
 }
 
 .member__item-template img {
-    width: 220px;
-    height: 220px;
+    width: 300px;
+    height: 320px;
     border: 7px solid #FFFFFF;
     opacity: 1;
     border-radius: 50%;
@@ -34,15 +34,16 @@
 
 .member__item-template .text-content {
     background: #ffffff 0% 0% no-repeat padding-box;
+    margin-top: 25px;
     opacity: 1;
-    width: 80%;
+    width: 85%;
+    max-width: 1200px;
     box-shadow: rgb(219, 208, 208) 0px 3px 6px, rgb(51, 48, 48) 0px 3px 6px;
     padding: 30px;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 30px;
     text-align: left;
-    max-width: 800px;
     font: normal normal normal 22px/30px Montserrat;
 
 }

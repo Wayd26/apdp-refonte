@@ -146,7 +146,7 @@ const Header = (props) => {
 
                                             type="" data-toggle="dropdown">{sub.name.toUpperCase()}
                                         </div>
-                                        <ul className={state.showSub == sub.name ? "dropdown-menu show pop-up" : "dropdown-menu"}>
+                                        <ul style={{width: '110%'}} className={state.showSub == sub.name ? "dropdown-menu show pop-up" : "dropdown-menu"}>
                                             {sub.children.map((subItem, index) =>
                                                 <li key={index}><a tabIndex="-1" onClick={() => {
                                                     setActiveMenu(subItem.parent_id)

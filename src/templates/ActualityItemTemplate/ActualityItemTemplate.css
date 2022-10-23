@@ -14,15 +14,19 @@
 }
 
 .actuality__item-template__content img {
-    width: 700px;
-    height: 500px;
+    width: 90%;
+    max-width: 1200px;
+    height: 50%;
+    max-height: 900px;
     border-radius: 8px;
     box-shadow: rgb(59, 55, 55) 0px 3px 6px, rgb(156, 146, 146) 0px 3px 6px;
 }
 
 .actuality__item-template__content .text-content {
-    width: 700px;
-    height: 500px;
+    width: 90%;
+    max-width: 1200px;
+    height: 50%;
+    max-height: 900px;
     border-radius: 8px;
     box-shadow: rgb(59, 55, 55) 0px 3px 6px, rgb(156, 146, 146) 0px 3px 6px;
     background-color: #FFFFFF;

@@ -4,11 +4,12 @@
     border-radius: 5px;
     opacity: 1;
     height: 200px;
-    width: 450px;
+    max-width: 650px;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 70px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     cursor: pointer;
 }
 
@@ -19,10 +20,10 @@
 
 .member-bureau-list__card__image img {
     width: 100%;
-    height: 200px;
-    margin-bottom: 10px;
+    height: 250px;
+    margin-bottom: 40px;
     border: 5px solid #F5F5F5;
-    margin-top: -35px;
+    margin-top: -55px;
     border-radius: 15px;
     opacity: 1;
     box-shadow: rgb(59, 55, 55) 0px 3px 6px, rgb(156, 146, 146) 0px 3px 6px;
