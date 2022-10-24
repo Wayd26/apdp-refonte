@@ -42,7 +42,7 @@ const EspaceDPO = () => {
                     </div>
                 ))}
             </div>
-            <div className='espace-dpo-content'>
+            <div className='espace-dpo-content custom-overflow'>
                 {sectionActive === 1 && <SupportDeFormation />}
                 {sectionActive === 2 && <FormationProgrammee />}
                 {sectionActive === 3 && <FormationSuivie />}

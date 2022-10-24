@@ -66,12 +66,12 @@ const Footer = () => {
                 <li className="menu-item menu-item-type-post_type menu-item-object-page">
                   <a href="#">Mentions Légales</a>
                 </li>
-                <li className="menu-item menu-item-type-post_type menu-item-object-page">
+                {/* <li className="menu-item menu-item-type-post_type menu-item-object-page">
                   <a href="/vos-démarches">Vos démarches</a>
                 </li>
                 <li className="menu-item menu-item-type-post_type menu-item-object-page">
                   <a href="#">Arnaque du mois</a>
-                </li>
+                </li> */}
               </ul>
             </div>
 
@@ -141,12 +141,12 @@ const Footer = () => {
 
       </div>
       <div className="mx-auto mt-4 mb-5 text-center">
-        <p className="visitor-number-p">Nombre de visites : <span id="visits" className="visitor-number-span">{visitsNumber}</span></p>
 
        
+        <p className="visitor-number-p">Nombre de visites : <span id="visits" className="visitor-number-span">{visitsNumber}</span></p>
       </div>
 
-      <p className="footer-copyright-text">
+      <p className="footer-copyright-text mb-5">
         <a className="footer-copyright-link text-white" href="#" target="_self">
           © Copyright {new Date().getFullYear()}, APDP. Tous droits réservés.
         </a>

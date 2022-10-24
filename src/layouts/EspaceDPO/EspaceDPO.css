@@ -52,6 +52,9 @@
 .espace-dpo-content {
     width: 90%;
     margin: auto;
+}
+
+.custom-overflow {
     overflow-x: auto;
 }
 
