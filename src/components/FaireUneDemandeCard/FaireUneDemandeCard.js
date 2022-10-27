@@ -5,7 +5,7 @@ import { HiLink } from 'react-icons/hi'
 const FaireUneDemandeCard = (props) => {
     const {title, description, handleCardClicked} = props;
     return (
-        <div id="faire-une-demande-card" className="faire-une-demande-card d-flex" style={{padding: "20px"}} onClick={handleCardClicked}>
+        <div id="faire-une-demande-card" className="faire-une-demande-card d-flex" onClick={handleCardClicked}>
             <div className="icon-container d-flex justify-content-space-evenly">
                 <HiLink className="icon" />
             </div>
