@@ -22,7 +22,7 @@ ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>
             <App />
-            </BrowserRouter>,
+        </BrowserRouter>,
     </React.StrictMode>,
     document.getElementById('root')
 );

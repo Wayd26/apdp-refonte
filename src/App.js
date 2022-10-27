@@ -46,17 +46,19 @@ function App() {
 
 useEffect(() => {
   fetchMenus();
- }, [])
+}, [])
 
-  return (
-    <div className="App">
-      {/* <div>APDP Frontend</div> */}
-      {/* <SignIn /> */}
-      <Header firstMenus={firstMenus} secondMenus={secondMenus} />
-      <Content/>
-      <Footer/>
-    </div>
-  );
+  if (firstMenus.length != 0 && secondMenus.length != 0){
+    return (
+      <div className="App">
+        {/* <div>APDP Frontend</div> */}
+        {/* <SignIn /> */}
+        <Header firstMenus={firstMenus} secondMenus={secondMenus} />
+        <Content/>
+        <Footer/>
+      </div>
+    );
+  }
 }
 
 export default App;
