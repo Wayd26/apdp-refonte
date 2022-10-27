@@ -58,20 +58,15 @@ const Footer = () => {
               // textAlign: "start",
             }}>
               <div className="footer-menu">
-              <h2 className="footer-menu-name"> INFORMATIONS </h2>
+              <h2 style={{textAlign: 'left'}} className="footer-menu-name"> INFORMATIONS </h2>
               <ul id="menu-company" className="footer-menu-list">
-                <li className="menu-item menu-item-type-post_type menu-item-object-page">
+                <li style={{textAlign: 'left'}} className="menu-item menu-item-type-post_type menu-item-object-page">
                   <a href="#">Politique de confidentialité</a>
                 </li>
-                <li className="menu-item menu-item-type-post_type menu-item-object-page">
+                <li style={{textAlign: 'left'}} className="menu-item menu-item-type-post_type menu-item-object-page">
                   <a href="#">Mentions Légales</a>
                 </li>
-                {/* <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="/vos-démarches">Vos démarches</a>
-                </li>
-                <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="#">Arnaque du mois</a>
-                </li> */}
+              
               </ul>
             </div>
 
@@ -87,7 +82,7 @@ const Footer = () => {
               <div >
                 <h5 style={{
                   color: "white",
-                  // textAlign: "start",
+                  textAlign: "left",
                   maxWidth: 300,
                   marginLeft: "auto",
                   marginRight: "auto",
@@ -111,7 +106,7 @@ const Footer = () => {
 
           <div className="col-sm-4 col-xs-12 text-center">
             <div className="footer-call-to-action">
-              <h2 className="footer-call-to-action-title">CONTACTS</h2>
+              <h2 className="footer-call-to-action-title" style={{textAlign: 'left'}}>CONTACTS</h2>
               <div style={{
                 display: 'flex',
                 justifyContent: 'flex-start',
