@@ -19,6 +19,7 @@ const StatutDemande = () => {
         const resp = await getRequestedQuery(ref_number);
         if(!resp.data.data.id){
             document.getElementById("ref_number_input").className = "form-control is-invalid"
+            setQuery({});
         } else {
             document.getElementById("ref_number_input").className = "form-control"
             setQuery(resp.data.data);
@@ -27,6 +28,10 @@ const StatutDemande = () => {
     
     
     useEffect(() => {
+        if (localStorage.getItem("user_token") === "" || localStorage.getItem("user_token") === null){
+            localStorage.setItem("redirect_url", window.location.pathname);
+            window.location = "/auth";
+        }
         // console.log("Query data ", query);
         // console.log("Status data ", status);
     }, [])
@@ -60,7 +65,16 @@ const StatutDemande = () => {
                 <h4 style={{ paddingTop: "40px", paddingBottom: "40px"}}>Demande N° {query.id}</h4>
                 <div style={{ backgroundColor: "rgb(225, 225, 225)", padding: "40px", borderRadius: "15px", }}>
                     <h4 style={{ paddingTop: "40px", paddingBottom: "40px"}}>{query.label}</h4>
-                    <p style={{ padding: "40px 0px", }}>Statut: <b style={{ color: "#4385f6" }}>{query.status.toUpperCase()}</b> </p>
+                    {query.status === "submitted" ? <p style={{ padding: "40px 0px", }}>Statut: <b style={{ color: "#FFBE00" }}>SOUMIS</b> </p> :null}
+                    {query.status === "rejected" ? <p style={{ padding: "40px 0px", }}>Statut: <b style={{ color: "red" }}>REJETE</b> </p>  :null}
+                    {query.status === "pending" ? <p style={{ padding: "40px 0px", }}>Statut: <b style={{ color: "#4385f6" }}>EN ATTENTE</b> </p> :null}
+                    {query.status === "approved" ? <p style={{ padding: "40px 0px", }}>Statut: <b style={{ color: "green" }}>APPROUVE</b> </p> :null}
+
+
+                    {query.status === "submitted" ? <p style={{ padding: "40px 0px", }}>Votre demande a été soumise et est en cours de validation.</p> :null}
+                    {query.status === "rejected" ? <p style={{ padding: "40px 0px", }}>Votre demande a été rejetée.</p> :null}
+                    {query.status === "pending" ? <p style={{ padding: "40px 0px", }}>Votre demande est en attente.</p> :null}
+                    {query.status === "approved" ? <p style={{ padding: "40px 0px", }}>Votre demande a été approuvée.</p> :null}
                 </div>
             </div>:<div></div>
             }

@@ -69,6 +69,11 @@ const SignIn = () => {
                     localStorage.setItem("user_id",user.data.id);
                     localStorage.setItem("user_name",user.data.name);
                     localStorage.setItem("user_email",user.data.email);
+                    if (String(user.data.roles).includes("DPO")){
+                        localStorage.setItem("is_dpo",true);
+                    }else{
+                        localStorage.setItem("is_dpo",false);
+                    }
                     setTimeout(() => {
                         if (localStorage.getItem("redirect_url") !== null){
                             window.location = localStorage.getItem("redirect_url");

@@ -199,8 +199,11 @@ export default function DynamiqueForm() {
             console.log("FINAL", localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_final`));
             console.log("FILLED SECTIONS", parseInt(localStorage.getItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_filledSections`)));
             console.log("All Sections minus Dependent SECTIONS", formulaire.data.sections.length - dependentSections.length);
-            setRefNumber(responseSubmit.data.data[0].submit_id);
+            // setRefNumber(responseSubmit.data.data[0].submit_id);
             setResponseCounter(formData.answers.length);
+            const usefulQueryResponse = await getRequestedQuery(responseSubmit.data.data[0].submit_id);
+            localStorage.setItem('saved_num', usefulQueryResponse.data.data.saved_num)
+            setRefNumber(usefulQueryResponse.data.data.saved_num);
             if (responseSubmit.data.data['last_submitted_section'] != null){
                 localStorage.setItem(`${formulaire.data.name.replaceAll(' ','_').toLowerCase()}_last_section_submitted`, responseSubmit.data.data['last_submitted_section']);
             } else {
@@ -447,12 +450,14 @@ export default function DynamiqueForm() {
                     <ToastContainer />
                     <Form className="form-style" style={{alignItems: 'center'}}>
                         
-                        <h2 style={{ fontSize: 'xx-large', fontWeight: 'lighter', textTransform: 'uppercase' }}>{formulaire.data.name}</h2>
+                        {/* <h2 style={{ fontSize: 'xx-large', fontWeight: 'lighter', textTransform: 'uppercase' }}>{formulaire.data.name}</h2> */}
+
+                        <h2 style={{ fontSize: 'xx-large', fontWeight: 'lighter', textTransform: 'uppercase' }}>Demande reçue</h2>
         
                         <div style={{ textAlign: 'center' }}>
                             <div style={{ marginTop: '25%', marginBottom: '25%', }}>
                                 <ImHappy style={{ fontSize: '50px', marginBottom: '30px' }}/>
-                                <p style={{ fontFamily: 'Montserrat', }}>Votre demande a été soumise et enregistrée sous le numéro de référence qui vous sera communiqué par mail.</p>
+                                <p style={{ fontFamily: 'Montserrat', }}>Votre demande a été soumise et enregistrée sous le numéro <b>{localStorage.getItem('saved_num')}</b> et un mail vous a été envoyé.</p>
                             </div>
                             {/* <Button className="auth-form-btn" style={{width: 'auto', height: 'auto', padding: '15px',}} onClick={(e) => window.location.pathname = `/query/${window.location.pathname.split('/').pop()}/${refNumber}`}>
                                 Voir l'aperçu de la demande
