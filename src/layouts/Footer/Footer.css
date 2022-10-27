@@ -28,6 +28,10 @@
     width: 100%;
 }
 
+.pg-footer{
+    position: absolute;
+}
+
 .copyright-text {
   text-align: center;
   color: white;
