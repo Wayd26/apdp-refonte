@@ -5,24 +5,27 @@ import './CustomInput.css'
 export default function CustomInput({field, updateValue, updateDependentSection}) {
     const [currentRadio, setRadio] = useState(null)
     const [currentCheckBoxes, setCheckboxes] = useState([])
-    const [fileInputsData, setFileInputsData] = useState([])
+    // const [fileInputsData, setFileInputsData] = useState([])
+    let fileInputsData = [];
 
     const readBlob = file => new Promise((resolve, reject) => {
         const reader = new FileReader();
       
-        reader.onload = e => {
-            console.log(e.target.result);
-            setFileInputsData([...fileInputsData, e.target.result]);
+        reader.onload = file => {
+            // console.log(file.target.result);
+            // setFileInputsData([...fileInputsData, file.target.result]);
+            fileInputsData.push(file.target.result);
+            console.log(fileInputsData);
+            console.log(fileInputsData.length);
             updateValue({
-                answer_file: [...fileInputsData, e.target.result],
+                answer_file: fileInputsData,
                 // choice: {'group': field.option_group_id, 'value': null},
                 choice: field.option_choices[0].id,
                 question: field.id
             })
-            resolve(e.target.result);
+            resolve(file);
         };
-      
-        reader.readAsText(file);
+        reader.readAsDataURL(file);
     });
 
     if(field.input_type.element === 'select' || field.input_type.element === 'multi-select') {
@@ -179,6 +182,7 @@ export default function CustomInput({field, updateValue, updateDependentSection}
                         multiple={true}
                         required = {field.answer_required === 0 ? false: true}
                         onChange={(e) => {
+                            fileInputsData = [];
                             for (let index = 0; index < e.target.files.length; index++) {
                                 const file = e.target.files[index];
                                 readBlob(file);

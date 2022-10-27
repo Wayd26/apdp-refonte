@@ -13,6 +13,14 @@
     position: relative;
     background-color: #092a47;
     top: -5px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.stepper-div::-webkit-scrollbar{
+    display: none;
 }
 
 .form-header h2 {
