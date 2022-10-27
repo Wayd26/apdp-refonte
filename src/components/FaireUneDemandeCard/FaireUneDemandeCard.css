@@ -10,6 +10,7 @@
     cursor: pointer;
     margin-bottom: 30px;
     align-items: center;
+    justify-content: space-around;
 }
 
 .faire-une-demande-card:hover {
@@ -18,23 +19,23 @@
 
 #faire-une-demande-card .title {
     height: 50px;
-text-align: center;
-letter-spacing: -0.4px;
-color: #273B60;
-font: normal normal bold 15px/18px Montserrat;
-padding-right: 20px;
-padding-left: 20px;
-margin-top: 15px;
+    text-align: left;
+    letter-spacing: -0.4px;
+    color: #273B60;
+    font: normal normal bold 15px/18px Montserrat;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 15px;
 }
 
 #faire-une-demande .description {
     text-align: left;
-letter-spacing: 0px;
-color: #273B60;
-opacity: 1;
-font: normal normal normal 15px/18px Montserrat;
-padding-right: 20px;
-padding-left: 20px;
+    letter-spacing: 0px;
+    color: #273B60;
+    opacity: 1;
+    font: normal normal normal 15px/18px Montserrat;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 #faire-une-demande .icon-container {
@@ -57,7 +58,7 @@ padding-left: 20px;
     border-radius: 50px;
     margin-right: auto;
     margin-left: 25px; */
-    width: 75%;
+    max-width: 75%;
 
 } 
 #faire-une-demande .icon {
