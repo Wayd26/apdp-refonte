@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./Auth.css"
 import apdp_logo from "../../assets/images/logoapdp.svg"
 import big_head from "../../assets/icons/big_head.svg"
@@ -69,10 +69,13 @@ const SignIn = () => {
                     localStorage.setItem("user_id",user.data.id);
                     localStorage.setItem("user_name",user.data.name);
                     localStorage.setItem("user_email",user.data.email);
-                    if (String(user.data.roles).includes("DPO")){
-                        localStorage.setItem("is_dpo",true);
-                    }else{
-                        localStorage.setItem("is_dpo",false);
+                    for (let index = 0; index < user.data.roles.length; index++) {
+                        const role = user.data.roles[index];
+                        if (role['slug'] == "dpo"){
+                            localStorage.setItem("is_dpo",true);
+                        }else{
+                            localStorage.setItem("is_dpo",false);
+                        }
                     }
                     setTimeout(() => {
                         if (localStorage.getItem("redirect_url") !== null){

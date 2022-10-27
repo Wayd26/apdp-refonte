@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // import EspaceDpoCard from '../../components/EspaceDpoCard/EspaceDpoCard';
 import "./EspaceDPO.css";
 // import Breadcrumb from 'react-bootstrap/Breadcrumb';
@@ -29,6 +29,13 @@ const EspaceDPO = () => {
             label: "Note d'Information"
         }
     ]
+
+    useEffect(() => {
+        if (localStorage.getItem("user_token") === "" || localStorage.getItem("user_token") === null){
+            localStorage.setItem("redirect_url", window.location.pathname);
+            window.location = "/auth";
+        }
+    }, [])
 
     if (String(localStorage.getItem('is_dpo')) == "true"){
         return (
