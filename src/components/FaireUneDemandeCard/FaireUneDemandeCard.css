@@ -39,12 +39,12 @@ padding-left: 20px;
 
 #faire-une-demande .icon-container {
     background-color: #f7f7f7;
-    width: 80px;
-    height: 80px;
+    min-width: 80px;
+    min-height: 80px;
     opacity: 1;
     border-radius: 50px;
-    margin-right: auto;
-    margin-left: 25px;
+    /* margin-right: auto;
+    margin-left: 25px; */
     /* width: 25%; */
 
 } 
