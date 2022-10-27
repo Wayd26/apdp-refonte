@@ -18,6 +18,8 @@ import {
   useParams
 } from "react-router-dom";
 import SignIn from './layouts/Auth/Auth';
+import Lottie from 'react-lottie';
+import animationData from './assets/lotties/loadingAnimation';
 import 'react-toastify/dist/ReactToastify.css';
 import { getMenus } from './http/http';
 
@@ -26,6 +28,14 @@ function App() {
   const [menus, setMenus] = useState([])
   const [firstMenus, setFirstMenus] = useState([])
   const [secondMenus, setSecondMenus] = useState([])
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice"
+    }
+  };
 
   const fetchMenus = async () => {
     let first = []
@@ -42,23 +52,36 @@ function App() {
       setSecondMenus(second)
       
     }
-}
-
-useEffect(() => {
-  fetchMenus();
-}, [])
-
-  if (firstMenus.length != 0 && secondMenus.length != 0){
-    return (
-      <div className="App">
-        {/* <div>APDP Frontend</div> */}
-        {/* <SignIn /> */}
-        <Header firstMenus={firstMenus} secondMenus={secondMenus} />
-        <Content/>
-        <Footer/>
-      </div>
-    );
   }
+
+  useEffect(() => {
+    fetchMenus();
+  }, [])
+
+  return (
+    <div className="App">
+      {/* <div>APDP Frontend</div> */}
+      {/* <SignIn /> */}
+      {firstMenus.length == 0 && secondMenus.length == 0 ? <div style={{ backgroundColor: '#337ab7', width: '100%', height: '100%', position: 'fixed', display: 'flex', alignItems: 'center'}}>
+        <div style={{ alignItems: 'center', width: '100%'}}>
+          <Lottie 
+            options={defaultOptions}
+            height={100}
+            width={100}
+          />
+          <p style={{
+              color: 'white'
+            }}
+          >
+            Chargement en cours...
+          </p>
+        </div>
+      </div> : null }
+      {firstMenus.length != 0 && secondMenus.length != 0 ? <Header firstMenus={firstMenus} secondMenus={secondMenus} /> : null }
+      {firstMenus.length != 0 && secondMenus.length != 0 ? <Content/> : null }
+      {firstMenus.length != 0 && secondMenus.length != 0 ? <Footer/> : null }
+    </div>
+  );
 }
 
 export default App;
