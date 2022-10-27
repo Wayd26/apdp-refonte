@@ -119,7 +119,7 @@ const Footer = () => {
 
 
                 <div className='d-flex  align-items-start'>
-                  <div className="d-flex flex-row justify-content-between">
+                  <div className="d-flex flex-row justify-content-between mx-auto">
                     <FaFacebook style={{ width: `40px`, color: `#2289FF`, fontSize: 30, margin: 5, cursor: 'pointer' }} onClick={() => redirectSocialMedia('fb')} />
                     <FaTwitter style={{ color: "#2289FF", width: "30px", fontSize: "30px", backgroundColor: "#FFFFFF", borderRadius: "20px", padding: "3px", margin: 5, cursor: 'pointer' }} onClick={() => redirectSocialMedia('tw')} />
                     <FaYoutube style={{ width: `40px`, color: `red`, fontSize: 30, margin: 5, cursor: 'pointer' }} onClick={() => redirectSocialMedia('yt')} />
