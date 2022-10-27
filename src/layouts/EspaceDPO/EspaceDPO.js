@@ -30,6 +30,13 @@ const EspaceDPO = () => {
         }
     ]
 
+    useEffect(() => {
+        if (localStorage.getItem("user_token") === "" || localStorage.getItem("user_token") === null){
+            localStorage.setItem("redirect_url", window.location.pathname);
+            window.location = "/auth";
+        }
+    }, [])
+
     if (String(localStorage.getItem('is_dpo')) == "true"){
         return (
         <div style={{ backgroundColor: "#E2E2E2", paddingTop: "40px", paddingBottom: "40px" }}>
